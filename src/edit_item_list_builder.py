@@ -25,10 +25,14 @@ image_usable=true 로 확인되지 않은 상품은 결정 파일이 있어도 i
     category_number(큐텐 상품페이지에서 원 판매자가 지정한 소카테고리 코드를 그대로 재사용),
     brand_number(단일 후보일 때만),
     item_status_Y/N/D, end_date, quantity, Shipping_number,
-    available_shipping_date, item_condition_type, origin_type, origin_country_id
+    available_shipping_date, item_condition_type, origin_type, origin_country_id,
+    price_yen(korea_side.json에 price_krw + 카테고리 무게참고값이 모두 있을 때
+              margin_calculator.py로 실제 산식 계산 — Q10_계산기.xlsx "마진율 먼저 설정" 방식 재현)
 
 TODO로 남기는 필드 (AI/사람 판단 필요, README 참고):
-    price_yen / retail_price_yen  -> 마진계산기 결과 필요
+    price_yen                     -> korea_side.json의 원가(price_krw) 또는 카테고리
+                                      무게참고값이 없을 때만
+    retail_price_yen              -> 정가(할인 연출용) 표시는 계산기 범위 밖, 비즈니스 판단 필요
     category_number               -> 큐텐 페이지에서 코드 추출 실패했을 때만 (드묾)
     brand_number                  -> 매칭 후보가 여러 개거나 없을 때
     image_main_url                -> image_usable=true 로 검수 승인되지 않았을 때
@@ -37,10 +41,13 @@ TODO로 남기는 필드 (AI/사람 판단 필요, README 참고):
                                       상품명 추정치를 메모로만 표시, 최종 확정은 사람이
 
 사용법:
-    python edit_item_list_builder.py <template.xlsx> <items_dir> <output.xlsx> [<decisions.json>]
+    python edit_item_list_builder.py <template.xlsx> <items_dir> <output.xlsx> \
+        [<decisions.json>] [<korea_side.json>] [목표마진율=0.12] [환율(원/100엔)=900]
 
     items_dir 안의 각 <goods_no>.json 은 qoo10_item_detail_scraper.py 출력 형식이어야 한다.
     decisions.json 은 match_review_builder.py 출력 형식이어야 한다(생략 가능하나 비권장).
+    korea_side.json 은 match_review_builder.py가 참조하는 것과 동일한 형식으로,
+    각 항목의 price_krw가 "국내구매가"로 쓰여 마진계산기에 들어간다(생략 시 price_yen은 TODO).
 """
 
 import json
@@ -50,6 +57,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 from category_brand_matcher import BrandCategoryMatcher
+import margin_calculator
 
 DATA_START_ROW = 5  # 템플릿의 예시 행부터 실제 데이터로 채움
 TODO = "TODO"
@@ -92,7 +100,24 @@ def load_decisions(decisions_path: str | None) -> dict:
     return {d["goods_no"]: d for d in decisions if d.get("goods_no")}
 
 
-def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None = None, weight_ref: dict | None = None) -> dict:
+def load_korea_side(korea_side_path: str | None) -> dict:
+    """korea_side.json(사람이 채운 한국 쪽 가격정보)을 goods_no 기준 dict로 로드한다.
+    price_krw가 "국내구매가"로 쓰여 마진계산기 입력값이 된다."""
+    if not korea_side_path:
+        return {}
+    data = json.loads(Path(korea_side_path).read_text(encoding="utf-8"))
+    return {d["goods_no"]: d for d in data if d.get("goods_no")}
+
+
+def build_row(
+    item: dict,
+    matcher: BrandCategoryMatcher,
+    decision: dict | None = None,
+    weight_ref: dict | None = None,
+    korea_side_item: dict | None = None,
+    margin_rate: float = margin_calculator.DEFAULT_MARGIN_RATE,
+    exchange_rate: float = 900,
+) -> dict:
     row = dict(DEFAULTS)
     weight_ref = weight_ref or {}
 
@@ -133,14 +158,35 @@ def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None =
     gdsc_cd = item.get("category_gdsc_cd")
     row["category_number"] = gdsc_cd if gdsc_cd else f"{TODO} (item_name 참고해서 카테고리 지정 필요)"
 
-    row["price_yen"] = f"{TODO} (마진계산기 결과 반영 필요, 큐텐참고가={item.get('price_jpy')})"
-    row["retail_price_yen"] = TODO
+    cat_weight = weight_ref.get(gdsc_cd) if gdsc_cd else None
+    cost_krw = (korea_side_item or {}).get("price_krw")
+
+    if cost_krw and cat_weight:
+        # 마진계산기(Q10_계산기.xlsx "2.마진율 먼저 설정" 방식)로 실제 판매가를 역산한다.
+        calc = margin_calculator.calculate(
+            cost_krw=cost_krw,
+            weight_kg=cat_weight["median_kg"],
+            margin_rate=margin_rate,
+            exchange_rate=exchange_rate,
+        )
+        row["price_yen"] = calc["price_yen"]
+        row["retail_price_yen"] = TODO  # 정가(할인 연출용)는 계산기 범위 밖 — 비즈니스 판단 필요
+    else:
+        missing = []
+        if not cost_krw:
+            missing.append("한국 국내구매가(korea_side.json의 price_krw)")
+        if not cat_weight:
+            missing.append("카테고리 무게 참고값")
+        row["price_yen"] = (
+            f"{TODO} (마진계산기 계산 불가 — {', '.join(missing)} 없음. "
+            f"큐텐참고가={item.get('price_jpy')}円)"
+        )
+        row["retail_price_yen"] = TODO
 
     row["image_other_url"] = TODO
     row["item_description"] = TODO
 
     weight_hint = item.get("weight_hint")
-    cat_weight = weight_ref.get(gdsc_cd) if gdsc_cd else None
     if cat_weight:
         row["item_weight"] = (
             f"{TODO} (참고: 동일 카테고리 실제 등록이력 {cat_weight['sample_count']}건 기준 "
@@ -179,10 +225,14 @@ def build_workbook(
     out_path: str,
     decisions: dict | None = None,
     weight_ref: dict | None = None,
+    korea_side: dict | None = None,
+    margin_rate: float = margin_calculator.DEFAULT_MARGIN_RATE,
+    exchange_rate: float = 900,
 ) -> tuple[int, int]:
     """반환값: (작성된 행 수, 스킵된 행 수)"""
     decisions = decisions or {}
     weight_ref = weight_ref or {}
+    korea_side = korea_side or {}
     wb = load_workbook(template_path)
     ws = wb.active
 
@@ -203,7 +253,8 @@ def build_workbook(
             skipped += 1
             continue
 
-        row_data = build_row(item, matcher, decision, weight_ref)
+        korea_side_item = korea_side.get(goods_no)
+        row_data = build_row(item, matcher, decision, weight_ref, korea_side_item, margin_rate, exchange_rate)
         r = DATA_START_ROW + written
         for col_idx, col_name in enumerate(COLUMN_ORDER, start=1):
             if col_name in row_data:
@@ -222,6 +273,9 @@ def main():
 
     template_path, items_dir, out_path = sys.argv[1:4]
     decisions_path = sys.argv[4] if len(sys.argv) > 4 else None
+    korea_side_path = sys.argv[5] if len(sys.argv) > 5 else None
+    margin_rate = float(sys.argv[6]) if len(sys.argv) > 6 else margin_calculator.DEFAULT_MARGIN_RATE
+    exchange_rate = float(sys.argv[7]) if len(sys.argv) > 7 else 900
 
     data_dir = Path(__file__).resolve().parent.parent / "data"
     matcher = BrandCategoryMatcher(
@@ -231,12 +285,16 @@ def main():
     items = load_items(items_dir)
     decisions = load_decisions(decisions_path)
     weight_ref = load_weight_reference()
+    korea_side = load_korea_side(korea_side_path)
     print(f"[INFO] {len(items)}건 로드" + (f", 결정파일 {len(decisions)}건 로드" if decisions else " (결정파일 없음 — 검수 없이 전부 포함, 권장하지 않음)"))
     print(f"[INFO] 무게 참고표 {len(weight_ref)}개 카테고리 로드")
+    print(f"[INFO] 한국측 원가정보 {len(korea_side)}건 로드" + (f", 목표마진율={margin_rate}, 환율={exchange_rate}" if korea_side else " (없음 — price_yen은 TODO로 남음)"))
 
-    written, skipped = build_workbook(template_path, items, matcher, out_path, decisions, weight_ref)
+    written, skipped = build_workbook(
+        template_path, items, matcher, out_path, decisions, weight_ref, korea_side, margin_rate, exchange_rate
+    )
     print(f"[INFO] 작성 완료 -> {out_path} ({written}건 작성, {skipped}건 검수 미승인으로 제외)")
-    print("[INFO] TODO 표시된 셀(가격/카테고리/설명 등)은 반드시 사람이 채운 뒤 업로드하세요.")
+    print("[INFO] TODO 표시된 셀(카테고리/설명 등)은 반드시 사람이 채운 뒤 업로드하세요.")
 
 
 if __name__ == "__main__":
