@@ -50,6 +50,9 @@ def _qoo10_image_variants(item: dict) -> list[str]:
 
 
 def _kr_image_variants(kr: dict) -> list[str]:
+    gallery = kr.get("img_kr_list")
+    if gallery:
+        return [u for u in gallery if u]
     variants = []
     for key in ("img_kr", "img_kr2"):
         u = kr.get(key)
@@ -80,7 +83,7 @@ HTML_HEAD = """<!DOCTYPE html>
   .side {{ flex:1; }}
   .side h3 {{ margin:0 0 8px; font-size:14px; color:#555; }}
   .mainrow {{ display:flex; gap:6px; }}
-  .mainimg {{ flex:1; min-width:0; aspect-ratio:1; cursor:pointer; border:3px solid transparent;
+  .mainimg {{ flex:0 0 200px; max-width:200px; aspect-ratio:1; cursor:pointer; border:3px solid transparent;
               border-radius:6px; }}
   .mainimg.selected {{ border-color:#2a7d46; }}
   .mainimg img {{ width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
