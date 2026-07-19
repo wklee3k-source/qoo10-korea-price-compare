@@ -8,9 +8,10 @@ match_review_builder.py
 이 두 가지는 오판 시 발생하는 리스크(오상품 등록, 이미지 저작권 침해)가 크므로
 반드시 사람이 직접 눈으로 확인하고 승인해야 한다.
 
-[레이아웃] 큐텐 원본(왼쪽) / 한국 매칭 후보(오른쪽) 두 칸으로 명확히 구분하고,
-각 칸마다 큰 대표사진 1장 + 그 아래 작은 대체사진 1장(클릭하면 대표사진 자리를
-대신 채택)을 보여준다. 오른쪽 여백에는 큰 "제외" 버튼만 둔다.
+[레이아웃] 큐텐 원본(왼쪽) / 한국 매칭 후보(오른쪽) 두 칸으로 명확히 구분한다.
+각 칸마다 메인사진 N장(--main-count, 기본 2)을 flex:1로 칸 너비를 항상 꽉 채워
+나란히 보여주고, 그 아래 남는 서브사진은 작게 줄바꿈하며 나열한다.
+오른쪽 여백에는 큰 "제외" 버튼만 둔다.
 
 [조작] 사람이 할 일은 딱 두 가지뿐이다:
     1) 큐텐/한국 어느 쪽이든 쓸 사진을 클릭 -> 그 상품 채택 + 그 사진 사용
@@ -21,7 +22,7 @@ match_review_builder.py
 표시되어 애초에 카드 자체를 만들지 않고 검수 대상에서 자동 제외한다.
 
 사용법:
-    python match_review_builder.py <items_dir> <korea_side.json> <output_prefix>
+    python match_review_builder.py <items_dir> <korea_side.json> <output_prefix> [main_count=2]
 
 korea_side.json 각 항목이 지원하는 필드:
     goods_no, name_ja, name_kr, name_ja_translated(선택, 일본어 원문 번역),
@@ -29,8 +30,40 @@ korea_side.json 각 항목이 지원하는 필드:
 """
 
 import json
+import re
 import sys
 from pathlib import Path
+
+IMG_SIZE_SUFFIX_RE = re.compile(r"\.g_\d+-w(?:-st)?_g(?=\.\w+$)")
+
+
+def _qoo10_image_variants(item: dict) -> list[str]:
+    """큐텐 이미지 하나를 여러 사이즈 변형 URL로 늘려서 후보 목록을 만든다."""
+    hires = item.get("image_main_url_hires")
+    normal = item.get("image_main_url")
+    variants = []
+    for u in (hires, normal):
+        if u and u not in variants:
+            variants.append(u)
+    if hires:
+        base = IMG_SIZE_SUFFIX_RE.sub("", hires)
+        stem, dot, ext = base.rpartition(".")
+        if stem:
+            for suffix in ("g_400-w_g", "g_400-w-st_g", "g_80-w-st_g"):
+                cand = f"{stem}.{suffix}.{ext}"
+                if cand not in variants:
+                    variants.append(cand)
+    return variants
+
+
+def _kr_image_variants(kr: dict) -> list[str]:
+    variants = []
+    for key in ("img_kr", "img_kr2"):
+        u = kr.get(key)
+        if u and u not in variants:
+            variants.append(u)
+    return variants
+
 
 HTML_HEAD = """<!DOCTYPE html>
 <html lang="ko">
@@ -53,21 +86,23 @@ HTML_HEAD = """<!DOCTYPE html>
   .card.excluded {{ opacity:0.4; }}
   .side {{ flex:1; }}
   .side h3 {{ margin:0 0 8px; font-size:14px; color:#555; }}
-  .mainimg {{ cursor:pointer; border:3px solid transparent; border-radius:6px; display:inline-block; }}
+  .mainrow {{ display:flex; gap:6px; }}
+  .mainimg {{ flex:1; min-width:0; aspect-ratio:1; cursor:pointer; border:3px solid transparent;
+              border-radius:6px; }}
   .mainimg.selected {{ border-color:#2a7d46; }}
-  .mainimg img {{ max-width:100%; max-height:220px; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
-  .altrow {{ margin-top:6px; }}
-  .altimg {{ cursor:pointer; border:2px solid transparent; border-radius:4px; display:inline-block; }}
+  .mainimg img {{ width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
+  .altrow {{ margin-top:6px; display:flex; gap:5px; flex-wrap:wrap; }}
+  .altimg {{ width:38px; height:38px; cursor:pointer; border:2px solid transparent; border-radius:4px; }}
   .altimg.selected {{ border-color:#2a7d46; }}
-  .altimg img {{ max-height:60px; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
+  .altimg img {{ width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
   .name {{ font-size:13px; margin:8px 0 2px; }}
   .name-kr {{ font-size:12px; color:#2a5fa0; margin:0 0 4px; }}
   .price {{ font-weight:bold; color:#d0392a; }}
   .site {{ font-size:12px; color:#888; }}
   .goods_no {{ font-size:12px; color:#999; }}
-  .checklist {{ flex:0 0 160px; border-left:1px dashed #ccc; padding-left:16px;
+  .checklist {{ flex:0 0 140px; border-left:1px dashed #ccc; padding-left:16px;
                 display:flex; align-items:center; justify-content:center; }}
-  .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:16px 12px;
+  .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:16px 10px;
                    border-radius:8px; font-size:14px; cursor:pointer; width:100%; line-height:1.4; }}
   .exclude-btn.active {{ background:#7f8c8d; }}
 </style>
@@ -79,7 +114,7 @@ HTML_HEAD = """<!DOCTYPE html>
   <span class="status" id="status"></span>
 </div>
 
-<h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건)</h1>
+<h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건, 메인사진 {main_count}장)</h1>
 <p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
 상품이면 오른쪽 "제외" 버튼을 누르세요.</p>
 {skip_notice}
@@ -149,49 +184,32 @@ function saveDecisions() {
 </html>
 """
 
-CARD_TEMPLATE = """
-<div class="card" data-goods="{goods_no}" data-qoo10-name="{qoo10_name_attr}" data-kr-name="{kr_name_attr}" data-kr-site="{kr_site_attr}">
-  <div class="side">
-    <h3>큐텐 원본</h3>
-    <div class="mainimg" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img1}',this)">
-      <img src="{qoo10_img1}" alt="qoo10-1">
-    </div>
-    <div class="altrow">
-      <div class="altimg" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img2}',this)">
-        <img src="{qoo10_img2}" alt="qoo10-2">
-      </div>
-    </div>
-    <div class="name">{qoo10_name}</div>
-    <div class="name-kr">→ {qoo10_name_kr}</div>
-    <div class="price">{qoo10_price} 円</div>
-    <div class="goods_no">goods_no: {goods_no}</div>
-  </div>
-  <div class="side">
-    <h3>한국 매칭 후보</h3>
-    <div class="mainimg" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img1}',this)">
-      <img src="{kr_img1}" alt="kr-1">
-    </div>
-    <div class="altrow">
-      <div class="altimg" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img2}',this)">
-        <img src="{kr_img2}" alt="kr-2">
-      </div>
-    </div>
-    <div class="name">{kr_name}</div>
-    <div class="price">{kr_price} 원</div>
-    <div class="site">{kr_site}</div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-"""
-
 
 def _esc_attr(s: str) -> str:
     return (s or "").replace('"', "&quot;")
 
 
-def build_review(items_dir: str, korea_side_path: str, output_prefix: str):
+def _render_side(goods_no: str, side: str, label: str, images: list[str], main_count: int) -> str:
+    images = [u for u in images if u] or [""]
+    main_imgs = images[:main_count]
+    sub_imgs = images[main_count:]
+
+    main_html = "".join(
+        f'<div class="mainimg" data-side="{side}" onclick="selectImage(\'{goods_no}\',\'{side}\',\'{u}\',this)">'
+        f'<img src="{u}" alt="{side}-main"></div>'
+        for u in main_imgs
+    )
+    sub_html = "".join(
+        f'<div class="altimg" data-side="{side}" onclick="selectImage(\'{goods_no}\',\'{side}\',\'{u}\',this)">'
+        f'<img src="{u}" alt="{side}-sub"></div>'
+        for u in sub_imgs
+    )
+    sub_row = f'<div class="altrow">{sub_html}</div>' if sub_html else ""
+
+    return f'<h3>{label}</h3><div class="mainrow">{main_html}</div>{sub_row}'
+
+
+def build_review(items_dir: str, korea_side_path: str, output_prefix: str, main_count: int = 2):
     items = {
         json.loads(p.read_text(encoding="utf-8"))["goods_no"]: json.loads(p.read_text(encoding="utf-8"))
         for p in Path(items_dir).glob("*.json")
@@ -209,30 +227,33 @@ def build_review(items_dir: str, korea_side_path: str, output_prefix: str):
             continue
 
         qoo10_name = qoo10_item.get("item_name", kr.get("name_ja", ""))
-        qoo10_img1 = qoo10_item.get("image_main_url_hires") or qoo10_item.get("image_main_url", "")
-        qoo10_img2 = qoo10_item.get("image_main_url") or qoo10_img1
+        qoo10_images = _qoo10_image_variants(qoo10_item)
+        kr_images = _kr_image_variants(kr)
 
-        kr_img1 = kr.get("img_kr", "")
-        kr_img2 = kr.get("img_kr2") or kr_img1
+        qoo10_side_html = _render_side(goods_no, "qoo10", "큐텐 원본", qoo10_images, main_count)
+        kr_side_html = _render_side(goods_no, "kr", "한국 매칭 후보", kr_images, main_count)
 
-        cards.append(
-            CARD_TEMPLATE.format(
-                goods_no=goods_no or "?",
-                qoo10_name_attr=_esc_attr(qoo10_name),
-                kr_name_attr=_esc_attr(kr.get("name_kr", "")),
-                kr_site_attr=_esc_attr(kr.get("kr_site", "")),
-                qoo10_img1=qoo10_img1,
-                qoo10_img2=qoo10_img2,
-                qoo10_name=qoo10_name,
-                qoo10_name_kr=kr.get("name_ja_translated", ""),
-                qoo10_price=qoo10_item.get("price_jpy", kr.get("price_jpy", "")),
-                kr_img1=kr_img1,
-                kr_img2=kr_img2,
-                kr_name=kr.get("name_kr", ""),
-                kr_price=kr.get("price_krw", ""),
-                kr_site=kr.get("kr_site", ""),
-            )
-        )
+        card = f"""
+<div class="card" data-goods="{goods_no}" data-qoo10-name="{_esc_attr(qoo10_name)}" data-kr-name="{_esc_attr(kr.get('name_kr', ''))}" data-kr-site="{_esc_attr(kr.get('kr_site', ''))}">
+  <div class="side">
+    {qoo10_side_html}
+    <div class="name">{qoo10_name}</div>
+    <div class="name-kr">→ {kr.get('name_ja_translated', '')}</div>
+    <div class="price">{qoo10_item.get('price_jpy', kr.get('price_jpy', ''))} 円</div>
+    <div class="goods_no">goods_no: {goods_no}</div>
+  </div>
+  <div class="side">
+    {kr_side_html}
+    <div class="name">{kr.get('name_kr', '')}</div>
+    <div class="price">{kr.get('price_krw', '')} 원</div>
+    <div class="site">{kr.get('kr_site', '')}</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+"""
+        cards.append(card)
 
     skip_notice = ""
     if auto_skipped:
@@ -245,7 +266,9 @@ def build_review(items_dir: str, korea_side_path: str, output_prefix: str):
     out_html = Path(f"{output_prefix}_review.html")
     out_html.parent.mkdir(parents=True, exist_ok=True)
     out_html.write_text(
-        HTML_HEAD.format(count=len(cards), skip_notice=skip_notice) + "".join(cards) + HTML_TAIL,
+        HTML_HEAD.format(count=len(cards), main_count=main_count, skip_notice=skip_notice)
+        + "".join(cards)
+        + HTML_TAIL,
         encoding="utf-8",
     )
     return out_html, auto_skipped
@@ -257,8 +280,10 @@ def main():
         sys.exit(1)
 
     items_dir, korea_side_path, output_prefix = sys.argv[1:4]
-    html_path, auto_skipped = build_review(items_dir, korea_side_path, output_prefix)
-    print(f"[INFO] 검수 페이지 -> {html_path}")
+    main_count = int(sys.argv[4]) if len(sys.argv) > 4 else 2
+
+    html_path, auto_skipped = build_review(items_dir, korea_side_path, output_prefix, main_count)
+    print(f"[INFO] 검수 페이지 -> {html_path} (메인사진 {main_count}장)")
     if auto_skipped:
         print(f"[INFO] 옵션상품이라 자동 제외: {len(auto_skipped)}건")
         for gid, name in auto_skipped:
