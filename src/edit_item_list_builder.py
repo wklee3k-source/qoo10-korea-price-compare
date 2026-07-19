@@ -33,7 +33,8 @@ TODO로 남기는 필드 (AI/사람 판단 필요, README 참고):
     brand_number                  -> 매칭 후보가 여러 개거나 없을 때
     image_main_url                -> image_usable=true 로 검수 승인되지 않았을 때
     image_other_url, item_description -> 상세페이지 구조가 셀러마다 달라 미추출
-    item_weight                   -> 상품명에서 뽑은 추정치만 참고로 표시, 실측값 아님
+    item_weight                   -> 실측값 아님. 카테고리 실제이력 참고표(있으면) 또는
+                                      상품명 추정치를 메모로만 표시, 최종 확정은 사람이
 
 사용법:
     python edit_item_list_builder.py <template.xlsx> <items_dir> <output.xlsx> [<decisions.json>]
@@ -53,17 +54,27 @@ from category_brand_matcher import BrandCategoryMatcher
 DATA_START_ROW = 5  # 템플릿의 예시 행부터 실제 데이터로 채움
 TODO = "TODO"
 
-# 신규 등록 시 공통 기본값 (템플릿 예시 행 관례를 따름)
+# 신규 등록 시 공통 기본값 (사용자의 실제 등록 이력 322건 전부 동일하게 확인된 값 —
+# Qoo10_ItemInfo_20260719204313.xlsx 실증 분석 결과로 교체함)
 DEFAULTS = {
     "item_status_Y/N/D": "Y",
     "end_date": "2050-12-31 00:00:00",
     "quantity": 200,
-    "Shipping_number": 0,
+    "Shipping_number": 741315,  # 실제 등록이력 322건 전부 이 코드 사용 (기존 0은 템플릿 예시값이었을 뿐)
     "available_shipping_date": 3,
     "item_condition_type": 1,  # 1: 새상품
     "origin_type": 2,  # 2: 해외
     "origin_country_id": "KR",  # 한국 소싱 상품 기준
 }
+
+
+def load_weight_reference() -> dict:
+    """실제 등록이력에서 뽑은 category_number -> 무게(kg) 참고표를 로드한다."""
+    data_dir = Path(__file__).resolve().parent.parent / "data"
+    path = data_dir / "weight_by_category.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def load_items(items_dir: str) -> list[dict]:
@@ -81,8 +92,9 @@ def load_decisions(decisions_path: str | None) -> dict:
     return {d["goods_no"]: d for d in decisions if d.get("goods_no")}
 
 
-def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None = None) -> dict:
+def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None = None, weight_ref: dict | None = None) -> dict:
     row = dict(DEFAULTS)
+    weight_ref = weight_ref or {}
 
     row["seller_unique_item_id"] = item.get("goods_no", TODO)
 
@@ -128,11 +140,18 @@ def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None =
     row["item_description"] = TODO
 
     weight_hint = item.get("weight_hint")
-    row["item_weight"] = (
-        f"{TODO} (참고: 상품명에서 추정한 값={weight_hint}, 실측 아님 — 확인 후 기입)"
-        if weight_hint
-        else TODO
-    )
+    cat_weight = weight_ref.get(gdsc_cd) if gdsc_cd else None
+    if cat_weight:
+        row["item_weight"] = (
+            f"{TODO} (참고: 동일 카테고리 실제 등록이력 {cat_weight['sample_count']}건 기준 "
+            f"중간값={cat_weight['median_kg']}kg, 범위={cat_weight['min_kg']}~{cat_weight['max_kg']}kg"
+            + (f" / 상품명 추정={weight_hint}" if weight_hint else "")
+            + " — 실측 아님, 확인 후 기입)"
+        )
+    elif weight_hint:
+        row["item_weight"] = f"{TODO} (참고: 상품명에서 추정한 값={weight_hint}, 실측 아님 — 확인 후 기입)"
+    else:
+        row["item_weight"] = TODO
 
     return row
 
@@ -159,9 +178,11 @@ def build_workbook(
     matcher: BrandCategoryMatcher,
     out_path: str,
     decisions: dict | None = None,
+    weight_ref: dict | None = None,
 ) -> tuple[int, int]:
     """반환값: (작성된 행 수, 스킵된 행 수)"""
     decisions = decisions or {}
+    weight_ref = weight_ref or {}
     wb = load_workbook(template_path)
     ws = wb.active
 
@@ -182,7 +203,7 @@ def build_workbook(
             skipped += 1
             continue
 
-        row_data = build_row(item, matcher, decision)
+        row_data = build_row(item, matcher, decision, weight_ref)
         r = DATA_START_ROW + written
         for col_idx, col_name in enumerate(COLUMN_ORDER, start=1):
             if col_name in row_data:
@@ -209,9 +230,11 @@ def main():
 
     items = load_items(items_dir)
     decisions = load_decisions(decisions_path)
+    weight_ref = load_weight_reference()
     print(f"[INFO] {len(items)}건 로드" + (f", 결정파일 {len(decisions)}건 로드" if decisions else " (결정파일 없음 — 검수 없이 전부 포함, 권장하지 않음)"))
+    print(f"[INFO] 무게 참고표 {len(weight_ref)}개 카테고리 로드")
 
-    written, skipped = build_workbook(template_path, items, matcher, out_path, decisions)
+    written, skipped = build_workbook(template_path, items, matcher, out_path, decisions, weight_ref)
     print(f"[INFO] 작성 완료 -> {out_path} ({written}건 작성, {skipped}건 검수 미승인으로 제외)")
     print("[INFO] TODO 표시된 셀(가격/카테고리/설명 등)은 반드시 사람이 채운 뒤 업로드하세요.")
 
