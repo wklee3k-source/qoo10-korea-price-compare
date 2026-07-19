@@ -8,15 +8,17 @@ match_review_builder.py
 이 두 가지는 오판 시 발생하는 리스크(오상품 등록, 이미지 저작권 침해)가 크므로
 반드시 사람이 직접 눈으로 확인하고 승인해야 한다.
 
-[단순화된 조작] 사람이 할 일은 딱 두 가지뿐이다:
-    1) 4장(큐텐 고화질/작음, 한국 사진1/2) 중 실제로 쓸 사진 1장을 클릭
-       -> 이게 곧 "동일 제품 맞음" + "이미지 사용 가능" 승인이다. 사진을 고르지
-          않은 상품은 저장 시 자동으로 제외 처리된다.
-    2) 애초에 쓸 수 없는 상품이면 "제외" 버튼 클릭
+[레이아웃] 큐텐 원본(왼쪽) / 한국 매칭 후보(오른쪽) 두 칸으로 명확히 구분하고,
+각 칸마다 큰 대표사진 1장 + 그 아래 작은 대체사진 1장(클릭하면 대표사진 자리를
+대신 채택)을 보여준다. 오른쪽 여백에는 큰 "제외" 버튼만 둔다.
 
-[자동 필터] 큐텐 쪽에 옵션(색상/사이즈 등 선택형)이 있는 상품은 옵션별로 실제
-발송되는 상품이 달라질 수 있어 매칭 위험이 크므로, has_options=true인 상품은
-애초에 카드 자체를 만들지 않고 검수 대상에서 자동 제외한다(로그에 표시).
+[조작] 사람이 할 일은 딱 두 가지뿐이다:
+    1) 큐텐/한국 어느 쪽이든 쓸 사진을 클릭 -> 그 상품 채택 + 그 사진 사용
+       (사진을 고르지 않은 상품은 저장 시 자동으로 제외 처리된다)
+    2) 애초에 쓸 수 없는 상품이면 오른쪽 "제외" 버튼 클릭
+
+[자동 필터] 큐텐 쪽에 옵션(색상/사이즈 등 선택형)이 있는 상품은 has_options=true로
+표시되어 애초에 카드 자체를 만들지 않고 검수 대상에서 자동 제외한다.
 
 사용법:
     python match_review_builder.py <items_dir> <korea_side.json> <output_prefix>
@@ -46,27 +48,28 @@ HTML_HEAD = """<!DOCTYPE html>
   .toolbar .status {{ margin-left:12px; font-size:13px; color:#555; }}
   .skipped {{ background:#fff8e6; border:1px solid #f0d98c; border-radius:8px; padding:10px 16px;
               margin-bottom:16px; font-size:13px; color:#7a5c00; }}
-  .card {{ background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
-           box-shadow:0 1px 3px rgba(0,0,0,0.15); position:relative; }}
+  .card {{ display:flex; gap:16px; background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
+           box-shadow:0 1px 3px rgba(0,0,0,0.15); }}
   .card.excluded {{ opacity:0.4; }}
-  .card-info {{ display:flex; gap:24px; margin-bottom:12px; }}
-  .info-block {{ flex:1; font-size:13px; }}
-  .info-block .name {{ margin:0 0 2px; }}
-  .info-block .name-kr {{ color:#2a5fa0; margin:0 0 4px; }}
-  .info-block .price {{ font-weight:bold; color:#d0392a; }}
-  .info-block .site, .info-block .goods_no {{ font-size:12px; color:#888; }}
-  .imgrow {{ display:flex; gap:8px; flex-wrap:wrap; }}
-  .imgopt {{ width:130px; text-align:center; border:2px solid transparent; border-radius:6px; padding:4px; cursor:pointer; }}
-  .imgopt.selected {{ border-color:#2a7d46; background:#eafbee; }}
-  .imgopt img {{ max-width:100%; max-height:130px; object-fit:contain; background:#fafafa; border:1px solid #ddd; }}
-  .imgopt .label {{ font-size:11px; color:#888; margin-top:4px; }}
-  .actions {{ margin-top:12px; padding-top:12px; border-top:1px dashed #ccc;
-              display:flex; gap:12px; align-items:center; }}
-  .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:6px 14px;
-                   border-radius:6px; font-size:13px; cursor:pointer; }}
+  .side {{ flex:1; }}
+  .side h3 {{ margin:0 0 8px; font-size:14px; color:#555; }}
+  .mainimg {{ cursor:pointer; border:3px solid transparent; border-radius:6px; display:inline-block; }}
+  .mainimg.selected {{ border-color:#2a7d46; }}
+  .mainimg img {{ max-width:100%; max-height:220px; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
+  .altrow {{ margin-top:6px; }}
+  .altimg {{ cursor:pointer; border:2px solid transparent; border-radius:4px; display:inline-block; }}
+  .altimg.selected {{ border-color:#2a7d46; }}
+  .altimg img {{ max-height:60px; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }}
+  .name {{ font-size:13px; margin:8px 0 2px; }}
+  .name-kr {{ font-size:12px; color:#2a5fa0; margin:0 0 4px; }}
+  .price {{ font-weight:bold; color:#d0392a; }}
+  .site {{ font-size:12px; color:#888; }}
+  .goods_no {{ font-size:12px; color:#999; }}
+  .checklist {{ flex:0 0 160px; border-left:1px dashed #ccc; padding-left:16px;
+                display:flex; align-items:center; justify-content:center; }}
+  .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:16px 12px;
+                   border-radius:8px; font-size:14px; cursor:pointer; width:100%; line-height:1.4; }}
   .exclude-btn.active {{ background:#7f8c8d; }}
-  .note {{ flex:1; }}
-  .note input {{ width:100%; box-sizing:border-box; padding:6px; font-size:13px; }}
 </style>
 </head>
 <body>
@@ -78,7 +81,7 @@ HTML_HEAD = """<!DOCTYPE html>
 
 <h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건)</h1>
 <p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
-상품이면 "제외" 버튼을 누르세요.</p>
+상품이면 오른쪽 "제외" 버튼을 누르세요.</p>
 {skip_notice}
 """
 
@@ -86,7 +89,7 @@ HTML_TAIL = """
 <script>
 function selectImage(goodsNo, side, url, el) {
   var card = el.closest('.card');
-  card.querySelectorAll('.imgopt').forEach(function(n) { n.classList.remove('selected'); });
+  card.querySelectorAll('.mainimg, .altimg').forEach(function(n) { n.classList.remove('selected'); });
   el.classList.add('selected');
   card.dataset.selectedSource = side;
   card.dataset.selectedUrl = url;
@@ -104,7 +107,7 @@ function setExcluded(card, excluded) {
   if (excluded) {
     card.classList.add('excluded');
     btn.classList.add('active');
-    btn.textContent = '제외됨 (클릭해서 취소)';
+    btn.textContent = '제외됨\\n(클릭해서 취소)';
   } else {
     card.classList.remove('excluded');
     btn.classList.remove('active');
@@ -120,7 +123,6 @@ function saveDecisions() {
     var excluded = card.classList.contains('excluded');
     var hasSelection = !!card.dataset.selectedUrl;
     var included = !excluded && hasSelection;
-    var note = card.querySelector('.note input').value;
     results.push({
       goods_no: goodsNo,
       qoo10_name: card.dataset.qoo10Name,
@@ -129,8 +131,7 @@ function saveDecisions() {
       match_confirmed: included,
       image_usable: included,
       image_source: included ? card.dataset.selectedSource : null,
-      final_image: included ? card.dataset.selectedUrl : null,
-      note: note
+      final_image: included ? card.dataset.selectedUrl : null
     });
   });
   var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
@@ -150,38 +151,37 @@ function saveDecisions() {
 
 CARD_TEMPLATE = """
 <div class="card" data-goods="{goods_no}" data-qoo10-name="{qoo10_name_attr}" data-kr-name="{kr_name_attr}" data-kr-site="{kr_site_attr}">
-  <div class="card-info">
-    <div class="info-block">
-      <h3 style="margin:0 0 8px;font-size:14px;color:#555;">큐텐 원본</h3>
-      <div class="name">{qoo10_name}</div>
-      <div class="name-kr">→ {qoo10_name_kr}</div>
-      <div class="price">{qoo10_price} 円</div>
-      <div class="goods_no">goods_no: {goods_no}</div>
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainimg" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img1}',this)">
+      <img src="{qoo10_img1}" alt="qoo10-1">
     </div>
-    <div class="info-block">
-      <h3 style="margin:0 0 8px;font-size:14px;color:#555;">한국 매칭 후보</h3>
-      <div class="name">{kr_name}</div>
-      <div class="price">{kr_price} 원</div>
-      <div class="site">{kr_site}</div>
+    <div class="altrow">
+      <div class="altimg" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img2}',this)">
+        <img src="{qoo10_img2}" alt="qoo10-2">
+      </div>
     </div>
+    <div class="name">{qoo10_name}</div>
+    <div class="name-kr">→ {qoo10_name_kr}</div>
+    <div class="price">{qoo10_price} 円</div>
+    <div class="goods_no">goods_no: {goods_no}</div>
   </div>
-  <div class="imgrow">
-    <div class="imgopt" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img1}',this)">
-      <img src="{qoo10_img1}" alt="qoo10-1"><div class="label">큐텐·고화질</div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3>
+    <div class="mainimg" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img1}',this)">
+      <img src="{kr_img1}" alt="kr-1">
     </div>
-    <div class="imgopt" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img2}',this)">
-      <img src="{qoo10_img2}" alt="qoo10-2"><div class="label">큐텐·목록용</div>
+    <div class="altrow">
+      <div class="altimg" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img2}',this)">
+        <img src="{kr_img2}" alt="kr-2">
+      </div>
     </div>
-    <div class="imgopt" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img1}',this)">
-      <img src="{kr_img1}" alt="kr-1"><div class="label">한국·사진1</div>
-    </div>
-    <div class="imgopt" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img2}',this)">
-      <img src="{kr_img2}" alt="kr-2"><div class="label">한국·사진2</div>
-    </div>
+    <div class="name">{kr_name}</div>
+    <div class="price">{kr_price} 원</div>
+    <div class="site">{kr_site}</div>
   </div>
-  <div class="actions">
+  <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-    <div class="note"><input type="text" placeholder="메모 (선택)"></div>
   </div>
 </div>
 """
@@ -269,5 +269,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
