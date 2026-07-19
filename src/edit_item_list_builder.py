@@ -185,7 +185,9 @@ def build_row(
         )
         row["retail_price_yen"] = TODO
 
-    row["image_other_url"] = TODO
+    # image_other_url은 값이 있으면 반드시 https://로 시작하는 URL이어야 큐텐 업로드 검증을
+    # 통과한다("TODO" 같은 텍스트를 넣으면 실제 업로드 시 반려됨) — 선택입력 필드이므로 없으면 비워둔다.
+    row["image_other_url"] = None
     row["item_description"] = TODO
 
     weight_hint = item.get("weight_hint")
