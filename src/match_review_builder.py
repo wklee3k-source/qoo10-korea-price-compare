@@ -8,18 +8,18 @@ match_review_builder.py
 이 두 가지는 오판 시 발생하는 리스크(오상품 등록, 이미지 저작권 침해)가 크므로
 반드시 사람이 직접 눈으로 확인하고 승인해야 한다.
 
-이 스크립트는 상호작용 가능한 HTML 검수 페이지를 만든다:
-    - 큐텐 이미지 2장(고화질/일반) + 한국 이미지 2장 중 실제 쓸 사진을 라디오로 선택
-    - 동일 제품 여부(match_confirmed) / 이미지 사용 가능 여부(image_usable)를 라디오로 표시
-    - 큐텐 원본 일본어 상품명 아래에 한글 번역을 함께 보여준다
-    - 페이지 안의 "결정 파일 저장" 버튼을 누르면 브라우저가 현재 선택 상태를
-      decisions.json 형식 그대로 다운로드한다(별도 JSON을 손으로 채울 필요 없음)
+[단순화된 조작] 사람이 할 일은 딱 두 가지뿐이다:
+    1) 4장(큐텐 고화질/작음, 한국 사진1/2) 중 실제로 쓸 사진 1장을 클릭
+       -> 이게 곧 "동일 제품 맞음" + "이미지 사용 가능" 승인이다. 사진을 고르지
+          않은 상품은 저장 시 자동으로 제외 처리된다.
+    2) 애초에 쓸 수 없는 상품이면 "제외" 버튼 클릭
+
+[자동 필터] 큐텐 쪽에 옵션(색상/사이즈 등 선택형)이 있는 상품은 옵션별로 실제
+발송되는 상품이 달라질 수 있어 매칭 위험이 크므로, has_options=true인 상품은
+애초에 카드 자체를 만들지 않고 검수 대상에서 자동 제외한다(로그에 표시).
 
 사용법:
     python match_review_builder.py <items_dir> <korea_side.json> <output_prefix>
-
-    예) python match_review_builder.py output/items output/wline_korea_side.json output/review/wline
-        -> output/review/wline_review.html  (이 파일을 열어서 검수 + 저장)
 
 korea_side.json 각 항목이 지원하는 필드:
     goods_no, name_ja, name_kr, name_ja_translated(선택, 일본어 원문 번역),
@@ -44,26 +44,28 @@ HTML_HEAD = """<!DOCTYPE html>
                       border-radius:6px; font-size:14px; cursor:pointer; }}
   .toolbar button:hover {{ background:#1e5c33; }}
   .toolbar .status {{ margin-left:12px; font-size:13px; color:#555; }}
+  .skipped {{ background:#fff8e6; border:1px solid #f0d98c; border-radius:8px; padding:10px 16px;
+              margin-bottom:16px; font-size:13px; color:#7a5c00; }}
   .card {{ background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
-           box-shadow:0 1px 3px rgba(0,0,0,0.15); }}
-  .card-top {{ display:flex; gap:16px; }}
-  .side {{ flex:1; }}
-  .side h3 {{ margin:0 0 8px; font-size:14px; color:#555; }}
-  .imgrow {{ display:flex; gap:8px; }}
-  .imgopt {{ flex:1; text-align:center; border:2px solid transparent; border-radius:6px; padding:4px; cursor:pointer; }}
+           box-shadow:0 1px 3px rgba(0,0,0,0.15); position:relative; }}
+  .card.excluded {{ opacity:0.4; }}
+  .card-info {{ display:flex; gap:24px; margin-bottom:12px; }}
+  .info-block {{ flex:1; font-size:13px; }}
+  .info-block .name {{ margin:0 0 2px; }}
+  .info-block .name-kr {{ color:#2a5fa0; margin:0 0 4px; }}
+  .info-block .price {{ font-weight:bold; color:#d0392a; }}
+  .info-block .site, .info-block .goods_no {{ font-size:12px; color:#888; }}
+  .imgrow {{ display:flex; gap:8px; flex-wrap:wrap; }}
+  .imgopt {{ width:130px; text-align:center; border:2px solid transparent; border-radius:6px; padding:4px; cursor:pointer; }}
   .imgopt.selected {{ border-color:#2a7d46; background:#eafbee; }}
-  .imgopt img {{ max-width:100%; max-height:150px; object-fit:contain; background:#fafafa; border:1px solid #ddd; }}
+  .imgopt img {{ max-width:100%; max-height:130px; object-fit:contain; background:#fafafa; border:1px solid #ddd; }}
   .imgopt .label {{ font-size:11px; color:#888; margin-top:4px; }}
-  .name {{ font-size:13px; margin:8px 0 2px; }}
-  .name-kr {{ font-size:12px; color:#2a5fa0; margin:0 0 4px; }}
-  .price {{ font-weight:bold; color:#d0392a; }}
-  .site {{ font-size:12px; color:#888; }}
-  .goods_no {{ font-size:12px; color:#999; }}
-  .checklist {{ margin-top:12px; padding-top:12px; border-top:1px dashed #ccc;
-                display:flex; gap:24px; align-items:center; flex-wrap:wrap; }}
-  .checklist label {{ font-size:13px; margin-right:8px; }}
-  .checklist .group {{ display:flex; align-items:center; gap:6px; }}
-  .note {{ flex:1; min-width:200px; }}
+  .actions {{ margin-top:12px; padding-top:12px; border-top:1px dashed #ccc;
+              display:flex; gap:12px; align-items:center; }}
+  .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:6px 14px;
+                   border-radius:6px; font-size:13px; cursor:pointer; }}
+  .exclude-btn.active {{ background:#7f8c8d; }}
+  .note {{ flex:1; }}
   .note input {{ width:100%; box-sizing:border-box; padding:6px; font-size:13px; }}
 </style>
 </head>
@@ -75,17 +77,39 @@ HTML_HEAD = """<!DOCTYPE html>
 </div>
 
 <h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건)</h1>
-<p>각 상품마다 실제로 쓸 사진을 클릭해서 선택하고, 동일 제품 여부와 이미지 사용
-가능 여부를 표시한 뒤 위의 저장 버튼을 누르면 됩니다.</p>
+<p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
+상품이면 "제외" 버튼을 누르세요.</p>
+{skip_notice}
 """
 
 HTML_TAIL = """
 <script>
 function selectImage(goodsNo, side, url, el) {
-  document.querySelectorAll('.imgopt[data-goods="' + goodsNo + '"][data-side="' + side + '"]')
-    .forEach(function(n) { n.classList.remove('selected'); });
+  var card = el.closest('.card');
+  card.querySelectorAll('.imgopt').forEach(function(n) { n.classList.remove('selected'); });
   el.classList.add('selected');
-  document.getElementById('selimg-' + side + '-' + goodsNo).value = url;
+  card.dataset.selectedSource = side;
+  card.dataset.selectedUrl = url;
+  setExcluded(card, false);
+}
+
+function toggleExclude(btn) {
+  var card = btn.closest('.card');
+  var nowExcluded = !card.classList.contains('excluded');
+  setExcluded(card, nowExcluded);
+}
+
+function setExcluded(card, excluded) {
+  var btn = card.querySelector('.exclude-btn');
+  if (excluded) {
+    card.classList.add('excluded');
+    btn.classList.add('active');
+    btn.textContent = '제외됨 (클릭해서 취소)';
+  } else {
+    card.classList.remove('excluded');
+    btn.classList.remove('active');
+    btn.textContent = '❌ 이 상품 제외';
+  }
 }
 
 function saveDecisions() {
@@ -93,25 +117,19 @@ function saveDecisions() {
   var results = [];
   cards.forEach(function(card) {
     var goodsNo = card.dataset.goods;
-    var match = card.querySelector('input[name="match-' + goodsNo + '"]:checked');
-    var imgUsable = card.querySelector('input[name="imgusable-' + goodsNo + '"]:checked');
+    var excluded = card.classList.contains('excluded');
+    var hasSelection = !!card.dataset.selectedUrl;
+    var included = !excluded && hasSelection;
     var note = card.querySelector('.note input').value;
-    var selQoo10 = document.getElementById('selimg-qoo10-' + goodsNo).value;
-    var selKr = document.getElementById('selimg-kr-' + goodsNo).value;
-    var imgSource = card.querySelector('input[name="imgsource-' + goodsNo + '"]:checked');
-    var imgSourceVal = imgSource ? imgSource.value : "qoo10";
-    var finalImage = imgSourceVal === "kr" ? selKr : selQoo10;
     results.push({
       goods_no: goodsNo,
       qoo10_name: card.dataset.qoo10Name,
       kr_name: card.dataset.krName,
       kr_site: card.dataset.krSite,
-      match_confirmed: match ? (match.value === "true") : null,
-      image_usable: imgUsable ? (imgUsable.value === "true") : null,
-      selected_qoo10_image: selQoo10 || null,
-      selected_kr_image: selKr || null,
-      image_source: imgSourceVal,
-      final_image: finalImage || null,
+      match_confirmed: included,
+      image_usable: included,
+      image_source: included ? card.dataset.selectedSource : null,
+      final_image: included ? card.dataset.selectedUrl : null,
       note: note
     });
   });
@@ -132,55 +150,37 @@ function saveDecisions() {
 
 CARD_TEMPLATE = """
 <div class="card" data-goods="{goods_no}" data-qoo10-name="{qoo10_name_attr}" data-kr-name="{kr_name_attr}" data-kr-site="{kr_site_attr}">
-  <div class="card-top">
-    <div class="side">
-      <h3>큐텐 원본</h3>
-      <div class="imgrow">
-        <div class="imgopt selected" data-goods="{goods_no}" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img1}',this)">
-          <img src="{qoo10_img1}" alt="qoo10-1"><div class="label">고화질</div>
-        </div>
-        <div class="imgopt" data-goods="{goods_no}" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img2}',this)">
-          <img src="{qoo10_img2}" alt="qoo10-2"><div class="label">목록용(작음)</div>
-        </div>
-      </div>
+  <div class="card-info">
+    <div class="info-block">
+      <h3 style="margin:0 0 8px;font-size:14px;color:#555;">큐텐 원본</h3>
       <div class="name">{qoo10_name}</div>
       <div class="name-kr">→ {qoo10_name_kr}</div>
       <div class="price">{qoo10_price} 円</div>
       <div class="goods_no">goods_no: {goods_no}</div>
-      <input type="hidden" id="selimg-qoo10-{goods_no}" value="{qoo10_img1}">
     </div>
-    <div class="side">
-      <h3>한국 매칭 후보</h3>
-      <div class="imgrow">
-        <div class="imgopt selected" data-goods="{goods_no}" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img1}',this)">
-          <img src="{kr_img1}" alt="kr-1"><div class="label">사진 1</div>
-        </div>
-        <div class="imgopt" data-goods="{goods_no}" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img2}',this)">
-          <img src="{kr_img2}" alt="kr-2"><div class="label">사진 2</div>
-        </div>
-      </div>
+    <div class="info-block">
+      <h3 style="margin:0 0 8px;font-size:14px;color:#555;">한국 매칭 후보</h3>
       <div class="name">{kr_name}</div>
       <div class="price">{kr_price} 원</div>
       <div class="site">{kr_site}</div>
-      <input type="hidden" id="selimg-kr-{goods_no}" value="{kr_img1}">
     </div>
   </div>
-  <div class="checklist">
-    <div class="group">
-      동일 제품:
-      <label><input type="radio" name="match-{goods_no}" value="true"> 맞음</label>
-      <label><input type="radio" name="match-{goods_no}" value="false"> 아님</label>
+  <div class="imgrow">
+    <div class="imgopt" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img1}',this)">
+      <img src="{qoo10_img1}" alt="qoo10-1"><div class="label">큐텐·고화질</div>
     </div>
-    <div class="group">
-      이미지 사용 가능:
-      <label><input type="radio" name="imgusable-{goods_no}" value="true"> 가능</label>
-      <label><input type="radio" name="imgusable-{goods_no}" value="false"> 불가</label>
+    <div class="imgopt" data-side="qoo10" onclick="selectImage('{goods_no}','qoo10','{qoo10_img2}',this)">
+      <img src="{qoo10_img2}" alt="qoo10-2"><div class="label">큐텐·목록용</div>
     </div>
-    <div class="group">
-      최종 이미지 출처:
-      <label><input type="radio" name="imgsource-{goods_no}" value="qoo10" checked> 큐텐</label>
-      <label><input type="radio" name="imgsource-{goods_no}" value="kr"> 한국</label>
+    <div class="imgopt" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img1}',this)">
+      <img src="{kr_img1}" alt="kr-1"><div class="label">한국·사진1</div>
     </div>
+    <div class="imgopt" data-side="kr" onclick="selectImage('{goods_no}','kr','{kr_img2}',this)">
+      <img src="{kr_img2}" alt="kr-2"><div class="label">한국·사진2</div>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
     <div class="note"><input type="text" placeholder="메모 (선택)"></div>
   </div>
 </div>
@@ -199,9 +199,14 @@ def build_review(items_dir: str, korea_side_path: str, output_prefix: str):
     korea_side = json.loads(Path(korea_side_path).read_text(encoding="utf-8"))
 
     cards = []
+    auto_skipped = []
     for kr in korea_side:
         goods_no = kr.get("goods_no") or kr.get("qoo10_goods_no")
         qoo10_item = items.get(goods_no, {})
+
+        if qoo10_item.get("has_options") is True:
+            auto_skipped.append((goods_no, qoo10_item.get("item_name", kr.get("name_ja", ""))))
+            continue
 
         qoo10_name = qoo10_item.get("item_name", kr.get("name_ja", ""))
         qoo10_img1 = qoo10_item.get("image_main_url_hires") or qoo10_item.get("image_main_url", "")
@@ -229,13 +234,21 @@ def build_review(items_dir: str, korea_side_path: str, output_prefix: str):
             )
         )
 
+    skip_notice = ""
+    if auto_skipped:
+        items_html = "".join(f"<li>{gid} — {name}</li>" for gid, name in auto_skipped)
+        skip_notice = (
+            f'<div class="skipped"><b>큐텐 옵션상품이라 자동 제외됨 ({len(auto_skipped)}건)</b>'
+            f"<ul>{items_html}</ul></div>"
+        )
+
     out_html = Path(f"{output_prefix}_review.html")
     out_html.parent.mkdir(parents=True, exist_ok=True)
     out_html.write_text(
-        HTML_HEAD.format(count=len(cards)) + "".join(cards) + HTML_TAIL,
+        HTML_HEAD.format(count=len(cards), skip_notice=skip_notice) + "".join(cards) + HTML_TAIL,
         encoding="utf-8",
     )
-    return out_html
+    return out_html, auto_skipped
 
 
 def main():
@@ -244,12 +257,17 @@ def main():
         sys.exit(1)
 
     items_dir, korea_side_path, output_prefix = sys.argv[1:4]
-    html_path = build_review(items_dir, korea_side_path, output_prefix)
+    html_path, auto_skipped = build_review(items_dir, korea_side_path, output_prefix)
     print(f"[INFO] 검수 페이지 -> {html_path}")
-    print("[INFO] 브라우저로 열어서 사진 선택 + 라디오 체크 후 '결정 파일 저장' 버튼을 누르면")
+    if auto_skipped:
+        print(f"[INFO] 옵션상품이라 자동 제외: {len(auto_skipped)}건")
+        for gid, name in auto_skipped:
+            print(f"       - {gid}: {name}")
+    print("[INFO] 브라우저로 열어서 사진 클릭(=채택) 또는 제외 버튼 클릭 후 저장 버튼을 누르면")
     print("[INFO] decisions.json이 다운로드됩니다. 그 파일을 edit_item_list_builder.py에 넘기세요.")
 
 
 if __name__ == "__main__":
     main()
+
 

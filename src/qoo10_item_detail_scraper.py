@@ -17,6 +17,9 @@ qoo10_item_detail_scraper.py
     weight_hint — 상품명 텍스트에서 ml/g/kg 패턴을 정규식으로 뽑아낸 "참고용" 값.
         큐텐 페이지에는 공식적인 무게 필드가 없어(무게는 셀러 비공개 정보) 신뢰도가
         낮다 — item_weight 칸에 그대로 쓰지 말고 참고만 할 것.
+    has_options — 페이지 hidden input(option_item_yn)에서 옵션(색상/사이즈 등 선택형)
+        존재 여부를 읽는다. True인 상품은 match_review_builder.py에서 검수 대상에서
+        자동 제외된다(옵션별로 실제 발송 상품이 달라질 수 있어 자동 매칭 리스크가 큼).
 
 주의: 서브 이미지 갤러리(상품설명 탭 내부)와 상세설명 HTML은 셀러마다 구조가
 달라 완전 자동 추출이 불안정하다. 이 스크립트는 신뢰할 수 있는 필드만 채우고,
@@ -46,6 +49,7 @@ DESKTOP_UA = (
 
 BRAND_LINK_RE = re.compile(r'brandno=(\d+)"[^>]*>\s*([^<]+)')
 LD_JSON_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
+OPTION_FLAG_RE = re.compile(r'id="option_item_yn"[^>]*value="([YN])"')
 CATEGORY_RE = {
     "gdlc_cd": re.compile(r'id="img_search_gdlc_cd" value="(\d+)"'),
     "gdmc_cd": re.compile(r'id="img_search_gdmc_cd" value="(\d+)"'),
@@ -121,6 +125,7 @@ def fetch_item_detail(goods_no_or_url: str, wait_seconds: int = 4, save_hires_im
         "category_gdmc_cd": None,
         "category_gdsc_cd": None,
         "weight_hint": None,  # 참고용 추정치. 정식 item_weight로 그대로 쓰지 말 것.
+        "has_options": None,  # 큐텐 옵션(색상/사이즈 등 선택형) 존재 여부. True면 검수단계에서 자동 제외 대상.
     }
 
     ld_matches = LD_JSON_RE.findall(content)
@@ -163,6 +168,10 @@ def fetch_item_detail(goods_no_or_url: str, wait_seconds: int = 4, save_hires_im
         m = pattern.search(content)
         if m:
             result[f"category_{key}"] = m.group(1)
+
+    option_m = OPTION_FLAG_RE.search(content)
+    if option_m:
+        result["has_options"] = option_m.group(1) == "Y"
 
     if result["item_name"]:
         wm = WEIGHT_HINT_RE.search(result["item_name"])
