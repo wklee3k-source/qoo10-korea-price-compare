@@ -1,0 +1,72 @@
+name: Qoo10 Pipeline
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: "검색할 상품명(핵심 문구)"
+        required: true
+        type: string
+  push:
+    paths:
+      - "output/*_korea_side.json"
+
+jobs:
+  scrape:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run pipeline
+        working-directory: src
+        run: python pipeline.py "${{ inputs.keyword }}"
+
+      - name: Commit output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git diff --cached --quiet || git commit -m "Auto: pipeline run for '${{ inputs.keyword }}'"
+          git push
+
+  build_excel:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build excel for each updated korea_side.json
+        working-directory: src
+        run: |
+          for f in ../output/*_korea_side.json; do
+            base=$(basename "$f" _korea_side.json)
+            python excel_builder.py "$f" "../output/${base}_비교.xlsx"
+          done
+
+      - name: Commit excel output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/*.xlsx
+          git diff --cached --quiet || git commit -m "Auto: build comparison excel"
+          git push
