@@ -133,8 +133,10 @@ def build_row(
 
     image_usable = (decision or {}).get("image_usable")
     if image_usable is True:
-        # 승인됐을 때는 고화질(사이즈 접미사 제거) URL을 우선 사용한다.
-        row["image_main_url"] = item.get("image_main_url_hires") or item.get("image_main_url") or TODO
+        # 검수 페이지에서 사람이 직접 고른 사진(final_image)을 최우선으로 쓴다.
+        # (큐텐 사진 2장/한국 사진 2장 중 선택한 결과 — match_review_builder.py 참고)
+        chosen = (decision or {}).get("final_image")
+        row["image_main_url"] = chosen or item.get("image_main_url_hires") or item.get("image_main_url") or TODO
     else:
         row["image_main_url"] = (
             f"{TODO} (이미지 사용 승인 안됨 — match_review_builder.py 결정 파일에서 "

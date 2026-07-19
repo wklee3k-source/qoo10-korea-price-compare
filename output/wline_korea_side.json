@@ -1,12 +1,102 @@
 [
-  {"goods_no":"1209829232","name_ja":"celimax ハートピンクトーンアップUVクリーム 40ml","name_kr":"하트핑크 톤업 선크림 40ml","price_krw":17600,"img_kr":"https://cafe24img.poxo.com/jolsejolse/web/product/big/202604/4b0e38c6c0bf5d4cf07b23c79c99da4d.jpg","kr_site":"공식판매처(jolse.com, 원출처 celimax.co.kr)"},
-  {"goods_no":"1082667647","name_ja":"Sung Boon Editor グリーントマト エンザイムパウダーウォッシュ 50g","name_kr":"그린토마토 딥포어 클린 엔자임 파우더워시","price_krw":12900,"img_kr":"https://sungboon.com/web/product/medium/202506/38f7494394a7eaa14bd0e29820f149ec.jpg","kr_site":"공식몰(sungboon.com)"},
-  {"goods_no":"989681320","name_ja":"GROWUS ダメージセラピーノーウォッシュトリートメント 250mL","name_kr":"데미지 테라피 노워시 트리트먼트 EX(Due Rose)","price_krw":20800,"img_kr":"https://shopby-images.cdn-nhncommerce.com/Mall-No-rEpM/20240318/183058.882544000/GROWUS_썸네일_1000x1000_01.jpg","kr_site":"공식몰(growus.kr)"},
-  {"goods_no":"1192421888","name_ja":"alternative stereo ブラッシングペンダント(2個セット版, 원출처는 단품)","name_kr":"블러싱 펜던트 립 앤 치크 (26 colors)","price_krw":6500,"img_kr":"https://alternativestereo.com/web/product/big/202512/a329e12ca86cce67c2681460ba48ca82.jpg","kr_site":"공식몰(alternativestereo.com)"},
-  {"goods_no":"1149010104","name_ja":"イニスフリー グリーンティー ヒアルロン酸ミスト 150ml","name_kr":"그린티 히알루론산 미스트 150mL","price_krw":11900,"img_kr":"https://inm-cdn.innisfree.com/origin-image/product/product/00/00/03/48/61/a57fe815-c4e9-452f-8c0c-a984bc2268ae.webp","kr_site":"공식몰(innisfree.com)"},
-  {"goods_no":"1208958517","name_ja":"ヘアプラス プロテインボンド アンプル ヘアエッセンス 145ml","name_kr":"단백질 본드 모이스트 앰플 에센스 145ml","price_krw":12110,"img_kr":"https://img.danuri.io/catalog-image/628/511/010/71d73fb7495d40e18150561ebc1155c2.jpg","kr_site":"공식몰(hairplus.co.kr, 다나와 최저가 기준)"},
-  {"goods_no":"1191660330","name_ja":"デイジーク シャドウパレット ピンクブロッサムコレクション(2color 세트, 원출처는 단품)","name_kr":"[핑크블라썸] 섀도우 팔레트","price_krw":29900,"img_kr":"https://cafe24img.poxo.com/dasique/web/product/big/202604/62960e0a7174c0542b1c4fdb4a6643da.jpg","kr_site":"공식몰(dasique.co.kr)"},
-  {"goods_no":"1028492253","name_ja":"ティルティル マスクフィット メイクアップ クールフィクサー 80ml(5種 통합상품, 쿨 표기 없음)","name_kr":"마스크 핏 메이크업 쿨 픽서","price_krw":15000,"img_kr":"https://tirtir.co.kr/web/product/big/shop1_02472d17fe502041fac57848e89a2306.png","kr_site":"공식몰(tirtir.co.kr)"},
-  {"goods_no":"1164004559","name_ja":"ロベクチン ドクターマスク シカ 5枚","name_kr":"[트러블/진정] 닥터 마스크 시카 5매입","price_krw":13000,"img_kr":"https://rovectin.co.kr/web/product/big/202508/3cee1f535f9bff21541f3825c6d840a7.png","kr_site":"공식몰(rovectin.co.kr)"},
-  {"goods_no":"1156076459","name_ja":"KAHI マルチバームおかわりキット 9g x 2個","name_kr":"가히 멀티밤 리필키트 (9g) 2개","price_krw":29000,"img_kr":"https://cafe24img.poxo.com/koreatech0/web/product/medium/202511/63535405d7243940c2fa4000a159ba10.jpg","kr_site":"공식몰(kahi.shop)"}
+  {
+    "goods_no": "1209829232",
+    "name_ja": "celimax ハートピンクトーンアップUVクリーム 40ml",
+    "name_kr": "하트핑크 톤업 선크림 40ml",
+    "price_krw": 17600,
+    "img_kr": "https://cafe24img.poxo.com/jolsejolse/web/product/big/202604/4b0e38c6c0bf5d4cf07b23c79c99da4d.jpg",
+    "kr_site": "공식판매처(jolse.com, 원출처 celimax.co.kr)",
+    "img_kr2": "https://cafe24img.poxo.com/jolsejolse/web/product/small/202604/459b142523b3a846f09c99f2431d66d0.jpg",
+    "name_ja_translated": "하트핑크 톤업 UV크림 SPF50+ PA++++ 40ml 자외선차단제 한국화장품"
+  },
+  {
+    "goods_no": "1082667647",
+    "name_ja": "Sung Boon Editor グリーントマト エンザイムパウダーウォッシュ 50g",
+    "name_kr": "그린토마토 딥포어 클린 엔자임 파우더워시",
+    "price_krw": 12900,
+    "img_kr": "https://sungboon.com/web/product/medium/202506/38f7494394a7eaa14bd0e29820f149ec.jpg",
+    "kr_site": "공식몰(sungboon.com)",
+    "img_kr2": "https://sungboon.com/web/product/small/202506/982ebe13fc4c1c07796bd96d332c285c.jpg",
+    "name_ja_translated": "그린토마토 딥포어 클린 엔자임 파우더워시 50g / 한국화장품"
+  },
+  {
+    "goods_no": "989681320",
+    "name_ja": "GROWUS ダメージセラピーノーウォッシュトリートメント 250mL",
+    "name_kr": "데미지 테라피 노워시 트리트먼트 EX(Due Rose)",
+    "price_krw": 20800,
+    "img_kr": "https://shopby-images.cdn-nhncommerce.com/Mall-No-rEpM/20240318/183058.882544000/GROWUS_썸네일_1000x1000_01.jpg",
+    "kr_site": "공식몰(growus.kr)",
+    "img_kr2": "https://shopby-images.cdn-nhncommerce.com/Mall-No-rEpM/20240318/183058.882544000/GROWUS_썸네일_1000x1000_01.jpg",
+    "name_ja_translated": "【올리앙1위】데미지 테라피 노워시 트리트먼트EX 250ml 2종 / 헤어미스트 / 안씻어내는 트리트먼트 / 반짝이 미스트 / 모발수분 / 헤어스프레이 / 헤어케어"
+  },
+  {
+    "goods_no": "1192421888",
+    "name_ja": "alternative stereo ブラッシングペンダント(2個セット版, 원출처는 단품)",
+    "name_kr": "블러싱 펜던트 립 앤 치크 (26 colors)",
+    "price_krw": 6500,
+    "img_kr": "https://alternativestereo.com/web/product/big/202512/a329e12ca86cce67c2681460ba48ca82.jpg",
+    "kr_site": "공식몰(alternativestereo.com)",
+    "img_kr2": "https://alternativestereo.com/web/product/extra/big/202506/190bc73a5a6a74fbb124f4f5bb8f6826.png",
+    "name_ja_translated": "【18~20일 한정SALE】【Qoo10한정】 2개세트 얼터 립&치크 브러싱 펜던트 귀여운 한국립 립치크 한국화장품 크림치크 립스틱"
+  },
+  {
+    "goods_no": "1149010104",
+    "name_ja": "イニスフリー グリーンティー ヒアルロン酸ミスト 150ml",
+    "name_kr": "그린티 히알루론산 미스트 150mL",
+    "price_krw": 11900,
+    "img_kr": "https://inm-cdn.innisfree.com/origin-image/product/product/00/00/03/48/61/a57fe815-c4e9-452f-8c0c-a984bc2268ae.webp",
+    "kr_site": "공식몰(innisfree.com)",
+    "img_kr2": "https://inm-cdn.innisfree.com/image/product/product/00/00/03/48/61/3a50a8d9-2587-492b-9f94-1e0686d82c9b_750x874.webp",
+    "name_ja_translated": "그린티 히알루론산 미스트 150ml 1개"
+  },
+  {
+    "goods_no": "1208958517",
+    "name_ja": "ヘアプラス プロテインボンド アンプル ヘアエッセンス 145ml",
+    "name_kr": "단백질 본드 모이스트 앰플 에센스 145ml",
+    "price_krw": 12110,
+    "img_kr": "https://img.danuri.io/catalog-image/628/511/010/71d73fb7495d40e18150561ebc1155c2.jpg",
+    "kr_site": "공식몰(hairplus.co.kr, 다나와 최저가 기준)",
+    "img_kr2": "https://img.danuri.io/catalog-image/628/511/010/f690d21ab5e94beaada7557548e730b3.jpg",
+    "name_ja_translated": "프로틴본드 앰플 헤어에센스 145ml 안씻어내는 트리트먼트 한국헤어케어"
+  },
+  {
+    "goods_no": "1191660330",
+    "name_ja": "デイジーク シャドウパレット ピンクブロッサムコレクション(2color 세트, 원출처는 단품)",
+    "name_kr": "[핑크블라썸] 섀도우 팔레트",
+    "price_krw": 29900,
+    "img_kr": "https://cafe24img.poxo.com/dasique/web/product/big/202604/62960e0a7174c0542b1c4fdb4a6643da.jpg",
+    "kr_site": "공식몰(dasique.co.kr)",
+    "img_kr2": "https://cafe24img.poxo.com/dasique/web/product/medium/202502/67005326204c99554b057fc17edb6b25.jpg",
+    "name_ja_translated": "[25SS/신작](25년2월발매) 섀도우팔레트 2color #핑크블로썸컬렉션 #Cherry #Love"
+  },
+  {
+    "goods_no": "1028492253",
+    "name_ja": "ティルティル マスクフィット メイクアップ クールフィクサー 80ml(5種 통합상품, 쿨 표기 없음)",
+    "name_kr": "마스크 핏 메이크업 쿨 픽서",
+    "price_krw": 15000,
+    "img_kr": "https://tirtir.co.kr/web/product/big/shop1_02472d17fe502041fac57848e89a2306.png",
+    "kr_site": "공식몰(tirtir.co.kr)",
+    "img_kr2": "https://tirtir.co.kr/web/product/extra/small/shop1_6aecae06b74a523778fb44a08df9d11f.png",
+    "name_ja_translated": "마스크핏 메이크업픽서 80ml 5종 [워터프루프/올데이/UV/레드/쿨]"
+  },
+  {
+    "goods_no": "1164004559",
+    "name_ja": "ロベクチン ドクターマスク シカ 5枚",
+    "name_kr": "[트러블/진정] 닥터 마스크 시카 5매입",
+    "price_krw": 13000,
+    "img_kr": "https://rovectin.co.kr/web/product/big/202508/3cee1f535f9bff21541f3825c6d840a7.png",
+    "kr_site": "공식몰(rovectin.co.kr)",
+    "img_kr2": "https://rovectin.co.kr/web/product/extra/small/202309/5c0f8732b2fd3487099d5286a0a41579.jpg",
+    "name_ja_translated": "닥터마스크 시카 5매"
+  },
+  {
+    "goods_no": "1156076459",
+    "name_ja": "KAHI マルチバームおかわりキット 9g x 2個",
+    "name_kr": "가히 멀티밤 리필키트 (9g) 2개",
+    "price_krw": 29000,
+    "img_kr": "https://cafe24img.poxo.com/koreatech0/web/product/medium/202511/63535405d7243940c2fa4000a159ba10.jpg",
+    "kr_site": "공식몰(kahi.shop)",
+    "img_kr2": "https://cafe24img.poxo.com/koreatech0/web/product/big/202511/81477f52a89f8be8e8d255b85d1f60be.jpg",
+    "name_ja_translated": "멀티밤 리필키트 9g x 2개"
+  }
 ]
