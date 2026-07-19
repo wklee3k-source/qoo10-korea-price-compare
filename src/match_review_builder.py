@@ -9,9 +9,12 @@ match_review_builder.py
 반드시 사람이 직접 눈으로 확인하고 승인해야 한다.
 
 [레이아웃] 큐텐 원본(왼쪽) / 한국 매칭 후보(오른쪽) 두 칸으로 명확히 구분한다.
-각 칸마다 메인사진 N장(--main-count, 기본 2)을 flex:1로 칸 너비를 항상 꽉 채워
-나란히 보여주고, 그 아래 남는 서브사진은 작게 줄바꿈하며 나열한다.
-오른쪽 여백에는 큰 "제외" 버튼만 둔다.
+큐텐 쪽은 실제로 존재하는 사진이 사실상 1장뿐이라(재크롤링으로 확인 — "추가
+이미지"처럼 보이는 건 대부분 구매후기 사진이거나 같은 상점의 다른 상품
+썸네일이라 이 상품과 무관함) 사진 1장만 정직하게 보여준다. 한국 쪽은 공식몰에
+실제로 다른 사진이 여러 장 있는 경우가 많아 flex:1로 칸 너비를 채우며 나란히
+보여주고, 남는 서브사진은 작게 줄바꿈하며 나열한다. 오른쪽 여백에는 큰 "제외"
+버튼만 둔다.
 
 [조작] 사람이 할 일은 딱 두 가지뿐이다:
     1) 큐텐/한국 어느 쪽이든 쓸 사진을 클릭 -> 그 상품 채택 + 그 사진 사용
@@ -38,22 +41,12 @@ IMG_SIZE_SUFFIX_RE = re.compile(r"\.g_\d+-w(?:-st)?_g(?=\.\w+$)")
 
 
 def _qoo10_image_variants(item: dict) -> list[str]:
-    """큐텐 이미지 하나를 여러 사이즈 변형 URL로 늘려서 후보 목록을 만든다."""
-    hires = item.get("image_main_url_hires")
-    normal = item.get("image_main_url")
-    variants = []
-    for u in (hires, normal):
-        if u and u not in variants:
-            variants.append(u)
-    if hires:
-        base = IMG_SIZE_SUFFIX_RE.sub("", hires)
-        stem, dot, ext = base.rpartition(".")
-        if stem:
-            for suffix in ("g_400-w_g", "g_400-w-st_g", "g_80-w-st_g"):
-                cand = f"{stem}.{suffix}.{ext}"
-                if cand not in variants:
-                    variants.append(cand)
-    return variants
+    """큐텐은 상세페이지에 실제로 존재하는 사진이 사실상 1장뿐이다(직접 재크롤링해서
+    확인함 — "추가 이미지"로 잡히는 건 대부분 구매후기 사진이거나 같은 상점의 다른
+    상품 썸네일이라 이 상품 사진이 아니다). 그래서 사이즈만 다른 가짜 여러장을
+    만들지 않고, 실제 원본 사진 1장만 정직하게 돌려준다."""
+    real = item.get("image_main_url_hires") or item.get("image_main_url")
+    return [real] if real else []
 
 
 def _kr_image_variants(kr: dict) -> list[str]:
