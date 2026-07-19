@@ -30,6 +30,26 @@ def _safe_url(url: str) -> str:
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path_q, parts.query, parts.fragment))
 
 
+def download_original(url: str, out_path: str, retries: int = 3) -> bool:
+    """리사이즈 없이 원본 그대로 저장한다 (고화질 보관용).
+    한국 쪽(공식몰/브랜드스토어) 이미지를 대표이미지 후보로 쓸 때 사용한다."""
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    safe_url = _safe_url(url)
+
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(safe_url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=20) as r, open(out_path, "wb") as f:
+                f.write(r.read())
+            return True
+        except Exception as e:  # noqa: BLE001
+            if attempt == retries - 1:
+                print(f"[WARN] failed to download original {url}: {e}")
+                return False
+    return False
+
+
 def download_and_normalize(url: str, out_path: str, max_size: int = 300, retries: int = 3) -> bool:
     """URL의 이미지를 내려받아 RGB JPEG로 저장한다. 성공 시 True."""
     out_path = Path(out_path)

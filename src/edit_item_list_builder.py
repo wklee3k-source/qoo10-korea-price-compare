@@ -21,17 +21,19 @@ image_usable=true 로 확인되지 않은 상품은 결정 파일이 있어도 i
     큐텐 원본 상품명 --(축약)--> 핵심문구 --(검색)--> 한글 상품명(사람 확인용, 업로드 미사용)
 
 자동으로 채우는 필드 (신뢰도 높음):
-    seller_unique_item_id, item_name, image_main_url(검수 승인 시),
-    category_number(단일 후보일 때만), brand_number(단일 후보일 때만),
+    seller_unique_item_id, item_name, image_main_url(검수 승인 시, 고화질 URL 우선),
+    category_number(큐텐 상품페이지에서 원 판매자가 지정한 소카테고리 코드를 그대로 재사용),
+    brand_number(단일 후보일 때만),
     item_status_Y/N/D, end_date, quantity, Shipping_number,
     available_shipping_date, item_condition_type, origin_type, origin_country_id
 
 TODO로 남기는 필드 (AI/사람 판단 필요, README 참고):
     price_yen / retail_price_yen  -> 마진계산기 결과 필요
-    category_number/brand_number  -> 매칭 후보가 여러 개거나 없을 때
+    category_number               -> 큐텐 페이지에서 코드 추출 실패했을 때만 (드묾)
+    brand_number                  -> 매칭 후보가 여러 개거나 없을 때
     image_main_url                -> image_usable=true 로 검수 승인되지 않았을 때
     image_other_url, item_description -> 상세페이지 구조가 셀러마다 달라 미추출
-    item_weight, model_name 등 상품별 개별 정보
+    item_weight                   -> 상품명에서 뽑은 추정치만 참고로 표시, 실측값 아님
 
 사용법:
     python edit_item_list_builder.py <template.xlsx> <items_dir> <output.xlsx> [<decisions.json>]
@@ -94,7 +96,8 @@ def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None =
 
     image_usable = (decision or {}).get("image_usable")
     if image_usable is True:
-        row["image_main_url"] = item.get("image_main_url") or TODO
+        # 승인됐을 때는 고화질(사이즈 접미사 제거) URL을 우선 사용한다.
+        row["image_main_url"] = item.get("image_main_url_hires") or item.get("image_main_url") or TODO
     else:
         row["image_main_url"] = (
             f"{TODO} (이미지 사용 승인 안됨 — match_review_builder.py 결정 파일에서 "
@@ -111,15 +114,25 @@ def build_row(item: dict, matcher: BrandCategoryMatcher, decision: dict | None =
     else:
         row["brand_number"] = TODO
 
-    # 카테고리는 상품명 토큰만으로는 신뢰도가 낮으므로 항상 사람 확인 필요
-    row["category_number"] = f"{TODO} (item_name 참고해서 카테고리 지정 필요)"
+    # 큐텐 상품페이지에 원 판매자가 지정해둔 소카테고리 코드를 그대로 재사용한다.
+    # (Qoo10_CategoryInfo.csv의 소카테고리 코드와 동일한 체계) 단, 이건 "원 판매자"가
+    # 붙인 분류라 우리 상품 맥락과 다를 수 있으므로 최종 확인은 권장 — TODO는 아니지만
+    # 사람이 한 번 훑어보는 걸 권장한다는 뜻에서 category_gdsc_cd가 없을 때만 TODO.
+    gdsc_cd = item.get("category_gdsc_cd")
+    row["category_number"] = gdsc_cd if gdsc_cd else f"{TODO} (item_name 참고해서 카테고리 지정 필요)"
 
     row["price_yen"] = f"{TODO} (마진계산기 결과 반영 필요, 큐텐참고가={item.get('price_jpy')})"
     row["retail_price_yen"] = TODO
 
     row["image_other_url"] = TODO
     row["item_description"] = TODO
-    row["item_weight"] = TODO
+
+    weight_hint = item.get("weight_hint")
+    row["item_weight"] = (
+        f"{TODO} (참고: 상품명에서 추정한 값={weight_hint}, 실측 아님 — 확인 후 기입)"
+        if weight_hint
+        else TODO
+    )
 
     return row
 
