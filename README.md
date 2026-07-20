@@ -108,9 +108,32 @@ python src/korea_price_finder.py --batch output/items output/danawa_candidates.j
 결과명에 "공식"/"정품"이 포함되면 `is_likely_official=True`로 표시해
 사람 검수 우선순위를 정할 수 있게 했다(완전 확정 판별은 아님).
 
+**v3 개선(2차 외부 AI 코드리뷰 반영)**: 정규식 파싱을 BeautifulSoup CSS
+selector로 교체(다나와 마크업이 조금 바뀌어도 덜 깨짐, 부수효과로 이전에
+있었던 `&amp;` 링크 버그도 같이 해결됨), 결과 저장을 원자적(tmp→rename)으로
+바꿔 중간에 강제종료돼도 파일이 안 깨지게 했고, 실패 시 1s/2s/4s 지수
+백오프로 재시도하며, 캐시를 JSON에서 SQLite로 바꿔 병렬 스레드가 동시에
+써도 안전하게 만들었다(실측: 병렬 실행 시 첫 시도가 다 타임아웃 났는데
+재시도로 전부 성공함 — 병렬화에는 재시도가 필수였다).
+
+**다단계 소싱(musinsa_finder.py, multi_source_finder.py)**: 다나와는
+가격비교사이트라 원래 소싱 규칙(올리브영/네이버브랜드스토어/공식판매처/
+지그재그/무신사만 사용)에 안 맞았는데, 접근 가능한 게 그것뿐이라 써왔다.
+이후 실제로 더 넓게 테스트해보니 **무신사(musinsa.com)도 접근 가능하고
+실제 상품명/가격/이미지가 전부 텍스트로 추출된다**는 것을 확인했다 —
+무신사는 원래 허용 소싱처 목록에 있던 실제 판매처라 다나와보다 훨씬
+적합하다. `multi_source_finder.py`는 **무신사를 1순위로, 다나와를
+2순위(무신사에 없을 때만) 보조로** 쓰는 계층형 검색을 구현했다. 실측
+검증: 5개 상품 중 4개는 무신사에서 바로 찾고(예: PIBUMI 같은 작은
+브랜드도 잡힘), 나머지 1개만 다나와로 보조 검색해서 5/5 전체 커버.
+
 ```bash
-# 번역된 한글 검색어 맵을 미리 준비해서 넘기면 정확도가 크게 오른다
-python src/korea_price_finder.py --batch output/items output/danawa_candidates.json keywords_map.json
+# 다단계 소싱(권장) — 무신사 우선, 다나와 보조
+python src/multi_source_finder.py "COSRX 6펩타이드 스킨부스터 세럼"
+python src/multi_source_finder.py --batch output/items output/multi_source_candidates.json keywords_map.json
+
+# 다나와만 단독으로 쓰고 싶을 때
+python src/korea_price_finder.py --batch-parallel output/items output/danawa_candidates.json keywords_map.json 4
 ```
 
 ### 품절 자동체크 (stock_checker.py)
