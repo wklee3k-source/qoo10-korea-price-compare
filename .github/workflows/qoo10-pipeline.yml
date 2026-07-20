@@ -15,6 +15,16 @@ on:
         required: false
         type: boolean
         default: false
+      price_finder_workers:
+        description: "4단계 병렬 워커 수(다나와 단독모드에서만 사용됨)"
+        required: false
+        type: string
+        default: "4"
+      use_multi_source:
+        description: "무신사 우선+다나와 보조(권장) 대신 다나와만 단독 사용할지"
+        required: false
+        type: boolean
+        default: true
   push:
     paths:
       - "output/*_korea_side.json"
@@ -60,28 +70,64 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          playwright install --with-deps chromium
+      # pip 캐시(#20) — requirements.txt 해시가 안 바뀌면 재설치를 건너뛴다
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
-      - name: Run automated Korean price finder (parallel, 4 workers)
+      # playwright 브라우저 캐시(#20) — chromium 다운로드(수백MB)를 매번 반복 안 하게
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 시스템 라이브러리는 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      - name: Run automated Korean price finder
         working-directory: src
         run: |
-          python korea_price_finder.py --batch-parallel \
-            ../output/items \
-            ../output/danawa_candidates.json \
-            "" \
-            4
+          if [ "${{ inputs.use_multi_source }}" = "true" ]; then
+            python multi_source_finder.py --batch \
+              ../output/items \
+              ../output/multi_source_candidates.json
+          else
+            python korea_price_finder.py --batch-parallel \
+              ../output/items \
+              ../output/danawa_candidates.json \
+              "" \
+              ${{ inputs.price_finder_workers }}
+          fi
 
+      # git push 재시도(#22) — 이 job이 도는 동안 다른 job/사람이 먼저 push했을 수
+      # 있어서, 실패하면 pull --rebase 하고 최대 3번까지 다시 시도한다
       - name: Commit results (even if the job times out partway)
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/danawa_candidates.json output/danawa_cache.json
-          git diff --cached --quiet || git commit -m "Auto: stage-4 price finder run"
-          git push
+          git add output/danawa_candidates.json output/danawa_cache.sqlite3 output/multi_source_candidates.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: stage-4 price finder run"
+          for i in 1 2 3; do
+            if git push; then
+              break
+            fi
+            echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+            git pull --rebase
+          done
 
   build_excel:
     if: github.event_name == 'push'
