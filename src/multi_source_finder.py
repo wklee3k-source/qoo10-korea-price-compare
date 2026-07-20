@@ -120,7 +120,9 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
             keyword = keywords_map.get(goods_no) or f"{brand} {name}"[:60]
 
             candidates = ms.search(keyword)
-            known_official = brand_db.lookup(brand)
+            channels = brand_db.searchable_channels(brand)
+            known_official = channels["searchable"].get("official")
+            reference_links = channels["reference_only"]
             if candidates:
                 for c in candidates:
                     c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
@@ -137,6 +139,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                         "keyword_used": keyword,
                         "source_used": "musinsa",
                         "known_official_site": known_official,
+                        "reference_links": reference_links,
                         "candidates": candidates,
                     }
                 )
@@ -144,13 +147,13 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                 musinsa_hits += 1
                 print(f"[SEARCH] {goods_no}: {keyword} -> {len(candidates)}건(musinsa)")
             else:
-                needs_danawa.append((goods_no, brand, name, keyword, known_official))
+                needs_danawa.append((goods_no, brand, name, keyword, known_official, reference_links))
                 print(f"[SEARCH] {goods_no}: {keyword} -> 무신사 없음, 다나와로 보류")
 
     # 2단계: 무신사에서 못 찾은 것만 다나와로 보조 검색
     if needs_danawa:
         with danawa.DanawaSession(use_cache=True) as ds:
-            for goods_no, brand, name, keyword, known_official in needs_danawa:
+            for goods_no, brand, name, keyword, known_official, reference_links in needs_danawa:
                 candidates = ds.search(keyword)
                 source_used = "danawa" if candidates else "none"
                 for c in candidates:
@@ -173,6 +176,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                         "keyword_used": keyword,
                         "source_used": source_used,
                         "known_official_site": known_official,
+                        "reference_links": reference_links,
                         "candidates": candidates,
                     }
                 )
