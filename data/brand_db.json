@@ -13,7 +13,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "셀리맥스"
+    "note": "셀리맥스",
+    "conglomerate": null
   },
   "sungboon": {
     "official": "https://sungboon.com",
@@ -28,7 +29,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "성분에디터 (Sung Boon Editor)"
+    "note": "성분에디터 (Sung Boon Editor)",
+    "conglomerate": null
   },
   "growus": {
     "official": "https://growus.kr",
@@ -43,7 +45,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "그로우어스"
+    "note": "그로우어스",
+    "conglomerate": null
   },
   "hairplus": {
     "official": "https://www.hairplus.co.kr",
@@ -58,7 +61,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "헤어플러스"
+    "note": "헤어플러스",
+    "conglomerate": null
   },
   "rovectin": {
     "official": "https://rovectin.co.kr",
@@ -73,7 +77,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "로벡틴"
+    "note": "로벡틴",
+    "conglomerate": null
   },
   "kahi": {
     "official": "https://kahicosmetics.co.kr",
@@ -88,7 +93,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "가히"
+    "note": "가히",
+    "conglomerate": null
   },
   "innisfree": {
     "official": "https://www.innisfree.com",
@@ -103,7 +109,8 @@
       "url": "https://brand.naver.com/innisfree"
     },
     "amoremall": "https://www.amoremall.com",
-    "note": "이니스프리 — 아모레퍼시픽 계열"
+    "note": "이니스프리 — 아모레퍼시픽 계열",
+    "conglomerate": "아모레퍼시픽"
   },
   "laneige": {
     "official": "https://www.laneige.com",
@@ -118,7 +125,8 @@
       "url": "https://brand.naver.com/laneige"
     },
     "amoremall": "https://www.amoremall.com",
-    "note": "라네즈 — 아모레퍼시픽 계열"
+    "note": "라네즈 — 아모레퍼시픽 계열",
+    "conglomerate": "아모레퍼시픽"
   },
   "cosrx": {
     "official": "https://www.cosrx.co.kr",
@@ -133,7 +141,8 @@
       "url": "https://brand.naver.com/cosrx"
     },
     "amoremall": null,
-    "note": "COSRX"
+    "note": "COSRX",
+    "conglomerate": "아모레퍼시픽"
   },
   "banilaco": {
     "official": "https://www.banila.com",
@@ -144,11 +153,12 @@
       "url": null
     },
     "naver_brand": {
-      "exists": false,
-      "url": null
+      "exists": true,
+      "url": "https://brand.naver.com/banilaco"
     },
     "amoremall": null,
-    "note": "바닐라코"
+    "note": "바닐라코",
+    "conglomerate": null
   },
   "vt-cosmetics": {
     "official": "https://vt-cosmetics.com",
@@ -159,11 +169,12 @@
       "url": null
     },
     "naver_brand": {
-      "exists": false,
-      "url": null
+      "exists": true,
+      "url": "https://brand.naver.com/vtcosmetics"
     },
     "amoremall": null,
-    "note": "VT코스메틱"
+    "note": "VT코스메틱",
+    "conglomerate": null
   },
   "physiogel": {
     "official": "https://physiogel.co.kr",
@@ -178,7 +189,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "피지오겔 — LG생활건강 계열"
+    "note": "피지오겔 — LG생활건강 계열",
+    "conglomerate": "LG생활건강"
   },
   "dr20project": {
     "official": "https://dr20project.com",
@@ -193,7 +205,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "닥터트웬티프로젝트"
+    "note": "닥터트웬티프로젝트",
+    "conglomerate": null
   },
   "somebymi": {
     "official": "https://somebymi.co.kr",
@@ -208,7 +221,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "썸바이미"
+    "note": "썸바이미",
+    "conglomerate": null
   },
   "manyo": {
     "official": "https://www.manyo.co.kr",
@@ -223,7 +237,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "마녀공장"
+    "note": "마녀공장",
+    "conglomerate": null
   },
   "tirtir": {
     "official": "https://tirtir.co.kr",
@@ -234,11 +249,12 @@
       "url": null
     },
     "naver_brand": {
-      "exists": false,
-      "url": null
+      "exists": true,
+      "url": "https://brand.naver.com/tirtir"
     },
     "amoremall": null,
-    "note": "티르티르"
+    "note": "티르티르",
+    "conglomerate": null
   },
   "makeprem": {
     "official": "https://www.makeprem.com",
@@ -253,7 +269,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "메이크프렘"
+    "note": "메이크프렘",
+    "conglomerate": null
   },
   "sister-ann": {
     "official": "https://sister-ann.com",
@@ -268,7 +285,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "씨스터앤"
+    "note": "씨스터앤",
+    "conglomerate": null
   },
   "hince": {
     "official": "https://hince.co.kr",
@@ -283,7 +301,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "힌스"
+    "note": "힌스",
+    "conglomerate": null
   },
   "biodance": {
     "official": "https://biodance.co.kr",
@@ -298,7 +317,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "바이오던스"
+    "note": "바이오던스",
+    "conglomerate": null
   },
   "cellfusionc": {
     "official": "https://cellfusionc.co.kr",
@@ -313,7 +333,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "셀퓨전씨"
+    "note": "셀퓨전씨",
+    "conglomerate": null
   },
   "pibumi": {
     "official": "https://pibumi.com",
@@ -328,7 +349,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "피부미"
+    "note": "피부미",
+    "conglomerate": null
   },
   "frankly": {
     "official": "https://frankly.co.kr",
@@ -343,7 +365,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "프랭클리"
+    "note": "프랭클리",
+    "conglomerate": null
   },
   "aprilskin": {
     "official": "https://aprilskin.com",
@@ -358,7 +381,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "에이프릴스킨"
+    "note": "에이프릴스킨",
+    "conglomerate": null
   },
   "pdrnmall": {
     "official": "https://pdrnmall.co.kr",
@@ -373,7 +397,8 @@
       "url": null
     },
     "amoremall": null,
-    "note": "리쥬란 판매채널"
+    "note": "리쥬란 판매채널",
+    "conglomerate": null
   },
   "medicube": {
     "official": "https://medicube.kr",
@@ -388,6 +413,7 @@
       "url": null
     },
     "amoremall": null,
-    "note": "메디큐브"
+    "note": "메디큐브",
+    "conglomerate": null
   }
 }
