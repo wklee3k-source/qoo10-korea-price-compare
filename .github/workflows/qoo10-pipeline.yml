@@ -11,19 +11,22 @@ on:
         required: false
         type: string
       discovery_keyword_ja:
-        description: "저리뷰 상점 발굴 시작 검색어(일본어) — 비워두면 이 job 안 돎"
+        description: "저리뷰 상점 발굴 시작 검색어(일본어) — 비워두면 스케줄 실행과 동일한 기본값 사용"
         required: false
         type: string
       discovery_max_shops:
-        description: "최대 방문 상점 수"
+        description: "이번 실행에서 추가로 더 방문할 상점 수(누적 아님, 이번 실행분만)"
         required: false
         type: string
-        default: "10"
+        default: "100"
       discovery_target_products:
-        description: "목표 상품 수"
+        description: "목표 상품 수(이번 실행 기준 상한)"
         required: false
         type: string
-        default: "50"
+        default: "500"
+  schedule:
+    # 매일 17:00 UTC = 한국/일본 시간(KST/JST, UTC+9) 새벽 02:00
+    - cron: "0 17 * * *"
   push:
     paths:
       - "output/*_korea_side.json"
@@ -59,8 +62,10 @@ jobs:
   discover_low_review_shops:
     # 저리뷰 상점/상품 자동발굴 — 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도
     # GitHub 서버에서 계속 돎). 상태는 output/discovery_state.json에 저장되므로
-    # 타임아웃 걸려도 다시 이 workflow를 실행하면 이어서 진행된다.
-    if: github.event_name == 'workflow_dispatch' && inputs.discovery_keyword_ja != ''
+    # 타임아웃 걸려도 다시 실행하면 이어서 진행된다. 매일 새벽 2시(KST/JST)에
+    # 자동으로 켜져서, 그동안 누적 방문한 상점 수에서 +100개를 더 찾는다
+    # (매일 100개씩 새로 쌓이는 방식 — 어제 찾은 상점은 다시 안 감).
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
@@ -94,14 +99,32 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: playwright install-deps chromium
 
-      - name: Run discovery
+      # 매일 "+100개 상점"이 되도록, 지금까지 누적 방문한 상점 수를 읽어서
+      # 오늘의 목표 상점수(cap) = 기존 누적 + 이번 실행분(기본 100)으로 계산한다.
+      # workflow_dispatch로 수동 실행할 때 값을 직접 넣으면 그 값을 우선한다.
+      - name: Compute today's shop cap
+        id: cap
         working-directory: src
         run: |
+          python3 -c "
+          import json, pathlib
+          p = pathlib.Path('../output/discovery_state.json')
+          visited = len(json.loads(p.read_text())['visited_shops']) if p.exists() else 0
+          increment = int('${{ inputs.discovery_max_shops }}' or '100')
+          print(f'cap={visited + increment}')
+          " >> "$GITHUB_OUTPUT"
+
+      - name: Run discovery
+        working-directory: src
+        env:
+          KEYWORD: ${{ inputs.discovery_keyword_ja || 'メディヒール エッセンシャルマスクパック' }}
+          TARGET: ${{ inputs.discovery_target_products || '500' }}
+        run: |
           python iterative_low_review_discovery.py \
-            "${{ inputs.discovery_keyword_ja }}" \
-            ${{ inputs.discovery_target_products }} \
+            "$KEYWORD" \
+            "$TARGET" \
             ../output/discovery_result.xlsx \
-            ${{ inputs.discovery_max_shops }}
+            ${{ steps.cap.outputs.cap }}
 
       - name: Commit results (타임아웃 걸려도 그때까지 결과 커밋)
         if: always()
@@ -110,7 +133,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/discovery_state.json output/discovery_result.xlsx 2>/dev/null || true
           git diff --cached --quiet && exit 0
-          git commit -m "Auto: low-review shop/product discovery run"
+          git commit -m "Auto: nightly low-review shop/product discovery (cap=${{ steps.cap.outputs.cap }})"
           for i in 1 2 3; do
             if git push; then break; fi
             echo "push 실패, pull --rebase 후 재시도 ($i/3)"
