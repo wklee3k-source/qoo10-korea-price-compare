@@ -42,6 +42,7 @@ PROD_ITEM_RE = re.compile(r'<li[^>]*class="prod_item[^"]*"', re.S)
 NAME_RE = re.compile(r'class="prod_name">\s*<a[^>]*>(.*?)</a>', re.S)
 PRICE_RE = re.compile(r'class="price_sect"[^>]*>.*?<strong>([\d,]+)</strong>', re.S)
 LINK_RE = re.compile(r'<a href="(https://prod\.danawa\.com/bridge/go_link_goods\.php[^"]+)"')
+IMG_RE = re.compile(r'thumb_image">.*?<img src="([^"]+)"', re.S)
 TAG_RE = re.compile(r"</?b>")
 
 
@@ -71,15 +72,20 @@ def parse_candidates(html: str, max_results: int = 5) -> list[dict]:
         name_m = NAME_RE.search(block)
         price_m = PRICE_RE.search(block)
         link_m = LINK_RE.search(block)
+        img_m = IMG_RE.search(block)
         if not (name_m and price_m):
             continue
         name = TAG_RE.sub("", name_m.group(1)).strip()
         price = int(price_m.group(1).replace(",", ""))
+        img_url = img_m.group(1) if img_m else None
+        if img_url and img_url.startswith("//"):
+            img_url = "https:" + img_url
         results.append(
             {
                 "name": name,
                 "price_krw": price,
                 "link": link_m.group(1) if link_m else None,
+                "img_kr": img_url,
             }
         )
         if len(results) >= max_results:
