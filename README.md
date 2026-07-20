@@ -102,6 +102,17 @@ python src/korea_price_finder.py --batch output/items output/danawa_candidates.j
 결과 12개 중 4개(썸바이미, 에이프릴스킨, 메이크프렘 등)가 정확한 상품명으로
 바로 매칭됐다.
 
+**v2 개선(외부 AI 리뷰 반영)**: 브라우저를 검색마다 새로 켜고 끄던 것을
+배치 전체에서 1개만 재사용하도록 바꿔 검색당 기동 비용을 없앴고, 같은
+검색어를 다시 검색하지 않도록 `output/danawa_cache.json`에 결과를 캐싱한다.
+결과명에 "공식"/"정품"이 포함되면 `is_likely_official=True`로 표시해
+사람 검수 우선순위를 정할 수 있게 했다(완전 확정 판별은 아님).
+
+```bash
+# 번역된 한글 검색어 맵을 미리 준비해서 넘기면 정확도가 크게 오른다
+python src/korea_price_finder.py --batch output/items output/danawa_candidates.json keywords_map.json
+```
+
 ### 품절 자동체크 (stock_checker.py)
 한국 소싱처 상품페이지가 실제로 품절인지 자동으로 확인한다. **핵심 함정**:
 cafe24 등 대부분의 쇼핑몰 플랫폼은 "품절"/"SOLD OUT" 배지 요소를 항상
