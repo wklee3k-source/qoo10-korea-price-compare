@@ -22,21 +22,69 @@ multi_source_finder.py
 
 import json
 import sys
+import time
 from pathlib import Path
 
 import korea_price_finder as danawa
 import musinsa_finder as musinsa
 
+SOLDOUT_KEYWORDS = ["품절", "SOLD OUT", "Sold Out", "일시품절", "재입고 알림", "판매종료", "구매불가"]
+
+
+def check_stock_with_context(context, url: str) -> dict:
+    """stock_checker.py와 같은 판정 로직(숨김 배지 오탐 방지)이지만, 매번 새
+    브라우저를 켜지 않고 기존 세션의 context를 재사용해서 빠르다."""
+    result = {"in_stock": None, "evidence": []}
+    if not url:
+        return result
+    page = context.new_page()
+    try:
+        page.goto(url, timeout=15000, wait_until="load")
+        time.sleep(2.0)
+        visible_soldout = []
+        for kw in SOLDOUT_KEYWORDS:
+            try:
+                els = page.query_selector_all(f"text={kw}")
+            except Exception:  # noqa: BLE001
+                continue
+            for el in els[:5]:
+                try:
+                    if el.is_visible():
+                        visible_soldout.append(kw)
+                except Exception:  # noqa: BLE001
+                    continue
+        if visible_soldout:
+            result["in_stock"] = False
+            result["evidence"] = visible_soldout
+        else:
+            result["in_stock"] = True
+            result["evidence"] = ["품절 요소 없음"]
+    except Exception as e:  # noqa: BLE001
+        result["in_stock"] = None
+        result["evidence"] = [f"확인 실패: {e}"]
+    finally:
+        page.close()
+    return result
+
 
 def find_price_layered(keyword: str, max_results: int = 5) -> dict:
-    """무신사 먼저 시도하고, 없으면 다나와로 보조."""
+    """무신사 먼저 시도하고, 없으면 다나와로 보조. 최유력 후보는 품절여부도 확인."""
     with musinsa.MusinsaSession() as ms:
         musinsa_results = ms.search(keyword, max_results)
+        if musinsa_results:
+            top = musinsa_results[0]
+            stock = check_stock_with_context(ms._context, top.get("link"))
+            top["in_stock"] = stock["in_stock"]
+            top["stock_evidence"] = stock["evidence"]
+            return {"source_used": "musinsa", "candidates": musinsa_results}
 
-    if musinsa_results:
-        return {"source_used": "musinsa", "candidates": musinsa_results}
-
-    danawa_results = danawa.find_price(keyword, max_results)
+    with danawa.DanawaSession(use_cache=True) as ds:
+        danawa_results = ds.search(keyword, max_results)
+        if danawa_results:
+            top = danawa_results[0]
+            stock = check_stock_with_context(ds._context, top.get("link"))
+            top["in_stock"] = stock["in_stock"]
+            top["stock_evidence"] = stock["evidence"]
     return {"source_used": "danawa" if danawa_results else "none", "candidates": danawa_results}
 
 
@@ -74,6 +122,11 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
             if candidates:
                 for c in candidates:
                     c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
+                # 최유력 후보(1번)만 품절여부 확인 (전부 확인하면 느려짐)
+                top = candidates[0]
+                stock = check_stock_with_context(ms._context, top.get("link"))
+                top["in_stock"] = stock["in_stock"]
+                top["stock_evidence"] = stock["evidence"]
                 results.append(
                     {
                         "goods_no": goods_no,
@@ -99,6 +152,12 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                 source_used = "danawa" if candidates else "none"
                 for c in candidates:
                     c["kr_site"] = "가격비교사이트 후보(danawa) — 실제 판매처/정가 여부 확인 필요"
+
+                if candidates:
+                    top = candidates[0]
+                    stock = check_stock_with_context(ds._context, top.get("link"))
+                    top["in_stock"] = stock["in_stock"]
+                    top["stock_evidence"] = stock["evidence"]
 
                 if source_used == "danawa":
                     danawa_hits += 1
