@@ -7,16 +7,21 @@ on:
   workflow_dispatch:
     inputs:
       keyword:
-        description: "검색할 상품명(핵심 문구)"
-        required: true
+        description: "검색할 상품명(핵심 문구) — scrape 작업용"
+        required: false
         type: string
+      run_price_finder:
+        description: "4단계(한국 원가) 자동검색을 돌릴지 여부"
+        required: false
+        type: boolean
+        default: false
   push:
     paths:
       - "output/*_korea_side.json"
 
 jobs:
   scrape:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && inputs.keyword != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +45,42 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
           git diff --cached --quiet || git commit -m "Auto: pipeline run for '${{ inputs.keyword }}'"
+          git push
+
+  price_finder:
+    # 4단계(한국 원가) 자동검색 — 사람 개입 없이 밤새 돌아갈 수 있도록 별도 job으로 분리.
+    # items_dir에 있는 상품 중 아직 결과가 없는 것만 이어서 처리한다(중단돼도 재실행하면 이어짐).
+    if: github.event_name == 'workflow_dispatch' && inputs.run_price_finder == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run automated Korean price finder (parallel, 4 workers)
+        working-directory: src
+        run: |
+          python korea_price_finder.py --batch-parallel \
+            ../output/items \
+            ../output/danawa_candidates.json \
+            "" \
+            4
+
+      - name: Commit results (even if the job times out partway)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/danawa_candidates.json output/danawa_cache.json
+          git diff --cached --quiet || git commit -m "Auto: stage-4 price finder run"
           git push
 
   build_excel:
