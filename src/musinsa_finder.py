@@ -53,6 +53,7 @@ def parse_musinsa_candidates(html: str, max_results: int = 5) -> list[dict]:
             continue
 
         price = None
+        brand_from_container = None
         container = link
         for _ in range(8):
             container = container.parent
@@ -62,6 +63,11 @@ def parse_musinsa_candidates(html: str, max_results: int = 5) -> list[dict]:
             m = PRICE_RE.search(text)
             if m and len(text) < 500:
                 price = int(m.group(1).replace(",", ""))
+                # 무신사 카드 텍스트는 보통 "브랜드명 상품명 할인율% 가격원 ..." 순서라
+                # 상품명(name) 앞부분을 잘라내면 브랜드명만 남는다
+                idx = text.find(name)
+                if idx > 0:
+                    brand_from_container = text[:idx].strip()
                 break
         if not price:
             continue
@@ -72,6 +78,7 @@ def parse_musinsa_candidates(html: str, max_results: int = 5) -> list[dict]:
         results.append(
             {
                 "name": name,
+                "brand_from_container": brand_from_container,
                 "price_krw": price,
                 "link": full_link,
                 "img_kr": img_url,
