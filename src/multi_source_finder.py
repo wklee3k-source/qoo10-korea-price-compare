@@ -59,8 +59,11 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
 
     musinsa_hits = 0
     danawa_hits = 0
+    needs_danawa = []  # (item, keyword) 무신사에서 못 찾은 것들만 모아서 나중에 처리
 
-    with musinsa.MusinsaSession() as ms, danawa.DanawaSession(use_cache=True) as ds:
+    # 1단계: 무신사 세션 하나로 전부 먼저 시도 (Playwright sync API는 세션
+    # 두 개를 동시에 열면 asyncio 충돌이 나서 반드시 순차적으로 열어야 함)
+    with musinsa.MusinsaSession() as ms:
         for item in todo:
             goods_no = item.get("goods_no")
             brand = item.get("brand_name") or ""
@@ -68,35 +71,51 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
             keyword = keywords_map.get(goods_no) or f"{brand} {name}"[:60]
 
             candidates = ms.search(keyword)
-            source_used = "musinsa"
-            if not candidates:
+            if candidates:
+                for c in candidates:
+                    c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
+                results.append(
+                    {
+                        "goods_no": goods_no,
+                        "qoo10_name": name,
+                        "brand_name": brand,
+                        "keyword_used": keyword,
+                        "source_used": "musinsa",
+                        "candidates": candidates,
+                    }
+                )
+                danawa.atomic_write_json(out_file, results)
+                musinsa_hits += 1
+                print(f"[SEARCH] {goods_no}: {keyword} -> {len(candidates)}건(musinsa)")
+            else:
+                needs_danawa.append((goods_no, brand, name, keyword))
+                print(f"[SEARCH] {goods_no}: {keyword} -> 무신사 없음, 다나와로 보류")
+
+    # 2단계: 무신사에서 못 찾은 것만 다나와로 보조 검색
+    if needs_danawa:
+        with danawa.DanawaSession(use_cache=True) as ds:
+            for goods_no, brand, name, keyword in needs_danawa:
                 candidates = ds.search(keyword)
                 source_used = "danawa" if candidates else "none"
                 for c in candidates:
                     c["kr_site"] = "가격비교사이트 후보(danawa) — 실제 판매처/정가 여부 확인 필요"
-            else:
-                for c in candidates:
-                    c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
 
-            if source_used == "musinsa":
-                musinsa_hits += 1
-            elif source_used == "danawa":
-                danawa_hits += 1
+                if source_used == "danawa":
+                    danawa_hits += 1
 
-            results.append(
-                {
-                    "goods_no": goods_no,
-                    "qoo10_name": name,
-                    "brand_name": brand,
-                    "keyword_used": keyword,
-                    "source_used": source_used,
-                    "candidates": candidates,
-                }
-            )
-            danawa.atomic_write_json(out_file, results)
-
-            status = f"{len(candidates)}건({source_used})" if candidates else "후보없음"
-            print(f"[SEARCH] {goods_no}: {keyword} -> {status}")
+                results.append(
+                    {
+                        "goods_no": goods_no,
+                        "qoo10_name": name,
+                        "brand_name": brand,
+                        "keyword_used": keyword,
+                        "source_used": source_used,
+                        "candidates": candidates,
+                    }
+                )
+                danawa.atomic_write_json(out_file, results)
+                status = f"{len(candidates)}건(danawa)" if candidates else "후보없음"
+                print(f"[SEARCH][fallback] {goods_no}: {keyword} -> {status}")
 
     print(f"\n[DONE] {len(results)}건 처리 완료 -> {out_path}")
     print(f"       무신사 매칭 {musinsa_hits}건 / 다나와 매칭 {danawa_hits}건 / 매칭없음 {len(todo) - musinsa_hits - danawa_hits}건")
