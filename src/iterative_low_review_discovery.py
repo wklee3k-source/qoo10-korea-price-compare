@@ -65,18 +65,22 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
             continue
         category = detail.get("category_gdlc_cd")
         has_options = detail.get("has_options")
+        review_count = detail.get("review_count")
         if category in COLOR_COSMETIC_CATEGORIES:
             print(f"    [스킵-색조] {item['goods_no']} {item['title'][:30]}")
             continue
         if has_options:
             print(f"    [스킵-옵션] {item['goods_no']} {item['title'][:30]}")
             continue
+        if review_count is None or review_count >= REVIEW_THRESHOLD:
+            print(f"    [스킵-상품리뷰{review_count}] {item['goods_no']} {item['title'][:30]}")
+            continue
         item["shop_id"] = shop_id
         item["category_gdlc_cd"] = category
         item["has_options"] = has_options
-        item["review_count"] = detail.get("review_count")
+        item["review_count"] = review_count
         passed.append(item)
-        print(f"    [저장] {item['goods_no']} {item['title'][:40]}")
+        print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:40]}")
     return passed
 
 
