@@ -101,6 +101,12 @@ HTML_HEAD = """<!DOCTYPE html>
   .exclude-btn {{ background:#c0392b; color:#fff; border:none; padding:16px 10px;
                    border-radius:8px; font-size:14px; cursor:pointer; width:100%; line-height:1.4; }}
   .exclude-btn.active {{ background:#7f8c8d; }}
+  .pagination {{ display:flex; gap:6px; flex-wrap:wrap; margin:16px 0; }}
+  .pagination button {{ background:#fff; border:1px solid #ccc; border-radius:6px; padding:6px 12px;
+                         font-size:13px; cursor:pointer; }}
+  .pagination button.current {{ background:#2a7d46; color:#fff; border-color:#2a7d46; }}
+  .page-group {{ display:none; }}
+  .page-group.active {{ display:block; }}
 </style>
 </head>
 <body>
@@ -110,51 +116,84 @@ HTML_HEAD = """<!DOCTYPE html>
   <span class="status" id="status"></span>
 </div>
 
-<h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건, 메인사진 {main_count}장)</h1>
+<h1>큐텐 ↔ 한국 상품 매칭 검수 ({count}건, 페이지당 {page_size}개, 메인사진 {main_count}장)</h1>
 <p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
-상품이면 오른쪽 "제외" 버튼을 누르세요.</p>
+상품이면 오른쪽 "제외" 버튼을 누르세요. 저장 버튼을 누르면 전체 페이지의
+결정사항이 한 번에 저장됩니다.</p>
 {skip_notice}
+<div class="pagination" id="pagination-top"></div>
 """
 
 HTML_TAIL = """
+<div class="pagination" id="pagination-bottom"></div>
 <script>
-function selectImage(goodsNo, side, url, el) {
+var PAGE_SIZE = {page_size};
+var currentPage = 1;
+
+function setupPagination() {{
+  var groups = document.querySelectorAll('.page-group');
+  var totalPages = groups.length;
+  function renderControls(containerId) {{
+    var el = document.getElementById(containerId);
+    el.innerHTML = '';
+    for (var i = 1; i <= totalPages; i++) {{
+      var btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === currentPage) btn.classList.add('current');
+      btn.onclick = (function(pageNum) {{ return function() {{ goToPage(pageNum); }}; }})(i);
+      el.appendChild(btn);
+    }}
+  }}
+  window.goToPage = function(n) {{
+    currentPage = n;
+    groups.forEach(function(g, idx) {{
+      g.classList.toggle('active', idx === n - 1);
+    }});
+    renderControls('pagination-top');
+    renderControls('pagination-bottom');
+    window.scrollTo(0, 0);
+  }};
+  goToPage(1);
+}}
+setupPagination();
+
+function selectImage(goodsNo, side, url, el) {{
   var card = el.closest('.card');
-  card.querySelectorAll('.mainimg, .altimg').forEach(function(n) { n.classList.remove('selected'); });
+  card.querySelectorAll('.mainimg, .altimg').forEach(function(n) {{ n.classList.remove('selected'); }});
   el.classList.add('selected');
   card.dataset.selectedSource = side;
   card.dataset.selectedUrl = url;
   setExcluded(card, false);
-}
+}}
 
-function toggleExclude(btn) {
+function toggleExclude(btn) {{
   var card = btn.closest('.card');
   var nowExcluded = !card.classList.contains('excluded');
   setExcluded(card, nowExcluded);
-}
+}}
 
-function setExcluded(card, excluded) {
+function setExcluded(card, excluded) {{
   var btn = card.querySelector('.exclude-btn');
-  if (excluded) {
+  if (excluded) {{
     card.classList.add('excluded');
     btn.classList.add('active');
     btn.textContent = '제외됨\\n(클릭해서 취소)';
-  } else {
+  }} else {{
     card.classList.remove('excluded');
     btn.classList.remove('active');
     btn.textContent = '❌ 이 상품 제외';
-  }
-}
+  }}
+}}
 
-function saveDecisions() {
+function saveDecisions() {{
   var cards = document.querySelectorAll('.card');
   var results = [];
-  cards.forEach(function(card) {
+  cards.forEach(function(card) {{
     var goodsNo = card.dataset.goods;
     var excluded = card.classList.contains('excluded');
     var hasSelection = !!card.dataset.selectedUrl;
     var included = !excluded && hasSelection;
-    results.push({
+    results.push({{
       goods_no: goodsNo,
       qoo10_name: card.dataset.qoo10Name,
       kr_name: card.dataset.krName,
@@ -163,9 +202,9 @@ function saveDecisions() {
       image_usable: included,
       image_source: included ? card.dataset.selectedSource : null,
       final_image: included ? card.dataset.selectedUrl : null
-    });
-  });
-  var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
+    }});
+  }});
+  var blob = new Blob([JSON.stringify(results, null, 2)], {{type: "application/json"}});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = "decisions.json";
@@ -173,8 +212,8 @@ function saveDecisions() {
   a.click();
   document.body.removeChild(a);
   document.getElementById('status').textContent =
-    "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인";
-}
+    "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인 (전체 " + cards.length + "건 포함)";
+}}
 </script>
 </body>
 </html>
@@ -205,7 +244,7 @@ def _render_side(goods_no: str, side: str, label: str, images: list[str], main_c
     return f'<h3>{label}</h3><div class="mainrow">{main_html}</div>{sub_row}'
 
 
-def build_review(items_dir: str, korea_side_path: str, output_prefix: str, main_count: int = 2):
+def build_review(items_dir: str, korea_side_path: str, output_prefix: str, main_count: int = 2, page_size: int = 20):
     items = {
         json.loads(p.read_text(encoding="utf-8"))["goods_no"]: json.loads(p.read_text(encoding="utf-8"))
         for p in Path(items_dir).glob("*.json")
@@ -259,12 +298,18 @@ def build_review(items_dir: str, korea_side_path: str, output_prefix: str, main_
             f"<ul>{items_html}</ul></div>"
         )
 
+    # 카드를 page_size개씩 묶어서 page-group div로 감싼다 (1페이지만 보이고 나머지는 JS로 전환)
+    page_groups = []
+    for i in range(0, len(cards), page_size):
+        chunk = cards[i:i + page_size]
+        page_groups.append(f'<div class="page-group">{"".join(chunk)}</div>')
+
     out_html = Path(f"{output_prefix}_review.html")
     out_html.parent.mkdir(parents=True, exist_ok=True)
     out_html.write_text(
-        HTML_HEAD.format(count=len(cards), main_count=main_count, skip_notice=skip_notice)
-        + "".join(cards)
-        + HTML_TAIL,
+        HTML_HEAD.format(count=len(cards), page_size=page_size, main_count=main_count, skip_notice=skip_notice)
+        + "".join(page_groups)
+        + HTML_TAIL.format(page_size=page_size),
         encoding="utf-8",
     )
     return out_html, auto_skipped
@@ -277,9 +322,10 @@ def main():
 
     items_dir, korea_side_path, output_prefix = sys.argv[1:4]
     main_count = int(sys.argv[4]) if len(sys.argv) > 4 else 2
+    page_size = int(sys.argv[5]) if len(sys.argv) > 5 else 20
 
-    html_path, auto_skipped = build_review(items_dir, korea_side_path, output_prefix, main_count)
-    print(f"[INFO] 검수 페이지 -> {html_path} (메인사진 {main_count}장)")
+    html_path, auto_skipped = build_review(items_dir, korea_side_path, output_prefix, main_count, page_size)
+    print(f"[INFO] 검수 페이지 -> {html_path} (메인사진 {main_count}장, 페이지당 {page_size}개)")
     if auto_skipped:
         print(f"[INFO] 옵션상품이라 자동 제외: {len(auto_skipped)}건")
         for gid, name in auto_skipped:
