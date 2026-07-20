@@ -25,7 +25,7 @@ from pathlib import Path
 from qoo10_low_review_shop_finder import search_qoo10, parse_results
 from qoo10_ranking_scraper import fetch_shop_ranking
 from qoo10_item_detail_scraper import fetch_item_detail
-from jp_kr_translator import guess_translate
+from google_translate import GoogleTranslateSession
 from hwahae_name_corrector import correct_name
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
@@ -49,9 +49,18 @@ def extract_core_keyword(title: str) -> str:
     return t
 
 
+VOLUME_RE = re.compile(r"[\d.]+\s*(?:ml|g|枚|個|本)(?:[×xX+][\d.]+\s*(?:ml|g|個|箱|セット))*")
+BRACKET_RE = re.compile(r"[【\[（(][^】\])）]*[】\])）]")
+
+
 def crawl_shop_best5(shop_id: str) -> list[dict]:
     """상점 베스트5를 크롤링하고, 카테고리(색조)/옵션 필터를 즉시 적용한다.
-    통과한 상품만 반환(원본 title 그대로 유지)."""
+    통과한 상품만 반환(원본 title 그대로 유지).
+
+    [주의] 필터링 단계(fetch_item_detail)와 번역 단계(GoogleTranslateSession)를
+    반드시 분리된 두 단계로 처리해야 한다 — 둘 다 각자 sync_playwright()를
+    쓰는데, 한쪽 세션이 열려있는 동안 다른 쪽을 또 열면 asyncio 충돌이 난다
+    (앞서 multi_source_finder.py에서도 같은 문제를 겪었다)."""
     try:
         ranking = fetch_shop_ranking(shop_id)
     except Exception:  # noqa: BLE001
@@ -59,6 +68,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
     if not ranking:
         return []
 
+    # 1단계: 필터링(카테고리/옵션/리뷰수) — fetch_item_detail만 사용
     passed = []
     for item in ranking:
         try:
@@ -85,25 +95,45 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         item["category_gdlc_cd"] = category
         item["has_options"] = has_options
         item["review_count"] = review_count
+        passed.append(item)
 
-        # 크롤링 다음 행위: 한글 추측번역 → 화해로 정확한 명칭 검증 → 최종조합
-        guess = guess_translate(item.get("brand", ""), item["title"])
-        hwahae = correct_name(f"{guess['brand_kr']} {guess['core_kr']}".strip())
+    if not passed:
+        return []
+
+    # 2단계: 번역 — GoogleTranslateSession만 사용(1단계가 끝난 뒤에 열림)
+    translated = {}
+    with GoogleTranslateSession() as translator:
+        for item in passed:
+            title_no_bracket = BRACKET_RE.sub(" ", item["title"])
+            title_no_bracket = re.split(r"\s*/", title_no_bracket)[0]
+            vol_match = VOLUME_RE.search(title_no_bracket)
+            volume = vol_match.group() if vol_match else ""
+            title_for_translate = title_no_bracket
+            if vol_match:
+                title_for_translate = title_no_bracket[: vol_match.start()] + " " + title_no_bracket[vol_match.end():]
+
+            brand_ja = item.get("brand", "")
+            brand_kr = translator.translate(brand_ja) or brand_ja
+            core_kr = translator.translate(title_for_translate.strip()) or title_for_translate.strip()
+            translated[item["goods_no"]] = {"brand_kr": brand_kr, "core_kr": core_kr, "volume": volume}
+
+    # 3단계: 화해로 정확한 명칭 검증 — hwahae_name_corrector가 자체적으로
+    # sync_playwright를 여는 함수라서, 2단계(번역세션)가 완전히 닫힌 뒤에 실행한다
+    for item in passed:
+        t = translated[item["goods_no"]]
+        hwahae = correct_name(f"{t['brand_kr']} {t['core_kr']}".strip())
         corrected = hwahae.get("corrected")
         if corrected:
             corrected_clean = re.sub(r"\s*[\[\(][^\]\)]*$", "", corrected).strip()
-            if guess["brand_kr"] not in corrected_clean:
-                final_name = f"{guess['brand_kr']} {corrected_clean}"
-            else:
-                final_name = corrected_clean
-            if guess["volume"]:
-                final_name = f"{final_name} {guess['volume']}"
+            final_name = corrected_clean if t["brand_kr"] in corrected_clean else f"{t['brand_kr']} {corrected_clean}"
+            if t["volume"]:
+                final_name = f"{final_name} {t['volume']}"
         else:
-            final_name = f"{guess['brand_kr']} {guess['core_kr']} {guess['volume']}".strip()
+            final_name = f"{t['brand_kr']} {t['core_kr']} {t['volume']}".strip()
 
         item["name_kr_verified"] = final_name
-        passed.append(item)
-        print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:30]} -> {final_name}")
+        print(f"    [저장] {item['goods_no']} review={item['review_count']} {item['title'][:30]} -> {final_name}")
+
     return passed
 
 
