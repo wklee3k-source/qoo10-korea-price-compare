@@ -25,6 +25,8 @@ from pathlib import Path
 from qoo10_low_review_shop_finder import search_qoo10, parse_results
 from qoo10_ranking_scraper import fetch_shop_ranking
 from qoo10_item_detail_scraper import fetch_item_detail
+from jp_kr_translator import guess_translate
+from hwahae_name_corrector import correct_name
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 STATE_PATH = OUTPUT_DIR / "discovery_state.json"
@@ -83,8 +85,25 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         item["category_gdlc_cd"] = category
         item["has_options"] = has_options
         item["review_count"] = review_count
+
+        # 크롤링 다음 행위: 한글 추측번역 → 화해로 정확한 명칭 검증 → 최종조합
+        guess = guess_translate(item.get("brand", ""), item["title"])
+        hwahae = correct_name(f"{guess['brand_kr']} {guess['core_kr']}".strip())
+        corrected = hwahae.get("corrected")
+        if corrected:
+            corrected_clean = re.sub(r"\s*[\[\(][^\]\)]*$", "", corrected).strip()
+            if guess["brand_kr"] not in corrected_clean:
+                final_name = f"{guess['brand_kr']} {corrected_clean}"
+            else:
+                final_name = corrected_clean
+            if guess["volume"]:
+                final_name = f"{final_name} {guess['volume']}"
+        else:
+            final_name = f"{guess['brand_kr']} {guess['core_kr']} {guess['volume']}".strip()
+
+        item["name_kr_verified"] = final_name
         passed.append(item)
-        print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:40]}")
+        print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:30]} -> {final_name}")
     return passed
 
 
@@ -184,6 +203,7 @@ def export_excel(products: list[dict], out_path: str):
             "큐텐상품번호": p.get("goods_no"),
             "상점ID": p.get("shop_id"),
             "상품명(원본)": p.get("title"),
+            "한글검증명칭": p.get("name_kr_verified"),
             "브랜드": p.get("brand"),
             "가격(엔)": p.get("price_jpy"),
             "리뷰수": p.get("review_count"),
@@ -207,7 +227,7 @@ def export_excel(products: list[dict], out_path: str):
         cell.font = header_font
         cell.fill = header_fill
         cell.alignment = Alignment(horizontal="center")
-    widths = {"A": 14, "B": 16, "C": 50, "D": 16, "E": 10, "F": 8, "G": 10, "H": 14, "I": 45}
+    widths = {"A": 14, "B": 16, "C": 45, "D": 40, "E": 16, "F": 10, "G": 8, "H": 10, "I": 14, "J": 45}
     for col, w in widths.items():
         ws.column_dimensions[col].width = w
     ws.freeze_panes = "A2"
