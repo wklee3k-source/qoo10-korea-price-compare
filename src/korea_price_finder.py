@@ -31,6 +31,7 @@ korea_price_finder.py
         brand_name + item_name(원문)을 그대로 써서 정확도가 크게 떨어진다.
 """
 
+import html as html_lib
 import json
 import re
 import sys
@@ -52,6 +53,48 @@ IMG_RE = re.compile(r'thumb_image">.*?<img src="([^"]+)"', re.S)
 TAG_RE = re.compile(r"</?b>")
 
 CACHE_PATH = Path(__file__).resolve().parent.parent / "output" / "danawa_cache.json"
+
+# 브랜드별 공식 도메인 화이트리스트 — 지금까지 이 프로젝트에서 실제로 확인한 것들.
+# 새 브랜드를 다루게 되면 여기에 계속 추가하면 된다.
+OFFICIAL_DOMAINS = {
+    "이니스프리": ["innisfree.com", "amoremall.com"],
+    "라네즈": ["laneige.com", "amoremall.com"],
+    "COSRX": ["cosrx.co.kr"],
+    "바닐라코": ["banila.com", "banilaco.com"],
+    "VT코스메틱": ["vt-cosmetics.com"],
+    "피지오겔": ["physiogel.co.kr"],
+    "닥터트웬티프로젝트": ["dr20project.com"],
+    "Dr.twentyproject": ["dr20project.com"],
+    "썸바이미": ["somebymi.co.kr", "somebymi.com", "somebyme.net"],
+    "마녀공장": ["manyo.co.kr"],
+    "티르티르": ["tirtir.co.kr"],
+    "TIRTIR": ["tirtir.co.kr"],
+    "메이크프렘": ["makeprem.com"],
+    "씨스터앤": ["sister-ann.com"],
+    "SISTER ANN": ["sister-ann.com"],
+    "힌스": ["hince.co.kr"],
+    "hince": ["hince.co.kr"],
+    "GROWUS": ["growus.kr"],
+    "KAHI": ["kahicosmetics.co.kr", "kahi.shop"],
+    "가히": ["kahicosmetics.co.kr", "kahi.shop"],
+    "프랭클리": ["frankly.co.kr"],
+    "frankly": ["frankly.co.kr"],
+    "바이오던스": ["biodance.co.kr"],
+    "Biodance": ["biodance.co.kr"],
+    "셀퓨전씨": ["cellfusionc.co.kr"],
+    "피부미": ["pibumi.com", "pibumi.co.kr"],
+    "PIBUMI": ["pibumi.com", "pibumi.co.kr"],
+    "리쥬란": ["pdrnmall.co.kr"],
+    "메디큐브": ["medicube.kr"],
+    "에이프릴스킨": ["aprilskin.com"],
+}
+
+
+def domain_matches_brand(domain: str, brand: str) -> bool:
+    known = OFFICIAL_DOMAINS.get(brand.strip())
+    if not known:
+        return False
+    return any(d in domain for d in known)
 
 
 def _load_cache() -> dict:
@@ -86,7 +129,7 @@ def parse_candidates(html: str, max_results: int = 5) -> list[dict]:
             {
                 "name": name,
                 "price_krw": price,
-                "link": link_m.group(1) if link_m else None,
+                "link": html_lib.unescape(link_m.group(1)) if link_m else None,
                 "img_kr": img_url,
                 # 완전 확정은 아니지만 "공식"이라는 단어가 상품명에 박혀있으면
                 # 공식몰/공식 유통 상품일 확률이 높다 — 사람 검수 우선순위용
@@ -122,6 +165,23 @@ class DanawaSession:
             self._browser.close()
         if self._pw:
             self._pw.stop()
+
+    def resolve_final_domain(self, bridge_link: str) -> str | None:
+        """다나와 중개링크는 JS 리다이렉트라 requests로는 최종 도메인을 못 얻는다.
+        같은 브라우저 세션으로 실제 이동시켜서 최종 도메인을 확인한다."""
+        if not bridge_link:
+            return None
+        page = self._context.new_page()
+        try:
+            page.goto(bridge_link, timeout=20000, wait_until="domcontentloaded")
+            time.sleep(1.5)
+            final_url = page.url
+            return urllib.parse.urlparse(final_url).netloc
+        except Exception as e:  # noqa: BLE001
+            print(f"    [WARN] 리다이렉트 확인 실패: {e}", file=sys.stderr)
+            return None
+        finally:
+            page.close()
 
     def search(self, keyword: str, max_results: int = 5) -> list[dict]:
         if self.use_cache and keyword in self.cache:
@@ -183,6 +243,20 @@ def batch_find(items_dir: str, out_path: str, keywords_map_path: str | None = No
             candidates = session.search(keyword)
             for c in candidates:
                 c["kr_site"] = "가격비교사이트 후보(danawa) — 실제 판매처/정가 여부 확인 필요"
+
+            # 상위 1건만 실제 최종 도메인을 확인해서 화이트리스트와 대조한다
+            # (전부 다 확인하면 느려지므로 최유력 후보만 검증)
+            if candidates:
+                top = candidates[0]
+                domain = session.resolve_final_domain(top.get("link"))
+                if domain:
+                    top["resolved_domain"] = domain
+                    if domain_matches_brand(domain, brand):
+                        top["is_official_confirmed"] = True
+                        top["kr_site"] = f"공식몰 확인됨({domain}) — 자동판별"
+                        print(f"    [공식몰 확인] {domain}")
+                    else:
+                        top["is_official_confirmed"] = False
 
             results.append(
                 {
