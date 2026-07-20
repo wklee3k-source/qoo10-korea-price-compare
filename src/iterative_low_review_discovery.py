@@ -99,23 +99,49 @@ def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
     return list(seen.values())
 
 
-def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
-    visited_shops = set()
-    all_products = {}
-    shop_urls = []
+def _load_state() -> dict:
+    if STATE_PATH.exists():
+        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": []}
 
-    pending_keywords = [keyword_ja]
-    seen_keywords = set()
+
+def _save_state(state: dict):
+    STATE_PATH.parent.mkdir(exist_ok=True, parents=True)
+    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
+    state = _load_state()
+    visited_shops = set(state["visited_shops"])
+    all_products = {p["goods_no"]: p for p in state["all_products"]}
+    shop_urls = state["shop_urls"]
+    pending_keywords = state["pending_keywords"] if state["pending_keywords"] is not None else [keyword_ja]
+    seen_keywords = set(state["seen_keywords"])
+
+    if state["visited_shops"]:
+        print(f"[RESUME] 상점 {len(visited_shops)}개, 상품 {len(all_products)}건부터 이어서 진행")
+
+    def save():
+        _save_state(
+            {
+                "visited_shops": list(visited_shops),
+                "all_products": list(all_products.values()),
+                "shop_urls": shop_urls,
+                "pending_keywords": pending_keywords,
+                "seen_keywords": list(seen_keywords),
+            }
+        )
 
     while pending_keywords and len(all_products) < target_products:
         if max_shops and len(visited_shops) >= max_shops:
             print(f"\n[STOP] 최대 상점수({max_shops}) 도달")
             break
 
-        kw = pending_keywords.pop(0)
+        kw = pending_keywords[0]  # 상점 처리 끝나야 pop (중간에 끊겨도 재개 가능)
         if kw in seen_keywords:
+            pending_keywords.pop(0)
+            save()
             continue
-        seen_keywords.add(kw)
 
         print(f"\n[검색] {kw}")
         shops = find_low_review_shops(kw, visited_shops)
@@ -139,6 +165,11 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
                 core = extract_core_keyword(item["title"])
                 if core:
                     pending_keywords.append(core)
+            save()  # 매 상점마다 저장 (타임아웃 걸려도 이어서 진행 가능)
+
+        seen_keywords.add(kw)
+        pending_keywords.pop(0)
+        save()
 
     print(f"\n[DONE] 상점 {len(visited_shops)}개 방문, 상품 {len(all_products)}건 확보")
     return list(all_products.values()), shop_urls

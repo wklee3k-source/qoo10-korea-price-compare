@@ -7,16 +7,30 @@ on:
   workflow_dispatch:
     inputs:
       keyword:
-        description: "검색할 상품명(핵심 문구)"
-        required: true
+        description: "검색할 상품명(핵심 문구) — scrape 작업용"
+        required: false
         type: string
+      discovery_keyword_ja:
+        description: "저리뷰 상점 발굴 시작 검색어(일본어) — 비워두면 이 job 안 돎"
+        required: false
+        type: string
+      discovery_max_shops:
+        description: "최대 방문 상점 수"
+        required: false
+        type: string
+        default: "10"
+      discovery_target_products:
+        description: "목표 상품 수"
+        required: false
+        type: string
+        default: "50"
   push:
     paths:
       - "output/*_korea_side.json"
 
 jobs:
   scrape:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && inputs.keyword != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,6 +55,67 @@ jobs:
           git add output/
           git diff --cached --quiet || git commit -m "Auto: pipeline run for '${{ inputs.keyword }}'"
           git push
+
+  discover_low_review_shops:
+    # 저리뷰 상점/상품 자동발굴 — 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도
+    # GitHub 서버에서 계속 돎). 상태는 output/discovery_state.json에 저장되므로
+    # 타임아웃 걸려도 다시 이 workflow를 실행하면 이어서 진행된다.
+    if: github.event_name == 'workflow_dispatch' && inputs.discovery_keyword_ja != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      - name: Run discovery
+        working-directory: src
+        run: |
+          python iterative_low_review_discovery.py \
+            "${{ inputs.discovery_keyword_ja }}" \
+            ${{ inputs.discovery_target_products }} \
+            ../output/discovery_result.xlsx \
+            ${{ inputs.discovery_max_shops }}
+
+      - name: Commit results (타임아웃 걸려도 그때까지 결과 커밋)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/discovery_state.json output/discovery_result.xlsx 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: low-review shop/product discovery run"
+          for i in 1 2 3; do
+            if git push; then break; fi
+            echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+            git pull --rebase
+          done
 
   build_excel:
     if: github.event_name == 'push'
