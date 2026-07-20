@@ -28,6 +28,7 @@ from pathlib import Path
 import korea_price_finder as danawa
 import musinsa_finder as musinsa
 import brand_db
+import fuzzy_match
 
 SOLDOUT_KEYWORDS = ["품절", "SOLD OUT", "Sold Out", "일시품절", "재입고 알림", "판매종료", "구매불가"]
 
@@ -124,6 +125,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
             known_official = channels["searchable"].get("official")
             reference_links = channels["reference_only"]
             if candidates:
+                candidates = fuzzy_match.rank_candidates(name, brand, candidates)  # 점수 기준 재정렬
                 for c in candidates:
                     c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
                 # 최유력 후보(1번)만 품절여부 확인 (전부 확인하면 느려짐)
@@ -155,6 +157,8 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
         with danawa.DanawaSession(use_cache=True) as ds:
             for goods_no, brand, name, keyword, known_official, reference_links in needs_danawa:
                 candidates = ds.search(keyword)
+                if candidates:
+                    candidates = fuzzy_match.rank_candidates(name, brand, candidates)
                 source_used = "danawa" if candidates else "none"
                 for c in candidates:
                     c["kr_site"] = "가격비교사이트 후보(danawa) — 실제 판매처/정가 여부 확인 필요"
