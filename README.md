@@ -136,6 +136,13 @@ python src/multi_source_finder.py --batch output/items output/multi_source_candi
 python src/korea_price_finder.py --batch-parallel output/items output/danawa_candidates.json keywords_map.json 4
 ```
 
+`multi_source_finder.py`는 매칭된 최유력 후보 1건에 대해 **품절여부도
+자동으로 같이 확인**한다(`stock_checker.py`와 같은 판정 로직 — 숨김
+배지 오탐 방지). 이미 열려 있는 브라우저 세션을 재사용해서 별도
+브라우저를 추가로 켜지 않는다. 링크 확인 자체가 실패하면(예: 다나와
+중개링크 일부가 최종 도착에 실패하는 문제) `in_stock`을 `None`으로
+정직하게 남기고 함부로 "재고있음"이라고 단정하지 않는다.
+
 ### 품절 자동체크 (stock_checker.py)
 한국 소싱처 상품페이지가 실제로 품절인지 자동으로 확인한다. **핵심 함정**:
 cafe24 등 대부분의 쇼핑몰 플랫폼은 "품절"/"SOLD OUT" 배지 요소를 항상
