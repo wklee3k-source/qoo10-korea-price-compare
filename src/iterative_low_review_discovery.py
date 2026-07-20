@@ -65,14 +65,18 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
             continue
         category = detail.get("category_gdlc_cd")
         has_options = detail.get("has_options")
+        # review_count가 None인 건 에러가 아니라 "리뷰가 아예 없어서 JSON-LD의
+        # aggregateRating 필드 자체가 안 나오는" 정상 상태다 → 0으로 취급한다
         review_count = detail.get("review_count")
+        if review_count is None:
+            review_count = 0
         if category in COLOR_COSMETIC_CATEGORIES:
             print(f"    [스킵-색조] {item['goods_no']} {item['title'][:30]}")
             continue
         if has_options:
             print(f"    [스킵-옵션] {item['goods_no']} {item['title'][:30]}")
             continue
-        if review_count is None or review_count >= REVIEW_THRESHOLD:
+        if review_count >= REVIEW_THRESHOLD:
             print(f"    [스킵-상품리뷰{review_count}] {item['goods_no']} {item['title'][:30]}")
             continue
         item["shop_id"] = shop_id
