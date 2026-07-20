@@ -27,6 +27,7 @@ from pathlib import Path
 
 import korea_price_finder as danawa
 import musinsa_finder as musinsa
+import brand_db
 
 SOLDOUT_KEYWORDS = ["품절", "SOLD OUT", "Sold Out", "일시품절", "재입고 알림", "판매종료", "구매불가"]
 
@@ -119,6 +120,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
             keyword = keywords_map.get(goods_no) or f"{brand} {name}"[:60]
 
             candidates = ms.search(keyword)
+            known_official = brand_db.lookup(brand)
             if candidates:
                 for c in candidates:
                     c["kr_site"] = "무신사 실판매(musinsa) — 허용 소싱처"
@@ -134,6 +136,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                         "brand_name": brand,
                         "keyword_used": keyword,
                         "source_used": "musinsa",
+                        "known_official_site": known_official,
                         "candidates": candidates,
                     }
                 )
@@ -141,13 +144,13 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                 musinsa_hits += 1
                 print(f"[SEARCH] {goods_no}: {keyword} -> {len(candidates)}건(musinsa)")
             else:
-                needs_danawa.append((goods_no, brand, name, keyword))
+                needs_danawa.append((goods_no, brand, name, keyword, known_official))
                 print(f"[SEARCH] {goods_no}: {keyword} -> 무신사 없음, 다나와로 보류")
 
     # 2단계: 무신사에서 못 찾은 것만 다나와로 보조 검색
     if needs_danawa:
         with danawa.DanawaSession(use_cache=True) as ds:
-            for goods_no, brand, name, keyword in needs_danawa:
+            for goods_no, brand, name, keyword, known_official in needs_danawa:
                 candidates = ds.search(keyword)
                 source_used = "danawa" if candidates else "none"
                 for c in candidates:
@@ -169,6 +172,7 @@ def batch_find_layered(items_dir: str, out_path: str, keywords_map_path: str | N
                         "brand_name": brand,
                         "keyword_used": keyword,
                         "source_used": source_used,
+                        "known_official_site": known_official,
                         "candidates": candidates,
                     }
                 )
