@@ -33,6 +33,8 @@ DESKTOP_UA = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
+import korea_price_finder as _danawa  # UA_POOL 재사용 (#17 User-Agent Pool)
+
 PRICE_RE = re.compile(r"([\d,]{4,})원")
 
 
@@ -101,7 +103,7 @@ class MusinsaSession:
     def __enter__(self):
         self._pw = sync_playwright().start()
         self._browser = self._pw.chromium.launch(headless=True)
-        self._context = self._browser.new_context(user_agent=DESKTOP_UA, ignore_https_errors=True)
+        self._context = self._browser.new_context(user_agent=_danawa.random_ua(), ignore_https_errors=True)
         return self
 
     def __exit__(self, exc_type, exc, tb):

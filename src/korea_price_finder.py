@@ -46,53 +46,49 @@ DESKTOP_UA = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
+# User-Agent Pool (#17) — 매번 같은 UA만 쓰면 대량요청 시 탐지되기 쉬워서
+# 요청마다 무작위로 하나씩 골라 쓴다. 실제 최신 브라우저들의 UA 문자열.
+UA_POOL = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edg/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+]
+
+
+def random_ua() -> str:
+    import random
+
+    return random.choice(UA_POOL)
+
 CACHE_DB_PATH = Path(__file__).resolve().parent.parent / "output" / "danawa_cache.sqlite3"
 
-# 브랜드별 공식 도메인 화이트리스트 — 지금까지 이 프로젝트에서 실제로 확인한 것들.
-OFFICIAL_DOMAINS = {
-    "이니스프리": ["innisfree.com", "amoremall.com"],
-    "라네즈": ["laneige.com", "amoremall.com"],
-    "COSRX": ["cosrx.co.kr"],
-    "바닐라코": ["banila.com", "banilaco.com"],
-    "VT코스메틱": ["vt-cosmetics.com"],
-    "피지오겔": ["physiogel.co.kr"],
-    "닥터트웬티프로젝트": ["dr20project.com"],
-    "Dr.twentyproject": ["dr20project.com"],
-    "썸바이미": ["somebymi.co.kr", "somebymi.com", "somebyme.net"],
-    "마녀공장": ["manyo.co.kr"],
-    "티르티르": ["tirtir.co.kr"],
-    "TIRTIR": ["tirtir.co.kr"],
-    "메이크프렘": ["makeprem.com"],
-    "씨스터앤": ["sister-ann.com"],
-    "SISTER ANN": ["sister-ann.com"],
-    "힌스": ["hince.co.kr"],
-    "hince": ["hince.co.kr"],
-    "GROWUS": ["growus.kr"],
-    "KAHI": ["kahicosmetics.co.kr", "kahi.shop"],
-    "가히": ["kahicosmetics.co.kr", "kahi.shop"],
-    "프랭클리": ["frankly.co.kr"],
-    "frankly": ["frankly.co.kr"],
-    "바이오던스": ["biodance.co.kr"],
-    "Biodance": ["biodance.co.kr"],
-    "셀퓨전씨": ["cellfusionc.co.kr"],
-    "피부미": ["pibumi.com", "pibumi.co.kr"],
-    "PIBUMI": ["pibumi.com", "pibumi.co.kr"],
-    "리쥬란": ["pdrnmall.co.kr"],
-    "메디큐브": ["medicube.kr"],
-    "에이프릴스킨": ["aprilskin.com"],
-}
+# 브랜드→공식도메인 화이트리스트는 이제 brand_db.json 하나로 통합했다
+# (예전엔 여기에도 따로 있었는데, 같은 정보가 두 군데(korea_price_finder.py의
+# OFFICIAL_DOMAINS + brand_db.json)에 중복 관리되고 있었다 — 외부 AI가 지적한
+# "OFFICIAL_DOMAINS 유지보수 문제(중복, 정규화 필요)"의 근본 원인이 바로 이
+# 이중관리였다. brand_db.py 하나로 합쳐서 앞으로는 한 곳만 고치면 된다.)
+import sys as _sys
+from pathlib import Path as _Path
+
+_sys.path.insert(0, str(_Path(__file__).resolve().parent))
+import brand_db as _brand_db
 
 
 def domain_matches_brand(domain: str, brand: str) -> bool:
-    if not domain:
+    if not domain or not brand:
         return False
-    # brand.naver.com/<브랜드명> 처럼 path에 브랜드가 들어가는 네이버
-    # 브랜드스토어 형태도 고려(도메인만으로는 구분이 안 되므로 별도 처리 필요 —
-    # 지금은 domain 인자에 path까지 포함해서 넘겨주는 걸 전제로 한다)
-    known = OFFICIAL_DOMAINS.get(brand.strip())
-    if not known:
+    entry = _brand_db.lookup(brand)
+    if not entry:
         return False
-    return any(d in domain for d in known)
+    official = entry.get("official") or ""
+    official_alt = entry.get("official_alt") or ""
+    domain_l = domain.lower()
+    return any(
+        d and d.lower().replace("https://", "").replace("http://", "").replace("www.", "") in domain_l
+        for d in (official, official_alt)
+    )
 
 
 class SqliteCache:
@@ -206,11 +202,17 @@ class DanawaSession:
         self._pw = None
         self._browser = None
         self._context = None
+        # 적응형 속도제한(#13): 실패가 계속되면 요청 사이 딜레이를 늘리고,
+        # 성공이 이어지면 서서히 원래대로 줄인다. 다나와가 명시적으로
+        # 429를 주진 않지만, 타임아웃 연속발생을 "사실상 막힘"의 신호로 본다.
+        self._adaptive_delay = 0.0
+        self._consecutive_failures = 0
+        self.redirect_log: list[dict] = []  # #14: 리다이렉트 체인 전체 기록
 
     def __enter__(self):
         self._pw = sync_playwright().start()
         self._browser = self._pw.chromium.launch(headless=True)
-        self._context = self._browser.new_context(user_agent=DESKTOP_UA, ignore_https_errors=True)
+        self._context = self._browser.new_context(user_agent=random_ua(), ignore_https_errors=True)
         return self
 
     def __exit__(self, exc_type, exc, tb):
@@ -220,11 +222,22 @@ class DanawaSession:
             self._pw.stop()
 
     def _goto_with_retry(self, page, url: str):
+        # 적응형 딜레이: 최근 연속 실패가 있었으면 요청 전에 먼저 쉬어준다
+        if self._adaptive_delay > 0:
+            time.sleep(self._adaptive_delay)
+
+        chain: list[dict] = []
+        page.on("response", lambda resp: chain.append({"url": resp.url, "status": resp.status}))
+
         delay = 1.0
         last_err = None
         for attempt in range(1, self.max_retries + 1):
             try:
                 page.goto(url, timeout=15000, wait_until="load")
+                self.redirect_log.append({"url": url, "chain": chain[-10:], "ok": True})
+                # 성공하면 적응형 딜레이를 서서히 줄인다(급감소는 안 하고 절반씩)
+                self._consecutive_failures = 0
+                self._adaptive_delay = max(0.0, self._adaptive_delay * 0.5)
                 return True
             except Exception as e:  # noqa: BLE001
                 last_err = e
@@ -232,6 +245,14 @@ class DanawaSession:
                     print(f"    [RETRY {attempt}/{self.max_retries}] {delay}s 대기 후 재시도: {e}", file=sys.stderr)
                     time.sleep(delay)
                     delay *= 2  # 지수 백오프: 1s -> 2s -> 4s
+
+        self._consecutive_failures += 1
+        # 연속 실패 2회부터 딜레이를 키운다(최대 8초까지)
+        if self._consecutive_failures >= 2:
+            self._adaptive_delay = min(8.0, max(1.0, self._adaptive_delay) * 2)
+            print(f"    [ADAPTIVE] 연속 실패 {self._consecutive_failures}회 — 다음 요청 전 대기시간을 {self._adaptive_delay}s로 늘림", file=sys.stderr)
+
+        self.redirect_log.append({"url": url, "chain": chain[-10:], "ok": False, "error": str(last_err)})
         print(f"    [FAIL] {self.max_retries}회 재시도 후 포기: {last_err}", file=sys.stderr)
         return False
 
