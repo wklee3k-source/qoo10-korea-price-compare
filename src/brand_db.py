@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 
 BRAND_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "brand_db.json"
+CAPABILITY_PATH = Path(__file__).resolve().parent.parent / "data" / "source_capability.json"
 
 # 큐텐에서 실제로 관측된 brand_name 표기(일본어/영문/한글) -> brand_db.json의 key
 BRAND_NAME_ALIASES = {
@@ -73,6 +74,10 @@ def _load_db() -> dict:
     return json.loads(BRAND_DB_PATH.read_text(encoding="utf-8"))
 
 
+def _load_capability() -> dict:
+    return json.loads(CAPABILITY_PATH.read_text(encoding="utf-8"))
+
+
 def lookup(qoo10_brand_name: str) -> dict | None:
     """큐텐 brand_name(일본어/영문 등)으로 brand_db.json 항목을 바로 찾는다.
     없으면 None을 반환 — 그러면 호출한 쪽에서 무신사/다나와 검색으로 넘어가면 된다."""
@@ -83,6 +88,40 @@ def lookup(qoo10_brand_name: str) -> dict | None:
         return None
     db = _load_db()
     return db.get(key)
+
+
+def searchable_channels(qoo10_brand_name: str) -> dict:
+    """이 브랜드에 대해 '실제로 자동 조회 가능한' 채널만 골라서 반환한다.
+    source_capability.json의 search=true인 채널의 URL만 포함되고,
+    oliveyoung/naver_brand처럼 URL은 있지만 이 환경에서 403인 채널은
+    'reference_only'로 따로 분류해서 사람 검수용 링크로만 넘긴다."""
+    entry = lookup(qoo10_brand_name)
+    if not entry:
+        return {"searchable": {}, "reference_only": {}}
+
+    cap = _load_capability()
+    searchable = {}
+    reference_only = {}
+
+    if entry.get("official"):
+        target = searchable if cap.get("official", {}).get("search") else reference_only
+        target["official"] = entry["official"]
+
+    if entry.get("musinsa"):
+        target = searchable if cap.get("musinsa", {}).get("search") else reference_only
+        target["musinsa"] = "musinsa_finder.py로 검색"
+
+    naver = entry.get("naver_brand") or {}
+    if naver.get("exists") and naver.get("url"):
+        target = searchable if cap.get("naver_brand", {}).get("search") else reference_only
+        target["naver_brand"] = naver["url"]
+
+    oy = entry.get("oliveyoung") or {}
+    if oy.get("exists") and oy.get("url"):
+        target = searchable if cap.get("oliveyoung", {}).get("search") else reference_only
+        target["oliveyoung"] = oy["url"]
+
+    return {"searchable": searchable, "reference_only": reference_only}
 
 
 if __name__ == "__main__":

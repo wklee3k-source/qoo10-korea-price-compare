@@ -1,115 +1,393 @@
 {
-  "_설명": "이 프로젝트에서 실제로 확인한 브랜드별 채널 DB. 검색 없이 바로 조회 가능. official/musinsa는 이 실행환경에서 접근 확인됨. naver_brand/oliveyoung은 URL만 기록(이 환경에서는 403으로 접근 불가 확인됨 — 실제 서비스 서버에서는 될 수도 있어 참고용으로 남김).",
+  "_설명": "브랜드별 채널 URL. 각 채널의 실제 검색/가격조회 가능여부는 source_capability.json을 같이 참고할 것 (예: oliveyoung URL은 있어도 search=false라 자동조회는 안 됨, 링크만 사람 검수용으로 제공).",
   "celimax": {
     "official": "https://celimax.co.kr",
-    "naver_brand": null,
-    "oliveyoung": null,
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "셀리맥스"
   },
   "sungboon": {
     "official": "https://sungboon.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "성분에디터 (Sung Boon Editor)"
   },
   "growus": {
     "official": "https://growus.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "그로우어스"
   },
   "hairplus": {
     "official": "https://www.hairplus.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "헤어플러스"
   },
   "rovectin": {
     "official": "https://rovectin.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "로벡틴"
   },
   "kahi": {
     "official": "https://kahicosmetics.co.kr",
     "official_alt": "https://kahi.shop",
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "가히"
   },
   "innisfree": {
     "official": "https://www.innisfree.com",
-    "naver_brand": "https://brand.naver.com/innisfree",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": true,
+      "url": "https://brand.naver.com/innisfree"
+    },
     "amoremall": "https://www.amoremall.com",
     "note": "이니스프리 — 아모레퍼시픽 계열"
   },
   "laneige": {
     "official": "https://www.laneige.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": true,
+      "url": "https://brand.naver.com/laneige"
+    },
     "amoremall": "https://www.amoremall.com",
     "note": "라네즈 — 아모레퍼시픽 계열"
   },
   "cosrx": {
     "official": "https://www.cosrx.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": true,
+      "url": "https://brand.naver.com/cosrx"
+    },
+    "amoremall": null,
     "note": "COSRX"
   },
   "banilaco": {
     "official": "https://www.banila.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "바닐라코"
   },
   "vt-cosmetics": {
     "official": "https://vt-cosmetics.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "VT코스메틱"
   },
   "physiogel": {
     "official": "https://physiogel.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "피지오겔 — LG생활건강 계열"
   },
   "dr20project": {
     "official": "https://dr20project.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "닥터트웬티프로젝트"
   },
   "somebymi": {
     "official": "https://somebymi.co.kr",
     "official_alt": "https://somebyme.net",
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "썸바이미"
   },
   "manyo": {
     "official": "https://www.manyo.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "마녀공장"
   },
   "tirtir": {
     "official": "https://tirtir.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "티르티르"
   },
   "makeprem": {
     "official": "https://www.makeprem.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "메이크프렘"
   },
   "sister-ann": {
     "official": "https://sister-ann.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "씨스터앤"
   },
   "hince": {
     "official": "https://hince.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "힌스"
   },
   "biodance": {
     "official": "https://biodance.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "바이오던스"
   },
   "cellfusionc": {
     "official": "https://cellfusionc.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "셀퓨전씨"
   },
   "pibumi": {
     "official": "https://pibumi.com",
     "official_alt": "https://pibumi.co.kr",
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "피부미"
   },
   "frankly": {
     "official": "https://frankly.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "프랭클리"
   },
   "aprilskin": {
     "official": "https://aprilskin.com",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "에이프릴스킨"
   },
   "pdrnmall": {
     "official": "https://pdrnmall.co.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "리쥬란 판매채널"
   },
   "medicube": {
     "official": "https://medicube.kr",
+    "official_alt": null,
+    "musinsa": true,
+    "oliveyoung": {
+      "exists": null,
+      "url": null
+    },
+    "naver_brand": {
+      "exists": false,
+      "url": null
+    },
+    "amoremall": null,
     "note": "메디큐브"
   }
 }
