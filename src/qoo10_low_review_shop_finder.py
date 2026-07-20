@@ -34,7 +34,7 @@ ROW_RE = re.compile(r'(<tr id="g_\d+".*?</tr>)', re.S)
 GID_RE = re.compile(r'id="g_(\d+)"')
 TITLE_RE = re.compile(r'title="([^"]+)" target="_blank" data-type="goods_url"')
 SHOP_RE = re.compile(r'shop/([a-zA-Z0-9_.\-]+)\?cit=\d+" target="_blank" title="([^"]*)"')
-REVIEW_RE = re.compile(r'review_total_count">\((\d+)\)')
+REVIEW_RE = re.compile(r'review_total_count">\(([\d,]+)\)')
 PRICE_RE = re.compile(r'<strong>([\d,]+)円</strong>')
 
 
@@ -84,7 +84,7 @@ def parse_results(html: str) -> list[dict]:
                 "title": title_m.group(1).strip() if title_m else "",
                 "shop_id": shop_m.group(1),
                 "shop_name": shop_m.group(2).strip(),
-                "review_count": int(review_m.group(1)) if review_m else 0,
+                "review_count": int(review_m.group(1).replace(",", "")) if review_m else 0,
                 "price_jpy": int(price_m.group(1).replace(",", "")) if price_m else None,
             }
         )
