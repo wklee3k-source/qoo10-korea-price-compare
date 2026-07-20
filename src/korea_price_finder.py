@@ -211,6 +211,70 @@ def find_price(keyword: str, max_results: int = 5) -> list[dict]:
         return session.search(keyword, max_results)
 
 
+def batch_find_parallel(items_dir: str, out_path: str, keywords_map_path: str | None = None, workers: int = 4):
+    """여러 브라우저 세션을 동시에 띄워서 검색을 병렬로 처리한다.
+    CPU 작업이 아니라 네트워크 대기가 대부분이라 워커 수만큼 거의 그대로
+    빨라진다(다만 다나와 서버 차단을 피하려 workers는 4개 정도를 권장)."""
+    import threading
+
+    out_file = Path(out_path)
+    lock = threading.Lock()
+    results = []
+    done_goods_no = set()
+    if out_file.exists():
+        results = json.loads(out_file.read_text(encoding="utf-8"))
+        done_goods_no = {r["goods_no"] for r in results}
+        print(f"[RESUME] 이미 처리된 {len(done_goods_no)}건부터 이어서 진행")
+
+    keywords_map = {}
+    if keywords_map_path and Path(keywords_map_path).exists():
+        keywords_map = json.loads(Path(keywords_map_path).read_text(encoding="utf-8"))
+
+    all_items = [
+        json.loads(p.read_text(encoding="utf-8"))
+        for p in sorted(Path(items_dir).glob("*.json"))
+    ]
+    todo = [it for it in all_items if it.get("goods_no") not in done_goods_no]
+    print(f"[INFO] 남은 상품 {len(todo)}건 / 전체 {len(all_items)}건 — {workers}개 워커로 병렬 처리")
+
+    def worker(chunk: list[dict]):
+        with DanawaSession(use_cache=True) as session:
+            for item in chunk:
+                goods_no = item.get("goods_no")
+                brand = item.get("brand_name") or ""
+                name = item.get("item_name") or ""
+                keyword = keywords_map.get(goods_no) or f"{brand} {name}"[:60]
+
+                candidates = session.search(keyword)
+                for c in candidates:
+                    c["kr_site"] = "가격비교사이트 후보(danawa) — 실제 판매처/정가 여부 확인 필요"
+
+                entry = {
+                    "goods_no": goods_no,
+                    "qoo10_name": name,
+                    "brand_name": brand,
+                    "keyword_used": keyword,
+                    "candidates": candidates,
+                }
+                with lock:
+                    results.append(entry)
+                    out_file.write_text(
+                        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
+                    )
+                status = f"{len(candidates)}건" if candidates else "후보없음"
+                print(f"[SEARCH][{threading.current_thread().name}] {goods_no}: {keyword} -> {status}")
+
+    # todo를 workers개로 나눠서 각 스레드가 자기 몫만 처리(각자 브라우저 1개씩)
+    chunks = [todo[i::workers] for i in range(workers)]
+    threads = [threading.Thread(target=worker, args=(chunk,), name=f"W{i}") for i, chunk in enumerate(chunks)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+
+    print(f"\n[DONE] {len(results)}건 처리 완료 -> {out_path}")
+
+
 def batch_find(items_dir: str, out_path: str, keywords_map_path: str | None = None):
     out_file = Path(out_path)
     results = []
@@ -289,6 +353,12 @@ def main():
     if sys.argv[1] == "--batch":
         kw_map = sys.argv[4] if len(sys.argv) > 4 else None
         batch_find(sys.argv[2], sys.argv[3], kw_map)
+        return
+
+    if sys.argv[1] == "--batch-parallel":
+        kw_map = sys.argv[4] if len(sys.argv) > 4 else None
+        workers = int(sys.argv[5]) if len(sys.argv) > 5 else 4
+        batch_find_parallel(sys.argv[2], sys.argv[3], kw_map, workers)
         return
 
     keyword = sys.argv[1]
