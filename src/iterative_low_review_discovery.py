@@ -52,6 +52,48 @@ def extract_core_keyword(title: str) -> str:
 VOLUME_RE = re.compile(r"[\d.]+\s*(?:ml|g|枚|個|本)(?:[×xX+][\d.]+\s*(?:ml|g|個|箱|セット))*")
 BRACKET_RE = re.compile(r"[【\[（(][^】\])）]*[】\])）]")
 
+# 1단계: 브랜드 보호 — 번역기가 브랜드명을 엉뚱하게 오역하는 걸 막기 위해
+# 번역 전에 플레이스홀더로 바꿔치기하고, 번역 후 원래 브랜드로 복원한다.
+KNOWN_BRANDS = [
+    "AOU", "VT", "d'Alba", "TIRTIR", "SK-II", "rom&nd", "fwee", "hince",
+    "dasique", "KAHI", "ATRUE", "AGAIN ME",
+]
+
+# 2단계: 화장품 특수 용어(의성어/의태어 등, 일반 번역기가 못 알아듣는 것들)
+# — 실측으로 확인된 것만 우선 등록. 번역 전에 플레이스홀더로 바꿔치기하고
+# 번역 후 화장품 업계 정식 표기로 복원한다(예: "ぽよん" → 일반번역은 "포옹"/
+# "포용"이 되지만 화장품 정식표기는 "뽀용").
+COSMETIC_TERM_MAP = {
+    "ぽよん": "뽀용",
+}
+
+
+def _protect_and_translate(text: str, translator) -> str:
+    """브랜드/특수용어를 플레이스홀더로 보호한 뒤 번역하고, 번역 후 복원한다."""
+    protected = text
+    restore_map = {}
+
+    for i, brand in enumerate(KNOWN_BRANDS):
+        if brand in protected:
+            placeholder = f"XBRAND{i}X"
+            protected = protected.replace(brand, placeholder)
+            restore_map[placeholder] = brand
+
+    for i, (jp_term, kr_term) in enumerate(COSMETIC_TERM_MAP.items()):
+        if jp_term in protected:
+            placeholder = f"XTERM{i}X"
+            protected = protected.replace(jp_term, placeholder)
+            restore_map[placeholder] = kr_term
+
+    translated = translator.translate(protected) or protected
+
+    for placeholder, original in restore_map.items():
+        # 번역기가 플레이스홀더 대소문자/띄어쓰기를 살짝 바꿀 수 있어서 느슨하게 매칭
+        translated = re.sub(re.escape(placeholder), original, translated, flags=re.IGNORECASE)
+        translated = re.sub(placeholder.replace("X", r"X\s*"), original, translated, flags=re.IGNORECASE)
+
+    return translated
+
 
 def crawl_shop_best5(shop_id: str) -> list[dict]:
     """상점 베스트5를 크롤링하고, 카테고리(색조)/옵션 필터를 즉시 적용한다.
@@ -101,6 +143,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         return []
 
     # 2단계: 번역 — GoogleTranslateSession만 사용(1단계가 끝난 뒤에 열림)
+    # 브랜드/특수용어는 플레이스홀더로 보호한 뒤 번역(외부 AI 리뷰 반영)
     translated = {}
     with GoogleTranslateSession() as translator:
         for item in passed:
@@ -113,25 +156,34 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
                 title_for_translate = title_no_bracket[: vol_match.start()] + " " + title_no_bracket[vol_match.end():]
 
             brand_ja = item.get("brand", "")
-            brand_kr = translator.translate(brand_ja) or brand_ja
-            core_kr = translator.translate(title_for_translate.strip()) or title_for_translate.strip()
-            translated[item["goods_no"]] = {"brand_kr": brand_kr, "core_kr": core_kr, "volume": volume}
+            brand_kr = _protect_and_translate(brand_ja, translator) if brand_ja else ""
+            core_kr = _protect_and_translate(title_for_translate.strip(), translator)
+            translated[item["goods_no"]] = {"brand_kr": brand_kr.strip(), "core_kr": core_kr.strip(), "volume": volume}
 
     # 3단계: 화해로 정확한 명칭 검증 — hwahae_name_corrector가 자체적으로
-    # sync_playwright를 여는 함수라서, 2단계(번역세션)가 완전히 닫힌 뒤에 실행한다
+    # sync_playwright를 여는 함수라서, 2단계(번역세션)가 완전히 닫힌 뒤에 실행한다.
+    # [검색 전략] 브랜드 없이 "상품명만"으로 검색한다(브랜드를 넣으면 오역된
+    # 브랜드명 때문에 검색이 0건이 되는 경우가 실측으로 확인됐다). 화해가
+    # 브랜드까지 알려주므로 그걸 우선 채택하고, 화해에 브랜드가 없으면
+    # 우리가 번역한 brand_kr로 보완한다.
     for item in passed:
         t = translated[item["goods_no"]]
-        hwahae = correct_name(f"{t['brand_kr']} {t['core_kr']}".strip())
+        hwahae = correct_name(t["core_kr"])
         corrected = hwahae.get("corrected")
+        hwahae_brand = hwahae.get("brand")
+
         if corrected:
-            corrected_clean = re.sub(r"\s*[\[\(][^\]\)]*$", "", corrected).strip()
-            final_name = corrected_clean if t["brand_kr"] in corrected_clean else f"{t['brand_kr']} {corrected_clean}"
-            if t["volume"]:
-                final_name = f"{final_name} {t['volume']}"
+            final_brand = hwahae_brand or t["brand_kr"] or item.get("brand", "")
+            volume = hwahae.get("volume") or t["volume"]
+            final_name = f"{final_brand} {corrected}".strip()
+            if volume:
+                final_name = f"{final_name} {volume}"
         else:
+            # 화해에서 못 찾으면 원래 방식(브랜드+추측번역)으로 대체
             final_name = f"{t['brand_kr']} {t['core_kr']} {t['volume']}".strip()
 
         item["name_kr_verified"] = final_name
+        item["hwahae_matched"] = bool(corrected)
         print(f"    [저장] {item['goods_no']} review={item['review_count']} {item['title'][:30]} -> {final_name}")
 
     return passed

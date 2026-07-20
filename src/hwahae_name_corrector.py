@@ -1,17 +1,21 @@
 """
-hwahae_name_corrector.py
+hwahae_name_corrector.py (v2)
 
-핵심문구(브랜드+상품명 추측 번역)를 화해(hwahae.co.kr)에서 검색해서
-정확한 한글 정식 상품명으로 교정한다.
+상품명(용량/브랜드 뺀 순수 한글 추측번역)만 화해(hwahae.co.kr)에서 검색해서,
+화해가 갖고 있는 정확한 "브랜드+정식 상품명"을 가져온다.
 
-[배경] 일본어 원문을 사람이나 규칙으로 한글로 옮기면 발음/표기가 살짝
-틀리는 경우가 많다(예: "톤업 퐁퐁 크림" ← 실제로는 "톤업 뽀용 크림").
-화해는 실제 판매되는 한국 화장품의 정식 등록명을 갖고 있어서, 추측
-번역이 조금 틀려도 검색만 되면 화면의 meta description에 정확한 상품명
-목록이 노출된다 — 이걸 파싱해서 가장 근접한 항목을 정답으로 채택한다.
+[v1과 다른 점] 이전엔 meta description 텍스트를 정규식으로 긁었는데,
+실제로는 페이지에 __NEXT_DATA__라는 Next.js JSON 블록이 있고 그 안에
+brand/productName/reviewCount가 전부 구조화되어 들어있다는 걸 확인했다
+(예: {"brand": "달바 (d'Alba)", "productName": "판테놀... 선세럼", ...}).
+이걸 직접 파싱하면 정규식보다 훨씬 안정적이고, 브랜드까지 정확히 얻는다.
+
+[검색 전략] 브랜드명을 넣고 검색하면 오역된 브랜드명(예: "만나자") 때문에
+검색 자체가 0건이 되는 경우가 실측으로 확인됐다. 그래서 이 버전은 상품명
+핵심어만으로 검색하고, 브랜드는 화해가 반환한 값을 그대로 채택한다.
 
 사용법:
-    python hwahae_name_corrector.py "<추측 번역 검색어>"
+    python hwahae_name_corrector.py "<상품명만, 브랜드 없이>"
 """
 
 import json
@@ -19,7 +23,6 @@ import re
 import sys
 import time
 import urllib.parse
-from difflib import SequenceMatcher
 
 from playwright.sync_api import sync_playwright
 
@@ -28,24 +31,11 @@ DESKTOP_UA = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
-# meta description은 "상품명1 가격1/상품명2 가격2/..." 형태다.
-# 슬래시로 먼저 나누고, 각 조각 끝의 "숫자" 또는 "null"(가격)만 떼어낸다
-# — 상품명 안의 대괄호에 숫자가 섞여 있어도(예: "[01 화이트]") 안전하다.
-META_DESC_RE = re.compile(r'name="description" content="([^"]+)"')
-TRAILING_PRICE_RE = re.compile(r'\s+(\d+|null)\s*$')
+NEXT_DATA_RE = re.compile(r'__NEXT_DATA__" type="application/json">(.*?)</script>', re.S)
+VOLUME_FROM_BUYINFO_RE = re.compile(r"([\d.]+\s*(?:mL|ml|g)\b)")
 
 
-def _split_hwahae_names(desc: str) -> list[str]:
-    names = []
-    for piece in desc.split("/"):
-        piece = piece.strip()
-        piece = TRAILING_PRICE_RE.sub("", piece).strip()
-        if piece:
-            names.append(piece)
-    return names
-
-
-def search_hwahae_names(keyword: str, wait_seconds: float = 3.0) -> list[str]:
+def _fetch_search_page(keyword: str, wait_seconds: float = 3.0) -> str:
     url = f"https://www.hwahae.co.kr/search?q={urllib.parse.quote(keyword)}"
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -58,34 +48,52 @@ def search_hwahae_names(keyword: str, wait_seconds: float = 3.0) -> list[str]:
         except Exception:  # noqa: BLE001
             content = ""
         browser.close()
+    return content
 
-    m = META_DESC_RE.search(content)
+
+def _parse_products(html: str) -> list[dict]:
+    m = NEXT_DATA_RE.search(html)
     if not m:
         return []
-    desc = m.group(1)
-    return _split_hwahae_names(desc)
+    try:
+        data = json.loads(m.group(1))
+    except Exception:  # noqa: BLE001
+        return []
+
+    try:
+        products = data["props"]["pageProps"]["products"]["products"]
+    except (KeyError, TypeError):
+        return []
+
+    results = []
+    for p in products:
+        buy_info = p.get("buyInfo") or ""
+        vol_m = VOLUME_FROM_BUYINFO_RE.search(buy_info)
+        results.append(
+            {
+                "brand": p.get("brand"),
+                "product_name": p.get("productName"),
+                "review_count": p.get("reviewCount"),
+                "volume": vol_m.group(1).replace(" ", "") if vol_m else "",
+            }
+        )
+    return results
 
 
-def correct_name(guessed_keyword: str) -> dict:
-    """추측 키워드를 검색해서 화해가 준 첫 번째 결과를 정답으로 채택한다.
+def correct_name(product_keyword_only: str) -> dict:
+    """브랜드 없이 상품명만으로 검색해서 화해의 1번째 결과(브랜드+상품명+용량)를 가져온다."""
+    html = _fetch_search_page(product_keyword_only)
+    products = _parse_products(html)
+    if not products:
+        return {"guessed": product_keyword_only, "brand": None, "corrected": None, "volume": "", "all_candidates": []}
 
-    [실측으로 확인된 규칙] 처음엔 SequenceMatcher로 후보들을 재정렬해서
-    가장 비슷한 걸 골랐는데, 오히려 정답을 밀어내는 경우가 더 많았다
-    (6건 중 5건에서 화해가 준 0번째 후보가 이미 정답이었는데, 재정렬 후
-    다른 후보가 뽑힘 — 브랜드명이 후보 텍스트에 없으면 문자열 유사도
-    계산이 엉뚱하게 흔들리기 때문). 화해 자체의 검색순위가 이미 관련도
-    기준으로 정렬되어 있어서, 그걸 그대로 믿는 게 더 정확했다."""
-    candidates = search_hwahae_names(guessed_keyword)
-    if not candidates:
-        return {"guessed": guessed_keyword, "corrected": None, "confidence": 0.0, "all_candidates": []}
-
-    best = candidates[0]  # 화해 자체 순위 1번째를 그대로 채택(재정렬 안 함)
-    confidence = SequenceMatcher(None, guessed_keyword, best).ratio()  # 참고용 점수만 계산
+    top = products[0]
     return {
-        "guessed": guessed_keyword,
-        "corrected": best,
-        "confidence": round(confidence, 2),
-        "all_candidates": candidates,
+        "guessed": product_keyword_only,
+        "brand": top["brand"],
+        "corrected": top["product_name"],
+        "volume": top["volume"],
+        "all_candidates": products,
     }
 
 
