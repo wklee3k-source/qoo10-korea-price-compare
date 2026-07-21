@@ -41,6 +41,16 @@ PRODUCT_URL_PATTERNS = re.compile(
 GENERIC_TITLE_RE = re.compile(
     r"^\s*.{1,15}(공식\s*(홈페이지|스토어|사이트|쇼핑몰)?|브랜드관|메인|홈)\s*[|｜]?\s*.{0,10}$"
 )
+# 뉴스/기사/블로그성 도메인 — 상품 URL 패턴과 우연히 겹칠 수 있어서
+# (예: 뉴스사이트의 "/news/item/12345" 같은 구조) 별도로 걸러낸다.
+NEWS_DOMAIN_RE = re.compile(
+    r"news\.|\.news|/news/|blog\.|\.blog|tistory\.com|brunch\.co\.kr|post\.naver|magazine|"
+    r"donga\.com|chosun\.com|joongang|hani\.co\.kr|mk\.co\.kr|hankyung|edaily|yna\.co\.kr"
+)
+# 실제 상품명이 아니라 기사/광고 헤드라인처럼 보이는 문장(완결된 문장+쉼표,
+# 종결어미로 끝나는 절이 있는 경우) — 실측 사례: "아무 것도 안 하면 더
+# 늙는다, 3만원대 갈바닉 하루 5분 습관이면 확 달라져"
+HEADLINE_SENTENCE_RE = re.compile(r"[다요]\s*,|[다요][!?]|하면|한다면")
 
 
 def _clean_query(text: str) -> str:
@@ -64,14 +74,20 @@ def _exa_refine(keyword: str) -> str | None:
         if not items:
             return None
 
-        # 1순위: URL이 상품상세 패턴이고, 제목도 일반 홈페이지 문구가 아닌 것
-        candidates = [
-            it for it in items
-            if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not GENERIC_TITLE_RE.match(it["title"])
-        ]
+        def _is_bad(it: dict) -> bool:
+            url = it.get("url") or ""
+            title = it["title"]
+            return bool(
+                GENERIC_TITLE_RE.match(title)
+                or NEWS_DOMAIN_RE.search(url)
+                or HEADLINE_SENTENCE_RE.search(title)
+            )
+
+        # 1순위: URL이 상품상세 패턴이고, 뉴스/기사/헤드라인성이 아닌 것
+        candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
         if not candidates:
-            # 2순위: 최소한 제목이 일반 홈페이지 문구는 아닌 것
-            candidates = [it for it in items if not GENERIC_TITLE_RE.match(it["title"])]
+            # 2순위: 최소한 뉴스/기사/헤드라인성은 아닌 것
+            candidates = [it for it in items if not _is_bad(it)]
         if not candidates:
             candidates = items  # 전부 걸러졌으면 그냥 1등 사용(완전 실패보다 나음)
 
