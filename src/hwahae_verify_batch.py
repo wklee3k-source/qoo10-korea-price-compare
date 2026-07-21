@@ -52,10 +52,13 @@ def _naver_fallback(keyword: str) -> dict | None:
     """1차(화해)가 실패했거나 단종일 때 2차로 네이버쇼핑에서 찾는다.
     NAVER_CLIENT_ID/SECRET 환경변수가 없으면(로컬 샌드박스 등) 조용히
     건너뛴다 — openapi.naver.com은 GitHub Actions에서만 접근 가능함."""
+    print(f"    [디버그] naver_fallback 호출됨, keyword='{keyword}'", file=sys.stderr)
     try:
         from naver_shop_search import search as naver_search
 
+        print("    [디버그] naver_shop_search import 성공", file=sys.stderr)
         items = naver_search(keyword, display=3)
+        print(f"    [디버그] naver_search 결과 {len(items)}건", file=sys.stderr)
         if not items:
             return None
         top = items[0]
@@ -67,7 +70,10 @@ def _naver_fallback(keyword: str) -> dict | None:
             "mall": top.get("mallName"),
         }
     except Exception as e:  # noqa: BLE001
-        print(f"    [네이버폴백 실패] {e}", file=sys.stderr)
+        import traceback
+
+        print(f"    [네이버폴백 실패] {type(e).__name__}: {e}", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
         return None
 
 
