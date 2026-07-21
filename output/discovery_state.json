@@ -1,25 +1,27 @@
 {
   "visited_shops": [
-    "durudurupanda",
     "lindalinda",
-    "mkelas",
-    "manmulsang",
-    "trailblue2",
-    "SSG",
-    "gmarket_jp",
-    "hanbikosupa",
     "VividgrowMAN",
-    "hellojp",
-    "seoulselectstore",
-    "sssemibeauty",
-    "JfromKorea",
-    "SM_Mall",
-    "rojecompany",
-    "dreem",
+    "HDSelectShop",
+    "mkelas",
     "AVECPUBLIC",
+    "hanbikosupa",
+    "hellojp",
+    "trailblue2",
     "210506",
+    "SSG",
+    "JfromKorea",
+    "manmulsang",
+    "SM_Mall",
+    "gmarket_jp",
+    "sssemibeauty",
+    "seoulselectstore",
+    "kkbiyori",
+    "rojecompany",
+    "bestkr",
     "Asteroid",
-    "HDSelectShop"
+    "dreem",
+    "durudurupanda"
   ],
   "all_products": [
     {
@@ -621,6 +623,21 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1175557299",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/616/683/8394683616.g_300-w-st_g.jpg",
+      "title": "【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ",
+      "brand": "ダシュ",
+      "price_jpy": 5550,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175557299",
+      "shop_id": "bestkr",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -643,12 +660,11 @@
     "https://m.qoo10.jp/shop/HDSelectShop",
     "https://m.qoo10.jp/shop/dreem",
     "https://m.qoo10.jp/shop/SSG",
-    "https://m.qoo10.jp/shop/seoulselectstore"
+    "https://m.qoo10.jp/shop/seoulselectstore",
+    "https://m.qoo10.jp/shop/bestkr",
+    "https://m.qoo10.jp/shop/kkbiyori"
   ],
   "pending_keywords": [
-    "シリコン製デミヌーブラ S",
-    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
-    "デイリー ミルクシスル ブルーバイオーム スカルプシャンプー",
     "モデリングクリームマスク スパチュラ付き",
     "ウォータープルーフプロ日焼け止め +サンスティック",
     "プライム アドバンサー De-エイジング アンプル セラム 韓国美容液 エイジングケア ハリ 保湿 韓国コスメ",
@@ -749,23 +765,33 @@
     "シークレットソルーションウェディングドレスピュアクリーム x 韓国スキンケア 韓国 コスメ #水分#保湿 毛穴ケア",
     "ディスプリンシャンプー",
     "シリコン製デミヌーブラ S",
-    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット"
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
+    "デイリー ミルクシスル ブルーバイオーム スカルプシャンプー",
+    "ソリッドエアフレッシュナー 車用固形消臭剤 フレッシュリネン 韓国消臭 車内 置き型 芳香 長持ち 消臭 シンプル スタイリッシュ",
+    "カフェイン ソリューション + EGCG",
+    "ラウンジ パフューム 除湿剤 入り ハンガータイプ 除湿剤 湿気除去",
+    "ボディバーム ジェリースティック",
+    "トラネキサム酸 クリーム",
+    "アクアポリン 保湿クリーム"
   ],
   "seen_keywords": [
-    "PDRNピンクエクソソームショット2000",
-    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
-    "ルートボリュームフィクサー",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "ドクダミ77スージングトナー",
-    "フルフィットプロポリスライトアンプル",
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "オールデイタイトメイクセッティングピクサー",
     "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
-    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
-    "ディスプリンシャンプー",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "シャンプー ダマスクローズの香り",
+    "オールデイタイトメイクセッティングピクサー",
+    "デイリー ミルクシスル ブルーバイオーム スカルプシャンプー",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "ドクダミ77スージングトナー",
+    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
+    "シリコン製デミヌーブラ S",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
+    "ディスプリンシャンプー",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "ルートボリュームフィクサー",
     "24K ラグジュアリー ゴールド アンプル",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++"
+    "フルフィットプロポリスライトアンプル",
+    "PDRNピンクエクソソームショット2000"
   ]
 }
