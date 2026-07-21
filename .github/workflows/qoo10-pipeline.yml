@@ -395,9 +395,8 @@ jobs:
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
           python naver_shop_search.py \
-            "운율 비타밸런스 오운썰샤인 토너패드" \
-            "스킨앤러브 엑토인 리커버리 선플루이드" \
-            "아누아 어성초77 수딩토너"
+            "운율 비타밸런스 오운썰샤인 토너패드 트래블키트" \
+            "은율 비타밸런스 오운쏠샤인 토너패드"
 
   build_excel:
     if: github.event_name == 'push'
