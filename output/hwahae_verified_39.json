@@ -238,5 +238,65 @@
     "sale": false,
     "price": 8000,
     "mall": null
+  },
+  {
+    "goods_no": "1164705875",
+    "translated_kr": "BUSHMAN 워터프루프프로 선크림 50g+선스틱20g",
+    "brand": "부쉬맨 (BUSHMAN)",
+    "name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null
+  },
+  {
+    "goods_no": "1105980668",
+    "translated_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
+    "brand": "오휘 (OHUI)",
+    "name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 80000,
+    "mall": null
+  },
+  {
+    "goods_no": "1105980665",
+    "translated_kr": "오휘 에이지리커버리 아이크림 25ml",
+    "brand": "오휘 (OHUI)",
+    "name": "에이지 리커버리 아이크림",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 105000,
+    "mall": null
+  },
+  {
+    "goods_no": "1044307238",
+    "translated_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
+    "brand": "엘라스틴 (Elastine)",
+    "name": "실크리페어 퍼펙트 샤이닝 골드실크 트리트먼트",
+    "volume": "1000ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null
+  },
+  {
+    "goods_no": "1209471569",
+    "translated_kr": "pleuvoir 히노키레더 오드퍼퓸 30ml",
+    "brand": "라부르켓 (L:ABRUKET)",
+    "name": "퍼퓸 오일 [히노키]",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 75000,
+    "mall": null
   }
 ]
