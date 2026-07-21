@@ -48,26 +48,28 @@ def _correct_name_isolated(keyword: str, known_volume: str, known_brand: str = "
         return {"brand": None, "corrected": None, "volume": "", "_error": str(e)}
 
 
-def _naver_fallback(keyword: str) -> dict | None:
+def _naver_fallback(keyword: str, known_brand: str = "") -> dict | None:
     """1차(화해)가 실패했거나 단종일 때 2차로 네이버쇼핑에서 찾는다.
     NAVER_CLIENT_ID/SECRET 환경변수가 없으면(로컬 샌드박스 등) 조용히
     건너뛴다 — openapi.naver.com은 GitHub Actions에서만 접근 가능함.
+    known_brand가 있으면 그 브랜드와 일치하는 결과만 채택한다(엉뚱한
+    브랜드가 섞여 들어오는 걸 막기 위함).
 
     [실측 이슈] 같은 검색어로 별도 스크립트를 직접 돌리면 결과가 나오는데
     이 배치 안에서 호출하면 이따금 total=0(빈 결과)이 오는 재현이 안 되는
     현상이 있었다 — 원인을 못 밝혀서, 우선 0건이면 짧게 대기 후 한 번 더
     시도하는 안전장치로 완화한다."""
-    print(f"    [디버그] naver_fallback 호출됨, keyword={keyword!r} (len={len(keyword)})", file=sys.stderr)
+    print(f"    [디버그] naver_fallback 호출됨, keyword={keyword!r} (len={len(keyword)}) known_brand={known_brand!r}", file=sys.stderr)
     try:
         from naver_shop_search import search as naver_search
 
-        items = naver_search(keyword, display=5)
+        items = naver_search(keyword, display=5, known_brand=known_brand)
         if not items:
             import time
 
             print("    [디버그] 0건 — 2초 대기 후 재시도", file=sys.stderr)
             time.sleep(2)
-            items = naver_search(keyword, display=5)
+            items = naver_search(keyword, display=5, known_brand=known_brand)
         if not items:
             return None
         top = items[0]
@@ -139,7 +141,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         if needs_fallback:
             reason = "매칭실패"
             print(f"    [1차 {reason}] -> 2차(네이버쇼핑)로 보완 검색")
-            naver_r = _naver_fallback(kw)  # 정제된 검색어 사용(원본 전체는 너무 길어서 결과가 안 나옴)
+            naver_r = _naver_fallback(kw, known_brand)  # 정제된 검색어 사용, 브랜드 필터 적용
             if naver_r:
                 r = naver_r
                 source = "naver"

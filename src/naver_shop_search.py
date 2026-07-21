@@ -12,7 +12,7 @@ CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
 
 
-def search(query: str, display: int = 5) -> list[dict]:
+def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
     url = f"https://openapi.naver.com/v1/search/shop.json?query={urllib.parse.quote(query)}&display={display}"
     req = urllib.request.Request(url)
     req.add_header("X-Naver-Client-Id", CLIENT_ID)
@@ -33,6 +33,23 @@ def search(query: str, display: int = 5) -> list[dict]:
             "mallName": item.get("mallName"),
             "productId": item.get("productId"),
         })
+
+    if known_brand:
+        # 브랜드 필드가 우리가 아는 브랜드와 일치하는 것만 남긴다(엉뚱한
+        # 브랜드 상품이 실려서 오답이 되는 걸 막기 위함). brand 필드가
+        # 비어있는 경우(네이버가 브랜드 인식을 못 한 리스팅)는 상품명에
+        # 브랜드명이 포함되어 있으면 통과시킨다.
+        filtered = []
+        for it in items:
+            item_brand = (it.get("brand") or "").lower()
+            title_lower = it["title"].lower()
+            kb_lower = known_brand.lower()
+            if kb_lower in item_brand or kb_lower in title_lower:
+                filtered.append(it)
+        if os.environ.get("NAVER_DEBUG"):
+            print(f"    [naver 브랜드필터] known_brand='{known_brand}' {len(items)}건 -> {len(filtered)}건", file=sys.stderr)
+        items = filtered
+
     return items
 
 
