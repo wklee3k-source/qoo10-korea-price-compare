@@ -1,21 +1,23 @@
 {
   "visited_shops": [
-    "kurashiben",
-    "frombeauty",
-    "onme",
-    "GlowKoreashop",
-    "atrue",
-    "fnehqld",
-    "changmidang",
-    "kcloset",
-    "mellia",
-    "lindalinda",
-    "COCOAN",
-    "dsire88",
     "Holy_Market",
-    "kamiya2",
+    "lindalinda",
+    "mellia",
+    "frombeauty",
+    "cherryup",
+    "GlowKoreashop",
+    "kurashiben",
+    "atrue",
+    "changmidang",
     "SOULPRISM",
-    "cherryup"
+    "kcloset",
+    "dsire88",
+    "fnehqld",
+    "kamiya2",
+    "92bubu",
+    "KoreaMart24",
+    "onme",
+    "COCOAN"
   ],
   "all_products": [
     {
@@ -446,13 +448,11 @@
     "https://m.qoo10.jp/shop/Holy_Market",
     "https://m.qoo10.jp/shop/changmidang",
     "https://m.qoo10.jp/shop/atrue",
-    "https://m.qoo10.jp/shop/kcloset"
+    "https://m.qoo10.jp/shop/kcloset",
+    "https://m.qoo10.jp/shop/KoreaMart24",
+    "https://m.qoo10.jp/shop/92bubu"
   ],
   "pending_keywords": [
-    "ウォーターカプセル サンセラム SPF50+",
-    "ポアタイトニング クレンジングバーム ット",
-    "アイスショット アメリカーノ 1. 入り 3箱 冷たい水で手軽に楽しめる韓国人気スティックコーヒー",
-    "サロン10 プロフェッショナル シカ プロテイン シャンプー",
     "成分エディターグリーントマト NMN フォアリフティングアンプル +",
     "リンクルバウンスマルチバーム",
     "緑豆弱酸性クレンジングフォーム",
@@ -478,10 +478,14 @@
     "パーフェクトヌード透明サンパッチ 分 UVA&amp;UVB強力遮断"
   ],
   "seen_keywords": [
-    "低刺激 大容量 シャンプー",
+    "トーンアップぽよんクリーム",
+    "アイスショット アメリカーノ 1. 入り 3箱 冷たい水で手軽に楽しめる韓国人気スティックコーヒー",
+    "サロン10 プロフェッショナル シカ プロテイン シャンプー",
     "メディヒール エッセンシャルマスクパック",
-    "シークレットポアセラミドバブルオイルエッセンスミスト",
+    "ポアタイトニング クレンジングバーム ット",
     "オリジン ピュア バランシング クレンジングオイル",
-    "トーンアップぽよんクリーム"
+    "シークレットポアセラミドバブルオイルエッセンスミスト",
+    "ウォーターカプセル サンセラム SPF50+",
+    "低刺激 大容量 シャンプー"
   ]
 }
