@@ -32,6 +32,21 @@ OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 STATE_PATH = OUTPUT_DIR / "discovery_state.json"
 
 COLOR_COSMETIC_CATEGORIES = {"120000013", "120000014", "120000016"}
+
+# 화장품/뷰티 허용 대분류 코드(화이트리스트) — 이게 없으면 속옷/식품/잡화 같은
+# 완전히 무관한 카테고리(예: "흰비둘기 거들", "롯데 가나 초콜릿 쿠키")가
+# 그대로 통과하는 문제가 실측으로 확인됐다. 색조(위 3개)는 이미 별도로
+# 제외하니 여기엔 안 넣는다.
+COSMETIC_ALLOWED_CATEGORIES = {
+    "120000012",  # 스킨케어
+    "120000017",  # UV케어
+    "120000018",  # 바디・핸드・풋케어
+    "120000019",  # 제모
+    "120000020",  # 헤어
+    "120000021",  # 네일
+    "120000022",  # 향수
+    "120000023",  # 맨즈뷰티
+}
 REVIEW_THRESHOLD = 3
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
@@ -143,6 +158,10 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         if category in COLOR_COSMETIC_CATEGORIES:
             print(f"    [스킵-색조] {item['goods_no']} {item['title'][:30]}")
             skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "색조카테고리", "category": category})
+            continue
+        if category not in COSMETIC_ALLOWED_CATEGORIES:
+            print(f"    [스킵-비화장품] {item['goods_no']} {item['title'][:30]} (category={category})")
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "화장품카테고리아님", "category": category})
             continue
         if has_options:
             print(f"    [스킵-옵션] {item['goods_no']} {item['title'][:30]}")
