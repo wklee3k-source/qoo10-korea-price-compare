@@ -1,17 +1,19 @@
 {
   "visited_shops": [
-    "VividgrowMAN",
-    "trailblue2",
-    "merrymarket",
-    "KoreaSeoulShop",
-    "hellojp",
+    "bestkr",
     "gmarketplus",
-    "sssemibeauty",
-    "woorinin",
     "JfromKorea",
-    "puchiseoul",
+    "merrymarket",
     "gmarket_jp",
-    "Asteroid"
+    "woorinin",
+    "VividgrowMAN",
+    "hellojp",
+    "sssemibeauty",
+    "puchiseoul",
+    "seoulselectstore",
+    "trailblue2",
+    "Asteroid",
+    "KoreaSeoulShop"
   ],
   "all_products": [
     {
@@ -268,6 +270,66 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1169358126",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/494/011/7432011494.g_300-w-st_g.jpg",
+      "title": "【もつれケア】ディスプリンシャンプー500ml",
+      "brand": "ケラスターゼ",
+      "price_jpy": 7630,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169358126",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1134579258",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg",
+      "title": "【New】シリコン製デミヌーブラ S/M/L/XLサイズ 選べる1点 盛れるブラ 谷間メイク 接着型ブラ 粘着ブラ 結婚式用 浴衣用 水着インナー 人気 コスパ 話題 限定 定番 口コミ多数",
+      "brand": "Verish",
+      "price_jpy": 5400,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1134579258",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1180092167",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/917/776/7700776917.g_300-w-st_g.jpg",
+      "title": "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）",
+      "brand": "LOREAL PARIS",
+      "price_jpy": 5270,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180092167",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1175557299",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/616/683/8394683616.g_300-w-st_g.jpg",
+      "title": "【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ",
+      "brand": "ダシュ",
+      "price_jpy": 5550,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175557299",
+      "shop_id": "bestkr",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -282,10 +344,11 @@
     "https://m.qoo10.jp/shop/sssemibeauty",
     "https://m.qoo10.jp/shop/KoreaSeoulShop",
     "https://m.qoo10.jp/shop/gmarketplus",
-    "https://m.qoo10.jp/shop/hellojp"
+    "https://m.qoo10.jp/shop/hellojp",
+    "https://m.qoo10.jp/shop/seoulselectstore",
+    "https://m.qoo10.jp/shop/bestkr"
   ],
   "pending_keywords": [
-    "ロングラスティング テンションパフ しっとりレギュラーモカ",
     "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
     "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
     "08 キャンディー コーラルブリング アイパレット",
@@ -325,21 +388,28 @@
     "シャープ ソーシンプルウォータープルーフペンシルライナー 0. 03 カカオブラウン",
     "ナチュラルカバー スネイルサン ビビクリーム",
     "ツールクレンジングソープベージュ",
-    "ザ ブラック テンションフィット メッシュ クッション ファンデーション 21号"
+    "ザ ブラック テンションフィット メッシュ クッション ファンデーション 21号",
+    "ディスプリンシャンプー",
+    "シリコン製デミヌーブラ S",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
+    "デイリー ミルクシスル ブルーバイオーム スカルプシャンプー",
+    "ソリッドエアフレッシュナー 車用固形消臭剤 フレッシュリネン 韓国消臭 車内 置き型 芳香 長持ち 消臭 シンプル スタイリッシュ",
+    "カフェイン ソリューション + EGCG"
   ],
   "seen_keywords": [
-    "24K ラグジュアリー ゴールド アンプル",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "ゼロ ベルベットティント 5. 16 バニーヌード",
-    "シャンプー ダマスクローズの香り",
+    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "アロエ キュアアルファ アロエゼリーマスク",
+    "ロングラスティング テンションパフ しっとりレギュラーモカ",
+    "ゼロ ベルベットティント 5. 16 バニーヌード",
     "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD",
+    "アロエ キュアアルファ アロエゼリーマスク",
+    "ミミフレンズ コックコックブック",
+    "24K ラグジュアリー ゴールド アンプル",
+    "シャンプー ダマスクローズの香り",
     "グルタチオン アンプル",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "ミミフレンズ コックコックブック",
-    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
     "マスクフィットAIフィルタークッション 本品"
   ]
 }
