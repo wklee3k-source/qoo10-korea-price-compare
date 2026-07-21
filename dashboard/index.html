@@ -358,8 +358,8 @@ function fmtDelta(delta) {
 
 async function loadLog() {
   try {
-    const stored = await window.storage.get('history_log');
-    return stored ? JSON.parse(stored.value) : [];
+    const stored = localStorage.getItem('qoo10_history_log');
+    return stored ? JSON.parse(stored) : [];
   } catch (e) {
     return [];
   }
@@ -367,7 +367,7 @@ async function loadLog() {
 
 async function saveLog(log) {
   try {
-    await window.storage.set('history_log', JSON.stringify(log));
+    localStorage.setItem('qoo10_history_log', JSON.stringify(log));
   } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
 }
 
@@ -416,8 +416,8 @@ async function loadAll() {
 
   let prev = null;
   try {
-    const stored = await window.storage.get('last_snapshot');
-    prev = stored ? JSON.parse(stored.value) : null;
+    const stored = localStorage.getItem('qoo10_last_snapshot');
+    prev = stored ? JSON.parse(stored) : null;
   } catch (e) {
     prev = null;
   }
@@ -485,7 +485,7 @@ async function loadAll() {
   }
 
   try {
-    await window.storage.set('last_snapshot', JSON.stringify(current));
+    localStorage.setItem('qoo10_last_snapshot', JSON.stringify(current));
   } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
 
   if (!hadError) {
