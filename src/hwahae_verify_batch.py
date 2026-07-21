@@ -2,15 +2,18 @@
 hwahae_verify_batch.py
 
 사전 준비된 (goods_no, 클로드가 번역한 한글 핵심어) 목록을 받아서, 각각을
-화해(hwahae.co.kr)에 검색해 정식 브랜드+상품명+용량으로 검증한다.
+화해(hwahae.co.kr)에 먼저 검색해 정식 브랜드+상품명+용량으로 검증한다
+(1차). 화해가 매칭실패했거나 단종으로 나오면, 네이버쇼핑 검색 API로
+보완 검색한다(2차) — 실측으로 화해가 놓친 케이스(매칭실패/단종/오매칭)를
+네이버쇼핑이 대신 정확히 찾아내는 경우가 확인됐다.
 GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 저장한다
 (타임아웃 걸려도 이어서 진행 가능).
 
 사용법:
     python hwahae_verify_batch.py <input.json> <output.json>
         input.json: [{"goods_no": "...", "translated_kr": "..."}, ...]
-        output.json: [{"goods_no":..., "translated_kr":..., "hwahae_brand":...,
-                        "hwahae_name":..., "hwahae_volume":...}, ...]
+        output.json: [{"goods_no":..., "translated_kr":..., "brand":...,
+                        "name":..., "source":"hwahae"|"naver", ...}, ...]
 """
 
 import json
@@ -20,6 +23,7 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
 
 # 검색어에서 용량 표기("110ml", "1L" 등)를 제거하는 정규식 — 실측으로 확인된
 # 근본원인: 화해 검색엔진은 "숫자+단위"가 섞인 검색어를 받으면 결과가 불안정해진다
@@ -43,6 +47,29 @@ def _correct_name_isolated(keyword: str, known_volume: str, known_brand: str = "
         return {"brand": None, "corrected": None, "volume": "", "_error": str(e)}
 
 
+def _naver_fallback(keyword: str) -> dict | None:
+    """1차(화해)가 실패했거나 단종일 때 2차로 네이버쇼핑에서 찾는다.
+    NAVER_CLIENT_ID/SECRET 환경변수가 없으면(로컬 샌드박스 등) 조용히
+    건너뛴다 — openapi.naver.com은 GitHub Actions에서만 접근 가능함."""
+    try:
+        from naver_shop_search import search as naver_search
+
+        items = naver_search(keyword, display=3)
+        if not items:
+            return None
+        top = items[0]
+        return {
+            "brand": top.get("brand") or top.get("mallName"),
+            "corrected": top["title"],
+            "volume": "",
+            "price": top.get("lprice"),
+            "mall": top.get("mallName"),
+        }
+    except Exception as e:  # noqa: BLE001
+        print(f"    [네이버폴백 실패] {e}", file=sys.stderr)
+        return None
+
+
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     items = json.loads(Path(input_path).read_text(encoding="utf-8"))
 
@@ -62,30 +89,38 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         known_volume = item.get("volume", "")
         known_brand = item.get("known_brand", "")
         kw = VOLUME_IN_QUERY_RE.sub("", kw_raw).strip()  # 검색어에서 용량 제거(근본원인 수정)
-        print(f"[검색-격리실행] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else "") + (f" (브랜드:{known_brand})" if known_brand else ""))
+        print(f"[1차-화해] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else "") + (f" (브랜드:{known_brand})" if known_brand else ""))
         r = _correct_name_isolated(kw, known_volume, known_brand)
+
+        source = "hwahae"
+        needs_fallback = (not r.get("corrected")) or r.get("obsolete")
+        if needs_fallback:
+            reason = "매칭실패" if not r.get("corrected") else "단종"
+            print(f"    [1차 {reason}] -> 2차(네이버쇼핑)로 보완 검색")
+            naver_r = _naver_fallback(kw_raw)  # 네이버는 정식 API라 용량 포함해도 안정적
+            if naver_r:
+                r = naver_r
+                source = "naver"
+            # 네이버도 실패하면 원래 화해 결과(실패/단종 상태)를 그대로 유지
 
         entry = {
             "goods_no": item["goods_no"],
             "translated_kr": kw_raw,
-            "hwahae_brand": r.get("brand"),
-            "hwahae_name": r.get("corrected"),
-            "hwahae_volume": r.get("volume"),
+            "brand": r.get("brand"),
+            "name": r.get("corrected"),
+            "volume": r.get("volume", ""),
+            "source": source,
             "obsolete": r.get("obsolete"),
             "sale": r.get("sale"),
+            "price": r.get("price"),
+            "mall": r.get("mall"),
         }
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
         processed_this_call += 1
 
-        status = entry["hwahae_name"] or "매칭실패"
-        flags = []
-        if entry.get("obsolete"):
-            flags.append("단종")
-        if entry.get("sale") is False:
-            flags.append("판매중단")
-        flag_str = f" [{'/'.join(flags)}]" if flags else ""
-        print(f"    -> {entry['hwahae_brand']} {status} {entry['hwahae_volume']}{flag_str}")
+        status = entry["name"] or "매칭실패(둘다)"
+        print(f"    -> [{source}] {entry['brand']} {status}")
 
     print(f"\n[DONE] 이번 호출에서 {processed_this_call}건 처리, 누적 {len(results)}/{len(items)}건 -> {output_path}")
 
