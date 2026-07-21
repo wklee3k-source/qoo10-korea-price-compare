@@ -124,9 +124,13 @@ def _append_skip_log(entries: list[dict]):
 
 
 def crawl_shop_best5(shop_id: str) -> list[dict]:
-    """상점 베스트5를 크롤링하고, 카테고리(색조)/옵션 필터를 즉시 적용한다.
-    통과한 상품만 반환(원본 title 그대로 유지). 스킵된 것도 사유와 함께
-    discovery_skip_log.json에 전부 기록한다.
+    """상점 베스트5를 전부 크롤링해서 반환한다(필터 통과여부와 무관하게
+    5개 다 반환 — 사용자 지적사항 반영: 필터는 "최종 결과물에 넣을지"만
+    결정해야지 "다음 검색 시드로 쓸지"까지 막으면 안 된다. 색조/옵션이라도
+    다음 라운드 검색어로는 계속 써야 상점 발굴이 5개씩 계속 뻗어나간다).
+
+    각 item에 passes_filter(bool)와 skip_reason을 달아서 반환하고, 최종
+    상품목록에 넣을지는 호출하는 쪽(run())이 passes_filter를 보고 결정한다.
 
     [주의] 필터링 단계(fetch_item_detail)와 번역 단계(GoogleTranslateSession)를
     반드시 분리된 두 단계로 처리해야 한다 — 둘 다 각자 sync_playwright()를
@@ -139,8 +143,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
     if not ranking:
         return []
 
-    # 1단계: 필터링(카테고리/옵션/리뷰수) — fetch_item_detail만 사용
-    passed = []
+    all_items = []
     skip_entries = []
     for item in ranking:
         try:
@@ -148,6 +151,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         except Exception as e:  # noqa: BLE001
             skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": f"상세조회실패: {e}"})
             continue
+
         category = detail.get("category_gdlc_cd")
         has_options = detail.get("has_options")
         # review_count가 None인 건 에러가 아니라 "리뷰가 아예 없어서 JSON-LD의
@@ -155,32 +159,37 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         review_count = detail.get("review_count")
         if review_count is None:
             review_count = 0
-        if category in COLOR_COSMETIC_CATEGORIES:
-            print(f"    [스킵-색조] {item['goods_no']} {item['title'][:30]}")
-            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "색조카테고리", "category": category})
-            continue
-        if category not in COSMETIC_ALLOWED_CATEGORIES:
-            print(f"    [스킵-비화장품] {item['goods_no']} {item['title'][:30]} (category={category})")
-            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "화장품카테고리아님", "category": category})
-            continue
-        if has_options:
-            print(f"    [스킵-옵션] {item['goods_no']} {item['title'][:30]}")
-            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "옵션있음"})
-            continue
-        if review_count >= REVIEW_THRESHOLD:
-            print(f"    [스킵-상품리뷰{review_count}] {item['goods_no']} {item['title'][:30]}")
-            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": f"리뷰수{review_count}(3개이상)", "review_count": review_count})
-            continue
+
         item["shop_id"] = shop_id
         item["category_gdlc_cd"] = category
         item["has_options"] = has_options
         item["review_count"] = review_count
-        passed.append(item)
+
+        skip_reason = None
+        if category in COLOR_COSMETIC_CATEGORIES:
+            skip_reason = "색조카테고리"
+        elif category not in COSMETIC_ALLOWED_CATEGORIES:
+            skip_reason = "화장품카테고리아님"
+        elif has_options:
+            skip_reason = "옵션있음"
+        elif review_count >= REVIEW_THRESHOLD:
+            skip_reason = f"리뷰수{review_count}(3개이상)"
+
+        item["passes_filter"] = skip_reason is None
+        item["skip_reason"] = skip_reason
+
+        if skip_reason:
+            print(f"    [필터탈락-{skip_reason}] {item['goods_no']} {item['title'][:30]} (그래도 다음 시드로는 사용)")
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": skip_reason, "category": category})
+        else:
+            print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:30]}")
+
+        all_items.append(item)  # 필터 통과여부와 무관하게 항상 추가(시드 생성용)
 
     if skip_entries:
         _append_skip_log(skip_entries)
 
-    return passed
+    return all_items
 
 
 def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
@@ -252,14 +261,15 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
             shop_urls.append(f"https://m.qoo10.jp/shop/{shop_id}")
             print(f"\n  [상점진입] {shop_id} (review={shop['review_count']})")
 
-            passed_items = crawl_shop_best5(shop_id)
-            for item in passed_items:
-                if len(all_products) >= target_products:
-                    break
-                all_products[item["goods_no"]] = item
+            crawled_items = crawl_shop_best5(shop_id)
+            for item in crawled_items:
+                # 시드는 필터 통과여부와 무관하게 전부 생성(사용자 지적사항 반영)
                 core = extract_core_keyword(item["title"])
                 if core:
                     pending_keywords.append(core)
+                # 최종 상품목록에는 필터 통과한 것만 넣는다
+                if item.get("passes_filter") and len(all_products) < target_products:
+                    all_products[item["goods_no"]] = item
             save()  # 매 상점마다 저장 (타임아웃 걸려도 이어서 진행 가능)
 
         seen_keywords.add(kw)
