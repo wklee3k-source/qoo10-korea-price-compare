@@ -31,6 +31,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 #  같은 검색어에서 "110ml"만 뺀 "BERGAMO 24K 럭셔리 골드 앰플"은 항상 정답).
 # 용량은 이미 known_volume 파라미터로 따로 전달하고 있으니 검색어엔 필요없다.
 VOLUME_IN_QUERY_RE = re.compile(r"\d+(?:\.\d+)?\s*(?:mL|ml|g|L)\b")
+BRACKET_RE = re.compile(r"[【\[（(][^】\])）]*[】\])）]")
 
 
 def _correct_name_isolated(keyword: str, known_volume: str, known_brand: str = "") -> dict:
@@ -89,6 +90,8 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         known_volume = item.get("volume", "")
         known_brand = item.get("known_brand", "")
         kw = VOLUME_IN_QUERY_RE.sub("", kw_raw).strip()  # 검색어에서 용량 제거(근본원인 수정)
+        kw = BRACKET_RE.sub("", kw).strip()  # 괄호 부가정보("(총20매입)" 등)도 제거
+        kw = re.sub(r"\s+", " ", kw)
         print(f"[1차-화해] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else "") + (f" (브랜드:{known_brand})" if known_brand else ""))
         r = _correct_name_isolated(kw, known_volume, known_brand)
 
