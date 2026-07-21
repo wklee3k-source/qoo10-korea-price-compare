@@ -1,11 +1,13 @@
 {
   "visited_shops": [
-    "trailblue2",
-    "gmarket_jp",
-    "Asteroid",
     "VividgrowMAN",
+    "trailblue2",
+    "JfromKorea",
     "puchiseoul",
-    "JfromKorea"
+    "Asteroid",
+    "merrymarket",
+    "woorinin",
+    "gmarket_jp"
   ],
   "all_products": [
     {
@@ -172,6 +174,36 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1098318150",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/593/589/7079589593.g_300-w-st_g.jpg",
+      "title": "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック/韓国コスメ",
+      "brand": "ナンバーズイン",
+      "price_jpy": 5940,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098318150",
+      "shop_id": "merrymarket",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1098317948",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/628/776/6883776628.g_300-w-st_g.jpg",
+      "title": "オールデイタイトメイクセッティングピクサー75ml/makeup setting fixx/韓国コスメ",
+      "brand": "ソーナチュラル",
+      "price_jpy": 2519,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098317948",
+      "shop_id": "merrymarket",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -180,11 +212,11 @@
     "https://m.qoo10.jp/shop/puchiseoul",
     "https://m.qoo10.jp/shop/JfromKorea",
     "https://m.qoo10.jp/shop/trailblue2",
-    "https://m.qoo10.jp/shop/VividgrowMAN"
+    "https://m.qoo10.jp/shop/VividgrowMAN",
+    "https://m.qoo10.jp/shop/woorinin",
+    "https://m.qoo10.jp/shop/merrymarket"
   ],
   "pending_keywords": [
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "グルタチオン アンプル",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
     "24K ラグジュアリー ゴールド アンプル",
     "アロエ キュアアルファ アロエゼリーマスク",
@@ -209,13 +241,25 @@
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "ブラー パウダー ファクト 7color",
     "(+キーリング 贈呈スキン レイヤー フィット チーク 16color #25年10月 6color追加発売",
-    "ラッキーシャインティント8color #25年10月 3color追加発売"
+    "ラッキーシャインティント8color #25年10月 3color追加発売",
+    "ローズオブセッションステイフィットティント#24色 BEST ピンク オプセッション ステイフィット ティント#20色",
+    "オールデイカバー ブラッククッション#5色 BEST クッショングラス ナチュラル #5色 本品 + 詰め替え",
+    "BEST インクグラスティングリップグロス",
+    "アイシャドウパレット #07ミルクラテ Milk Latte",
+    "オーバーグレーズ#3色",
+    "インスパイアスキニーブロウカラ 9colors",
+    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
+    "オールデイマスカラ",
+    "オールデイタイトメイクセッティングピクサー",
+    "ブラーグロウイリップティント"
   ],
   "seen_keywords": [
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "24K ラグジュアリー ゴールド アンプル",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "アロエ キュアアルファ アロエゼリーマスク",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "グルタチオン アンプル",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "シャンプー ダマスクローズの香り"
   ]
 }
