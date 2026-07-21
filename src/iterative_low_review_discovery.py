@@ -111,6 +111,7 @@ def _protect_and_translate(text: str, translator) -> str:
 
 
 SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
+SEED_LOG_PATH = OUTPUT_DIR / "discovery_seed_log.json"
 
 
 def _append_skip_log(entries: list[dict]):
@@ -121,6 +122,17 @@ def _append_skip_log(entries: list[dict]):
         existing = json.loads(SKIP_LOG_PATH.read_text(encoding="utf-8"))
     existing.extend(entries)
     SKIP_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _append_seed_log(entries: list[dict]):
+    """어떤 상품(베스트5 중 하나)에서 어떤 검색어(시드)가 나왔는지 전부
+    기록한다 — 필터 통과여부와 무관하게 시드는 항상 생성되므로, 이 로그를
+    보면 "왜 상점 발굴이 이렇게 뻗어나갔는지/막혔는지"를 바로 추적할 수 있다."""
+    existing = []
+    if SEED_LOG_PATH.exists():
+        existing = json.loads(SEED_LOG_PATH.read_text(encoding="utf-8"))
+    existing.extend(entries)
+    SEED_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def crawl_shop_best5(shop_id: str) -> list[dict]:
@@ -262,14 +274,26 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
             print(f"\n  [상점진입] {shop_id} (review={shop['review_count']})")
 
             crawled_items = crawl_shop_best5(shop_id)
+            seed_entries = []
             for item in crawled_items:
                 # 시드는 필터 통과여부와 무관하게 전부 생성(사용자 지적사항 반영)
                 core = extract_core_keyword(item["title"])
                 if core:
                     pending_keywords.append(core)
+                    seed_entries.append(
+                        {
+                            "from_shop": shop_id,
+                            "from_goods_no": item["goods_no"],
+                            "from_title": item["title"],
+                            "passes_filter": item.get("passes_filter"),
+                            "seed_keyword": core,
+                        }
+                    )
                 # 최종 상품목록에는 필터 통과한 것만 넣는다
                 if item.get("passes_filter") and len(all_products) < target_products:
                     all_products[item["goods_no"]] = item
+            if seed_entries:
+                _append_seed_log(seed_entries)
             save()  # 매 상점마다 저장 (타임아웃 걸려도 이어서 진행 가능)
 
         seen_keywords.add(kw)
