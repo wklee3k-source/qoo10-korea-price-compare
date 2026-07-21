@@ -1,15 +1,17 @@
 {
   "visited_shops": [
-    "lindalinda",
-    "GlowKoreashop",
-    "mellia",
-    "dsire88",
-    "frombeauty",
-    "SOULPRISM",
-    "COCOAN",
-    "onme",
     "cherryup",
-    "fnehqld"
+    "fnehqld",
+    "dsire88",
+    "onme",
+    "lindalinda",
+    "kurashiben",
+    "kamiya2",
+    "mellia",
+    "COCOAN",
+    "SOULPRISM",
+    "GlowKoreashop",
+    "frombeauty"
   ],
   "all_products": [
     {
@@ -362,6 +364,36 @@
       "category_gdlc_cd": "120000012",
       "has_options": false,
       "review_count": 0
+    },
+    {
+      "goods_no": "1209392677",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/741/451/8391451741.g_300-w-st_g.jpg",
+      "title": "【2個セット】ナンバースリー no3 ヒュウケア オイル レフィル 300mL 洗い流さないトリートメント ヘアオイル 詰替え用 ダメージ補修 保湿 ツヤ髪",
+      "brand": "ナンバースリー",
+      "price_jpy": 11755,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209392677",
+      "shop_id": "kurashiben",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "name_kr_verified": "프로티니 (PROTINI) 프로티니No3 7g",
+      "hwahae_matched": true
+    },
+    {
+      "goods_no": "1197629305",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/209/452/8391452209.g_300-w-st_g.jpg",
+      "title": "資生堂 サブリミック エアリーフロー シャンプー a リフィル 1800mL ヘアケア スカルプケア用 資生堂 プロフェッショナル SHISEIDO PROFESSIONAL shiseido sub",
+      "brand": "資生堂",
+      "price_jpy": 5980,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1197629305",
+      "shop_id": "kurashiben",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "name_kr_verified": "려 (Ryo) 함빛 손상 고영양 케어 컨디셔너 400ml",
+      "hwahae_matched": true
     }
   ],
   "shop_urls": [
@@ -374,10 +406,11 @@
     "https://m.qoo10.jp/shop/onme",
     "https://m.qoo10.jp/shop/lindalinda",
     "https://m.qoo10.jp/shop/GlowKoreashop",
-    "https://m.qoo10.jp/shop/cherryup"
+    "https://m.qoo10.jp/shop/cherryup",
+    "https://m.qoo10.jp/shop/kurashiben",
+    "https://m.qoo10.jp/shop/kamiya2"
   ],
   "pending_keywords": [
-    "低刺激 大容量 シャンプー",
     "シークレットポアセラミドバブルオイルエッセンスミスト",
     "オリジン ピュア バランシング クレンジングオイル",
     "ウォーターカプセル サンセラム SPF50+",
@@ -402,10 +435,13 @@
     "1+1ティーツリーシカ鼻パック 入",
     "ピンクトーンアップサンクリーム",
     "ザ ビタA レチナールショット タイトニングブースター",
-    "リードルショット + PDRN カプセルクリーム"
+    "リードルショット + PDRN カプセルクリーム",
+    "ナンバースリー no3 ヒュウケア オイル レフィル 洗い流さないトリートメント ヘアオイル 詰替え用 ダメージ補修 保湿 ツヤ髪",
+    "資生堂 サブリミック エアリーフロー シャンプー a リフィル ヘアケア スカルプケア用 資生堂 プロフェッショナル SHISEIDO PROFESSIONAL shiseido sub"
   ],
   "seen_keywords": [
     "トーンアップぽよんクリーム",
+    "低刺激 大容量 シャンプー",
     "メディヒール エッセンシャルマスクパック"
   ]
 }
