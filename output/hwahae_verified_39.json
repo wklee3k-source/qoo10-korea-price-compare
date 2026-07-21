@@ -58,5 +58,65 @@
     "sale": true,
     "price": null,
     "mall": null
+  },
+  {
+    "goods_no": "1177838255",
+    "translated_kr": "Kundal 허니앤마카다미아 네이처샴푸 블랙베리베이 500ml",
+    "brand": "쿤달 (KUNDAL)",
+    "name": "허니 앤 마카다미아 네이처 샴푸 [블랙베리베이]",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null
+  },
+  {
+    "goods_no": "1203041226",
+    "translated_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
+    "brand": "46cm (46센티미터)",
+    "name": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+    "volume": "720ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null
+  },
+  {
+    "goods_no": "1191395895",
+    "translated_kr": "스킨앤러브 엑토인 리커버리 선플루이드 50ml SPF50+ PA++++",
+    "brand": "실리스카 (silisca®)",
+    "name": "이피아이 선블락 [SPF50/PA++++] [라이트]",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null
+  },
+  {
+    "goods_no": "1199735232",
+    "translated_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": null,
+    "mall": null
+  },
+  {
+    "goods_no": "1208085514",
+    "translated_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
+    "brand": "46cm (46센티미터)",
+    "name": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+    "volume": "720ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null
   }
 ]
