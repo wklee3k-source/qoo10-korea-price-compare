@@ -97,7 +97,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         if needs_fallback:
             reason = "매칭실패" if not r.get("corrected") else "단종"
             print(f"    [1차 {reason}] -> 2차(네이버쇼핑)로 보완 검색")
-            naver_r = _naver_fallback(kw_raw)  # 네이버는 정식 API라 용량 포함해도 안정적
+            naver_r = _naver_fallback(kw)  # 정제된 검색어 사용(원본 전체는 너무 길어서 결과가 안 나옴)
             if naver_r:
                 r = naver_r
                 source = "naver"
