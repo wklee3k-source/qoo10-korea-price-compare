@@ -1,9 +1,11 @@
 {
   "visited_shops": [
-    "frombeauty",
     "Asteroid",
+    "SUMMERWONDER",
+    "ktrendmall",
     "keto88",
-    "trailblue2"
+    "trailblue2",
+    "frombeauty"
   ],
   "all_products": [
     {
@@ -95,18 +97,32 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1195761907",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/489/636/8208636489.g_300-w-st_g.jpg",
+      "title": "グルタチオン 6% アンプル 30ml",
+      "brand": "Derma Factory",
+      "price_jpy": 1670,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1195761907",
+      "shop_id": "ktrendmall",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/frombeauty",
     "https://m.qoo10.jp/shop/Asteroid",
     "https://m.qoo10.jp/shop/keto88",
-    "https://m.qoo10.jp/shop/trailblue2"
+    "https://m.qoo10.jp/shop/trailblue2",
+    "https://m.qoo10.jp/shop/ktrendmall",
+    "https://m.qoo10.jp/shop/SUMMERWONDER"
   ],
   "pending_keywords": [
-    "インスパイア スキニーブロウマスカラ 3.",
-    "ポアレスプライマーポット 9.",
-    "オールデイマスタークッション",
     "デイリーディフェンスPDRN BBクリーム 4colors",
     "24K ラグジュアリー ゴールド アンプル",
     "アロエ キュアアルファ アロエゼリーマスク",
@@ -122,10 +138,18 @@
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "アイブラシ プロコレクション5種 Balletcore edition",
-    "ムードオンアイパレット #11 Pink core 12 Peach core 26年4月発売"
+    "ムードオンアイパレット #11 Pink core 12 Peach core 26年4月発売",
+    "ドクターニュートリ メラ トニン含有 メラメイトグミ",
+    "ヌーディーリップペンシル 0.",
+    "シェイキングブラーチーク",
+    "グルタチオン アンプル",
+    "ヴィーガン リペアリング ヘアセラム トリートメント"
   ],
   "seen_keywords": [
+    "インスパイア スキニーブロウマスカラ 3.",
     "スキン レイヤー フィット チーク",
+    "オールデイマスタークッション",
+    "ポアレスプライマーポット 9.",
     "メディヒール エッセンシャルマスクパック"
   ]
 }
