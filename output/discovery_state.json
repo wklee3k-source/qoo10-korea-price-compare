@@ -1,15 +1,17 @@
 {
   "visited_shops": [
-    "KoreaSeoulShop",
-    "woorinin",
     "VividgrowMAN",
-    "merrymarket",
-    "JfromKorea",
-    "Asteroid",
-    "sssemibeauty",
     "trailblue2",
+    "merrymarket",
+    "KoreaSeoulShop",
+    "hellojp",
+    "gmarketplus",
+    "sssemibeauty",
+    "woorinin",
+    "JfromKorea",
+    "puchiseoul",
     "gmarket_jp",
-    "puchiseoul"
+    "Asteroid"
   ],
   "all_products": [
     {
@@ -251,6 +253,21 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1195979141",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/662/085/8084085662.g_300-w-st_g.jpg",
+      "title": "ナチュラルカバー スネイルサン ビビクリーム 50ml",
+      "brand": "アンジョ",
+      "price_jpy": 673,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1195979141",
+      "shop_id": "hellojp",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -263,15 +280,11 @@
     "https://m.qoo10.jp/shop/woorinin",
     "https://m.qoo10.jp/shop/merrymarket",
     "https://m.qoo10.jp/shop/sssemibeauty",
-    "https://m.qoo10.jp/shop/KoreaSeoulShop"
+    "https://m.qoo10.jp/shop/KoreaSeoulShop",
+    "https://m.qoo10.jp/shop/gmarketplus",
+    "https://m.qoo10.jp/shop/hellojp"
   ],
   "pending_keywords": [
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "ミミフレンズ コックコックブック",
-    "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD",
-    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
-    "ゼロ ベルベットティント 5. 16 バニーヌード",
     "ロングラスティング テンションパフ しっとりレギュラーモカ",
     "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
     "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
@@ -305,17 +318,28 @@
     "PDRNヒアルロン酸カプセル ラム レフィル",
     "マスクフィットレッドファンデーション",
     "カバーアッププロコンシーラー",
-    "ドクダミ77スージングトナー"
+    "ドクダミ77スージングトナー",
+    "ケラシス プロポリス ヘアボンディングシャンプー ＋トリートメント ＋ノーウォッシュトリートメント",
+    "3ミミワールドへようこそ ミミ綿菓子トラック",
+    "ムミミワールドへようこそ ミミアイスクリーム店",
+    "シャープ ソーシンプルウォータープルーフペンシルライナー 0. 03 カカオブラウン",
+    "ナチュラルカバー スネイルサン ビビクリーム",
+    "ツールクレンジングソープベージュ",
+    "ザ ブラック テンションフィット メッシュ クッション ファンデーション 21号"
   ],
   "seen_keywords": [
-    "マスクフィットAIフィルタークッション 本品",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "シャンプー ダマスクローズの香り",
     "24K ラグジュアリー ゴールド アンプル",
-    "グルタチオン アンプル",
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "ゼロ ベルベットティント 5. 16 バニーヌード",
+    "シャンプー ダマスクローズの香り",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
     "アロエ キュアアルファ アロエゼリーマスク",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
+    "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD",
+    "グルタチオン アンプル",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "ミミフレンズ コックコックブック",
+    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
+    "マスクフィットAIフィルタークッション 本品"
   ]
 }
