@@ -361,7 +361,7 @@ def main():
     target = int(sys.argv[2])
     out_path = sys.argv[3]
     max_shops = int(sys.argv[4]) if len(sys.argv) > 4 else None
-    shops_per_keyword = int(sys.argv[5]) if len(sys.argv) > 5 else None
+    shops_per_keyword = int(sys.argv[5]) if len(sys.argv) > 5 and sys.argv[5].strip() else None
 
     products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword)
     export_excel(products, out_path)

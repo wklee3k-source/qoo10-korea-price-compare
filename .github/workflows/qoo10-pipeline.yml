@@ -24,6 +24,10 @@ on:
         required: false
         type: string
         default: "500"
+      discovery_shops_per_keyword:
+        description: "검색어 1개당 최대 몇 개 상점까지 처리할지(비워두면 제한없음)"
+        required: false
+        type: string
   schedule:
     # 매일 17:00 UTC = 한국/일본 시간(KST/JST, UTC+9) 새벽 02:00
     - cron: "0 17 * * *"
@@ -126,6 +130,7 @@ jobs:
           TARGET: ${{ inputs.discovery_target_products || '500' }}
           START: ${{ steps.cap.outputs.start }}
           FINAL_CAP: ${{ steps.cap.outputs.cap }}
+          SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -139,7 +144,8 @@ jobs:
               "$KEYWORD" \
               "$TARGET" \
               ../output/discovery_result.xlsx \
-              "$next"
+              "$next" \
+              "$SHOPS_PER_KEYWORD"
             echo "::endgroup::"
 
             git add ../output/discovery_state.json ../output/discovery_result.xlsx ../output/discovery_skip_log.json ../output/discovery_seed_log.json 2>/dev/null || true
