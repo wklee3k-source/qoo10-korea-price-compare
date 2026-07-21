@@ -33,6 +33,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_hwahae_verify:
+        description: "output/hwahae_input_39.json을 화해로 검증할지"
+        required: false
+        type: boolean
+        default: false
   schedule:
     # 매일 17:00 UTC = 한국/일본 시간(KST/JST, UTC+9) 새벽 02:00
     - cron: "0 17 * * *"
@@ -282,6 +287,58 @@ jobs:
           git add output/discovery_state.json
           git diff --cached --quiet && exit 0
           git commit -m "Auto: merge parallel discovery results (4 branches)"
+          for i in 1 2 3; do
+            if git push; then break; fi
+            git pull --rebase
+          done
+
+  hwahae_verify:
+    # 클로드가 미리 번역해둔 한글 핵심어 목록(output/hwahae_input_39.json)을
+    # 화해에서 검증해서 정식 브랜드+상품명+용량을 가져온다. 매 건마다 즉시
+    # 저장하므로 타임아웃 걸려도 재실행하면 이어서 진행된다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_hwahae_verify == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      - name: Run hwahae verification
+        working-directory: src
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python hwahae_verify_batch.py ../output/hwahae_input_39.json ../output/hwahae_verified_39.json
+          git add ../output/hwahae_verified_39.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: hwahae verification results"
           for i in 1 2 3; do
             if git push; then break; fi
             git pull --rebase
