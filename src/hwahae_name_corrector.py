@@ -96,6 +96,7 @@ def _parse_products(html: str) -> list[dict]:
                 "volume": vol_m.group(1).replace(" ", "") if vol_m else "",
                 "obsolete": p.get("obsolete"),  # 단종여부
                 "sale": p.get("sale"),  # 판매중여부
+                "price": p.get("product_price"),  # 정가(원)
             }
         )
     return results
@@ -143,6 +144,7 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
                 "corrected": top["product_name"],
                 "volume": top["volume"],
                 "obsolete": top.get("obsolete"),
+                "price": top.get("price"),
                 "sale": top.get("sale"),
                 "all_candidates": products,
                 "matched_by": "brand",
@@ -174,6 +176,7 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
                 "corrected": top["product_name"],
                 "volume": top["volume"],
                 "obsolete": top.get("obsolete"),
+                "price": top.get("price"),
                 "sale": top.get("sale"),
                 "all_candidates": products,
                 "matched_by": "volume",
@@ -193,6 +196,7 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
         "corrected": top["product_name"],
         "volume": top["volume"],
         "obsolete": top.get("obsolete"),
+                "price": top.get("price"),
         "sale": top.get("sale"),
         "all_candidates": products,
         "matched_by": "top_result",
