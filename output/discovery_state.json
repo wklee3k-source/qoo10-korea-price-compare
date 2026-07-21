@@ -1,16 +1,106 @@
 {
-  "visited_shops": [],
-  "all_products": [],
-  "shop_urls": [],
+  "visited_shops": [
+    "gmarket_jp",
+    "Asteroid"
+  ],
+  "all_products": [
+    {
+      "goods_no": "1133994465",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/584/934/6564934584.g_300-w-st_g.jpg",
+      "title": "24K ラグジュアリー ゴールド アンプル 110ml",
+      "brand": "BERGAMO",
+      "price_jpy": 3813,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1133994465",
+      "shop_id": "Asteroid",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1205373635",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/571/816/8260816571.g_300-w-st_g.jpg",
+      "title": "アロエ キュアアルファ アロエゼリーマスク 1枚",
+      "brand": "キムジョンムンアロエ",
+      "price_jpy": 947,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205373635",
+      "shop_id": "Asteroid",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1183055576",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/044/788/7752788044.g_300-w-st_g.jpg",
+      "title": "シャンプー ダマスクローズの香り 1L",
+      "brand": "ミルクバオバブ",
+      "price_jpy": 2745,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1183055576",
+      "shop_id": "Asteroid",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1094999881",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/903/586/5678586903.g_300-w-st_g.jpg",
+      "title": "エアリー 武器自車 サンクリーム SPF50+ PA++++ 50ml 1個",
+      "brand": "アヌア",
+      "price_jpy": 4226,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1094999881",
+      "shop_id": "Asteroid",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1209394749",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/808/423/8345423808.g_300-w-st_g.jpg",
+      "title": "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット 6ml 1セット（合計20枚入り）/携帯性に優れた刺激のないトナーパッド (贈呈品なくなり次第贈呈終了)",
+      "brand": "ウンユル",
+      "price_jpy": 2002,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209394749",
+      "shop_id": "gmarket_jp",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    }
+  ],
+  "shop_urls": [
+    "https://m.qoo10.jp/shop/Asteroid",
+    "https://m.qoo10.jp/shop/gmarket_jp"
+  ],
   "pending_keywords": [
-    "24K ラグジュアリー ゴールド アンプル",
     "アロエ キュアアルファ アロエゼリーマスク",
     "シャンプー ダマスクローズの香り",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "グルタチオン アンプル",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "24K ラグジュアリー ゴールド アンプル",
+    "アロエ キュアアルファ アロエゼリーマスク",
+    "シャンプー ダマスクローズの香り",
+    "マスクフィットAIフィルタークッション 本品",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "ミミフレンズ コックコックブック"
   ],
-  "seen_keywords": []
+  "seen_keywords": [
+    "24K ラグジュアリー ゴールド アンプル"
+  ]
 }
