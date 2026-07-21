@@ -35,7 +35,7 @@ NEXT_DATA_RE = re.compile(r'__NEXT_DATA__" type="application/json">(.*?)</script
 VOLUME_FROM_BUYINFO_RE = re.compile(r"([\d.]+\s*(?:mL|ml|g)\b)")
 
 
-def _fetch_search_page(keyword: str, wait_seconds: float = 3.0) -> str:
+def _fetch_search_page(keyword: str, wait_seconds: float = 2.0) -> str:
     url = f"https://www.hwahae.co.kr/search?q={urllib.parse.quote(keyword)}"
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -43,7 +43,15 @@ def _fetch_search_page(keyword: str, wait_seconds: float = 3.0) -> str:
         page = context.new_page()
         try:
             page.goto(url, timeout=15000, wait_until="load")
-            time.sleep(wait_seconds)
+            # 네트워크 요청이 다 끝날 때까지 기다린다(고정 sleep보다 안정적) —
+            # 실측으로 확인된 문제: 페이지가 완전히 로딩되기 전에 __NEXT_DATA__를
+            # 읽으면 아직 검색결과가 안 채워진 "추천상품 위젯"(예: 메이유어
+            # 베일리)을 잘못 파싱하는 경우가 있었다.
+            page.wait_for_load_state("networkidle", timeout=8000)
+        except Exception:  # noqa: BLE001
+            pass
+        time.sleep(wait_seconds)  # networkidle 이후에도 약간의 여유를 둔다
+        try:
             content = page.content()
         except Exception:  # noqa: BLE001
             content = ""
@@ -80,14 +88,27 @@ def _parse_products(html: str) -> list[dict]:
     return results
 
 
-def correct_name(product_keyword_only: str) -> dict:
-    """브랜드 없이 상품명만으로 검색해서 화해의 1번째 결과(브랜드+상품명+용량)를 가져온다."""
+def correct_name(product_keyword_only: str, _retry: bool = True) -> dict:
+    """브랜드 없이 상품명만으로 검색해서 화해의 1번째 결과(브랜드+상품명+용량)를 가져온다.
+
+    [방어로직] 첫 결과가 검색어와 단어를 하나도 안 겹치면(예: "토너패드"를
+    검색했는데 "베일리"가 나오는 경우) 페이지 로딩 타이밍 문제로 추천위젯을
+    잘못 읽었을 가능성이 높다고 보고 한 번 더 재시도한다."""
     html = _fetch_search_page(product_keyword_only)
     products = _parse_products(html)
     if not products:
         return {"guessed": product_keyword_only, "brand": None, "corrected": None, "volume": "", "all_candidates": []}
 
     top = products[0]
+
+    query_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", product_keyword_only.lower()))
+    result_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", (top["product_name"] or "").lower()))
+    no_overlap = bool(query_tokens) and not (query_tokens & result_tokens)
+
+    if no_overlap and _retry:
+        print(f"    [의심] '{product_keyword_only}' 검색결과 '{top['product_name']}'가 단어가 하나도 안 겹침 — 재시도", file=sys.stderr)
+        return correct_name(product_keyword_only, _retry=False)
+
     return {
         "guessed": product_keyword_only,
         "brand": top["brand"],
