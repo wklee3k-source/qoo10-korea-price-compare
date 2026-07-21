@@ -558,5 +558,47 @@
     "price": 45000,
     "mall": null,
     "seller_trust": null
+  },
+  {
+    "goods_no": "1212630238",
+    "translated_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
+    "exa_refined": "온더바디 46cm 체취케어 약산성 땀냄새 체취제거 등드름 ...",
+    "brand": "산다화 (Sandawha)",
+    "name": "울트라 젠틀 약산성 세안제",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null
+  },
+  {
+    "goods_no": "1210464824",
+    "translated_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
+    "exa_refined": "콜라겐 코팅 헤어 A+ 머슬 샴푸 CER",
+    "brand": "엘리자베카 (Elizavecca)",
+    "name": "콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null
+  },
+  {
+    "goods_no": "1186310271",
+    "translated_kr": "셀리맥스 더리얼노니 모이스처 밸런싱토너 320ml",
+    "exa_refined": "셀리맥스 더 리얼 노니 수분 밸런싱 토너",
+    "brand": "셀리맥스 (celimax)",
+    "name": "노니 밸런싱 토너",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null
   }
 ]
