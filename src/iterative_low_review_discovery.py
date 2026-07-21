@@ -226,12 +226,17 @@ def _save_state(state: dict):
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
+def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None):
     state = _load_state()
     visited_shops = set(state["visited_shops"])
     all_products = {p["goods_no"]: p for p in state["all_products"]}
     shop_urls = state["shop_urls"]
-    pending_keywords = state["pending_keywords"] if state["pending_keywords"] is not None else [keyword_ja]
+    if state["pending_keywords"] is not None:
+        pending_keywords = state["pending_keywords"]
+    elif seed_keywords:
+        pending_keywords = list(seed_keywords)
+    else:
+        pending_keywords = [keyword_ja]
     seen_keywords = set(state["seen_keywords"])
 
     if state["visited_shops"]:
@@ -261,7 +266,9 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None):
 
         print(f"\n[검색] {kw}")
         shops = find_low_review_shops(kw, visited_shops)
-        print(f"  -> 신규 저리뷰 상점 {len(shops)}개")
+        if shops_per_keyword:
+            shops = shops[:shops_per_keyword]
+        print(f"  -> 신규 저리뷰 상점 {len(shops)}개 (이 검색어에서 처리할 상점)")
 
         for shop in shops:
             if max_shops and len(visited_shops) >= max_shops:
@@ -354,8 +361,9 @@ def main():
     target = int(sys.argv[2])
     out_path = sys.argv[3]
     max_shops = int(sys.argv[4]) if len(sys.argv) > 4 else None
+    shops_per_keyword = int(sys.argv[5]) if len(sys.argv) > 5 else None
 
-    products, shop_urls = run(keyword_ja, target, max_shops)
+    products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword)
     export_excel(products, out_path)
     print("\n방문한 상점 URL:")
     for u in shop_urls:
