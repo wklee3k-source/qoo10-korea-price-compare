@@ -1,13 +1,15 @@
 {
   "visited_shops": [
-    "Asteroid",
+    "hellojp",
     "VividgrowMAN",
-    "rojecompany",
+    "Asteroid",
     "manmulsang",
     "trailblue2",
+    "mkelas",
+    "gmarket_jp",
     "JfromKorea",
-    "hellojp",
-    "gmarket_jp"
+    "durudurupanda",
+    "rojecompany"
   ],
   "all_products": [
     {
@@ -159,6 +161,81 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1186682635",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/919/491/7880491919.g_300-w-st_g.jpg",
+      "title": "アゼライン酸 10 ヒアルロン レッドネス スージング セラム 30ml 敏感肌 保湿 スキンケア",
+      "brand": "アヌア",
+      "price_jpy": 3220,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186682635",
+      "shop_id": "durudurupanda",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1199084782",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/302/908/8128908302.g_300-w-st_g.jpg",
+      "title": "ヴィーガンコンブチャ ティー エッセンス 150ml 保湿 しっとり エッセンス 韓国コスメ",
+      "brand": "Dr.Ceuracle",
+      "price_jpy": 3380,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199084782",
+      "shop_id": "durudurupanda",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1206207561",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/050/674/8272674050.g_300-w-st_g.jpg",
+      "title": "[1+1] トーンアップ パールクリーム 本体30g+30g スキンケア / 保湿 / ベースメイク韓国コスメ 並行輸入",
+      "brand": "MAY ISLAND",
+      "price_jpy": 3530,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206207561",
+      "shop_id": "durudurupanda",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1205776987",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/426/644/8267644426.g_300-w-st_g.jpg",
+      "title": "AGE-R グルタチオン グロウ カプセル クリーム 50ml 保湿 スキンケア 並行輸入",
+      "brand": "メディキューブ",
+      "price_jpy": 3530,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205776987",
+      "shop_id": "durudurupanda",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1198940759",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/313/816/8125816313.g_300-w-st_g.jpg",
+      "title": "Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 50ml 米 うるおい 日焼け止め",
+      "brand": "Beauty of Joseon",
+      "price_jpy": 2240,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198940759",
+      "shop_id": "durudurupanda",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -169,11 +246,11 @@
     "https://m.qoo10.jp/shop/hellojp",
     "https://m.qoo10.jp/shop/manmulsang",
     "https://m.qoo10.jp/shop/trailblue2",
-    "https://m.qoo10.jp/shop/VividgrowMAN"
+    "https://m.qoo10.jp/shop/VividgrowMAN",
+    "https://m.qoo10.jp/shop/mkelas",
+    "https://m.qoo10.jp/shop/durudurupanda"
   ],
   "pending_keywords": [
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "PDRNピンクエクソソームショット2000",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
     "オールデイタイトメイクセッティングピクサー",
@@ -239,15 +316,22 @@
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "ブラー パウダー ファクト 7color",
     "(+キーリング 贈呈スキン レイヤー フィット チーク 16color #25年10月 6color追加発売",
-    "ラッキーシャインティント8color #25年10月 3color追加発売"
+    "ラッキーシャインティント8color #25年10月 3color追加発売",
+    "アゼライン酸 10 ヒアルロン レッドネス スージング セラム 敏感肌 保湿 スキンケア",
+    "ヴィーガンコンブチャ ティー エッセンス 保湿 しっとり エッセンス 韓国コスメ",
+    "トーンアップ パールクリーム 本体 + スキンケア",
+    "AGE-R グルタチオン グロウ カプセル クリーム 保湿 スキンケア 並行輸入",
+    "Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 米 うるおい 日焼け止め"
   ],
   "seen_keywords": [
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "24K ラグジュアリー ゴールド アンプル",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "PDRNピンクエクソソームショット2000",
     "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
-    "シャンプー ダマスクローズの香り"
+    "シャンプー ダマスクローズの香り",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
   ]
 }
