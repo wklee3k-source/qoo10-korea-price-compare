@@ -1,13 +1,15 @@
 {
   "visited_shops": [
-    "VividgrowMAN",
-    "trailblue2",
-    "JfromKorea",
-    "puchiseoul",
-    "Asteroid",
-    "merrymarket",
+    "KoreaSeoulShop",
     "woorinin",
-    "gmarket_jp"
+    "VividgrowMAN",
+    "merrymarket",
+    "JfromKorea",
+    "Asteroid",
+    "sssemibeauty",
+    "trailblue2",
+    "gmarket_jp",
+    "puchiseoul"
   ],
   "all_products": [
     {
@@ -204,6 +206,51 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1172085888",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/462/892/7482892462.g_300-w-st_g.jpg",
+      "title": "フルフィットプロポリスライトアンプル, 30ml",
+      "brand": "COSRX",
+      "price_jpy": 2337,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1172085888",
+      "shop_id": "sssemibeauty",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1161371182",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/124/344/7256344124.g_300-w-st_g.jpg",
+      "title": "ルートボリュームフィクサー, 200ml",
+      "brand": "ジェニーハウス",
+      "price_jpy": 3154,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161371182",
+      "shop_id": "sssemibeauty",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1210835765",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/622/223/8367223622.g_300-w-st_g.jpg",
+      "title": "ドクダミ77スージングトナー, 350ml",
+      "brand": "アヌア",
+      "price_jpy": 2422,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210835765",
+      "shop_id": "KoreaSeoulShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -214,14 +261,11 @@
     "https://m.qoo10.jp/shop/trailblue2",
     "https://m.qoo10.jp/shop/VividgrowMAN",
     "https://m.qoo10.jp/shop/woorinin",
-    "https://m.qoo10.jp/shop/merrymarket"
+    "https://m.qoo10.jp/shop/merrymarket",
+    "https://m.qoo10.jp/shop/sssemibeauty",
+    "https://m.qoo10.jp/shop/KoreaSeoulShop"
   ],
   "pending_keywords": [
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "24K ラグジュアリー ゴールド アンプル",
-    "アロエ キュアアルファ アロエゼリーマスク",
-    "シャンプー ダマスクローズの香り",
-    "マスクフィットAIフィルタークッション 本品",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
     "ミミフレンズ コックコックブック",
@@ -251,15 +295,27 @@
     "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
     "オールデイマスカラ",
     "オールデイタイトメイクセッティングピクサー",
-    "ブラーグロウイリップティント"
+    "ブラーグロウイリップティント",
+    "ディライトトニーティント 8.",
+    "スキンレイヤーカバーフィットコンシーラー 5.",
+    "フルフィットプロポリスライトアンプル",
+    "セルフアップヘアラインブラシ",
+    "ルートボリュームフィクサー",
+    "エッセンシャルスキンヌーダークッション 本品",
+    "PDRNヒアルロン酸カプセル ラム レフィル",
+    "マスクフィットレッドファンデーション",
+    "カバーアッププロコンシーラー",
+    "ドクダミ77スージングトナー"
   ],
   "seen_keywords": [
-    "24K ラグジュアリー ゴールド アンプル",
-    "アロエ キュアアルファ アロエゼリーマスク",
+    "マスクフィットAIフィルタークッション 本品",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "シャンプー ダマスクローズの香り",
+    "24K ラグジュアリー ゴールド アンプル",
     "グルタチオン アンプル",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "シャンプー ダマスクローズの香り"
+    "アロエ キュアアルファ アロエゼリーマスク",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
   ]
 }
