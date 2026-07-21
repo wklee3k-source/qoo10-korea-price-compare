@@ -95,9 +95,23 @@ def _protect_and_translate(text: str, translator) -> str:
     return translated
 
 
+SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
+
+
+def _append_skip_log(entries: list[dict]):
+    """스킵 사유를 파일에 계속 누적 저장한다(나중에 '왜 27건만 남았나' 같은
+    질문에 바로 답할 수 있도록)."""
+    existing = []
+    if SKIP_LOG_PATH.exists():
+        existing = json.loads(SKIP_LOG_PATH.read_text(encoding="utf-8"))
+    existing.extend(entries)
+    SKIP_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def crawl_shop_best5(shop_id: str) -> list[dict]:
     """상점 베스트5를 크롤링하고, 카테고리(색조)/옵션 필터를 즉시 적용한다.
-    통과한 상품만 반환(원본 title 그대로 유지).
+    통과한 상품만 반환(원본 title 그대로 유지). 스킵된 것도 사유와 함께
+    discovery_skip_log.json에 전부 기록한다.
 
     [주의] 필터링 단계(fetch_item_detail)와 번역 단계(GoogleTranslateSession)를
     반드시 분리된 두 단계로 처리해야 한다 — 둘 다 각자 sync_playwright()를
@@ -112,10 +126,12 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
 
     # 1단계: 필터링(카테고리/옵션/리뷰수) — fetch_item_detail만 사용
     passed = []
+    skip_entries = []
     for item in ranking:
         try:
             detail = fetch_item_detail(item["goods_no"], save_hires_image=False)
-        except Exception:  # noqa: BLE001
+        except Exception as e:  # noqa: BLE001
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": f"상세조회실패: {e}"})
             continue
         category = detail.get("category_gdlc_cd")
         has_options = detail.get("has_options")
@@ -126,12 +142,15 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
             review_count = 0
         if category in COLOR_COSMETIC_CATEGORIES:
             print(f"    [스킵-색조] {item['goods_no']} {item['title'][:30]}")
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "색조카테고리", "category": category})
             continue
         if has_options:
             print(f"    [스킵-옵션] {item['goods_no']} {item['title'][:30]}")
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": "옵션있음"})
             continue
         if review_count >= REVIEW_THRESHOLD:
             print(f"    [스킵-상품리뷰{review_count}] {item['goods_no']} {item['title'][:30]}")
+            skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": f"리뷰수{review_count}(3개이상)", "review_count": review_count})
             continue
         item["shop_id"] = shop_id
         item["category_gdlc_cd"] = category
@@ -185,6 +204,9 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         item["name_kr_verified"] = final_name
         item["hwahae_matched"] = bool(corrected)
         print(f"    [저장] {item['goods_no']} review={item['review_count']} {item['title'][:30]} -> {final_name}")
+
+    if skip_entries:
+        _append_skip_log(skip_entries)
 
     return passed
 

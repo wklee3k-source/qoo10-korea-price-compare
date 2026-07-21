@@ -131,7 +131,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/discovery_state.json output/discovery_result.xlsx 2>/dev/null || true
+          git add output/discovery_state.json output/discovery_result.xlsx output/discovery_skip_log.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "Auto: nightly low-review shop/product discovery (cap=${{ steps.cap.outputs.cap }})"
           for i in 1 2 3; do
