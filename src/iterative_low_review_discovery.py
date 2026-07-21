@@ -47,7 +47,8 @@ COSMETIC_ALLOWED_CATEGORIES = {
     "120000022",  # 향수
     "120000023",  # 맨즈뷰티
 }
-REVIEW_THRESHOLD = 3
+REVIEW_THRESHOLD = 4  # "3개 이하"까지 통과시키려면 4 미만(<4, 즉 0~3)이어야 함
+MIN_PRICE_JPY = 1500  # 이 가격 이하(너무 저가) 상품은 제외
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 
@@ -178,6 +179,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         item["review_count"] = review_count
 
         skip_reason = None
+        price_jpy = item.get("price_jpy")
         if category in COLOR_COSMETIC_CATEGORIES:
             skip_reason = "색조카테고리"
         elif category not in COSMETIC_ALLOWED_CATEGORIES:
@@ -185,7 +187,9 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         elif has_options:
             skip_reason = "옵션있음"
         elif review_count >= REVIEW_THRESHOLD:
-            skip_reason = f"리뷰수{review_count}(3개이상)"
+            skip_reason = f"리뷰수{review_count}(4개이상)"
+        elif price_jpy is not None and price_jpy <= MIN_PRICE_JPY:
+            skip_reason = f"가격{price_jpy}엔(1500엔이하)"
 
         item["passes_filter"] = skip_reason is None
         item["skip_reason"] = skip_reason
