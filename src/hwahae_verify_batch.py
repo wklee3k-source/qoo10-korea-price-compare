@@ -31,6 +31,17 @@ BRACKET_RE = re.compile(r"[【\[（(][^】\])）]*[】\])）]")
 EXA_TAIL_RE = re.compile(r"\s*[-|]\s*.+$")
 EXA_REVIEW_RE = re.compile(r"\s*소비자평점.*$|\s*내돈내산.*$|\s*후기.*$")
 
+# 실제 "상품 상세페이지" URL에서 흔히 보이는 패턴(한국 이커머스 공통) —
+# 이런 패턴이 있으면 상품페이지일 확률이 높다고 판단한다.
+PRODUCT_URL_PATTERNS = re.compile(
+    r"goodsNo=|/goods/|/products?/|goodscode=|/vp/products/|/dp/|/item/|itemId="
+)
+# 브랜드 홈페이지/카테고리 페이지처럼 보이는 제목(구체적 상품명이 없는 경우) —
+# 이런 게 1등으로 나오면 화해/네이버 재검색이 엉뚱한 결과로 샐 수 있어서 건너뛴다.
+GENERIC_TITLE_RE = re.compile(
+    r"^\s*.{1,15}(공식\s*(홈페이지|스토어|사이트|쇼핑몰)?|브랜드관|메인|홈)\s*[|｜]?\s*.{0,10}$"
+)
+
 
 def _clean_query(text: str) -> str:
     t = VOLUME_IN_QUERY_RE.sub("", text)
@@ -40,19 +51,35 @@ def _clean_query(text: str) -> str:
 
 
 def _exa_refine(keyword: str) -> str | None:
-    """2차: Exa 의미기반검색으로 대충번역을 정교한 검색어로 다듬는다."""
+    """2차: Exa 의미기반검색으로 대충번역을 정교한 검색어로 다듬는다.
+    브랜드 홈페이지/카테고리 페이지 같은 "상품이 아닌" 결과를 걸러내고
+    실제 상품 상세페이지로 보이는 것을 우선 채택한다(실측: "은율 공식
+    홈페이지" 같은 게 1등으로 나오면 재검색이 엉뚱한 곳으로 새는 문제가
+    있었다)."""
     print(f"    [2차-Exa] 검색: {keyword!r}", file=sys.stderr)
     try:
         from exa_search import search as exa_search
 
-        items = exa_search(keyword, num_results=3)
+        items = exa_search(keyword, num_results=5)
         if not items:
             return None
-        title = items[0]["title"]
+
+        # 1순위: URL이 상품상세 패턴이고, 제목도 일반 홈페이지 문구가 아닌 것
+        candidates = [
+            it for it in items
+            if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not GENERIC_TITLE_RE.match(it["title"])
+        ]
+        if not candidates:
+            # 2순위: 최소한 제목이 일반 홈페이지 문구는 아닌 것
+            candidates = [it for it in items if not GENERIC_TITLE_RE.match(it["title"])]
+        if not candidates:
+            candidates = items  # 전부 걸러졌으면 그냥 1등 사용(완전 실패보다 나음)
+
+        title = candidates[0]["title"]
         cleaned = EXA_REVIEW_RE.sub("", title)
         cleaned = EXA_TAIL_RE.sub("", cleaned)
         cleaned = _clean_query(cleaned)
-        print(f"    [2차-Exa] 정교화됨: {title!r} -> {cleaned!r}", file=sys.stderr)
+        print(f"    [2차-Exa] 정교화됨: {title!r} -> {cleaned!r} (url={candidates[0].get('url')})", file=sys.stderr)
         return cleaned or None
     except Exception as e:  # noqa: BLE001
         print(f"    [2차-Exa 실패] {type(e).__name__}: {e}", file=sys.stderr)
