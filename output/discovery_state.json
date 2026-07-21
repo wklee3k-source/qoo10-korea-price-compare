@@ -1,7 +1,9 @@
 {
   "visited_shops": [
+    "gmarket_jp",
     "Asteroid",
-    "gmarket_jp"
+    "JfromKorea",
+    "rojecompany"
   ],
   "all_products": [
     {
@@ -63,14 +65,45 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1187136865",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/538/179/7861179538.g_300-w-st_g.jpg",
+      "title": "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善150ml1本",
+      "brand": "ブランカウ",
+      "price_jpy": 2863,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187136865",
+      "shop_id": "JfromKorea",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1177838255",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/211/532/7644532211.g_300-w-st_g.jpg",
+      "title": "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ 500ml",
+      "brand": "Kundal",
+      "price_jpy": 2160,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1177838255",
+      "shop_id": "JfromKorea",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/Asteroid",
-    "https://m.qoo10.jp/shop/gmarket_jp"
+    "https://m.qoo10.jp/shop/gmarket_jp",
+    "https://m.qoo10.jp/shop/JfromKorea",
+    "https://m.qoo10.jp/shop/rojecompany"
   ],
   "pending_keywords": [
-    "シャンプー ダマスクローズの香り",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
     "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
@@ -114,9 +147,20 @@
     "マスクフィットAIフィルタークッション 本品",
     "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "ミミフレンズ コックコックブック"
+    "ミミフレンズ コックコックブック",
+    "ゼロ ベルベットティント 5. 16 バニーヌード",
+    "ロングラスティング テンションパフ しっとりレギュラーモカ",
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
+    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
+    "08 キャンディー コーラルブリング アイパレット",
+    "インビジブルピーリングブースターエッセンス",
+    "アトバリア365ハイドロエッセンス",
+    "イク設定マルチマジックシーラーピクサー",
+    "ティーツリーシカポア鼻パック",
+    "ウォータースリーピングマスクEX 鎮静"
   ],
   "seen_keywords": [
+    "シャンプー ダマスクローズの香り",
     "24K ラグジュアリー ゴールド アンプル"
   ]
 }
