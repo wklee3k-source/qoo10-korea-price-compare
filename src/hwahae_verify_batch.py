@@ -83,6 +83,30 @@ def _naver_fallback(keyword: str) -> dict | None:
         return None
 
 
+def _exa_fallback(keyword: str) -> dict | None:
+    """1차(화해)+2차(네이버) 둘 다 실패했을 때 3차로 Exa(의미기반 검색)를
+    시도한다. 실측으로 확인됨: 오역이어도(예: "디스인탱글"→실제 "디스플린")
+    의미로 이해해서 정답을 찾아낸다 — 순수 텍스트매칭인 화해/네이버가
+    놓치는 케이스를 커버한다."""
+    print(f"    [디버그] exa_fallback 호출됨, keyword={keyword!r}", file=sys.stderr)
+    try:
+        from exa_search import search as exa_search
+
+        items = exa_search(keyword, num_results=3)
+        if not items:
+            return None
+        top = items[0]
+        return {
+            "brand": None,
+            "corrected": top["title"],
+            "volume": "",
+            "url": top.get("url"),
+        }
+    except Exception as e:  # noqa: BLE001
+        print(f"    [Exa폴백 실패] {type(e).__name__}: {e}", file=sys.stderr)
+        return None
+
+
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     items = json.loads(Path(input_path).read_text(encoding="utf-8"))
 
@@ -116,7 +140,13 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             if naver_r:
                 r = naver_r
                 source = "naver"
-            # 네이버도 실패하면 원래 화해 결과(실패/단종 상태)를 그대로 유지
+            else:
+                print("    [2차도 실패] -> 3차(Exa 의미기반검색)로 보완 검색")
+                exa_r = _exa_fallback(kw_raw)  # Exa는 의미기반이라 원본 그대로 써도 됨
+                if exa_r:
+                    r = exa_r
+                    source = "exa"
+            # 셋 다 실패하면 원래 화해 결과(실패/단종 상태)를 그대로 유지
 
         entry = {
             "goods_no": item["goods_no"],
