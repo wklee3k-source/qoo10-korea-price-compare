@@ -1,17 +1,19 @@
 {
   "visited_shops": [
-    "cherryup",
-    "fnehqld",
-    "dsire88",
-    "onme",
-    "lindalinda",
-    "kurashiben",
-    "kamiya2",
-    "mellia",
-    "COCOAN",
-    "SOULPRISM",
     "GlowKoreashop",
-    "frombeauty"
+    "frombeauty",
+    "Holy_Market",
+    "mellia",
+    "SOULPRISM",
+    "fnehqld",
+    "lindalinda",
+    "changmidang",
+    "kamiya2",
+    "COCOAN",
+    "dsire88",
+    "cherryup",
+    "onme",
+    "kurashiben"
   ],
   "all_products": [
     {
@@ -394,6 +396,36 @@
       "review_count": 0,
       "name_kr_verified": "려 (Ryo) 함빛 손상 고영양 케어 컨디셔너 400ml",
       "hwahae_matched": true
+    },
+    {
+      "goods_no": "1201901808",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/478/991/8185991478.g_300-w-st_g.jpg",
+      "title": "[ZOOM BY JUNGSAEMMOO L] メイクアップフィクサー 50ml　Make Up Fixer/メイク崩れ防止/韓国人気　メイクアップ　フィクサー",
+      "brand": "ジョンセンムル",
+      "price_jpy": 1480,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201901808",
+      "shop_id": "changmidang",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "name_kr_verified": "헤라 (HERA) 메이크업 픽서 80ml",
+      "hwahae_matched": true
+    },
+    {
+      "goods_no": "1203285017",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/039/440/8211440039.g_300-w-st_g.jpg",
+      "title": "[Ultra Xecond Ski] パーフェクトヌード透明サンパッチ（ゴルフサンパッチ）10回分（計20枚）UVA&amp;UVB強力遮断/日焼け止めパッチ/ゴルフパッチ/テニス/屋外スポーツ/紫外線",
+      "brand": "Ultra Xecond Skin",
+      "price_jpy": 3930,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203285017",
+      "shop_id": "changmidang",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "name_kr_verified": "글로시에 (Glossier) (해외) 쉐도우 스틱 [앰프]",
+      "hwahae_matched": true
     }
   ],
   "shop_urls": [
@@ -408,10 +440,11 @@
     "https://m.qoo10.jp/shop/GlowKoreashop",
     "https://m.qoo10.jp/shop/cherryup",
     "https://m.qoo10.jp/shop/kurashiben",
-    "https://m.qoo10.jp/shop/kamiya2"
+    "https://m.qoo10.jp/shop/kamiya2",
+    "https://m.qoo10.jp/shop/Holy_Market",
+    "https://m.qoo10.jp/shop/changmidang"
   ],
   "pending_keywords": [
-    "シークレットポアセラミドバブルオイルエッセンスミスト",
     "オリジン ピュア バランシング クレンジングオイル",
     "ウォーターカプセル サンセラム SPF50+",
     "ポアタイトニング クレンジングバーム ット",
@@ -437,11 +470,14 @@
     "ザ ビタA レチナールショット タイトニングブースター",
     "リードルショット + PDRN カプセルクリーム",
     "ナンバースリー no3 ヒュウケア オイル レフィル 洗い流さないトリートメント ヘアオイル 詰替え用 ダメージ補修 保湿 ツヤ髪",
-    "資生堂 サブリミック エアリーフロー シャンプー a リフィル ヘアケア スカルプケア用 資生堂 プロフェッショナル SHISEIDO PROFESSIONAL shiseido sub"
+    "資生堂 サブリミック エアリーフロー シャンプー a リフィル ヘアケア スカルプケア用 資生堂 プロフェッショナル SHISEIDO PROFESSIONAL shiseido sub",
+    "メイクアップフィクサー Make Up Fixer",
+    "パーフェクトヌード透明サンパッチ 分 UVA&amp;UVB強力遮断"
   ],
   "seen_keywords": [
-    "トーンアップぽよんクリーム",
+    "メディヒール エッセンシャルマスクパック",
     "低刺激 大容量 シャンプー",
-    "メディヒール エッセンシャルマスクパック"
+    "トーンアップぽよんクリーム",
+    "シークレットポアセラミドバブルオイルエッセンスミスト"
   ]
 }
