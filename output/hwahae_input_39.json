@@ -7,21 +7,25 @@
   {
     "goods_no": "1183055576",
     "translated_kr": "밀크바오밥 샴푸 다마스크로즈향 1L",
-    "volume": "1L"
+    "volume": "1L",
+    "known_brand": "밀크바오밥"
   },
   {
     "goods_no": "1094999881",
     "translated_kr": "아누아 에어리 무기자차 선크림 SPF50+ PA++++ 50ml",
-    "volume": "50ml"
+    "volume": "50ml",
+    "known_brand": "아누아"
   },
   {
     "goods_no": "1209394749",
     "translated_kr": "운율 비타밸런스 오운썰샤인 토너패드 트래블키트 6ml(총20매입)",
-    "volume": "6ml"
+    "volume": "6ml",
+    "known_brand": "은율"
   },
   {
     "goods_no": "1187136865",
-    "translated_kr": "블랑카우 리얼밀크 클렌징폼 150ml"
+    "translated_kr": "블랑카우 리얼밀크 클렌징폼 150ml",
+    "known_brand": "블랑카우"
   },
   {
     "goods_no": "1177838255",
@@ -41,7 +45,8 @@
   {
     "goods_no": "1199735232",
     "translated_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
-    "volume": "30ml"
+    "volume": "30ml",
+    "known_brand": "메디큐브"
   },
   {
     "goods_no": "1208085514",
@@ -64,21 +69,25 @@
   {
     "goods_no": "1161371182",
     "translated_kr": "제니하우스 루트볼륨픽서 200ml",
-    "volume": "200ml"
+    "volume": "200ml",
+    "known_brand": "제니하우스"
   },
   {
     "goods_no": "1210835765",
     "translated_kr": "아누아 어성초77 수딩토너 350ml",
-    "volume": "350ml"
+    "volume": "350ml",
+    "known_brand": "아누아"
   },
   {
     "goods_no": "1169358126",
     "translated_kr": "케라스타즈 [엉킴케어] 디스인탱글 샴푸 500ml",
-    "volume": "500ml"
+    "volume": "500ml",
+    "known_brand": "케라스타즈"
   },
   {
     "goods_no": "1134579258",
-    "translated_kr": "Verish 실리콘 데미누브라 S/M/L/XL(택1)"
+    "translated_kr": "Verish 실리콘 데미누브라 S/M/L/XL(택1)",
+    "known_brand": "베리시"
   },
   {
     "goods_no": "1180092167",
@@ -88,12 +97,14 @@
   {
     "goods_no": "1175557299",
     "translated_kr": "다슈 데일리 밀크씨슬 블루바이옴 스칼프샴푸 500ml",
-    "volume": "500ml"
+    "volume": "500ml",
+    "known_brand": "다슈"
   },
   {
     "goods_no": "1196815742",
     "translated_kr": "아비브 모델링크림마스크 71g",
-    "volume": "71g"
+    "volume": "71g",
+    "known_brand": "아비브"
   },
   {
     "goods_no": "1164705875",
@@ -103,17 +114,20 @@
   {
     "goods_no": "1105980668",
     "translated_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
-    "volume": "50ml"
+    "volume": "50ml",
+    "known_brand": "오휘"
   },
   {
     "goods_no": "1105980665",
     "translated_kr": "오휘 에이지리커버리 아이크림 25ml",
-    "volume": "25mL"
+    "volume": "25mL",
+    "known_brand": "오휘"
   },
   {
     "goods_no": "1044307238",
     "translated_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
-    "volume": "300ml"
+    "volume": "300ml",
+    "known_brand": "엘라스틴"
   },
   {
     "goods_no": "1209471569",
@@ -128,7 +142,8 @@
   {
     "goods_no": "1175263787",
     "translated_kr": "토리든 밸런스풀 시카오일컨트롤 선스틱 20g",
-    "volume": "20g"
+    "volume": "20g",
+    "known_brand": "토리든"
   },
   {
     "goods_no": "1209710276",
@@ -148,16 +163,19 @@
   {
     "goods_no": "1196939883",
     "translated_kr": "아비브 레티날아이세럼 리프팅롤러 15ml",
-    "volume": "15ml"
+    "volume": "15ml",
+    "known_brand": "아비브"
   },
   {
     "goods_no": "1182595010",
-    "translated_kr": "메디큐브 PDRN 핑크비타코팅마스크 10매"
+    "translated_kr": "메디큐브 PDRN 핑크비타코팅마스크 10매",
+    "known_brand": "메디큐브"
   },
   {
     "goods_no": "1186682635",
     "translated_kr": "아누아 아젤라익애씨드10 히알루론 레드니스수딩세럼 30ml",
-    "volume": "30ml"
+    "volume": "30ml",
+    "known_brand": "아누아"
   },
   {
     "goods_no": "1199084782",
@@ -172,7 +190,8 @@
   {
     "goods_no": "1205776987",
     "translated_kr": "메디큐브 AGE-R 글루타치온글로우캡슐크림 50ml",
-    "volume": "50ml"
+    "volume": "50ml",
+    "known_brand": "메디큐브"
   },
   {
     "goods_no": "1198940759",
@@ -186,12 +205,14 @@
   {
     "goods_no": "1171042386",
     "translated_kr": "미장센 데미지케어레드프로틴컨디셔너 680ml",
-    "volume": "680ml"
+    "volume": "680ml",
+    "known_brand": "미쟝센"
   },
   {
     "goods_no": "1198716617",
     "translated_kr": "케라스타즈 제네시스 새싹세럼 90ml",
-    "volume": "90ml"
+    "volume": "90ml",
+    "known_brand": "케라스타즈"
   },
   {
     "goods_no": "1212630238",
@@ -201,7 +222,8 @@
   {
     "goods_no": "1210464824",
     "translated_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
-    "volume": "500ml"
+    "volume": "500ml",
+    "known_brand": "엘리자베카"
   },
   {
     "goods_no": "1186310271",

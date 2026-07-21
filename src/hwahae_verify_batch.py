@@ -29,14 +29,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 VOLUME_IN_QUERY_RE = re.compile(r"\d+(?:\.\d+)?\s*(?:mL|ml|g|L)\b")
 
 
-def _correct_name_isolated(keyword: str, known_volume: str) -> dict:
-    """완전히 새 파이썬 서브프로세스에서 실행한다(사용자 제안 반영).
-    개별 실행에서는 '베일리' 오탐이 재현이 안 되고, 같은 프로세스 안에서
-    Playwright sync_playwright()를 반복 시작/종료할 때만 발생하는 것으로
-    보여서, 매 검색을 완전히 격리된 프로세스로 돌려 검증해본다."""
+def _correct_name_isolated(keyword: str, known_volume: str, known_brand: str = "") -> dict:
+    """완전히 새 파이썬 서브프로세스에서 실행한다."""
     try:
         proc = subprocess.run(
-            [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), keyword, known_volume],
+            [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), keyword, known_volume, known_brand],
             capture_output=True,
             text=True,
             timeout=30,
@@ -63,9 +60,10 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             break
         kw_raw = item["translated_kr"]
         known_volume = item.get("volume", "")
+        known_brand = item.get("known_brand", "")
         kw = VOLUME_IN_QUERY_RE.sub("", kw_raw).strip()  # 검색어에서 용량 제거(근본원인 수정)
-        print(f"[검색-격리실행] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else ""))
-        r = _correct_name_isolated(kw, known_volume)
+        print(f"[검색-격리실행] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else "") + (f" (브랜드:{known_brand})" if known_brand else ""))
+        r = _correct_name_isolated(kw, known_volume, known_brand)
 
         entry = {
             "goods_no": item["goods_no"],
@@ -73,13 +71,21 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "hwahae_brand": r.get("brand"),
             "hwahae_name": r.get("corrected"),
             "hwahae_volume": r.get("volume"),
+            "obsolete": r.get("obsolete"),
+            "sale": r.get("sale"),
         }
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
         processed_this_call += 1
 
         status = entry["hwahae_name"] or "매칭실패"
-        print(f"    -> {entry['hwahae_brand']} {status} {entry['hwahae_volume']}")
+        flags = []
+        if entry.get("obsolete"):
+            flags.append("단종")
+        if entry.get("sale") is False:
+            flags.append("판매중단")
+        flag_str = f" [{'/'.join(flags)}]" if flags else ""
+        print(f"    -> {entry['hwahae_brand']} {status} {entry['hwahae_volume']}{flag_str}")
 
     print(f"\n[DONE] 이번 호출에서 {processed_this_call}건 처리, 누적 {len(results)}/{len(items)}건 -> {output_path}")
 

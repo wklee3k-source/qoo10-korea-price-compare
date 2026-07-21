@@ -94,12 +94,14 @@ def _parse_products(html: str) -> list[dict]:
                 "product_name": p.get("productName"),
                 "review_count": p.get("reviewCount"),
                 "volume": vol_m.group(1).replace(" ", "") if vol_m else "",
+                "obsolete": p.get("obsolete"),  # 단종여부
+                "sale": p.get("sale"),  # 판매중여부
             }
         )
     return results
 
 
-def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: str = "") -> dict:
+def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: str = "", known_brand: str = "") -> dict:
     """브랜드 없이 상품명만으로 검색해서 화해의 1번째 결과(브랜드+상품명+용량)를 가져온다.
 
     [방어로직 1] 첫 결과가 검색어와 단어를 하나도 안 겹치면(예: "토너패드"를
@@ -108,17 +110,57 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
 
     [방어로직 2 — 용량매칭] 큐텐 원본에서 이미 알고 있는 용량(known_volume,
     예: "1L")이 있으면, 화해 후보들 중 그 용량과 일치하는 것을 우선
-    채택한다. 실측 사례: "밀크바오밥 샴푸 다마스크로즈"로 검색하면 화해가
-    같은 브랜드의 오리지널/센서티브/릴리프 등 5개 라인업을 다 후보로
-    주는데, 원본 상품명에 정확한 라인업명이 없어서(큐텐 판매자가 안
-    적어서) 1번째 후보만 믿으면 틀리기 쉽다. 원본에 있던 용량(1L=1000ml)과
-    일치하는 후보로 좁히면 정확도가 크게 오른다."""
+    채택한다.
+
+    [방어로직 3 — 브랜드매칭] 큐텐 원본 브랜드의 정확한 한글명을 이미 알고
+    있으면(known_brand, 예: "베르가모"), 화해 후보들 중 브랜드가 일치하는
+    것을 우선 채택한다. 실측 사례: "Verish 실리콘 데미누브라"를 검색했는데
+    화해가 "프라나롬 씨큐라롬 젤"(완전히 다른 브랜드)을 1등으로 줬다 —
+    검색어에 브랜드가 분명히 있었는데도 그걸 검증하는 로직이 없어서
+    그대로 통과됐던 문제. 브랜드 일치 여부를 확인하면 이런 명백한 오탐을
+    걸러낼 수 있다."""
     html = _fetch_search_page(product_keyword_only)
     products = _parse_products(html)
     if not products:
         return {"guessed": product_keyword_only, "brand": None, "corrected": None, "volume": "", "all_candidates": []}
 
     top = products[0]
+
+    # 브랜드매칭: known_brand가 있으면 그것과 일치하는 후보를 최우선으로 채택
+    if known_brand:
+        brand_matches = [p for p in products if known_brand.lower() in (p["brand"] or "").lower()]
+        if brand_matches:
+            # 브랜드가 일치하는 후보들 중에서는 용량도 맞으면 더 우선
+            known_ml = _normalize_volume_ml(known_volume) if known_volume else None
+            if known_ml is not None:
+                vol_and_brand = [p for p in brand_matches if _normalize_volume_ml(p["volume"]) == known_ml]
+                if vol_and_brand:
+                    brand_matches = vol_and_brand
+            top = brand_matches[0]
+            return {
+                "guessed": product_keyword_only,
+                "brand": top["brand"],
+                "corrected": top["product_name"],
+                "volume": top["volume"],
+                "obsolete": top.get("obsolete"),
+                "sale": top.get("sale"),
+                "all_candidates": products,
+                "matched_by": "brand",
+            }
+        else:
+            # 브랜드가 일치하는 후보가 아예 없으면 정직하게 실패로 처리한다
+            # (엉뚱한 브랜드를 억지로 정답으로 채택하지 않는다)
+            print(f"    [브랜드불일치] '{product_keyword_only}' — known_brand='{known_brand}'와 일치하는 후보 없음, 매칭실패 처리", file=sys.stderr)
+            return {
+                "guessed": product_keyword_only,
+                "brand": None,
+                "corrected": None,
+                "volume": "",
+                "obsolete": None,
+                "sale": None,
+                "all_candidates": products,
+                "matched_by": "brand_mismatch",
+            }
 
     # 용량매칭: known_volume이 있으면 그것과 일치하는 후보를 최우선으로 채택
     known_ml = _normalize_volume_ml(known_volume) if known_volume else None
@@ -131,6 +173,8 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
                 "brand": top["brand"],
                 "corrected": top["product_name"],
                 "volume": top["volume"],
+                "obsolete": top.get("obsolete"),
+                "sale": top.get("sale"),
                 "all_candidates": products,
                 "matched_by": "volume",
             }
@@ -141,13 +185,15 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
 
     if no_overlap and _retry:
         print(f"    [의심] '{product_keyword_only}' 검색결과 '{top['product_name']}'가 단어가 하나도 안 겹침 — 재시도", file=sys.stderr)
-        return correct_name(product_keyword_only, _retry=False, known_volume=known_volume)
+        return correct_name(product_keyword_only, _retry=False, known_volume=known_volume, known_brand=known_brand)
 
     return {
         "guessed": product_keyword_only,
         "brand": top["brand"],
         "corrected": top["product_name"],
         "volume": top["volume"],
+        "obsolete": top.get("obsolete"),
+        "sale": top.get("sale"),
         "all_candidates": products,
         "matched_by": "top_result",
     }
@@ -158,7 +204,8 @@ def main():
         print(__doc__)
         sys.exit(1)
     known_volume = sys.argv[2] if len(sys.argv) > 2 else ""
-    result = correct_name(sys.argv[1], known_volume=known_volume)
+    known_brand = sys.argv[3] if len(sys.argv) > 3 else ""
+    result = correct_name(sys.argv[1], known_volume=known_volume, known_brand=known_brand)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
