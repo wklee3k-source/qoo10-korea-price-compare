@@ -181,6 +181,74 @@
     margin-top: 12px;
   }
 
+  .log-section {
+    margin-top: 32px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .log-title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .log-clear {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  .log-clear:hover { color: var(--text); }
+  .log-table-wrap {
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  table.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  table.log-table th {
+    position: sticky;
+    top: 0;
+    background: var(--panel);
+    text-align: right;
+    color: var(--text-dim);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  table.log-table th:first-child { text-align: left; }
+  table.log-table td {
+    text-align: right;
+    padding: 7px 20px;
+    border-bottom: 1px solid var(--panel-border);
+    font-variant-numeric: tabular-nums;
+  }
+  table.log-table td:first-child { text-align: left; color: var(--text-dim); }
+  table.log-table tr:last-child td { border-bottom: none; }
+  table.log-table tr:first-child td { background: rgba(79, 209, 165, 0.06); }
+  .log-empty {
+    padding: 24px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .log-delta-pos { color: var(--up); }
+
   footer {
     margin-top: 32px;
     font-family: var(--mono);
@@ -253,6 +321,28 @@
 
   <div id="errorBox"></div>
 
+  <div class="log-section">
+    <div class="log-header">
+      <div class="log-title">조회 기록</div>
+      <button class="log-clear" onclick="clearLog()">기록 지우기</button>
+    </div>
+    <div class="log-table-wrap">
+      <table class="log-table">
+        <thead>
+          <tr>
+            <th>시각</th>
+            <th>방문 상점</th>
+            <th>확보 상품</th>
+            <th>화해 검증</th>
+          </tr>
+        </thead>
+        <tbody id="logBody">
+          <tr><td colspan="4" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <footer>output/discovery_state.json · output/hwahae_verified_39.json — GitHub raw에서 직접 조회</footer>
 </div>
 
@@ -260,6 +350,51 @@
 const REPO = "wklee3k-source/qoo10-korea-price-compare";
 const BRANCH = "main";
 const RAW = (path) => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${path}?t=${Date.now()}`;
+
+function fmtDelta(delta) {
+  if (delta > 0) return `<span class="log-delta-pos">+${delta}</span>`;
+  return '';
+}
+
+async function loadLog() {
+  try {
+    const stored = await window.storage.get('history_log');
+    return stored ? JSON.parse(stored.value) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+async function saveLog(log) {
+  try {
+    await window.storage.set('history_log', JSON.stringify(log));
+  } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
+}
+
+function renderLog(log) {
+  const body = document.getElementById('logBody');
+  if (!log.length) {
+    body.innerHTML = '<tr><td colspan="4" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>';
+    return;
+  }
+  body.innerHTML = log.map((row, i) => {
+    const next = log[i + 1]; // 더 오래된 행(바로 아래) 대비 증가분
+    const shopsDelta = next ? row.shops - next.shops : 0;
+    const productsDelta = next ? row.products - next.products : 0;
+    const hwahaeDelta = next ? row.hwahae_done - next.hwahae_done : 0;
+    return `<tr>
+      <td>${row.time}</td>
+      <td>${row.shops ?? '—'} ${fmtDelta(shopsDelta)}</td>
+      <td>${row.products ?? '—'} ${fmtDelta(productsDelta)}</td>
+      <td>${row.hwahae_done ?? '—'} ${fmtDelta(hwahaeDelta)}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function clearLog() {
+  await saveLog([]);
+  renderLog([]);
+}
 
 function setDelta(el, delta) {
   if (delta > 0) {
@@ -353,6 +488,19 @@ async function loadAll() {
     await window.storage.set('last_snapshot', JSON.stringify(current));
   } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
 
+  if (!hadError) {
+    const log = await loadLog();
+    log.unshift({
+      time: new Date().toLocaleTimeString('ko-KR'),
+      shops: current.shops,
+      products: current.products,
+      hwahae_done: current.hwahae_done,
+    });
+    if (log.length > 200) log.length = 200; // 로그가 너무 커지지 않게 상한
+    await saveLog(log);
+    renderLog(log);
+  }
+
   dot.className = 'dot ' + (hadError ? 'err' : 'ok');
   statusText.textContent = hadError
     ? '일부 데이터를 불러오지 못했습니다'
@@ -360,6 +508,11 @@ async function loadAll() {
 
   btn.classList.remove('loading');
 }
+
+(async () => {
+  const existingLog = await loadLog();
+  renderLog(existingLog);
+})();
 
 loadAll();
 
