@@ -158,53 +158,6 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
         item["review_count"] = review_count
         passed.append(item)
 
-    if not passed:
-        return []
-
-    # 2단계: 번역 — GoogleTranslateSession만 사용(1단계가 끝난 뒤에 열림)
-    # 브랜드/특수용어는 플레이스홀더로 보호한 뒤 번역(외부 AI 리뷰 반영)
-    translated = {}
-    with GoogleTranslateSession() as translator:
-        for item in passed:
-            title_no_bracket = BRACKET_RE.sub(" ", item["title"])
-            title_no_bracket = re.split(r"\s*/", title_no_bracket)[0]
-            vol_match = VOLUME_RE.search(title_no_bracket)
-            volume = vol_match.group() if vol_match else ""
-            title_for_translate = title_no_bracket
-            if vol_match:
-                title_for_translate = title_no_bracket[: vol_match.start()] + " " + title_no_bracket[vol_match.end():]
-
-            brand_ja = item.get("brand", "")
-            brand_kr = _protect_and_translate(brand_ja, translator) if brand_ja else ""
-            core_kr = _protect_and_translate(title_for_translate.strip(), translator)
-            translated[item["goods_no"]] = {"brand_kr": brand_kr.strip(), "core_kr": core_kr.strip(), "volume": volume}
-
-    # 3단계: 화해로 정확한 명칭 검증 — hwahae_name_corrector가 자체적으로
-    # sync_playwright를 여는 함수라서, 2단계(번역세션)가 완전히 닫힌 뒤에 실행한다.
-    # [검색 전략] 브랜드 없이 "상품명만"으로 검색한다(브랜드를 넣으면 오역된
-    # 브랜드명 때문에 검색이 0건이 되는 경우가 실측으로 확인됐다). 화해가
-    # 브랜드까지 알려주므로 그걸 우선 채택하고, 화해에 브랜드가 없으면
-    # 우리가 번역한 brand_kr로 보완한다.
-    for item in passed:
-        t = translated[item["goods_no"]]
-        hwahae = correct_name(t["core_kr"])
-        corrected = hwahae.get("corrected")
-        hwahae_brand = hwahae.get("brand")
-
-        if corrected:
-            final_brand = hwahae_brand or t["brand_kr"] or item.get("brand", "")
-            volume = hwahae.get("volume") or t["volume"]
-            final_name = f"{final_brand} {corrected}".strip()
-            if volume:
-                final_name = f"{final_name} {volume}"
-        else:
-            # 화해에서 못 찾으면 원래 방식(브랜드+추측번역)으로 대체
-            final_name = f"{t['brand_kr']} {t['core_kr']} {t['volume']}".strip()
-
-        item["name_kr_verified"] = final_name
-        item["hwahae_matched"] = bool(corrected)
-        print(f"    [저장] {item['goods_no']} review={item['review_count']} {item['title'][:30]} -> {final_name}")
-
     if skip_entries:
         _append_skip_log(skip_entries)
 
