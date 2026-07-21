@@ -1,7 +1,9 @@
 {
   "visited_shops": [
+    "frombeauty",
     "Asteroid",
-    "frombeauty"
+    "keto88",
+    "trailblue2"
   ],
   "all_products": [
     {
@@ -63,14 +65,45 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1203041226",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/425/264/8334264425.g_300-w-st_g.jpg",
+      "title": "(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択",
+      "brand": "46CM",
+      "price_jpy": 2490,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203041226",
+      "shop_id": "trailblue2",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1191395895",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg",
+      "title": "[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++",
+      "brand": "スキンアンドラブ",
+      "price_jpy": 2790,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191395895",
+      "shop_id": "trailblue2",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/frombeauty",
-    "https://m.qoo10.jp/shop/Asteroid"
+    "https://m.qoo10.jp/shop/Asteroid",
+    "https://m.qoo10.jp/shop/keto88",
+    "https://m.qoo10.jp/shop/trailblue2"
   ],
   "pending_keywords": [
-    "スキン レイヤー フィット チーク",
     "インスパイア スキニーブロウマスカラ 3.",
     "ポアレスプライマーポット 9.",
     "オールデイマスタークッション",
@@ -79,9 +112,20 @@
     "アロエ キュアアルファ アロエゼリーマスク",
     "シャンプー ダマスクローズの香り",
     "マスクフィットAIフィルタークッション 本品",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++"
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "スキンレイヤーフィットチーク",
+    "スキンレイヤーフィットファンデーション",
+    "Renewal ヒーロークッション 2.0 本品",
+    "エッセンススキンピンククッション レフィル",
+    "ファンデーションスパウトパウチ",
+    "アイドルハイライターEX 6color #26年7月3color追加発売",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "アイブラシ プロコレクション5種 Balletcore edition",
+    "ムードオンアイパレット #11 Pink core 12 Peach core 26年4月発売"
   ],
   "seen_keywords": [
+    "スキン レイヤー フィット チーク",
     "メディヒール エッセンシャルマスクパック"
   ]
 }
