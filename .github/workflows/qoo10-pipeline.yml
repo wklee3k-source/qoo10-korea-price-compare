@@ -43,6 +43,9 @@ on:
         required: false
         type: boolean
         default: false
+  schedule:
+    # 3시간마다 자동으로 1단계(저리뷰 상점 크롤링)를 이어서 진행한다
+    - cron: "0 */3 * * *"
   push:
     paths:
       - "output/*_korea_side.json"
@@ -80,7 +83,7 @@ jobs:
     # 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도 GitHub 서버에서 계속 돎).
     # 상태는 output/discovery_state.json에 저장되므로 타임아웃 걸려도 다시
     # 실행하면 이어서 진행된다.
-    if: github.event_name == 'workflow_dispatch' && inputs.run_discovery && !inputs.discovery_parallel
+    if: (github.event_name == 'workflow_dispatch' && inputs.run_discovery && !inputs.discovery_parallel) || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
