@@ -11527,5 +11527,40 @@
     "from_title": "[限定企画セット] センシビオH2O 250ml おまけ付き (+100ml)",
     "passes_filter": true,
     "seed_keyword": "センシビオH2O おまけ付き"
+  },
+  {
+    "from_shop": "BeautyPalette",
+    "from_goods_no": "1186554009",
+    "from_title": "ケアトーンアップ, 30ml 04ミルク",
+    "passes_filter": false,
+    "seed_keyword": "ケアトーンアップ 04ミルク"
+  },
+  {
+    "from_shop": "BeautyPalette",
+    "from_goods_no": "1210242426",
+    "from_title": "PDRN ヒアルロン酸カプセル100 セラム 30ml",
+    "passes_filter": true,
+    "seed_keyword": "PDRN ヒアルロン酸カプセル ラム"
+  },
+  {
+    "from_shop": "BeautyPalette",
+    "from_goods_no": "1210085885",
+    "from_title": "プロバイオダーム3Dリフティングアイ＆リンクルクリーム, 25ml, 2個",
+    "passes_filter": true,
+    "seed_keyword": "プロバイオダーム3Dリフティングアイ＆リンクルクリーム"
+  },
+  {
+    "from_shop": "BeautyPalette",
+    "from_goods_no": "1210078217",
+    "from_title": "PDRNコラーゲンフェイシャルショットトナー, 300ml",
+    "passes_filter": true,
+    "seed_keyword": "PDRNコラーゲンフェイシャルショットトナー"
+  },
+  {
+    "from_shop": "BeautyPalette",
+    "from_goods_no": "1209890558",
+    "from_title": "デュアルバリアピュリファイングクレンジングバーム",
+    "passes_filter": true,
+    "seed_keyword": "デュアルバリアピュリファイングクレンジングバーム"
   }
 ]
