@@ -4,12 +4,43 @@ naver_shop_search.py — 네이버쇼핑 검색 API 래퍼(GitHub Actions 전용
 """
 import json
 import os
+import re
 import sys
 import urllib.request
 import urllib.parse
 
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
+
+# 신뢰할 수 있는(정품/공식 가능성이 높은) 판매채널 화이트리스트.
+# 화장품 유통에서 실제로 공식/정식 채널로 통용되는 곳들 — 병행수입/구매대행
+# 같은 소규모 스토어와 구분하기 위함.
+TRUSTED_MALLS = {
+    "올리브영", "시코르", "화해쇼핑", "무신사", "쿠팡", "지그재그",
+    "롯데온", "SSG.COM", "신세계몰", "11번가", "G마켓", "옥션",
+    "롯데백화점", "신세계백화점", "현대백화점",
+}
+
+
+def _is_official_seller(mall_name: str, brand: str) -> str:
+    """판매처가 공식/신뢰 가능한 채널인지 판단한다.
+    - mallName에 "공식"이 들어있으면 공식몰로 간주
+    - mallName이 브랜드명 자체를 포함하면(예: "아누아" 브랜드의 "아누아" 스토어) 공식 가능성 높음
+    - TRUSTED_MALLS(올리브영/쿠팡/무신사 등 정식유통 대형몰)에 있으면 신뢰
+    - 그 외(개인샵, 구매대행 등으로 보이는 소규모 스토어명)는 "미확인"으로 표시"""
+    if not mall_name:
+        return "미확인"
+    mall_lower = mall_name.lower()
+    brand_lower = (brand or "").lower()
+    brand_core = re.sub(r"\(.*?\)", "", brand_lower).strip()  # "아누아 (Anua)" -> "아누아"
+
+    if "공식" in mall_name:
+        return "공식몰"
+    if brand_core and brand_core in mall_lower:
+        return "브랜드직영추정"
+    if mall_name in TRUSTED_MALLS:
+        return "신뢰채널"
+    return "미확인"
 
 
 def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
@@ -25,13 +56,16 @@ def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
     items = []
     for item in data.get("items", []):
         title = item["title"].replace("<b>", "").replace("</b>", "")
+        mall_name = item.get("mallName")
+        brand = item.get("brand", "")
         items.append({
             "title": title,
-            "brand": item.get("brand", ""),
+            "brand": brand,
             "maker": item.get("maker", ""),
             "lprice": item.get("lprice"),
-            "mallName": item.get("mallName"),
+            "mallName": mall_name,
             "productId": item.get("productId"),
+            "seller_trust": _is_official_seller(mall_name, brand),
         })
 
     if known_brand:
@@ -49,6 +83,10 @@ def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
         if os.environ.get("NAVER_DEBUG"):
             print(f"    [naver 브랜드필터] known_brand='{known_brand}' {len(items)}건 -> {len(filtered)}건", file=sys.stderr)
         items = filtered
+
+    # 신뢰도 높은 판매처를 우선순위로 재정렬한다("미확인"보다 "공식몰/신뢰채널"을 앞으로)
+    trust_order = {"공식몰": 0, "브랜드직영추정": 1, "신뢰채널": 2, "미확인": 3}
+    items.sort(key=lambda it: trust_order.get(it["seller_trust"], 3))
 
     return items
 

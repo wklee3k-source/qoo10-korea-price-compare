@@ -95,6 +95,7 @@ def _naver_strict_match(keyword: str, known_brand: str) -> dict | None:
             "volume": "",
             "price": top.get("lprice"),
             "mall": top.get("mallName"),
+            "seller_trust": top.get("seller_trust"),
         }
     except Exception as e:  # noqa: BLE001
         print(f"    [4차-네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
@@ -148,6 +149,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "sale": r.get("sale"),
             "price": r.get("price"),
             "mall": r.get("mall"),
+            "seller_trust": r.get("seller_trust"),
         }
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
