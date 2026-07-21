@@ -36,9 +36,10 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             print(f"[STOP] 이번 호출分({max_new}건) 처리 완료 — 나머지는 다음 호출에서 이어서")
             break
         kw = item["translated_kr"]
-        print(f"[검색] {item['goods_no']}: {kw}")
+        known_volume = item.get("volume", "")
+        print(f"[검색] {item['goods_no']}: {kw}" + (f" (용량:{known_volume})" if known_volume else ""))
         try:
-            r = correct_name(kw)
+            r = correct_name(kw, known_volume=known_volume)
         except Exception as e:  # noqa: BLE001
             print(f"    [실패] {e}")
             r = {"brand": None, "corrected": None, "volume": ""}
