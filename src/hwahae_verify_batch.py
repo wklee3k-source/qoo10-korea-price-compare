@@ -132,9 +132,12 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         r = _correct_name_isolated(kw, known_volume, known_brand)
 
         source = "hwahae"
-        needs_fallback = (not r.get("corrected")) or r.get("obsolete")
+        # 화해가 뭔가 찾았으면(단종이더라도) 그대로 채택하고 더 안 찾는다 —
+        # "단종"이라는 것 자체가 화해가 정확히 그 상품을 인식했다는 뜻이니
+        # 신뢰할 만한 정보다. 2차/3차는 화해가 아예 못 찾았을 때만 쓴다.
+        needs_fallback = not r.get("corrected")
         if needs_fallback:
-            reason = "매칭실패" if not r.get("corrected") else "단종"
+            reason = "매칭실패"
             print(f"    [1차 {reason}] -> 2차(네이버쇼핑)로 보완 검색")
             naver_r = _naver_fallback(kw)  # 정제된 검색어 사용(원본 전체는 너무 길어서 결과가 안 나옴)
             if naver_r:
