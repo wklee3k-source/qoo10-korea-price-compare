@@ -43,6 +43,10 @@ on:
         required: false
         type: boolean
         default: false
+      naver_test_query:
+        description: "네이버쇼핑 API 테스트용 검색어 (비워두면 이 job 안 돎)"
+        required: false
+        type: string
   schedule:
     # 3시간마다 자동으로 1단계(저리뷰 상점 크롤링)를 이어서 진행한다
     - cron: "0 */3 * * *"
@@ -370,6 +374,23 @@ jobs:
               break
             fi
           done
+
+  naver_api_test:
+    # 네이버쇼핑 검색 API 테스트 — 이 샌드박스에선 openapi.naver.com이
+    # 네트워크 정책으로 차단되어 있어서, GitHub Actions 러너에서 대신 실행한다.
+    if: github.event_name == 'workflow_dispatch' && inputs.naver_test_query != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test Naver Shopping Search API
+        working-directory: src
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python test_naver_api.py "${{ inputs.naver_test_query }}"
 
   build_excel:
     if: github.event_name == 'push'
