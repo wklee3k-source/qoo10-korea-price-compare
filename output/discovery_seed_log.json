@@ -1195,5 +1195,47 @@
     "from_title": "ポケモンエディションクリアボディミスト 200ml 企画 (ミニチュア 30ml + イーブイ防水パック)",
     "passes_filter": true,
     "seed_keyword": "ポケモンエディションクリアボディミスト 企画"
+  },
+  {
+    "from_shop": "markets7",
+    "from_goods_no": "1210755416",
+    "from_title": "トーンアップ サンスクリーン 35ml × マイ スウィート ピアノ",
+    "passes_filter": false,
+    "seed_keyword": "トーンアップ サンスクリーン マイ スウィート ピアノ"
+  },
+  {
+    "from_shop": "markets7",
+    "from_goods_no": "1209386676",
+    "from_title": "【02 ジェルブラウン】ジェル アイライナー",
+    "passes_filter": false,
+    "seed_keyword": "ジェル アイライナー"
+  },
+  {
+    "from_shop": "markets7",
+    "from_goods_no": "1205562844",
+    "from_title": "ブレス ミントボール 20個入り",
+    "passes_filter": true,
+    "seed_keyword": "ブレス ミントボール 入り"
+  },
+  {
+    "from_shop": "markets7",
+    "from_goods_no": "1171042386",
+    "from_title": "ダメージケアレッドプロテインコンディショナー 680ml / 韓国コスメ",
+    "passes_filter": true,
+    "seed_keyword": "ダメージケアレッドプロテインコンディショナー"
+  },
+  {
+    "from_shop": "puchiseoul",
+    "from_goods_no": "1198605006",
+    "from_title": "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD",
+    "passes_filter": false,
+    "seed_keyword": "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD"
+  },
+  {
+    "from_shop": "puchiseoul",
+    "from_goods_no": "1210386546",
+    "from_title": "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
+    "passes_filter": false,
+    "seed_keyword": "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD"
   }
 ]
