@@ -301,7 +301,7 @@ jobs:
     # 클로드가 미리 번역해둔 한글 핵심어 목록(output/hwahae_input_39.json)을
     # 화해에서 검증해서 정식 브랜드+상품명+용량을 가져온다. 매 건마다 즉시
     # 저장하므로 타임아웃 걸려도 재실행하면 이어서 진행된다.
-    if: github.event_name == 'workflow_dispatch' && inputs.run_hwahae_verify == 'true'
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
