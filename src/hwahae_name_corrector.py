@@ -32,7 +32,18 @@ DESKTOP_UA = (
 )
 
 NEXT_DATA_RE = re.compile(r'__NEXT_DATA__" type="application/json">(.*?)</script>', re.S)
-VOLUME_FROM_BUYINFO_RE = re.compile(r"([\d.]+\s*(?:mL|ml|g)\b)")
+VOLUME_FROM_BUYINFO_RE = re.compile(r"([\d.]+\s*(?:mL|ml|g|L)\b)")
+
+
+def _normalize_volume_ml(vol_text: str) -> float | None:
+    """'1L', '1000ml', '110ml' 등을 전부 ml 기준 숫자로 통일해서 비교 가능하게 만든다."""
+    if not vol_text:
+        return None
+    m = re.search(r"([\d.]+)\s*(mL|ml|g|L)", vol_text)
+    if not m:
+        return None
+    num, unit = float(m.group(1)), m.group(2).lower()
+    return num * 1000 if unit == "l" else num
 
 
 def _fetch_search_page(keyword: str, wait_seconds: float = 2.0) -> str:
@@ -88,12 +99,20 @@ def _parse_products(html: str) -> list[dict]:
     return results
 
 
-def correct_name(product_keyword_only: str, _retry: bool = True) -> dict:
+def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: str = "") -> dict:
     """브랜드 없이 상품명만으로 검색해서 화해의 1번째 결과(브랜드+상품명+용량)를 가져온다.
 
-    [방어로직] 첫 결과가 검색어와 단어를 하나도 안 겹치면(예: "토너패드"를
+    [방어로직 1] 첫 결과가 검색어와 단어를 하나도 안 겹치면(예: "토너패드"를
     검색했는데 "베일리"가 나오는 경우) 페이지 로딩 타이밍 문제로 추천위젯을
-    잘못 읽었을 가능성이 높다고 보고 한 번 더 재시도한다."""
+    잘못 읽었을 가능성이 높다고 보고 한 번 더 재시도한다.
+
+    [방어로직 2 — 용량매칭] 큐텐 원본에서 이미 알고 있는 용량(known_volume,
+    예: "1L")이 있으면, 화해 후보들 중 그 용량과 일치하는 것을 우선
+    채택한다. 실측 사례: "밀크바오밥 샴푸 다마스크로즈"로 검색하면 화해가
+    같은 브랜드의 오리지널/센서티브/릴리프 등 5개 라인업을 다 후보로
+    주는데, 원본 상품명에 정확한 라인업명이 없어서(큐텐 판매자가 안
+    적어서) 1번째 후보만 믿으면 틀리기 쉽다. 원본에 있던 용량(1L=1000ml)과
+    일치하는 후보로 좁히면 정확도가 크게 오른다."""
     html = _fetch_search_page(product_keyword_only)
     products = _parse_products(html)
     if not products:
@@ -101,13 +120,28 @@ def correct_name(product_keyword_only: str, _retry: bool = True) -> dict:
 
     top = products[0]
 
+    # 용량매칭: known_volume이 있으면 그것과 일치하는 후보를 최우선으로 채택
+    known_ml = _normalize_volume_ml(known_volume) if known_volume else None
+    if known_ml is not None:
+        volume_matches = [p for p in products if _normalize_volume_ml(p["volume"]) == known_ml]
+        if volume_matches:
+            top = volume_matches[0]
+            return {
+                "guessed": product_keyword_only,
+                "brand": top["brand"],
+                "corrected": top["product_name"],
+                "volume": top["volume"],
+                "all_candidates": products,
+                "matched_by": "volume",
+            }
+
     query_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", product_keyword_only.lower()))
     result_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", (top["product_name"] or "").lower()))
     no_overlap = bool(query_tokens) and not (query_tokens & result_tokens)
 
     if no_overlap and _retry:
         print(f"    [의심] '{product_keyword_only}' 검색결과 '{top['product_name']}'가 단어가 하나도 안 겹침 — 재시도", file=sys.stderr)
-        return correct_name(product_keyword_only, _retry=False)
+        return correct_name(product_keyword_only, _retry=False, known_volume=known_volume)
 
     return {
         "guessed": product_keyword_only,
@@ -115,6 +149,7 @@ def correct_name(product_keyword_only: str, _retry: bool = True) -> dict:
         "corrected": top["product_name"],
         "volume": top["volume"],
         "all_candidates": products,
+        "matched_by": "top_result",
     }
 
 
@@ -122,7 +157,8 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
-    result = correct_name(sys.argv[1])
+    known_volume = sys.argv[2] if len(sys.argv) > 2 else ""
+    result = correct_name(sys.argv[1], known_volume=known_volume)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
