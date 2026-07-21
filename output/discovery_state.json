@@ -1,23 +1,25 @@
 {
   "visited_shops": [
-    "VividgrowMAN",
     "durudurupanda",
-    "SM_Mall",
-    "JfromKorea",
-    "Asteroid",
-    "gmarket_jp",
     "lindalinda",
     "mkelas",
-    "hanbikosupa",
-    "210506",
-    "HDSelectShop",
     "manmulsang",
+    "trailblue2",
+    "SSG",
+    "gmarket_jp",
+    "hanbikosupa",
+    "VividgrowMAN",
+    "hellojp",
+    "seoulselectstore",
+    "sssemibeauty",
+    "JfromKorea",
+    "SM_Mall",
+    "rojecompany",
     "dreem",
     "AVECPUBLIC",
-    "trailblue2",
-    "rojecompany",
-    "hellojp",
-    "sssemibeauty"
+    "210506",
+    "Asteroid",
+    "HDSelectShop"
   ],
   "all_products": [
     {
@@ -574,6 +576,51 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1169358126",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/494/011/7432011494.g_300-w-st_g.jpg",
+      "title": "【もつれケア】ディスプリンシャンプー500ml",
+      "brand": "ケラスターゼ",
+      "price_jpy": 7630,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169358126",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1134579258",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg",
+      "title": "【New】シリコン製デミヌーブラ S/M/L/XLサイズ 選べる1点 盛れるブラ 谷間メイク 接着型ブラ 粘着ブラ 結婚式用 浴衣用 水着インナー 人気 コスパ 話題 限定 定番 口コミ多数",
+      "brand": "Verish",
+      "price_jpy": 5400,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1134579258",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1180092167",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/917/776/7700776917.g_300-w-st_g.jpg",
+      "title": "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）",
+      "brand": "LOREAL PARIS",
+      "price_jpy": 5270,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180092167",
+      "shop_id": "seoulselectstore",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -594,10 +641,11 @@
     "https://m.qoo10.jp/shop/sssemibeauty",
     "https://m.qoo10.jp/shop/hanbikosupa",
     "https://m.qoo10.jp/shop/HDSelectShop",
-    "https://m.qoo10.jp/shop/dreem"
+    "https://m.qoo10.jp/shop/dreem",
+    "https://m.qoo10.jp/shop/SSG",
+    "https://m.qoo10.jp/shop/seoulselectstore"
   ],
   "pending_keywords": [
-    "ディスプリンシャンプー",
     "シリコン製デミヌーブラ S",
     "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
     "デイリー ミルクシスル ブルーバイオーム スカルプシャンプー",
@@ -698,22 +746,26 @@
     "ヒーローリップタトゥーティント &nbsp; 韓国コスメ",
     "グリコリックアシッド エクスポリエイティングトナー 韓国コスメ",
     "蓮花PDRNヒアルロン光彩セラム 韓国コスメ",
-    "シークレットソルーションウェディングドレスピュアクリーム x 韓国スキンケア 韓国 コスメ #水分#保湿 毛穴ケア"
+    "シークレットソルーションウェディングドレスピュアクリーム x 韓国スキンケア 韓国 コスメ #水分#保湿 毛穴ケア",
+    "ディスプリンシャンプー",
+    "シリコン製デミヌーブラ S",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット"
   ],
   "seen_keywords": [
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "PDRNピンクエクソソームショット2000",
-    "フルフィットプロポリスライトアンプル",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
-    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
     "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
-    "オールデイタイトメイクセッティングピクサー",
-    "ドクダミ77スージングトナー",
-    "シャンプー ダマスクローズの香り",
     "ルートボリュームフィクサー",
-    "24K ラグジュアリー ゴールド アンプル"
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "ドクダミ77スージングトナー",
+    "フルフィットプロポリスライトアンプル",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "オールデイタイトメイクセッティングピクサー",
+    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
+    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
+    "ディスプリンシャンプー",
+    "シャンプー ダマスクローズの香り",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "24K ラグジュアリー ゴールド アンプル",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++"
   ]
 }
