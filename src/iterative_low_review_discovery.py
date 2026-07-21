@@ -113,6 +113,36 @@ def _protect_and_translate(text: str, translator) -> str:
 
 SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
 SEED_LOG_PATH = OUTPUT_DIR / "discovery_seed_log.json"
+ARCHIVE_DIR = OUTPUT_DIR / "archive"
+ARCHIVE_THRESHOLD = 500  # all_products가 이 개수를 넘으면 오래된 것부터 아카이브로 이동
+KEEP_RECENT = 200  # 메인 상태파일에는 최근 이 개수만 남긴다
+
+
+def _archive_old_products(all_products: dict) -> dict:
+    """all_products가 너무 커지면(GitHub 파일크기/저장소 용량 문제 방지) 오래된
+    것부터 output/archive/discovery_archive_<날짜>.json로 옮기고, 메인
+    상태파일에는 최근 것만 남긴다. visited_shops/pending_keywords 등은
+    안 건드린다(재방문 방지 로직에 필요하니 계속 유지)."""
+    if len(all_products) <= ARCHIVE_THRESHOLD:
+        return all_products
+
+    ARCHIVE_DIR.mkdir(exist_ok=True, parents=True)
+    items = list(all_products.items())
+    to_archive = items[: len(items) - KEEP_RECENT]
+    to_keep = dict(items[len(items) - KEEP_RECENT :])
+
+    if to_archive:
+        from datetime import datetime, timezone
+
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+        archive_path = ARCHIVE_DIR / f"discovery_archive_{stamp}.json"
+        archive_path.write_text(
+            json.dumps([v for _, v in to_archive], ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"[ARCHIVE] {len(to_archive)}건을 {archive_path.name}(으)로 이동, 메인엔 최근 {len(to_keep)}건만 유지")
+
+    return to_keep
+
 
 
 def _append_skip_log(entries: list[dict]):
@@ -255,6 +285,8 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
         print(f"[RESUME] 상점 {len(visited_shops)}개, 상품 {len(all_products)}건부터 이어서 진행")
 
     def save():
+        nonlocal all_products
+        all_products = _archive_old_products(all_products)
         _save_state(
             {
                 "visited_shops": list(visited_shops),
