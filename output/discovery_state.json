@@ -1,21 +1,23 @@
 {
   "visited_shops": [
-    "gmarket_jp",
-    "sssemibeauty",
-    "merrymarket",
-    "bestkr",
-    "Asteroid",
-    "KoreaSeoulShop",
-    "VividgrowMAN",
-    "manmulsang",
-    "seoulselectstore",
-    "JfromKorea",
-    "trailblue2",
-    "hellojp",
-    "puchiseoul",
     "OliveYouth",
+    "KoreaSeoulShop",
+    "JfromKorea",
+    "gmarketplus",
+    "puchiseoul",
     "woorinin",
-    "gmarketplus"
+    "seoulselectstore",
+    "VividgrowMAN",
+    "merrymarket",
+    "manmulsang",
+    "hellojp",
+    "Asteroid",
+    "busanjin",
+    "sssemibeauty",
+    "trailblue2",
+    "bestkr",
+    "gmarket_jp",
+    "khy8569"
   ],
   "all_products": [
     {
@@ -407,6 +409,36 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1209471569",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/033/519/8346519033.g_300-w-st_g.jpg",
+      "title": "プルブア ヒノキレザー オードパルファム 30ml",
+      "brand": "pleuvoir",
+      "price_jpy": 4600,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209471569",
+      "shop_id": "khy8569",
+      "category_gdlc_cd": "120000022",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1193729683",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/813/938/8014938813.g_300-w-st_g.jpg",
+      "title": "ハイアルロン ブースティング エッセンス 100ml",
+      "brand": "ユーセリン",
+      "price_jpy": 4585,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193729683",
+      "shop_id": "busanjin",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -425,11 +457,11 @@
     "https://m.qoo10.jp/shop/seoulselectstore",
     "https://m.qoo10.jp/shop/bestkr",
     "https://m.qoo10.jp/shop/manmulsang",
-    "https://m.qoo10.jp/shop/OliveYouth"
+    "https://m.qoo10.jp/shop/OliveYouth",
+    "https://m.qoo10.jp/shop/khy8569",
+    "https://m.qoo10.jp/shop/busanjin"
   ],
   "pending_keywords": [
-    "08 キャンディー コーラルブリング アイパレット",
-    "アイドルハイライターEX 6color #26年7月3color追加発売",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "アイブラシ プロコレクション5種 Balletcore edition",
@@ -481,24 +513,32 @@
     "ウォータープルーフプロ日焼け止め +サンスティック",
     "プライム アドバンサー De-エイジング アンプル セラム 韓国美容液 エイジングケア ハリ 保湿 韓国コスメ",
     "エイジ リカバリー アイクリーム",
-    "シルクリペア パーフェクト シャイニング ゴールドトリートメント ダメージヘア 乾燥毛 ツヤ髪 まとまり 指通り 韓国ヘアケア"
+    "シルクリペア パーフェクト シャイニング ゴールドトリートメント ダメージヘア 乾燥毛 ツヤ髪 まとまり 指通り 韓国ヘアケア",
+    "プルブア ヒノキレザー オードパルファム",
+    "シャドーパレット02ローズペタル데이지크 섀도우 팔레트 02로즈페탈",
+    "ハイアルロン ブースティング エッセンス",
+    "ヒーロー オールデイ プランピング ティント #リップ タトゥー neutral rose #ヒーローリップタトゥーティント",
+    "涙袋ステップパレット 2color #aegyosal",
+    "モノアイシャドウ"
   ],
   "seen_keywords": [
-    "ロングラスティング テンションパフ しっとりレギュラーモカ",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "ゼロ ベルベットティント 5. 16 バニーヌード",
-    "ミミフレンズ コックコックブック",
-    "グルタチオン アンプル",
-    "マスクフィットAIフィルタークッション 本品",
-    "アロエ キュアアルファ アロエゼリーマスク",
-    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
     "2026 CORTIS TOUR PUT YOUR PHONE DOWN IN INCHEON SPECIAL CARD",
-    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
-    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
-    "シャンプー ダマスクローズの香り",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "24K ラグジュアリー ゴールド アンプル",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
+    "アイドルハイライターEX 6color #26年7月3color追加発売",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "グルタチオン アンプル",
+    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
+    "マスクフィットAIフィルタークッション 本品",
+    "ロングラスティング テンションパフ しっとりレギュラーモカ",
+    "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.2’ IN SEOUL SPECIAL CARD",
+    "アロエ キュアアルファ アロエゼリーマスク",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "ゼロ ベルベットティント 5. 16 バニーヌード",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "08 キャンディー コーラルブリング アイパレット",
+    "シャンプー ダマスクローズの香り",
+    "ミミフレンズ コックコックブック",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善"
   ]
 }
