@@ -1,9 +1,11 @@
 {
   "visited_shops": [
+    "trailblue2",
     "gmarket_jp",
-    "JfromKorea",
     "Asteroid",
-    "puchiseoul"
+    "VividgrowMAN",
+    "puchiseoul",
+    "JfromKorea"
   ],
   "all_products": [
     {
@@ -110,17 +112,77 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1203041226",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/425/264/8334264425.g_300-w-st_g.jpg",
+      "title": "(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択",
+      "brand": "46CM",
+      "price_jpy": 2490,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203041226",
+      "shop_id": "trailblue2",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1191395895",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg",
+      "title": "[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++",
+      "brand": "スキンアンドラブ",
+      "price_jpy": 2790,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191395895",
+      "shop_id": "trailblue2",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1199735232",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/770/749/8293749770.g_300-w-st_g.jpg",
+      "title": "PDRNピンクエクソソームショット2000, 30ml",
+      "brand": "メディキューブ",
+      "price_jpy": 2300,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199735232",
+      "shop_id": "VividgrowMAN",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1208085514",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/889/591/8319591889.g_300-w-st_g.jpg",
+      "title": "(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択",
+      "brand": "46CM",
+      "price_jpy": 2889,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208085514",
+      "shop_id": "VividgrowMAN",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/Asteroid",
     "https://m.qoo10.jp/shop/gmarket_jp",
     "https://m.qoo10.jp/shop/puchiseoul",
-    "https://m.qoo10.jp/shop/JfromKorea"
+    "https://m.qoo10.jp/shop/JfromKorea",
+    "https://m.qoo10.jp/shop/trailblue2",
+    "https://m.qoo10.jp/shop/VividgrowMAN"
   ],
   "pending_keywords": [
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
     "グルタチオン アンプル",
     "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
@@ -137,11 +199,23 @@
     "ロングラスティング テンションパフ しっとりレギュラーモカ",
     "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
     "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
-    "08 キャンディー コーラルブリング アイパレット"
+    "08 キャンディー コーラルブリング アイパレット",
+    "アイドルハイライターEX 6color #26年7月3color追加発売",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "アイブラシ プロコレクション5種 Balletcore edition",
+    "ムードオンアイパレット #11 Pink core 12 Peach core 26年4月発売",
+    "PDRNピンクエクソソームショット2000",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "ブラー パウダー ファクト 7color",
+    "(+キーリング 贈呈スキン レイヤー フィット チーク 16color #25年10月 6color追加発売",
+    "ラッキーシャインティント8color #25年10月 3color追加発売"
   ],
   "seen_keywords": [
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
     "24K ラグジュアリー ゴールド アンプル",
-    "シャンプー ダマスクローズの香り",
-    "アロエ キュアアルファ アロエゼリーマスク"
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "アロエ キュアアルファ アロエゼリーマスク",
+    "シャンプー ダマスクローズの香り"
   ]
 }
