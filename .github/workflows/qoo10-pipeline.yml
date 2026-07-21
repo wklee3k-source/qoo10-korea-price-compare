@@ -164,7 +164,7 @@ jobs:
             echo "::endgroup::"
 
             python append_progress_history.py ../output
-            git add ../output/discovery_state.json ../output/discovery_result.xlsx ../output/discovery_skip_log.json ../output/discovery_seed_log.json ../output/progress_history.json 2>/dev/null || true
+            git add ../output/discovery_state.json ../output/discovery_result.xlsx ../output/discovery_skip_log.json ../output/discovery_seed_log.json ../output/progress_history.json ../output/archive/ 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit -m "Auto: discovery progress (상점 목표 $next)"
               for i in 1 2 3; do
