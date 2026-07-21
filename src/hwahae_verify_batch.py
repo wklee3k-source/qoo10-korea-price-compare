@@ -51,14 +51,23 @@ def _correct_name_isolated(keyword: str, known_volume: str, known_brand: str = "
 def _naver_fallback(keyword: str) -> dict | None:
     """1차(화해)가 실패했거나 단종일 때 2차로 네이버쇼핑에서 찾는다.
     NAVER_CLIENT_ID/SECRET 환경변수가 없으면(로컬 샌드박스 등) 조용히
-    건너뛴다 — openapi.naver.com은 GitHub Actions에서만 접근 가능함."""
-    print(f"    [디버그] naver_fallback 호출됨, keyword='{keyword}'", file=sys.stderr)
+    건너뛴다 — openapi.naver.com은 GitHub Actions에서만 접근 가능함.
+
+    [실측 이슈] 같은 검색어로 별도 스크립트를 직접 돌리면 결과가 나오는데
+    이 배치 안에서 호출하면 이따금 total=0(빈 결과)이 오는 재현이 안 되는
+    현상이 있었다 — 원인을 못 밝혀서, 우선 0건이면 짧게 대기 후 한 번 더
+    시도하는 안전장치로 완화한다."""
+    print(f"    [디버그] naver_fallback 호출됨, keyword={keyword!r} (len={len(keyword)})", file=sys.stderr)
     try:
         from naver_shop_search import search as naver_search
 
-        print("    [디버그] naver_shop_search import 성공", file=sys.stderr)
-        items = naver_search(keyword, display=3)
-        print(f"    [디버그] naver_search 결과 {len(items)}건", file=sys.stderr)
+        items = naver_search(keyword, display=5)
+        if not items:
+            import time
+
+            print("    [디버그] 0건 — 2초 대기 후 재시도", file=sys.stderr)
+            time.sleep(2)
+            items = naver_search(keyword, display=5)
         if not items:
             return None
         top = items[0]
@@ -70,10 +79,7 @@ def _naver_fallback(keyword: str) -> dict | None:
             "mall": top.get("mallName"),
         }
     except Exception as e:  # noqa: BLE001
-        import traceback
-
         print(f"    [네이버폴백 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
         return None
 
 
