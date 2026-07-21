@@ -28,6 +28,11 @@ on:
         description: "검색어 1개당 최대 몇 개 상점까지 처리할지(비워두면 제한없음)"
         required: false
         type: string
+      discovery_parallel:
+        description: "병렬(matrix 4개 브랜치)로 돌릴지 — 각자 다른 시드를 처리하고 끝나면 자동 병합됨"
+        required: false
+        type: boolean
+        default: false
   schedule:
     # 매일 17:00 UTC = 한국/일본 시간(KST/JST, UTC+9) 새벽 02:00
     - cron: "0 17 * * *"
@@ -64,12 +69,11 @@ jobs:
           git push
 
   discover_low_review_shops:
-    # 저리뷰 상점/상품 자동발굴 — 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도
-    # GitHub 서버에서 계속 돎). 상태는 output/discovery_state.json에 저장되므로
-    # 타임아웃 걸려도 다시 실행하면 이어서 진행된다. 매일 새벽 2시(KST/JST)에
-    # 자동으로 켜져서, 그동안 누적 방문한 상점 수에서 +100개를 더 찾는다
-    # (매일 100개씩 새로 쌓이는 방식 — 어제 찾은 상점은 다시 안 감).
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    # 저리뷰 상점/상품 자동발굴(순차 버전) — discovery_parallel=false일 때만 돈다.
+    # 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도 GitHub 서버에서 계속 돎).
+    # 상태는 output/discovery_state.json에 저장되므로 타임아웃 걸려도 다시
+    # 실행하면 이어서 진행된다.
+    if: (github.event_name == 'workflow_dispatch' && inputs.discovery_parallel != 'true') || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
@@ -158,6 +162,129 @@ jobs:
               done
             fi
             current=$next
+          done
+
+  discover_low_review_shops_parallel:
+    # 병렬 버전 — 4개 브랜치(matrix)가 동시에 각자 다른 시드를 처리한다.
+    # 각자 discovery_state_<branch>.json(별도 파일)에 저장하므로 git 충돌이
+    # 안 난다. 전부 끝나면 merge job이 하나로 합친다.
+    if: github.event_name == 'workflow_dispatch' && inputs.discovery_parallel == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      matrix:
+        branch: [0, 1, 2, 3]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      # 메인 discovery_state.json의 시드를 4등분해서 이 브랜치(matrix.branch)
+      # 몫만 이 브랜치 전용 상태파일(discovery_state_<branch>.json)에 저장한다.
+      # 이미 이 브랜치 전용 파일이 있으면(재실행) 그대로 이어서 쓴다.
+      - name: Prepare this branch's seed keywords
+        working-directory: src
+        run: |
+          python3 -c "
+          import json, pathlib
+          suffix = '${{ matrix.branch }}'
+          branch_path = pathlib.Path(f'../output/discovery_state_{suffix}.json')
+          if branch_path.exists():
+              print('이미 이 브랜치 상태파일이 있어서 이어서 진행')
+          else:
+              main_path = pathlib.Path('../output/discovery_state.json')
+              main_state = json.loads(main_path.read_text()) if main_path.exists() else {'pending_keywords': None}
+              all_seeds = main_state.get('pending_keywords') or ['メディヒール エッセンシャルマスクパック']
+              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 4 == int(suffix)]
+              if not my_seeds:
+                  my_seeds = [all_seeds[int(suffix) % len(all_seeds)]]
+              branch_path.write_text(json.dumps({
+                  'visited_shops': [], 'all_products': [], 'shop_urls': [],
+                  'pending_keywords': my_seeds, 'seen_keywords': []
+              }, ensure_ascii=False, indent=2))
+              print(f'브랜치 {suffix} 시드 {len(my_seeds)}개:', my_seeds)
+          "
+
+      - name: Run discovery (this branch only, own state file)
+        working-directory: src
+        env:
+          TARGET: ${{ inputs.discovery_target_products || '500' }}
+          SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
+        run: |
+          python iterative_low_review_discovery.py \
+            "" \
+            "$TARGET" \
+            "../output/discovery_result_${{ matrix.branch }}.xlsx" \
+            999 \
+            "$SHOPS_PER_KEYWORD" \
+            "${{ matrix.branch }}"
+
+      - name: Upload this branch's state as artifact (병합 job이 받아감)
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-state-branch-${{ matrix.branch }}
+          path: output/discovery_state_${{ matrix.branch }}.json
+
+  merge_parallel_results:
+    needs: discover_low_review_shops_parallel
+    if: always() && github.event_name == 'workflow_dispatch' && inputs.discovery_parallel == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Download all branch states
+        uses: actions/download-artifact@v4
+        with:
+          pattern: discovery-state-branch-*
+          path: output/
+          merge-multiple: true
+
+      - name: Merge branch states into main discovery_state.json
+        working-directory: src
+        run: python merge_discovery_states.py ../output
+
+      - name: Commit merged results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -f output/discovery_state_*.json
+          git add output/discovery_state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: merge parallel discovery results (4 branches)"
+          for i in 1 2 3; do
+            if git push; then break; fi
+            git pull --rebase
           done
 
   build_excel:

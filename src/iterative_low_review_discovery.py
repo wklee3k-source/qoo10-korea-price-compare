@@ -215,19 +215,27 @@ def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
     return list(seen.values())
 
 
-def _load_state() -> dict:
-    if STATE_PATH.exists():
-        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+def _state_path(suffix: str | None = None) -> "Path":
+    if suffix:
+        return OUTPUT_DIR / f"discovery_state_{suffix}.json"
+    return STATE_PATH
+
+
+def _load_state(suffix: str | None = None) -> dict:
+    path = _state_path(suffix)
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
     return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": []}
 
 
-def _save_state(state: dict):
-    STATE_PATH.parent.mkdir(exist_ok=True, parents=True)
-    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+def _save_state(state: dict, suffix: str | None = None):
+    path = _state_path(suffix)
+    path.parent.mkdir(exist_ok=True, parents=True)
+    path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None):
-    state = _load_state()
+def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None, state_suffix: str | None = None):
+    state = _load_state(state_suffix)
     visited_shops = set(state["visited_shops"])
     all_products = {p["goods_no"]: p for p in state["all_products"]}
     shop_urls = state["shop_urls"]
@@ -250,7 +258,8 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
                 "shop_urls": shop_urls,
                 "pending_keywords": pending_keywords,
                 "seen_keywords": list(seen_keywords),
-            }
+            },
+            state_suffix,
         )
 
     while pending_keywords and len(all_products) < target_products:
@@ -362,8 +371,9 @@ def main():
     out_path = sys.argv[3]
     max_shops = int(sys.argv[4]) if len(sys.argv) > 4 else None
     shops_per_keyword = int(sys.argv[5]) if len(sys.argv) > 5 and sys.argv[5].strip() else None
+    state_suffix = sys.argv[6] if len(sys.argv) > 6 and sys.argv[6].strip() else None
 
-    products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword)
+    products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword, state_suffix=state_suffix)
     export_excel(products, out_path)
     print("\n방문한 상점 URL:")
     for u in shop_urls:
