@@ -1,15 +1,17 @@
 {
   "visited_shops": [
-    "hellojp",
     "VividgrowMAN",
-    "Asteroid",
+    "lindalinda",
     "manmulsang",
-    "trailblue2",
-    "mkelas",
+    "Asteroid",
     "gmarket_jp",
-    "JfromKorea",
+    "trailblue2",
+    "hellojp",
+    "rojecompany",
     "durudurupanda",
-    "rojecompany"
+    "JfromKorea",
+    "mkelas",
+    "AVECPUBLIC"
   ],
   "all_products": [
     {
@@ -236,6 +238,66 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1198716617",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/364/869/8392869364.g_300-w-st_g.jpg",
+      "title": "ジェネシスの芽セラム, 90ml",
+      "brand": "ケラスターゼ",
+      "price_jpy": 8460,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198716617",
+      "shop_id": "AVECPUBLIC",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 2,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1212630238",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/162/367/8383367162.g_300-w-st_g.jpg",
+      "title": "46cm 体臭ケアデオドラント ボディソープ 600ml (クリーンソープ / シトラス / ハーバル)/弱酸性 韓国コスメ ボディウォッシュ",
+      "brand": "46CM",
+      "price_jpy": 2384,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212630238",
+      "shop_id": "lindalinda",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1210464824",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/445/396/8358396445.g_300-w-st_g.jpg",
+      "title": "[SET]CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー 500ml +トメント リンス 500ml",
+      "brand": "エリザヴェッカ",
+      "price_jpy": 3230,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210464824",
+      "shop_id": "lindalinda",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1186310271",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/775/497/8017497775.g_300-w-st_g.jpg",
+      "title": "【大容量】ザ・リアル ノニ モイスチャー バランシングトナー 320ml / 肌荒れ・水分補給・キメ整え",
+      "brand": "celimax",
+      "price_jpy": 2907,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186310271",
+      "shop_id": "lindalinda",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -248,12 +310,11 @@
     "https://m.qoo10.jp/shop/trailblue2",
     "https://m.qoo10.jp/shop/VividgrowMAN",
     "https://m.qoo10.jp/shop/mkelas",
-    "https://m.qoo10.jp/shop/durudurupanda"
+    "https://m.qoo10.jp/shop/durudurupanda",
+    "https://m.qoo10.jp/shop/AVECPUBLIC",
+    "https://m.qoo10.jp/shop/lindalinda"
   ],
   "pending_keywords": [
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
-    "オールデイタイトメイクセッティングピクサー",
     "フルフィットプロポリスライトアンプル",
     "ルートボリュームフィクサー",
     "ドクダミ77スージングトナー",
@@ -321,17 +382,29 @@
     "ヴィーガンコンブチャ ティー エッセンス 保湿 しっとり エッセンス 韓国コスメ",
     "トーンアップ パールクリーム 本体 + スキンケア",
     "AGE-R グルタチオン グロウ カプセル クリーム 保湿 スキンケア 並行輸入",
-    "Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 米 うるおい 日焼け止め"
+    "Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 米 うるおい 日焼け止め",
+    "オフレッシュクッションドロップ",
+    "オフレッシュクッションドロップ",
+    "アンドバイロム＆ロールケーキトーンアップクッションSPF50+ PA++++",
+    "ジェネシスの芽セラム",
+    "グルタチオン ベジカプセル 120ea",
+    "46cm 体臭ケアデオドラント ボディソープ",
+    "ソフトボディ レッドグローブ クリーン 1BOX",
+    "CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー +トメント リンス",
+    "ディオラインティー 30包",
+    "ザ・リアル ノニ モイスチャー バランシングトナー"
   ],
   "seen_keywords": [
-    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
-    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "24K ラグジュアリー ゴールド アンプル",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "PDRNピンクエクソソームショット2000",
-    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
     "シャンプー ダマスクローズの香り",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "オールデイタイトメイクセッティングピクサー",
+    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
+    "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
+    "24K ラグジュアリー ゴールド アンプル",
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
+    "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
+    "PDRNピンクエクソソームショット2000"
   ]
 }
