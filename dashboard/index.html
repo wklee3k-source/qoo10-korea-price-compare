@@ -168,6 +168,8 @@
   .dot.ok { background: var(--up); box-shadow: 0 0 8px var(--up); }
   .dot.err { background: #e5534b; }
 
+  .countdown-sep { color: var(--panel-border); }
+
   .error-box {
     background: rgba(229, 83, 75, 0.08);
     border: 1px solid rgba(229, 83, 75, 0.3);
@@ -245,6 +247,8 @@
   <div class="status-line">
     <span class="dot" id="statusDot"></span>
     <span id="statusText">확인 중…</span>
+    <span class="countdown-sep">·</span>
+    <span id="countdown">60초 후 자동 새로고침</span>
   </div>
 
   <div id="errorBox"></div>
@@ -358,6 +362,19 @@ async function loadAll() {
 }
 
 loadAll();
+
+let secondsLeft = 60;
+const countdownEl = document.getElementById('countdown');
+
+function tickCountdown() {
+  secondsLeft -= 1;
+  if (secondsLeft <= 0) {
+    secondsLeft = 60;
+    loadAll();
+  }
+  if (countdownEl) countdownEl.textContent = `${secondsLeft}초 후 자동 새로고침`;
+}
+setInterval(tickCountdown, 1000);
 </script>
 </body>
 </html>
