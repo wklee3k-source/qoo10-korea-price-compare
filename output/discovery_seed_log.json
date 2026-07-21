@@ -4121,5 +4121,75 @@
     "from_title": "アンパン ミルクレット 600g(300錠) cc",
     "passes_filter": false,
     "seed_keyword": "アンパン ミルクレット cc"
+  },
+  {
+    "from_shop": "J_Beauty_Korea",
+    "from_goods_no": "1203086843",
+    "from_title": "【JTr】 ジェネシス バン 250ml ・シャンプー ・抜け毛ケア ・切れ毛防止 ・ハリ・コシ ・ダメージケア ・サロン専売品 ・SNS話題 ・ギフト",
+    "passes_filter": false,
+    "seed_keyword": "ジェネシス バン ・シャンプー ・抜け毛ケア ・切れ毛防止 ・ハリ・コシ ・ダメージケア ・サロン専売品 ・SNS話題 ・ギフト"
+  },
+  {
+    "from_shop": "J_Beauty_Korea",
+    "from_goods_no": "1200569422",
+    "from_title": "【JTr】 シルク スキン レイヤー クッション リフィル 13g 22号 ペタル 1個 ・詰め替え用 ・ファンデーション ・クッションファンデ ・密着 ・シルク肌 ・保湿 ・プロ仕様",
+    "passes_filter": false,
+    "seed_keyword": "シルク スキン レイヤー クッション リフィル 22号 ペタル ・詰め替え用 ・ファンデーション ・クッションファンデ ・密着 ・シルク肌 ・保湿 ・プロ仕様"
+  },
+  {
+    "from_shop": "J_Beauty_Korea",
+    "from_goods_no": "1210016706",
+    "from_title": "【JTra】 インクラスティング ファンデーション スリムフィット EX N203ナチュラルベージュ 30ml 密着カバー 持続力 自然な仕上がり",
+    "passes_filter": false,
+    "seed_keyword": "インクラスティング ファンデーション スリムフィット EX N203ナチュラルベージュ 密着カバー 持続力 自然な仕上がり"
+  },
+  {
+    "from_shop": "J_Beauty_Korea",
+    "from_goods_no": "1209779514",
+    "from_title": "【JTra】 プレミアム ヴィーガン トーンアップ サンクリーム 50ml・SPF50+ PA++++・紫外線対策・肌色補正・保湿",
+    "passes_filter": true,
+    "seed_keyword": "プレミアム ヴィーガン トーンアップ サンクリーム ・SPF50+ PA++++・紫外線対策・肌色補正・保湿"
+  },
+  {
+    "from_shop": "J_Beauty_Korea",
+    "from_goods_no": "1209779513",
+    "from_title": "【JTra】 プレミアム ヴィーガン 3-in-1 サンスティック 5g・SPF50+ PA++++・紫外線対策・持ち運び・スキンケア",
+    "passes_filter": true,
+    "seed_keyword": "プレミアム ヴィーガン 3-in-1 サンスティック ・SPF50+ PA++++・紫外線対策・持ち運び・スキンケア"
+  },
+  {
+    "from_shop": "hangooksangin",
+    "from_goods_no": "1173139292",
+    "from_title": "大容量 カンタタ アイスパウチコーヒー ヘーゼルナッツ香り 230ml ×20本 韓国コーヒー フレーバーコーヒー 甘香ばしい風味 アイスコーヒー",
+    "passes_filter": false,
+    "seed_keyword": "大容量 カンタタ アイスパウチコーヒー ヘーゼルナッツ香り 韓国コーヒー フレーバーコーヒー 甘香ばしい風味 アイスコーヒー"
+  },
+  {
+    "from_shop": "hangooksangin",
+    "from_goods_no": "1173139294",
+    "from_title": "大容量 カンタタ アイスパウチ ブラックコーヒー 230ml ×20本 韓国コーヒー 無糖 アイスコーヒー 苦味 すっきり リフレッシュ",
+    "passes_filter": false,
+    "seed_keyword": "大容量 カンタタ アイスパウチ ブラックコーヒー 韓国コーヒー 無糖 アイスコーヒー 苦味 すっきり リフレッシュ"
+  },
+  {
+    "from_shop": "hangooksangin",
+    "from_goods_no": "1210204450",
+    "from_title": "熱ラーメン 120g 20袋 韓国ラーメン ヨルラーメン 辛いラーメン 旨辛 インスタント麺 袋麺 韓国食品 まとめ買い",
+    "passes_filter": false,
+    "seed_keyword": "熱ラーメン 20袋 韓国ラーメン ヨルラーメン 辛いラーメン 旨辛 インスタント麺 袋麺 韓国食品 まとめ買い"
+  },
+  {
+    "from_shop": "hangooksangin",
+    "from_goods_no": "1210195125",
+    "from_title": "辛ラーメン 乾麺 97g 20袋 韓国ラーメン シンラーメン ノンフライ麺 辛いラーメン 350kcal インスタント麺 韓国食品",
+    "passes_filter": false,
+    "seed_keyword": "辛ラーメン 乾麺 20袋 韓国ラーメン シンラーメン ノンフライ麺 辛いラーメン 350kcal インスタント麺 韓国食品"
+  },
+  {
+    "from_shop": "hangooksangin",
+    "from_goods_no": "1209544819",
+    "from_title": "ジンラーメン プラス 辛口 120g×30袋 韓国ラーメン 韓国インスタントラーメン ピリ辛 袋麺 大容量 まとめ買い 夜食 韓国食品 辛いラーメン",
+    "passes_filter": false,
+    "seed_keyword": "ジンラーメン プラス 辛口 30袋 韓国ラーメン 韓国インスタントラーメン ピリ辛 袋麺 大容量 まとめ買い 夜食 韓国食品 辛いラーメン"
   }
 ]
