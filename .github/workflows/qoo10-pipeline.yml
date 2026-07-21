@@ -335,18 +335,38 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: playwright install-deps chromium
 
-      - name: Run hwahae verification
+      - name: Run hwahae verification in chunks (checkable mid-run)
         working-directory: src
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          python hwahae_verify_batch.py ../output/hwahae_input_39.json ../output/hwahae_verified_39.json
-          git add ../output/hwahae_verified_39.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Auto: hwahae verification results"
-          for i in 1 2 3; do
-            if git push; then break; fi
-            git pull --rebase
+          TOTAL=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_input_39.json'))))")
+          CHUNK=5
+          while true; do
+            DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_39.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
+            if [ "$DONE_BEFORE" -ge "$TOTAL" ]; then
+              echo "전부 완료됨 ($DONE_BEFORE/$TOTAL)"
+              break
+            fi
+            echo "::group::처리 $DONE_BEFORE/$TOTAL 부터 최대 $CHUNK건"
+            python hwahae_verify_batch.py ../output/hwahae_input_39.json ../output/hwahae_verified_39.json "$CHUNK"
+            echo "::endgroup::"
+
+            git add ../output/hwahae_verified_39.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto: hwahae verification progress"
+              for i in 1 2 3; do
+                if git push; then break; fi
+                echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+                git pull --rebase
+              done
+            fi
+
+            DONE_AFTER=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_verified_39.json'))))")
+            if [ "$DONE_AFTER" -eq "$DONE_BEFORE" ]; then
+              echo "진행 없음 — 중단"
+              break
+            fi
           done
 
   build_excel:
