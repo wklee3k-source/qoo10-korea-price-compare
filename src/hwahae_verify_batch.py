@@ -15,6 +15,7 @@ GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 �
 
 import json
 import sys
+import time
 from pathlib import Path
 
 from hwahae_name_corrector import correct_name
@@ -43,6 +44,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         except Exception as e:  # noqa: BLE001
             print(f"    [실패] {e}")
             r = {"brand": None, "corrected": None, "volume": ""}
+        time.sleep(1.5)  # 연속 요청으로 인한 시스템 리소스 경합/서버 부하 완화
 
         entry = {
             "goods_no": item["goods_no"],
