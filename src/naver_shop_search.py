@@ -18,7 +18,10 @@ def search(query: str, display: int = 5) -> list[dict]:
     req.add_header("X-Naver-Client-Id", CLIENT_ID)
     req.add_header("X-Naver-Client-Secret", CLIENT_SECRET)
     with urllib.request.urlopen(req, timeout=10) as res:
-        data = json.loads(res.read().decode("utf-8"))
+        raw = res.read().decode("utf-8")
+    if os.environ.get("NAVER_DEBUG"):
+        print(f"    [naver raw] total={json.loads(raw).get('total')} len={len(raw)}", file=sys.stderr)
+    data = json.loads(raw)
     items = []
     for item in data.get("items", []):
         title = item["title"].replace("<b>", "").replace("</b>", "")
