@@ -1,17 +1,19 @@
 {
   "visited_shops": [
+    "rojecompany",
     "VividgrowMAN",
-    "lindalinda",
-    "manmulsang",
+    "mkelas",
+    "AVECPUBLIC",
+    "JfromKorea",
     "Asteroid",
+    "manmulsang",
+    "SM_Mall",
+    "hellojp",
+    "210506",
     "gmarket_jp",
     "trailblue2",
-    "hellojp",
-    "rojecompany",
     "durudurupanda",
-    "JfromKorea",
-    "mkelas",
-    "AVECPUBLIC"
+    "lindalinda"
   ],
   "all_products": [
     {
@@ -298,6 +300,96 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1096353729",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/534/077/5709077534.g_300-w-st_g.jpg",
+      "title": "コスパ 【公式/韓国正品】デリケートゾーンソープ／フォーム170ml 2種択一／かゆみ匂いケア／弱酸性／デリケートゾーンケア／フェミニンウォッシュ／爽やか／韓国コスメ",
+      "brand": "アロマティカ",
+      "price_jpy": 2090,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1096353729",
+      "shop_id": "SM_Mall",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1200919502",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/635/035/8169035635.g_300-w-st_g.jpg",
+      "title": "【正規品】ダーマUV365障壁水分 無機紫外線 日焼け止め 40ml",
+      "brand": "AESTURA",
+      "price_jpy": 3690,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1200919502",
+      "shop_id": "210506",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1209153891",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/750/260/8342260750.g_300-w-st_g.jpg",
+      "title": "【正規品】ガラク WHITENING ビタセラム 50ml (2個)",
+      "brand": "manyo",
+      "price_jpy": 5290,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209153891",
+      "shop_id": "210506",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1206937740",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/647/313/8279313647.g_300-w-st_g.jpg",
+      "title": "【正規品】ティアミドール ブースターセラム 30ml",
+      "brand": "ユーセリン",
+      "price_jpy": 6990,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206937740",
+      "shop_id": "210506",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1206098418",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/228/152/8271152228.g_300-w-st_g.jpg",
+      "title": "【正規品】ディープビタCパッド 70枚 (2個)",
+      "brand": "メディキューブ",
+      "price_jpy": 6290,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206098418",
+      "shop_id": "210506",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1205554253",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/151/677/8263677151.g_300-w-st_g.jpg",
+      "title": "【正規品】トラネキサム酸スキンブースタークリーム 100ml",
+      "brand": "メディテラピー",
+      "price_jpy": 4990,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205554253",
+      "shop_id": "210506",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -312,10 +404,11 @@
     "https://m.qoo10.jp/shop/mkelas",
     "https://m.qoo10.jp/shop/durudurupanda",
     "https://m.qoo10.jp/shop/AVECPUBLIC",
-    "https://m.qoo10.jp/shop/lindalinda"
+    "https://m.qoo10.jp/shop/lindalinda",
+    "https://m.qoo10.jp/shop/SM_Mall",
+    "https://m.qoo10.jp/shop/210506"
   ],
   "pending_keywords": [
-    "フルフィットプロポリスライトアンプル",
     "ルートボリュームフィクサー",
     "ドクダミ77スージングトナー",
     "ディスプリンシャンプー",
@@ -392,19 +485,27 @@
     "ソフトボディ レッドグローブ クリーン 1BOX",
     "CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー +トメント リンス",
     "ディオラインティー 30包",
-    "ザ・リアル ノニ モイスチャー バランシングトナー"
+    "ザ・リアル ノニ モイスチャー バランシングトナー",
+    "韓国正規品コスパ",
+    "コスパ デリケートゾーンソープ／フォーム 2種択一／かゆみ匂いケア／弱酸性／デリケートゾーンケア／フェミニンウォッシュ／爽やか／韓国コスメ",
+    "ダーマUV365障壁水分 無機紫外線 日焼け止め",
+    "ガラク WHITENING ビタセラム",
+    "ティアミドール ブースターセラム",
+    "ディープビタCパッド",
+    "トラネキサム酸スキンブースタークリーム"
   ],
   "seen_keywords": [
-    "シャンプー ダマスクローズの香り",
-    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
-    "オールデイタイトメイクセッティングピクサー",
-    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
     "体臭ソリューション デオドラント ボディウォッシュ 2種から1つ選択",
-    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット",
+    "ハニーアンドマカダミア ネイチャーシャンプー ブラックベリーベイ",
     "エクトイン リカバリー サンフルイド #SPF50+ PA++++",
-    "24K ラグジュアリー ゴールド アンプル",
-    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
+    "フルフィットプロポリスライトアンプル",
+    "オールデイタイトメイクセッティングピクサー",
+    "エアリー 武器自車 サンクリーム SPF50+ PA++++",
+    "PDRNピンクエクソソームショット2000",
     "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック",
-    "PDRNピンクエクソソームショット2000"
+    "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善",
+    "シャンプー ダマスクローズの香り",
+    "24K ラグジュアリー ゴールド アンプル",
+    "ウンユル ビタバランス オウン ソル シャイン トナーパッド トラベルキット ット"
   ]
 }
