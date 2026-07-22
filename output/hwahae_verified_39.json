@@ -18404,5 +18404,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1156455230",
+    "translated_kr": "[5개/3종 선택 가능] 브링그린 모델링 팩 [티트리 시카/대나무 히알루론산/슈퍼 레몬 글루타치온] 28g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모델링 팩 [슈퍼레몬글루타치온]",
+      "naver": "브링그린 모델링 팩 28g [티트리 시카/대나무 히알루/슈퍼 레몬 글루타치온]"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "모델링 팩 [슈퍼레몬글루타치온]",
+    "volume": "28g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "4800",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000193133",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5645909/56459099405.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5645909/56459099405.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000193133"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210333659",
+    "translated_kr": "퍼펙트 UV 블러시온 파우더 (리필용) SPF50+ PA++++ 메이크업 위에서 UV차단 페이스 파우더 메이크업 재터치와 UV 대책이 이것 1개 워터프루프",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
