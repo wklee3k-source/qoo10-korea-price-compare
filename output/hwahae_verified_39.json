@@ -24024,5 +24024,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199563459",
+    "translated_kr": "UV 케어 SPF50+ PA++++ 톤 업 보습 선 크림 50ml x 2 화장 베이스 촉촉함 밀착 자외선 차단제",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "UV 쉴드 톤업 선 SPF 50+ PA++++"
+    },
+    "brand": null,
+    "name": "UV 쉴드 톤업 선 SPF 50+ PA++++",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1119184636",
+    "translated_kr": "【2+1】LANEIGE 립 슬리핑 마스크 EX 베리 20g 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "라네즈 립 슬리핑 마스크 팩 EX 베리 기획 세트 +",
+      "hwahae": "립 슬리핑 마스크 EX [베리]"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "립 슬리핑 마스크 EX [베리]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
