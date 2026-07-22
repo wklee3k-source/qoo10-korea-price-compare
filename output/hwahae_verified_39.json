@@ -27503,5 +27503,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1126662855",
+    "translated_kr": "판테카밍 선 크림 SPF50 PA ++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "판테카밍 선크림",
+      "hwahae": "판테카밍 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "판테카밍 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1123888012",
+    "translated_kr": "리들샷 1000 에센스 15ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "리들샷 1000"
+    },
+    "brand": null,
+    "name": "리들샷 1000",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
