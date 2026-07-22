@@ -16015,5 +16015,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1058363243",
+    "translated_kr": "[5개세트]데미지클리닉트리트먼트300ml하이데미지헤어집중케어한국헤어케어살롱급트리트먼트",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "케라시스 데미지 클리닉 트리트먼트"
+    },
+    "brand": null,
+    "name": "케라시스 데미지 클리닉 트리트먼트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1042187080",
+    "translated_kr": "[1+1+1+1]청아/흑운/함광샴푸480ml/컨디셔너480mL선택가능4개세트한국헤어케어한방헤어케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "려 함빛&청아&흑운 샴푸/컨디셔너 2입",
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
