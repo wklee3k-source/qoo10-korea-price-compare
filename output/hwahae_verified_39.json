@@ -3576,5 +3576,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205155929",
+    "translated_kr": "05딤모브 글로시립 글래스팅컬러글로스 촉촉윤기발색 1개 트렌드아이템",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "롬앤 글래스팅 컬러 글로스"
+    },
+    "brand": null,
+    "name": "롬앤 글래스팅 컬러 글로스",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169175843",
+    "translated_kr": "어메이징그레이스 발레로즈 EDT 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "필로소피 어메이징 그레이스 발레로즈 EDT",
+      "hwahae": "어메이징 그레이스 프레그런스 EDT [발레로즈]",
+      "naver": "[원지안PICK] 필로소피 어메이징 그레이스 발레로즈 EDT 60ml"
+    },
+    "brand": "필로소피 (philosophy)",
+    "name": "어메이징 그레이스 프레그런스 EDT [발레로즈]",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "79000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000228062",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5534112/55341126475.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5534112/55341126475.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000228062"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
