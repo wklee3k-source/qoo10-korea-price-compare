@@ -103,6 +103,11 @@ if __name__ == "__main__":
     remaining = [p for p in products if p["goods_no"] not in done_goods]
     print(f"[INFO] 전체 {len(products)}건 중 이미 처리된 {len(done_goods)}건부터 이어서 진행 ({len(remaining)}건 남음)", file=sys.stderr)
 
+    # 남은 게 0건이어도(예: 신규 번역대상이 없는 경우) 결과파일은 반드시
+    # 만들어둔다 — 안 그러면 이 파일을 여는 다음 스텝이 FileNotFoundError로
+    # 죽는다(실측으로 확인된 버그).
+    json.dump(results, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
     for i in range(0, len(remaining), batch_size):
         chunk = remaining[i:i + batch_size]
         titles = [p["title"] for p in chunk]
