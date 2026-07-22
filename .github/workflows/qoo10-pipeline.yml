@@ -508,6 +508,16 @@ jobs:
             "케라스타즈 디스인탱글 샴푸" \
             "Verish 실리콘 데미누브라"
 
+      - name: Install Playwright for gallery test
+        run: |
+          pip install playwright --break-system-packages
+          playwright install --with-deps chromium
+
+      - name: Test product gallery scraper
+        working-directory: src
+        run: |
+          python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
+
   build_excel:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
