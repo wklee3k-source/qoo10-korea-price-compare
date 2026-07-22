@@ -3645,5 +3645,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210078286",
+    "translated_kr": "[눈가케어]카페인솔루션5%+EGCG30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "오늘할인 디오디너리 카페인 솔루션 5% + EGCG ...",
+      "hwahae": "Caffeine Gel 5% + EGCG (카페인솔루션5%+이지씨지)",
+      "naver": "[눈가케어] 디오디너리 카페인 솔루션 5% + EGCG 30ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "Caffeine Gel 5% + EGCG (카페인솔루션5%+이지씨지)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "14000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000141321",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4692728/46927281357.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4692728/46927281357.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000141321"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210837026",
+    "translated_kr": "세럼핏UV프로텍터01클리어50ml(SPF50+/PA++++)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "바이유어 세럼핏 UV프로텍터 01 클리어 ...",
+      "naver": "바이유어 세럼핏 UV프로텍터 01 클리어 50ml(SPF50+/PA++++)"
+    },
+    "brand": null,
+    "name": "바이유어 세럼핏 UV프로텍터 01 클리어 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "19200",
+    "mall": "바이유어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13408774828",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+        "mall": "바이유어",
+        "link": "https://smartstore.naver.com/main/products/13408774828"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
