@@ -7806,5 +7806,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211935642",
+    "translated_kr": "스네일솔루션에멀전,120ml,1개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "네이처리퍼블릭 스네일 솔루션 ..."
+    },
+    "brand": null,
+    "name": "네이처리퍼블릭 스네일 솔루션 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203697652",
+    "translated_kr": "심리스웨어파운데이션17호페일30ml SPF30/PA+++[브러시2개증정]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "웨이크메이크 심리스 웨어 파운데이션 제품의 정보 ...",
+      "hwahae": "심리스 웨어 파운데이션 [SPF30/PA+++] [17 페일]"
+    },
+    "brand": "웨이크메이크 (wakemake)",
+    "name": "심리스 웨어 파운데이션 [SPF30/PA+++] [17 페일]",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
