@@ -29553,5 +29553,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1163541573",
+    "translated_kr": "화이트머스크 플로라 프래그런스 바디미스트 100ML",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "190 발 블랑 바디미스트"
+    },
+    "brand": "데미플로 (demiflor)",
+    "name": "190 발 블랑 바디미스트",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1154113008",
+    "translated_kr": "【프레스티주 EX 키트 증정】 프리스티주 EX 토너 130ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "유기농 모링가 토너"
+    },
+    "brand": "찹스 (CHOBS)",
+    "name": "유기농 모링가 토너",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
