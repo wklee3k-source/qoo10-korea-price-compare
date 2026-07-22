@@ -29481,5 +29481,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204742981",
+    "translated_kr": "하이드레이팅 누드 셀 시트 마스크 10매",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "누드셀 마스크시트"
+    },
+    "brand": null,
+    "name": "누드셀 마스크시트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1200994667",
+    "translated_kr": "술후 케어용 히스토셀 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "히스토랩 재생크림 포스트케어 히스토 셀크림",
+      "hwahae": "포스트 케어 히스토 셀 크림"
+    },
+    "brand": "히스토랩 (HISTOLAB)",
+    "name": "포스트 케어 히스토 셀 크림",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
