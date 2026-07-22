@@ -359,7 +359,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           TOTAL=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_input_39.json'))))")
-          CHUNK=5
+          CHUNK=2
           while true; do
             DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_39.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
             if [ "$DONE_BEFORE" -ge "$TOTAL" ]; then

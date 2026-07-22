@@ -191,10 +191,11 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
     query_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", product_keyword_only.lower()))
     result_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]+", (top["product_name"] or "").lower()))
     no_overlap = bool(query_tokens) and not (query_tokens & result_tokens)
-
-    if no_overlap and _retry:
-        print(f"    [의심] '{product_keyword_only}' 검색결과 '{top['product_name']}'가 단어가 하나도 안 겹침 — 재시도", file=sys.stderr)
-        return correct_name(product_keyword_only, _retry=False, known_volume=known_volume, known_brand=known_brand)
+    if no_overlap:
+        # 재시도는 없앴지만(API호출 절감), 검색어와 단어가 하나도 안 겹치는
+        # 명백한 오탐은 그대로 받아들이지 않고 정직하게 매칭실패로 처리한다.
+        print(f"    [의심] '{product_keyword_only}' 검색결과 '{top['product_name']}'가 단어가 하나도 안 겹침 — 매칭실패 처리", file=sys.stderr)
+        return {"guessed": product_keyword_only, "brand": None, "corrected": None, "volume": "", "all_candidates": products}
 
     return {
         "guessed": product_keyword_only,
@@ -202,9 +203,9 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
         "corrected": top["product_name"],
         "volume": top["volume"],
         "obsolete": top.get("obsolete"),
-                "price": top.get("price"),
-                "image_url": top.get("image_url"),
-                "product_url": top.get("product_url"),
+        "price": top.get("price"),
+        "image_url": top.get("image_url"),
+        "product_url": top.get("product_url"),
         "sale": top.get("sale"),
         "all_candidates": products,
         "matched_by": "top_result",
