@@ -3714,5 +3714,51 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1133994465",
+    "translated_kr": "BERGAMO 24K 럭셔리 골드 앰플 110ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "베르가모 24K 럭셔리 골드 앰플, , 1개",
+      "hwahae": "24K 럭셔리 골드 앰플"
+    },
+    "brand": "베르가모 (BERGAMO)",
+    "name": "24K 럭셔리 골드 앰플",
+    "volume": "110ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1183055576",
+    "translated_kr": "밀크바오밥 샴푸 다마스크로즈향 1L",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "밀크바오밥 오리지널 샴푸 다마스크로즈",
+      "hwahae": "오리지널 샴푸 [다마스크로즈]"
+    },
+    "brand": "밀크바오밥 (MilkBaobab)",
+    "name": "오리지널 샴푸 [다마스크로즈]",
+    "volume": "1000ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 15900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
