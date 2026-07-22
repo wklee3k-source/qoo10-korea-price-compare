@@ -2345,5 +2345,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195690506",
+    "translated_kr": "PDRNxEGF토닝세럼15ml/에센스/앰플/기초/스킨케어/한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "더마팩토리 EGF 앰플"
+    },
+    "brand": null,
+    "name": "더마팩토리 EGF 앰플",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194955894",
+    "translated_kr": "토탈리커버리크리미바디워시300ml/500ml/한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비욘드 토탈 크리미 바디워시",
+      "hwahae": "토탈리커버리 크리미 바디워시"
+    },
+    "brand": "비욘드 (BEYOND)",
+    "name": "토탈리커버리 크리미 바디워시",
+    "volume": "300mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
