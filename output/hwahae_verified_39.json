@@ -15678,5 +15678,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206008294",
+    "translated_kr": "펩타이드샷2X탄력앰플30ml(탄력케어/보습/탄력서포트에센스)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PeptideShot Ampoule 2X – Korean Direct",
+      "naver": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력"
+    },
+    "brand": null,
+    "name": "PeptideShot Ampoule 2X – Korean Direct",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "13900",
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5062113585",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5062113585"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205912921",
+    "translated_kr": "레티날부스터샷30ml+30ml#레티날2.0%#세라마이드#엑토인#카페인#펩타이드",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터"
+    },
+    "brand": null,
+    "name": "셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
