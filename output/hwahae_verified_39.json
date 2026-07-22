@@ -24908,5 +24908,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1167877164",
+    "translated_kr": "플라센 효소 서브 애씨드 워시 파우더 80g×1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플라센 엔자임 서브 애씨드 워시 파우더"
+    },
+    "brand": "르네셀 (Rene-Cell)",
+    "name": "플라센 엔자임 서브 애씨드 워시 파우더",
+    "volume": "80g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 66000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1176026156",
+    "translated_kr": "HASOL(헤솔) 아나겐 액티브 토닉 100ml/아나겐/두피 케어/한국 인기",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
