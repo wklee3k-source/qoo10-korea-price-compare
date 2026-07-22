@@ -8018,5 +8018,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1165596313",
+    "translated_kr": "[1+1]흑운모근강화앤볼륨케어샴푸500ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "흑운 볼륨&모근강화 샴푸ㅣ려 한국"
+    },
+    "brand": null,
+    "name": "흑운 볼륨&모근강화 샴푸ㅣ려 한국",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165513951",
+    "translated_kr": "마다가스카르센텔라퀵카밍패드70매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 퀵 카밍 패드 70매",
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
