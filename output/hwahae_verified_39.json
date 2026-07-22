@@ -24291,5 +24291,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209089497",
+    "translated_kr": "the SAEM 어반에코 하라케케 토너 150ml 2개 set/한국 화장수 고보습 건성 피부 민감성 피부 스킨케어 수분 공급 보습 토너",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어반 에코 하라케케 스킨 케어 3종 세트",
+      "hwahae": "유기농 모링가 토너"
+    },
+    "brand": "찹스 (CHOBS)",
+    "name": "유기농 모링가 토너",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1084907817",
+    "translated_kr": "[정품 판매점]악센다 마홀로사 크림 미스트 100ml /에센스 미스트/미세 분사/수광",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "악센다 마호로사 크림 미스트 미백 주름개선 수부지 ..."
+    },
+    "brand": null,
+    "name": "악센다 마호로사 크림 미스트 미백 주름개선 수부지 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
