@@ -13709,5 +13709,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206891886",
+    "translated_kr": "[정품]블루빈B5-PDRN마일드크림100ml/보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "브링그린 블루빈 B5",
+      "hwahae": "블루빈 B5-PDRN 마일드 크림"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "블루빈 B5-PDRN 마일드 크림",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208115061",
+    "translated_kr": "PDRN히알루론산하이드레이팅미스트,100ml,2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Anua PDRN Hyaluronic Acid Hydrating Capsule Mist ..."
+    },
+    "brand": null,
+    "name": "Anua PDRN Hyaluronic Acid Hydrating Capsule Mist ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
