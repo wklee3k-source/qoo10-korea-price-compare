@@ -25517,5 +25517,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1146023742",
+    "translated_kr": "인테카 진정 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "인테카 진정 토너",
+      "hwahae": "인테카 진정 토너"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 진정 토너",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207189650",
+    "translated_kr": "라이스 브라이트닝 패드 60장(60pcs) 쌀",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "스킨푸드 라이스 브라이트닝 패드 , 60매입, 1개"
+    },
+    "brand": null,
+    "name": "스킨푸드 라이스 브라이트닝 패드 , 60매입, 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
