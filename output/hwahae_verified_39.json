@@ -1364,5 +1364,67 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1094315646",
+    "translated_kr": "[1+1]V콜라겐 하트핏 멀티밤 10g/피부장벽케어/슬로우에이징/고농축/탄력/수분장벽/진정/한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "마녀공장",
+      "naver": "V콜라겐 하트핏 멀티밤 10g"
+    },
+    "brand": "마녀공장",
+    "name": "V콜라겐 하트핏 멀티밤 10g",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23200",
+    "mall": "마녀공장공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://manyo.co.kr/goods/goods_view.php?goodsNo=1897&inflow=naver",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3523501/35235012178.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3523501/35235012178.8.jpg",
+        "mall": "마녀공장공식몰",
+        "link": "https://manyo.co.kr/goods/goods_view.php?goodsNo=1897&inflow=naver"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1101579770",
+    "translated_kr": "레티노라겐 클렌징폼 120ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "피캄 레티놀라겐 앰플 샷 폼클렌저",
+      "naver": "메노킨 30초 버블 클렌저"
+    },
+    "brand": null,
+    "name": "피캄 레티놀라겐 앰플 샷 폼클렌저",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "21400",
+    "mall": "메노킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://menokin.co.kr/product/detail.html?product_no=22&cate_no=29&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5654213/56542135274.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5654213/56542135274.6.jpg",
+        "mall": "메노킨",
+        "link": "https://menokin.co.kr/product/detail.html?product_no=22&cate_no=29&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
