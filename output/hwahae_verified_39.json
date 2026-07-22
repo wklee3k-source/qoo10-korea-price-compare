@@ -16163,5 +16163,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1197657224",
+    "translated_kr": "코직산 터메릭 리셀페이싱 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코직애씨드 터메릭 리설페이싱 토너"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "코직애씨드 터메릭 리설페이싱 토너",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1089059413",
+    "translated_kr": "TXT 바디 소프 바디소프 500ml 클린 소프",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
