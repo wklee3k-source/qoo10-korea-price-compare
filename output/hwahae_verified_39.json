@@ -23469,5 +23469,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201631207",
+    "translated_kr": "루트젠 탈모증상 전문 케어 두피 에센스 80ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "루트젠 탈모증상전문케어 두피에센스"
+    },
+    "brand": "려 (Ryo)",
+    "name": "루트젠 탈모증상전문케어 두피에센스",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197476393",
+    "translated_kr": "【리뉴얼】어성초 77 히알루론산 수딩 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 히알루론 토너",
+      "naver": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 2개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 히알루론 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6873221070",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8441772/84417721392.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8441772/84417721392.7.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/6873221070"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8457316/84573169246.7.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7028668924"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
