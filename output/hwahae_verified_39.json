@@ -29329,5 +29329,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1155531946",
+    "translated_kr": "[올리브영 1위] 가족 전원이 사용하는 바디워시 선택 500ml+500ml 일리윤바디워시",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200553566",
+    "translated_kr": "루벨 IAU 이온 클렌징 릴랙스먼트 샴푸 1000ml & 이온 크림 실키리페어 트리트먼트 1000ml 리필 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "7무 EGF 트리트먼트 에센셜 크림"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "7무 EGF 트리트먼트 에센셜 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 68000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
