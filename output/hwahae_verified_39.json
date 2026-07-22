@@ -14552,5 +14552,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202568510",
+    "translated_kr": "프로틴클리닉10000단백질1L(샴푸/트리트먼트)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "엘라스틴 프로틴클리닉 10000 단백질 고영양 헤어트리트 ...",
+      "hwahae": "프로틴 클리닉 10000 단백질 고영양 트리트먼트"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "프로틴 클리닉 10000 단백질 고영양 트리트먼트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210182731",
+    "translated_kr": "내추럴올인원커버로션50g",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "내추럴 커버 로션 2종"
+    },
+    "brand": null,
+    "name": "내추럴 커버 로션 2종",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
