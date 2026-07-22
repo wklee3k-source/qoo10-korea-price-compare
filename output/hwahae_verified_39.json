@@ -1101,5 +1101,60 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212630238",
+    "translated_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "온더바디 46cm 체취케어 약산성 땀냄새 체취제거 등드름 데오드란트 ...",
+      "hwahae": "체취케어 데오드란트 바디워시 [시트러스향]"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "volume": "600mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210464824",
+    "translated_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "콜라겐 코팅 헤어 A+ 머슬 샴푸 CER",
+      "hwahae": "콜라겐 코팅 헤어 A+ 머슬 샴푸",
+      "naver": "콜라겐 코팅 헤어 A+ 머슬 샴푸 500ml"
+    },
+    "brand": "엘리자베카 (Elizavecca)",
+    "name": "콜라겐 코팅 헤어 A+ 머슬 샴푸",
+    "volume": "500ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "엘리자베카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://elizavecca.com/goods/goods_view.php?goodsNo=986&inflow=naver",
+    "image_url": "https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg",
+        "mall": "엘리자베카",
+        "link": "https://elizavecca.com/goods/goods_view.php?goodsNo=986&inflow=naver"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
