@@ -17333,5 +17333,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191354082",
+    "translated_kr": "[60매] 비타민C 나이아신아마이드 아이 패치 눈 주위 팩 눈 아래 팩 트라넥삼산 히알루론산 촉촉함 보습 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "메디힐 비타 콜라겐 아이 앰플 패치 60매",
+      "hwahae": "눈"
+    },
+    "brand": "TWW (타임웍스원더스)",
+    "name": "눈",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1189557181",
+    "translated_kr": "멜라논X 크림 30ml×3개 세트 / 투명감 / 칙칙함 케어 / 한국 화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "멜라논 엑스 크림 *3 + 멜라논엑스 앰플 *6"
+    },
+    "brand": null,
+    "name": "멜라논 엑스 크림 *3 + 멜라논엑스 앰플 *6",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
