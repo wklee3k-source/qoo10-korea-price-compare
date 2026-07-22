@@ -508,6 +508,16 @@ function tickCountdown() {
   if (countdownEl) countdownEl.textContent = `${secondsLeft}초 후 자동 새로고침`;
 }
 setInterval(tickCountdown, 1000);
+
+// 브라우저는 백그라운드 탭의 setInterval을 강제로 느리게 만드는 경우가
+// 있어서(60초 타이머가 실제론 훨씬 뜸하게 실행됨), 탭에 다시 포커스가
+//돌아올 때 즉시 한 번 새로고침해서 이 문제를 보완한다.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    loadAll();
+    secondsLeft = 60;
+  }
+});
 </script>
 </body>
 </html>
