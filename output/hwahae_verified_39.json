@@ -4234,5 +4234,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1183523136",
+    "translated_kr": "한국스킨케어세안파우더효소세안모공케어페이스워시클렌징파우더80g",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "ASKIN 엔자임 파우더 워시"
+    },
+    "brand": null,
+    "name": "ASKIN 엔자임 파우더 워시",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204359324",
+    "translated_kr": "[1+1/SNS화제]윤기피부버블에센스토너95ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "큐어레스트 윤광미백 버블에센스토너 제품의 정보 및",
+      "naver": "로에아 바이탈 코어 에센스 에어리 버블 토너"
+    },
+    "brand": null,
+    "name": "큐어레스트 윤광미백 버블에센스토너 제품의 정보 및",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "16000",
+    "mall": "LOWEA 로에아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13642353382",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118686/91186864094.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118686/91186864094.13.jpg",
+        "mall": "LOWEA 로에아",
+        "link": "https://smartstore.naver.com/main/products/13642353382"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
