@@ -4289,5 +4289,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206207561",
+    "translated_kr": "MAY ISLAND 톤업펄크림 본품30g+30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "May Island Brightening Tone Up Pearl Cream",
+      "hwahae": "퓨어 아일랜드"
+    },
+    "brand": "아워블렌드 (Ourblend)",
+    "name": "퓨어 아일랜드",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205562844",
+    "translated_kr": "euthymol 브레스민트볼 20개입",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "유시몰 브레쓰 민트볼 20입"
+    },
+    "brand": null,
+    "name": "유시몰 브레쓰 민트볼 20입",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
