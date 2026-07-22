@@ -15096,5 +15096,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1118355573",
+    "translated_kr": "RX더6펩타이드스킨부스터세럼150ml+150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스알엑스 더 6 펩타이드 스킨 부스터 세럼 x 2 ...",
+      "hwahae": "더 6 펩타이드 스킨 부스터 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 6 펩타이드 스킨 부스터 세럼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1105107051",
+    "translated_kr": "스킨앤랩배리어댐인텐시브크림2세대50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "스킨앤랩 베리어덤 인텐시브 크림 2세대"
+    },
+    "brand": null,
+    "name": "스킨앤랩 베리어덤 인텐시브 크림 2세대",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
