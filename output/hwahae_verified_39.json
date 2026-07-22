@@ -27343,5 +27343,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1136895079",
+    "translated_kr": "아이 원트 유 르 파르팜 40ML SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레 유"
+    },
+    "brand": "비올로직호쉐쉬 (BIOLOGIQUERECHERCHE)",
+    "name": "레 유",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1065580984",
+    "translated_kr": "글로우 바이 제이로 EDT SP 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그클리닉 콜라보 수딩 글로우 크림"
+    },
+    "brand": "블루 씨피알 (Blue CPR)",
+    "name": "에그클리닉 콜라보 수딩 글로우 크림",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
