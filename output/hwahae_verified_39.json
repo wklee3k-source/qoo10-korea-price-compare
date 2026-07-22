@@ -24936,5 +24936,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193439407",
+    "translated_kr": "1.05 아스타잔틴 0.05% NAD 1% 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "뉴오리진 루테인지아잔틴&아스타잔틴 30일분",
+      "hwahae": "레드 이펙트 세럼 1.05 펌프"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "레드 이펙트 세럼 1.05 펌프",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1091577701",
+    "translated_kr": "밤나무 AHA 8% 클리어 에센스 100ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "이즈앤트리 체스트넛 아하 8% 클리어 에센스 ..."
+    },
+    "brand": null,
+    "name": "이즈앤트리 체스트넛 아하 8% 클리어 에센스 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
