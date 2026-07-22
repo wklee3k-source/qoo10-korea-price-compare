@@ -23580,5 +23580,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1159224305",
+    "translated_kr": "시카 풀 앰플 30ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200324318",
+    "translated_kr": "히알루론산 2% + B5 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14200,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
