@@ -29436,5 +29436,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180624495",
+    "translated_kr": "오츠 인 카밍 젤 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "오트 인 카밍 젤 크림",
+      "hwahae": "오트 인 카밍 젤 크림"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "오트 인 카밍 젤 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1091551262",
+    "translated_kr": "하트리프 케르세틴올 모공 딥 클렌징 폼 150ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "어성초 쿼세티놀™ 포어 딥 클렌징 폼"
+    },
+    "brand": null,
+    "name": "어성초 쿼세티놀™ 포어 딥 클렌징 폼",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
