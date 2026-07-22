@@ -17386,5 +17386,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210946252",
+    "translated_kr": "30초 퀵 버블 마스크 클리어 95ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "30초 퀵 버블 마스크 클리어"
+    },
+    "brand": "메노킨 (MENOKIN)",
+    "name": "30초 퀵 버블 마스크 클리어",
+    "volume": "95ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165169271",
+    "translated_kr": "[미니 퍼퓸/시나모롤 키링 증정] 퍼퓸 미스트 94ml 10종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 헤어 미스트 [10 꿀먹은자몽]"
+    },
+    "brand": "라모수 (RAMOSU)",
+    "name": "퍼퓸 헤어 미스트 [10 꿀먹은자몽]",
+    "volume": "90ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
