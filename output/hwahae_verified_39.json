@@ -26019,5 +26019,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1205746320",
+    "translated_kr": "리치 살롱 모로코 아르간 오일 세럼 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리치살롱 모로코 아르간 오일세럼"
+    },
+    "brand": "사라나라 (saranara)",
+    "name": "리치살롱 모로코 아르간 오일세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209812545",
+    "translated_kr": "로즈마리 PDRN 스칼프 세럼 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "로즈마리 PDRN 스칼프 세럼",
+      "naver": "아로마티카 로즈마리 PDRN 스칼프 세럼 100ML X 2EA"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "로즈마리 PDRN 스칼프 세럼",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35980",
+    "mall": "아로마티카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13486819273",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103132/91031329625.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103132/91031329625.1.jpg",
+        "mall": "아로마티카",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13486819273"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
