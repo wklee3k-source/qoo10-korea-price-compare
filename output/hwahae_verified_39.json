@@ -30821,5 +30821,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202402356",
+    "translated_kr": "ReFa 스트레이트락 100g 산열락성분배합 스트레이트아이롱용 히트케어 스타일링제 데미지리스 윤기머리 정돈 일본제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "크림 워시"
+    },
+    "brand": "리파 (ReFa)",
+    "name": "크림 워시",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1196368028",
+    "translated_kr": "메종 오르키데 케어오일 린스프리 헤어오일 100ml 아르간오일 함유 오키드 에센스 비타민C 유도체 레불린산 치아씨드오일 대용량 플로럴향 일본제 인기상품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 에센스"
+    },
+    "brand": "메리뮤 (MERIMIEU)",
+    "name": "인진쑥 진정 에센스",
+    "volume": "160ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
