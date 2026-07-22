@@ -5954,5 +5954,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1213147250",
+    "translated_kr": "어드밴스드스네일96뮤신파워에센스,100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "COSRX Snail 96 Mucin Essence",
+      "hwahae": "어드벤스드 스네일 96 뮤신 파워 에센스"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "어드벤스드 스네일 96 뮤신 파워 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1088346776",
+    "translated_kr": "비타페어C생비타민C에센스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Nature Republic",
+      "hwahae": "비타페어C 퓨어비타민C 20 화이트닝 앰플"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "비타페어C 퓨어비타민C 20 화이트닝 앰플",
+    "volume": "24ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
