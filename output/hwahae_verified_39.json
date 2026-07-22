@@ -16039,5 +16039,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1080883557",
+    "translated_kr": "닥터펩타이드볼륨리프팅프로에센스100ml2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "닥터펩티",
+      "naver": "닥터펩티 펩타이드 볼륨 리프팅 프로 에센스 100ml x2개 + (증정) 리프팅 2매 버블 제형 거품에센스"
+    },
+    "brand": null,
+    "name": "닥터펩티",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "68900",
+    "mall": "닥터펩티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8253871315",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8579837/85798371638.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8579837/85798371638.9.jpg",
+        "mall": "닥터펩티",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8253871315"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211973120",
+    "translated_kr": "[포켓몬에디션]컬러그램탄풀립세럼9색키링포함",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "POKÉMON"
+    },
+    "brand": null,
+    "name": "POKÉMON",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
