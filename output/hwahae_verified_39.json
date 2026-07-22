@@ -12327,5 +12327,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210050298",
+    "translated_kr": "[배송비무료/2개세트]닥터포헤어에어로쿨링스프레이100ml/두피케어드라이샴푸스칼프탄산냉각시원함",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "에어로 쿨링 4"
+    },
+    "brand": null,
+    "name": "에어로 쿨링 4",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209574586",
+    "translated_kr": "[2개세트/대용량]SKIN1004마다가스카르센텔라앰플120ml에센스민감성피부보습피부트러블진정스킨케어한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "스킨1004 마다가스카르 센텔라 버라이어티 마스크 세트",
+      "naver": "[7월 네이버PICK] 마다가스카르 센텔라 앰플 100ml"
+    },
+    "brand": "스킨1004",
+    "name": "[7월 네이버PICK] 마다가스카르 센텔라 앰플 100ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "19760",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/253640353",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1266441/12664411761.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1266441/12664411761.15.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/253640353"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
