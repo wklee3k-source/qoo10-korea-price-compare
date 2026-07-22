@@ -23814,5 +23814,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169574765",
+    "translated_kr": "オールデイメイクフィクサー 35ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1167122243",
+    "translated_kr": "リンゼイ 鎮静薬草モデリングパック (カップパック) 28g [66冠/1位]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스노이 디저트 푸딩 틴트 [살구푸딩탱글해]"
+    },
+    "brand": "에뛰드 (ETUDE)",
+    "name": "스노이 디저트 푸딩 틴트 [살구푸딩탱글해]",
+    "volume": "5.5g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 8000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
