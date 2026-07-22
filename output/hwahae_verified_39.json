@@ -28285,5 +28285,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1190215992",
+    "translated_kr": "퓨어 오일 퍼퓸 10ml/10종 선택",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "퓨어 오일 퍼퓸 피오니 밤쉘향수 외 2종"
+    },
+    "brand": null,
+    "name": "퓨어 오일 퍼퓸 피오니 밤쉘향수 외 2종",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1140265006",
+    "translated_kr": "[1+1] [한국 코스메] [정규품 취급점] 드레스 퍼퓨 팩브릭 프레그런스 No.97 에이프릴 코튼 160ml - 2개 세트로 저렴!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "더블유드레스룸 드레스퍼퓸 섬유향수 No.97 에이프릴코튼 ...",
+      "hwahae": "키세스 리퀴드 매트 [No.97 옥스블러드]"
+    },
+    "brand": "버버리 (BURBERRY)",
+    "name": "키세스 리퀴드 매트 [No.97 옥스블러드]",
+    "volume": "6ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
