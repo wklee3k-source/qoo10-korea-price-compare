@@ -14025,5 +14025,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205550642",
+    "translated_kr": "EGFx다운타임마스크팩4매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "이지듀 EGFx 다운타임 오인트 마스크 4매",
+      "hwahae": "EGFx 시그널 에센스"
+    },
+    "brand": "이지듀 (Easydew)",
+    "name": "EGFx 시그널 에센스",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 99000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205550483",
+    "translated_kr": "345릴리프크림미스트60ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Dr.Althea 345 Relief Cream Mist, Korean Vegan Skin Care ..."
+    },
+    "brand": null,
+    "name": "Dr.Althea 345 Relief Cream Mist, Korean Vegan Skin Care ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
