@@ -29793,5 +29793,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1171440317",
+    "translated_kr": "BRING GREEN 공식 브링그린 알로에 97% 수딩 젤 300ml+300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포켓몬에디션 알로에 97% 수딩젤"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "포켓몬에디션 알로에 97% 수딩젤",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12100,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1198742812",
+    "translated_kr": "더 퍼펙트 클렌징 오일 패드 EX 60장입 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 님",
+      "naver": "아리얼 더 퍼펙트 클렌징 오일 패드 EX 60매, 2개"
+    },
+    "brand": "어글리솝 (UGLYSOAP)",
+    "name": "더 님",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "아리얼",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10797435414",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8834194/88341941404.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834194/88341941404.5.jpg",
+        "mall": "아리얼",
+        "link": "https://smartstore.naver.com/main/products/10797435414"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834194/88341941405.5.jpg",
+        "mall": "아리얼",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10797435415"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
