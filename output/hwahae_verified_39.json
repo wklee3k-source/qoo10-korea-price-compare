@@ -10442,5 +10442,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201122113",
+    "translated_kr": "화이트트러플너리싱트리트먼트마스크,5매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 너리싱 트리트먼트 마스크"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 너리싱 트리트먼트 마스크",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1170532806",
+    "translated_kr": "[폼폼푸딘한정기획]비건팩클렌저3종중1택(그린토마토120ml/레드토마토120ml/라이스도120ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
