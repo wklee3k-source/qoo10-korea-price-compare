@@ -4101,5 +4101,64 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211961274",
+    "translated_kr": "밸런스풀아젤라익애씨드세럼,30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "밸런스풀 시카 진정 세럼"
+    },
+    "brand": null,
+    "name": "밸런스풀 시카 진정 세럼",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211103977",
+    "translated_kr": "센텔라TECA앰플,50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "스킨1004 마다가스카르 센텔라 테카 앰플",
+      "hwahae": "마다가스카르 센텔라 테카 앰플",
+      "naver": "[탄력진정] 센텔라 테카 앰플 50ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 테카 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20400",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/13105305743",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9064981/90649816835.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064981/90649816835.2.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/13105305743"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5938969/59389692233.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6068617?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
