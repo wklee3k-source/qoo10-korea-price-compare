@@ -9417,5 +9417,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1136468573",
+    "translated_kr": "NA에센스N50mL에센스나이아신아마이드침투건조모공촉촉함스킨케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "더마팩토리 나이아신아마이드 11% 워터 에센스, , 1개",
+      "naver": "코스워커 나이아신아마이드앰플 미백세럼 미백 에센스 히알루론산 속건조 기미 세럼 80ml"
+    },
+    "brand": null,
+    "name": "더마팩토리 나이아신아마이드 11% 워터 에센스, , 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "28000",
+    "mall": "코스워커",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9832922081",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8737742/87377424354.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8737742/87377424354.3.jpg",
+        "mall": "코스워커",
+        "link": "https://smartstore.naver.com/main/products/9832922081"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1085616724",
+    "translated_kr": "X프레임리프트무스워시150g로토제약탄력상승탄산버블세안탄력윤기피부",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Obagi オバジX フレームリフトムースウォッシュ"
+    },
+    "brand": null,
+    "name": "Obagi オバジX フレームリフトムースウォッシュ",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
