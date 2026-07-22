@@ -246,6 +246,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         # 수량(묶음개수) 일치 확인: 큐텐 원본과 네이버 결과의 수량이 다르면
         # "1개" 기준으로 다시 찾는다(추가 검색 1회, 수량 불일치일 때만 발생).
+        # 재검색해도 여전히 안 맞으면(검색어에 "1개"를 붙인다고 결과가 항상
+        # 바뀌는 건 아님) 차라리 그 네이버 후보를 버린다 — 틀린 수량으로
+        # 잘못 매칭하는 것보다 안전하다.
         if cand_naver:
             qoo10_qty = _extract_quantity(kw_raw)
             naver_qty = _extract_quantity(cand_naver.get("name") or "")
@@ -253,8 +256,11 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 print(f"    [수량불일치] 큐텐={qoo10_qty}개 vs 네이버={naver_qty}개 -> 1개 기준으로 재검색")
                 requery = f"{known_brand or cand_hwahae and cand_hwahae.get('brand') or ''} {kw_cleaned} 1개".strip()
                 cand_naver_retry = _search_naver(requery, known_brand)
-                if cand_naver_retry:
+                if cand_naver_retry and _extract_quantity(cand_naver_retry.get("name") or "") == qoo10_qty:
                     cand_naver = cand_naver_retry
+                else:
+                    print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
+                    cand_naver = None
 
         candidates = [c for c in [cand_exa, cand_hwahae, cand_naver] if c]
 
