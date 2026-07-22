@@ -1463,5 +1463,100 @@
         "link": "https://smartstore.naver.com/main/products/13222935356"
       }
     ]
+  },
+  {
+    "goods_no": "1186682635",
+    "translated_kr": "아누아 아젤라익애씨드10 히알루론 레드니스수딩세럼 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "Anua Azelaic Acid 10% & Hyaluron Redness Soothing Serum 30ML",
+      "naver": "아누아 아누아 10 아누아 아젤라익애씨드 히알루론 레드네스 수딩 세럼 30ml"
+    },
+    "brand": "아누아",
+    "name": "아누아 아누아 10 아누아 아젤라익애씨드 히알루론 레드네스 수딩 세럼 30ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "25110",
+    "mall": "G마켓",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.gmarket.co.kr/gate/pcs?item-no=4675304998&sub-id=1003&service-code=10000003&lcd=100000005",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6058555/60585552535.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6058555/60585552535.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4675304998&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6058577/60585779610.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F573274798&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6058577/60585774380.1.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F450077218&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6058552/60585529479.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4642230577&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6058616/60586163163.jpg",
+        "mall": "롯데ON",
+        "link": "https://www.lotteon.com/p/product/LO2707640524?sitmNo=LO2707640524_2707640525&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT"
+      }
+    ]
+  },
+  {
+    "goods_no": "1199084782",
+    "translated_kr": "Dr.Ceuracle 비건콤부차티에센스 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "닥터슈라클 비건 콤부차 티 에센스 스타레나, , 1개",
+      "hwahae": "비건 콤부차 티 에센스",
+      "naver": "닥터슈라클 비건 콤부차 티 에센스 150ml"
+    },
+    "brand": "닥터슈라클 (Dr.Ceuracle)",
+    "name": "비건 콤부차 티 에센스",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38000",
+    "mall": "닥터슈라클",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5300270782",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://smartstore.naver.com/main/products/5300270782"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5934022/59340222782.2.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9208951856&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6002587/60025878426.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F560405248&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192929/51929295724.20241213210917.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929295724"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5982819/59828199015.jpg",
+        "mall": "롯데ON",
+        "link": "https://www.lotteon.com/p/product/LO2667969256?sitmNo=LO2667969256_2667969257&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT"
+      }
+    ]
   }
 ]
