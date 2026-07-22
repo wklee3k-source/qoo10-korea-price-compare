@@ -27108,5 +27108,70 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1094596934",
+    "translated_kr": "DASHU 다슈 프로 에어리 폴리시 오일 100ml+10ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "다슈 프로 에어리 폴리쉬 오일 기획세트",
+      "hwahae": "프로 에어리 폴리쉬 오일",
+      "naver": "다슈 프로 에어리 폴리쉬 오일 30ml"
+    },
+    "brand": "다슈 (DASHU)",
+    "name": "프로 에어리 폴리쉬 오일",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "11800",
+    "mall": "다슈 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://hairwax.co.kr/product/detail.html?product_no=5950&cate_no=616&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3934269/39342691158.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3934269/39342691158.6.jpg",
+        "mall": "다슈 공식몰",
+        "link": "https://hairwax.co.kr/product/detail.html?product_no=5950&cate_no=616&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5234247/52342471275.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000211030"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4049015/40490157205.3.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3112261?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1153367628",
+    "translated_kr": "데리케이트존 밸런싱 페미닌 휘핑 워시 180ml + 포밍 워시 30ml / Y존 케어 무향료 질세정제 여성용 세정제 한국",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "닥터바이옴 페미닌 워시 여성청결제 유산균밸런스 Y존케어 저자극 약산성 – 코니허브",
+      "hwahae": "폼 워시"
+    },
+    "brand": "장생도라지",
+    "name": "폼 워시",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
