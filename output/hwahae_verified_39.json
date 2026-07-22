@@ -6655,5 +6655,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211961379",
+    "translated_kr": "셀메이징콜라겐포어앰플,30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "셀메이징 저분자 콜라겐 모공 탄력앰플",
+      "hwahae": "셀메이징 저분자 콜라겐 모공 탄력 앰플"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 모공 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211961274",
+    "translated_kr": "밸런스풀아젤라익애씨드세럼,30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "아젤라익 애씨드 10 코직 티트리 세럼"
+    },
+    "brand": null,
+    "name": "아젤라익 애씨드 10 코직 티트리 세럼",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
