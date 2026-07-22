@@ -28996,5 +28996,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210788352",
+    "translated_kr": "[정품] 하트리프 포어컨트롤 클렌징오일 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 포어 컨트롤 클렌징오일",
+      "hwahae": "어성초 포어 컨트롤 클렌징오일"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 포어 컨트롤 클렌징오일",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192376870",
+    "translated_kr": "[한정기획세트] 센시비오H2O 250ml 덤 포함 (+100ml)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "바이오더마 센시비오 H2O 펌프 +센시비오 H2O"
+    },
+    "brand": null,
+    "name": "바이오더마 센시비오 H2O 펌프 +센시비오 H2O",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
