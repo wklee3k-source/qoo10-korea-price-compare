@@ -24881,5 +24881,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1090206932",
+    "translated_kr": "큐티클 3-Step 케어 키트(큐티클 오일+큐티클 리무버+크리스탈 펜 푸셔)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "3",
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "반디 네일스팀 큐티클 3-Step 케어 키트"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "18900",
+    "mall": "bandinail",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10333111863",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8787761/87877616073.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8787761/87877616073.1.jpg",
+        "mall": "bandinail",
+        "link": "https://smartstore.naver.com/main/products/10333111863"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180616865",
+    "translated_kr": "소울 마이티 대나무 판테놀 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마이티 밤부 판테놀 크림",
+      "hwahae": "마이티 밤부 판테놀 크림"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "마이티 밤부 판테놀 크림",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
