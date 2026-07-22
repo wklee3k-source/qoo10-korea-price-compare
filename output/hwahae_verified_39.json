@@ -16676,5 +16676,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208566863",
+    "translated_kr": "모이스처스킨소프너",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "마몽드 모이스처 스킨 소프너"
+    },
+    "brand": null,
+    "name": "마몽드 모이스처 스킨 소프너",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191833877",
+    "translated_kr": "트리플콜라겐토탈텐션크림80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "트리플 콜라겐 토탈 텐션 크림",
+      "hwahae": "트리플 콜라겐 토탈 텐션 크림"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "트리플 콜라겐 토탈 텐션 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
