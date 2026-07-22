@@ -18562,5 +18562,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1132643783",
+    "translated_kr": "프로폴리스 레스큐 앰플 50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "CNP 프로폴리스 레스큐 앰플 50ML"
+    },
+    "brand": null,
+    "name": "CNP 프로폴리스 레스큐 앰플 50ML",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "958808136",
+    "translated_kr": "클리어스킨 8% AHA 에센스 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "클리어스킨 8% AHA 에센스 100ML",
+      "hwahae": "클리어 스킨 8% 아하 에센스"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "클리어 스킨 8% 아하 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
