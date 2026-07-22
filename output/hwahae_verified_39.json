@@ -20813,5 +20813,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193977143",
+    "translated_kr": "【무료 펌프 제공】 사본 SABON 샤워 오일 패츌리 500ml 사본 샤워 오일 인기 사본 샤워 오일 펌프 사본 샤워 오일 패츌리 사본 샤워 오일 기프트",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "SABON Shower Oil 사봉 샤워오일 펌프포함"
+    },
+    "brand": null,
+    "name": "SABON Shower Oil 사봉 샤워오일 펌프포함",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188958802",
+    "translated_kr": "데오도란트 롤온 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "오리지널 롤온",
+      "hwahae": "데오드란트 롤온 [무향]",
+      "naver": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개"
+    },
+    "brand": "보로탈코",
+    "name": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12000",
+    "mall": "보로탈코",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13074261482",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+        "mall": "보로탈코",
+        "link": "https://smartstore.naver.com/main/products/13074261482"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
