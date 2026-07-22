@@ -16202,5 +16202,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202885548",
+    "translated_kr": "리얼 캘렌듈라 히알루로닉 토너 패드 140g/60매*2 / 매일 스킨케어! 진정×보습의 데일리 토너 패드",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202885476",
+    "translated_kr": "네모 패드 리필 100매 한정기획(마데카소사이드) / 리필로 경제적! 부드럽게 정돈하는 진정 토너 패드",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[슈퍼적립] 메디힐 티트리 트러블 진정 토너패드 리필+리필 기획세트 (200매)"
+    },
+    "brand": "메디힐",
+    "name": "[슈퍼적립] 메디힐 티트리 트러블 진정 토너패드 리필+리필 기획세트 (200매)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "27400",
+    "mall": "메디힐 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12914059141",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045857/90458570133.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045857/90458570133.11.jpg",
+        "mall": "메디힐 스토어",
+        "link": "https://smartstore.naver.com/main/products/12914059141"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
