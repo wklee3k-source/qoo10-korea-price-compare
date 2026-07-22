@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>큐텐 vs 국내 상품 비교</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --bg: #0a0e14; --panel: #10151d; --panel-border: #1e2733;
+    --text: #e6edf3; --text-dim: #7d8998;
+    --ok: #4fd1a5; --bad: #e5534b; --qoo: #ff6b35; --kr: #4a90d9;
+    --mono: 'JetBrains Mono', monospace; --sans: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); padding: 32px 20px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 4px; }
+  .sub { color: var(--text-dim); font-size: 13px; font-family: var(--mono); }
+  .filter-bar { display: flex; gap: 8px; margin: 16px 0 24px; flex-wrap: wrap; }
+  .filter-btn {
+    background: var(--panel); border: 1px solid var(--panel-border); color: var(--text-dim);
+    padding: 6px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; font-family: var(--sans);
+  }
+  .filter-btn.active { background: var(--kr); color: white; border-color: var(--kr); }
+  .card {
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: 12px;
+    margin-bottom: 16px; overflow: hidden;
+  }
+  .card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 16px; border-bottom: 1px solid var(--panel-border); font-family: var(--mono); font-size: 11px; color: var(--text-dim);
+  }
+  .badges { display: flex; gap: 6px; }
+  .badge { padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+  .badge.match { background: rgba(79,209,165,0.15); color: var(--ok); }
+  .badge.mismatch { background: rgba(229,83,75,0.15); color: var(--bad); }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
+  .side { padding: 16px; }
+  .side.qoo10 { border-right: 1px solid var(--panel-border); }
+  @media (max-width: 640px) { .side.qoo10 { border-right: none; border-bottom: 1px solid var(--panel-border); } }
+  .side-label {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 10px; font-weight: 700;
+  }
+  .side.qoo10 .side-label { color: var(--qoo); }
+  .side.kr .side-label { color: var(--kr); }
+  .prod-img {
+    width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; background: #1a1f28; margin-bottom: 10px;
+  }
+  .prod-brand { font-size: 13px; color: var(--text-dim); margin-bottom: 2px; }
+  .prod-name { font-size: 14px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
+  .prod-meta { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 12px; }
+  .prod-price { font-weight: 700; }
+  .prod-link { color: var(--text-dim); text-decoration: none; font-size: 11px; }
+  .prod-link:hover { color: var(--text); text-decoration: underline; }
+  .no-img { display: flex; align-items: center; justify-content: center; color: var(--text-dim); font-size: 12px; }
+  footer { text-align: center; color: var(--text-dim); font-family: var(--mono); font-size: 11px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>큐텐 원본 vs 국내(화해/네이버) 상품 비교</h1>
+    <div class="sub" id="summaryLine">불러오는 중…</div>
+  </header>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">전체</button>
+    <button class="filter-btn" data-filter="mismatch">불일치만</button>
+    <button class="filter-btn" data-filter="match">일치만</button>
+  </div>
+  <div id="cards"></div>
+  <footer>큐텐 데이터: discovery-live 브랜치 · 국내 데이터: hwahae-live 브랜치</footer>
+</div>
+<script>
+const PAIRS_DATA = [
+  {
+    "goods_no": "1187136865",
+    "qoo10_title": "リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善150ml1本",
+    "qoo10_brand": "ブランカウ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/538/179/7861179538.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2863,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187136865",
+    "kr_brand": "블랑카우 (BLANCOW)",
+    "kr_name": "밀키스킨 리얼 클렌징폼",
+    "kr_volume": "150ml",
+    "kr_image": "https://img.hwahae.co.kr/products/1879808/1879808_20220801000000.jpg",
+    "kr_price": 20000,
+    "kr_url": "https://www.hwahae.co.kr/goods/1879808",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1203041226",
+    "qoo10_title": "(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択",
+    "qoo10_brand": "46CM",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/425/264/8334264425.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2490,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203041226",
+    "kr_brand": "46cm (46센티미터)",
+    "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "kr_volume": "600mL",
+    "kr_image": "https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg",
+    "kr_price": 29800,
+    "kr_url": "https://www.hwahae.co.kr/goods/2137133",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1191395895",
+    "qoo10_title": "[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++",
+    "qoo10_brand": "スキンアンドラブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2790,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191395895",
+    "kr_brand": "Snp (에스엔피)",
+    "kr_name": "피디알엔 엑토인 UV 에이징 리커버리 선 세럼 [SPF50+/PA++++]",
+    "kr_volume": "50ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2137782/2137782_20250409143332.jpg",
+    "kr_price": 27000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2137782",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1199735232",
+    "qoo10_title": "PDRNピンクエクソソームショット2000, 30ml",
+    "qoo10_brand": "メディキューブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/770/749/8293749770.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2300,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199735232",
+    "kr_brand": "메디큐브 (medicube)",
+    "kr_name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+    "kr_volume": "30ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2131581/2131581_20250211112015.jpg",
+    "kr_price": 44000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2131581",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1208085514",
+    "qoo10_title": "(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択",
+    "qoo10_brand": "46CM",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/889/591/8319591889.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2889,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208085514",
+    "kr_brand": "46cm (46센티미터)",
+    "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "kr_volume": "600mL",
+    "kr_image": "https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg",
+    "kr_price": 29800,
+    "kr_url": "https://www.hwahae.co.kr/goods/2137133",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1098318150",
+    "qoo10_title": "5番白玉グルタチオンＣ美容液+クリーム+トナー+パック/韓国コスメ",
+    "qoo10_brand": "ナンバーズイン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/593/589/7079589593.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 5940,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098318150",
+    "kr_brand": "넘버즈인 (numbuzin)",
+    "kr_name": "5번 글루타치온C 비타수액 에센셜 토너",
+    "kr_volume": "200ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2086693/2086693_20240126134120.jpg",
+    "kr_price": 24000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2086693",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1098317948",
+    "qoo10_title": "オールデイタイトメイクセッティングピクサー75ml/makeup setting fixx/韓国コスメ",
+    "qoo10_brand": "ソーナチュラル",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/628/776/6883776628.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2519,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098317948",
+    "kr_brand": "쏘내추럴 (SO'NATURAL)",
+    "kr_name": "올데이 타이트 메이크업 세팅 픽서",
+    "kr_volume": "75ml",
+    "kr_image": "https://img.hwahae.co.kr/products/9031/9031_20220801000000.jpg",
+    "kr_price": 15000,
+    "kr_url": "https://www.hwahae.co.kr/goods/9031",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1172085888",
+    "qoo10_title": "フルフィットプロポリスライトアンプル, 30ml",
+    "qoo10_brand": "COSRX",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/462/892/7482892462.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2337,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1172085888",
+    "kr_brand": "코스알엑스 (COSRX)",
+    "kr_name": "풀핏 프로폴리스 라이트 앰플",
+    "kr_volume": "30ml",
+    "kr_image": "https://img.hwahae.co.kr/products/1737446/1737446_20221201121515.jpg",
+    "kr_price": 23500,
+    "kr_url": "https://www.hwahae.co.kr/goods/1737446",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1161371182",
+    "qoo10_title": "ルートボリュームフィクサー, 200ml",
+    "qoo10_brand": "ジェニーハウス",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/124/344/7256344124.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3154,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161371182",
+    "kr_brand": "제니하우스 (jennyhouse)",
+    "kr_name": "루트 볼륨 픽서",
+    "kr_volume": "200ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2195665/2195665_20260323161619.jpg",
+    "kr_price": 23000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2195665",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1210835765",
+    "qoo10_title": "ドクダミ77スージングトナー, 350ml",
+    "qoo10_brand": "アヌア",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/622/223/8367223622.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2422,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210835765",
+    "kr_brand": "아누아 (Anua)",
+    "kr_name": "어성초 77 히알루론 토너",
+    "kr_volume": "250mL",
+    "kr_image": "https://img.hwahae.co.kr/products/2181659/2181659_20260102154726.jpg",
+    "kr_price": 25000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2181659",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1134579258",
+    "qoo10_title": "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）",
+    "qoo10_brand": "LOREAL PARIS",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 5270,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1134579258",
+    "kr_brand": null,
+    "kr_name": null,
+    "kr_volume": "",
+    "kr_image": null,
+    "kr_price": null,
+    "kr_url": null,
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1175557299",
+    "qoo10_title": "【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ",
+    "qoo10_brand": "ダシュ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/616/683/8394683616.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 5550,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175557299",
+    "kr_brand": "다슈 (DASHU)",
+    "kr_name": "밀크씨슬 블루바이옴 스칼프 샴푸",
+    "kr_volume": "500ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2191244/2191244_20260225112040.jpg",
+    "kr_price": 27000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2191244",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1196815742",
+    "qoo10_title": "モデリングクリームマスク 71g スパチュラ付き / ドクダミ 復活草 保湿パック 密着パック 韓国コスメ",
+    "qoo10_brand": "アビブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/555/725/8096725555.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 1799,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196815742",
+    "kr_brand": "아비브 (Abib)",
+    "kr_name": "모델링 크림 마스크 [어성초스쿱]",
+    "kr_volume": "71ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2135913/2135913_20250408122745.jpg",
+    "kr_price": 8000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2135913",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1164705875",
+    "qoo10_title": "ウォータープルーフプロ日焼け止め 50g+サンスティック 20g / アウトドア スポーツ対応UVクリーム 汗・水に強いスティックタイプ 手を汚さない",
+    "qoo10_brand": "BUSHMAN",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/021/840/7339840021.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 5499,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1164705875",
+    "kr_brand": "부쉬맨 (BUSHMAN)",
+    "kr_name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "kr_volume": "50g",
+    "kr_image": "https://img.hwahae.co.kr/products/1884027/1884027_20230503122212.jpg",
+    "kr_price": 25000,
+    "kr_url": "https://www.hwahae.co.kr/goods/1884027",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1105980668",
+    "qoo10_title": "プライム アドバンサー De-エイジング アンプル セラム 50ml 韓国美容液 エイジングケア ハリ 保湿 韓国コスメ",
+    "qoo10_brand": "オフィ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/978/365/6714365978.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 6694,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1105980668",
+    "kr_brand": "오휘 (OHUI)",
+    "kr_name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+    "kr_volume": "50ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg",
+    "kr_price": 80000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2130825",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1105980665",
+    "qoo10_title": "エイジ リカバリー アイクリーム 25mL / 目元ケア エイジングケア しわ対策 保湿 目元クリーム 目元シワ 改善 弾力ケア 弾力クリーム 栄養クリーム",
+    "qoo10_brand": "オフィ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/022/280/5922280022.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 6095,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1105980665",
+    "kr_brand": "오휘 (OHUI)",
+    "kr_name": "에이지 리커버리 아이크림",
+    "kr_volume": "25ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2096853/2096853_20240502181620.jpg",
+    "kr_price": 105000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2096853",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1044307238",
+    "qoo10_title": "[1+1]シルクリペア パーフェクト シャイニング ゴールドトリートメント 300ml ダメージヘア 乾燥毛 ツヤ髪 まとまり 指通り 韓国ヘアケア",
+    "qoo10_brand": "エラスティン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/620/110/8395110620.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2774,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1044307238",
+    "kr_brand": "11번가",
+    "kr_name": "엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x2개",
+    "kr_volume": "",
+    "kr_image": "https://shopping-phinf.pstatic.net/main_5903047/59030472616.jpg",
+    "kr_price": "11070",
+    "kr_url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=7145730565&tid=1000000061",
+    "kr_source": "naver",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1193729683",
+    "qoo10_title": "ハイアルロン ブースティング エッセンス 100ml",
+    "qoo10_brand": "ユーセリン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/813/938/8014938813.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 4585,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193729683",
+    "kr_brand": "유세린 (Eucerin)",
+    "kr_name": "하이알루론 부스팅 에센스",
+    "kr_volume": "100ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2118741/2118741_20241011104958.jpg",
+    "kr_price": 48000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2118741",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1175263787",
+    "qoo10_title": "[26SS/New]バランスフル シカ オイルコントロール サンスティック 20g（＋バランスフル フォーマン オールインワン 20g＋ポケモンステッカー）",
+    "qoo10_brand": "トリデン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/269/356/8377356269.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3449,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175263787",
+    "kr_brand": "토리든 (Torriden)",
+    "kr_name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
+    "kr_volume": "20g",
+    "kr_image": "https://img.hwahae.co.kr/products/2202691/2202691_20260506094325.jpg",
+    "kr_price": 23000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2202691",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1209710276",
+    "qoo10_title": "[26SS/New]パフュームヘアシャンプー 530ml（+100ml） #Angel muguet発売",
+    "qoo10_brand": "La'dor",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/811/353/8377353811.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 4344,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209710276",
+    "kr_brand": "어라운드미 (AROUNDME)",
+    "kr_name": "퍼퓸드 아르간 헤어 샴푸",
+    "kr_volume": "200ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2016985/2016985_20221130100323.jpg",
+    "kr_price": 9000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2016985",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1202412626",
+    "qoo10_title": "パーフェクトフレッシュ メンズ 男性用洗浄剤 150ml",
+    "qoo10_brand": "ベントン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/684/353/8377353684.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 4000,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1202412626",
+    "kr_brand": "듀이트리 (DEWYTREE)",
+    "kr_name": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+    "kr_volume": "",
+    "kr_image": "https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg",
+    "kr_price": null,
+    "kr_url": "https://www.hwahae.co.kr/goods/1712521",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1200863342",
+    "qoo10_title": "[テミンのフォトカード100%プレゼント] マスターズ アイシー ジェリー サンスティック 14g",
+    "qoo10_brand": "AHC",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/150/354/8377354150.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3459,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1200863342",
+    "kr_brand": "AHC (에이에이치씨)",
+    "kr_name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
+    "kr_volume": "14g",
+    "kr_image": "https://img.hwahae.co.kr/products/2194632/2194632_20260318101107.jpg",
+    "kr_price": 18900,
+    "kr_url": "https://www.hwahae.co.kr/goods/2194632",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1196939883",
+    "qoo10_title": "レチナール アイセラム リフティングローラー 15ml #カフェイン #バクチオール #アンチエイジングアプリケーター",
+    "qoo10_brand": "アビブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/142/354/8377354142.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 5063,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196939883",
+    "kr_brand": "아비브",
+    "kr_name": "아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 Retinal Eye Serum",
+    "kr_volume": "",
+    "kr_image": "https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg",
+    "kr_price": "30590",
+    "kr_url": "https://smartstore.naver.com/main/products/13332115550",
+    "kr_source": "naver",
+    "vol_match": false,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1182595010",
+    "qoo10_title": "PDRN ピンク ビタ コーティング マスク 10枚",
+    "qoo10_brand": "メディキューブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/798/855/7751855798.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3440,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1182595010",
+    "kr_brand": "메디큐브 (medicube)",
+    "kr_name": "PDRN 비타 코팅 마스크",
+    "kr_volume": "22g",
+    "kr_image": "https://img.hwahae.co.kr/products/2132660/2132660_20250219182024.jpg",
+    "kr_price": 5000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2132660",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1186682635",
+    "qoo10_title": "アゼライン酸 10 ヒアルロン レッドネス スージング セラム 30ml 敏感肌 保湿 スキンケア",
+    "qoo10_brand": "アヌア",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/919/491/7880491919.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3220,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186682635",
+    "kr_brand": "아누아",
+    "kr_name": "B11756 Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum 1.0 oz Skin Care",
+    "kr_volume": "",
+    "kr_image": "https://shopping-phinf.pstatic.net/main_6058410/60584105393.jpg",
+    "kr_price": "45700",
+    "kr_url": "http://jelly-pop.com/prod/content.asp?PMInc=12253078",
+    "kr_source": "naver",
+    "vol_match": false,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1199084782",
+    "qoo10_title": "ヴィーガンコンブチャ ティー エッセンス 150ml 保湿 しっとり エッセンス 韓国コスメ",
+    "qoo10_brand": "Dr.Ceuracle",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/302/908/8128908302.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3380,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199084782",
+    "kr_brand": "닥터슈라클",
+    "kr_name": "닥터슈라클 비건 콤부차 티 에센스 스타레나  1개  150ml",
+    "kr_volume": "",
+    "kr_image": "https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg",
+    "kr_price": "36980",
+    "kr_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V84862403844&itemId=20149212318&vendorItemId=84862403844&spec=10305199",
+    "kr_source": "naver",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1206207561",
+    "qoo10_title": "[1+1] トーンアップ パールクリーム 本体30g+30g スキンケア / 保湿 / ベースメイク韓国コスメ 並行輸入",
+    "qoo10_brand": "MAY ISLAND",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/050/674/8272674050.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3530,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206207561",
+    "kr_brand": "로하시스 (LOHASYS)",
+    "kr_name": "피에잇 톤업 앤 브라이트닝 크림 EX",
+    "kr_volume": "30g",
+    "kr_image": "https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg",
+    "kr_price": 29000,
+    "kr_url": "https://www.hwahae.co.kr/goods/1841007",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1205776987",
+    "qoo10_title": "AGE-R グルタチオン グロウ カプセル クリーム 50ml 保湿 スキンケア 並行輸入",
+    "qoo10_brand": "メディキューブ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/426/644/8267644426.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3530,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205776987",
+    "kr_brand": "메디큐브 (medicube)",
+    "kr_name": "에이지알 글루타치온 글로우 캡슐 크림",
+    "kr_volume": "50ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2097276/2097276_20240509172521.jpg",
+    "kr_price": 62000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2097276",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1198940759",
+    "qoo10_title": "Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 50ml 米 うるおい 日焼け止め",
+    "qoo10_brand": "Beauty of Joseon",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/313/816/8125816313.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2240,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198940759",
+    "kr_brand": "메이베나 (MAYBENA)",
+    "kr_name": "73선에센스 [SPF50+/PA++++]",
+    "kr_volume": "50ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2062601/2062601_20230830134544.jpg",
+    "kr_price": 35000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2062601",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1205562844",
+    "qoo10_title": "ダメージケアレッドプロテインコンディショナー 680ml / 韓国コスメ",
+    "qoo10_brand": "ミジャンセン",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/050/810/8263810050.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2043,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205562844",
+    "kr_brand": "유시몰",
+    "kr_name": "유시몰 브레쓰 민트볼 20입",
+    "kr_volume": "",
+    "kr_image": "https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg",
+    "kr_price": "6500",
+    "kr_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000199340",
+    "kr_source": "naver",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1212630238",
+    "qoo10_title": "46cm 体臭ケアデオドラント ボディソープ 600ml (クリーンソープ / シトラス / ハーバル)/弱酸性 韓国コスメ ボディウォッシュ",
+    "qoo10_brand": "46CM",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/162/367/8383367162.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 2510,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212630238",
+    "kr_brand": "산다화 (Sandawha)",
+    "kr_name": "울트라 젠틀 약산성 세안제",
+    "kr_volume": "100g",
+    "kr_image": "https://img.hwahae.co.kr/products/2207218/2207218_20260618180012.jpg",
+    "kr_price": 27000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2207218",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  },
+  {
+    "goods_no": "1210464824",
+    "qoo10_title": "[SET]CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー 500ml +トメント リンス 500ml",
+    "qoo10_brand": "エリザヴェッカ",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/445/396/8358396445.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3400,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210464824",
+    "kr_brand": "엘리자베카 (Elizavecca)",
+    "kr_name": "콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100",
+    "kr_volume": "500ml",
+    "kr_image": "https://img.hwahae.co.kr/products/2201299/2201299_20260420181258.jpg",
+    "kr_price": 25000,
+    "kr_url": "https://www.hwahae.co.kr/goods/2201299",
+    "kr_source": "hwahae",
+    "vol_match": true,
+    "brand_match": true
+  },
+  {
+    "goods_no": "1186310271",
+    "qoo10_title": "【大容量】ザ・リアル ノニ モイスチャー バランシングトナー 320ml / 肌荒れ・水分補給・キメ整え",
+    "qoo10_brand": "celimax",
+    "qoo10_image": "https://gd.image-qoo10.jp/li/775/497/8017497775.g_300-w-st_g.jpg",
+    "qoo10_price_jpy": 3060,
+    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186310271",
+    "kr_brand": "셀리맥스 (celimax)",
+    "kr_name": "노니 밸런싱 토너",
+    "kr_volume": "150ml",
+    "kr_image": "https://img.hwahae.co.kr/products/1862406/1862406_20220801000000.jpg",
+    "kr_price": 25000,
+    "kr_url": "https://www.hwahae.co.kr/goods/1862406",
+    "kr_source": "hwahae",
+    "vol_match": false,
+    "brand_match": false
+  }
+];
+
+function fmtPrice(p, unit) {
+  if (p == null) return '가격정보없음';
+  return p.toLocaleString('ko-KR') + unit;
+}
+
+function render(filter) {
+  const cards = document.getElementById('cards');
+  const filtered = PAIRS_DATA.filter(p => {
+    if (filter === 'match') return p.brand_match && p.vol_match;
+    if (filter === 'mismatch') return !p.brand_match || !p.vol_match;
+    return true;
+  });
+
+  cards.innerHTML = filtered.map(p => `
+    <div class="card">
+      <div class="card-header">
+        <span>상품번호: ${p.goods_no}</span>
+        <div class="badges">
+          <span class="badge ${p.brand_match ? 'match' : 'mismatch'}">브랜드 ${p.brand_match ? '일치' : '불일치'}</span>
+          <span class="badge ${p.vol_match ? 'match' : 'mismatch'}">용량 ${p.vol_match ? '일치' : '불일치'}</span>
+        </div>
+      </div>
+      <div class="compare-grid">
+        <div class="side qoo10">
+          <div class="side-label">큐텐 (일본)</div>
+          ${p.qoo10_image ? `<img class="prod-img" src="${p.qoo10_image}" loading="lazy">` : `<div class="prod-img no-img">이미지없음</div>`}
+          <div class="prod-brand">${p.qoo10_brand || '-'}</div>
+          <div class="prod-name">${p.qoo10_title}</div>
+          <div class="prod-meta">
+            <span class="prod-price">${fmtPrice(p.qoo10_price_jpy, '엔')}</span>
+            <a class="prod-link" href="${p.qoo10_url}" target="_blank">원본보기 →</a>
+          </div>
+        </div>
+        <div class="side kr">
+          <div class="side-label">국내 (${p.kr_source === 'hwahae' ? '화해' : '네이버'})</div>
+          ${p.kr_image ? `<img class="prod-img" src="${p.kr_image}" loading="lazy">` : `<div class="prod-img no-img">이미지없음</div>`}
+          <div class="prod-brand">${p.kr_brand || '-'}</div>
+          <div class="prod-name">${p.kr_name || '-'} ${p.kr_volume ? '('+p.kr_volume+')' : ''}</div>
+          <div class="prod-meta">
+            <span class="prod-price">${fmtPrice(p.kr_price, '원')}</span>
+            ${p.kr_url ? `<a class="prod-link" href="${p.kr_url}" target="_blank">구매처보기 →</a>` : '<span class="prod-link">링크없음</span>'}
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  const matchCount = PAIRS_DATA.filter(p => p.brand_match && p.vol_match).length;
+  document.getElementById('summaryLine').textContent =
+    `전체 ${PAIRS_DATA.length}건 중 브랜드+용량 완전일치 ${matchCount}건 · 지금 표시 ${filtered.length}건`;
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.filter);
+  });
+});
+
+render('all');
+</script>
+</body>
+</html>
