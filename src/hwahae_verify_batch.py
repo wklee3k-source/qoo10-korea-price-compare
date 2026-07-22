@@ -297,7 +297,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "candidates_summary": {c["source"]: c.get("name") for c in candidates},
             "brand": winner_brand or hwahae_data.get("brand"),
             "name": winner_name or hwahae_data.get("name"),
-            "volume": winner.get("volume") or hwahae_data.get("volume") or "",
+            "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
             "obsolete": hwahae_data.get("obsolete"),
             "sale": hwahae_data.get("sale"),
