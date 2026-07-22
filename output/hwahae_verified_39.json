@@ -17919,5 +17919,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165836772",
+    "translated_kr": "모이스트 샤인 헤어오일 56ml (캐비어&코코넛 함유 헤어오일)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스트 샤인 헤어오일"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "모이스트 샤인 헤어오일",
+    "volume": "56ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162782358",
+    "translated_kr": "워터 홀딩 톤업 선 세럼 50mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터 홀딩 톤업 선세럼 [SPF50+/PA++++]",
+      "naver": "가히 워터 홀딩 톤업 선세럼 (50ml) SPF50+"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "워터 홀딩 톤업 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "12000",
+    "mall": "가히",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10325635173",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8787013/87870139375.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8787013/87870139375.8.jpg",
+        "mall": "가히",
+        "link": "https://smartstore.naver.com/main/products/10325635173"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8804358/88043588811.7.jpg",
+        "mall": "가히",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10499083459"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
