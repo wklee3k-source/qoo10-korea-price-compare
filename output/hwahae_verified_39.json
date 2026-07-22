@@ -28547,5 +28547,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1175139603",
+    "translated_kr": "모이스처 밸런싱 무실리콘 샴푸 530ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스춰 밸런싱 무실리콘 샴푸"
+    },
+    "brand": "아도르 (Lador)",
+    "name": "모이스춰 밸런싱 무실리콘 샴푸",
+    "volume": "530ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1160446651",
+    "translated_kr": "클린티트리 리포솜 시카커밍 마스크 10장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
