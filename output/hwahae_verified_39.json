@@ -17590,5 +17590,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1197666496",
+    "translated_kr": "PDRN 핑크 나이아신99 휘핑 클렌저 모공케어 푸슝푸슝 거품 120g",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PDRN 핑크 나이아신아마이드 휩 클렌저"
+    },
+    "brand": null,
+    "name": "PDRN 핑크 나이아신아마이드 휩 클렌저",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197657224",
+    "translated_kr": "코직산 터메릭 리셀페이싱 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코직애씨드 터메릭 리설페이싱 토너",
+      "hwahae": "코직애씨드 터메릭 리설페이싱 토너"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "코직애씨드 터메릭 리설페이싱 토너",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
