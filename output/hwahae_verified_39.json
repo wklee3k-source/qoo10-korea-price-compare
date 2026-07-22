@@ -14503,5 +14503,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200842544",
+    "translated_kr": "터메릭버블딥마스크90g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206008294",
+    "translated_kr": "펩타이드샷2X탄력앰플30ml(탄력케어/보습/탄력서포트에센스)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력"
+    },
+    "brand": "앰플엔",
+    "name": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "13900",
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5062113585",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5062113585"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
