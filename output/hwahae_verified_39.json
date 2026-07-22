@@ -21134,5 +21134,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212659970",
+    "translated_kr": "살롱10 프로테인 샴푸 손상 헤어용 990ml 1개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "살롱10 샴푸"
+    },
+    "brand": null,
+    "name": "살롱10 샴푸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212659429",
+    "translated_kr": "살롱10 프로테인 트리트먼트 손상 헤어용 250ml 3개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "미쟝센 살롱10 단백질 트리트먼트 손상모발용, , 3개",
+      "hwahae": "살롱+클리닉 10 트리트먼트 [손상모발용]"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱+클리닉 10 트리트먼트 [손상모발용]",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
