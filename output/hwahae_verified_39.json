@@ -1142,5 +1142,42 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191395895",
+    "translated_kr": "스킨앤러브 엑토인 리커버리 선플루이드 50ml SPF50+ PA++++",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "스킨앤랩 엑토인 리커버리 선 플루이드 -",
+      "hwahae": "이피아이 선블락 [SPF50/PA++++] [라이트]",
+      "naver": "스킨앤랩 엑토인 리커버리 선 플루이드 50ml"
+    },
+    "brand": "스킨앤랩",
+    "name": "스킨앤랩 엑토인 리커버리 선 플루이드 50ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "스킨앤랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13263846240",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://smartstore.naver.com/main/products/13263846240"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6092292/60922923084.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6862454?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
