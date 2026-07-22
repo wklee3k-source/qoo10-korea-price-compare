@@ -296,28 +296,40 @@ jobs:
               "$B"
             echo "::endgroup::"
 
-            # 다른 워커들의 최신 진행사항을 먼저 받아온 뒤 내 몫을 병합한다
-            for i in $(seq 1 15); do
+            # [데이터 유실 방지 핵심] discovery_state_${B}.json(이 워커 전용
+            # 파일)은 git이 절대 건드리지 않는 로컬 소스이므로, 언제든 이걸
+            # 기준으로 재계산하면 이 워커의 몫은 무조건 살아남는다. 그래서
+            # "최신 origin을 받아옴 -> 그 원본 그대로 discovery_state.json에
+            # 반영 -> 그 위에 내 몫을 병합스크립트로 다시 합침"을 push가
+            # 성공할 때까지 반복한다. git merge(텍스트 레벨 병합)는 JSON
+            # 통짜 파일에서 위험하므로(충돌 시 한쪽 데이터가 통째로 날아갈
+            # 수 있음) 아예 쓰지 않는다 — 항상 origin 그대로 받고 재계산한다.
+            merge_and_commit() {
               git fetch origin discovery-live 2>/dev/null
-              if git merge origin/discovery-live --no-edit -X theirs -q 2>/dev/null; then break; fi
-              sleep_time=$((RANDOM % 5 + 1))
-              sleep "$sleep_time"
-            done
-
-            python merge_discovery_states.py ../output
-            python append_progress_history.py ../output
-            git add ../output/discovery_state.json "../output/discovery_state_${B}.json" \
-              "../output/discovery_result_${B}.xlsx" ../output/progress_history.json ../output/archive/ 2>/dev/null || true
-            if ! git diff --cached --quiet; then
+              git show origin/discovery-live:output/discovery_state.json > ../output/discovery_state.json 2>/dev/null || true
+              python merge_discovery_states.py ../output
+              python append_progress_history.py ../output
+              git add ../output/discovery_state.json "../output/discovery_state_${B}.json" \
+                "../output/discovery_result_${B}.xlsx" ../output/progress_history.json ../output/archive/ 2>/dev/null || true
+              git diff --cached --quiet && return 1
               git commit -m "Auto: parallel discovery branch $B progress (반복 $ITER)"
-              for i in $(seq 1 15); do
-                if git push origin discovery-live; then break; fi
-                sleep_time=$((RANDOM % 8 + 2))
-                echo "push 실패, ${sleep_time}초 대기 후 재시도 ($i/15)"
+              return 0
+            }
+
+            if merge_and_commit; then
+              PUSHED=0
+              for i in $(seq 1 30); do
+                if git push origin discovery-live; then PUSHED=1; break; fi
+                sleep_time=$((RANDOM % 6 + 1))
+                echo "push 실패(경합), ${sleep_time}초 대기 후 최신 기준으로 재계산 ($i/30)"
                 sleep "$sleep_time"
-                git fetch origin discovery-live
-                git merge origin/discovery-live --no-edit -X theirs -q 2>/dev/null || true
+                # 방금 커밋은 버리고(내 워커파일엔 영향 없음) 최신 origin 기준으로 다시 병합+커밋
+                git reset --soft HEAD~1 2>/dev/null || true
+                merge_and_commit || true
               done
+              if [ "$PUSHED" != "1" ]; then
+                echo "::warning::브랜치 $B: 30회 재시도에도 push 실패. 이 워커의 데이터는 discovery_state_${B}.json에 안전하게 남아있으니 다음 반복에서 다시 시도됨"
+              fi
             fi
           done
 
