@@ -6152,5 +6152,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1175557299",
+    "translated_kr": "다슈 데일리 밀크씨슬 블루바이옴 스칼프샴푸 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "다슈 데일리 밀크씨슬 블루바이옴 ...",
+      "hwahae": "밀크씨슬 블루바이옴 스칼프 샴푸"
+    },
+    "brand": "다슈 (DASHU)",
+    "name": "밀크씨슬 블루바이옴 스칼프 샴푸",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1105980668",
+    "translated_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "프라임 어드밴서 디에이징 앰플 세럼",
+      "hwahae": "프라임 어드밴서 디에이징 PDRN 부스터샷"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 80000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
