@@ -12183,5 +12183,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192452345",
+    "translated_kr": "히알루론1%세럼80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비건인증 히알루론 1% 세럼 (히알루론산 ...",
+      "hwahae": "히알루론 1% 세럼"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "히알루론 1% 세럼",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210847470",
+    "translated_kr": "id PLACOSMETICS리얼애프터케어미스트120ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "리얼 애프터 케어 미스트"
+    },
+    "brand": null,
+    "name": "리얼 애프터 케어 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
