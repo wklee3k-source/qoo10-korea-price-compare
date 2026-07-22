@@ -23619,5 +23619,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1197354746",
+    "translated_kr": "345 릴리프 크림 미스트 1개 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194120635",
+    "translated_kr": "AC 딥 배리어 진정 앰플 1개 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "AC 딥 장벽 진정 보습 앰플"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "AC 딥 장벽 진정 보습 앰플",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
