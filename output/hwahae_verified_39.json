@@ -10161,5 +10161,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203692533",
+    "translated_kr": "한국헤어케어데미지테라피노워시트리트먼트EX250ml로즈머스크향230℃열보호7종콜라겐안씻어내는아웃배스드라이기전케어한국살롱케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "그로우어스 데미지 테라피 노워시 트리트먼트 EX + 리커버 테라피 샴푸 포 우먼 미니어처"
+    },
+    "brand": null,
+    "name": "그로우어스 데미지 테라피 노워시 트리트먼트 EX + 리커버 테라피 샴푸 포 우먼 미니어처",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1141188697",
+    "translated_kr": "[5+5]로얄블랙스네일앰플마스크10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "누구나 피부를 건강하게 Dr.G",
+      "hwahae": "로얄 블랙 스네일 앰플 마스크"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "로얄 블랙 스네일 앰플 마스크",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
