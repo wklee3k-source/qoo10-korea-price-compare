@@ -18230,5 +18230,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211387191",
+    "translated_kr": "타임 레볼루션 더 퍼스트 에센스 엔리치드 150ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타임 레볼루션 더 퍼스트 에센스 인리치드"
+    },
+    "brand": "미샤 (MISSHA)",
+    "name": "타임 레볼루션 더 퍼스트 에센스 인리치드",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210849711",
+    "translated_kr": "레티날 레티놀 2000+ NAD 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "퓨리토 레티날 레티놀 2000+ NAD 세럼"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "BFT 진정 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "30000",
+    "mall": "퓨리토",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13557882334",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110239/91102392701.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110239/91102392701.1.jpg",
+        "mall": "퓨리토",
+        "link": "https://smartstore.naver.com/main/products/13557882334"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
