@@ -1,7 +1,8 @@
 {
   "visited_shops": [
-    "djshopping",
-    "radiantmood"
+    "realkbeauty",
+    "radiantmood",
+    "djshopping"
   ],
   "all_products": [
     {
@@ -18,14 +19,59 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1190578211",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/171/326/7936326171.g_300-w-st_g.jpg",
+      "title": "デイリーマスク7種+1マスク/毛穴の弾力 ドングリ/ニキビ跡 ジャガイモ/水分保湿 キャロット/ビタユズ/美白 栄養ライス/肌の鎮静/バジルティーツリー",
+      "brand": "スキンフード",
+      "price_jpy": 2450,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1190578211",
+      "shop_id": "realkbeauty",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1193149194",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/828/274/8213274828.g_300-w-st_g.jpg",
+      "title": "[NEW] A.G.E. インタラプター ウルトラ弾力リフティングセラムセット(+4ml+ 4ml+ 4ml)＋スーパーカラゲンマスク",
+      "brand": "スキンシューティカルズ",
+      "price_jpy": 21695,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193149194",
+      "shop_id": "realkbeauty",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1173839756",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/694/298/8213298694.g_300-w-st_g.jpg",
+      "title": "P-TIOX リンクルストレートニングセラム 30ml(+mini 4ml x2)+2マスク",
+      "brand": "スキンシューティカルズ",
+      "price_jpy": 16658,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1173839756",
+      "shop_id": "realkbeauty",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/radiantmood",
-    "https://m.qoo10.jp/shop/djshopping"
+    "https://m.qoo10.jp/shop/djshopping",
+    "https://m.qoo10.jp/shop/realkbeauty"
   ],
   "pending_keywords": [
-    "PDRNヒアルロン酸カプセル ラム レフィル",
     "ベターミーアイパレット",
     "フェイスパック シートマスク 大容量 個包装 ビタミンC ヒアルロン酸 美容液マスク ひんやり 冷感 毛穴ケア 夏用 ひんやりスキンケア 朝パック フェイスマスク 温泉後・入浴後のスキンケアに",
     "アイコアパレット",
@@ -429,9 +475,15 @@
     "リードルショット ニードルショット 50",
     "コンブチャ 美容茶ダイエット粉末 ベリー",
     "イブンレディアンスイルミネーティングセラム",
-    "ビタライト リードルショット100 2ステップハイドロゲルマスク"
+    "ビタライト リードルショット100 2ステップハイドロゲルマスク",
+    "デイリーマスク7種+1マスク",
+    "A.G.E. インタラプター ウルトラ弾力リフティングセラム ＋スーパーカラゲンマスク",
+    "キャロット カロチン バランシング クレンジング しっとり フォーム",
+    "スキン レイヤー フィット チーク+1マスク",
+    "P-TIOX リンクルストレートニングセラム +2マスク"
   ],
   "seen_keywords": [
+    "PDRNヒアルロン酸カプセル ラム レフィル",
     "エキスパートマデカ メラキャプチャーアンプルプロ"
   ]
 }
