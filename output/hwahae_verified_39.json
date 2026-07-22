@@ -9227,5 +9227,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209905024",
+    "translated_kr": "스마트화이트쥬얼필링,120ml,2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "더페이스샵 스마트 화이트 쥬얼 필링, , 2개",
+      "hwahae": "스마트 필링 화이트 쥬얼"
+    },
+    "brand": "더페이스샵 (THEFACESHOP)",
+    "name": "스마트 필링 화이트 쥬얼",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209905036",
+    "translated_kr": "더쉘퍼퓸핸드크림15ml7종(PUMKINI/CHAMA/000/FEY9/POSY/VEIN/HER)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "쉘 퍼퓸 핸드 펌키니"
+    },
+    "brand": null,
+    "name": "쉘 퍼퓸 핸드 펌키니",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
