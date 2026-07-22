@@ -14547,5 +14547,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209064803",
+    "translated_kr": "[25SS/New](미연PICK)라즈베리/모링가샤인헤어식초400ml+400ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "이브로쉐 라즈베리 샤인 헤어식초 400+",
+      "hwahae": "샤인 헤어식초 [라즈베리]",
+      "naver": "[라운지ONLY] 이브로쉐 라즈베리 샤인 푸석모발 헤어식초 400ml, 3개"
+    },
+    "brand": "이브로쉐 (YVESROCHER)",
+    "name": "샤인 헤어식초 [라즈베리]",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39900",
+    "mall": "이브로쉐",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13031698606",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9057620/90576209698.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9057620/90576209698.9.jpg",
+        "mall": "이브로쉐",
+        "link": "https://smartstore.naver.com/main/products/13031698606"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205913437",
+    "translated_kr": "마다가스카르센텔라히알-시카워터핏선세럼50ml+50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 히알루",
+      "hwahae": "마다가스카르 센텔라 히알루-시카 실키핏 선 스틱 [SPF50+/PA++++]"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 실키핏 선 스틱 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
