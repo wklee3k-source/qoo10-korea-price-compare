@@ -1687,5 +1687,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1201899429",
+    "translated_kr": "어성초70 수딩콜라겐마스크 4매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 70 수딩 콜라겐 마스크 4매",
+      "hwahae": "어성초 70 수딩 콜라겐 마스크"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 수딩 콜라겐 마스크",
+    "volume": "38g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204188494",
+    "translated_kr": "어성초시카쿨링수분크림100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초시카 쿨링 수분 크림",
+      "hwahae": "어성초시카 쿨링 수분 크림"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "어성초시카 쿨링 수분 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
