@@ -8039,5 +8039,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165513951",
+    "translated_kr": "마다가스카르센텔라퀵카밍패드70매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 퀵 카밍 패드 70매",
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165361801",
+    "translated_kr": "[1+1]콜츠푸트안티댄드러프샴푸200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "콜츠푸트 안티",
+      "hwahae": "콜츠푸트 안티-댄드러프 샴푸"
+    },
+    "brand": "라우쉬 (RAUSCH)",
+    "name": "콜츠푸트 안티-댄드러프 샴푸",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
