@@ -29368,5 +29368,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1120216698",
+    "translated_kr": "SA BON 크림 투 오일 데드씨 200mL / 바디밀크 정품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타라곤 에센셜 오일"
+    },
+    "brand": "아유25 (AYU25)",
+    "name": "타라곤 에센셜 오일",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205993293",
+    "translated_kr": "손바유 크림 단품 70밀리리터 (x 1) (무향료)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
