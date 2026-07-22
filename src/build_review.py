@@ -138,13 +138,19 @@ def build_pairs():
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
         kr_qty = extract_quantity(kr_name_display)
+        # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
+        # 있거나, 구매처 원본명에 "N종세트"가 있는 경우
+        is_set = bool(
+            re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
+            or re.search(r"\d+종\s*(세트|SET)", kr_name_display, re.I)
+        )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
-            "kr_qty": kr_qty,
+            "kr_qty": kr_qty, "is_set": is_set,
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
@@ -204,6 +210,7 @@ def build_html(pairs: list[dict]):
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
         vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
+        set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
         trust_badge = (
             f'<span class="badge {"match" if trust in ("공식몰", "브랜드직영추정", "신뢰채널", "스마트스토어") else "unknown"}">{trust or "판매처미확인"}</span>'
@@ -235,7 +242,7 @@ def build_html(pairs: list[dict]):
     <div class="goods_no">goods_no: {goods_no}</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{trust_badge}</span></h3>
+    <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
