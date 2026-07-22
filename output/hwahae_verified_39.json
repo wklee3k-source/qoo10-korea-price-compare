@@ -11805,5 +11805,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1150751771",
+    "translated_kr": "3번톤업크림50ml/3번노파운데이션도자기피부톤업크림SPF50+PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "3번 도자기결 고이빚은 세라믹쿠션 [SPF50+/PA++++]"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "3번 도자기결 고이빚은 세라믹쿠션 [SPF50+/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1151012307",
+    "translated_kr": "어성초포어컨트롤클렌징오일200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 포어 컨트롤 클렌징오일"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 포어 컨트롤 클렌징오일",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
