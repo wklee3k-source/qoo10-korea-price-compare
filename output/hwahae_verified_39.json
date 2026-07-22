@@ -25084,5 +25084,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1194867832",
+    "translated_kr": "제로 원데이 엑소좀 샷 2000 / 7500 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "제로 원데이 엑소좀 샷 모공 앰플 7500",
+      "hwahae": "원데이 엑소좀 샷 모공 앰플 7500",
+      "naver": "제로 원데이 엑소좀 샷 모공 앰플 7500"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "원데이 엑소좀 샷 모공 앰플 7500",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "37800",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1512&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5472519/54725199221.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5472519/54725199221.2.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1512&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182404638",
+    "translated_kr": "케라틴 LPP 샴푸 530ml/트리트먼트 530ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "케라틴 LPP 단백질 샴푸"
+    },
+    "brand": null,
+    "name": "케라틴 LPP 단백질 샴푸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
