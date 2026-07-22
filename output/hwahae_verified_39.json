@@ -20395,5 +20395,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204022304",
+    "translated_kr": "스테이프레시 톤업 선크림 퍼플, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "조선미녀 스테이 프레쉬 톤업 선크림 퍼플 SPF50+ PA++++ ...",
+      "hwahae": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211863823",
+    "translated_kr": "리들샷 100 / 300 / 700 + AHC 아이크림 본품 포함 (한국 대인기 스킨케어 세트)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "VT 리들샷 컴팩트 세트"
+    },
+    "brand": null,
+    "name": "VT 리들샷 컴팩트 세트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
