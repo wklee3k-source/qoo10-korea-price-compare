@@ -26744,5 +26744,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202040262",
+    "translated_kr": "조선아뷰티 원더바스 레몬시럽 팩 클렌저 200ml (+50ml)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Jo Sung Ah Beauty"
+    },
+    "brand": null,
+    "name": "Jo Sung Ah Beauty",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202040223",
+    "translated_kr": "에스트라 에이시카365 수딩 리페어 마스크 pH4.5 5장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "NEW 에이시카365 수딩 리페어 마스크 pH4.5 5매",
+      "hwahae": "에이시카365 수딩 리페어 마스크 pH4.5",
+      "naver": "[에스트라] 에이시카 365 수딩 리페어 마스크 pH4.5 5매 150100741"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 수딩 리페어 마스크 pH4.5",
+    "volume": "25ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/6731552?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6065918/60659187854.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6065918/60659187854.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6731552?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
