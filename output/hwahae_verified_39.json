@@ -17566,5 +17566,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212749218",
+    "translated_kr": "【한국 코스메】젖산(Lactic Acid)10%+히알루론산HA 30ml 뷰티액 각질케어 보습 결 부드러운 피부 페이스세럼 스킨케어 한국 뷰티액 인기",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매트릭실 10% + HA"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "매트릭실 10% + HA",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169557632",
+    "translated_kr": "비타C+ 칙칙함 탄력 앰플 20ml + 15ml 1세트 뷰티액 영양 기프트세트 상품 윤기 윤기",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
