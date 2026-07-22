@@ -29178,5 +29178,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1204555836",
+    "translated_kr": "PDRN 비타펩타이드 모공 리페어 세럼, 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비타민 PDRN 모공 탄력 세럼",
+      "hwahae": "비타민 PDRN 모공 탄력 세럼"
+    },
+    "brand": "디어클레어스 (dearKlairs)",
+    "name": "비타민 PDRN 모공 탄력 세럼",
+    "volume": "35ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1126083196",
+    "translated_kr": "[국내발송] 5번 화이트 글루타치온 토너 토너패드 크림 세트 토너 팩 클렌징패드 화이트글루타치온 필름패드 모공 비타민C 한국 저자극 민감성 피부 스킨케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "5번 글루타치온C 비타수액 에센셜 토너"
+    },
+    "brand": null,
+    "name": "5번 글루타치온C 비타수액 에센셜 토너",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
