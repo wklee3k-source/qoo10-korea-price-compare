@@ -15534,5 +15534,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190054453",
+    "translated_kr": "레드 블레미시 리페어 수딩 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 수딩 크림"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 수딩 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192506745",
+    "translated_kr": "베이킹 파우더 콜라겐 모공 스크럽 25포입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베이킹 파우더 콜라겐 포어 스크럽"
+    },
+    "brand": "팜스테이 (Farmstay)",
+    "name": "베이킹 파우더 콜라겐 포어 스크럽",
+    "volume": "7g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
