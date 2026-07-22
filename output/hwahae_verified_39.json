@@ -4869,5 +4869,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1190578211",
+    "translated_kr": "데일리마스크7종+1마스크/모공탄력도토리/여드름자국감자/수분보습당근/비타유자/미백영양라이스/피부진정바질티트리",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "유자씨 비타 데일리 마스크 30매"
+    },
+    "brand": null,
+    "name": "유자씨 비타 데일리 마스크 30매",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193149194",
+    "translated_kr": "[NEW]A.G.E.인터럽터울트라탄력리프팅세럼세트(+4ml+4ml+4ml)+수퍼콜라겐마스크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "AGE 인터럽터 울트라 탄력 리프팅 세럼",
+      "hwahae": "A.G.E. 인터럽터"
+    },
+    "brand": "스킨수티컬즈 (SKINCEUTICALS)",
+    "name": "A.G.E. 인터럽터",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
