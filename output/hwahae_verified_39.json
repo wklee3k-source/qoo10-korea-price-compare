@@ -6857,5 +6857,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1188402180",
+    "translated_kr": "EGF포스트레이저세럼미스트120ml[재생+진정+미스트]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "이지듀 대웅제약 이지듀 미스트 포스트레이저 뿌리는 세럼 DW",
+      "hwahae": "포스트 레이저 EGF 미스트"
+    },
+    "brand": "이지듀 (Easydew)",
+    "name": "포스트 레이저 EGF 미스트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188402173",
+    "translated_kr": "알로에수딩젤미스트155ml×3[진정+보습+시간단축]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "과일나라 알로에 수딩젤 미스트 x 5개 알로에베라 95% 수분 보습"
+    },
+    "brand": null,
+    "name": "과일나라 알로에 수딩젤 미스트 x 5개 알로에베라 95% 수분 보습",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
