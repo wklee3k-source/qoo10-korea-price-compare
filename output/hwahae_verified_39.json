@@ -20421,5 +20421,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209668463",
+    "translated_kr": "[MEDIHEAL 마스크 1장 포함] 어성초 77 수딩 토너, 350ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 수딩 토너",
+      "naver": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6853980824",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8439848/84398481146.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8439848/84398481146.5.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/6853980824"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207950025",
+    "translated_kr": "호텔 테라피 바디 워시, 1013ml [MEDIHEAL 마스크 1장 증정]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "호텔 테라피 바디워시 [상탈프레쉬]",
+      "naver": "[헤트라스 뷰티] 호텔테라피 퍼퓸 대용량 바디워시 1013ml B-BW"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "호텔 테라피 바디워시 [상탈프레쉬]",
+    "volume": "1013ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "9900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4229925?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5163595/51635953685.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5163595/51635953685.5.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4229925?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5191100/51911007956.4.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=143590446&shop_id=19454&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
