@@ -90,5 +90,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1187136865",
+    "translated_kr": "블랑카우 리얼밀크 클렌징폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "블랑카우 밀키스킨 리얼 클렌징폼 상품의 정보 및",
+      "hwahae": "밀키스킨 리얼 클렌징폼"
+    },
+    "brand": "블랑카우 (BLANCOW)",
+    "name": "밀키스킨 리얼 클렌징폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1177838255",
+    "translated_kr": "Kundal 허니앤마카다미아 네이처샴푸 블랙베리베이 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "쿤달 허니 앤 마카다미아 네이처 샴푸",
+      "hwahae": "허니 앤 마카다미아 네이처 샴푸 [블랙베리베이]"
+    },
+    "brand": "쿤달 (KUNDAL)",
+    "name": "허니 앤 마카다미아 네이처 샴푸 [블랙베리베이]",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
