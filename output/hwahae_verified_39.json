@@ -27360,5 +27360,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188406613",
+    "translated_kr": "세라마이드 아토 로션 600ml [보습+배리어+민감성 피부]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "일리윤 세라마이드 아토 로션 1개 민감피부 건조피부",
+      "hwahae": "세라마이드 아토 로션",
+      "naver": "일리윤 바디로션 대용량 무향 세라마이드 아토 580ml+300ml"
+    },
+    "brand": "일리윤 (ILLIYOON)",
+    "name": "세라마이드 아토 로션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "28300",
+    "mall": "일리윤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8173801358",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8571830/85718301681.55.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8571830/85718301681.55.jpg",
+        "mall": "일리윤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8173801358"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188406610",
+    "translated_kr": "알로에 수징 젤 미스트 155ml×3 [진정+보습+시간단축]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "프럼네이처 알로에베라 98% 수딩젤 미스트 x 3EA｜프럼네이처｜미스트｜재외한국인을 위한 한국쇼핑몰 코리아데파트"
+    },
+    "brand": null,
+    "name": "프럼네이처 알로에베라 98% 수딩젤 미스트 x 3EA｜프럼네이처｜미스트｜재외한국인을 위한 한국쇼핑몰 코리아데파트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
