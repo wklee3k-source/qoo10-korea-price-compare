@@ -877,5 +877,52 @@
         "link": "https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
       }
     ]
+  },
+  {
+    "goods_no": "1198940759",
+    "translated_kr": "Beauty of Joseon 릴리프선아쿠아프레시 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "BEAUTY OF JOSEON 릴리프 선 아쿠아",
+      "naver": "[쿨링진정] 조선미녀 아쿠아프레쉬 선크림 50ml+20ml 증정 기획"
+    },
+    "brand": "조선미녀",
+    "name": "[쿨링진정] 조선미녀 아쿠아프레쉬 선크림 50ml+20ml 증정 기획",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "15000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000224658",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5437268/54372680578.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5437268/54372680578.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000224658"
+      }
+    ]
+  },
+  {
+    "goods_no": "1205562844",
+    "translated_kr": "euthymol 브레스민트볼 20개입",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "유시몰 브레쓰 민트볼 20입"
+    },
+    "brand": null,
+    "name": "유시몰 브레쓰 민트볼 20입",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
