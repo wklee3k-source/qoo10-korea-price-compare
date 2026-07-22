@@ -23124,5 +23124,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212499809",
+    "translated_kr": "비타K 다크 클리어 아이크림 15ml 리필",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "비타K 다크 클리어 아이크림"
+    },
+    "brand": null,
+    "name": "비타K 다크 클리어 아이크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212102383",
+    "translated_kr": "미라클 2X 헤어 트리트먼트 네롤리 향 180ml / 네롤리 플라워 / 손상케어·집중 보습 / 살롱 품질 / 씻어내지 않는 트리트먼트 / 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "모레모 헤어 트리트먼트 미라클 2X",
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
