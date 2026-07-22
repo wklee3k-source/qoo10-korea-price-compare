@@ -22024,5 +22024,67 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1111455317",
+    "translated_kr": "히스트랩 비타씨 컴플렉스 앰플 47% 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타 씨 컴플렉스 앰플 47"
+    },
+    "brand": "히스토랩 (HISTOLAB)",
+    "name": "비타 씨 컴플렉스 앰플 47",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 61600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203787114",
+    "translated_kr": "【보습크림】 크림스컴투루 스쿠알란 배리어 리페어 크림 50ml 윤기 피부 건성피부 수광 피부 수분 건조 고보습 촉촉함 쭉쭉 찐기 없음 수분 충전 피부 트러블",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "디마프 크림스컴트루 스쿠알란 배리어 리페어크림 50ml"
+    },
+    "brand": "디마프",
+    "name": "디마프 크림스컴트루 스쿠알란 배리어 리페어크림 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "38000",
+    "mall": "디마프 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9795462764",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8733996/87339965037.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733996/87339965037.6.jpg",
+        "mall": "디마프 스토어",
+        "link": "https://smartstore.naver.com/main/products/9795462764"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981863/89818631106.jpg",
+        "mall": "디마프",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12274120390"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4754246/47542463354.5.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3814783?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319068"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
