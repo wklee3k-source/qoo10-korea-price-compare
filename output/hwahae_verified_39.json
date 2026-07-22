@@ -11995,5 +11995,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1150780717",
+    "translated_kr": "[1+1]녹두약산성클렌징폼,160ml2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[비플레인] 녹두 약산성 클렌징 폼 160ml X 2개 (+필터패드 10매 추가 증정) beplain0185"
+    },
+    "brand": "비플레인",
+    "name": "[비플레인] 녹두 약산성 클렌징 폼 160ml X 2개 (+필터패드 10매 추가 증정) beplain0185",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "35900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3138771?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4784844/47848449898.12.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4784844/47848449898.12.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3138771?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210837656",
+    "translated_kr": "TXA나이아신아마이드10%다크스팟세럼30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
