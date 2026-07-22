@@ -17342,5 +17342,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1158942439",
+    "translated_kr": "마다가스카르 센텔라 퀵 카밍 패드 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210960985",
+    "translated_kr": "30초 퀵 버블 마스크 모이스트 95ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "30초 퀵 버블 마스크 [모이스트]"
+    },
+    "brand": "메노킨 (MENOKIN)",
+    "name": "30초 퀵 버블 마스크 [모이스트]",
+    "volume": "95ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
