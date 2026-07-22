@@ -9885,5 +9885,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1141188697",
+    "translated_kr": "[5+5]로얄블랙스네일앰플마스크10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "로얄 블랙 스네일 앰플 마스크"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "로얄 블랙 스네일 앰플 마스크",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152063267",
+    "translated_kr": "저자극페이스앤바디대용량선크림150mL(SPF50+PA++++)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "바디언스 눈시림 백탁없는 저자극 페이스 앤 바디 선크림 대용량 300ml 선로션 선블록"
+    },
+    "brand": "바디언스",
+    "name": "바디언스 눈시림 백탁없는 저자극 페이스 앤 바디 선크림 대용량 300ml 선로션 선블록",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29800",
+    "mall": "바디언스 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9901194642",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8744569/87445696915.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8744569/87445696915.2.jpg",
+        "mall": "바디언스 스토어",
+        "link": "https://smartstore.naver.com/main/products/9901194642"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
