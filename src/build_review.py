@@ -110,9 +110,17 @@ def build_pairs():
             stats["no_qoo10_match"] += 1
             continue
 
+        stats["ok"] += 1
+
+        # 표시용 한글 상품명: 구매처(네이버) 원본 상품명을 최우선으로 쓴다.
+        # 승자가 화해/Exa일 때는 그쪽 name/volume 필드가 부실한 경우가 많고
+        # (개수·용량 누락), 실제 구매링크의 원본 제목엔 정확한 정보가 이미
+        # 들어있는 경우가 대부분이라, 그걸 그대로 보여주는 게 가장 정확하다.
+        naver_original_name = (x.get("candidates_summary") or {}).get("naver")
+        kr_name_display = naver_original_name or x.get("name") or ""
+
         qoo10_vol = extract_volume_ml(q["title"])
-        # 용량필드가 비어있으면(네이버 승자인 경우 흔함) 상품명에서 직접 추출한다
-        kr_vol = extract_volume_ml(x.get("volume") or "") or extract_volume_ml(x.get("name") or "")
+        kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
 
         orig_brand = q.get("brand", "")
@@ -122,13 +130,13 @@ def build_pairs():
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
-        stats["ok"] += 1
-        kr_qty = extract_quantity(x.get("name") or "")
+        kr_qty = extract_quantity(kr_name_display)
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": translations.get(x["goods_no"], ""),
-            "kr_brand": x.get("brand"), "kr_name": x.get("name"), "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
+            "kr_brand": x.get("brand"), "kr_name": kr_name_display,
+            "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
             "kr_qty": kr_qty,
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
@@ -180,6 +188,14 @@ def build_html(pairs: list[dict]):
         if p.get("kr_mall"):
             kr_site_text += f" · {p['kr_mall']}"
 
+        # 구매처 원본 이름을 그대로 쓰되, 개수(2개 이상)가 원본 텍스트에 이미
+        # 안 드러나 있으면(브랜드/화해쪽 부실한 name이 승자였던 경우) 뒤에
+        # 보충해서 붙인다. 원본에 이미 "2개"/"1+1" 등이 있으면 중복 방지로 안 붙임.
+        kr_name_val = p['kr_name'] or ''
+        already_has_qty = bool(re.search(r"\d+\s*(개|매|セット|1\+1)", kr_name_val))
+        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty else ''
+        kr_name_full = f"{kr_name_val}{qty_suffix}"
+
         cards_html.append(f'''
 <div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
   <div class="side">
@@ -194,8 +210,8 @@ def build_html(pairs: list[dict]):
   <div class="side">
     <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
-    <div class="name-label">한글 상품명(수정가능):</div>
-    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(p['kr_brand'] or '')} {esc(p['kr_name'] or '')} {('(' + esc(p['kr_volume']) + ')') if p.get('kr_volume') else ''} {('x' + str(p['kr_qty']) + '개') if p.get('kr_qty', 1) > 1 else ''}</textarea>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
     <div class="price">{p['kr_price'] or '-'} 원</div>
     <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
   </div>
@@ -204,10 +220,10 @@ def build_html(pairs: list[dict]):
   </div>
 </div>''')
 
-    cards_str = "\n".join(cards_html)
+    cards_str = "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     new_html = re.sub(
-        r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n).*?(\n<script>)",
+        r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
         lambda m: m.group(1) + cards_str + m.group(2),
         template,
         flags=re.S,

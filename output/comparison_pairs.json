@@ -8,7 +8,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199735232",
     "qoo10_name_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+    "kr_name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 2000",
     "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -36,9 +36,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1172085888",
     "qoo10_name_kr": "COSRX 풀핏 프로폴리스 라이트앰플 30ml",
     "kr_brand": "코스알엑스 (COSRX)",
-    "kr_name": "풀핏 프로폴리스 라이트 앰플",
+    "kr_name": "코스알엑스 풀핏 프로폴리스 라이트 앰플 30ml, 2개",
     "kr_volume": "30ml",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
@@ -69,9 +69,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161371182",
     "qoo10_name_kr": "제니하우스 루트볼륨픽서 200ml",
     "kr_brand": "제니하우스 (jennyhouse)",
-    "kr_name": "루트 볼륨 픽서",
+    "kr_name": "제니하우스 루트 볼륨 픽서 200ml, 2개",
     "kr_volume": "200ml",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg",
@@ -102,9 +102,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196815742",
     "qoo10_name_kr": "아비브 모델링크림마스크 71g",
     "kr_brand": "아비브 (Abib)",
-    "kr_name": "모델링 크림 마스크 [부활초스쿱]",
+    "kr_name": "[아비브] 모델링 크림 마스크 어성초 스쿱 71ml 2개 45",
     "kr_volume": "71ml",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_5337980/53379806108.1.jpg",
@@ -130,9 +130,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1164705875",
     "qoo10_name_kr": "BUSHMAN 워터프루프프로 선크림 50g+선스틱20g",
     "kr_brand": "부쉬맨 (BUSHMAN)",
-    "kr_name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "kr_name": "부쉬맨 워터프루프 프로 선크림 150g,선스틱 20g SPF50+ PA+++ 2종세트",
     "kr_volume": "50g",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg",
@@ -145,7 +145,7 @@
     "kr_mall": "부쉬맨",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -201,7 +201,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199084782",
     "qoo10_name_kr": "Dr.Ceuracle 비건콤부차티에센스 150ml",
     "kr_brand": "닥터슈라클 (Dr.Ceuracle)",
-    "kr_name": "비건 콤부차 티 에센스",
+    "kr_name": "닥터슈라클 비건 콤부차 티 에센스 150ml",
     "kr_volume": "150ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -285,7 +285,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210464824",
     "qoo10_name_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
     "kr_brand": "엘리자베카 (Elizavecca)",
-    "kr_name": "콜라겐 코팅 헤어 A+ 머슬 샴푸",
+    "kr_name": "콜라겐 코팅 헤어 A+ 머슬 샴푸 500ml",
     "kr_volume": "500ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -328,7 +328,7 @@
     "kr_mall": "올리브영",
     "kr_seller_trust": "신뢰채널",
     "kr_source": "naver",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -374,7 +374,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208874492",
     "qoo10_name_kr": "[1+1]엣지컷블렌더 메이크업퍼프",
     "kr_brand": null,
-    "kr_name": "엣지 컷 블렌더",
+    "kr_name": "그라펜 모공커버 엣지컷 블랜더 메이크업 퍼프",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -407,9 +407,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204156842",
     "qoo10_name_kr": "[1+1]톤&스팟 컬렉터앰플 30ml+30ml",
     "kr_brand": null,
-    "kr_name": "톤앤스팟 코렉터 앰플 1+1",
+    "kr_name": "[7월 제조] 바이알레시피 순수 비타민 CE페룰릭 맑은 광채 기미앰플 잡티 검버섯 색소침착 흑자 미백 항산화 밝은 피부톤 비타민C앰플",
     "kr_volume": "",
-    "kr_qty": 2,
+    "kr_qty": 1,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8758024/87580240376.5.jpg",
@@ -435,8 +435,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1093734916",
     "qoo10_name_kr": "[1+1]스피큘세럼(니들액션100) 30ml/바르는모공세럼침/니들샷/부스팅세럼/피부결개선/한국화장품",
     "kr_brand": null,
-    "kr_name": "스피큘 세럼 초강력 모공케어 탄력부스팅 피부결 ...",
-    "kr_volume": "",
+    "kr_name": "퓨어그램 오리진 롱 니들샷 스피큘 모공케어 피부결개선 100 앰플, 30ml, 1개",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -465,7 +465,7 @@
     "kr_mall": "퓨어그램",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -506,7 +506,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1101579770",
     "qoo10_name_kr": "레티노라겐 클렌징폼 120ml",
     "kr_brand": null,
-    "kr_name": "피캄 레티놀라겐 앰플 샷 폼클렌저",
+    "kr_name": "메노킨 30초 버블 클렌저",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -534,9 +534,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1178226810",
     "qoo10_name_kr": "[NEW]PDRN핑크콜라겐볼륨멀티밤10g",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "PDRN 핑크 콜라겐 볼륨 멀티밤",
+    "kr_name": "PDRN 핑크 콜라겐 볼륨 멀티밤 X 2개",
     "kr_volume": "",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9090546/90905461448.jpg",
@@ -567,7 +567,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191514690",
     "qoo10_name_kr": "어성초LHA모이스처필링젤,120ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 LHA 모이스처 필링젤",
+    "kr_name": "아누아 어성초 LHA 모이스처 필링젤 120ml 민감 얼굴 각질 제거 제거제",
     "kr_volume": "120ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -595,9 +595,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210476388",
     "qoo10_name_kr": "톤&스팟컬렉터앰플,30ml,2개",
     "kr_brand": null,
-    "kr_name": "리덴스 톤앤스팟 코렉터 앰플 2개 더블기획",
+    "kr_name": "[더블기획] 톤 브라이트닝 다크 스팟 앰플 패드 60매 2개",
     "kr_volume": "",
-    "kr_qty": 2,
+    "kr_qty": 60,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8995498/89954988237.1.jpg",
@@ -623,8 +623,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201907966",
     "qoo10_name_kr": "마다가스카르센텔라포어마이징프레시앰플100ml",
     "kr_brand": "스킨1004 (SKIN1004)",
-    "kr_name": "마다가스카르 센텔라 포어마이징 프레쉬 앰플",
-    "kr_volume": "",
+    "kr_name": "마다가스카르 센텔라 포어마이징 프레쉬 앰플 100ml",
+    "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -638,7 +638,7 @@
     "kr_mall": "SKIN1004 공식몰",
     "kr_seller_trust": "공식몰",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -651,8 +651,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1149842788",
     "qoo10_name_kr": "스트레이트슬릭헤어밀크150ml",
     "kr_brand": null,
-    "kr_name": "스트레이트 슬릭 헤어 밀크",
-    "kr_volume": "",
+    "kr_name": "[NEW/열보호] 나르카 스트레이트 슬릭 헤어 밀크 150ml (30ml 증정)",
+    "kr_volume": "150ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -676,7 +676,7 @@
     "kr_mall": "나르카",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -727,7 +727,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1197433998",
     "qoo10_name_kr": "로지나이트리페어3종세트(샴푸+트리트먼트+오일)[손상복구/비건/로즈향/증정]",
     "kr_brand": null,
-    "kr_name": "아닐로 로지나잇 리페어 3종세트(샴푸+앰플 ...",
+    "kr_name": "[손상모 케어] 아닐로 로지나잇 리페어 3종세트(샴푸+앰플트리트먼트+에센스)",
     "kr_volume": "",
     "kr_qty": 2,
     "kr_candidates": [
@@ -755,9 +755,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1211677072",
     "qoo10_name_kr": "부케가르니바디워시베이비파우더520mL",
     "kr_brand": "부케가르니 (BouquetGarni)",
-    "kr_name": "바디워시 [베이비파우더향]",
+    "kr_name": "[김채원 추천템] [샤워SET] 부케가르니 모이스처 바디워시 1.5L 3개+바디로션1.5L 1개",
     "kr_volume": "520ml",
-    "kr_qty": 1,
+    "kr_qty": 3,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8844273/88442739521.7.jpg",
@@ -780,7 +780,7 @@
     "kr_mall": "부케가르니",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -793,7 +793,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169175843",
     "qoo10_name_kr": "어메이징그레이스 발레로즈 EDT 60ml",
     "kr_brand": "필로소피 (philosophy)",
-    "kr_name": "어메이징 그레이스 프레그런스 EDT [발레로즈]",
+    "kr_name": "[원지안PICK] 필로소피 어메이징 그레이스 발레로즈 EDT 60ml",
     "kr_volume": "15ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -808,7 +808,7 @@
     "kr_mall": "올리브영",
     "kr_seller_trust": "신뢰채널",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": true
   },
@@ -849,8 +849,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210078286",
     "qoo10_name_kr": "[눈가케어]카페인솔루션5%+EGCG30ml",
     "kr_brand": "디오디너리 (TheOrdinary)",
-    "kr_name": "Caffeine Gel 5% + EGCG (카페인솔루션5%+이지씨지)",
-    "kr_volume": "",
+    "kr_name": "[눈가케어] 디오디너리 카페인 솔루션 5% + EGCG 30ml",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -864,7 +864,7 @@
     "kr_mall": "올리브영",
     "kr_seller_trust": "신뢰채널",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": true
   },
@@ -877,8 +877,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210837026",
     "qoo10_name_kr": "세럼핏UV프로텍터01클리어50ml(SPF50+/PA++++)",
     "kr_brand": null,
-    "kr_name": "바이유어 세럼핏 UV프로텍터 01 클리어",
-    "kr_volume": "",
+    "kr_name": "바이유어 세럼핏 UV프로텍터 01 클리어 50ml(SPF50+/PA++++)",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -892,7 +892,7 @@
     "kr_mall": "바이유어",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -905,7 +905,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212001366",
     "qoo10_name_kr": "딜런퍼플팜므EDP SP100ml[테스터][향수여성용]",
     "kr_brand": "베르사체 (VERSACE)",
-    "kr_name": "뿌르 팜므 딜런 EDP [퍼플]",
+    "kr_name": "[여자향수] 베르사체 뿌르 팜므 딜런 퍼플 EDP 100ml",
     "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -930,7 +930,7 @@
     "kr_mall": "베르사체/엣킨슨 퍼퓸",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -943,8 +943,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1211103977",
     "qoo10_name_kr": "센텔라TECA앰플,50ml",
     "kr_brand": "스킨1004 (SKIN1004)",
-    "kr_name": "마다가스카르 센텔라 테카 앰플",
-    "kr_volume": "",
+    "kr_name": "[탄력진정] 센텔라 테카 앰플 50ml",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -963,7 +963,7 @@
     "kr_mall": "SKIN1004 공식몰",
     "kr_seller_trust": "공식몰",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -1004,7 +1004,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204359324",
     "qoo10_name_kr": "[1+1/SNS화제]윤기피부버블에센스토너95ml",
     "kr_brand": null,
-    "kr_name": "큐어레스트 윤광미백 버블에센스토너 제품의 정보 및",
+    "kr_name": "로에아 바이탈 코어 에센스 에어리 버블 토너",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1032,7 +1032,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212496315",
     "qoo10_name_kr": "비타민크림E30ml",
     "kr_brand": null,
-    "kr_name": "닥터비타 비타 E",
+    "kr_name": "제이슨 JASON 비타민 E 크림 5000 / 25000 IU 모이스처라이징 크림",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1065,7 +1065,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180696992",
     "qoo10_name_kr": "UV자외선차단아웃도어프로텍션골프선패치(고밀착/투명감/야외활동/무광/아데노신/나이아신아마이드)",
     "kr_brand": null,
-    "kr_name": "애터미 아웃도어 패치",
+    "kr_name": "GIK UV 자외선 차단 아웃도어 프로텍션 골프 투명 썬 패치 5회분 (10패치)",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1121,7 +1121,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1188994112",
     "qoo10_name_kr": "콜라겐드림올인원래디언스톤업크림50ml2개",
     "kr_brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
-    "kr_name": "콜라겐 드림 50 올인원 래디언스 톤 업 크림",
+    "kr_name": "주름개선 탄력 네이처리퍼블릭 콜라겐 드림 올인원 래디언스 톤업 크림 50ml",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1149,8 +1149,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1151302581",
     "qoo10_name_kr": "[정품]두피강화클리닉탈모증상완화약산성저자극샴푸400ml",
     "kr_brand": null,
-    "kr_name": "두피강화 클리닉 탈모증상완화 샴푸",
-    "kr_volume": "",
+    "kr_name": "라보에이치 두피강화클리닉 탈모증상완화 약산성 저자극 샴푸 400ml",
+    "kr_volume": "400ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1164,7 +1164,7 @@
     "kr_mall": "라보에이치",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -1177,8 +1177,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1149096041",
     "qoo10_name_kr": "[정품]소프트리셋그린클렌징밤100ml",
     "kr_brand": "휘게 (HYGGEE)",
-    "kr_name": "소프트리셋 그린 클렌징 밤",
-    "kr_volume": "",
+    "kr_name": "휘게 소프트리셋 그린 클렌징밤 100ml (티트리/셔벗/딥클렌징)",
+    "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1192,7 +1192,7 @@
     "kr_mall": "HYGGEE",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -1271,7 +1271,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1157789377",
     "qoo10_name_kr": "어성초LHA모이스처필링젤120ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 LHA 모이스처 필링젤",
+    "kr_name": "아누아 어성초 LHA 모이스처 필링젤 120ml 민감 얼굴 각질 제거 제거제",
     "kr_volume": "120ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1299,8 +1299,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1190079671",
     "qoo10_name_kr": "[한국피부과의추천No.1](리뉴얼)에이시카365수딩리페어크림pH4.5 60ml+[세럼7ml+패드5ml2매]끈적임없는보습피부더마코스메틱",
     "kr_brand": "에스트라 (AESTURA)",
-    "kr_name": "에이시카365 수분토너 pH4.5",
-    "kr_volume": "",
+    "kr_name": "[싱글] 에스트라 에이시카365 리페어 크림 pH4.5 60ml x 1개",
+    "kr_volume": "60ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1319,7 +1319,7 @@
     "kr_mall": "에스트라",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "match",
     "obsolete": false
   },
@@ -1365,9 +1365,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1143826009",
     "qoo10_name_kr": "[NEW]8히알루론산카테킨카밍패드110매",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "8 히알루론산 카테킨 카밍 패드",
+    "kr_name": "아누아 8 히알루론산 카테킨 카밍 쿨링 패드 110매",
     "kr_volume": "185mL",
-    "kr_qty": 1,
+    "kr_qty": 110,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8933662/89336625676.jpg",
@@ -1426,7 +1426,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1173118335",
     "qoo10_name_kr": "[Qoo10더블한정기획]다이브인저분자히알루론산세럼50ml+리필50ml",
     "kr_brand": "토리든 (Torriden)",
-    "kr_name": "다이브인 저분자 히알루론산 세럼",
+    "kr_name": "[NEW/1등수분세럼] 토리든 다이브인 저분자 히알루론산 세럼 50ml 리필 기획(+리필 50ml)",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1454,9 +1454,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1183257583",
     "qoo10_name_kr": "펩타이드9비타놀크림프로50g[탄력+촉촉함+에이징케어]",
     "kr_brand": "메디필 (MEDIPEEL)",
-    "kr_name": "펩타이드9 비타놀 크림 프로",
+    "kr_name": "메디필 기미 케어 선물세트 (펩타이드9 비타놀 크림 프로 50g + 앰플 30ml + 인마이포켓 + 쇼핑백)",
     "kr_volume": "50g",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8993475/89934751794.1.jpg",
@@ -1548,8 +1548,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1159110549",
     "qoo10_name_kr": "피지컨트롤러수분프라이머30g",
     "kr_brand": null,
-    "kr_name": "아이레놀 개기름 컨트롤러 – 코니허브",
-    "kr_volume": "",
+    "kr_name": "아이레놀 개기름 컨트롤러 30g (얼굴기름기 및 피지조절 수부지 지성 수분 프라이머)",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1578,7 +1578,7 @@
     "kr_mall": "아이레놀 공식스토어",
     "kr_seller_trust": "공식몰",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -1591,7 +1591,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208145226",
     "qoo10_name_kr": "후코이단새틴에센스토너200ml스킨케어화장수보습촉촉함피부트러블케어한국화장품",
     "kr_brand": null,
-    "kr_name": "ONUL31 후코이단 새틴 에센스 토너 화장수 데일리 ...",
+    "kr_name": "[청자몽 에센스인토너] 앰플 비타민 수분토너 진정 수부지 화장수 닦토 에센스스킨",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1629,8 +1629,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1179699936",
     "qoo10_name_kr": "[윤곽앰플]코어타임앰플15ml(+7ml)",
     "kr_brand": null,
-    "kr_name": "메디톡스 뉴라덤 코어타임 앰플 / ...",
-    "kr_volume": "",
+    "kr_name": "뉴라덤 코어타임 앰플 15ml, 1개",
+    "kr_volume": "15ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1644,7 +1644,7 @@
     "kr_mall": "뉴라덤 공식스토어",
     "kr_seller_trust": "공식몰",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -1657,7 +1657,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180096871",
     "qoo10_name_kr": "소나무진정시카토너250ml",
     "kr_brand": "라운드랩 (ROUNDLAB)",
-    "kr_name": "소나무 진정 시카 토너",
+    "kr_name": "라운드랩 소나무 진정 시카 토너 250ml (+늘어나는 스킨패드 40매입)",
     "kr_volume": "250ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1700,8 +1700,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1192357673",
     "qoo10_name_kr": "NMN15%리포좀150,000ppm원액앰플10ml",
     "kr_brand": null,
-    "kr_name": "나노레시피 NMN 15% 리포좀 150 000ppm 원액 앰플, , 1개",
-    "kr_volume": "",
+    "kr_name": "나노레시피 NMN 150,000ppm 리포좀 원액 10ml",
+    "kr_volume": "10ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1715,7 +1715,7 @@
     "kr_mall": "나노레시피",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -1728,9 +1728,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191525100",
     "qoo10_name_kr": "바이탈라이징로즈마리올인원워시500ml",
     "kr_brand": "아로마티카 (AROMATICA)",
-    "kr_name": "바이탈라이징 로즈마리 올인원 워시",
+    "kr_name": "아로마티카 바이탈라이징 로즈마리 올인원 로션 300ML &amp; 리필 300ML 세트",
     "kr_volume": "300ml",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8821798/88217982050.jpg",
@@ -1756,7 +1756,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1179913892",
     "qoo10_name_kr": "마미케어비비립LED립글로우립마스크1개케이스립밤2종건전지",
     "kr_brand": null,
-    "kr_name": "비비립 LED 립글로우 립마스크 (LED립마스크+케이스+립밤 ...",
+    "kr_name": "마미케어 비비립 LED 립글로우 립마스크 1개 ,케이스,립밤2종,건전지",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1789,7 +1789,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204628544",
     "qoo10_name_kr": "하우스오브비글루타치온페이스필름(3+1)",
     "kr_brand": null,
-    "kr_name": "하우스오브비 글루타티온 페이스 필름 마스크팩",
+    "kr_name": "글루타치온 페이스 필름 3매입 (1box)",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1850,7 +1850,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1184898677",
     "qoo10_name_kr": "순정디렉터톤업코렉팅선크림SPF50+PA++++40ml",
     "kr_brand": "에뛰드 (ETUDE)",
-    "kr_name": "순정 디렉터 톤업 수정 선크림 [SPF50+/PA++++]",
+    "kr_name": "에뛰드 순정디렉터 톤업 핑크 선크림 SPF50+/PA++++",
     "kr_volume": "40ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -1878,8 +1878,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1136468573",
     "qoo10_name_kr": "NA에센스N50mL에센스나이아신아마이드침투건조모공촉촉함스킨케어",
     "kr_brand": null,
-    "kr_name": "더마팩토리 나이아신아마이드 11% 워터 에센스, , 1개",
-    "kr_volume": "",
+    "kr_name": "코스워커 나이아신아마이드앰플 미백세럼 미백 에센스 히알루론산 속건조 기미 세럼 80ml",
+    "kr_volume": "80ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -1906,9 +1906,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1146402210",
     "qoo10_name_kr": "자작나무수분선쿠션15g",
     "kr_brand": "라운드랩 (ROUNDLAB)",
-    "kr_name": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+    "kr_name": "라운드랩 자작나무 수분 선쿠션 15g 3개 (SPF 50+ PA++++)",
     "kr_volume": "15g",
-    "kr_qty": 1,
+    "kr_qty": 3,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9070498/90704989210.3.jpg",
@@ -1949,8 +1949,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1152063267",
     "qoo10_name_kr": "저자극페이스앤바디대용량선크림150mL(SPF50+PA++++)",
     "kr_brand": null,
-    "kr_name": "식물나라 페이스 앤 바디 저자극 선 크림",
-    "kr_volume": "",
+    "kr_name": "바디언스 눈시림 백탁없는 저자극 페이스 앤 바디 선크림 대용량 300ml 선로션 선블록",
+    "kr_volume": "300ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2010,7 +2010,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1195761907",
     "qoo10_name_kr": "글루타치온6%앰플30ml",
     "kr_brand": "더마팩토리 (DERMAFACTORY)",
-    "kr_name": "글루타치온 6% 앰플",
+    "kr_name": "[또팩라운지전용] 더마팩토리 글루타치온 6% 앰플 30ml",
     "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2038,9 +2038,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210039639",
     "qoo10_name_kr": "UV디펜스PDRN선크림50ml",
     "kr_brand": null,
-    "kr_name": "유브이 디펜스 PDRN 피디알엔 선크림",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "아이스트 쥬비렉스 Oligo PDRN 크림 20g 3개 + 리페어 하이드로겔 마스크팩 5매+UV 디펜스 T24 톤업 선크림 40ml",
+    "kr_volume": "20ml",
+    "kr_qty": 3,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9112139/91121399844.jpg",
@@ -2066,8 +2066,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1099020123",
     "qoo10_name_kr": "[썸바이미]유자나이아신안티블레미쉬세럼50ml",
     "kr_brand": null,
-    "kr_name": "유자 나이아신 안티 블레미쉬 세럼",
-    "kr_volume": "",
+    "kr_name": "[썸바이미] 유자 나이아신 안티 블레미쉬 세럼 50ml",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2081,7 +2081,7 @@
     "kr_mall": "썸바이미",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -2094,9 +2094,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1045023728",
     "qoo10_name_kr": "인테카수딩패드70매트러블",
     "kr_brand": "메이크프렘 (makep:rem)",
-    "kr_name": "인테카 트러블 수딩 패드",
+    "kr_name": "메이크프렘 인테카 트러블 수딩 패드 70매, 1개",
     "kr_volume": "330ml",
-    "kr_qty": 1,
+    "kr_qty": 70,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8742372/87423723315.9.jpg",
@@ -2127,7 +2127,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204927023",
     "qoo10_name_kr": "[대용량]아토베리어365캡슐토너,300ml",
     "kr_brand": "에스트라 (AESTURA)",
-    "kr_name": "아토베리어365 캡슐 토너",
+    "kr_name": "에스트라 NEW 아토베리어365 캡슐 토너",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2160,7 +2160,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1202057017",
     "qoo10_name_kr": "[NEW]더블루펩타이드세럼,50ml",
     "kr_brand": "코스알엑스 (COSRX)",
-    "kr_name": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+    "kr_name": "코스알엑스 더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2193,7 +2193,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209153891",
     "qoo10_name_kr": "[정품]갈락화이트닝비타세럼50ml(2개)",
     "kr_brand": "마녀공장 (manyo)",
-    "kr_name": "갈락 화이트닝 비타 세럼",
+    "kr_name": "마녀공장 갈락 화이트닝 비타 세럼 50ml",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2226,9 +2226,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206937740",
     "qoo10_name_kr": "[정품]티아미돌부스터세럼30ml",
     "kr_brand": null,
-    "kr_name": "유세린 티아미돌 부스터 세럼",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "유세린 이븐래디언스 다크서클 아이코렉터 15ml + 티아미돌 부스터 세럼 30ml 2종 세트",
+    "kr_volume": "15ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9107253/91072531509.11.jpg",
@@ -2254,9 +2254,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206098418",
     "qoo10_name_kr": "[정품]딥비타C패드70매(2개)",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "딥 비타C 패드",
+    "kr_name": "메디큐브 딥비타C 기미잡티 미백패드 70매, 2개",
     "kr_volume": "150g",
-    "kr_qty": 1,
+    "kr_qty": 70,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8878051/88780518285.25.jpg",
@@ -2282,8 +2282,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204871235",
     "qoo10_name_kr": "[26.05월NEW][정품]누오바데오롤온오리지널50ml",
     "kr_brand": null,
-    "kr_name": "보로탈코 누오바 데오 롤온 오리지널",
-    "kr_volume": "",
+    "kr_name": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2302,7 +2302,7 @@
     "kr_mall": "보로탈코",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -2315,7 +2315,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194311832",
     "qoo10_name_kr": "레드이레이징크림2.0(리뉴얼)50ml",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "레드 이레이징 크림 2.0",
+    "kr_name": "레드 이레이징 크림 2.0 (리뉴얼), 트러블 흔적 &amp; 피부장벽 강화",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2371,8 +2371,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1188455776",
     "qoo10_name_kr": "[정품]센텔리안24올뉴마데카크림타이트리프팅50ml,1개",
     "kr_brand": null,
-    "kr_name": "센텔리안24 마데카크림 타이트리프팅",
-    "kr_volume": "",
+    "kr_name": "[알림받기전용] 동국제약 센텔리안24 올뉴 마데카크림 타이트리프팅/탄력 안티에이징 50ml, 1개",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2391,7 +2391,7 @@
     "kr_mall": "동국제약 센텔리안24",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -2452,9 +2452,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203766483",
     "qoo10_name_kr": "워터프루프서핑선스틱20g",
     "kr_brand": null,
-    "kr_name": "부쉬맨 워터프루프 서핑 선스틱",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "부쉬맨 워터프루프 서핑 선스틱 SPF50+ PA++++ 20g, 2개",
+    "kr_volume": "20ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8911722/89117226586.5.jpg",
@@ -2472,7 +2472,7 @@
     "kr_mall": "부쉬맨",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -2541,9 +2541,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194074735",
     "qoo10_name_kr": "PDRN히알루론산캡슐100세럼30ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "PDRN 히알루론산 캡슐 100 세럼",
+    "kr_name": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 앰플 1ml,10개",
     "kr_volume": "30mL",
-    "kr_qty": 1,
+    "kr_qty": 10,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
@@ -2556,7 +2556,7 @@
     "kr_mall": "아누아",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -2569,7 +2569,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208114710",
     "qoo10_name_kr": "어성초77수딩토너,350ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 77 수딩 토너",
+    "kr_name": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 1개",
     "kr_volume": "250mL",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2597,9 +2597,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208232536",
     "qoo10_name_kr": "익스트림크림오리지널(자타입),70ml",
     "kr_brand": null,
-    "kr_name": "모토로라 엣지 70 맥스 출시: 스냅드래곤 8 5세대 칩과 7,100mAh 실리콘",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "리얼베리어 익스트림 크림 오리지널 65ml 1+1 기획세트[구성품]크림 25ml + 클렌징 폼 15ml",
+    "kr_volume": "65ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8890781/88907815259.17.jpg",
@@ -2625,8 +2625,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187569879",
     "qoo10_name_kr": "레티놀레티젝션세럼2%,50ml",
     "kr_brand": null,
-    "kr_name": "레티놀 레티젝션 세럼",
-    "kr_volume": "",
+    "kr_name": "[네이버 단독] 아이오페 XMD스템3 세럼 50ml + 레티놀 레티젝션 세럼 50ml",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2640,7 +2640,7 @@
     "kr_mall": "아이오페",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -2653,8 +2653,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201566912",
     "qoo10_name_kr": "[태민포토카드100%증정]마스터즈틴티드메쉬선쿠션15g(쿨베이지/내추럴베이지)",
     "kr_brand": null,
-    "kr_name": "AHC 마스터즈 틴티드 메쉬 선쿠션 (쿨베이지/내추럴 ...",
-    "kr_volume": "",
+    "kr_name": "[10% 슈퍼적립] AHC 마스터즈 틴티드 메쉬 선쿠션 내추럴베이지 15g+리필 15g",
+    "kr_volume": "15ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2673,7 +2673,7 @@
     "kr_mall": "AHC 공식스토어",
     "kr_seller_trust": "공식몰",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -2686,8 +2686,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1166654874",
     "qoo10_name_kr": "[26SS/신상](+언더블한유진포토프레임)에클라드아르페주화이트티EDP30ml",
     "kr_brand": null,
-    "kr_name": "랑방 향수가 베스트셀러 '에끌라 드 아르페쥬'의 신제품 '화이트 ...",
-    "kr_volume": "",
+    "kr_name": "엘리자베스아덴 화이트티 향수 EDP 100ml",
+    "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2724,7 +2724,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191542494",
     "qoo10_name_kr": "모델링팩수퍼레몬글루타치온10개",
     "kr_brand": "브링그린 (BRINGGREEN)",
-    "kr_name": "모델링 팩 [슈퍼레몬글루타치온]",
+    "kr_name": "브링그린 모델링 팩 28g [티트리 시카/대나무 히알루/슈퍼 레몬 글루타치온]",
     "kr_volume": "28g",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2752,9 +2752,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208268460",
     "qoo10_name_kr": "퍼펙신GF크림40ml+1ml×3개GF크림증정",
     "kr_brand": null,
-    "kr_name": "리페론 퍼펙신 지에프 크림 GF 재생크림",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "[더랩바이블랑두] [SET] 그린 플라보노이드 2.5 패드 90매 x2개 (진정 크림 1ml*3개  증정) GF",
+    "kr_volume": "1ml",
+    "kr_qty": 90,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_6070783/60707830482.jpg",
@@ -2808,8 +2808,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209779514",
     "qoo10_name_kr": "[JTra]프리미엄비건톤업선크림50ml·SPF50+PA++++·자외선대책·피부색보정·보습",
     "kr_brand": "오믹셀 (OMICEL)",
-    "kr_name": "인진쑥 진정 보습 세럼",
-    "kr_volume": "",
+    "kr_name": "아떼 비건 릴리프 톤업 선 에센스 50ml SPF50+ PA++++ (2colors)",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2828,7 +2828,7 @@
     "kr_mall": "아떼",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": false
   },
@@ -2841,9 +2841,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209064803",
     "qoo10_name_kr": "[25SS/New](미연PICK)라즈베리/모링가샤인헤어식초400ml+400ml",
     "kr_brand": "이브로쉐 (YVESROCHER)",
-    "kr_name": "샤인 헤어식초 [라즈베리]",
+    "kr_name": "[라운지ONLY] 이브로쉐 라즈베리 샤인 푸석모발 헤어식초 400ml, 3개",
     "kr_volume": "150ml",
-    "kr_qty": 1,
+    "kr_qty": 3,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9057620/90576209698.9.jpg",
@@ -2856,7 +2856,7 @@
     "kr_mall": "이브로쉐",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": false
   },
@@ -2897,7 +2897,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1149689597",
     "qoo10_name_kr": "EDP셀프블룸20ml",
     "kr_brand": null,
-    "kr_name": "호텔도슨 오 드 퍼퓸 셀프블룸",
+    "kr_name": "블룸 서브마리노 오드퍼퓸 30ML",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -2925,8 +2925,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206045515",
     "qoo10_name_kr": "[2026신작/시프레]오드퍼퓸10ml(2종중1택)",
     "kr_brand": null,
-    "kr_name": "오 드 퍼퓸",
-    "kr_volume": "",
+    "kr_name": "블랑쉬 니치향수 명품 살냄새 비누향 서브마리노 오드퍼퓸 30ml",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -2963,9 +2963,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206535075",
     "qoo10_name_kr": "[NEW]9배고농축어성초토너패드70매모공케어진정케어",
     "kr_brand": null,
-    "kr_name": "9배 고농축 어성초 토너패드",
+    "kr_name": "블랑네이처 9배 고농축 어성초 토너패드 70매",
     "kr_volume": "",
-    "kr_qty": 1,
+    "kr_qty": 70,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9110739/91107390133.jpg",
@@ -2991,7 +2991,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204561188",
     "qoo10_name_kr": "골드콜라겐퍼펙션아이패치60매",
     "kr_brand": null,
-    "kr_name": "SNP 골드 콜라겐 퍼펙션 아이패치 60매",
+    "kr_name": "[더블기획세트+추가5%포인트] Snp 골드 콜라겐 퍼펙션 아이패치 마스크팩 주름 잡티 미백 탄력 60매, 2개",
     "kr_volume": "",
     "kr_qty": 60,
     "kr_candidates": [
@@ -3024,8 +3024,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206008294",
     "qoo10_name_kr": "펩타이드샷2X탄력앰플30ml(탄력케어/보습/탄력서포트에센스)",
     "kr_brand": null,
-    "kr_name": "PeptideShot Ampoule 2X – Korean Direct",
-    "kr_volume": "",
+    "kr_name": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3039,7 +3039,7 @@
     "kr_mall": "앰플엔",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -3052,8 +3052,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1133684811",
     "qoo10_name_kr": "프리미엄브릴리언트미스트,90ml",
     "kr_brand": null,
-    "kr_name": "코페르 프리미엄 브릴리언트 미스트",
-    "kr_volume": "",
+    "kr_name": "코페르 프리미엄 브릴리언트 미스트 수분 미백 에센스 미스트 90ml",
+    "kr_volume": "90ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3072,7 +3072,7 @@
     "kr_mall": "코페르",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -3085,8 +3085,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1176344647",
     "qoo10_name_kr": "[1+1]갈락토포어워터풀클렌징오일,200ml",
     "kr_brand": null,
-    "kr_name": "갈락토 포어 워터 풀 클렌징 오일",
-    "kr_volume": "",
+    "kr_name": "쌔뮤 갈락토 포어 워터 풀 클렌징 오일 200ml",
+    "kr_volume": "200ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3105,7 +3105,7 @@
     "kr_mall": "쌔뮤",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -3118,9 +3118,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1174634972",
     "qoo10_name_kr": "블루빈B5-PDRN마일드로션230ml",
     "kr_brand": "브링그린 (BRINGGREEN)",
-    "kr_name": "블루빈 B5-PDRN 마일드 로션",
+    "kr_name": "[NEW] 브링그린 블루빈 B5-PDRN 마일드 로션 마스크 1매/ 3+1 기획",
     "kr_volume": "230mL",
-    "kr_qty": 1,
+    "kr_qty": 4,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_5982764/59827645908.jpg",
@@ -3151,9 +3151,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1080883557",
     "qoo10_name_kr": "닥터펩타이드볼륨리프팅프로에센스100ml2개",
     "kr_brand": null,
-    "kr_name": "닥터펩티",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "닥터펩티 펩타이드 볼륨 리프팅 프로 에센스 100ml x2개 + (증정) 리프팅 2매 버블 제형 거품에센스",
+    "kr_volume": "100ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8579837/85798371638.9.jpg",
@@ -3166,7 +3166,7 @@
     "kr_mall": "닥터펩티",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -3179,8 +3179,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196192763",
     "qoo10_name_kr": "데오드란트롤온50ml",
     "kr_brand": null,
-    "kr_name": "니베아 데오롤온",
-    "kr_volume": "",
+    "kr_name": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3194,7 +3194,7 @@
     "kr_mall": "보로탈코",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -3207,7 +3207,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199006543",
     "qoo10_name_kr": "밸런스풀시카컨트롤세럼,50ml",
     "kr_brand": "토리든 (Torriden)",
-    "kr_name": "밸런스풀 시카 컨트롤 세럼",
+    "kr_name": "토리든 밸런스풀 시카 컨트롤 세럼 50ml+(다이브인 히알루론산 세럼 10ml)_A00120",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3235,9 +3235,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191683986",
     "qoo10_name_kr": "레드블레미쉬클리어히알시카수딩세럼50ml",
     "kr_brand": "닥터지 (Dr.G)",
-    "kr_name": "레드 블레미쉬 클리어 히알 시카 수딩 세럼",
+    "kr_name": "[1+1] 닥터지 레드 블레미쉬 클리어 히알 시카 수딩 세럼 50mL",
     "kr_volume": "50mL",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8905981/89059814585.9.jpg",
@@ -3296,7 +3296,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1207202898",
     "qoo10_name_kr": "본딩 알파 케라틴 헤어 팩 260g",
     "kr_brand": "오하입 (ohype)",
-    "kr_name": "본딩 알파 케라틴 헤어팩 그린제스트 누드머스크",
+    "kr_name": "[마법소녀 정하연PICK] 오하입 본딩 알파 케라틴 헤어팩 260g",
     "kr_volume": "260g",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3329,8 +3329,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1167570001",
     "qoo10_name_kr": "한국 톤업 핑크 자외선차단제 크림 SPF50+ PA++++ / 미백 보습 논케미컬 자외선 차단 칙칙함 커버 안색 밝게 민감한 피부 OK 핑크 베이스 투명감 메이크업 베이스",
     "kr_brand": "코링코 (CORINGCO)",
-    "kr_name": "핑크 롤 메이크업 브러쉬 세트",
-    "kr_volume": "",
+    "kr_name": "[26년 신형 리뉴얼/2개] 달바 내추럴 커버 베이지 톤업 선크림 50mlX2(3COLORS)",
+    "kr_volume": "50ml",
     "kr_qty": 2,
     "kr_candidates": [
       {
@@ -3372,9 +3372,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191354937",
     "qoo10_name_kr": "[60매] 24K 골드 레티놀 아이 패치 눈 주위 케어 안티에이징 주름 탄력 한국 화장품",
     "kr_brand": "TWW (타임웍스원더스)",
-    "kr_name": "눈",
+    "kr_name": "다이아프리티 골드 24K 스네일 올 데이 아이패치 (60매)",
     "kr_volume": "10ml",
-    "kr_qty": 1,
+    "kr_qty": 60,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9082454/90824546018.3.jpg",
@@ -3405,8 +3405,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187571477",
     "qoo10_name_kr": "데미지 테라피 헤어 오일 65ml",
     "kr_brand": null,
-    "kr_name": "데미지 테라피 헤어 오일",
-    "kr_volume": "",
+    "kr_name": "그로우어스 데미지 테라피 헤어 오일 65ml, 1개",
+    "kr_volume": "65ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3425,7 +3425,7 @@
     "kr_mall": "그로우어스 공식스토어",
     "kr_seller_trust": "공식몰",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -3438,7 +3438,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1183992449",
     "qoo10_name_kr": "[몬칫치 콜라보] 세라마이드 아르트 로션 (+몬칫치 파우치) 【한국 올리브영 구매대행】",
     "kr_brand": "뉴스템 (newstem)",
-    "kr_name": "세라마이드 로션",
+    "kr_name": "오프온 향좋은 퍼퓸보습제 끈적이지않는 등드름 바디밀크 살냄새보습 남자여자 올리브영 로션1개",
     "kr_volume": "200ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3466,7 +3466,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208272698",
     "qoo10_name_kr": "레드 이레이징 크림 2.0 50ml",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "레드 이레이징 크림 2.0",
+    "kr_name": "레드 이레이징 크림 2.0 (리뉴얼), 트러블 흔적 &amp; 피부장벽 강화",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3550,8 +3550,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1152064671",
     "qoo10_name_kr": "스템셀라인 스킨세럼크림 [중·건성피부용3종]",
     "kr_brand": null,
-    "kr_name": "jk화장품",
-    "kr_volume": "",
+    "kr_name": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -3616,9 +3616,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205881900",
     "qoo10_name_kr": "PDRN 히알루론산 캡슐 100 세럼 30ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "PDRN 히알루론산 캡슐 100 세럼",
+    "kr_name": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 앰플 1ml,10개",
     "kr_volume": "30mL",
-    "kr_qty": 1,
+    "kr_qty": 10,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
@@ -3631,7 +3631,7 @@
     "kr_mall": "아누아",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -3672,7 +3672,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1162782358",
     "qoo10_name_kr": "워터 홀딩 톤업 선 세럼 50mL",
     "kr_brand": "가히 (KAHI)",
-    "kr_name": "워터 홀딩 톤업 선세럼 [SPF50+/PA++++]",
+    "kr_name": "가히 워터 홀딩 톤업 선세럼 (50ml) SPF50+",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3705,7 +3705,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210849711",
     "qoo10_name_kr": "레티날 레티놀 2000+ NAD 세럼 30ml 1개",
     "kr_brand": "셀리맥스 (celimax)",
-    "kr_name": "레티놀 레티날* 2000 엔에이디+세럼",
+    "kr_name": "퓨리토 레티날 레티놀 2000+ NAD 세럼",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3733,7 +3733,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210232363",
     "qoo10_name_kr": "1025 독도 수분 선크림 SPF50+ PA++++ 50ml 1개",
     "kr_brand": "라운드랩 (ROUNDLAB)",
-    "kr_name": "1025 독도 선크림 [SPF50+/PA++++]",
+    "kr_name": "라운드랩 1025 독도 선크림 50ml (SPF 50+ PA++++)",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3761,7 +3761,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1156455230",
     "qoo10_name_kr": "[5개/3종 선택 가능] 브링그린 모델링 팩 [티트리 시카/대나무 히알루론산/슈퍼 레몬 글루타치온] 28g",
     "kr_brand": "브링그린 (BRINGGREEN)",
-    "kr_name": "모델링 팩 [슈퍼레몬글루타치온]",
+    "kr_name": "브링그린 모델링 팩 28g [티트리 시카/대나무 히알루/슈퍼 레몬 글루타치온]",
     "kr_volume": "28g",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3789,9 +3789,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1099426302",
     "qoo10_name_kr": "스킨 트러블 케어 마스크 3매 세트",
     "kr_brand": null,
-    "kr_name": "Unopened new product) IOM Trouble Patch Mask 3 sheets + Control Pad",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "파넬 스쿠알란 미네랄 워터 모이스처 토너 200ml+세럼 30ml+크림 50ml (+스쿠알란 마스크 3매&amp;쇼핑백 증정)",
+    "kr_volume": "200ml",
+    "kr_qty": 3,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8996800/89968008765.7.jpg",
@@ -3822,7 +3822,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209063735",
     "qoo10_name_kr": "스피큘 아젤라산 PDRN 크림 15g／시카／여드름케어／피부 불안감／민감성 피부／트러블 피부／피부 붉음／진정／칙칙함 케어／각질 케어",
     "kr_brand": "려 (Ryo)",
-    "kr_name": "함빛 손상 고영양 케어 컨디셔너",
+    "kr_name": "트라미셀 시카엑소 재생크림 세라마이드np 진정 시술 후 시카 병풀 pdrn",
     "kr_volume": "400ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3916,7 +3916,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175249089",
     "qoo10_name_kr": "더 세라마이드 스킨배리어 모이스처라이저 크림 80ml 2개",
     "kr_brand": "코스알엑스 (COSRX)",
-    "kr_name": "더 세라마이드 스킨 베리어 모이스처라이저",
+    "kr_name": "코스알엑스 더 세라마이드 스킨 베리어 모이스처라이저 / 장벽보습로션 80ml, 1개",
     "kr_volume": "80ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3944,7 +3944,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1152704413",
     "qoo10_name_kr": "오가닉 호호바 오일 골드 50ml 1개",
     "kr_brand": null,
-    "kr_name": "오가닉 호호바 골드 오일 특별 이벤트",
+    "kr_name": "에꾸뜨 오가닉호호바골드 냉압착 비정제 호호바오일 천연유기농 멀티오일 50ML 1개",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -3982,7 +3982,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209668463",
     "qoo10_name_kr": "[MEDIHEAL 마스크 1장 포함] 어성초 77 수딩 토너, 350ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 77 수딩 토너",
+    "kr_name": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 1개",
     "kr_volume": "250mL",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4010,7 +4010,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1207950025",
     "qoo10_name_kr": "호텔 테라피 바디 워시, 1013ml [MEDIHEAL 마스크 1장 증정]",
     "kr_brand": "헤트라스 (hetras.)",
-    "kr_name": "호텔 테라피 바디워시 [상탈프레쉬]",
+    "kr_name": "[헤트라스 뷰티] 호텔테라피 퍼퓸 대용량 바디워시 1013ml B-BW",
     "kr_volume": "1013ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4081,8 +4081,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196382835",
     "qoo10_name_kr": "【100시간 보습/가려움 완화/직장인A】【정품】시카 살브 크림 230ml",
     "kr_brand": "미차이 (MECHAI)",
-    "kr_name": "시카 살브 크림",
-    "kr_volume": "",
+    "kr_name": "[화잘먹속광] 닥터에이지 시카 앰플 25ml + 더마 인텐시브 시카 살브크림 30ml",
+    "kr_volume": "25ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4119,9 +4119,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201075580",
     "qoo10_name_kr": "어성초 77 B3 징크 트러블 세럼 미용액 30ml 1개",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 77 B3징크 트러블 세럼",
+    "kr_name": "아누아 어성초 77 B3징크 트러블 진정 세럼 30ml, 2개",
     "kr_volume": "30mL",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9076809/90768099032.jpg",
@@ -4157,7 +4157,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1143499844",
     "qoo10_name_kr": "뉴메로 10 에센스 125ml",
     "kr_brand": "빌리프 (belif)",
-    "kr_name": "뉴메로 10 에센스",
+    "kr_name": "[ 욕실 에센스 대용량 ] 롯데 대구 빌리프 뉴메로 10 에센스 200ml 대용량",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4185,8 +4185,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203787114",
     "qoo10_name_kr": "【보습크림】 크림스컴투루 스쿠알란 배리어 리페어 크림 50ml 윤기 피부 건성피부 수광 피부 수분 건조 고보습 촉촉함 쭉쭉 찐기 없음 수분 충전 피부 트러블",
     "kr_brand": null,
-    "kr_name": "디마프 크림스컴트루 스쿠알란 배리어 리페어크림",
-    "kr_volume": "",
+    "kr_name": "디마프 크림스컴트루 스쿠알란 배리어 리페어크림 50ml",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4210,7 +4210,7 @@
     "kr_mall": "디마프 스토어",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -4256,7 +4256,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209471077",
     "qoo10_name_kr": "[정품] 더블샷 퍼퓸 바디 미스트 120ml",
     "kr_brand": "헤트라스 (hetras.)",
-    "kr_name": "더블샷 퍼퓸 바디미스트 [상탈프레쉬]",
+    "kr_name": "헤트라스 더블샷 퍼퓸 바디미스트 120ml",
     "kr_volume": "120ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4294,7 +4294,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1090206932",
     "qoo10_name_kr": "큐티클 3-Step 케어 키트(큐티클 오일+큐티클 리무버+크리스탈 펜 푸셔)",
     "kr_brand": "려 (Ryo)",
-    "kr_name": "함빛 손상 고영양 케어 컨디셔너",
+    "kr_name": "반디 네일스팀 큐티클 3-Step 케어 키트",
     "kr_volume": "400ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4322,7 +4322,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186048420",
     "qoo10_name_kr": "브로우 컬러(애쉬 브라운/베이지 브라운) 20g+(3g*6ea) :: 눈썹 표백제 / 눈썹 탈색 / 눈썹 컬러링 / 눈썹",
     "kr_brand": null,
-    "kr_name": "엔트로피 브로우 컬러 애쉬 브라운/ ...",
+    "kr_name": "에뛰드 [NEW COLOR] 드로잉 아이즈 컬러링 브로우카라",
     "kr_volume": "",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4355,7 +4355,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194867832",
     "qoo10_name_kr": "제로 원데이 엑소좀 샷 2000 / 7500 30ml",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "원데이 엑소좀 샷 모공 앰플 7500",
+    "kr_name": "제로 원데이 엑소좀 샷 모공 앰플 7500",
     "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4383,9 +4383,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209903303",
     "qoo10_name_kr": "제로 모공·블랙헤드 딥 클렌징 오일 205ml",
     "kr_brand": "메디큐브 (medicube)",
-    "kr_name": "제로 블랙헤드 클렌징 오일",
+    "kr_name": "메디큐브 제로 블랙헤드 딥 클렌징 오일 205ml X 2개",
     "kr_volume": "205ml",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8875893/88758938446.13.jpg",
@@ -4416,8 +4416,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1146024478",
     "qoo10_name_kr": "헤어 케어 녹차 실감 중 건성 샴푸 500g",
     "kr_brand": null,
-    "kr_name": "녹차실감 샴푸 중건성 두피용",
-    "kr_volume": "",
+    "kr_name": "아모스녹차실감 중건성샴푸500g",
+    "kr_volume": "500ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4431,7 +4431,7 @@
     "kr_mall": "아모스전문샵",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -4444,9 +4444,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1145594718",
     "qoo10_name_kr": "【한국 화장품】【정품 취급점】실크 펩타이드 인텐시브 리프팅 앰플 35ML",
     "kr_brand": "성분에디터 (SUNGBOONeditor)",
-    "kr_name": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+    "kr_name": "성분에디터 실크 펩타이드 인텐시브 리프팅 앰플 35ml, 2개",
     "kr_volume": "13g",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9116768/91167684255.1.jpg",
@@ -4477,8 +4477,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210202611",
     "qoo10_name_kr": "리바이브 테라피 NF 앰플 / 30ml / PDRN 앰플덱스판테놀비타민B5",
     "kr_brand": "듀이셀 (DEWYCEL)",
-    "kr_name": "바이브랩 리바이브 테라피 헤어스칼프 앤 브로우 앰플 -",
-    "kr_volume": "",
+    "kr_name": "스킨구하리 / 리바이브 테라피 엔에프 앰플 / 30ml / PDRN 앰플, 덱스판테놀, 비타민B5",
+    "kr_volume": "30ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4497,7 +4497,7 @@
     "kr_mall": "스킨구하리",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": false
   },
@@ -4510,7 +4510,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212666866",
     "qoo10_name_kr": "【정규품】더블샷 퍼퓸 바디미스트 120ml【전5종류】",
     "kr_brand": "헤트라스 (hetras.)",
-    "kr_name": "더블샷 퍼퓸 바디미스트 [상탈프레쉬]",
+    "kr_name": "헤트라스 더블샷 퍼퓸 바디미스트 120ml",
     "kr_volume": "120ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4548,7 +4548,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1168045367",
     "qoo10_name_kr": "녹두 약산성 클렌징 폼 80ml + 80ml",
     "kr_brand": "비플레인 (beplain)",
-    "kr_name": "녹두 약산성 클렌징폼",
+    "kr_name": "대용량 비플레인 녹두 약산성 클렌징폼 160ml, 1개",
     "kr_volume": "80ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4568,7 +4568,7 @@
     "kr_mall": "비플레인 beplain",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -4581,9 +4581,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1197476393",
     "qoo10_name_kr": "【리뉴얼】어성초 77 히알루론산 수딩 토너 250ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "어성초 77 히알루론 토너",
+    "kr_name": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 2개",
     "kr_volume": "250mL",
-    "kr_qty": 1,
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8441772/84417721392.7.jpg",
@@ -4614,9 +4614,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1167122243",
     "qoo10_name_kr": "린제이 진정 약초 모델링팩 (컵팩) 28g [66관왕/1위]",
     "kr_brand": null,
-    "kr_name": "린제이 진정약초 모델링 팩",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "린제이 진정약초 모델링팩 330g +앰플(500ml) +팩도구세트",
+    "kr_volume": "330ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8307405/83074059667.jpg",
@@ -4657,9 +4657,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1202040223",
     "qoo10_name_kr": "에스트라 에이시카365 수딩 리페어 마스크 pH4.5 5장",
     "kr_brand": "에스트라 (AESTURA)",
-    "kr_name": "에이시카365 수딩 리페어 마스크 pH4.5",
+    "kr_name": "[에스트라] 에이시카 365 수딩 리페어 마스크 pH4.5 5매 150100741",
     "kr_volume": "25ml",
-    "kr_qty": 1,
+    "kr_qty": 5,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_6065918/60659187854.jpg",
@@ -4685,7 +4685,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1094596934",
     "qoo10_name_kr": "DASHU 다슈 프로 에어리 폴리시 오일 100ml+10ml",
     "kr_brand": "다슈 (DASHU)",
-    "kr_name": "프로 에어리 폴리쉬 오일",
+    "kr_name": "다슈 프로 에어리 폴리쉬 오일 30ml",
     "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4710,7 +4710,7 @@
     "kr_mall": "다슈 공식몰",
     "kr_seller_trust": "공식몰",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -4723,9 +4723,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198342658",
     "qoo10_name_kr": "[2개 세트] PDRN 히알루론산 캡슐 100 세럼 30ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "PDRN 히알루론산 캡슐 100 세럼",
+    "kr_name": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 앰플 1ml,10개",
     "kr_volume": "30mL",
-    "kr_qty": 1,
+    "kr_qty": 10,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
@@ -4738,7 +4738,7 @@
     "kr_mall": "아누아",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -4751,8 +4751,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1188406613",
     "qoo10_name_kr": "세라마이드 아토 로션 600ml [보습+배리어+민감성 피부]",
     "kr_brand": "일리윤 (ILLIYOON)",
-    "kr_name": "세라마이드 아토 로션",
-    "kr_volume": "",
+    "kr_name": "일리윤 바디로션 대용량 무향 세라마이드 아토 580ml+300ml",
+    "kr_volume": "580ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4812,8 +4812,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198335347",
     "qoo10_name_kr": "【신작】트리플 레이어드 헤어 미스트 150ml #3중 모발 보호 솔루션",
     "kr_brand": null,
-    "kr_name": "트리셀 트리플 레이어드 헤어 미스트 -",
-    "kr_volume": "",
+    "kr_name": "[결광케어/UV보호] 트리셀 트리플 레이어드 헤어 미스트 만다린 러브, 150ml, 1개",
+    "kr_volume": "150ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -4827,7 +4827,7 @@
     "kr_mall": "트리셀 공식 스토어",
     "kr_seller_trust": "공식몰",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -4840,7 +4840,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210139793",
     "qoo10_name_kr": "UV 프로텍터 톤업 피치 / 라벤더 50ml SPF50+ PA++++ 톤업 선스크린 UV차단&보습 케어",
     "kr_brand": "헤라 (HERA)",
-    "kr_name": "UV프로텍터 톤업 라벤더 [SPF50+/PA++++]",
+    "kr_name": "[헤라] UV 프로텍터 톤업피치 라벤더 프레쉬 디펜스 CC 50ml SPF50+/PA++++",
     "kr_volume": "50mL",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4873,7 +4873,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1158164452",
     "qoo10_name_kr": "인텐스 케어 골드 24K 스네일 폼 클렌저 150ml :: 탄력 영양 보습 클렌저",
     "kr_brand": "토니모리 (TONYMOLY)",
-    "kr_name": "인텐스 케어 골드24K 스네일 폼 클렌저",
+    "kr_name": "토니모리 인텐스케어 골드 24K 스네일 폼 클렌저 150ml",
     "kr_volume": "150ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -4929,9 +4929,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205625766",
     "qoo10_name_kr": "청보리 트러블 징크 세럼 30ml 2개",
     "kr_brand": null,
-    "kr_name": "VEGANIFECT Green Barley Trouble Zinc Serum",
-    "kr_volume": "",
-    "kr_qty": 1,
+    "kr_name": "비건이펙트 청보리 트러블 징크 세럼 디판테놀 피지 급속진정 민감 30ml, 2개",
+    "kr_volume": "30ml",
+    "kr_qty": 2,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8941655/89416559532.2.jpg",
@@ -4949,7 +4949,7 @@
     "kr_mall": "비건이펙트",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "unknown",
     "obsolete": null
   },
@@ -4962,9 +4962,9 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210242426",
     "qoo10_name_kr": "PDRN 히알루론산캡슐100 세럼 30ml",
     "kr_brand": "아누아 (Anua)",
-    "kr_name": "PDRN 히알루론산 캡슐 100 세럼",
+    "kr_name": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 앰플 1ml,10개",
     "kr_volume": "30mL",
-    "kr_qty": 1,
+    "kr_qty": 10,
     "kr_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
@@ -4977,7 +4977,7 @@
     "kr_mall": "아누아",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "hwahae",
-    "vol_match": true,
+    "vol_match": false,
     "brand_status": "match",
     "obsolete": false
   },
@@ -4990,8 +4990,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210078217",
     "qoo10_name_kr": "PDRN콜라겐페이셜샷토너, 300ml",
     "kr_brand": null,
-    "kr_name": "몰바니 PDRN 콜라겐 페이셜샷 토너",
-    "kr_volume": "",
+    "kr_name": "몰바니 PDRN 콜라겐 페이셜샷 토너 300ml",
+    "kr_volume": "300ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -5020,7 +5020,7 @@
     "kr_mall": "몰바니",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   },
@@ -5033,7 +5033,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209890558",
     "qoo10_name_kr": "듀얼배리어 퓨리파잉 클렌징 바움",
     "kr_brand": "셀리맥스 (celimax)",
-    "kr_name": "듀얼배리어 퓨리파잉 클렌징 밤",
+    "kr_name": "셀리맥스 듀얼배리어 퓨리파잉 클렌징 밤 본품+리필 / 갈아쓰는 클렌징밤",
     "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -5066,7 +5066,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205743739",
     "qoo10_name_kr": "[1+1] 에그 비타 필링 젤 100g",
     "kr_brand": "투쿨포스쿨 (toocoolforschool)",
-    "kr_name": "에그 비타 필링 젤",
+    "kr_name": "투쿨포스쿨 에그 비타 필링 젤 100g",
     "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -5094,7 +5094,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205746446",
     "qoo10_name_kr": "[1+1] 익스트림 크림 라이트 65ml",
     "kr_brand": "리얼베리어 (RealBarrier)",
-    "kr_name": "익스트림 크림 라이트",
+    "kr_name": "리얼베리어 익스트림 크림 라이트 65ml, 1개",
     "kr_volume": "65ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -5127,7 +5127,7 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209812545",
     "qoo10_name_kr": "로즈마리 PDRN 스칼프 세럼 100ml",
     "kr_brand": "아로마티카 (AROMATICA)",
-    "kr_name": "로즈마리 PDRN 스칼프 세럼",
+    "kr_name": "아로마티카 로즈마리 PDRN 스칼프 세럼 100ML X 2EA",
     "kr_volume": "100ml",
     "kr_qty": 1,
     "kr_candidates": [
@@ -5155,8 +5155,8 @@
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1162284855",
     "qoo10_name_kr": "【1+1 향 선택】[퍼퓸 핸드크림 50ml×2개] 한국 인기 보습 케어 핸드 향수 선물로도",
     "kr_brand": null,
-    "kr_name": "퍼퓸 핸드크림",
-    "kr_volume": "",
+    "kr_name": "더프트앤도프트 시그니처 퍼퓸 핸드크림 스톡홀름로즈 50ml 고보습 향좋은 핸드로션",
+    "kr_volume": "50ml",
     "kr_qty": 1,
     "kr_candidates": [
       {
@@ -5170,7 +5170,7 @@
     "kr_mall": "더프트앤도프트",
     "kr_seller_trust": "브랜드직영추정",
     "kr_source": "exa",
-    "vol_match": false,
+    "vol_match": true,
     "brand_status": "mismatch",
     "obsolete": null
   }
