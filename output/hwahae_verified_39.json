@@ -23527,5 +23527,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1130217198",
+    "translated_kr": "나이아신아마이드 10% 트라넥삼산 5% 세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 5% + 트라넥삼산 5% 잡티 세럼",
+      "naver": "[1+1] 트라넥삼산 5%, 나이아신아마이드 5% 속/겉 기미개선 앰플세럼"
+    },
+    "brand": "피터앤랩스 (PETERANDLABS)",
+    "name": "나이아신아마이드 5% + 트라넥삼산 5% 잡티 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "44000",
+    "mall": "비앤힐",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12627470564",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9017198/90171981420.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9017198/90171981420.1.jpg",
+        "mall": "비앤힐",
+        "link": "https://smartstore.naver.com/main/products/12627470564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9017198/90171981419.jpg",
+        "mall": "비앤힐",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12627470563"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1162374186",
+    "translated_kr": "마슈멜로 콜라겐 AHA 스크럽 200g 대용량 / 얼굴 세안 폼 딸기코 민감 부위 검은 얼룩 각질 케어 바디 스크럽 베이비 파우더 향",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
