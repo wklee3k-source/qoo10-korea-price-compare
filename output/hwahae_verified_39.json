@@ -15906,5 +15906,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1042187080",
+    "translated_kr": "[1+1+1+1]청아/흑운/함광샴푸480ml/컨디셔너480mL선택가능4개세트한국헤어케어한방헤어케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "려 함빛&청아&흑운 샴푸/컨디셔너 1입",
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209154400",
+    "translated_kr": "[밀착탄력윤기/5매입]콜라겐100멜팅시트마스크2.5g×5매/농밀촉촉함수분패치탄력피부결스킨케어고보습한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "누구나 피부를 건강하게 Dr.G"
+    },
+    "brand": null,
+    "name": "누구나 피부를 건강하게 Dr.G",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
