@@ -19931,5 +19931,67 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1152704413",
+    "translated_kr": "오가닉 호호바 오일 골드 50ml 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "에꾸뜨 오가닉호호바골드 냉압착 비정제 호호바오일 천연유기농 멀티오일 50ML 1개"
+    },
+    "brand": "에꾸뜨",
+    "name": "에꾸뜨 오가닉호호바골드 냉압착 비정제 호호바오일 천연유기농 멀티오일 50ML 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "42000",
+    "mall": "ECOUTE 에꾸뜨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12907790096",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045230/90452301088.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045230/90452301088.2.jpg",
+        "mall": "ECOUTE 에꾸뜨",
+        "link": "https://smartstore.naver.com/main/products/12907790096"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100857/91008575540.2.jpg",
+        "mall": "ECOUTE 에꾸뜨",
+        "link": "https://smartstore.naver.com/main/products/13464065188"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5843354/58433543322.jpg",
+        "mall": "코슬로우",
+        "link": "https://coslow.co.kr/product/detail.html?product_no=48&cate_no=50&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1154992110",
+    "translated_kr": "레드 블레미시 수딩 업 선크림 SPF50+ PA++++ 50ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 수딩 업 선 [SPF50+/PA++++]"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 수딩 업 선 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
