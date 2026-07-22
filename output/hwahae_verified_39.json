@@ -30050,5 +30050,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1171623242",
+    "translated_kr": "율무 스킨 클린 팩 120g+20g+스파출라",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "율무 스킨클린",
+      "naver": "[박지현 PICK][사우나팩] 율무 스킨클린 팩 120gX1(+스파츌라)/모공 요철 율무"
+    },
+    "brand": "리터니티 (RETURNITY)",
+    "name": "율무 스킨클린",
+    "volume": "120g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26000",
+    "mall": "리터니티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9626860748",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8717136/87171363018.24.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8717136/87171363018.24.jpg",
+        "mall": "리터니티",
+        "link": "https://smartstore.naver.com/main/products/9626860748"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1197569542",
+    "translated_kr": "세이프미 릴리프 모이스처 클렌징 폼 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세이프 미 릴리프 모이스처 클렌징폼"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "세이프 미 릴리프 모이스처 클렌징폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
