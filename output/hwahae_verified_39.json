@@ -1412,5 +1412,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1101579770",
+    "translated_kr": "레티노라겐 클렌징폼 120ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "피캄 레티놀라겐 앰플 샷 폼클렌저",
+      "naver": "메노킨 30초 버블 클렌저"
+    },
+    "brand": null,
+    "name": "피캄 레티놀라겐 앰플 샷 폼클렌저",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "21400",
+    "mall": "메노킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://menokin.co.kr/product/detail.html?product_no=22&cate_no=29&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5654213/56542135274.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5654213/56542135274.6.jpg",
+        "mall": "메노킨",
+        "link": "https://menokin.co.kr/product/detail.html?product_no=22&cate_no=29&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211131806",
+    "translated_kr": "[공식판매처]더마톨로지 2종세트[부스터+세럼]/한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "더마톨로지 퍼스트패키지 부스터, 세럼 정품 본품박스"
+    },
+    "brand": null,
+    "name": "더마톨로지 퍼스트패키지 부스터, 세럼 정품 본품박스",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
