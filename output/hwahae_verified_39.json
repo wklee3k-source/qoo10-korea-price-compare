@@ -23078,5 +23078,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1061013962",
+    "translated_kr": "메종 마르지엘라 MAISON MARGIELA 레플리카 EDT 버블배스 100ml [943384]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "메종 마르지엘라 퍼퓸",
+      "hwahae": "레이지 선데이 모닝 EDT"
+    },
+    "brand": "메종 마르지엘라 (Maison Margiela)",
+    "name": "레이지 선데이 모닝 EDT",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 98000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1133723585",
+    "translated_kr": "라네주 LANEIGE 바운시 & 펌 아이스 슬리핑 마스크 20g 아이케어 [155879]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "바운시 앤 펌 아이 슬리핑 마스크",
+      "hwahae": "바운시 앤 펌 아이 슬리핑 마스크"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "바운시 앤 펌 아이 슬리핑 마스크",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
