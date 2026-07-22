@@ -17273,5 +17273,65 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1194491690",
+    "translated_kr": "바이오액티브 컴플리트 B컴플렉스 베지 캡슐 60정",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Life Extension 바이오액티브 컴플리트 B 컴플렉스 60 베지 캡",
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "PDRN TX1 콜라겐 캡슐 크림 300",
+    "volume": "62g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191354937",
+    "translated_kr": "[60매] 24K 골드 레티놀 아이 패치 눈 주위 케어 안티에이징 주름 탄력 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "｜한국코스메 네오젠：코리아데파트",
+      "hwahae": "눈",
+      "naver": "다이아프리티 골드 24K 스네일 올 데이 아이패치 (60매)"
+    },
+    "brand": "TWW (타임웍스원더스)",
+    "name": "눈",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "다이아프리티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13280035686",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9082454/90824546018.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082454/90824546018.3.jpg",
+        "mall": "다이아프리티",
+        "link": "https://smartstore.naver.com/main/products/13280035686"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8836982/88369822237.jpg",
+        "mall": "로로스키니 브랜드",
+        "link": "https://smartstore.naver.com/main/products/10825316224"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
