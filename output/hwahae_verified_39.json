@@ -552,5 +552,47 @@
     "product_url": "https://www.hwahae.co.kr/goods/2130825",
     "image_url": "https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg",
     "image_candidates": []
+  },
+  {
+    "goods_no": "1105980665",
+    "translated_kr": "오휘 에이지리커버리 아이크림 25ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이지 리커버리 아이크림",
+      "hwahae": "에이지 리커버리 아이크림"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "에이지 리커버리 아이크림",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 105000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2096853",
+    "image_url": "https://img.hwahae.co.kr/products/2096853/2096853_20240502181620.jpg",
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1044307238",
+    "translated_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "엘라스틴 실크 샤이닝골드 트리트먼트 300ML * 2개",
+      "hwahae": "실크리페어 퍼펙트 샤이닝 골드실크 트리트먼트"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "엘라스틴 실크 샤이닝골드 트리트먼트 300ML * 2개",
+    "volume": "1000ml",
+    "source": "exa",
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/1864412",
+    "image_url": "https://img.hwahae.co.kr/products/1864412/1864412_20220801000000.jpg",
+    "image_candidates": []
   }
 ]
