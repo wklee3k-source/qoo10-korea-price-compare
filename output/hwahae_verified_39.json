@@ -23787,5 +23787,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1143499844",
+    "translated_kr": "뉴메로 10 에센스 125ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "빌리프 뉴메로 10 에센스",
+      "hwahae": "뉴메로 10 에센스",
+      "naver": "[ 욕실 에센스 대용량 ] 롯데 대구 빌리프 뉴메로 10 에센스 200ml 대용량"
+    },
+    "brand": "빌리프 (belif)",
+    "name": "뉴메로 10 에센스",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "56800",
+    "mall": "빌리프/VDL",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/12149049688",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8969356/89693560393.16.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8969356/89693560393.16.jpg",
+        "mall": "빌리프/VDL",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12149049688"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210449177",
+    "translated_kr": "BB 크림 남성용 남성 용 내추럴 커버 자연스러운 마무리 티나지 않음 라이트 베이지 내추럴 오클 세안 오프",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "오브제 내추럴 커버 파운데이션 SPF50+ PA++++ / 남자 올인원 스틱 파데 비비",
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
