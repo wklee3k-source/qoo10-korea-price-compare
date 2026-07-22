@@ -3046,5 +3046,69 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1080682873",
+    "translated_kr": "더히알루로닉애씨드3세럼20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스알엑스 더 히알루론산 3 세럼",
+      "hwahae": "더 히알루론산 3 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 히알루론산 3 세럼",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1079892554",
+    "translated_kr": "퓨어핏시카카밍트루시트마스크10매",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "코스알엑스 퓨어핏 시카 카밍 트루 시트 마스크 10매입",
+      "naver": "[10매] 코스알엑스 퓨어 핏 시카 카밍 트루 진정 시트 마스크 21ml"
+    },
+    "brand": "코스알엑스",
+    "name": "[10매] 코스알엑스 퓨어 핏 시카 카밍 트루 진정 시트 마스크 21ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "28000",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/6156287640",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8370078/83700787128.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8370078/83700787128.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6156287640"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8370078/83700787127.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6156287639"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6094965/60949651947.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000150232"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
