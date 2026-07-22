@@ -25846,5 +25846,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203745241",
+    "translated_kr": "스킨 컨디셔너 에센셜 330ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "스킨 컨디셔너 에센셜 N",
+      "hwahae": "밸런싱 스킨 컨디셔너"
+    },
+    "brand": "마이에센스 (miessence)",
+    "name": "밸런싱 스킨 컨디셔너",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203745101",
+    "translated_kr": "피토 튠 화이트닝 소프너 200ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "주식회사 코세이 코스메데코르테 피토튠 화이트닝 소프너 ..."
+    },
+    "brand": null,
+    "name": "주식회사 코세이 코스메데코르테 피토튠 화이트닝 소프너 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
