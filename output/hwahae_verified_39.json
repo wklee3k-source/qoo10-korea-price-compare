@@ -214,5 +214,79 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199735232",
+    "translated_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 2000",
+      "hwahae": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+      "naver": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 2000"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "33400",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208085514",
+    "translated_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "46cm Odor Solution Deodorant Body Wash 7",
+      "hwahae": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+      "naver": "다이소 46cm 체취솔루션 데오드란트 바디워시 스파클링 시트러스향 225 ml 1069429"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+    "volume": "720ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "5000",
+    "mall": "다이소몰",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614369/56143692835.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069430&infl_path=naver_ep"
+      }
+    ],
+    "in_stock": false,
+    "stock_evidence": [
+      "품절 (SPAN, visible)",
+      "품절 (SPAN, visible)",
+      "품절 (BUTTON, visible)",
+      "일시품절 (SPAN, visible)",
+      "일시품절 (SPAN, visible)",
+      "일시품절 (BUTTON, visible)"
+    ]
   }
 ]
