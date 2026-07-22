@@ -10740,5 +10740,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204871235",
+    "translated_kr": "[26.05월NEW][정품]누오바데오롤온오리지널50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개"
+    },
+    "brand": "보로탈코",
+    "name": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "12000",
+    "mall": "보로탈코",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13074261482",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+        "mall": "보로탈코",
+        "link": "https://smartstore.naver.com/main/products/13074261482"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118761/91187611978.1.jpg",
+        "mall": "보로탈코",
+        "link": "https://smartstore.naver.com/main/products/13643101266"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210181174",
+    "translated_kr": "[정품]PDRN콜라겐멜팅넥패치4매/목전용집중케어/탄력·보습동시케어/피부에밀착되는넥패치",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
