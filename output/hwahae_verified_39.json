@@ -24383,5 +24383,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1188405527",
+    "translated_kr": "ゆずグレープフルーツ ビーガン パッククレンザー 80g+毛穴ブラシ [毛穴ケア+洗顔+すっきり]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비누 [후레쉬릴리]"
+    },
+    "brand": "드봉 (DeBON)",
+    "name": "비누 [후레쉬릴리]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188406613",
+    "translated_kr": "セラミド アト ローション 600ml [保湿+バリア+敏感肌]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "태닝 마이멜로디 에디션 세라마이드 아토 로션"
+    },
+    "brand": "일리윤 (ILLIYOON)",
+    "name": "태닝 마이멜로디 에디션 세라마이드 아토 로션",
+    "volume": "600ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 31900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
