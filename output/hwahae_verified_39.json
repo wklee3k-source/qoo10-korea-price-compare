@@ -17001,5 +17001,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "958808136",
+    "translated_kr": "클리어스킨 8% AHA 에센스 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리어 스킨 8% 아하 에센스"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "클리어 스킨 8% 아하 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1170089061",
+    "translated_kr": "6종 중 선택/한정 세트 구성 허니앤드마카다미아 네이처 샴푸 2개+트리트먼트 2개 두피케어 촉촉한 헤어 PH 밸런스 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
