@@ -26599,5 +26599,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199703148",
+    "translated_kr": "센텔라 수징 크림, 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 포어마이징 라이트 젤 크림"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 포어마이징 라이트 젤 크림",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193572337",
+    "translated_kr": "프레시 클렌징 오일, 150ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "지우개 클렌징 오일 (지우개프레시블랙헤드클렌징오일)"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "지우개 클렌징 오일 (지우개프레시블랙헤드클렌징오일)",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
