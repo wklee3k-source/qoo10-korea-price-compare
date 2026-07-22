@@ -21985,5 +21985,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1089315670",
+    "translated_kr": "아미노애씨드 젠틀버블클렌저 140ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1089315295",
+    "translated_kr": "어반셰이드 커큐민 선 스틱 SPF50+PA++++ 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어반 쉐이드 쿨 카밍 선스틱 [SPF50+/PA++++]"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "어반 쉐이드 쿨 카밍 선스틱 [SPF50+/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
