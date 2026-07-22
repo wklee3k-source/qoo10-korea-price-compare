@@ -6,18 +6,45 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/538/179/7861179538.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2863,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187136865",
-    "kr_brand": "블랑카우",
-    "kr_name": "블랑카우 밀키스킨 리얼 클렌징폼 150ml - 우유빛 피부 촉촉세안/우유세안/저자극",
-    "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8244479/82444794395.8.jpg",
+    "qoo10_name_kr": "블랑카우 리얼밀크 클렌징폼 150ml",
+    "kr_brand": "블랑카우 (BLANCOW)",
+    "kr_name": "밀키스킨 리얼 클렌징폼",
+    "kr_volume": "150ml",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8244479/82444794395.8.jpg",
+        "mall": "블랑카우",
+        "link": "https://smartstore.naver.com/main/products/4900270820"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8250037/82500373874.5.jpg",
+        "mall": "블랑카우",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4955853666"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6030297/60302974681.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9403051756&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5936381/59363812820.2.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7649949422&ctag=7649949422&lptag=I28074653164&itemId=28074653164&vendorItemId=95031213793&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6056654/60566549705.20260623172917.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/60566549705"
+      }
+    ],
     "kr_price": "15000",
     "kr_url": "https://smartstore.naver.com/main/products/4900270820",
     "kr_mall": "블랑카우",
     "kr_seller_trust": "브랜드직영추정",
-    "kr_source": "naver",
-    "vol_match": false,
+    "kr_source": "hwahae+naver",
+    "vol_match": true,
     "brand_status": "match",
-    "obsolete": null
+    "obsolete": false
   },
   {
     "goods_no": "1203041226",
@@ -26,10 +53,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/425/264/8334264425.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2490,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203041226",
+    "qoo10_name_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
     "kr_brand": "46cm (46센티미터)",
     "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
     "kr_volume": "600mL",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9120996/91209961384.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120996/91209961384.jpg",
+        "mall": "LG생활건강 공식 스토어",
+        "link": "https://smartstore.naver.com/main/products/13665450476"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5806663/58066636119.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9218720687&ctag=9218720687&lptag=I27239168452&itemId=27239168452&vendorItemId=94206246512&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8987494/89874943647.jpg",
+        "mall": "대한 shop",
+        "link": "https://smartstore.naver.com/main/products/12330432930"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8987495/89874958080.jpg",
+        "mall": "대한 shop",
+        "link": "https://smartstore.naver.com/main/products/12330447363"
+      }
+    ],
     "kr_price": "25800",
     "kr_url": "https://smartstore.naver.com/main/products/13665450476",
     "kr_mall": "LG생활건강 공식 스토어",
@@ -46,18 +100,35 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2790,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191395895",
-    "kr_brand": "Snp (에스엔피)",
-    "kr_name": "피디알엔 엑토인 UV 에이징 리커버리 선 세럼 [SPF50+/PA++++]",
-    "kr_volume": "50ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8937860/89378600229.jpg",
-    "kr_price": "11900",
-    "kr_url": "https://smartstore.naver.com/main/products/11834089642",
-    "kr_mall": "SNP",
+    "qoo10_name_kr": "스킨앤러브 엑토인 리커버리 선플루이드 50ml SPF50+ PA++++",
+    "kr_brand": "스킨앤랩",
+    "kr_name": "스킨앤랩 엑토인 리커버리 선 플루이드 50ml",
+    "kr_volume": "",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://smartstore.naver.com/main/products/13263846240"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6092292/60922923084.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6862454?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6092913/60929136671.20260721093341.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/60929136671"
+      }
+    ],
+    "kr_price": "20000",
+    "kr_url": "https://smartstore.naver.com/main/products/13263846240",
+    "kr_mall": "스킨앤랩",
     "kr_seller_trust": "브랜드직영추정",
-    "kr_source": "hwahae+naver",
-    "vol_match": true,
+    "kr_source": "naver",
+    "vol_match": false,
     "brand_status": "unknown",
-    "obsolete": false
+    "obsolete": null
   },
   {
     "goods_no": "1199735232",
@@ -66,10 +137,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/770/749/8293749770.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2300,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199735232",
+    "qoo10_name_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
     "kr_volume": "30ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5847635/58476358299.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F451191730&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5847688/58476882072.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4643921572&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981997/89819977086.jpg",
+        "mall": "올윈코스메틱",
+        "link": "https://smartstore.naver.com/main/products/12275466370"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8976190/89761900881.jpg",
+        "mall": "Golden pass",
+        "link": "https://smartstore.naver.com/main/products/12217390176"
+      }
+    ],
     "kr_price": "33400",
     "kr_url": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
     "kr_mall": "메디큐브",
@@ -86,10 +184,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/889/591/8319591889.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2889,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208085514",
+    "qoo10_name_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
     "kr_brand": "46cm (46센티미터)",
     "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
     "kr_volume": "600mL",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9120996/91209961384.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120996/91209961384.jpg",
+        "mall": "LG생활건강 공식 스토어",
+        "link": "https://smartstore.naver.com/main/products/13665450476"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5806663/58066636119.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9218720687&ctag=9218720687&lptag=I27239168452&itemId=27239168452&vendorItemId=94206246512&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8987494/89874943647.jpg",
+        "mall": "대한 shop",
+        "link": "https://smartstore.naver.com/main/products/12330432930"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8987495/89874958080.jpg",
+        "mall": "대한 shop",
+        "link": "https://smartstore.naver.com/main/products/12330447363"
+      }
+    ],
     "kr_price": "25800",
     "kr_url": "https://smartstore.naver.com/main/products/13665450476",
     "kr_mall": "LG생활건강 공식 스토어",
@@ -106,12 +231,39 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/593/589/7079589593.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 5940,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098318150",
+    "qoo10_name_kr": "넘버즈인 5번 백옥 글루타치온C 에센스+크림+토너+팩",
     "kr_brand": "넘버즈인 (numbuzin)",
-    "kr_name": "3번 참은만큼 보들보들 결세럼팩",
-    "kr_volume": "135g",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_6076426/60764262378.jpg",
-    "kr_price": "11600",
-    "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=4558906111&sub-id=1003&service-code=10000003&lcd=100000005",
+    "kr_name": "5번 글루타치온C 비타수액 에센셜 토너",
+    "kr_volume": "200ml",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6037610/60376101641.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4181626316&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192921/51929218925.20260720163601.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929218925"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5723519/57235193430.20251020160727.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/57235193430"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5972629/59726296196.20260620104931.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59726296196"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9015537/90155379729.jpg",
+        "mall": "데일리케어샵",
+        "link": "https://smartstore.naver.com/main/products/12610868873"
+      }
+    ],
+    "kr_price": "36240",
+    "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=4181626316&sub-id=1003&service-code=10000003&lcd=100000005",
     "kr_mall": "G마켓",
     "kr_seller_trust": "신뢰채널",
     "kr_source": "hwahae+naver",
@@ -126,10 +278,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/628/776/6883776628.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2519,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098317948",
+    "qoo10_name_kr": "소내추럴 올데이타이트 메이크업세팅픽서 75ml",
     "kr_brand": "쏘내추럴 (SO'NATURAL)",
     "kr_name": "올데이 타이트 메이크업 세팅 픽서",
     "kr_volume": "75ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5192924/51929247743.20241213205711.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192924/51929247743.20241213205711.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929247743"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192931/51929312795.20241213211307.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929312795"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192947/51929478691.20241213215919.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929478691"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192923/51929236188.20241213205753.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929236188"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192901/51929015416.20241213202953.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929015416"
+      }
+    ],
     "kr_price": "17800",
     "kr_url": "https://search.shopping.naver.com/catalog/51929247743",
     "kr_mall": "네이버",
@@ -146,10 +325,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/462/892/7482892462.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2337,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1172085888",
+    "qoo10_name_kr": "COSRX 풀핏 프로폴리스 라이트앰플 30ml",
     "kr_brand": "코스알엑스 (COSRX)",
     "kr_name": "풀핏 프로폴리스 라이트 앰플",
     "kr_volume": "30ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6285657022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159512.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6285657023"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2924540/29245403880.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2179124?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=325868"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192925/51929250079.20241213210355.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929250079"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192957/51929573677.20241213221224.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929573677"
+      }
+    ],
     "kr_price": "37600",
     "kr_url": "https://smartstore.naver.com/main/products/6285657022",
     "kr_mall": "코스알엑스",
@@ -166,10 +372,17 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/124/344/7256344124.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3154,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161371182",
+    "qoo10_name_kr": "제니하우스 루트볼륨픽서 200ml",
     "kr_brand": "제니하우스 (jennyhouse)",
     "kr_name": "살롱하우스 마일드 헤어 클렌저",
     "kr_volume": "500ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2087603/2087603_20240214142018.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://img.hwahae.co.kr/products/2087603/2087603_20240214142018.jpg",
+        "mall": null,
+        "link": "https://www.hwahae.co.kr/goods/2087603"
+      }
+    ],
     "kr_price": 63500,
     "kr_url": "https://www.hwahae.co.kr/goods/2087603",
     "kr_mall": null,
@@ -186,10 +399,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/622/223/8367223622.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2422,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210835765",
+    "qoo10_name_kr": "아누아 어성초77 수딩토너 350ml",
     "kr_brand": "아누아 (Anua)",
     "kr_name": "어성초 77 히알루론 토너",
     "kr_volume": "250mL",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9117261/91172614072.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117261/91172614072.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/13628103387"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082266/90822669059.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/13278158727"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9053198/90531986190.jpg",
+        "mall": "몰톡톡",
+        "link": "https://smartstore.naver.com/main/products/12987475098"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192952/51929524387.20250604153922.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929524387"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192952/51929526225.20250604153851.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929526225"
+      }
+    ],
     "kr_price": "26800",
     "kr_url": "https://smartstore.naver.com/main/products/13628103387",
     "kr_mall": "시손느파세",
@@ -200,36 +440,43 @@
     "obsolete": false
   },
   {
-    "goods_no": "1134579258",
-    "qoo10_title": "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）",
-    "qoo10_brand": "LOREAL PARIS",
-    "qoo10_image": "https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg",
-    "qoo10_price_jpy": 5270,
-    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1134579258",
-    "kr_brand": null,
-    "kr_name": null,
-    "kr_volume": "",
-    "kr_image": null,
-    "kr_price": null,
-    "kr_url": null,
-    "kr_mall": null,
-    "kr_seller_trust": null,
-    "kr_source": "hwahae",
-    "vol_match": false,
-    "brand_status": "mismatch",
-    "obsolete": null
-  },
-  {
     "goods_no": "1175557299",
     "qoo10_title": "【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ",
     "qoo10_brand": "ダシュ",
     "qoo10_image": "https://gd.image-qoo10.jp/li/616/683/8394683616.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 5550,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175557299",
+    "qoo10_name_kr": "다슈 데일리 밀크씨슬 블루바이옴 스칼프샴푸 500ml",
     "kr_brand": "다슈 (DASHU)",
     "kr_name": "밀크씨슬 블루바이옴 스칼프 샴푸",
     "kr_volume": "500ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5973571/59735710041.20260420151824.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5973571/59735710041.20260420151824.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59735710041"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981914/89819145862.2.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12274635146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121835/91218358165.jpg",
+        "mall": "spooncookers",
+        "link": "https://smartstore.naver.com/main/products/13673847146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119126/91191263053.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13646752274"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121788/91217883630.jpg",
+        "mall": "투명한 상점",
+        "link": "https://smartstore.naver.com/main/products/13673372611"
+      }
+    ],
     "kr_price": "16900",
     "kr_url": "https://search.shopping.naver.com/catalog/59735710041",
     "kr_mall": "네이버",
@@ -246,10 +493,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/555/725/8096725555.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 1799,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196815742",
+    "qoo10_name_kr": "아비브 모델링크림마스크 71g",
     "kr_brand": "아비브 (Abib)",
     "kr_name": "모델링 크림 마스크 [어성초스쿱]",
     "kr_volume": "71ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5337980/53379806108.1.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5337980/53379806108.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4861371?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327302"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6084735/60847351144.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9491305906&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5923306/59233065532.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9184963082&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5560923/55609234684.20250703122958.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/55609234684"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6064108/60641087324.jpg",
+        "mall": "롯데ON",
+        "link": "https://www.lotteon.com/p/product/LO2711685359?sitmNo=LO2711685359_2711685360&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT"
+      }
+    ],
     "kr_price": "11520",
     "kr_url": "https://link.musinsa.com/app/goods/4861371?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327302",
     "kr_mall": "무신사",
@@ -266,10 +540,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/021/840/7339840021.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 5499,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1164705875",
+    "qoo10_name_kr": "BUSHMAN 워터프루프프로 선크림 50g+선스틱20g",
     "kr_brand": "무신사 스탠다드 뷰티 (musinsa standard BEAUTY)",
     "kr_name": "히알루론산 밸런싱 크림",
     "kr_volume": "50ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5702282/57022828641.1.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5702282/57022828641.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5430922?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=248248"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5924917/59249174465.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6131660?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087643/90876435764.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13331925432"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024883/90248837999.jpg",
+        "mall": "브랜티크",
+        "link": "https://smartstore.naver.com/main/products/12704327075"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087643/90876435597.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13331925266"
+      }
+    ],
     "kr_price": "4480",
     "kr_url": "https://link.musinsa.com/app/goods/5430922?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=248248",
     "kr_mall": "무신사",
@@ -286,10 +587,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/978/365/6714365978.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 6694,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1105980668",
+    "qoo10_name_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
     "kr_brand": "오휘 (OHUI)",
     "kr_name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
     "kr_volume": "50ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8877645/88776452764.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8877645/88776452764.jpg",
+        "mall": "오휘/후",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11231942433"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8998336/89983367531.jpg",
+        "mall": "오휘 후",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12438856784"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5416794/54167946688.2.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4366342802&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118246/91182468871.jpg",
+        "mall": "사람IN",
+        "link": "https://smartstore.naver.com/main/products/13637958162"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023669/90236694603.jpg",
+        "mall": "원라이브:브랜드",
+        "link": "https://smartstore.naver.com/main/products/12692183685"
+      }
+    ],
     "kr_price": "68000",
     "kr_url": "https://shopping.naver.com/outlink/itemdetail/11231942433",
     "kr_mall": "오휘/후",
@@ -306,10 +634,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/022/280/5922280022.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 6095,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1105980665",
+    "qoo10_name_kr": "오휘 에이지리커버리 아이크림 25ml",
     "kr_brand": "오휘 (OHUI)",
     "kr_name": "에이지 리커버리 아이크림",
     "kr_volume": "25ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5810553/58105533250.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5810553/58105533250.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=3186641618&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5810556/58105565987.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=D604203226&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8219792/82197929332.4.jpg",
+        "mall": "케이뷰티즈",
+        "link": "https://smartstore.naver.com/main/products/4653408857"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8990088/89900883441.jpg",
+        "mall": "여인닷컴",
+        "link": "https://smartstore.naver.com/main/products/12356372724"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8382035/83820357440.2.jpg",
+        "mall": "곤쥬르",
+        "link": "https://smartstore.naver.com/main/products/6275854951"
+      }
+    ],
     "kr_price": "52960",
     "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=3186641618&sub-id=1003&service-code=10000003&lcd=100000005",
     "kr_mall": "G마켓",
@@ -326,10 +681,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/620/110/8395110620.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2774,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1044307238",
+    "qoo10_name_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
     "kr_brand": "엘라스틴",
     "kr_name": "엘라스틴 엘라스틴 실크리페어 트리트먼트 샤이닝 골드 300ml 2개",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5438129/54381298827.1.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5438129/54381298827.1.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=3951245110&sub-id=1003&service-code=10000003&lcd=100000071"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5903047/59030472616.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=7145730565&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5437931/54379314979.1.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=E550048126&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5380419/53804192446.20250327110304.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/53804192446"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9057138/90571387250.jpg",
+        "mall": "젠트글로벌",
+        "link": "https://smartstore.naver.com/main/products/13026876158"
+      }
+    ],
     "kr_price": "13210",
     "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=3951245110&sub-id=1003&service-code=10000003&lcd=100000071",
     "kr_mall": "G마켓",
@@ -346,10 +728,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/813/938/8014938813.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 4585,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193729683",
+    "qoo10_name_kr": "유세린 히알루론부스팅에센스 100ml",
     "kr_brand": "유세린 (Eucerin)",
     "kr_name": "하이알루론 부스팅 에센스",
     "kr_volume": "100ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8417650/84176504780.81.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8417650/84176504780.81.jpg",
+        "mall": "유세린공식스토어",
+        "link": "https://smartstore.naver.com/main/products/6632004458"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192922/51929220059.20241213205328.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929220059"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5995259/59952595772.jpg",
+        "mall": "GSSHOP",
+        "link": "http://with.gsshop.com/alia/aliaGate.gs?media=OB&ecpid=1102826075&vodFlag=N&prdseqnum=1102826075&utm_source=price&utm_medium=affiliate&utm_campaign=naver"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5995281/59952810527.2.jpg",
+        "mall": "롯데ON",
+        "link": "https://www.lotteon.com/p/product/LO2598181292?sitmNo=LO2598181292_2598181293&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5996339/59963398953.1.jpg",
+        "mall": "CJ온스타일",
+        "link": "https://display.cjonstyle.com/p/item/2077072423?infl_cd=I0696&utm_medium=pcs&utm_source=naver"
+      }
+    ],
     "kr_price": "40400",
     "kr_url": "https://smartstore.naver.com/main/products/6632004458",
     "kr_mall": "유세린공식스토어",
@@ -366,10 +775,22 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/269/356/8377356269.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3449,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175263787",
+    "qoo10_name_kr": "토리든 밸런스풀 시카오일컨트롤 선스틱 20g",
     "kr_brand": "토리든 (Torriden)",
     "kr_name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
     "kr_volume": "20g",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9105974/91059742315.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105974/91059742315.jpg",
+        "mall": "서울오일장",
+        "link": "https://smartstore.naver.com/main/products/13515231964"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101878/91018780930.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13474270578"
+      }
+    ],
     "kr_price": "23900",
     "kr_url": "https://smartstore.naver.com/main/products/13515231964",
     "kr_mall": "서울오일장",
@@ -386,18 +807,45 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/811/353/8377353811.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 4344,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209710276",
-    "kr_brand": "G마켓",
-    "kr_name": "아도르 퍼퓸 헤어 샴푸 530+100ml 기획 라피타",
-    "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5907919/59079195703.jpg",
-    "kr_price": "29220",
-    "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=4686974223&sub-id=1003&service-code=10000003&lcd=100000071",
-    "kr_mall": "G마켓",
+    "qoo10_name_kr": "La'dor 퍼퓸헤어샴푸 530ml",
+    "kr_brand": "더프트앤도프트 (DUFT&DOFT)",
+    "kr_name": "퍼퓸드 헤어 샴푸 [소피소피]",
+    "kr_volume": "500ml",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4123407/41234070819.24.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=6905111317&ctag=6905111317&lptag=I5014861301&itemId=5014861301&vendorItemId=91886140914&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118988/91189882471.jpg",
+        "mall": "라다종합스토어",
+        "link": "https://smartstore.naver.com/main/products/13645371692"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5598495/55984955628.20250728114416.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/55984955628"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5876836/58768367341.20260202153734.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/58768367341"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5938697/59386970807.20260325143543.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59386970807"
+      }
+    ],
+    "kr_price": "19200",
+    "kr_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=6905111317&ctag=6905111317&lptag=I5014861301&itemId=5014861301&vendorItemId=91886140914&spec=10305199",
+    "kr_mall": "쿠팡",
     "kr_seller_trust": "신뢰채널",
-    "kr_source": "naver",
+    "kr_source": "hwahae+naver",
     "vol_match": false,
     "brand_status": "mismatch",
-    "obsolete": null
+    "obsolete": false
   },
   {
     "goods_no": "1202412626",
@@ -406,10 +854,17 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/684/353/8377353684.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 4000,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1202412626",
+    "qoo10_name_kr": "벤튼 퍼펙트프레시 맨즈 남성용세정제 150ml",
     "kr_brand": "듀이트리 (DEWYTREE)",
     "kr_name": "ph6.9 위치하젤 프레쉬 젤 클렌저",
     "kr_volume": "",
-    "kr_image": "https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg",
+        "mall": null,
+        "link": "https://www.hwahae.co.kr/goods/1712521"
+      }
+    ],
     "kr_price": null,
     "kr_url": "https://www.hwahae.co.kr/goods/1712521",
     "kr_mall": null,
@@ -426,10 +881,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/150/354/8377354150.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3459,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1200863342",
+    "qoo10_name_kr": "AHC 마스터즈 아이시젤리 선스틱 14g",
     "kr_brand": "AHC (에이에이치씨)",
     "kr_name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
     "kr_volume": "14g",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9075416/90754164355.12.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075416/90754164355.12.jpg",
+        "mall": "AHC 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/13209653258"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078773/90787732236.15.jpg",
+        "mall": "AHC 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/13243221904"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078773/90787732237.3.jpg",
+        "mall": "AHC",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13243221905"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5950319/59503191421.20260402102423.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59503191421"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121144/91211449378.jpg",
+        "mall": "몰아크로",
+        "link": "https://smartstore.naver.com/main/products/13666938470"
+      }
+    ],
     "kr_price": "18900",
     "kr_url": "https://smartstore.naver.com/main/products/13209653258",
     "kr_mall": "AHC 공식스토어",
@@ -446,10 +928,17 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/142/354/8377354142.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 5063,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196939883",
+    "qoo10_name_kr": "아비브 레티날아이세럼 리프팅롤러 15ml",
     "kr_brand": "아비브",
     "kr_name": "아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 Retinal Eye Serum",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg",
+        "mall": "비바체바이지",
+        "link": "https://smartstore.naver.com/main/products/13332115550"
+      }
+    ],
     "kr_price": "30590",
     "kr_url": "https://smartstore.naver.com/main/products/13332115550",
     "kr_mall": "비바체바이지",
@@ -466,10 +955,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/798/855/7751855798.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3440,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1182595010",
+    "qoo10_name_kr": "메디큐브 PDRN 핑크비타코팅마스크 10매",
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "PDRN 비타 코팅 마스크",
     "kr_volume": "22g",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9053098/90530980162.4.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9053098/90530980162.4.jpg",
+        "mall": "메디큐브 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12986469070"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9092490/90924909755.jpg",
+        "mall": "메디큐브 공식몰",
+        "link": "https://smartstore.naver.com/main/products/13380399419"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5899494/58994940127.4.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9128878560&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9114087/91140877064.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13596366652"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9076745/90767452603.jpg",
+        "mall": "플러스딜",
+        "link": "https://smartstore.naver.com/main/products/13222942272"
+      }
+    ],
     "kr_price": "38000",
     "kr_url": "https://smartstore.naver.com/main/products/12986469070",
     "kr_mall": "메디큐브 공식몰",
@@ -486,13 +1002,20 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/919/491/7880491919.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3220,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186682635",
+    "qoo10_name_kr": "아누아 아젤라익애씨드10 히알루론 레드니스수딩세럼 30ml",
     "kr_brand": "아누아",
-    "kr_name": "B11756 Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum 1.0 oz Skin Care",
+    "kr_name": "아누아 아젤라익산 10 히알루론 수딩 세럼 촉촉 진정 30ml, 1개",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_6058410/60584105393.jpg",
-    "kr_price": "45700",
-    "kr_url": "http://jelly-pop.com/prod/content.asp?PMInc=12253078",
-    "kr_mall": "젤리팝",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5798898/57988980630.20260625071323.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/57988980630"
+      }
+    ],
+    "kr_price": "23720",
+    "kr_url": "https://search.shopping.naver.com/catalog/57988980630",
+    "kr_mall": "네이버",
     "kr_seller_trust": "미확인",
     "kr_source": "naver",
     "vol_match": false,
@@ -506,10 +1029,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/302/908/8128908302.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3380,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199084782",
+    "qoo10_name_kr": "Dr.Ceuracle 비건콤부차티에센스 150ml",
     "kr_brand": "닥터슈라클",
     "kr_name": "닥터슈라클 비건 콤부차 티 에센스 스타레나  1개  150ml",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V84862403844&itemId=20149212318&vendorItemId=84862403844&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5929580/59295800159.4.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V85643314800&itemId=20149212318&vendorItemId=85643314800&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5983107/59831071667.1.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V95329407789&itemId=20149212318&vendorItemId=95329407789&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5791251/57912512804.16.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V94151400849&itemId=20149212318&vendorItemId=94151400849&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5808233/58082337119.8.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V94253986690&itemId=20149212318&vendorItemId=94253986690&spec=10305199"
+      }
+    ],
     "kr_price": "36980",
     "kr_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V84862403844&itemId=20149212318&vendorItemId=84862403844&spec=10305199",
     "kr_mall": "쿠팡",
@@ -526,10 +1076,17 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/050/674/8272674050.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3530,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206207561",
+    "qoo10_name_kr": "MAY ISLAND 톤업펄크림 본품30g+30g",
     "kr_brand": "로하시스 (LOHASYS)",
     "kr_name": "피에잇 톤업 앤 브라이트닝 크림 EX",
     "kr_volume": "30g",
-    "kr_image": "https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg",
+        "mall": null,
+        "link": "https://www.hwahae.co.kr/goods/1841007"
+      }
+    ],
     "kr_price": 29000,
     "kr_url": "https://www.hwahae.co.kr/goods/1841007",
     "kr_mall": null,
@@ -546,10 +1103,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/426/644/8267644426.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3530,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205776987",
+    "qoo10_name_kr": "메디큐브 AGE-R 글루타치온글로우캡슐크림 50ml",
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "에이지알 글루타치온 글로우 캡슐 크림",
     "kr_volume": "50ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5927684/59276848245.3.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9194993752&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5999774/59997749420.2.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9343736987&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192949/51929498317.20250717141407.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929498317"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105649/91056493008.1.jpg",
+        "mall": "그랑나랑상점",
+        "link": "https://smartstore.naver.com/main/products/13511982656"
+      }
+    ],
     "kr_price": "49000",
     "kr_url": "https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
     "kr_mall": "메디큐브",
@@ -566,10 +1150,17 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/313/816/8125816313.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2240,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1198940759",
+    "qoo10_name_kr": "Beauty of Joseon 릴리프선아쿠아프레시 50ml",
     "kr_brand": "더샘 (theSAEM)",
     "kr_name": "샘물 연지 틴트 [RD01 내가조선의장미]",
     "kr_volume": "",
-    "kr_image": "https://img.hwahae.co.kr/products/1744117/1744117_20220801000000.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://img.hwahae.co.kr/products/1744117/1744117_20220801000000.jpg",
+        "mall": null,
+        "link": "https://www.hwahae.co.kr/goods/1744117"
+      }
+    ],
     "kr_price": null,
     "kr_url": "https://www.hwahae.co.kr/goods/1744117",
     "kr_mall": null,
@@ -586,10 +1177,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/050/810/8263810050.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2043,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205562844",
+    "qoo10_name_kr": "euthymol 브레스민트볼 20개입",
     "kr_brand": "유시몰",
     "kr_name": "유시몰 브레쓰 민트볼 20입",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000199340"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981914/89819148775.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274638059"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5934461/59344617798.jpg",
+        "mall": "컬리",
+        "link": "https://redirect.kurly.com/entry?utm_source=NaverShopping&utm_medium=2001&utm_term=1000789377&no=1000789377&kfpartnerID=1000000"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102192/91021920120.jpg",
+        "mall": "코코아드망",
+        "link": "https://smartstore.naver.com/main/products/13477409768"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054458/90544587426.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/13000076334"
+      }
+    ],
     "kr_price": "6500",
     "kr_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000199340",
     "kr_mall": "올리브영",
@@ -606,10 +1224,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/162/367/8383367162.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2510,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212630238",
+    "qoo10_name_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
     "kr_brand": "산다화 (Sandawha)",
     "kr_name": "울트라 젠틀 약산성 세안제",
     "kr_volume": "100g",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_6050356/60503564243.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6050356/60503564243.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=2494952896&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5969456/59694568921.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=3823870730&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6088777/60887779459.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9498123420&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121235/91212351316.jpg",
+        "mall": "플랜트53",
+        "link": "https://smartstore.naver.com/main/products/13667840408"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927909/89279090050.1.jpg",
+        "mall": "우리농 생명공동체",
+        "link": "https://smartstore.naver.com/main/products/11734579553"
+      }
+    ],
     "kr_price": "19800",
     "kr_url": "https://link.gmarket.co.kr/gate/pcs?item-no=2494952896&sub-id=1003&service-code=10000003&lcd=100000005",
     "kr_mall": "G마켓",
@@ -626,10 +1271,27 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/445/396/8358396445.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3400,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210464824",
+    "qoo10_name_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
     "kr_brand": "엘리자베카 (Elizavecca)",
     "kr_name": "콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100",
     "kr_volume": "500ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5822692/58226929409.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5822692/58226929409.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8567625601&ctag=8567625601&lptag=I25175591143&itemId=25175591143&vendorItemId=92172702455&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5694165/56941656821.1.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8614751002&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9083007/90830076227.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13285565895"
+      }
+    ],
     "kr_price": "38930",
     "kr_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8567625601&ctag=8567625601&lptag=I25175591143&itemId=25175591143&vendorItemId=92172702455&spec=10305199",
     "kr_mall": "쿠팡",
@@ -646,10 +1308,37 @@
     "qoo10_image": "https://gd.image-qoo10.jp/li/775/497/8017497775.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 3060,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186310271",
+    "qoo10_name_kr": "셀리맥스 더리얼노니 모이스처 밸런싱토너 320ml",
     "kr_brand": "셀리맥스 (celimax)",
     "kr_name": "노니 밸런싱 토너",
     "kr_volume": "150ml",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_8234946/82349462597.25.jpg",
+    "kr_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8234946/82349462597.25.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/4804939932"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120163/91201632327.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/13657121542"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192948/51929484859.20241213220028.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929484859"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192928/51929282167.20241213210843.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929282167"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6052197/60521972481.jpg",
+        "mall": "컬리",
+        "link": "https://redirect.kurly.com/entry?utm_source=NaverShopping&utm_medium=2001&utm_term=1001592460&no=1001592460&kfpartnerID=1000000"
+      }
+    ],
     "kr_price": "19900",
     "kr_url": "https://smartstore.naver.com/main/products/4804939932",
     "kr_mall": "셀리맥스",
