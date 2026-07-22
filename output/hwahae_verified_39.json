@@ -21089,5 +21089,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209060373",
+    "translated_kr": "하호니코 레브리 levuli 샴푸 a (295ml) + 트리트먼트 a (225g) 본품 2점 세트 살롱 전매품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "하호니코 레브리 샴푸 +트리트먼트"
+    },
+    "brand": null,
+    "name": "하호니코 레브리 샴푸 +트리트먼트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212659125",
+    "translated_kr": "살롱10 프로테인 헤어 트리트먼트 극손상 헤어용 250ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "미쟝센 살롱10 단백질 트리트먼트",
+      "hwahae": "살롱 플러스 클리닉 10 트리트먼트 [극손상모발용]"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱 플러스 클리닉 10 트리트먼트 [극손상모발용]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
