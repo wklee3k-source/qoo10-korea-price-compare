@@ -409,21 +409,55 @@ async function loadAll() {
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
     const shops = (data.visited_shops || []).length;
-    const products = (data.all_products || []).length;
+    let products = (data.all_products || []).length;
+    let archivedCount = 0;
+
+    // 아카이빙된 상품(별도 파일로 옮겨진 것)도 합산한다 — GitHub API로
+    // output/archive/ 폴더 목록을 가져와서 각 파일의 개수를 센다.
+    // GitHub 비인증 API는 시간당 60회 제한이라 60초 자동새로고침과 부딪히니,
+    // 5분간 캐시해서 호출 빈도를 줄인다.
+    try {
+      const cacheKey = 'archive_count_cache';
+      const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+      const cacheAge = cached ? Date.now() - cached.ts : Infinity;
+      if (cached && cacheAge < 5 * 60 * 1000) {
+        archivedCount = cached.count;
+      } else {
+        const listRes = await fetch(
+          `https://api.github.com/repos/${REPO}/contents/output/archive?ref=discovery-live`
+        );
+        if (listRes.ok) {
+          const files = await listRes.json();
+          const archiveFetches = files
+            .filter(f => f.name.endsWith('.json'))
+            .map(f => fetch(RAW(`output/archive/${f.name}`, 'discovery-live')).then(r => r.ok ? r.json() : []));
+          const archives = await Promise.all(archiveFetches);
+          archivedCount = archives.reduce((sum, arr) => sum + arr.length, 0);
+          localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), count: archivedCount }));
+        } else if (cached) {
+          archivedCount = cached.count; // rate limit 등으로 실패하면 오래된 캐시라도 사용
+        }
+      }
+    } catch (e) { /* 아카이브 조회 실패해도 메인 수치는 계속 표시 */ }
+
+    const totalProducts = products + archivedCount;
     current.shops = shops;
-    current.products = products;
+    current.products = totalProducts;
 
     document.getElementById('s1-shops').textContent = shops.toLocaleString();
-    document.getElementById('s1-products').textContent = products.toLocaleString();
+    document.getElementById('s1-products').textContent = totalProducts.toLocaleString();
 
     if (prev && prev.shops != null) {
       setDelta(document.getElementById('s1-shops-delta'), shops - prev.shops);
-      setDelta(document.getElementById('s1-products-delta'), products - prev.products);
+      setDelta(document.getElementById('s1-products-delta'), totalProducts - prev.products);
     } else {
       document.getElementById('s1-shops-delta').textContent = '첫 조회';
       document.getElementById('s1-products-delta').textContent = '첫 조회';
     }
-    document.getElementById('s1-note').textContent = `남은 시드: ${(data.pending_keywords || []).length}개`;
+    const noteText = archivedCount > 0
+      ? `최근 ${products}건 + 아카이브 ${archivedCount}건 · 남은 시드: ${(data.pending_keywords || []).length}개`
+      : `남은 시드: ${(data.pending_keywords || []).length}개`;
+    document.getElementById('s1-note').textContent = noteText;
   } catch (e) {
     hadError = true;
     document.getElementById('s1-note').textContent = '불러오기 실패';
