@@ -503,5 +503,54 @@
         "link": "https://link.musinsa.com/app/goods/4861371?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327302"
       }
     ]
+  },
+  {
+    "goods_no": "1164705875",
+    "translated_kr": "BUSHMAN 워터프루프프로 선크림 50g+선스틱20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "MUSINSA",
+      "hwahae": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+      "naver": "부쉬맨 워터프루프 프로 선크림 150g,선스틱 20g SPF50+ PA+++ 2종세트"
+    },
+    "brand": "부쉬맨 (BUSHMAN)",
+    "name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "55300",
+    "mall": "부쉬맨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11814237712",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg",
+        "mall": "부쉬맨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11814237712"
+      }
+    ]
+  },
+  {
+    "goods_no": "1105980668",
+    "translated_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "프라임 어드밴서 디에이징 앰플 세럼",
+      "hwahae": "프라임 어드밴서 디에이징 PDRN 부스터샷"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 80000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2130825",
+    "image_url": "https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg",
+    "image_candidates": []
   }
 ]
