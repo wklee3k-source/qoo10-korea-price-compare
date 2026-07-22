@@ -114,23 +114,61 @@ def _protect_and_translate(text: str, translator) -> str:
 SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
 SEED_LOG_PATH = OUTPUT_DIR / "discovery_seed_log.json"
 ARCHIVE_DIR = OUTPUT_DIR / "archive"
-ARCHIVE_THRESHOLD = 500  # all_products가 이 개수를 넘으면 오래된 것부터 아카이브로 이동
-KEEP_RECENT = 200  # 메인 상태파일에는 최근 이 개수만 남긴다
+ARCHIVE_THRESHOLD = 500  # all_products가 이 개수를 넘으면 아카이빙을 시도한다
+HARD_ARCHIVE_CEILING = 1500  # 번역이 안 따라와도 이 개수를 넘으면 강제로 오래된 것부터 정리(안전장치)
+KEEP_RECENT = 200  # 강제정리시 메인 상태파일에는 최근 이 개수만 남긴다
+
+
+def _fetch_translated_goods() -> set:
+    """2단계(번역) 전용 브랜치(translate-live)에서 이미 번역완료된
+    goods_no 집합을 읽기전용으로 가져온다. 실패해도 빈 집합을 반환해서
+    (아무것도 아카이브 안 하는 안전한 방향으로) 크래시하지 않는다."""
+    import subprocess
+
+    try:
+        subprocess.run(
+            ["git", "fetch", "origin", "translate-live"],
+            check=True, capture_output=True, timeout=30, cwd=str(OUTPUT_DIR.parent),
+        )
+        result = subprocess.run(
+            ["git", "show", "origin/translate-live:output/hwahae_input_39.json"],
+            check=True, capture_output=True, timeout=15, cwd=str(OUTPUT_DIR.parent),
+        )
+        translated = json.loads(result.stdout.decode("utf-8"))
+        return {x["goods_no"] for x in translated}
+    except Exception as e:  # noqa: BLE001
+        print(f"[ARCHIVE] translate-live 조회 실패(아카이빙 건너뜀): {type(e).__name__}: {e}")
+        return set()
 
 
 def _archive_old_products(all_products: dict) -> dict:
-    """all_products가 너무 커지면(GitHub 파일크기/저장소 용량 문제 방지) 오래된
-    것부터 output/archive/discovery_archive_<날짜>.json로 옮기고, 메인
-    상태파일에는 최근 것만 남긴다. visited_shops/pending_keywords 등은
-    안 건드린다(재방문 방지 로직에 필요하니 계속 유지)."""
+    """번역완료(2단계가 처리함)된 상품을 아카이브로 옮기고, 아직 번역 안 된
+    것만 메인 상태파일(활성 풀)에 남긴다. 이렇게 하면 2단계는 항상
+    discovery_state.json의 all_products만 보면 되고 아카이브를 뒤질
+    필요가 없어진다(그 안엔 이미 번역된 것만 있으므로).
+
+    번역이 한참 안 따라와서 all_products가 너무 커지면(HARD_ARCHIVE_CEILING
+    초과) 안전장치로 오래된 것부터 강제 아카이브한다(파일 크기 문제 방지)."""
     if len(all_products) <= ARCHIVE_THRESHOLD:
         return all_products
 
     ARCHIVE_DIR.mkdir(exist_ok=True, parents=True)
-    items = list(all_products.items())
-    to_archive = items[: len(items) - KEEP_RECENT]
-    to_keep = dict(items[len(items) - KEEP_RECENT :])
+    translated_goods = _fetch_translated_goods()
 
+    items = list(all_products.items())
+    to_archive_translated = [(k, v) for k, v in items if k in translated_goods]
+    to_keep = {k: v for k, v in items if k not in translated_goods}
+
+    # 안전장치: 번역이 못 따라와서 활성 풀이 여전히 너무 크면, 오래된 것부터 추가로 강제 아카이브
+    to_archive_forced = []
+    if len(to_keep) > HARD_ARCHIVE_CEILING:
+        keep_items = list(to_keep.items())
+        n_force = len(keep_items) - KEEP_RECENT
+        to_archive_forced = keep_items[:n_force]
+        to_keep = dict(keep_items[n_force:])
+        print(f"[ARCHIVE][안전장치] 번역이 못 따라와 활성풀이 {HARD_ARCHIVE_CEILING}건 초과 -> {len(to_archive_forced)}건 강제 아카이브")
+
+    to_archive = to_archive_translated + to_archive_forced
     if to_archive:
         from datetime import datetime, timezone
 
@@ -139,7 +177,9 @@ def _archive_old_products(all_products: dict) -> dict:
         archive_path.write_text(
             json.dumps([v for _, v in to_archive], ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        print(f"[ARCHIVE] {len(to_archive)}건을 {archive_path.name}(으)로 이동, 메인엔 최근 {len(to_keep)}건만 유지")
+        print(f"[ARCHIVE] {len(to_archive)}건을 {archive_path.name}(으)로 이동"
+              f"(번역완료 {len(to_archive_translated)}건 + 강제 {len(to_archive_forced)}건), "
+              f"활성풀엔 {len(to_keep)}건 유지")
 
     return to_keep
 

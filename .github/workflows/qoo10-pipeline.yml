@@ -346,26 +346,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # discovery-live 브랜치의 최신 상품 목록(메인+아카이브)을 가져온다
+          # discovery-live 브랜치의 활성 상품 목록을 가져온다. 이제 아카이브는
+          # "이미 번역완료된 것"만 담으므로(discover 쪽에서 그렇게 정리함),
+          # 2단계는 discovery_state.json의 all_products만 보면 충분하다
+          # — 아카이브를 따로 뒤질 필요가 없어져서 예전의 "아카이브 못
+          # 가져와서 신규건수 오판" 버그가 원천적으로 사라진다.
           git fetch origin discovery-live
           git show origin/discovery-live:output/discovery_state.json > /tmp/ds.json
-          mkdir -p /tmp/arch
-          for f in $(git ls-tree -r --name-only origin/discovery-live -- output/archive/ 2>/dev/null); do
-            git show origin/discovery-live:$f > "/tmp/arch/$(basename $f)" 2>/dev/null || true
-          done
 
           # translate-live 브랜치 자체에 이미 있는 hwahae_input_39.json을 이어서 씀
           mkdir -p ../output
           if [ ! -f ../output/hwahae_input_39.json ]; then echo "[]" > ../output/hwahae_input_39.json; fi
 
           python3 << 'PYEOF'
-          import json, glob, subprocess, sys
+          import json, sys
 
-          main = json.load(open('/tmp/ds.json'))['all_products']
-          archived = []
-          for f in glob.glob('/tmp/arch/*.json'):
-              archived.extend(json.load(open(f)))
-          all_qoo10 = {p['goods_no']: p for p in main + archived}
+          all_qoo10 = {p['goods_no']: p for p in json.load(open('/tmp/ds.json'))['all_products']}
 
           existing = json.load(open('../output/hwahae_input_39.json'))
           existing_goods = set(x['goods_no'] for x in existing)
