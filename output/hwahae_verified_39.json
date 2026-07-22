@@ -19010,5 +19010,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210960985",
+    "translated_kr": "30초 퀵 버블 마스크 모이스트 95ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "메노킨 30초 퀵 버블 마스크_모이스트",
+      "hwahae": "30초 퀵 버블 마스크 [모이스트]"
+    },
+    "brand": "메노킨 (MENOKIN)",
+    "name": "30초 퀵 버블 마스크 [모이스트]",
+    "volume": "95ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210946252",
+    "translated_kr": "30초 퀵 버블 마스크 클리어 95ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "메노킨 30초 퀵 버블 마스크_클리어",
+      "hwahae": "30초 퀵 버블 마스크 클리어"
+    },
+    "brand": "메노킨 (MENOKIN)",
+    "name": "30초 퀵 버블 마스크 클리어",
+    "volume": "95ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
