@@ -26376,5 +26376,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212561469",
+    "translated_kr": "딥 클린 쿨링 샴푸 500ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥클린 쿨링 샴푸"
+    },
+    "brand": "비욘드 (BEYOND)",
+    "name": "딥클린 쿨링 샴푸",
+    "volume": "450ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209152772",
+    "translated_kr": "케이스 리필 파프를 모아 사용할 수 있는 데일리 쿠션 파운데이션 세트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
