@@ -14412,5 +14412,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207321955",
+    "translated_kr": "판테놀배리어크림50ml보습크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선크림 [SPF50+/PA++++] [판테놀베리어]"
+    },
+    "brand": "코스노리 (COSNORI)",
+    "name": "선크림 [SPF50+/PA++++] [판테놀베리어]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204561188",
+    "translated_kr": "골드콜라겐퍼펙션아이패치60매",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[더블기획세트+추가5%포인트] Snp 골드 콜라겐 퍼펙션 아이패치 마스크팩 주름 잡티 미백 탄력 60매, 2개"
+    },
+    "brand": "SNP",
+    "name": "[더블기획세트+추가5%포인트] Snp 골드 콜라겐 퍼펙션 아이패치 마스크팩 주름 잡티 미백 탄력 60매, 2개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "28500",
+    "mall": "SNP",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11513673131",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8905818/89058183504.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905818/89058183504.6.jpg",
+        "mall": "SNP",
+        "link": "https://smartstore.naver.com/main/products/11513673131"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905818/89058183505.4.jpg",
+        "mall": "SNP",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11513673132"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
