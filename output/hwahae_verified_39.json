@@ -13429,5 +13429,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1121575025",
+    "translated_kr": "바이오콜라겐리얼딥마스크,8매/고보습/탄력모공윤기피부케어/앰플1개분을그대로굳힌하이드로겔/끈적임없음/한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1123787663",
+    "translated_kr": "UV이데아XL프로텍션톤업로즈30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "유비데아 XL 데일리 유브이 프로텍션 이븐 컴플렉션 [SPF50/PA+++]"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "유비데아 XL 데일리 유브이 프로텍션 이븐 컴플렉션 [SPF50/PA+++]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
