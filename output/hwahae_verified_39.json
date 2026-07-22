@@ -22692,5 +22692,64 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1207950025",
+    "translated_kr": "호텔 테라피 바디 워시, 1013ml [MEDIHEAL 마스크 1장 증정]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Hotel Therapy Body Wash",
+      "hwahae": "호텔 테라피 바디워시 [상탈프레쉬]",
+      "naver": "[헤트라스 뷰티] 호텔테라피 퍼퓸 대용량 바디워시 1013ml B-BW"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "호텔 테라피 바디워시 [상탈프레쉬]",
+    "volume": "1013ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "9900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4229925?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5163595/51635953685.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5163595/51635953685.5.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4229925?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5191100/51911007956.4.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=143590446&shop_id=19454&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200677289",
+    "translated_kr": "글리콜산 7% 토닝 솔루션 100ml 각질 케어 닦아내는 화장수 모공 케어 한국 스킨케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "글리코릭 애시드 7% 엑스폴리에이팅 토너"
+    },
+    "brand": null,
+    "name": "글리코릭 애시드 7% 엑스폴리에이팅 토너",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
