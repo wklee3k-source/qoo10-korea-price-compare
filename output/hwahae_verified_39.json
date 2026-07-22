@@ -15330,5 +15330,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191833877",
+    "translated_kr": "트리플콜라겐토탈텐션크림80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트리플 콜라겐 토탈 텐션 크림"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "트리플 콜라겐 토탈 텐션 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191748547",
+    "translated_kr": "실키오일세럼70ml/비건/프레스티지헤어케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 비건 실크 오버나이트 펩타이드 세럼"
+    },
+    "brand": "파시피카 (PACIFICA)",
+    "name": "(해외) 비건 실크 오버나이트 펩타이드 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
