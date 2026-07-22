@@ -25463,5 +25463,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1168272705",
+    "translated_kr": "제로 모공 세럼 2.0 37ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "제로 모공 세럼 2.0",
+      "hwahae": "제로 모공 세럼 2.0"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로 모공 세럼 2.0",
+    "volume": "37ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1146024478",
+    "translated_kr": "헤어 케어 녹차 실감 중 건성 샴푸 500g",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "녹차실감 샴푸 중건성 두피용",
+      "naver": "아모스녹차실감 중건성샴푸500g"
+    },
+    "brand": null,
+    "name": "녹차실감 샴푸 중건성 두피용",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "59600",
+    "mall": "아모스전문샵",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/303309725",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8086089/80860898338.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8086089/80860898338.3.jpg",
+        "mall": "아모스전문샵",
+        "link": "https://smartstore.naver.com/main/products/303309725"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
