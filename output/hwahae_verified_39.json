@@ -21522,5 +21522,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1168069878",
+    "translated_kr": "자작나무 수분 토너 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 토너"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1167785009",
+    "translated_kr": "어드밴스드 10X 리페어 앰플 헤어팩 300ml 3개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드밴스드 10X 토탈리커버리 앰플 헤어팩"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 10X 토탈리커버리 앰플 헤어팩",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
