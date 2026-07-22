@@ -19626,5 +19626,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1102236597",
+    "translated_kr": "조공진 클렌징 폼 150ml / 세안폼 / 세안료 / 메이크업 제거 / 화장 제거 / 클렌징 / 모공 케어 / 건성피부 / 보습 케어 / 피부 트러블 / 윤기 / 스킨케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "클렌징 폼"
+    },
+    "brand": null,
+    "name": "클렌징 폼",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165836772",
+    "translated_kr": "모이스트 샤인 헤어오일 56ml (캐비어&코코넛 함유 헤어오일)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "가히 모이스트 샤인 헤어오일",
+      "hwahae": "모이스트 샤인 헤어오일"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "모이스트 샤인 헤어오일",
+    "volume": "56ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
