@@ -26415,5 +26415,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1164978194",
+    "translated_kr": "【비비안】 니치 룸 스프레이 월넛 크릭 그린 100ml 1개, 패브릭 향수 패브릭 제취제 드레스 퍼퓸 Walnut Creek Green",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [월넛크릭그린]"
+    },
+    "brand": "비비앙 (BiBiANG)",
+    "name": "오 드 퍼퓸 [월넛크릭그린]",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 57000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1082547960",
+    "translated_kr": "【정품】 워터풀 톤업 자외선 차단제 톤업 [SPF50+/PA++++] 50ml 1개, 선 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터풀 선크림 [SPF50+/PA++++] [톤업/핑크]"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "워터풀 선크림 [SPF50+/PA++++] [톤업/핑크]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
