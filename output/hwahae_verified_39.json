@@ -26682,5 +26682,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1126626890",
+    "translated_kr": "초저분자 히알루론산 토너 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "초저분자 히아루론산 토너"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "초저분자 히아루론산 토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 21000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1127123405",
+    "translated_kr": "PH 센시티브 크림 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PH 센서티브 크림"
+    },
+    "brand": "쌔뮤 (SAM'U)",
+    "name": "PH 센서티브 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
