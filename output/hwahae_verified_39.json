@@ -6198,5 +6198,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1105980665",
+    "translated_kr": "오휘 에이지리커버리 아이크림 25ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이지 리커버리 아이크림",
+      "hwahae": "에이지 리커버리 아이크림"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "에이지 리커버리 아이크림",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 105000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1044307238",
+    "translated_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "엘라스틴 실크 샤이닝골드 트리트먼트 300ML * 2개",
+      "hwahae": "실크리페어 퍼펙트 샤이닝 골드실크 트리트먼트"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "엘라스틴 실크 샤이닝골드 트리트먼트 300ML * 2개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
