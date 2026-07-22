@@ -16918,5 +16918,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201652635",
+    "translated_kr": "[공식]리페어 앰플마스크팩(6장입×5박스)팩 시카 엑소솜 PDRN 건조 보습 모공 진정 제대혈 인간줄기세포 에이징 시트마스크 한국코스메 스킨",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "인진쑥 진정 보습 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1157090150",
+    "translated_kr": "[1위 비듬가려움 샴푸] 콜츠푸트 안티-댄드러프 샴푸 200ml 듀오 기획",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜츠푸트 안티-댄드러프 샴푸"
+    },
+    "brand": "라우쉬 (RAUSCH)",
+    "name": "콜츠푸트 안티-댄드러프 샴푸",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
