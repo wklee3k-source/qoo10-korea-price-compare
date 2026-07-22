@@ -26862,5 +26862,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1082221247",
+    "translated_kr": "무드 페블 네일 29종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "왓에버 걸즈 에디션 쿠로미 무드 페블 네일 [29호 퍼플포켓]",
+      "naver": "[롬앤] 무드 페블 네일X2"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "왓에버 걸즈 에디션 쿠로미 무드 페블 네일 [29호 퍼플포켓]",
+    "volume": "7g",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "12000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=111671366&shop_id=14039&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5056537/50565379163.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5056537/50565379163.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=111671366&shop_id=14039&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4475044/44750449448.2.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3759746?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=325868"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1161540935",
+    "translated_kr": "바이오EX셀펩타이드 리링클퍼펙터마스크 30gx10장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
