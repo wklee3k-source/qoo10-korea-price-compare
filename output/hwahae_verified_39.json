@@ -28929,5 +28929,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169659543",
+    "translated_kr": "코튼풋 발을 씻자 피치 풋 샴푸 385ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코튼풋 발을 씻자 풋샴푸 [쿨링]"
+    },
+    "brand": "온더바디 (ON:THEBODY)",
+    "name": "코튼풋 발을 씻자 풋샴푸 [쿨링]",
+    "volume": "385mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1138349945",
+    "translated_kr": "레드 여드름 바디소프, 400g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
