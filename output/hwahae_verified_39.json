@@ -5003,5 +5003,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205911396",
+    "translated_kr": "크렘드라메르3.5ml미니사이즈",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "La Mer The Moisturizing Soft Cream, Mini Size"
+    },
+    "brand": null,
+    "name": "La Mer The Moisturizing Soft Cream, Mini Size",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1113370944",
+    "translated_kr": "[2개세트국내당일발송]넘버즈인5번백옥글루타치온C에센스30ml한국화장품스킨케어화제인기",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "5번 글루타치온C 흔적 앰플",
+      "naver": "[더블기획] 넘버즈인 5번 글루타치온C 흔적 앰플 30ml x 2"
+    },
+    "brand": "넘버즈인",
+    "name": "[더블기획] 넘버즈인 5번 글루타치온C 흔적 앰플 30ml x 2",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "36400",
+    "mall": "넘버즈인 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10866752432",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8841125/88411258445.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8841125/88411258445.7.jpg",
+        "mall": "넘버즈인 공식몰",
+        "link": "https://smartstore.naver.com/main/products/10866752432"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8596527/85965277264.7.jpg",
+        "mall": "넘버즈인 공식몰",
+        "link": "https://smartstore.naver.com/main/products/8420776941"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8596535/85965351479.7.jpg",
+        "mall": "넘버즈인",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8420851156"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
