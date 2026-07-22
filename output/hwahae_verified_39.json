@@ -26254,5 +26254,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1121145364",
+    "translated_kr": "리들샷 300 에센스 50ml(+리들샷 시너지 리페어 크림50)/리들샷/리들샷 300",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "VT 리들샷 300 +리들샷 시너지 리페어 크림 50 ..."
+    },
+    "brand": null,
+    "name": "VT 리들샷 300 +리들샷 시너지 리페어 크림 50 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201631207",
+    "translated_kr": "루트젠 탈모증상 전문케어 두피 에센스 80ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "루트젠 탈모증상전문케어 두피 에센스",
+      "hwahae": "루트젠 탈모증상전문케어 두피에센스"
+    },
+    "brand": "려 (Ryo)",
+    "name": "루트젠 탈모증상전문케어 두피에센스",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
