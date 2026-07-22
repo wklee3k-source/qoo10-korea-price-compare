@@ -28182,5 +28182,64 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205625766",
+    "translated_kr": "청보리 트러블 징크 세럼 30ml 2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "VEGANIFECT Green Barley Trouble Zinc Serum",
+      "naver": "비건이펙트 청보리 트러블 징크 세럼 디판테놀 피지 급속진정 민감 30ml, 2개"
+    },
+    "brand": null,
+    "name": "VEGANIFECT Green Barley Trouble Zinc Serum",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "23900",
+    "mall": "비건이펙트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11872048938",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8941655/89416559532.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941655/89416559532.2.jpg",
+        "mall": "비건이펙트",
+        "link": "https://smartstore.naver.com/main/products/11872048938"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941655/89416559533.2.jpg",
+        "mall": "비건이펙트",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11872048939"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194137779",
+    "translated_kr": "플라센 매직 시스템 세트 1제/2제 200ml/2종 선택",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "르네셀 플라센 매직 시스템 세트 1제 1개 + 2 ...",
+      "hwahae": "플라센 매직 시스템 2제"
+    },
+    "brand": "르네셀 (Rene-Cell)",
+    "name": "플라센 매직 시스템 2제",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 154000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
