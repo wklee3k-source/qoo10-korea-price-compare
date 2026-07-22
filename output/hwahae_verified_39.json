@@ -23970,5 +23970,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151670543",
+    "translated_kr": "[国内百貨店]ディープディックフレッドポッドボディバーム200ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1151671051",
+    "translated_kr": "【国内百貨店】ルラボベルガモット22オードパルファム15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베르가못 22 오드퍼퓸"
+    },
+    "brand": "로제르 (ROSEUR)",
+    "name": "베르가못 22 오드퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 53000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
