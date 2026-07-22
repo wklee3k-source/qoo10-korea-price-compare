@@ -25826,5 +25826,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209890558",
+    "translated_kr": "듀얼 배리어 퓨리파잉 클렌징 밤",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "듀얼배리어 퓨리파잉 클렌징 밤",
+      "naver": "셀리맥스 듀얼배리어 퓨리파잉 클렌징 밤 본품+리필 / 갈아쓰는 클렌징밤"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "듀얼배리어 퓨리파잉 클렌징 밤",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24000",
+    "mall": "셀리맥스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12549449938",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9009396/90093960791.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009396/90093960791.1.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/12549449938"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5834936/58349360207.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=158000790&shop_id=27055&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204555836",
+    "translated_kr": "PDRN 비타펩타이드 모공 리페어 세럼, 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타민 PDRN 모공 탄력 세럼"
+    },
+    "brand": "디어클레어스 (dearKlairs)",
+    "name": "비타민 PDRN 모공 탄력 세럼",
+    "volume": "35ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
