@@ -1733,5 +1733,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1129379625",
+    "translated_kr": "MEGA[토리든]다이브인워터리모이스처선크림60ml SPF50+PA++++자외선차단제",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "NEW ARRIVAL"
+    },
+    "brand": null,
+    "name": "NEW ARRIVAL",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1085425820",
+    "translated_kr": "쏘내추럴 올데이타이트 메이크업세팅픽스미스트 35ml/75ml/100ml/120ml/FIXX",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "쏘내추럴 올 데이 타이트 메이크업 세팅 픽서 더블기획 ( ...",
+      "hwahae": "올데이 타이트 메이크업 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
