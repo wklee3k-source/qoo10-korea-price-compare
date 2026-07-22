@@ -14910,5 +14910,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151123179",
+    "translated_kr": "[PDRN팩증정][30mL+30mL리필팩]PDRN히알루론산캡슐100세럼한국화장품에센스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아누아 피디알엔 히알루론산 캡슐 100 ...",
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205520721",
+    "translated_kr": "[180ml+180ml][에어리블로썸]클린잇제로오리지널클렌징밤한국인기화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "' 클린 잇 제로 오리지널 클렌징밤 2개 SET ' 최저가 검색, 최저가 36,400원"
+    },
+    "brand": null,
+    "name": "' 클린 잇 제로 오리지널 클렌징밤 2개 SET ' 최저가 검색, 최저가 36,400원",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
