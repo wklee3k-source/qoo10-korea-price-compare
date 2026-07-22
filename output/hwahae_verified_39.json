@@ -7726,5 +7726,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209271213",
+    "translated_kr": "홀리바질버블딥마스크90g,1개탄산버블모공케어각질머드팩스킨케어한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "피캄 홀리바질 버블 딥 마스크"
+    },
+    "brand": null,
+    "name": "피캄 홀리바질 버블 딥 마스크",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208145226",
+    "translated_kr": "후코이단새틴에센스토너200ml스킨케어화장수보습촉촉함피부트러블케어한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "ONUL31 후코이단 새틴 에센스 토너 화장수 데일리 ...",
+      "naver": "[청자몽 에센스인토너] 앰플 비타민 수분토너 진정 수부지 화장수 닦토 에센스스킨"
+    },
+    "brand": null,
+    "name": "ONUL31 후코이단 새틴 에센스 토너 화장수 데일리 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "28900",
+    "mall": "딸로",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/9204977194",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8674947/86749477517.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674947/86749477517.5.jpg",
+        "mall": "딸로",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9204977194"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8337095/83370951538.8.jpg",
+        "mall": "딸로",
+        "link": "https://smartstore.naver.com/main/products/5826452124"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8796856/87968568347.1.jpg",
+        "mall": "코미스킨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10424063341"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
