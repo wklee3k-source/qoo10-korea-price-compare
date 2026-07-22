@@ -7632,5 +7632,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1166142841",
+    "translated_kr": "프리미엄알로에베라선크림SPF50+PA+++500ml1개알로에베라배합대용량",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "DRMOON 프리미엄 알로에베라 선크림 SPF50+ PA+++, , 1개",
+      "hwahae": "프리미엄 대용량 알로에베라 선크림 [SPF50+/PA+++]"
+    },
+    "brand": "닥터문 (DR.MOON)",
+    "name": "프리미엄 대용량 알로에베라 선크림 [SPF50+/PA+++]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206871066",
+    "translated_kr": "타임레볼루션레티놀500샷랩핑마스크1개1개입집중팩탄력케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "미샤 타임 레볼루션 레티놀 500샷 랩핑 마스크, 1개입, 1개"
+    },
+    "brand": null,
+    "name": "미샤 타임 레볼루션 레티놀 500샷 랩핑 마스크, 1개입, 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
