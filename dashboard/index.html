@@ -143,6 +143,12 @@
     background: rgba(79, 209, 165, 0.12);
     color: var(--up);
   }
+  .pct {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+  }
   .metric-delta.flat {
     background: rgba(82, 96, 109, 0.15);
     color: var(--flat);
@@ -305,17 +311,22 @@
       <div class="card-label">STAGE 1</div>
       <div class="card-title">저리뷰 상점 크롤링</div>
       <div class="metric-row">
-        <div class="metric-name">방문 상점</div>
+        <div class="metric-name">전체 상품</div>
         <div class="metric-value-group">
-          <div class="metric-value" id="s1-shops">—</div>
-          <div class="metric-delta" id="s1-shops-delta"></div>
+          <div class="metric-value" id="s1-total">—</div>
         </div>
       </div>
       <div class="metric-row">
-        <div class="metric-name">확보 상품</div>
+        <div class="metric-name">신규 탐색</div>
         <div class="metric-value-group">
-          <div class="metric-value" id="s1-products">—</div>
-          <div class="metric-delta" id="s1-products-delta"></div>
+          <div class="metric-value" id="s1-new">—</div>
+          <div class="metric-delta" id="s1-new-delta"></div>
+        </div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-name">아카이빙</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s1-archived">—</div>
         </div>
       </div>
       <div class="progress-note" id="s1-note">불러오는 중…</div>
@@ -331,9 +342,15 @@
       <div class="card-label">STAGE 2</div>
       <div class="card-title">한글 번역</div>
       <div class="metric-row">
+        <div class="metric-name">전체 상품</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s2-total">—</div>
+        </div>
+      </div>
+      <div class="metric-row">
         <div class="metric-name">번역 완료</div>
         <div class="metric-value-group">
-          <div class="metric-value" id="s2-translated">—</div>
+          <div class="metric-value" id="s2-translated">— <span class="pct" id="s2-pct"></span></div>
           <div class="metric-delta" id="s2-translated-delta"></div>
         </div>
       </div>
@@ -356,16 +373,22 @@
       <div class="card-label">STAGE 3</div>
       <div class="card-title">화해 명칭 검증</div>
       <div class="metric-row">
+        <div class="metric-name">전체 상품</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s3-total">—</div>
+        </div>
+      </div>
+      <div class="metric-row">
         <div class="metric-name">검증 완료</div>
         <div class="metric-value-group">
-          <div class="metric-value" id="s3-done">—</div>
+          <div class="metric-value" id="s3-done">— <span class="pct" id="s3-pct"></span></div>
           <div class="metric-delta" id="s3-done-delta"></div>
         </div>
       </div>
       <div class="metric-row">
-        <div class="metric-name">진행률</div>
+        <div class="metric-name">검증 대기</div>
         <div class="metric-value-group">
-          <div class="metric-value" id="s3-pct">—</div>
+          <div class="metric-value" id="s3-pending">—</div>
         </div>
       </div>
       <div class="progress-note" id="s3-note">불러오는 중…</div>
@@ -610,13 +633,12 @@ async function loadAll() {
   const current = { shops: null, products: null, hwahae_done: null };
   let hadError = false;
 
-  // Stage 1
+  // Stage 1: 전체 상품(활성풀+아카이브), 신규 탐색(직전 대비 증가분), 아카이빙(아카이브 건수)
   try {
     const res = await fetch(RAW('output/discovery_state.json', 'discovery-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
-    const shops = (data.visited_shops || []).length;
-    let products = (data.all_products || []).length;
+    let activeProducts = (data.all_products || []).length;
     let archivedCount = 0;
 
     // 아카이빙된 상품(별도 파일로 옮겨진 것)도 합산한다 — GitHub API로
@@ -647,32 +669,27 @@ async function loadAll() {
       }
     } catch (e) { /* 아카이브 조회 실패해도 메인 수치는 계속 표시 */ }
 
-    const totalProducts = products + archivedCount;
-    current.shops = shops;
+    const totalProducts = activeProducts + archivedCount;
     current.products = totalProducts;
 
-    document.getElementById('s1-shops').textContent = shops.toLocaleString();
-    document.getElementById('s1-products').textContent = totalProducts.toLocaleString();
+    document.getElementById('s1-total').textContent = totalProducts.toLocaleString();
+    document.getElementById('s1-new').textContent = activeProducts.toLocaleString();
+    document.getElementById('s1-archived').textContent = archivedCount.toLocaleString();
 
-    if (prev && prev.shops != null) {
-      setDelta(document.getElementById('s1-shops-delta'), shops - prev.shops);
-      setDelta(document.getElementById('s1-products-delta'), totalProducts - prev.products);
+    if (prev && prev.products != null) {
+      setDelta(document.getElementById('s1-new-delta'), totalProducts - prev.products);
     } else {
-      document.getElementById('s1-shops-delta').textContent = '첫 조회';
-      document.getElementById('s1-products-delta').textContent = '첫 조회';
+      document.getElementById('s1-new-delta').textContent = '첫 조회';
     }
-    const noteText = archivedCount > 0
-      ? `최근 ${products}건 + 아카이브 ${archivedCount}건 · 남은 시드: ${(data.pending_keywords || []).length}개`
-      : `남은 시드: ${(data.pending_keywords || []).length}개`;
-    document.getElementById('s1-note').textContent = noteText;
+    document.getElementById('s1-note').textContent = `남은 시드: ${(data.pending_keywords || []).length}개 · 아카이브는 번역완료된 상품만 보관`;
   } catch (e) {
     hadError = true;
     document.getElementById('s1-note').textContent = '불러오기 실패';
     errorBox.innerHTML += `<div class="error-box">STAGE 1: ${e.message}</div>`;
   }
 
-  // Stage 2 (번역) — hwahae_input_39.json이 번역 완료 목록. 1단계 전체수
-  // 대비 아직 번역 안 된 건수(대기)도 같이 계산한다.
+  // Stage 2 (번역) — hwahae_input_39.json이 번역 완료 목록. 전체상품(1단계와
+  // 동일 기준) 대비 완료(%)/대기를 계산한다.
   let s2Translated = null;
   try {
     const res = await fetch(RAW('output/hwahae_input_39.json', 'translate-live'));
@@ -681,18 +698,21 @@ async function loadAll() {
     s2Translated = data.length;
     current.s2_translated = s2Translated;
 
-    document.getElementById('s2-translated').textContent = s2Translated.toLocaleString();
+    const total = current.products;
+    const pending = total != null ? Math.max(0, total - s2Translated) : null;
+    const pct = total ? Math.round(s2Translated / total * 100) : null;
+
+    document.getElementById('s2-total').textContent = total != null ? total.toLocaleString() : '—';
+    document.getElementById('s2-translated').innerHTML = `${s2Translated.toLocaleString()} <span class="pct">${pct != null ? `(${pct}%)` : ''}</span>`;
+    document.getElementById('s2-pending').textContent = pending != null ? pending.toLocaleString() : '—';
+
     if (prev && prev.s2_translated != null) {
       setDelta(document.getElementById('s2-translated-delta'), s2Translated - prev.s2_translated);
     } else {
       document.getElementById('s2-translated-delta').textContent = '첫 조회';
     }
-
-    // 1단계 전체 상품수(current.products, 위에서 이미 계산됨) 대비 대기수
-    const pending = current.products != null ? Math.max(0, current.products - s2Translated) : null;
-    document.getElementById('s2-pending').textContent = pending != null ? pending.toLocaleString() : '—';
-    document.getElementById('s2-note').textContent = pending != null
-      ? `1단계 전체 ${current.products}건 중 ${s2Translated}건 번역됨`
+    document.getElementById('s2-note').textContent = total != null
+      ? `전체 ${total}건 중 ${s2Translated}건 번역됨`
       : '1단계 데이터 대기 중';
   } catch (e) {
     hadError = true;
@@ -700,7 +720,7 @@ async function loadAll() {
     errorBox.innerHTML += `<div class="error-box">STAGE 2: ${e.message}</div>`;
   }
 
-  // Stage 3
+  // Stage 3 — 전체상품(1단계와 동일 기준) 대비 검증완료(%)/대기를 계산한다.
   try {
     const res = await fetch(RAW('output/hwahae_verified_39.json', 'hwahae-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
@@ -708,28 +728,22 @@ async function loadAll() {
     const done = data.length;
     current.hwahae_done = done;
 
-    let total = done;
-    if (s2Translated != null) {
-      total = s2Translated;
-    } else {
-      try {
-        const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'translate-live'));
-        if (inputRes.ok) {
-          const inputData = await inputRes.json();
-          total = inputData.length;
-        }
-      } catch (e) { /* 입력파일 못 가져와도 완료건수는 이미 있음 */ }
-    }
+    const total = current.products;
+    const pending = total != null ? Math.max(0, total - done) : null;
+    const pct = total ? Math.round(done / total * 100) : null;
 
-    document.getElementById('s3-done').textContent = done.toLocaleString();
-    document.getElementById('s3-pct').textContent = total ? `${Math.round(done/total*100)}%` : '—';
+    document.getElementById('s3-total').textContent = total != null ? total.toLocaleString() : '—';
+    document.getElementById('s3-done').innerHTML = `${done.toLocaleString()} <span class="pct">${pct != null ? `(${pct}%)` : ''}</span>`;
+    document.getElementById('s3-pending').textContent = pending != null ? pending.toLocaleString() : '—';
 
     if (prev && prev.hwahae_done != null) {
       setDelta(document.getElementById('s3-done-delta'), done - prev.hwahae_done);
     } else {
       document.getElementById('s3-done-delta').textContent = '첫 조회';
     }
-    document.getElementById('s3-note').textContent = `전체 ${total}건 중 ${done}건`;
+    document.getElementById('s3-note').textContent = total != null
+      ? `전체 ${total}건 중 ${done}건 검증됨`
+      : '1단계 데이터 대기 중';
   } catch (e) {
     hadError = true;
     document.getElementById('s3-note').textContent = '불러오기 실패';
