@@ -1,3 +1,8 @@
 output/imgs/
 __pycache__/
 *.pyc
+output/discovery_state.json
+output/hwahae_verified_39.json
+output/hwahae_verified_*.xlsx
+output/discovery_result*.xlsx
+output/archive/
