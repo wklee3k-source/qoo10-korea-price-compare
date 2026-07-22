@@ -19537,5 +19537,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163262123",
+    "translated_kr": "V7 토닝 라이트 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "브라이타민 브이세븐 토닝 라이트 크림",
+      "hwahae": "V7  토닝 라이트 클렌저"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "V7  토닝 라이트 클렌저",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172280132",
+    "translated_kr": "【한국 여행의 정석】각질 제거 비누&글러브 6개 세트 정말 한국 에스테! 자택에서 이루어지는 극상의 매끄러운 미피부 체험",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "씨글라스솝 비누 선물세트 C"
+    },
+    "brand": null,
+    "name": "씨글라스솝 비누 선물세트 C",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
