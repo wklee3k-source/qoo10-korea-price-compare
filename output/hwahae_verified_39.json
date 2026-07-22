@@ -9783,5 +9783,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1146402210",
+    "translated_kr": "자작나무수분선쿠션15g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+      "naver": "라운드랩 자작나무 수분 선쿠션 15g 3개 (SPF 50+ PA++++)"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+    "volume": "15g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "36000",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13160478110",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070498/90704989210.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070498/90704989210.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/13160478110"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070498/90704989211.2.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13160478113"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8367517/83675177152.11.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6130677664"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5113994/51139945857.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000162243"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1133988984",
+    "translated_kr": "센티드핸드크림40ml/한국화장품/퍼퓸핸드크림",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
