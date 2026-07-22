@@ -10238,5 +10238,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1141912116",
+    "translated_kr": "유스시너지리프팅콜라겐스네일아이크림20ml3개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1156582764",
+    "translated_kr": "아토마일드선크림SPF50+PA++++75ml1개저자극보습효과",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "이피아이 선블락 [SPF50/PA++++] [라이트]"
+    },
+    "brand": "실리스카 (silisca®)",
+    "name": "이피아이 선블락 [SPF50/PA++++] [라이트]",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 89000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
