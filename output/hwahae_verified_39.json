@@ -15789,5 +15789,78 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1176344647",
+    "translated_kr": "[1+1]갈락토포어워터풀클렌징오일,200ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "갈락토 포어 워터 풀 클렌징 오일",
+      "naver": "쌔뮤 갈락토 포어 워터 풀 클렌징 오일 200ml"
+    },
+    "brand": null,
+    "name": "갈락토 포어 워터 풀 클렌징 오일",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "21000",
+    "mall": "쌔뮤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11395937855",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8894044/88940448220.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8894044/88940448220.1.jpg",
+        "mall": "쌔뮤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11395937855"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8894044/88940448219.2.jpg",
+        "mall": "쌔뮤",
+        "link": "https://smartstore.naver.com/main/products/11395937854"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1174634972",
+    "translated_kr": "블루빈B5-PDRN마일드로션230ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "브링그린 블루빈 B5",
+      "hwahae": "블루빈 B5-PDRN 마일드 로션",
+      "naver": "[NEW] 브링그린 블루빈 B5-PDRN 마일드 로션 마스크 1매/ 3+1 기획"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "블루빈 B5-PDRN 마일드 로션",
+    "volume": "230mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "1500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000247716",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5982764/59827645908.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5982764/59827645908.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000247716"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6055310/60553100690.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000245633"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
