@@ -28005,5 +28005,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1152577703",
+    "translated_kr": "레티놀 1% 스쿠알란 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 1% 인 스쿠알란"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "레티놀 1% 인 스쿠알란",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14100,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1151033114",
+    "translated_kr": "마다가스카르 센텔라 히알루 시카 광채 토너 210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 광채 토너"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 광채 토너",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
