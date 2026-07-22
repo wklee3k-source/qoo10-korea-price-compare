@@ -1147,5 +1147,37 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1134579258",
+    "translated_kr": "로레알 프로페셔널 메탈DX 디스커버리 2종키트(샴푸100mL+마스크75mL)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "로레알프로페셔널 메탈디엑스 디스커버리 2종 키트 샴푸 ...",
+      "hwahae": "메탈 디엑스 샴푸",
+      "naver": "로레알프로페셔널 메탈디엑스 디스커버리 2종 키트 (샴푸 100ml + 마스크 75ml)"
+    },
+    "brand": "로레알프로페셔널",
+    "name": "로레알프로페셔널 메탈디엑스 디스커버리 2종 키트 (샴푸 100ml + 마스크 75ml)",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26360",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000232273",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5779944/57799440898.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5779944/57799440898.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000232273"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
