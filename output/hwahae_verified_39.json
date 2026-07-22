@@ -22575,5 +22575,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1206530890",
+    "translated_kr": "[대용량2종세트] 퍼펙트 오리지널 세럼 샴푸 900ml + 홈케어 트리트먼트 900ml / 한국 헤어케어 / 손상모발 케어 / 촉촉한 윤기머리",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202540615",
+    "translated_kr": "[한국인기] 미네랄프리 필링 글로우샷1500 30ml / 각질케어 PDRN 함유 저자극 보습 필링 모공케어 한국코스메",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리페어 PDRN 1500 크림"
+    },
+    "brand": "리쥬베닐 (Re-juvenil)",
+    "name": "리페어 PDRN 1500 크림",
+    "volume": "30g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
