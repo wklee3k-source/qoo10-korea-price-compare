@@ -2439,5 +2439,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202482963",
+    "translated_kr": "[1+1]마데카크림에이징포커스50ml2개/시즌8병풀시카크림/정품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "마데카크림 에이징 포커스 2개 +"
+    },
+    "brand": null,
+    "name": "마데카크림 에이징 포커스 2개 +",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201907966",
+    "translated_kr": "마다가스카르센텔라포어마이징프레시앰플100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 포어마이징 프레쉬 앰플",
+      "hwahae": "마다가스카르 센텔라 포어마이징 프레쉬 앰플",
+      "naver": "마다가스카르 센텔라 포어마이징 프레쉬 앰플 100ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 포어마이징 프레쉬 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24700",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/6172324519",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8371682/83716824096.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8371682/83716824096.5.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/6172324519"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
