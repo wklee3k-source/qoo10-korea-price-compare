@@ -30539,5 +30539,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210946100",
+    "translated_kr": "올리브영 프레스티지 로션 투엑스 진센 데스카르고 140ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199152838",
+    "translated_kr": "[강력 추천] 올리브영 울트라 화이트닝 퍼펙트 앰플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "울트라 화이트닝 퍼펙트 앰플"
+    },
+    "brand": "미구하라 (MIGUHARA)",
+    "name": "울트라 화이트닝 퍼펙트 앰플",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 43000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
