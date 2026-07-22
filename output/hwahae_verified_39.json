@@ -23481,5 +23481,69 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1196382835",
+    "translated_kr": "【100시간 보습/가려움 완화/직장인A】【정품】시카 살브 크림 230ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "시카 살브 크림 230ML",
+      "hwahae": "시카 살브 크림",
+      "naver": "[화잘먹속광] 닥터에이지 시카 앰플 25ml + 더마 인텐시브 시카 살브크림 30ml"
+    },
+    "brand": "미차이 (MECHAI)",
+    "name": "시카 살브 크림",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19900",
+    "mall": "닥터에이지",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2432566758",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1328381/13283810762.16.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1328381/13283810762.16.jpg",
+        "mall": "닥터에이지",
+        "link": "https://smartstore.naver.com/main/products/2432566758"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8088375/80883752743.15.jpg",
+        "mall": "닥터에이지",
+        "link": "https://shopping.naver.com/outlink/itemdetail/2432566757"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6087360/60873603278.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=128619786&shop_id=33411&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1162061858",
+    "translated_kr": "더마틱스 울트라 젤 7g, 1개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "더마틱스 울트라 겔, , 1개"
+    },
+    "brand": null,
+    "name": "더마틱스 울트라 겔, , 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
