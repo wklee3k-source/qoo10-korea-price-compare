@@ -12912,5 +12912,62 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1166654877",
+    "translated_kr": "[26SS/신상]아이패치60매2종(콜라겐/캐비어PDRN)중1개선택",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1166654874",
+    "translated_kr": "[26SS/신상](+언더블한유진포토프레임)에클라드아르페주화이트티EDP30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "엘리자베스아덴 화이트티 향수 EDP 100ml"
+    },
+    "brand": "엘리자베스아덴",
+    "name": "엘리자베스아덴 화이트티 향수 EDP 100ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "46800",
+    "mall": "엘리자베스아덴",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/7229897645",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8477439/84774397967.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8477439/84774397967.6.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7229897645"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821892/88218923836.2.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10674417914"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821898/88218986891.3.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10674480969"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
