@@ -6199,5 +6199,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199834618",
+    "translated_kr": "EMS진동리프트클렌저헤드",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "루나케어 진동클렌저 DS",
+      "naver": "메디큐브 에이지알 부스터 진동클렌저 EMS 클렌징디바이스"
+    },
+    "brand": "메디큐브",
+    "name": "메디큐브 에이지알 부스터 진동클렌저 EMS 클렌징디바이스",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "240000",
+    "mall": "메디큐브 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/12074489484",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8961900/89619000183.22.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961900/89619000183.22.jpg",
+        "mall": "메디큐브 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12074489484"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9031931/90319311553.18.jpg",
+        "mall": "메디큐브 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12774800604"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196358039",
+    "translated_kr": "판테놀크림80ML로션180ML",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "아토팜 판테놀 크림 +로션 고보습 판테놀 10% 함유 – 코니허브"
+    },
+    "brand": null,
+    "name": "아토팜 판테놀 크림 +로션 고보습 판테놀 10% 함유 – 코니허브",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
