@@ -8077,5 +8077,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1098239730",
+    "translated_kr": "프리미엄카렌듈라모델링팩1kg",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "프리미엄 카렌듈라 모델링팩 1kg"
+    },
+    "brand": null,
+    "name": "프리미엄 카렌듈라 모델링팩 1kg",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213147250",
+    "translated_kr": "어드밴스드스네일96뮤신파워에센스,100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "COSRX Snail 96 Mucin Essence",
+      "hwahae": "어드벤스드 스네일 96 뮤신 파워 에센스"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "어드벤스드 스네일 96 뮤신 파워 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
