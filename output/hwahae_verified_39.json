@@ -19674,5 +19674,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193433365",
+    "translated_kr": "【공식】 코나피딜 픽시카 CONAPIDIL Fixcica 13g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "픽시카"
+    },
+    "brand": "코나피딜 (CONAPIDIL)",
+    "name": "픽시카",
+    "volume": "13g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208334354",
+    "translated_kr": "스무스매트 락미스트 70ml 픽스미스트 스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
