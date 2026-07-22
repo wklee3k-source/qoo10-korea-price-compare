@@ -661,7 +661,7 @@ async function loadAll() {
   // 대비 아직 번역 안 된 건수(대기)도 같이 계산한다.
   let s2Translated = null;
   try {
-    const res = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
+    const res = await fetch(RAW('output/hwahae_input_39.json', 'translate-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
     s2Translated = data.length;
@@ -699,7 +699,7 @@ async function loadAll() {
       total = s2Translated;
     } else {
       try {
-        const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
+        const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'translate-live'));
         if (inputRes.ok) {
           const inputData = await inputRes.json();
           total = inputData.length;
@@ -727,16 +727,18 @@ async function loadAll() {
   } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
 
   // 조회기록은 서버(GitHub Actions)가 매 배치마다 직접 쌓아둔
-  // progress_history.json을 그대로 읽어서 보여준다. 이제 1단계(discovery-live)와
-  // 3단계(hwahae-live)가 서로 다른 브랜치에 각자 기록하므로, 둘 다 가져와서
-  // 시간순으로 합쳐서 보여준다.
+  // progress_history.json을 그대로 읽어서 보여준다. 이제 1단계(discovery-live),
+  // 2단계(translate-live), 3단계(hwahae-live)가 각자 다른 브랜치에 기록하므로,
+  // 셋 다 가져와서 시간순으로 합쳐서 보여준다.
   try {
-    const [res1, res3] = await Promise.all([
+    const [res1, res2, res3] = await Promise.all([
       fetch(RAW('output/progress_history.json', 'discovery-live')).catch(() => null),
+      fetch(RAW('output/progress_history.json', 'translate-live')).catch(() => null),
       fetch(RAW('output/progress_history.json', 'hwahae-live')).catch(() => null),
     ]);
     let combined = [];
     if (res1 && res1.ok) combined = combined.concat(await res1.json());
+    if (res2 && res2.ok) combined = combined.concat(await res2.json());
     if (res3 && res3.ok) combined = combined.concat(await res3.json());
     combined.sort((a, b) => new Date(b.time_utc) - new Date(a.time_utc));
     const log = combined.map((row) => ({
