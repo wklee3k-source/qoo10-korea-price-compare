@@ -136,5 +136,83 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203041226",
+    "translated_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "46cm Odor Solution Deodorant Body Wash 7",
+      "hwahae": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+      "naver": "다이소 46cm 체취솔루션 데오드란트 바디워시 스파클링 시트러스향 225 ml 1069429"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+    "volume": "720ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "5000",
+    "mall": "다이소몰",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614369/56143692835.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069430&infl_path=naver_ep"
+      }
+    ],
+    "in_stock": false,
+    "stock_evidence": [
+      "품절 (SPAN, visible)",
+      "품절 (BUTTON, visible)",
+      "일시품절 (SPAN, visible)",
+      "일시품절 (SPAN, visible)",
+      "일시품절 (BUTTON, visible)"
+    ]
+  },
+  {
+    "goods_no": "1191395895",
+    "translated_kr": "스킨앤러브 엑토인 리커버리 선플루이드 50ml SPF50+ PA++++",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "엑토인 리커버리 선 플루이드",
+      "hwahae": "이피아이 선블락 [SPF50/PA++++] [라이트]",
+      "naver": "스킨앤랩 엑토인 리커버리 선 플루이드 50ml"
+    },
+    "brand": "스킨앤랩",
+    "name": "스킨앤랩 엑토인 리커버리 선 플루이드 50ml",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "스킨앤랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13263846240",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://smartstore.naver.com/main/products/13263846240"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6092292/60922923084.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6862454?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
