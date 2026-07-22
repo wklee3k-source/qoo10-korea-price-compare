@@ -97,6 +97,8 @@ def _parse_products(html: str) -> list[dict]:
                 "obsolete": p.get("obsolete"),  # 단종여부
                 "sale": p.get("sale"),  # 판매중여부
                 "price": p.get("product_price"),  # 정가(원)
+                "image_url": p.get("imageUrl"),
+                "product_url": f"https://www.hwahae.co.kr/goods/{p.get('id')}" if p.get("id") else None,
             }
         )
     return results
@@ -145,6 +147,8 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
                 "volume": top["volume"],
                 "obsolete": top.get("obsolete"),
                 "price": top.get("price"),
+                "image_url": top.get("image_url"),
+                "product_url": top.get("product_url"),
                 "sale": top.get("sale"),
                 "all_candidates": products,
                 "matched_by": "brand",
@@ -177,6 +181,8 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
                 "volume": top["volume"],
                 "obsolete": top.get("obsolete"),
                 "price": top.get("price"),
+                "image_url": top.get("image_url"),
+                "product_url": top.get("product_url"),
                 "sale": top.get("sale"),
                 "all_candidates": products,
                 "matched_by": "volume",
@@ -197,6 +203,8 @@ def correct_name(product_keyword_only: str, _retry: bool = True, known_volume: s
         "volume": top["volume"],
         "obsolete": top.get("obsolete"),
                 "price": top.get("price"),
+                "image_url": top.get("image_url"),
+                "product_url": top.get("product_url"),
         "sale": top.get("sale"),
         "all_candidates": products,
         "matched_by": "top_result",

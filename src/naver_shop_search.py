@@ -63,6 +63,8 @@ def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
             "brand": brand,
             "maker": item.get("maker", ""),
             "lprice": item.get("lprice"),
+            "link": item.get("link"),
+            "image": item.get("image"),
             "mallName": mall_name,
             "productId": item.get("productId"),
             "seller_trust": _is_official_seller(mall_name, brand),
