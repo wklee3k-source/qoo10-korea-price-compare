@@ -27984,5 +27984,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1196020481",
+    "translated_kr": "투페이스 오일 미스트 50ml 1개 기초 화장품 보습 윤기 윤기 피부 유수분 밸런스 [병행 수입품]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "기초 화장품 투페이스 오일 미스트"
+    },
+    "brand": null,
+    "name": "기초 화장품 투페이스 오일 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1167877164",
+    "translated_kr": "플라센 엔자임 서브 애씨드 워시 파우더 80g×1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "르네셀 플라센 엔자임 서브 애씨드 워시 파우더, , 1개",
+      "hwahae": "플라센 엔자임 서브 애씨드 워시 파우더"
+    },
+    "brand": "르네셀 (Rene-Cell)",
+    "name": "플라센 엔자임 서브 애씨드 워시 파우더",
+    "volume": "80g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 66000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
