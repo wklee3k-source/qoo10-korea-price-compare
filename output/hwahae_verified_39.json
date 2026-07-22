@@ -21308,5 +21308,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207559731",
+    "translated_kr": "【자외선을 받은 피부에 수분 공급】시트 마스크+화장수 / 진정 성분 함유 / 고밀착 수분 마스크 / 주박 발효 스킨케어 / 한국 미용 설계",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207551402",
+    "translated_kr": "【여름 피부 진정 케어】토너 패드 + 화장수 / 진정 성분 함유 / 깊은 보습 / 각질 케어도 가능한 2WAY 패드 / 주정 미강 발효 스킨케어 / 한국 미용 설계",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "파로 진정 패드 팩"
+    },
+    "brand": "바엘 (BAELL)",
+    "name": "파로 진정 패드 팩",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
