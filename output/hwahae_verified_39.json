@@ -2622,5 +2622,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1174748969",
+    "translated_kr": "[NEW][신상품]어성초포어딥클렌징폼150ml(2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 쿼세티놀™ 포어 딥 클렌징 폼",
+      "hwahae": "어성초 쿼세티놀™ 모공 딥 클렌징 폼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1151371296",
+    "translated_kr": "아토베리어365하이드로에센스200ml(2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아토베리어365 하이드로 에센스 2개",
+      "hwahae": "아토베리어365 하이드로 에센스"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 하이드로 에센스",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
