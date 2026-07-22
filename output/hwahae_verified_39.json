@@ -26631,5 +26631,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1081721168",
+    "translated_kr": "테리팜머 160g 스탠다드 호텔타올 10장 타올 타올세트 타올 세면타올 링",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "테리파머 스탠다드 호텔수건 10장 타월 수건세트 타올 세면타월 고리"
+    },
+    "brand": null,
+    "name": "테리파머 스탠다드 호텔수건 10장 타월 수건세트 타올 세면타월 고리",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169574765",
+    "translated_kr": "올데이메이크픽서 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "올데이 타이트 메이크업 픽서",
+      "hwahae": "올데이 타이트 메이크업 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
