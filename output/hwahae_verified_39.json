@@ -23213,5 +23213,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203288800",
+    "translated_kr": "[정품][악센다 마호로사 크림 미스트 100ml] 보습 / 수분 / 윤기 / 워터 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "악센다 마호로사 크림 미스트 미백 주름개선 수부지 ...",
+      "hwahae": "아쿠아 스쿠알란 미스트"
+    },
+    "brand": "에스네이처 (S.NATURE)",
+    "name": "아쿠아 스쿠알란 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1179699993",
+    "translated_kr": "[정품]헤어 볼륨업 인댄싱 포옴 헤어 에센스 / 두피 케어 / 볼륨감 / 모근 케어 / 가벼운 텍스처 / 머릿결 탄력 / 관세 부담 없음!!(판매자 부담)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "컬링에센스 2X 볼륨컬"
+    },
+    "brand": null,
+    "name": "컬링에센스 2X 볼륨컬",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
