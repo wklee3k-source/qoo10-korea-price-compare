@@ -1470,5 +1470,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210988759",
+    "translated_kr": "[정품]VQM 파이토신 파이널밤/파이널밤 BB 한국정품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "파이널밤 코나피딜 비비크림 파데프리 톤업 ...",
+      "hwahae": "파이토신 V2"
+    },
+    "brand": "VQM (브이큐엠)",
+    "name": "파이토신 V2",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 99000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210988490",
+    "translated_kr": "[정품]SET VQM 파이토신 바이반큐엠 로션30ml+피니시로션20ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "'비반콴트망카 로션 파이토신 크림 & 피니쉬로션 피부 톤 보정 크림 세트' 최저가 검색, 최저가 90,500원"
+    },
+    "brand": null,
+    "name": "'비반콴트망카 로션 파이토신 크림 & 피니쉬로션 피부 톤 보정 크림 세트' 최저가 검색, 최저가 90,500원",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
