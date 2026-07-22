@@ -19207,5 +19207,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211229310",
+    "translated_kr": "[공식 정품/한정 수량/메디힐 마스크팩 증정] 아젤라산 서스펜션 10% 30ml 페이스 크림 스킨케어 모공 피부 결 톤 케어/메디힐 마스크팩 증정",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Azelaic Acid Suspension 10% 호주 구매"
+    },
+    "brand": null,
+    "name": "Azelaic Acid Suspension 10% 호주 구매",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212749218",
+    "translated_kr": "【한국 코스메】젖산(Lactic Acid)10%+히알루론산HA 30ml 뷰티액 각질케어 보습 결 부드러운 피부 페이스세럼 스킨케어 한국 뷰티액 인기",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "The Ordinary The Ordinary lactic acid 10% exfoliating serum with hyaluronic acid for face buy to Korea, Republic of . CosmoStore Korea, Republic of",
+      "hwahae": "매트릭실 10% + HA"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "매트릭실 10% + HA",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
