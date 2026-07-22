@@ -24641,5 +24641,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198335347",
+    "translated_kr": "[新作]トリプル レイヤード ヘアミスト 150ml #3重毛髪保護ソリューション",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210139793",
+    "translated_kr": "UV 프로텍터 톤업 피치/라벤더 50ml SPF50+ PA++++ 톤업 자외선 차단제 UVカット&보습 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "UV프로텍터 톤업 라벤더 [SPF50+/PA++++]",
+      "naver": "[헤라] UV 프로텍터 톤업피치 라벤더 프레쉬 디펜스 CC 50ml SPF50+/PA++++"
+    },
+    "brand": "헤라 (HERA)",
+    "name": "UV프로텍터 톤업 라벤더 [SPF50+/PA++++]",
+    "volume": "50mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37600",
+    "mall": "헤라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/4837567182",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8238209/82382090259.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8238209/82382090259.7.jpg",
+        "mall": "헤라",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4837567182"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8825858/88258580140.2.jpg",
+        "mall": "샤블.",
+        "link": "https://smartstore.naver.com/main/products/10714074218"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
