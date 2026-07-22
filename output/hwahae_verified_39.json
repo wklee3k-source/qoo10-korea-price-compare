@@ -22924,5 +22924,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1146499598",
+    "translated_kr": "【한국 화장품】【정규품 취급점】[5번 기획 세트] 화이트 자스민 글루타치온 C 토너 200ml + 화이트 자스민 글루타치온 C 에센스 30ml - 빛나는 미광피부로 이끌다!",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1145594718",
+    "translated_kr": "【한국 화장품】【정규품 취급점】실크 펩타이드 인텐시브 리프팅 앰플 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+      "naver": "성분에디터 실크 펩타이드 인텐시브 리프팅 앰플 60ml, 1개"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+    "volume": "13g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18900",
+    "mall": "성분에디터",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12483228203",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002773/90027739028.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002773/90027739028.6.jpg",
+        "mall": "성분에디터",
+        "link": "https://smartstore.naver.com/main/products/12483228203"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116768/91167684255.1.jpg",
+        "mall": "성분에디터",
+        "link": "https://smartstore.naver.com/main/products/13623173838"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
