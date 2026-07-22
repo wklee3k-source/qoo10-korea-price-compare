@@ -16661,5 +16661,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1079690675",
+    "translated_kr": "CELL LINE PRO 리페어크림 [100구] 반영구화장재료 애프터케어 1g100개입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1062953704",
+    "translated_kr": "폴리젠 플러스 샴푸 750ml x 2",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴리젠 플러스 샴푸"
+    },
+    "brand": "닥터포헤어 (Dr.FORHAIR)",
+    "name": "폴리젠 플러스 샴푸",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 6000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
