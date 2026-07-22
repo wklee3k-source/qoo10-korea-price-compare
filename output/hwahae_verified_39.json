@@ -16510,5 +16510,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205149988",
+    "translated_kr": "[카리나 Pick] 피그 레이어 오드 파르팡 10ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212962244",
+    "translated_kr": "이너 퍼퓨 5ml(6종 선택 1 봉봉/튈르리/미엘/체리블로썸/베베/보그)/Y 존 케어/섬세한 부위용/ 데일리용/1방울로 48시간",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
