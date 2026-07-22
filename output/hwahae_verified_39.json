@@ -20309,5 +20309,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202836073",
+    "translated_kr": "[단품][집중 케어용]리들샷 헤어 에센스 300dL/두피 에센스/두피 리들샷/헤어 앰플",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1137329434",
+    "translated_kr": "다크스팟 세럼 30ml (나이아신아마이드 10%, 트라넥삼산 4%)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
