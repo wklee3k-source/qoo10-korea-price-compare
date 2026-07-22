@@ -13799,5 +13799,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199639398",
+    "translated_kr": "헤트라스호텔테라피바디워시-7종류",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Hotel Therapy Body Wash",
+      "hwahae": "호텔 테라피 바디워시 [호텔우드]"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "호텔 테라피 바디워시 [호텔우드]",
+    "volume": "1013ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1157375940",
+    "translated_kr": "하이드로세라믹톤업에센스선크림SPF50+PA++++/50ml×2개세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "하이드로 세라믹 에센스 선크림 2종 라인",
+      "hwahae": "하이드로 세라믹 에센스 선크림 [SPF50+/PA+++] [톤업]"
+    },
+    "brand": "닥터멜락신 (Dr.Melaxin)",
+    "name": "하이드로 세라믹 에센스 선크림 [SPF50+/PA+++] [톤업]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
