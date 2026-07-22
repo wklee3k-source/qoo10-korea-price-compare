@@ -11213,5 +11213,57 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188455776",
+    "translated_kr": "[정품]센텔리안24올뉴마데카크림타이트리프팅50ml,1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[알림받기전용] 동국제약 센텔리안24 올뉴 마데카크림 타이트리프팅/탄력 안티에이징 50ml, 1개"
+    },
+    "brand": "센텔리안24",
+    "name": "[알림받기전용] 동국제약 센텔리안24 올뉴 마데카크림 타이트리프팅/탄력 안티에이징 50ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "9700",
+    "mall": "동국제약 센텔리안24",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11886318901",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8943082/89430829510.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943082/89430829510.2.jpg",
+        "mall": "동국제약 센텔리안24",
+        "link": "https://smartstore.naver.com/main/products/11886318901"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943082/89430829511.2.jpg",
+        "mall": "센텔리안24",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11886318902"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209706663",
+    "translated_kr": "[정품]히알루론하이드레이션선스크린50ml,1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
