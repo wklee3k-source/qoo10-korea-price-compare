@@ -19429,5 +19429,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204898098",
+    "translated_kr": "PDRN 히알루론산 캡슐 100 세럼, 30ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "PDRN 히알루론산 캡슐 100 세럼",
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205881900",
+    "translated_kr": "PDRN 히알루론산 캡슐 100 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아누아 피디알엔 히알루론산 캡슐 100 세럼, , 1개",
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼",
+      "naver": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 앰플 1ml,10개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10874068282",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8841857/88418574295.3.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/10874068282"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
