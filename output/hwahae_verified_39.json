@@ -9848,5 +9848,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165361801",
+    "translated_kr": "[1+1]콜츠푸트안티댄드러프샴푸200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "콜츠푸트 안티",
+      "hwahae": "콜츠푸트 안티-댄드러프 샴푸"
+    },
+    "brand": "라우쉬 (RAUSCH)",
+    "name": "콜츠푸트 안티-댄드러프 샴푸",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1142160005",
+    "translated_kr": "10%AHA바디로션210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "폴라초이스 10% 아하 각질제거 바디로션 ...",
+      "hwahae": "10% 아하 각질제거 바디로션"
+    },
+    "brand": "폴라초이스 (PAULA'SCHOICE)",
+    "name": "10% 아하 각질제거 바디로션",
+    "volume": "210ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
