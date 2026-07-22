@@ -24836,5 +24836,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1206682479",
+    "translated_kr": "그린 프로폴리스 두피 클렌징 샴푸+트리트먼트 [1000ml+1000ml] 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "케라시스 프로폴리스 그린 샴푸+트리트먼트, 1세트",
+      "hwahae": "그린프로폴리스 스칼프 클렌징 샴푸"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "그린프로폴리스 스칼프 클렌징 샴푸",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1199855426",
+    "translated_kr": "투명 선 패치 네이키드 선 실드 펩타이드 18회분 /골프패치/투명 UV차단패치",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "프란츠 네이키드 선쉴드 펩타이드 투명 선패치 18입"
+    },
+    "brand": null,
+    "name": "프란츠 네이키드 선쉴드 펩타이드 투명 선패치 18입",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
