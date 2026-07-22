@@ -26072,5 +26072,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1205747342",
+    "translated_kr": "[1+1][선뮤즈 톤업 & 코렉팅 선 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++]",
+      "naver": "[보라톤업 혼합자차] 비플레인 선뮤즈 톤업&amp;코렉팅 선크림 (SPF50+/PA++++) 50ml, 1개"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "비플레인 beplain",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8217904151",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8576240/85762404474.19.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8576240/85762404474.19.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/8217904151"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180624495",
+    "translated_kr": "오트 인 카밍 젤 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오트 인 카밍 젤 크림"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "오트 인 카밍 젤 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
