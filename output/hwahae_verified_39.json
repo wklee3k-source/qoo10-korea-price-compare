@@ -4109,5 +4109,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209471569",
+    "translated_kr": "pleuvoir 히노키레더 오드퍼퓸 30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "히노끼 레더 오 드 퍼퓸"
+    },
+    "brand": null,
+    "name": "히노끼 레더 오 드 퍼퓸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193729683",
+    "translated_kr": "유세린 히알루론부스팅에센스 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "유세린 하이알루론 부스팅 에센스",
+      "hwahae": "하이알루론 부스팅 에센스"
+    },
+    "brand": "유세린 (Eucerin)",
+    "name": "하이알루론 부스팅 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
