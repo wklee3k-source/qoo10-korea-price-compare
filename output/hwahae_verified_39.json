@@ -4690,5 +4690,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1185447621",
+    "translated_kr": "어위초트라이얼키트(스킨부스터20ml+세럼15ml+튜브30ml+폼30ml)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "아비브 어성초 트라이얼 키트 (스킨 부스터 + 세럼 + 튜브 ...",
+      "naver": "[라운지전용] 아비브 어성초 진정케어 트라이얼 키트"
+    },
+    "brand": "아비브",
+    "name": "[라운지전용] 아비브 어성초 진정케어 트라이얼 키트",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "10900",
+    "mall": "아비브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12774218078",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9031872/90318729028.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9031872/90318729028.jpg",
+        "mall": "아비브",
+        "link": "https://smartstore.naver.com/main/products/12774218078"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185044020",
+    "translated_kr": "호텔테라피대용량바디워시수선화1.013L2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Hotel Therapy Body Wash"
+    },
+    "brand": null,
+    "name": "Hotel Therapy Body Wash",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
