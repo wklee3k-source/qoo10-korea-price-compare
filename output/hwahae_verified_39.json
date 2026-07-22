@@ -12129,5 +12129,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210637144",
+    "translated_kr": "오리지널스프레이데오드란트150ml제한스프레이바디케어한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1159230400",
+    "translated_kr": "리얼매트메이크업세팅픽스미스트75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리얼 매트 메이크업 세팅 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "리얼 매트 메이크업 세팅 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
