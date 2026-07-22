@@ -9094,5 +9094,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1185790423",
+    "translated_kr": "LPT케라틴리페어노워시트리트먼트70ml/안씻어내는헤어팩/고농축단백질",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "LPT 케라틴 리페어 트리트먼트"
+    },
+    "brand": "달리프 (Daleaf)",
+    "name": "LPT 케라틴 리페어 트리트먼트",
+    "volume": "230ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164784660",
+    "translated_kr": "앤비UV스무스파우더",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
