@@ -25606,5 +25606,65 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1145594718",
+    "translated_kr": "【한국 화장품】【정품 취급점】실크 펩타이드 인텐시브 리프팅 앰플 35ML",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "실크 펩타이드 인텐시브 리프팅 앰플",
+      "hwahae": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+      "naver": "성분에디터 실크 펩타이드 인텐시브 리프팅 앰플 35ml, 2개"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+    "volume": "13g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "31000",
+    "mall": "성분에디터",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13623173838",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116768/91167684255.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116768/91167684255.1.jpg",
+        "mall": "성분에디터",
+        "link": "https://smartstore.naver.com/main/products/13623173838"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8628641/86286413004.4.jpg",
+        "mall": "성분에디터",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8741912681"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1145594895",
+    "translated_kr": "【정품 취급점】【1+1】【본품+리필】다이브 인 저분자 히알루론산 세럼, 50mL*2",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토리든 다이브인 저분자 히알루론산 세럼 ...",
+      "hwahae": "쉐어 더 보야지 #로그2. 문화재지킴이 에디션 다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "쉐어 더 보야지 #로그2. 문화재지킴이 에디션 다이브인 저분자 히알루론산 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
