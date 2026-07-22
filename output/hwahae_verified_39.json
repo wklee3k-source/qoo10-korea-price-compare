@@ -2198,5 +2198,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514690",
+    "translated_kr": "어성초LHA모이스처필링젤,120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 LHA 모이스처 필링젤",
+      "hwahae": "어성초 LHA 모이스처 필링젤",
+      "naver": "아누아 어성초 LHA 모이스처 필링젤 120ml 민감 얼굴 각질 제거 제거제"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 LHA 모이스처 필링젤",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15900",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8085134708",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8562963/85629635031.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562963/85629635031.3.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/8085134708"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191514702",
+    "translated_kr": "센텔라워터알코올프리토너,150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "COSRX Centella Water Alcohol",
+      "hwahae": "센텔라 워터 알코올 프리 토너"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "센텔라 워터 알코올 프리 토너",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
