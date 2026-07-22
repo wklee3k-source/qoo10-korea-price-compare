@@ -13275,5 +13275,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208268460",
+    "translated_kr": "퍼펙신GF크림40ml+1ml×3개GF크림증정",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[더랩바이블랑두] [SET] 그린 플라보노이드 2.5 패드 90매 x2개 (진정 크림 1ml*3개  증정) GF"
+    },
+    "brand": "더랩바이블랑두",
+    "name": "[더랩바이블랑두] [SET] 그린 플라보노이드 2.5 패드 90매 x2개 (진정 크림 1ml*3개  증정) GF",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "46000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/6769126?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6070783/60707830482.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6070783/60707830482.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6769126?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212751653",
+    "translated_kr": "[2개세트]리쥬양PDRN10000크림30ml+주베크르PDLLA10000+크림30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
