@@ -12633,5 +12633,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1137097859",
+    "translated_kr": "[신작발매]젤리세럼미스트50ml(콜라겐펩타이드/캐비어PDRN)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161049734",
+    "translated_kr": "화이트트러플리턴오일크림클렌저",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 리턴 오일 크림 클렌저"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 리턴 오일 크림 클렌저",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
