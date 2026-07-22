@@ -11473,5 +11473,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1149907907",
+    "translated_kr": "앤드허니딥모이스트헤어오일3.0 100mL헤어오일",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "앤드허니 EX 딥 모이스트 헤어 오일 3.0 , , 1개"
+    },
+    "brand": null,
+    "name": "앤드허니 EX 딥 모이스트 헤어 오일 3.0 , , 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1046329464",
+    "translated_kr": "환유5ml*30개=150ml샘플/화장수+유액/환유밸런서/환유에멀전",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "환유 밸런서",
+      "hwahae": "칠자화 유액"
+    },
+    "brand": "황후지화 (Hwanghoozihwa)",
+    "name": "칠자화 유액",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
