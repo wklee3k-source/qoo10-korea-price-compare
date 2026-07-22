@@ -29381,5 +29381,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209812545",
+    "translated_kr": "로즈마리 PDRN 스칼프 세럼 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아로마티카 로즈마리 PDRN 스칼프 세럼 : 다나와 가격비교",
+      "hwahae": "로즈마리 PDRN 스칼프 세럼",
+      "naver": "아로마티카 로즈마리 PDRN 스칼프 세럼 100ML X 2EA"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "로즈마리 PDRN 스칼프 세럼",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35980",
+    "mall": "아로마티카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13486819273",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103132/91031329625.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103132/91031329625.1.jpg",
+        "mall": "아로마티카",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13486819273"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205747342",
+    "translated_kr": "[1+1] [선뮤즈 톤업&컬렉팅 선 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비플레인 선뮤즈 톤업 앤 코렉팅 선크림 1+1 ...",
+      "hwahae": "조구만에디션 선뮤즈 선크림 [SPF50+/PA++++] [톤업앤코렉팅]"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "조구만에디션 선뮤즈 선크림 [SPF50+/PA++++] [톤업앤코렉팅]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
