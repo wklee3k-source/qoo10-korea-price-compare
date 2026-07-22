@@ -14013,5 +14013,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1166631881",
+    "translated_kr": "[1+1]소나무진정시카토너250ml+250ml수분충전/보습/민감성피부/데일리수분케어/건성피부",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1118355573",
+    "translated_kr": "RX더6펩타이드스킨부스터세럼150ml+150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 6 펩타이드 스킨 부스터 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 6 펩타이드 스킨 부스터 세럼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
