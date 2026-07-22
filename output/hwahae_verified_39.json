@@ -4510,5 +4510,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202850909",
+    "translated_kr": "리얼카로틴IPMP블레미쉬세럼팩패드80매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이프릴스킨 캐로틴 3분 팩 패드 아이피엠피 블레미쉬 카밍 팩 패드 80매",
+      "hwahae": "캐로틴 IPMP 바디로션"
+    },
+    "brand": "에이프릴스킨 (APRILSKIN)",
+    "name": "캐로틴 IPMP 바디로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192519528",
+    "translated_kr": "녹두클레이마스크팩,120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비플레인 녹두 모공 클레이 팩 (+ ...",
+      "hwahae": "녹두 모공 클레이 팩"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 모공 클레이 팩",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
