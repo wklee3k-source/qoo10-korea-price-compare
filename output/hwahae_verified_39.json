@@ -23386,5 +23386,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1172425476",
+    "translated_kr": "ホワイトトリュフバイタルスプレーセラム (レッド ミスト セラム) 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 바이탈 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 바이탈 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1168956037",
+    "translated_kr": "ダークスポット セラム (ナイアシンアミド10% トラネキサム酸 4%) 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 TXA 다크스팟 세럼 마스크"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 TXA 다크스팟 세럼 마스크",
+    "volume": "28mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
