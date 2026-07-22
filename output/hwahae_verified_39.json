@@ -15374,5 +15374,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191683986",
+    "translated_kr": "레드블레미쉬클리어히알시카수딩세럼50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 히알 시카 수딩 세럼",
+      "naver": "[1+1] 닥터지 레드 블레미쉬 클리어 히알 시카 수딩 세럼 50mL"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 히알 시카 수딩 세럼",
+    "volume": "50mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "33000",
+    "mall": "닥터지",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11515304212",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8905981/89059814585.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905981/89059814585.9.jpg",
+        "mall": "닥터지",
+        "link": "https://smartstore.naver.com/main/products/11515304212"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905981/89059810975.6.jpg",
+        "mall": "닥터지",
+        "link": "https://smartstore.naver.com/main/products/11515300602"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164314943",
+    "translated_kr": "2본 세트 맥셀 스킨사이언스365 신에이크 골드 아이세럼 15ml×2",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
