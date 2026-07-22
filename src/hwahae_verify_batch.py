@@ -304,8 +304,8 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "price": naver_data.get("price") or hwahae_data.get("price"),
             "mall": naver_data.get("mall"),
             "seller_trust": naver_data.get("seller_trust"),
-            "product_url": naver_data.get("product_url") or hwahae_data.get("product_url"),
-            "image_url": naver_data.get("image_url") or hwahae_data.get("image_url"),
+            "product_url": naver_data.get("product_url"),  # 화해는 정보앱이지 판매처가 아니므로 폴백 안 함
+            "image_url": naver_data.get("image_url"),  # 사진도 마찬가지로 네이버 것만 사용
             "image_candidates": naver_data.get("image_candidates") or [],
         }
 
