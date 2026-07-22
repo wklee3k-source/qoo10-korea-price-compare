@@ -18276,5 +18276,64 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172038726",
+    "translated_kr": "정품 VITA-C RETURN SKIN 160ml + 세럼 50ml + RETURN 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "123 UBuy Shop V24 Korea Vita",
+      "hwahae": "비타씨 13리턴 크림"
+    },
+    "brand": "메리키트 (MERIKIT)",
+    "name": "비타씨 13리턴 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 76000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152064671",
+    "translated_kr": "스템셀라인 스킨세럼크림 [중·건성피부용3종]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "jk화장품",
+      "naver": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정"
+    },
+    "brand": null,
+    "name": "jk화장품",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "41600",
+    "mall": "아벤느코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11730664019",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+        "mall": "아벤느코리아",
+        "link": "https://smartstore.naver.com/main/products/11730664019"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174517.jpg",
+        "mall": "아벤느",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11730664018"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
