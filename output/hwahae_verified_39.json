@@ -22391,5 +22391,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1091577701",
+    "translated_kr": "밤 추출물 AHA 8% 클리어 에센스 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209384322",
+    "translated_kr": "알파 클렌징 폼 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "알파 클렌징 폼"
+    },
+    "brand": "히스토랩 (HISTOLAB)",
+    "name": "알파 클렌징 폼",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 37400,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
