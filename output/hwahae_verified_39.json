@@ -4896,5 +4896,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1149096041",
+    "translated_kr": "[정품]소프트리셋그린클렌징밤100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "소프트리셋 그린 클렌징 밤",
+      "hwahae": "소프트리셋 그린 클렌징 밤",
+      "naver": "휘게 소프트리셋 그린 클렌징밤 100ml (티트리/셔벗/딥클렌징)"
+    },
+    "brand": "휘게 (HYGGEE)",
+    "name": "소프트리셋 그린 클렌징 밤",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16900",
+    "mall": "HYGGEE",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5652181286",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8319667/83196678590.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8319667/83196678590.7.jpg",
+        "mall": "HYGGEE",
+        "link": "https://smartstore.naver.com/main/products/5652181286"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209979406",
+    "translated_kr": "[정품]한율애기쑥피지흡착쑥떡팩폼120ml,1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "어린쑥 클렌징 흡착 팩폼",
+      "naver": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개"
+    },
+    "brand": "한율",
+    "name": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21000",
+    "mall": "한율",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10433900724",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+        "mall": "한율",
+        "link": "https://smartstore.naver.com/main/products/10433900724"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
