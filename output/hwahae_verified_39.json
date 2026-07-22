@@ -15622,5 +15622,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1025039849",
+    "translated_kr": "VT 슈퍼 히알루론산 폼 클렌저 300ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207202898",
+    "translated_kr": "본딩 알파 케라틴 헤어 팩 260g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "본딩 알파 케라틴 헤어팩 그린제스트 누드머스크",
+      "naver": "[마법소녀 정하연PICK] 오하입 본딩 알파 케라틴 헤어팩 260g"
+    },
+    "brand": "오하입 (ohype)",
+    "name": "본딩 알파 케라틴 헤어팩 그린제스트 누드머스크",
+    "volume": "260g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000259487",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6064132/60641323084.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6064132/60641323084.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000259487"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6019070/60190708420.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6481844?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
