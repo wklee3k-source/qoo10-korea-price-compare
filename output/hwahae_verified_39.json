@@ -29636,5 +29636,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177385233",
+    "translated_kr": "픽스 디테일 헤어 마스카라 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "픽스 디테일 헤어 마스카라"
+    },
+    "brand": "차홍 (CHAHONG)",
+    "name": "픽스 디테일 헤어 마스카라",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1170230232",
+    "translated_kr": "어성초 실키 모이스처 자외선 차단제 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 실키 모이스처 선크림 [SPF50+/PA++++]",
+      "naver": "[1+1] 아누아 어성초 실키 모이스처 선크림 SPF50+ PA++++ 50ml, 2개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 실키 모이스처 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "31000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12477072407",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002158/90021583154.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002158/90021583154.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12477072407"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002158/90021583155.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12477072408"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
