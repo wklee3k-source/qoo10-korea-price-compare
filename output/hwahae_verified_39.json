@@ -6337,5 +6337,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1176626188",
+    "translated_kr": "안티헤어로스샴푸850ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "헤드앤숄더 가려운 두피 케어 샴푸, , 1개"
+    },
+    "brand": null,
+    "name": "헤드앤숄더 가려운 두피 케어 샴푸, , 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1183123216",
+    "translated_kr": "너리싱바디로션레몬민트1L",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "나드 바디로션 레몬민트향, , 1개",
+      "hwahae": "바디로션 [레몬민트향]"
+    },
+    "brand": "나드 (NARD)",
+    "name": "바디로션 [레몬민트향]",
+    "volume": "000ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
