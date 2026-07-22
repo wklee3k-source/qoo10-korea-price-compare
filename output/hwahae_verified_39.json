@@ -19554,5 +19554,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1174936338",
+    "translated_kr": "프리주비네이션 펌잉 박치올 세럼[동안 탄력 세럼] 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199701690",
+    "translated_kr": "카밍 밸런스 젤 100ml / 수분 밸런스 조절",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "본사QR제품직송 인셀덤 카밍 밸런스 젤 수분 진정 에센스"
+    },
+    "brand": "인셀덤",
+    "name": "본사QR제품직송 인셀덤 카밍 밸런스 젤 수분 진정 에센스",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "44000",
+    "mall": "인셀덤보타랩100프로정품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11551568032",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8909607/89096078438.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8909607/89096078438.1.jpg",
+        "mall": "인셀덤보타랩100프로정품",
+        "link": "https://smartstore.naver.com/main/products/11551568032"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
