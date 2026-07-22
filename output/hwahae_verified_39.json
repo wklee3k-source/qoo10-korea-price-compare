@@ -18965,5 +18965,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1156741239",
+    "translated_kr": "어성초 히알루론산 수징 앰플 50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "어성초 히알루론 수딩 앰플"
+    },
+    "brand": null,
+    "name": "어성초 히알루론 수딩 앰플",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158942439",
+    "translated_kr": "마다가스카르 센텔라 퀵 카밍 패드 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 퀵 카밍 패드 70매",
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
