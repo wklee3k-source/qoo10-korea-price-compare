@@ -18335,5 +18335,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1134061516",
+    "translated_kr": "[2+1]ROSE PDRN 엑소솜 미스트, ROSE 리페어 크림 미스트 80ml, 확실한 윤기, 촉촉한 차오름",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Exo Highst+ Rose Repair Cream Mist New Product",
+      "hwahae": "1조 앰플 미스트"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1135008729",
+    "translated_kr": "BB세럼7ml*5바이알 믹스키트BB글로우 메소 더마 앰플 4가지 색상",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "STAYVE BB GLOW STARTER KIT 12X – EVIE PHARM"
+    },
+    "brand": null,
+    "name": "STAYVE BB GLOW STARTER KIT 12X – EVIE PHARM",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
