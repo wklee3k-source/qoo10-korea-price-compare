@@ -7315,5 +7315,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514733",
+    "translated_kr": "라이트웨이트수딩모이스처라이저,80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스알엑스 AC 컬렉션 라이트웨이트 수딩 ...",
+      "hwahae": "AC 라이트웨이트 수딩 모이스처라이저"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "AC 라이트웨이트 수딩 모이스처라이저",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514702",
+    "translated_kr": "센텔라워터알코올프리토너,150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "COSRX Centella Water Alcohol",
+      "hwahae": "센텔라 워터 알코올 프리 토너"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "센텔라 워터 알코올 프리 토너",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
