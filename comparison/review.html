@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상품 매칭 검수</title>
+<style>
+  body { font-family: 'Malgun Gothic', sans-serif; background:#f4f4f4; margin:0; padding:24px; }
+  h1 { font-size:18px; }
+  .toolbar { position:sticky; top:0; background:#fff; padding:12px 16px; margin-bottom:16px;
+              border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); z-index:10; }
+  .toolbar button { background:#2a7d46; color:#fff; border:none; padding:10px 18px;
+                      border-radius:6px; font-size:14px; cursor:pointer; }
+  .toolbar button:hover { background:#1e5c33; }
+  .toolbar .status { margin-left:12px; font-size:13px; color:#555; }
+  .card { display:flex; gap:16px; background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
+           box-shadow:0 1px 3px rgba(0,0,0,0.15); }
+  .card.excluded { opacity:0.4; }
+  .side { flex:1; min-width:0; }
+  .side h3 { margin:0 0 8px; font-size:14px; color:#555; display:flex; align-items:center; gap:8px; }
+  .badges { display:inline-flex; gap:4px; }
+  .badge { font-size:10px; padding:2px 6px; border-radius:4px; font-weight:600; }
+  .badge.match { background:#e3f5ea; color:#2a7d46; }
+  .badge.mismatch { background:#fdeaea; color:#c0392b; }
+  .badge.unknown { background:#fdf3e3; color:#a67a1f; }
+  .mainrow { display:flex; gap:6px; }
+  .mainimg { flex:1; min-width:0; max-width:90px; aspect-ratio:1; cursor:pointer; border:3px solid transparent;
+              border-radius:6px; }
+  .mainimg.selected { border-color:#2a7d46; }
+  .mainimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
+  .altrow { margin-top:6px; display:flex; gap:5px; flex-wrap:wrap; }
+  .altimg { width:32px; height:32px; cursor:pointer; border:2px solid transparent; border-radius:4px; }
+  .altimg.selected { border-color:#2a7d46; }
+  .altimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
+  .name { font-size:12px; margin:8px 0 2px; line-height:1.4; }
+  .name-kr { font-size:12px; color:#2a5fa0; margin:0 0 4px; line-height:1.4; }
+  .price { font-weight:bold; color:#d0392a; font-size:13px; }
+  .site { font-size:11px; color:#888; word-break:break-all; }
+  .goods_no { font-size:11px; color:#999; }
+  .noimg { width:90px; height:90px; display:flex; align-items:center; justify-content:center;
+            background:#f0f0f0; border-radius:6px; font-size:11px; color:#999; }
+  .checklist { flex:0 0 120px; border-left:1px dashed #ccc; padding-left:16px;
+                display:flex; align-items:center; justify-content:center; }
+  .exclude-btn { background:#c0392b; color:#fff; border:none; padding:14px 8px;
+                   border-radius:8px; font-size:13px; cursor:pointer; width:100%; line-height:1.4; }
+  .exclude-btn.active { background:#7f8c8d; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="saveDecisions()">💾 결정 파일 저장 (decisions.json 다운로드)</button>
+  <span class="status" id="status"></span>
+</div>
+
+<h1>큐텐 ↔ 한국 상품 매칭 검수 (33건)</h1>
+<p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
+상품이면 오른쪽 "제외" 버튼을 누르세요.</p>
+
+
+<div class="card" data-goods="1187136865" data-qoo10-name="リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善150ml1本" data-kr-name="밀키스킨 리얼 클렌징폼" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1187136865','qoo10','https://gd.image-qoo10.jp/li/538/179/7861179538.jpg',this)"><img src="https://gd.image-qoo10.jp/li/538/179/7861179538.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1187136865','qoo10','https://gd.image-qoo10.jp/li/538/179/7861179538.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/538/179/7861179538.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1187136865','qoo10','https://gd.image-qoo10.jp/li/538/179/7861179538.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/538/179/7861179538.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1187136865','qoo10','https://gd.image-qoo10.jp/li/538/179/7861179538.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/538/179/7861179538.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">リアルミルク クレンジングフォーム 肌保湿 弾力 肌のキメ 水分改善150ml1本</div>
+    <div class="name-kr">→ 블랑카우 리얼밀크 클렌징폼 150ml</div>
+    <div class="price">2863 円</div>
+    <div class="goods_no">goods_no: 1187136865</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1187136865','kr','https://img.hwahae.co.kr/products/1879808/1879808_20220801000000.jpg',this)"><img src="https://img.hwahae.co.kr/products/1879808/1879808_20220801000000.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">블랑카우 (BLANCOW) 밀키스킨 리얼 클렌징폼 (150ml)</div>
+    <div class="price">20000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1879808</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1203041226" data-qoo10-name="(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択" data-kr-name="체취케어 데오드란트 바디워시 [시트러스향]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1203041226','qoo10','https://gd.image-qoo10.jp/li/425/264/8334264425.jpg',this)"><img src="https://gd.image-qoo10.jp/li/425/264/8334264425.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1203041226','qoo10','https://gd.image-qoo10.jp/li/425/264/8334264425.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/425/264/8334264425.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1203041226','qoo10','https://gd.image-qoo10.jp/li/425/264/8334264425.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/425/264/8334264425.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1203041226','qoo10','https://gd.image-qoo10.jp/li/425/264/8334264425.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/425/264/8334264425.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択</div>
+    <div class="name-kr">→ 46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml</div>
+    <div class="price">2490 円</div>
+    <div class="goods_no">goods_no: 1203041226</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1203041226','kr','https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg',this)"><img src="https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">46cm (46센티미터) 체취케어 데오드란트 바디워시 [시트러스향] (600mL)</div>
+    <div class="price">29800 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2137133</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1191395895" data-qoo10-name="[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++" data-kr-name="피디알엔 엑토인 UV 에이징 리커버리 선 세럼 [SPF50+/PA++++]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1191395895','qoo10','https://gd.image-qoo10.jp/li/803/264/8334264803.jpg',this)"><img src="https://gd.image-qoo10.jp/li/803/264/8334264803.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1191395895','qoo10','https://gd.image-qoo10.jp/li/803/264/8334264803.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/803/264/8334264803.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1191395895','qoo10','https://gd.image-qoo10.jp/li/803/264/8334264803.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/803/264/8334264803.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1191395895','qoo10','https://gd.image-qoo10.jp/li/803/264/8334264803.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/803/264/8334264803.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++</div>
+    <div class="name-kr">→ 스킨앤러브 엑토인 리커버리 선플루이드 50ml SPF50+ PA++++</div>
+    <div class="price">2790 円</div>
+    <div class="goods_no">goods_no: 1191395895</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1191395895','kr','https://img.hwahae.co.kr/products/2137782/2137782_20250409143332.jpg',this)"><img src="https://img.hwahae.co.kr/products/2137782/2137782_20250409143332.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">Snp (에스엔피) 피디알엔 엑토인 UV 에이징 리커버리 선 세럼 [SPF50+/PA++++] (50ml)</div>
+    <div class="price">27000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2137782</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1199735232" data-qoo10-name="PDRNピンクエクソソームショット2000, 30ml" data-kr-name="PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199735232','qoo10','https://gd.image-qoo10.jp/li/770/749/8293749770.jpg',this)"><img src="https://gd.image-qoo10.jp/li/770/749/8293749770.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1199735232','qoo10','https://gd.image-qoo10.jp/li/770/749/8293749770.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/770/749/8293749770.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1199735232','qoo10','https://gd.image-qoo10.jp/li/770/749/8293749770.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/770/749/8293749770.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1199735232','qoo10','https://gd.image-qoo10.jp/li/770/749/8293749770.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/770/749/8293749770.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">PDRNピンクエクソソームショット2000, 30ml</div>
+    <div class="name-kr">→ 메디큐브 PDRN 핑크 엑소좀샷 2000 30ml</div>
+    <div class="price">2300 円</div>
+    <div class="goods_no">goods_no: 1199735232</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199735232','kr','https://img.hwahae.co.kr/products/2131581/2131581_20250211112015.jpg',this)"><img src="https://img.hwahae.co.kr/products/2131581/2131581_20250211112015.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">메디큐브 (medicube) PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000] (30ml)</div>
+    <div class="price">44000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2131581</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1208085514" data-qoo10-name="(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択" data-kr-name="체취케어 데오드란트 바디워시 [시트러스향]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1208085514','qoo10','https://gd.image-qoo10.jp/li/889/591/8319591889.jpg',this)"><img src="https://gd.image-qoo10.jp/li/889/591/8319591889.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1208085514','qoo10','https://gd.image-qoo10.jp/li/889/591/8319591889.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/889/591/8319591889.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1208085514','qoo10','https://gd.image-qoo10.jp/li/889/591/8319591889.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/889/591/8319591889.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1208085514','qoo10','https://gd.image-qoo10.jp/li/889/591/8319591889.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/889/591/8319591889.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">(ポケモンエディション)体臭ソリューション デオドラント ボディウォッシュ 720ml 2種から1つ選択</div>
+    <div class="name-kr">→ 46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml</div>
+    <div class="price">2889 円</div>
+    <div class="goods_no">goods_no: 1208085514</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1208085514','kr','https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg',this)"><img src="https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">46cm (46센티미터) 체취케어 데오드란트 바디워시 [시트러스향] (600mL)</div>
+    <div class="price">29800 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2137133</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1098318150" data-qoo10-name="5番白玉グルタチオンＣ美容液+クリーム+トナー+パック/韓国コスメ" data-kr-name="5번 글루타치온C 비타수액 에센셜 토너" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1098318150','qoo10','https://gd.image-qoo10.jp/li/593/589/7079589593.jpg',this)"><img src="https://gd.image-qoo10.jp/li/593/589/7079589593.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1098318150','qoo10','https://gd.image-qoo10.jp/li/593/589/7079589593.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/593/589/7079589593.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1098318150','qoo10','https://gd.image-qoo10.jp/li/593/589/7079589593.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/593/589/7079589593.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1098318150','qoo10','https://gd.image-qoo10.jp/li/593/589/7079589593.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/593/589/7079589593.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">5番白玉グルタチオンＣ美容液+クリーム+トナー+パック/韓国コスメ</div>
+    <div class="name-kr">→ 넘버즈인 5번 백옥 글루타치온C 에센스+크림+토너+팩</div>
+    <div class="price">5940 円</div>
+    <div class="goods_no">goods_no: 1098318150</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1098318150','kr','https://img.hwahae.co.kr/products/2086693/2086693_20240126134120.jpg',this)"><img src="https://img.hwahae.co.kr/products/2086693/2086693_20240126134120.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">넘버즈인 (numbuzin) 5번 글루타치온C 비타수액 에센셜 토너 (200ml)</div>
+    <div class="price">24000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2086693</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1098317948" data-qoo10-name="オールデイタイトメイクセッティングピクサー75ml/makeup setting fixx/韓国コスメ" data-kr-name="올데이 타이트 메이크업 세팅 픽서" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1098317948','qoo10','https://gd.image-qoo10.jp/li/628/776/6883776628.jpg',this)"><img src="https://gd.image-qoo10.jp/li/628/776/6883776628.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1098317948','qoo10','https://gd.image-qoo10.jp/li/628/776/6883776628.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/628/776/6883776628.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1098317948','qoo10','https://gd.image-qoo10.jp/li/628/776/6883776628.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/628/776/6883776628.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1098317948','qoo10','https://gd.image-qoo10.jp/li/628/776/6883776628.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/628/776/6883776628.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">オールデイタイトメイクセッティングピクサー75ml/makeup setting fixx/韓国コスメ</div>
+    <div class="name-kr">→ 소내추럴 올데이타이트 메이크업세팅픽서 75ml</div>
+    <div class="price">2519 円</div>
+    <div class="goods_no">goods_no: 1098317948</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1098317948','kr','https://img.hwahae.co.kr/products/9031/9031_20220801000000.jpg',this)"><img src="https://img.hwahae.co.kr/products/9031/9031_20220801000000.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">쏘내추럴 (SO'NATURAL) 올데이 타이트 메이크업 세팅 픽서 (75ml)</div>
+    <div class="price">15000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/9031</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1172085888" data-qoo10-name="フルフィットプロポリスライトアンプル, 30ml" data-kr-name="풀핏 프로폴리스 라이트 앰플" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1172085888','qoo10','https://gd.image-qoo10.jp/li/462/892/7482892462.jpg',this)"><img src="https://gd.image-qoo10.jp/li/462/892/7482892462.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1172085888','qoo10','https://gd.image-qoo10.jp/li/462/892/7482892462.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/462/892/7482892462.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1172085888','qoo10','https://gd.image-qoo10.jp/li/462/892/7482892462.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/462/892/7482892462.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1172085888','qoo10','https://gd.image-qoo10.jp/li/462/892/7482892462.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/462/892/7482892462.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">フルフィットプロポリスライトアンプル, 30ml</div>
+    <div class="name-kr">→ COSRX 풀핏 프로폴리스 라이트앰플 30ml</div>
+    <div class="price">2337 円</div>
+    <div class="goods_no">goods_no: 1172085888</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1172085888','kr','https://img.hwahae.co.kr/products/1737446/1737446_20221201121515.jpg',this)"><img src="https://img.hwahae.co.kr/products/1737446/1737446_20221201121515.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">코스알엑스 (COSRX) 풀핏 프로폴리스 라이트 앰플 (30ml)</div>
+    <div class="price">23500 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1737446</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1161371182" data-qoo10-name="ルートボリュームフィクサー, 200ml" data-kr-name="루트 볼륨 픽서" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1161371182','qoo10','https://gd.image-qoo10.jp/li/124/344/7256344124.jpg',this)"><img src="https://gd.image-qoo10.jp/li/124/344/7256344124.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1161371182','qoo10','https://gd.image-qoo10.jp/li/124/344/7256344124.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/124/344/7256344124.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1161371182','qoo10','https://gd.image-qoo10.jp/li/124/344/7256344124.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/124/344/7256344124.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1161371182','qoo10','https://gd.image-qoo10.jp/li/124/344/7256344124.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/124/344/7256344124.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ルートボリュームフィクサー, 200ml</div>
+    <div class="name-kr">→ 제니하우스 루트볼륨픽서 200ml</div>
+    <div class="price">3154 円</div>
+    <div class="goods_no">goods_no: 1161371182</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1161371182','kr','https://img.hwahae.co.kr/products/2195665/2195665_20260323161619.jpg',this)"><img src="https://img.hwahae.co.kr/products/2195665/2195665_20260323161619.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">제니하우스 (jennyhouse) 루트 볼륨 픽서 (200ml)</div>
+    <div class="price">23000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2195665</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1210835765" data-qoo10-name="ドクダミ77スージングトナー, 350ml" data-kr-name="어성초 77 히알루론 토너" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1210835765','qoo10','https://gd.image-qoo10.jp/li/622/223/8367223622.jpg',this)"><img src="https://gd.image-qoo10.jp/li/622/223/8367223622.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1210835765','qoo10','https://gd.image-qoo10.jp/li/622/223/8367223622.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/622/223/8367223622.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1210835765','qoo10','https://gd.image-qoo10.jp/li/622/223/8367223622.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/622/223/8367223622.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1210835765','qoo10','https://gd.image-qoo10.jp/li/622/223/8367223622.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/622/223/8367223622.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ドクダミ77スージングトナー, 350ml</div>
+    <div class="name-kr">→ 아누아 어성초77 수딩토너 350ml</div>
+    <div class="price">2422 円</div>
+    <div class="goods_no">goods_no: 1210835765</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1210835765','kr','https://img.hwahae.co.kr/products/2181659/2181659_20260102154726.jpg',this)"><img src="https://img.hwahae.co.kr/products/2181659/2181659_20260102154726.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">아누아 (Anua) 어성초 77 히알루론 토너 (250mL)</div>
+    <div class="price">25000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2181659</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1134579258" data-qoo10-name="ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）" data-kr-name="" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1134579258','qoo10','https://gd.image-qoo10.jp/li/415/856/8254856415.jpg',this)"><img src="https://gd.image-qoo10.jp/li/415/856/8254856415.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1134579258','qoo10','https://gd.image-qoo10.jp/li/415/856/8254856415.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/415/856/8254856415.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1134579258','qoo10','https://gd.image-qoo10.jp/li/415/856/8254856415.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/415/856/8254856415.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1134579258','qoo10','https://gd.image-qoo10.jp/li/415/856/8254856415.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/415/856/8254856415.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）</div>
+    <div class="name-kr">→ 실리콘 데미 누드브라</div>
+    <div class="price">5270 円</div>
+    <div class="goods_no">goods_no: 1134579258</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="noimg">이미지없음</div></div>
+    <div class="name">  </div>
+    <div class="price">- 원</div>
+    <div class="site">hwahae</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1175557299" data-qoo10-name="【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ" data-kr-name="밀크씨슬 블루바이옴 스칼프 샴푸" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1175557299','qoo10','https://gd.image-qoo10.jp/li/616/683/8394683616.jpg',this)"><img src="https://gd.image-qoo10.jp/li/616/683/8394683616.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1175557299','qoo10','https://gd.image-qoo10.jp/li/616/683/8394683616.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/616/683/8394683616.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1175557299','qoo10','https://gd.image-qoo10.jp/li/616/683/8394683616.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/616/683/8394683616.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1175557299','qoo10','https://gd.image-qoo10.jp/li/616/683/8394683616.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/616/683/8394683616.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">【ビョン・ウソク グッズ アクリルスタンド付き】デイリー ミルクシスル ブルーバイオーム スカルプシャンプー 500ml / デイリー オールデイ パーフェクト スカルプタト オリヤン/フォーメン バ</div>
+    <div class="name-kr">→ 다슈 데일리 밀크씨슬 블루바이옴 스칼프샴푸 500ml</div>
+    <div class="price">5550 円</div>
+    <div class="goods_no">goods_no: 1175557299</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1175557299','kr','https://img.hwahae.co.kr/products/2191244/2191244_20260225112040.jpg',this)"><img src="https://img.hwahae.co.kr/products/2191244/2191244_20260225112040.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">다슈 (DASHU) 밀크씨슬 블루바이옴 스칼프 샴푸 (500ml)</div>
+    <div class="price">27000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2191244</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1196815742" data-qoo10-name="モデリングクリームマスク 71g スパチュラ付き / ドクダミ 復活草 保湿パック 密着パック 韓国コスメ" data-kr-name="모델링 크림 마스크 [어성초스쿱]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1196815742','qoo10','https://gd.image-qoo10.jp/li/555/725/8096725555.jpg',this)"><img src="https://gd.image-qoo10.jp/li/555/725/8096725555.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1196815742','qoo10','https://gd.image-qoo10.jp/li/555/725/8096725555.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/555/725/8096725555.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1196815742','qoo10','https://gd.image-qoo10.jp/li/555/725/8096725555.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/555/725/8096725555.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1196815742','qoo10','https://gd.image-qoo10.jp/li/555/725/8096725555.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/555/725/8096725555.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">モデリングクリームマスク 71g スパチュラ付き / ドクダミ 復活草 保湿パック 密着パック 韓国コスメ</div>
+    <div class="name-kr">→ 아비브 모델링크림마스크 71g</div>
+    <div class="price">1799 円</div>
+    <div class="goods_no">goods_no: 1196815742</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1196815742','kr','https://img.hwahae.co.kr/products/2135913/2135913_20250408122745.jpg',this)"><img src="https://img.hwahae.co.kr/products/2135913/2135913_20250408122745.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">아비브 (Abib) 모델링 크림 마스크 [어성초스쿱] (71ml)</div>
+    <div class="price">8000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2135913</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1164705875" data-qoo10-name="ウォータープルーフプロ日焼け止め 50g+サンスティック 20g / アウトドア スポーツ対応UVクリーム 汗・水に強いスティックタイプ 手を汚さない" data-kr-name="워터프루프 프로 선크림 [SPF50+/PA++++]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1164705875','qoo10','https://gd.image-qoo10.jp/li/021/840/7339840021.jpg',this)"><img src="https://gd.image-qoo10.jp/li/021/840/7339840021.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1164705875','qoo10','https://gd.image-qoo10.jp/li/021/840/7339840021.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/021/840/7339840021.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1164705875','qoo10','https://gd.image-qoo10.jp/li/021/840/7339840021.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/021/840/7339840021.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1164705875','qoo10','https://gd.image-qoo10.jp/li/021/840/7339840021.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/021/840/7339840021.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ウォータープルーフプロ日焼け止め 50g+サンスティック 20g / アウトドア スポーツ対応UVクリーム 汗・水に強いスティックタイプ 手を汚さない</div>
+    <div class="name-kr">→ BUSHMAN 워터프루프프로 선크림 50g+선스틱20g</div>
+    <div class="price">5499 円</div>
+    <div class="goods_no">goods_no: 1164705875</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1164705875','kr','https://img.hwahae.co.kr/products/1884027/1884027_20230503122212.jpg',this)"><img src="https://img.hwahae.co.kr/products/1884027/1884027_20230503122212.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">부쉬맨 (BUSHMAN) 워터프루프 프로 선크림 [SPF50+/PA++++] (50g)</div>
+    <div class="price">25000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1884027</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1105980668" data-qoo10-name="プライム アドバンサー De-エイジング アンプル セラム 50ml 韓国美容液 エイジングケア ハリ 保湿 韓国コスメ" data-kr-name="프라임 어드밴서 디에이징 PDRN 부스터샷" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980668','qoo10','https://gd.image-qoo10.jp/li/978/365/6714365978.jpg',this)"><img src="https://gd.image-qoo10.jp/li/978/365/6714365978.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980668','qoo10','https://gd.image-qoo10.jp/li/978/365/6714365978.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/978/365/6714365978.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980668','qoo10','https://gd.image-qoo10.jp/li/978/365/6714365978.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/978/365/6714365978.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1105980668','qoo10','https://gd.image-qoo10.jp/li/978/365/6714365978.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/978/365/6714365978.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">プライム アドバンサー De-エイジング アンプル セラム 50ml 韓国美容液 エイジングケア ハリ 保湿 韓国コスメ</div>
+    <div class="name-kr">→ 오휘 프라임어드밴서 디에이징앰플세럼 50ml</div>
+    <div class="price">6694 円</div>
+    <div class="goods_no">goods_no: 1105980668</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1105980668','kr','https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg',this)"><img src="https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">오휘 (OHUI) 프라임 어드밴서 디에이징 PDRN 부스터샷 (50ml)</div>
+    <div class="price">80000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2130825</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1105980665" data-qoo10-name="エイジ リカバリー アイクリーム 25mL / 目元ケア エイジングケア しわ対策 保湿 目元クリーム 目元シワ 改善 弾力ケア 弾力クリーム 栄養クリーム" data-kr-name="에이지 리커버리 아이크림" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980665','qoo10','https://gd.image-qoo10.jp/li/022/280/5922280022.jpg',this)"><img src="https://gd.image-qoo10.jp/li/022/280/5922280022.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980665','qoo10','https://gd.image-qoo10.jp/li/022/280/5922280022.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/022/280/5922280022.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1105980665','qoo10','https://gd.image-qoo10.jp/li/022/280/5922280022.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/022/280/5922280022.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1105980665','qoo10','https://gd.image-qoo10.jp/li/022/280/5922280022.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/022/280/5922280022.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">エイジ リカバリー アイクリーム 25mL / 目元ケア エイジングケア しわ対策 保湿 目元クリーム 目元シワ 改善 弾力ケア 弾力クリーム 栄養クリーム</div>
+    <div class="name-kr">→ 오휘 에이지리커버리 아이크림 25ml</div>
+    <div class="price">6095 円</div>
+    <div class="goods_no">goods_no: 1105980665</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1105980665','kr','https://img.hwahae.co.kr/products/2096853/2096853_20240502181620.jpg',this)"><img src="https://img.hwahae.co.kr/products/2096853/2096853_20240502181620.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">오휘 (OHUI) 에이지 리커버리 아이크림 (25ml)</div>
+    <div class="price">105000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2096853</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1044307238" data-qoo10-name="[1+1]シルクリペア パーフェクト シャイニング ゴールドトリートメント 300ml ダメージヘア 乾燥毛 ツヤ髪 まとまり 指通り 韓国ヘアケア" data-kr-name="엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x2개" data-kr-site="naver">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1044307238','qoo10','https://gd.image-qoo10.jp/li/620/110/8395110620.jpg',this)"><img src="https://gd.image-qoo10.jp/li/620/110/8395110620.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1044307238','qoo10','https://gd.image-qoo10.jp/li/620/110/8395110620.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/620/110/8395110620.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1044307238','qoo10','https://gd.image-qoo10.jp/li/620/110/8395110620.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/620/110/8395110620.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1044307238','qoo10','https://gd.image-qoo10.jp/li/620/110/8395110620.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/620/110/8395110620.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[1+1]シルクリペア パーフェクト シャイニング ゴールドトリートメント 300ml ダメージヘア 乾燥毛 ツヤ髪 まとまり 指通り 韓国ヘアケア</div>
+    <div class="name-kr">→ 엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml</div>
+    <div class="price">2774 円</div>
+    <div class="goods_no">goods_no: 1044307238</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1044307238','kr','https://shopping-phinf.pstatic.net/main_5903047/59030472616.jpg',this)"><img src="https://shopping-phinf.pstatic.net/main_5903047/59030472616.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">11번가 엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x2개 </div>
+    <div class="price">11070 원</div>
+    <div class="site">naver · https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=7145730565&tid=1000000061</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1193729683" data-qoo10-name="ハイアルロン ブースティング エッセンス 100ml" data-kr-name="하이알루론 부스팅 에센스" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1193729683','qoo10','https://gd.image-qoo10.jp/li/813/938/8014938813.jpg',this)"><img src="https://gd.image-qoo10.jp/li/813/938/8014938813.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1193729683','qoo10','https://gd.image-qoo10.jp/li/813/938/8014938813.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/813/938/8014938813.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1193729683','qoo10','https://gd.image-qoo10.jp/li/813/938/8014938813.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/813/938/8014938813.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1193729683','qoo10','https://gd.image-qoo10.jp/li/813/938/8014938813.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/813/938/8014938813.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ハイアルロン ブースティング エッセンス 100ml</div>
+    <div class="name-kr">→ 유세린 히알루론부스팅에센스 100ml</div>
+    <div class="price">4585 円</div>
+    <div class="goods_no">goods_no: 1193729683</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1193729683','kr','https://img.hwahae.co.kr/products/2118741/2118741_20241011104958.jpg',this)"><img src="https://img.hwahae.co.kr/products/2118741/2118741_20241011104958.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">유세린 (Eucerin) 하이알루론 부스팅 에센스 (100ml)</div>
+    <div class="price">48000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2118741</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1175263787" data-qoo10-name="[26SS/New]バランスフル シカ オイルコントロール サンスティック 20g（＋バランスフル フォーマン オールインワン 20g＋ポケモンステッカー）" data-kr-name="포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1175263787','qoo10','https://gd.image-qoo10.jp/li/269/356/8377356269.jpg',this)"><img src="https://gd.image-qoo10.jp/li/269/356/8377356269.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1175263787','qoo10','https://gd.image-qoo10.jp/li/269/356/8377356269.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/269/356/8377356269.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1175263787','qoo10','https://gd.image-qoo10.jp/li/269/356/8377356269.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/269/356/8377356269.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1175263787','qoo10','https://gd.image-qoo10.jp/li/269/356/8377356269.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/269/356/8377356269.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[26SS/New]バランスフル シカ オイルコントロール サンスティック 20g（＋バランスフル フォーマン オールインワン 20g＋ポケモンステッカー）</div>
+    <div class="name-kr">→ 토리든 밸런스풀 시카오일컨트롤 선스틱 20g</div>
+    <div class="price">3449 円</div>
+    <div class="goods_no">goods_no: 1175263787</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1175263787','kr','https://img.hwahae.co.kr/products/2202691/2202691_20260506094325.jpg',this)"><img src="https://img.hwahae.co.kr/products/2202691/2202691_20260506094325.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">토리든 (Torriden) 포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++] (20g)</div>
+    <div class="price">23000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2202691</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1209710276" data-qoo10-name="[26SS/New]パフュームヘアシャンプー 530ml（+100ml） #Angel muguet発売" data-kr-name="퍼퓸드 아르간 헤어 샴푸" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1209710276','qoo10','https://gd.image-qoo10.jp/li/811/353/8377353811.jpg',this)"><img src="https://gd.image-qoo10.jp/li/811/353/8377353811.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1209710276','qoo10','https://gd.image-qoo10.jp/li/811/353/8377353811.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/811/353/8377353811.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1209710276','qoo10','https://gd.image-qoo10.jp/li/811/353/8377353811.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/811/353/8377353811.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1209710276','qoo10','https://gd.image-qoo10.jp/li/811/353/8377353811.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/811/353/8377353811.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[26SS/New]パフュームヘアシャンプー 530ml（+100ml） #Angel muguet発売</div>
+    <div class="name-kr">→ La'dor 퍼퓸헤어샴푸 530ml</div>
+    <div class="price">4344 円</div>
+    <div class="goods_no">goods_no: 1209710276</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1209710276','kr','https://img.hwahae.co.kr/products/2016985/2016985_20221130100323.jpg',this)"><img src="https://img.hwahae.co.kr/products/2016985/2016985_20221130100323.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">어라운드미 (AROUNDME) 퍼퓸드 아르간 헤어 샴푸 (200ml)</div>
+    <div class="price">9000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2016985</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1202412626" data-qoo10-name="パーフェクトフレッシュ メンズ 男性用洗浄剤 150ml" data-kr-name="ph6.9 위치하젤 프레쉬 젤 클렌저" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1202412626','qoo10','https://gd.image-qoo10.jp/li/684/353/8377353684.jpg',this)"><img src="https://gd.image-qoo10.jp/li/684/353/8377353684.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1202412626','qoo10','https://gd.image-qoo10.jp/li/684/353/8377353684.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/684/353/8377353684.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1202412626','qoo10','https://gd.image-qoo10.jp/li/684/353/8377353684.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/684/353/8377353684.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1202412626','qoo10','https://gd.image-qoo10.jp/li/684/353/8377353684.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/684/353/8377353684.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">パーフェクトフレッシュ メンズ 男性用洗浄剤 150ml</div>
+    <div class="name-kr">→ 벤튼 퍼펙트프레시 맨즈 남성용세정제 150ml</div>
+    <div class="price">4000 円</div>
+    <div class="goods_no">goods_no: 1202412626</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1202412626','kr','https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg',this)"><img src="https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">듀이트리 (DEWYTREE) ph6.9 위치하젤 프레쉬 젤 클렌저 </div>
+    <div class="price">- 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1712521</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1200863342" data-qoo10-name="[テミンのフォトカード100%プレゼント] マスターズ アイシー ジェリー サンスティック 14g" data-kr-name="마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1200863342','qoo10','https://gd.image-qoo10.jp/li/150/354/8377354150.jpg',this)"><img src="https://gd.image-qoo10.jp/li/150/354/8377354150.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1200863342','qoo10','https://gd.image-qoo10.jp/li/150/354/8377354150.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/150/354/8377354150.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1200863342','qoo10','https://gd.image-qoo10.jp/li/150/354/8377354150.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/150/354/8377354150.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1200863342','qoo10','https://gd.image-qoo10.jp/li/150/354/8377354150.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/150/354/8377354150.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[テミンのフォトカード100%プレゼント] マスターズ アイシー ジェリー サンスティック 14g</div>
+    <div class="name-kr">→ AHC 마스터즈 아이시젤리 선스틱 14g</div>
+    <div class="price">3459 円</div>
+    <div class="goods_no">goods_no: 1200863342</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1200863342','kr','https://img.hwahae.co.kr/products/2194632/2194632_20260318101107.jpg',this)"><img src="https://img.hwahae.co.kr/products/2194632/2194632_20260318101107.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">AHC (에이에이치씨) 마스터즈 아이시 젤리 선스틱 [SPF44/PA+++] (14g)</div>
+    <div class="price">18900 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2194632</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1196939883" data-qoo10-name="レチナール アイセラム リフティングローラー 15ml #カフェイン #バクチオール #アンチエイジングアプリケーター" data-kr-name="아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 Retinal Eye Serum" data-kr-site="naver">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1196939883','qoo10','https://gd.image-qoo10.jp/li/142/354/8377354142.jpg',this)"><img src="https://gd.image-qoo10.jp/li/142/354/8377354142.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1196939883','qoo10','https://gd.image-qoo10.jp/li/142/354/8377354142.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/142/354/8377354142.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1196939883','qoo10','https://gd.image-qoo10.jp/li/142/354/8377354142.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/142/354/8377354142.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1196939883','qoo10','https://gd.image-qoo10.jp/li/142/354/8377354142.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/142/354/8377354142.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">レチナール アイセラム リフティングローラー 15ml #カフェイン #バクチオール #アンチエイジングアプリケーター</div>
+    <div class="name-kr">→ 아비브 레티날아이세럼 리프팅롤러 15ml</div>
+    <div class="price">5063 円</div>
+    <div class="goods_no">goods_no: 1196939883</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1196939883','kr','https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg',this)"><img src="https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">아비브 아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 Retinal Eye Serum </div>
+    <div class="price">30590 원</div>
+    <div class="site">naver · https://smartstore.naver.com/main/products/13332115550</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1182595010" data-qoo10-name="PDRN ピンク ビタ コーティング マスク 10枚" data-kr-name="PDRN 비타 코팅 마스크" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1182595010','qoo10','https://gd.image-qoo10.jp/li/798/855/7751855798.jpg',this)"><img src="https://gd.image-qoo10.jp/li/798/855/7751855798.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1182595010','qoo10','https://gd.image-qoo10.jp/li/798/855/7751855798.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/798/855/7751855798.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1182595010','qoo10','https://gd.image-qoo10.jp/li/798/855/7751855798.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/798/855/7751855798.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1182595010','qoo10','https://gd.image-qoo10.jp/li/798/855/7751855798.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/798/855/7751855798.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">PDRN ピンク ビタ コーティング マスク 10枚</div>
+    <div class="name-kr">→ 메디큐브 PDRN 핑크비타코팅마스크 10매</div>
+    <div class="price">3440 円</div>
+    <div class="goods_no">goods_no: 1182595010</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1182595010','kr','https://img.hwahae.co.kr/products/2132660/2132660_20250219182024.jpg',this)"><img src="https://img.hwahae.co.kr/products/2132660/2132660_20250219182024.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">메디큐브 (medicube) PDRN 비타 코팅 마스크 (22g)</div>
+    <div class="price">5000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2132660</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1186682635" data-qoo10-name="アゼライン酸 10 ヒアルロン レッドネス スージング セラム 30ml 敏感肌 保湿 スキンケア" data-kr-name="B11756 Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum 1.0 oz Skin Care" data-kr-site="naver">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1186682635','qoo10','https://gd.image-qoo10.jp/li/919/491/7880491919.jpg',this)"><img src="https://gd.image-qoo10.jp/li/919/491/7880491919.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1186682635','qoo10','https://gd.image-qoo10.jp/li/919/491/7880491919.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/919/491/7880491919.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1186682635','qoo10','https://gd.image-qoo10.jp/li/919/491/7880491919.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/919/491/7880491919.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1186682635','qoo10','https://gd.image-qoo10.jp/li/919/491/7880491919.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/919/491/7880491919.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">アゼライン酸 10 ヒアルロン レッドネス スージング セラム 30ml 敏感肌 保湿 スキンケア</div>
+    <div class="name-kr">→ 아누아 아젤라익애씨드10 히알루론 레드니스수딩세럼 30ml</div>
+    <div class="price">3220 円</div>
+    <div class="goods_no">goods_no: 1186682635</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1186682635','kr','https://shopping-phinf.pstatic.net/main_6058410/60584105393.jpg',this)"><img src="https://shopping-phinf.pstatic.net/main_6058410/60584105393.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">아누아 B11756 Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum 1.0 oz Skin Care </div>
+    <div class="price">45700 원</div>
+    <div class="site">naver · http://jelly-pop.com/prod/content.asp?PMInc=12253078</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1199084782" data-qoo10-name="ヴィーガンコンブチャ ティー エッセンス 150ml 保湿 しっとり エッセンス 韓国コスメ" data-kr-name="닥터슈라클 비건 콤부차 티 에센스 스타레나  1개  150ml" data-kr-site="naver">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199084782','qoo10','https://gd.image-qoo10.jp/li/302/908/8128908302.jpg',this)"><img src="https://gd.image-qoo10.jp/li/302/908/8128908302.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1199084782','qoo10','https://gd.image-qoo10.jp/li/302/908/8128908302.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/302/908/8128908302.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1199084782','qoo10','https://gd.image-qoo10.jp/li/302/908/8128908302.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/302/908/8128908302.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1199084782','qoo10','https://gd.image-qoo10.jp/li/302/908/8128908302.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/302/908/8128908302.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ヴィーガンコンブチャ ティー エッセンス 150ml 保湿 しっとり エッセンス 韓国コスメ</div>
+    <div class="name-kr">→ Dr.Ceuracle 비건콤부차티에센스 150ml</div>
+    <div class="price">3380 円</div>
+    <div class="goods_no">goods_no: 1199084782</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199084782','kr','https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg',this)"><img src="https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">닥터슈라클 닥터슈라클 비건 콤부차 티 에센스 스타레나  1개  150ml </div>
+    <div class="price">36980 원</div>
+    <div class="site">naver · https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V84862403844&itemId=20149212318&vendorItemId=84862403844&spec=10305199</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1206207561" data-qoo10-name="[1+1] トーンアップ パールクリーム 本体30g+30g スキンケア / 保湿 / ベースメイク韓国コスメ 並行輸入" data-kr-name="피에잇 톤업 앤 브라이트닝 크림 EX" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1206207561','qoo10','https://gd.image-qoo10.jp/li/050/674/8272674050.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/674/8272674050.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1206207561','qoo10','https://gd.image-qoo10.jp/li/050/674/8272674050.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/674/8272674050.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1206207561','qoo10','https://gd.image-qoo10.jp/li/050/674/8272674050.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/674/8272674050.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1206207561','qoo10','https://gd.image-qoo10.jp/li/050/674/8272674050.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/674/8272674050.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[1+1] トーンアップ パールクリーム 本体30g+30g スキンケア / 保湿 / ベースメイク韓国コスメ 並行輸入</div>
+    <div class="name-kr">→ MAY ISLAND 톤업펄크림 본품30g+30g</div>
+    <div class="price">3530 円</div>
+    <div class="goods_no">goods_no: 1206207561</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1206207561','kr','https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg',this)"><img src="https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">로하시스 (LOHASYS) 피에잇 톤업 앤 브라이트닝 크림 EX (30g)</div>
+    <div class="price">29000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1841007</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1205776987" data-qoo10-name="AGE-R グルタチオン グロウ カプセル クリーム 50ml 保湿 スキンケア 並行輸入" data-kr-name="에이지알 글루타치온 글로우 캡슐 크림" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1205776987','qoo10','https://gd.image-qoo10.jp/li/426/644/8267644426.jpg',this)"><img src="https://gd.image-qoo10.jp/li/426/644/8267644426.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1205776987','qoo10','https://gd.image-qoo10.jp/li/426/644/8267644426.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/426/644/8267644426.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1205776987','qoo10','https://gd.image-qoo10.jp/li/426/644/8267644426.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/426/644/8267644426.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1205776987','qoo10','https://gd.image-qoo10.jp/li/426/644/8267644426.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/426/644/8267644426.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">AGE-R グルタチオン グロウ カプセル クリーム 50ml 保湿 スキンケア 並行輸入</div>
+    <div class="name-kr">→ 메디큐브 AGE-R 글루타치온글로우캡슐크림 50ml</div>
+    <div class="price">3530 円</div>
+    <div class="goods_no">goods_no: 1205776987</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1205776987','kr','https://img.hwahae.co.kr/products/2097276/2097276_20240509172521.jpg',this)"><img src="https://img.hwahae.co.kr/products/2097276/2097276_20240509172521.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">메디큐브 (medicube) 에이지알 글루타치온 글로우 캡슐 크림 (50ml)</div>
+    <div class="price">62000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2097276</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1198940759" data-qoo10-name="Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 50ml 米 うるおい 日焼け止め" data-kr-name="73선에센스 [SPF50+/PA++++]" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1198940759','qoo10','https://gd.image-qoo10.jp/li/313/816/8125816313.jpg',this)"><img src="https://gd.image-qoo10.jp/li/313/816/8125816313.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1198940759','qoo10','https://gd.image-qoo10.jp/li/313/816/8125816313.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/313/816/8125816313.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1198940759','qoo10','https://gd.image-qoo10.jp/li/313/816/8125816313.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/313/816/8125816313.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1198940759','qoo10','https://gd.image-qoo10.jp/li/313/816/8125816313.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/313/816/8125816313.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 50ml 米 うるおい 日焼け止め</div>
+    <div class="name-kr">→ Beauty of Joseon 릴리프선아쿠아프레시 50ml</div>
+    <div class="price">2240 円</div>
+    <div class="goods_no">goods_no: 1198940759</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1198940759','kr','https://img.hwahae.co.kr/products/2062601/2062601_20230830134544.jpg',this)"><img src="https://img.hwahae.co.kr/products/2062601/2062601_20230830134544.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">메이베나 (MAYBENA) 73선에센스 [SPF50+/PA++++] (50ml)</div>
+    <div class="price">35000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2062601</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1205562844" data-qoo10-name="ダメージケアレッドプロテインコンディショナー 680ml / 韓国コスメ" data-kr-name="유시몰 브레쓰 민트볼 20입" data-kr-site="naver">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1205562844','qoo10','https://gd.image-qoo10.jp/li/050/810/8263810050.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/810/8263810050.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1205562844','qoo10','https://gd.image-qoo10.jp/li/050/810/8263810050.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/810/8263810050.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1205562844','qoo10','https://gd.image-qoo10.jp/li/050/810/8263810050.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/810/8263810050.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1205562844','qoo10','https://gd.image-qoo10.jp/li/050/810/8263810050.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/050/810/8263810050.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">ダメージケアレッドプロテインコンディショナー 680ml / 韓国コスメ</div>
+    <div class="name-kr">→ euthymol 브레스민트볼 20개입</div>
+    <div class="price">2043 円</div>
+    <div class="goods_no">goods_no: 1205562844</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1205562844','kr','https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg',this)"><img src="https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">유시몰 유시몰 브레쓰 민트볼 20입 </div>
+    <div class="price">6500 원</div>
+    <div class="site">naver · https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000199340</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1212630238" data-qoo10-name="46cm 体臭ケアデオドラント ボディソープ 600ml (クリーンソープ / シトラス / ハーバル)/弱酸性 韓国コスメ ボディウォッシュ" data-kr-name="울트라 젠틀 약산성 세안제" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1212630238','qoo10','https://gd.image-qoo10.jp/li/162/367/8383367162.jpg',this)"><img src="https://gd.image-qoo10.jp/li/162/367/8383367162.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1212630238','qoo10','https://gd.image-qoo10.jp/li/162/367/8383367162.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/162/367/8383367162.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1212630238','qoo10','https://gd.image-qoo10.jp/li/162/367/8383367162.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/162/367/8383367162.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1212630238','qoo10','https://gd.image-qoo10.jp/li/162/367/8383367162.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/162/367/8383367162.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">46cm 体臭ケアデオドラント ボディソープ 600ml (クリーンソープ / シトラス / ハーバル)/弱酸性 韓国コスメ ボディウォッシュ</div>
+    <div class="name-kr">→ 46CM 체취케어 데오드란트 바디솝 600ml</div>
+    <div class="price">2510 円</div>
+    <div class="goods_no">goods_no: 1212630238</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1212630238','kr','https://img.hwahae.co.kr/products/2207218/2207218_20260618180012.jpg',this)"><img src="https://img.hwahae.co.kr/products/2207218/2207218_20260618180012.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">산다화 (Sandawha) 울트라 젠틀 약산성 세안제 (100g)</div>
+    <div class="price">27000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2207218</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1210464824" data-qoo10-name="[SET]CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー 500ml +トメント リンス 500ml" data-kr-name="콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1210464824','qoo10','https://gd.image-qoo10.jp/li/445/396/8358396445.jpg',this)"><img src="https://gd.image-qoo10.jp/li/445/396/8358396445.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1210464824','qoo10','https://gd.image-qoo10.jp/li/445/396/8358396445.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/445/396/8358396445.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1210464824','qoo10','https://gd.image-qoo10.jp/li/445/396/8358396445.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/445/396/8358396445.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1210464824','qoo10','https://gd.image-qoo10.jp/li/445/396/8358396445.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/445/396/8358396445.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">[SET]CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー 500ml +トメント リンス 500ml</div>
+    <div class="name-kr">→ 엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸</div>
+    <div class="price">3400 円</div>
+    <div class="goods_no">goods_no: 1210464824</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1210464824','kr','https://img.hwahae.co.kr/products/2201299/2201299_20260420181258.jpg',this)"><img src="https://img.hwahae.co.kr/products/2201299/2201299_20260420181258.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">엘리자베카 (Elizavecca) 콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100 (500ml)</div>
+    <div class="price">25000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/2201299</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1186310271" data-qoo10-name="【大容量】ザ・リアル ノニ モイスチャー バランシングトナー 320ml / 肌荒れ・水分補給・キメ整え" data-kr-name="노니 밸런싱 토너" data-kr-site="hwahae">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1186310271','qoo10','https://gd.image-qoo10.jp/li/775/497/8017497775.jpg',this)"><img src="https://gd.image-qoo10.jp/li/775/497/8017497775.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1186310271','qoo10','https://gd.image-qoo10.jp/li/775/497/8017497775.g_400-w_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/775/497/8017497775.g_400-w_g.jpg" alt="qoo10-main" loading="lazy"></div><div class="mainimg" data-side="qoo10" onclick="selectImage('1186310271','qoo10','https://gd.image-qoo10.jp/li/775/497/8017497775.g_400-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/775/497/8017497775.g_400-w-st_g.jpg" alt="qoo10-main" loading="lazy"></div></div>
+    <div class="altrow"><div class="altimg" data-side="qoo10" onclick="selectImage('1186310271','qoo10','https://gd.image-qoo10.jp/li/775/497/8017497775.g_80-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/775/497/8017497775.g_80-w-st_g.jpg" alt="qoo10-sub" loading="lazy"></div></div>
+    <div class="name">【大容量】ザ・リアル ノニ モイスチャー バランシングトナー 320ml / 肌荒れ・水分補給・キメ整え</div>
+    <div class="name-kr">→ 셀리맥스 더리얼노니 모이스처 밸런싱토너 320ml</div>
+    <div class="price">3060 円</div>
+    <div class="goods_no">goods_no: 1186310271</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1186310271','kr','https://img.hwahae.co.kr/products/1862406/1862406_20220801000000.jpg',this)"><img src="https://img.hwahae.co.kr/products/1862406/1862406_20220801000000.jpg" alt="kr-main" loading="lazy"></div></div>
+    <div class="name">셀리맥스 (celimax) 노니 밸런싱 토너 (150ml)</div>
+    <div class="price">25000 원</div>
+    <div class="site">hwahae · https://www.hwahae.co.kr/goods/1862406</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<script>
+function selectImage(goodsNo, side, url, el) {
+  var card = el.closest('.card');
+  card.querySelectorAll('.mainimg, .altimg').forEach(function(n) { n.classList.remove('selected'); });
+  el.classList.add('selected');
+  card.dataset.selectedSource = side;
+  card.dataset.selectedUrl = url;
+  setExcluded(card, false);
+}
+
+function toggleExclude(btn) {
+  var card = btn.closest('.card');
+  var nowExcluded = !card.classList.contains('excluded');
+  setExcluded(card, nowExcluded);
+}
+
+function setExcluded(card, excluded) {
+  var btn = card.querySelector('.exclude-btn');
+  if (excluded) {
+    card.classList.add('excluded');
+    btn.classList.add('active');
+    btn.textContent = '제외됨\n(클릭해서 취소)';
+  } else {
+    card.classList.remove('excluded');
+    btn.classList.remove('active');
+    btn.textContent = '❌ 이 상품 제외';
+  }
+}
+
+function saveDecisions() {
+  var cards = document.querySelectorAll('.card');
+  var results = [];
+  cards.forEach(function(card) {
+    var goodsNo = card.dataset.goods;
+    var excluded = card.classList.contains('excluded');
+    var hasSelection = !!card.dataset.selectedUrl;
+    var included = !excluded && hasSelection;
+    results.push({
+      goods_no: goodsNo,
+      qoo10_name: card.dataset.qoo10Name,
+      kr_name: card.dataset.krName,
+      kr_site: card.dataset.krSite,
+      match_confirmed: included,
+      image_usable: included,
+      image_source: included ? card.dataset.selectedSource : null,
+      final_image: included ? card.dataset.selectedUrl : null
+    });
+  });
+  var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "decisions.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  document.getElementById('status').textContent =
+    "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인";
+}
+</script>
+</body>
+</html>
