@@ -14,6 +14,7 @@
     --text: #e6edf3;
     --text-dim: #7d8998;
     --accent-1: #4fd1a5;   /* stage 1 — 크롤링 */
+    --accent-2: #4a90d9;   /* stage 2 — 번역 */
     --accent-3: #d9a15b;   /* stage 3 — 화해검증 */
     --up: #4fd1a5;
     --flat: #52606d;
@@ -73,8 +74,11 @@
 
   .stages {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+  }
+  @media (max-width: 900px) {
+    .stages { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     .stages { grid-template-columns: 1fr; }
@@ -96,6 +100,7 @@
     background: var(--stage-color);
   }
   .card.stage1 { --stage-color: var(--accent-1); }
+  .card.stage2 { --stage-color: var(--accent-2); }
   .card.stage3 { --stage-color: var(--accent-3); }
 
   .card-label {
@@ -292,6 +297,25 @@
       <div class="progress-note" id="s1-note">불러오는 중…</div>
     </div>
 
+    <div class="card stage2">
+      <div class="card-label">STAGE 2</div>
+      <div class="card-title">한글 번역</div>
+      <div class="metric-row">
+        <div class="metric-name">번역 완료</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s2-translated">—</div>
+          <div class="metric-delta" id="s2-translated-delta"></div>
+        </div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-name">번역 대기</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s2-pending">—</div>
+        </div>
+      </div>
+      <div class="progress-note" id="s2-note">불러오는 중…</div>
+    </div>
+
     <div class="card stage3">
       <div class="card-label">STAGE 3</div>
       <div class="card-title">화해 명칭 검증</div>
@@ -464,6 +488,35 @@ async function loadAll() {
     errorBox.innerHTML += `<div class="error-box">STAGE 1: ${e.message}</div>`;
   }
 
+  // Stage 2 (번역) — hwahae_input_39.json이 번역 완료 목록. 1단계 전체수
+  // 대비 아직 번역 안 된 건수(대기)도 같이 계산한다.
+  let s2Translated = null;
+  try {
+    const res = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
+    if (!res.ok) throw new Error(`상태코드 ${res.status}`);
+    const data = await res.json();
+    s2Translated = data.length;
+    current.s2_translated = s2Translated;
+
+    document.getElementById('s2-translated').textContent = s2Translated.toLocaleString();
+    if (prev && prev.s2_translated != null) {
+      setDelta(document.getElementById('s2-translated-delta'), s2Translated - prev.s2_translated);
+    } else {
+      document.getElementById('s2-translated-delta').textContent = '첫 조회';
+    }
+
+    // 1단계 전체 상품수(current.products, 위에서 이미 계산됨) 대비 대기수
+    const pending = current.products != null ? Math.max(0, current.products - s2Translated) : null;
+    document.getElementById('s2-pending').textContent = pending != null ? pending.toLocaleString() : '—';
+    document.getElementById('s2-note').textContent = pending != null
+      ? `1단계 전체 ${current.products}건 중 ${s2Translated}건 번역됨`
+      : '1단계 데이터 대기 중';
+  } catch (e) {
+    hadError = true;
+    document.getElementById('s2-note').textContent = '불러오기 실패';
+    errorBox.innerHTML += `<div class="error-box">STAGE 2: ${e.message}</div>`;
+  }
+
   // Stage 3
   try {
     const res = await fetch(RAW('output/hwahae_verified_39.json', 'hwahae-live'));
@@ -473,13 +526,17 @@ async function loadAll() {
     current.hwahae_done = done;
 
     let total = done;
-    try {
-      const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
-      if (inputRes.ok) {
-        const inputData = await inputRes.json();
-        total = inputData.length;
-      }
-    } catch (e) { /* 입력파일 못 가져와도 완료건수는 이미 있음 */ }
+    if (s2Translated != null) {
+      total = s2Translated;
+    } else {
+      try {
+        const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
+        if (inputRes.ok) {
+          const inputData = await inputRes.json();
+          total = inputData.length;
+        }
+      } catch (e) { /* 입력파일 못 가져와도 완료건수는 이미 있음 */ }
+    }
 
     document.getElementById('s3-done').textContent = done.toLocaleString();
     document.getElementById('s3-pct').textContent = total ? `${Math.round(done/total*100)}%` : '—';
