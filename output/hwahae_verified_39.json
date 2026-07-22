@@ -3959,5 +3959,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1201141169",
+    "translated_kr": "[세트]미드나잇블루드롭20ml+카밍크림60ml2종세트(진정케어/민감성피부/여드름/에센스/한국화장품)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "클레어스 급속 진정세럼 미드나잇 블루 드롭 + 피지량 개선",
+      "naver": "[디어클레어스] 클레어스 미드나잇 블루 드롭 20ml+카밍 크림 60g 2종 세트_DK10222 DK10005"
+    },
+    "brand": null,
+    "name": "클레어스 급속 진정세럼 미드나잇 블루 드롭 + 피지량 개선",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "59000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=157056340&shop_id=14379&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5263203/52632035056.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5263203/52632035056.1.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=157056340&shop_id=14379&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201899328",
+    "translated_kr": "워터글로우베리어TX샷5000에센스30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "로투스 워터 글로우 에센스 토너 5개"
+    },
+    "brand": null,
+    "name": "로투스 워터 글로우 에센스 토너 5개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
