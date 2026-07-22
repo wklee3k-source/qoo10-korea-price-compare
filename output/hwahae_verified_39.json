@@ -13397,5 +13397,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1179656795",
+    "translated_kr": "코스알엑스원스텝패드/피지패드/여드름패드70매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "원스텝 오리지널 클리어 패드 70매",
+      "hwahae": "원스텝 오리지널 클리어 패드"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "원스텝 오리지널 클리어 패드",
+    "volume": "185ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206982046",
+    "translated_kr": "젤투워터클렌저[아침세안],220ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "라곰 젤 투 워터 클렌저"
+    },
+    "brand": null,
+    "name": "라곰 젤 투 워터 클렌저",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
