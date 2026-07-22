@@ -698,5 +698,47 @@
         "link": "https://smartstore.naver.com/main/products/13646826019"
       }
     ]
+  },
+  {
+    "goods_no": "1202412626",
+    "translated_kr": "벤튼 퍼펙트프레시 맨즈 남성용세정제 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "벤튼 퍼펙트 프레쉬 남성청결제 항문세정제 m존케어",
+      "hwahae": "퍼펙트 프레쉬 남성청결제"
+    },
+    "brand": "벤튼 (BENTON)",
+    "name": "퍼펙트 프레쉬 남성청결제",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2052740",
+    "image_url": "https://img.hwahae.co.kr/products/2052740/2052740_20230718182203.jpg",
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200863342",
+    "translated_kr": "AHC 마스터즈 아이시젤리 선스틱 14g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "AHC 마스터즈 아이시 젤리 선스틱",
+      "hwahae": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
+    "volume": "14g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2194632",
+    "image_url": "https://img.hwahae.co.kr/products/2194632/2194632_20260318101107.jpg",
+    "image_candidates": []
   }
 ]
