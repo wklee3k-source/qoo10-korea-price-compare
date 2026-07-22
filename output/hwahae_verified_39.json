@@ -28137,5 +28137,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191805515",
+    "translated_kr": "ORTHIA 오르티아 에이지 스팟 코렉팅 크림 50ml 투명 피부 크림 한국 코스메 국내 배송",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코리아나_오르시아 에이지 스팟 콜렉팅 크림",
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1115724619",
+    "translated_kr": "[GIFT] 프로테인 손상 케어 노워시 트리트먼트 3종(바이올렛 뮤게, 레더 아이리스, 일랑일랑)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "쿤달 프로틴 데미지 케어 노워시 트리트먼트 3종 택1"
+    },
+    "brand": null,
+    "name": "쿤달 프로틴 데미지 케어 노워시 트리트먼트 3종 택1",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
