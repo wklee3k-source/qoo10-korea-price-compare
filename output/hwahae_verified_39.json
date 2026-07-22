@@ -10293,5 +10293,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1096698825",
+    "translated_kr": "히알루론산아쿠아젤크림,100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "히아루론산 아쿠아 젤 크림",
+      "hwahae": "히아루론산 아쿠아 젤 크림"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "히아루론산 아쿠아 젤 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191102778",
+    "translated_kr": "인테카수딩크림,31ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "인테카 수딩 크림",
+      "hwahae": "인테카 수딩 크림"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 수딩 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
