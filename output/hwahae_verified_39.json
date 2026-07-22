@@ -17430,5 +17430,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165634740",
+    "translated_kr": "헤어 쉴드 (헤어 픽서/스프레이 분사형)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 쉴드 노워시 헤어 트리트먼트 밤"
+    },
+    "brand": "머지 (MERZY)",
+    "name": "퍼펙트 쉴드 노워시 헤어 트리트먼트 밤",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 15900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1118205884",
+    "translated_kr": "【정품】【72시간 보습 유지】R세라 캡슐 UV 프로텍터 톤업 크림 40ml+10ml 프라이밍 자외선 차단제 세라마이드 캡슐 함유 메이크업 지속력 업 하",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "PDRN TX1 콜라겐 캡슐 크림 300",
+    "volume": "62g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
