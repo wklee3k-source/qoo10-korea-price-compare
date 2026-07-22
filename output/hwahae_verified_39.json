@@ -10792,5 +10792,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209246381",
+    "translated_kr": "[140ml][정품]AGE-R글루타치온글로우토너140ml/촉촉함&윤기케어/매일보습화장수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이지알 부스터 젤"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 부스터 젤",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191658129",
+    "translated_kr": "[신작]울트라퓨어세럼5.0%나이아신아마이드30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "울트라 퓨어 하이-포텐시 세럼 5.0% 나이아신아마이드"
+    },
+    "brand": "키엘 (Kiehl's)",
+    "name": "울트라 퓨어 하이-포텐시 세럼 5.0% 나이아신아마이드",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
