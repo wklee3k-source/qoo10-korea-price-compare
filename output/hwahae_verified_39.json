@@ -5888,5 +5888,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203589480",
+    "translated_kr": "[1+1바다포도스킨팩80매]한국화장품페이스팩시트팩토너패드스킨케어데일리팩페이스케어보습팩",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "마미케어 바다포도 스킨팩, 1개"
+    },
+    "brand": null,
+    "name": "마미케어 바다포도 스킨팩, 1개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1043988185",
+    "translated_kr": "제로벨벳틴트5.5g,16버니누드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "롬앤 제로 벨벳 틴트",
+      "hwahae": "제로 벨벳 틴트 [16 버니누드]"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "제로 벨벳 틴트 [16 버니누드]",
+    "volume": "5.5g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
