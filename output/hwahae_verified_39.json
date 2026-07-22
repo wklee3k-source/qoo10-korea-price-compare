@@ -29572,5 +29572,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1177951039",
+    "translated_kr": "[NEW] PDRN 핑크 비타 코팅 마스크 10장",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PDRN 비타 코팅 마스크"
+    },
+    "brand": null,
+    "name": "PDRN 비타 코팅 마스크",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162284855",
+    "translated_kr": "【1+1 향 선택】[퍼퓸 핸드크림 50ml×2개] 한국 인기 보습 케어 핸드 향수 선물로도",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "퍼퓸 핸드크림",
+      "naver": "더프트앤도프트 시그니처 퍼퓸 핸드크림 스톡홀름로즈 50ml 고보습 향좋은 핸드로션"
+    },
+    "brand": null,
+    "name": "퍼퓸 핸드크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "7900",
+    "mall": "더프트앤도프트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5698012235",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8324251/83242510223.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8324251/83242510223.8.jpg",
+        "mall": "더프트앤도프트",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5698012235"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
