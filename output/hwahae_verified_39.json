@@ -1359,5 +1359,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1096256291",
+    "translated_kr": "[정품]콜라겐프로페셔널프로그램세트(마이크로콜라겐200mg*4개+액티베이션부스터30ml+드로퍼4개)/콜라겐/광채/고영양/활력/탄력",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "라비앙 콜라겐 프로페셔널 프로그램"
+    },
+    "brand": null,
+    "name": "라비앙 콜라겐 프로페셔널 프로그램",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1094315646",
+    "translated_kr": "[1+1]V콜라겐 하트핏 멀티밤 10g/피부장벽케어/슬로우에이징/고농축/탄력/수분장벽/진정/한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "마녀공장",
+      "naver": "V콜라겐 하트핏 멀티밤 10g"
+    },
+    "brand": "마녀공장",
+    "name": "V콜라겐 하트핏 멀티밤 10g",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23200",
+    "mall": "마녀공장공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://manyo.co.kr/goods/goods_view.php?goodsNo=1897&inflow=naver",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3523501/35235012178.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3523501/35235012178.8.jpg",
+        "mall": "마녀공장공식몰",
+        "link": "https://manyo.co.kr/goods/goods_view.php?goodsNo=1897&inflow=naver"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
