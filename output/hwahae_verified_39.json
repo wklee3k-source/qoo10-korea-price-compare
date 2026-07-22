@@ -26237,5 +26237,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162284855",
+    "translated_kr": "【1+1 향 선택】[퍼퓸 핸드크림 50ml×2개] 한국 인기 보습 케어 손 향수 선물로도",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더프트앤도프트 시그니처 퍼퓸 핸드크림 스톡홀름로즈 50ml 고보습 향좋은 핸드로션"
+    },
+    "brand": "더프트앤도프트",
+    "name": "더프트앤도프트 시그니처 퍼퓸 핸드크림 스톡홀름로즈 50ml 고보습 향좋은 핸드로션",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "7900",
+    "mall": "더프트앤도프트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5698012235",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8324251/83242510223.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8324251/83242510223.8.jpg",
+        "mall": "더프트앤도프트",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5698012235"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206727074",
+    "translated_kr": "시카 엑소솜 보습 크림 60ml 진정 민감성 피부 피부 트러블 케어 수분 크림 한국 화장품 저자극",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
