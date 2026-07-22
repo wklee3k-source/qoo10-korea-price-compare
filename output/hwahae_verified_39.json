@@ -30738,5 +30738,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195466420",
+    "translated_kr": "더마데카크림 (시즌6), 50ml, 3개 (박스없음)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180153782",
+    "translated_kr": "마데카액티브스킨포뮬라 (시즌5), 50ml, 3개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마데카크림 액티브 스킨 포뮬러"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "마데카크림 액티브 스킨 포뮬러",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
