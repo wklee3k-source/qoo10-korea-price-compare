@@ -16877,5 +16877,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1194316155",
+    "translated_kr": "메디힐 팩 리필용 MEDIHEAL 콜라겐 페이스 마스크 【 리필 】 30장 - 탄력 케어 시트 마스크 - 한국 코스메 - 시트 마스크 팩 - 정품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "더마 365 마스크_콜라겐 30매 리필"
+    },
+    "brand": null,
+    "name": "더마 365 마스크_콜라겐 30매 리필",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190054453",
+    "translated_kr": "레드 블레미시 리페어 수딩 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "누구나 피부를 건강하게 Dr.G",
+      "hwahae": "레드 블레미쉬 클리어 수딩 크림"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 수딩 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
