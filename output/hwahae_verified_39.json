@@ -27387,5 +27387,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1141019983",
+    "translated_kr": "로에베 001 우먼 EDP SP 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1150000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1183179464",
+    "translated_kr": "허 런던 드림 EDP SP 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "허"
+    },
+    "brand": "루이스1987 (LOUIS1987)",
+    "name": "허",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 135000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
