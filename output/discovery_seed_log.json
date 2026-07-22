@@ -22209,5 +22209,75 @@
     "from_title": "got2b ボンディング・オイル ハイ乾燥・パサつき髪用ヘアオイル",
     "passes_filter": true,
     "seed_keyword": "got2b ボンディング・オイル ハイ乾燥・パサつき髪用ヘアオイル"
+  },
+  {
+    "from_shop": "kcosmetichall",
+    "from_goods_no": "1184274268",
+    "from_title": "【並行輸入】 グラノーラトッピング 大容量200g 3種から選べる",
+    "passes_filter": false,
+    "seed_keyword": "グラノーラトッピング 大容量 3種から"
+  },
+  {
+    "from_shop": "kcosmetichall",
+    "from_goods_no": "1196582975",
+    "from_title": "【並行輸入】 インナーケアミニ 14包入り 2種 (スーパーリンパティー ウルトラ / シュガーカットピーティー ウルトラ)",
+    "passes_filter": false,
+    "seed_keyword": "インナーケアミニ 14包入り 2種"
+  },
+  {
+    "from_shop": "kcosmetichall",
+    "from_goods_no": "1184791857",
+    "from_title": "【並行輸入】 ホエイプロテインシェイク パウチ 45g 3pack 選べる",
+    "passes_filter": false,
+    "seed_keyword": "ホエイプロテインシェイク パウチ 3pack"
+  },
+  {
+    "from_shop": "kcosmetichall",
+    "from_goods_no": "1184145280",
+    "from_title": "【並行輸入】 クレンズ 15ml*10包入り 6種から選べる1種 (レモン/アップル/グレープ/グレープフルーツ/梅/青リンゴ)",
+    "passes_filter": false,
+    "seed_keyword": "クレンズ *10包入り 6種から 1種"
+  },
+  {
+    "from_shop": "kcosmetichall",
+    "from_goods_no": "1184131608",
+    "from_title": "【並行輸入】 (1+1) K-Snack ベーグルチップ 5種から選べる2種",
+    "passes_filter": false,
+    "seed_keyword": "K-Snack ベーグルチップ 5種から 2種"
+  },
+  {
+    "from_shop": "NARShA",
+    "from_goods_no": "1170958761",
+    "from_title": "プリティフィルター パーフェクトフィニッシュ ファンデーション 35g",
+    "passes_filter": false,
+    "seed_keyword": "プリティフィルター パーフェクトフィニッシュ ファンデーション"
+  },
+  {
+    "from_shop": "NARShA",
+    "from_goods_no": "1080770379",
+    "from_title": "ライトオンインシャワーボディトーンアップボディローション ベビーパウダーの香り290ml",
+    "passes_filter": true,
+    "seed_keyword": "ライトオンインシャワーボディトーンアップボディローション ベビーパウダーの香り"
+  },
+  {
+    "from_shop": "NARShA",
+    "from_goods_no": "1206876054",
+    "from_title": "[ブラシ元祖] グロウターンエクソソームブラシアンプル130ml企画(+30ml)",
+    "passes_filter": true,
+    "seed_keyword": "グロウターンエクソソームブラシアンプル 企画"
+  },
+  {
+    "from_shop": "NARShA",
+    "from_goods_no": "1187334991",
+    "from_title": "マデカバンド トラブルケア スポットパッチ 12mm x 72p + 10mm x 96p",
+    "passes_filter": false,
+    "seed_keyword": "マデカバンド トラブルケア スポットパッチ x 72p + x 96p"
+  },
+  {
+    "from_shop": "NARShA",
+    "from_goods_no": "1184747814",
+    "from_title": "V10 ビタミン ホワイトニング スリーピングパック 80ml/100ml",
+    "passes_filter": true,
+    "seed_keyword": "V10 ビタミン ホワイトニング スリーピングパック"
   }
 ]
