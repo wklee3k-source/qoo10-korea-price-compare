@@ -8085,5 +8085,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1142160005",
+    "translated_kr": "10%AHA바디로션210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "폴라초이스 10% 아하 각질제거 바디로션 ...",
+      "hwahae": "10% 아하 각질제거 바디로션"
+    },
+    "brand": "폴라초이스 (PAULA'SCHOICE)",
+    "name": "10% 아하 각질제거 바디로션",
+    "volume": "210ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203590076",
+    "translated_kr": "[신상품]뉴플러스화이트치약160g4개세트구취케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "덴티스테 뉴플러스화이트 치약 튜브 4개입/12개입"
+    },
+    "brand": null,
+    "name": "덴티스테 뉴플러스화이트 치약 튜브 4개입/12개입",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
