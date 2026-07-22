@@ -2845,5 +2845,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1189962331",
+    "translated_kr": "PDRN1000플러스리페어크림20g",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "약국 리쥬비온 PDRN 피디알엔 1000플러스 리페어크림"
+    },
+    "brand": null,
+    "name": "약국 리쥬비온 PDRN 피디알엔 1000플러스 리페어크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172104818",
+    "translated_kr": "뉴스킨에포크글레이셜마린머드125g워시오프머드팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "뉴스킨 에포크 글레이셜 마린 머드 팩",
+      "hwahae": "에포크 글레이셜 머린 머드"
+    },
+    "brand": "뉴스킨 (NUSKIN)",
+    "name": "에포크 글레이셜 머린 머드",
+    "volume": "125g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
