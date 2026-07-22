@@ -10116,5 +10116,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1133988984",
+    "translated_kr": "센티드핸드크림40ml/한국화장품/퍼퓸핸드크림",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "퍼퓸 핸드크림 40ML"
+    },
+    "brand": null,
+    "name": "퍼퓸 핸드크림 40ML",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1132391030",
+    "translated_kr": "아토베리어365크림80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "AESTURA",
+      "hwahae": "아토베리어365 크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
