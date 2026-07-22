@@ -273,7 +273,7 @@ jobs:
       # 상점 2개 단위로 나눠서 반복 실행하고, 매 단위마다 즉시 병합+커밋+
       # push한다(실시간 병합) — 4개가 전부 끝날 때까지 안 기다려도 지금까지
       # 몇 개나 처리됐는지 discovery-live에서 바로 확인 가능하다.
-      - name: Run discovery in small increments with real-time merge
+      - name: Run discovery in small increments (branch 0 merges, others just push their own file)
         working-directory: src
         env:
           TARGET: ${{ inputs.discovery_target_products || '999999' }}
@@ -296,39 +296,45 @@ jobs:
               "$B"
             echo "::endgroup::"
 
-            # [데이터 유실 방지 핵심] discovery_state_${B}.json(이 워커 전용
-            # 파일)은 git이 절대 건드리지 않는 로컬 소스이므로, 언제든 이걸
-            # 기준으로 재계산하면 이 워커의 몫은 무조건 살아남는다. 그래서
-            # "최신 origin을 받아옴 -> 그 원본 그대로 discovery_state.json에
-            # 반영 -> 그 위에 내 몫을 병합스크립트로 다시 합침"을 push가
-            # 성공할 때까지 반복한다. git merge(텍스트 레벨 병합)는 JSON
-            # 통짜 파일에서 위험하므로(충돌 시 한쪽 데이터가 통째로 날아갈
-            # 수 있음) 아예 쓰지 않는다 — 항상 origin 그대로 받고 재계산한다.
-            merge_and_commit() {
-              git fetch origin discovery-live 2>/dev/null
-              git show origin/discovery-live:output/discovery_state.json > ../output/discovery_state.json 2>/dev/null || true
-              python merge_discovery_states.py ../output
-              python append_progress_history.py ../output
-              git add ../output/discovery_state.json "../output/discovery_state_${B}.json" \
-                "../output/discovery_result_${B}.xlsx" ../output/progress_history.json ../output/archive/ 2>/dev/null || true
-              git diff --cached --quiet && return 1
-              git commit -m "Auto: parallel discovery branch $B progress (반복 $ITER)"
-              return 0
-            }
-
-            if merge_and_commit; then
-              PUSHED=0
+            # [경합 자체를 없앰] 4개가 전부 discovery_state.json(공유파일)을
+            # 쓰려고 하면 서로 계속 부딪힌다. 그래서 "쓰기 권한"을 브랜치0
+            # 하나에만 준다 — 1/2/3번은 자기 전용 파일(discovery_state_<B>.json,
+            # 자신만 쓰는 파일이라 절대 남과 안 부딪힘)만 push하고, 공유파일은
+            # 절대 안 건드린다. 병합(공유파일 갱신)은 오직 브랜치0만 담당한다.
+            if [ "$B" = "0" ]; then
               for i in $(seq 1 30); do
-                if git push origin discovery-live; then PUSHED=1; break; fi
+                git fetch origin discovery-live 2>/dev/null
+                git show origin/discovery-live:output/discovery_state.json > ../output/discovery_state.json 2>/dev/null || true
+                # 다른 워커들이 이미 push한 자기 전용 파일들도 최신으로 받는다
+                for OB in 1 2 3; do
+                  git show "origin/discovery-live:output/discovery_state_${OB}.json" > "../output/discovery_state_${OB}.json" 2>/dev/null || true
+                done
+                python merge_discovery_states.py ../output
+                python append_progress_history.py ../output
+                git add ../output/discovery_state.json "../output/discovery_state_0.json" \
+                  "../output/discovery_result_0.xlsx" ../output/progress_history.json ../output/archive/ 2>/dev/null || true
+                git diff --cached --quiet && break
+                git commit -m "Auto: parallel discovery merge (branch0 + 반복 $ITER)"
+                if git push origin discovery-live; then break; fi
                 sleep_time=$((RANDOM % 6 + 1))
-                echo "push 실패(경합), ${sleep_time}초 대기 후 최신 기준으로 재계산 ($i/30)"
+                echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/30)"
                 sleep "$sleep_time"
-                # 방금 커밋은 버리고(내 워커파일엔 영향 없음) 최신 origin 기준으로 다시 병합+커밋
                 git reset --soft HEAD~1 2>/dev/null || true
-                merge_and_commit || true
               done
-              if [ "$PUSHED" != "1" ]; then
-                echo "::warning::브랜치 $B: 30회 재시도에도 push 실패. 이 워커의 데이터는 discovery_state_${B}.json에 안전하게 남아있으니 다음 반복에서 다시 시도됨"
+            else
+              # 1/2/3번: 오직 내 전용 파일만 커밋/push한다. 절대 discovery_state.json을
+              # 건드리지 않으므로 다른 워커와 파일 단위로 부딪힐 일이 구조적으로 없다.
+              git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
+              if ! git diff --cached --quiet; then
+                git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER)"
+                for i in $(seq 1 30); do
+                  if git push origin discovery-live; then break; fi
+                  sleep_time=$((RANDOM % 6 + 1))
+                  echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/30)"
+                  sleep "$sleep_time"
+                  git fetch origin discovery-live 2>/dev/null
+                  git pull --rebase origin discovery-live -q 2>/dev/null || true
+                done
               fi
             fi
           done
