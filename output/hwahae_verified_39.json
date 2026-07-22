@@ -30273,5 +30273,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202461447",
+    "translated_kr": "[공식] 스쿠알란 인텐시브 수분 배리어 크림 80ml / 보습 / 피부 배리어 / 히알루론산 / 저자극 / 한국 스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190163642",
+    "translated_kr": "PDRN 히알루론산 모이스트 캡슐 미스트 100ml / 30ml 선택",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
