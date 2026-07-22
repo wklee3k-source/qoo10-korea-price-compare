@@ -17118,5 +17118,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202768424",
+    "translated_kr": "포어+다크스팟 브라이트닝 세럼 30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194319670",
+    "translated_kr": "밸런스 풀 시카 토너 패드 60장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런스풀 시카 토너 패드"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "밸런스풀 시카 토너 패드",
+    "volume": "180ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
