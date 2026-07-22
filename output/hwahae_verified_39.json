@@ -16432,5 +16432,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1161381618",
+    "translated_kr": "산마데 크림 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204176921",
+    "translated_kr": "[medicube] 블랙헤드 모공 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 블랙헤드 모공 브러쉬"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "멀티 블랙헤드 모공 브러쉬",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11400,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
