@@ -282,7 +282,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
-          STEP=2
+          STEP=10
           ITER=0
           while true; do
             ITER=$((ITER + 1))
@@ -302,20 +302,24 @@ jobs:
             # 자신만 쓰는 파일이라 절대 남과 안 부딪힘)만 push하고, 공유파일은
             # 절대 안 건드린다. 병합(공유파일 갱신)은 오직 브랜치0만 담당한다.
             if [ "$B" = "0" ]; then
+              echo "[병합시작] 반복 $ITER"
               for i in $(seq 1 30); do
-                git fetch origin discovery-live 2>/dev/null
-                git show origin/discovery-live:output/discovery_state.json > ../output/discovery_state.json 2>/dev/null || true
-                # 다른 워커들이 이미 push한 자기 전용 파일들도 최신으로 받는다
+                echo "[병합$i] fetch 시작"
+                timeout 60 git fetch origin discovery-live 2>&1 | tail -5
+                echo "[병합$i] fetch 끝, discovery_state.json 읽기"
+                timeout 30 git show origin/discovery-live:output/discovery_state.json > ../output/discovery_state.json 2>/dev/null || true
                 for OB in 1 2 3; do
-                  git show "origin/discovery-live:output/discovery_state_${OB}.json" > "../output/discovery_state_${OB}.json" 2>/dev/null || true
+                  timeout 30 git show "origin/discovery-live:output/discovery_state_${OB}.json" > "../output/discovery_state_${OB}.json" 2>/dev/null || true
                 done
+                echo "[병합$i] 파이썬 병합 스크립트 실행"
                 python merge_discovery_states.py ../output
                 python append_progress_history.py ../output
                 git add ../output/discovery_state.json "../output/discovery_state_0.json" \
                   "../output/discovery_result_0.xlsx" ../output/progress_history.json ../output/archive/ 2>/dev/null || true
-                git diff --cached --quiet && break
+                git diff --cached --quiet && { echo "[병합$i] 변경사항 없음, 종료"; break; }
                 git commit -m "Auto: parallel discovery merge (branch0 + 반복 $ITER)"
-                if git push origin discovery-live; then break; fi
+                echo "[병합$i] push 시도"
+                if git push origin discovery-live; then echo "[병합$i] push 성공"; break; fi
                 sleep_time=$((RANDOM % 6 + 1))
                 echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/30)"
                 sleep "$sleep_time"
