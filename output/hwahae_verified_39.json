@@ -20866,5 +20866,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1196294541",
+    "translated_kr": "[정품][피지케어] 블랑 네이처 액네 클렌징 폼 기획 150ml(+50ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203288800",
+    "translated_kr": "[정품][악센다 마호로사 크림 미스트 100ml] 보습 / 수분 / 윤기 / 워터 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아쿠아 스쿠알란 미스트"
+    },
+    "brand": "에스네이처 (S.NATURE)",
+    "name": "아쿠아 스쿠알란 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
