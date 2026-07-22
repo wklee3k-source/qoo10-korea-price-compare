@@ -6478,5 +6478,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1059030924",
+    "translated_kr": "다비네스모어인사이드디스이즈어컬빌딩세럼(컬헤어용)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "모어 인사이드 디스 이즈 어 컬 빌딩 세럼 (유연 ..."
+    },
+    "brand": null,
+    "name": "모어 인사이드 디스 이즈 어 컬 빌딩 세럼 (유연 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1135055592",
+    "translated_kr": "발렌티노우오모본인로마오드투왈렛스프레이",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "발렌티노 우오모 본 인 로마 3.4 oz. 남성용 오 드 뚜왈렛 ...",
+      "hwahae": "본 인 로마 우오모 엑스트라도즈"
+    },
+    "brand": "발렌티노뷰티 (VALENTINOBEAUTY)",
+    "name": "본 인 로마 우오모 엑스트라도즈",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 184000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
