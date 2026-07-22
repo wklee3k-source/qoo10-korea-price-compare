@@ -372,5 +372,101 @@
         "link": "https://search.shopping.naver.com/catalog/60929136671"
       }
     ]
+  },
+  {
+    "goods_no": "1199735232",
+    "translated_kr": "메디큐브 PDRN 핑크 엑소좀샷 2000 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 2000",
+      "hwahae": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+      "naver": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 2000"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "33400",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5847635/58476358299.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F451191730&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8935907/89359075902.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/11814565315"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8935907/89359078108.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/11814567521"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056308/90563088142.jpg",
+        "mall": "뷰티 직구 스토어",
+        "link": "https://smartstore.naver.com/main/products/13018577050"
+      }
+    ]
+  },
+  {
+    "goods_no": "1208085514",
+    "translated_kr": "46CM (포켓몬에디션) 체취솔루션 데오드란트 바디워시 720ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "46cm Odor Solution Deodorant Body Wash 7",
+      "hwahae": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+      "naver": "다이소 46cm 체취솔루션 데오드란트 바디워시 스파클링 시트러스향 225 ml 1069429"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "포켓몬에디션 데오드란트 바디워시 [시트러스]",
+    "volume": "720ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "5000",
+    "mall": "다이소몰",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614353/56143530362.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069429&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5614369/56143692835.1.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1069430&infl_path=naver_ep"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5804048/58040480663.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9212233066&ctag=9212233066&lptag=I27220805613&itemId=27220805613&vendorItemId=94188006839&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5806663/58066636119.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9218720687&ctag=9218720687&lptag=I27239168452&itemId=27239168452&vendorItemId=94206246512&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6065011/60650115236.20260630100523.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/60650115236"
+      }
+    ]
   }
 ]
