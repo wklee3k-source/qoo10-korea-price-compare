@@ -94,5 +94,101 @@
         "link": "https://smartstore.naver.com/main/products/13658211738"
       }
     ]
+  },
+  {
+    "goods_no": "1094999881",
+    "translated_kr": "아누아 에어리 무기자차 선크림 SPF50+ PA++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아누아 에어리 무기자차 선크림",
+      "hwahae": "에어리 무기자차 선크림 [SPF50+/PA++++]",
+      "naver": "아누아 아누아 에어리 무기자차 선크림 50ml 저자극 눈시림없는선크림"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "에어리 무기자차 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "22080",
+    "mall": "옥션",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.auction.co.kr/gate/pcs?item-no=E872661839&sub-id=1&service-code=10000003",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6066035/60660355495.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6066035/60660355495.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=E872661839&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5262717/52627175562.1.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4294949523&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6066049/60660498252.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=E872662581&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5510298/55102986239.1.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=4294950677&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192958/51929584729.20241213221549.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929584729"
+      }
+    ]
+  },
+  {
+    "goods_no": "1209394749",
+    "translated_kr": "은율 비타밸런스 오운쏠샤인 토너패드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "은율 은율 비타밸런스 오운 쏠 샤인 토너패드 70매,",
+      "hwahae": "비타밸런스 오운 쏠 샤인 토너패드",
+      "naver": "은율 은율 비타밸런스 오운쏠샤인 라임 토너패드 70매 /수분 광채 케어/환생토너패드"
+    },
+    "brand": "은율 (eunyul)",
+    "name": "비타밸런스 오운 쏠 샤인 토너패드",
+    "volume": "190ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "11840",
+    "mall": "G마켓",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.gmarket.co.kr/gate/pcs?item-no=2633578381&sub-id=1003&service-code=10000003&lcd=100000005",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5891055/58910552164.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5891055/58910552164.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=2633578381&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5891080/58910804272.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=C792133701&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5933663/59336634531.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=6716473980&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4281025/42810255219.2.jpg",
+        "mall": "GSSHOP",
+        "link": "http://with.gsshop.com/alia/aliaGate.gs?media=OB&ecpid=1039815680&vodFlag=N&prdseqnum=1039815680&utm_source=price&utm_medium=affiliate&utm_campaign=naver"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4244745/42447459171.2.jpg",
+        "mall": "롯데ON",
+        "link": "https://www.lotteon.com/p/product/LO2176388716?sitmNo=LO2176388716_2176388717&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT"
+      }
+    ]
   }
 ]
