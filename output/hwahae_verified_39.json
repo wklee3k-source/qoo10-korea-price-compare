@@ -4181,5 +4181,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210345860",
+    "translated_kr": "하트브러시콤팩트헤어브러시",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "ReFa 리파 하트 헤어 브러시 콤펙트 빗 7컬러"
+    },
+    "brand": null,
+    "name": "ReFa 리파 하트 헤어 브러시 콤펙트 빗 7컬러",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1196942000",
+    "translated_kr": "더마톨로지퍼스트패키지[부스터130ml+세럼45ml]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "인셀덤 더마톨로지 퍼스트 패키지/부스터 +세럼",
+      "naver": "본사QR제품직송 인셀덤 더마톨로지 퍼스트 패키지 부스터 세럼 기초2종 세트"
+    },
+    "brand": "인셀덤",
+    "name": "본사QR제품직송 인셀덤 더마톨로지 퍼스트 패키지 부스터 세럼 기초2종 세트",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "119000",
+    "mall": "인셀덤보타랩100프로정품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11515040454",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8905955/89059550827.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905955/89059550827.jpg",
+        "mall": "인셀덤보타랩100프로정품",
+        "link": "https://smartstore.naver.com/main/products/11515040454"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
