@@ -15180,5 +15180,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199006543",
+    "translated_kr": "밸런스풀시카컨트롤세럼,50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런스풀 시카 컨트롤 세럼",
+      "naver": "토리든 밸런스풀 시카 컨트롤 세럼 50ml+(다이브인 히알루론산 세럼 10ml)_A00120"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "밸런스풀 시카 컨트롤 세럼",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "17250",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=131281135&shop_id=36666&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5937069/59370696051.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5937069/59370696051.1.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=131281135&shop_id=36666&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1176085366",
+    "translated_kr": "아쿠아수딩토너,200ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
