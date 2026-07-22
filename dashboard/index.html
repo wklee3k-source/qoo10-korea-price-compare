@@ -466,7 +466,11 @@ async function triggerStage(stageNum) {
     });
     if (res.status === 204) {
       btn.textContent = '✓ 시작됨';
-      setTimeout(() => refreshRunningStatus(), 3000);
+      // GitHub이 새 실행을 in_progress로 반영하는데 시간이 걸려서
+      // (몇 초~십몇 초) 여러 번 재확인한다
+      setTimeout(() => refreshRunningStatus(), 5000);
+      setTimeout(() => refreshRunningStatus(), 12000);
+      setTimeout(() => refreshRunningStatus(), 20000);
     } else {
       btn.textContent = '실패';
       console.error('트리거 실패', await res.text());
@@ -484,13 +488,18 @@ async function stopStage(stageNum) {
   btn.disabled = true;
   btn.textContent = '정지중…';
   try {
-    const res = await ghFetch('/runs?status=in_progress&per_page=20');
-    const data = await res.json();
+    const [res1, res2] = await Promise.all([
+      ghFetch('/runs?status=in_progress&per_page=20'),
+      ghFetch('/runs?status=queued&per_page=20'),
+    ]);
+    const data1 = await res1.json();
+    const data2 = await res2.json();
+    const allRuns = [...(data1.workflow_runs || []), ...(data2.workflow_runs || [])];
     let cancelled = 0;
-    for (const run of (data.workflow_runs || [])) {
+    for (const run of allRuns) {
       const jobsRes = await ghFetch(`/runs/${run.id}/jobs`);
       const jobsData = await jobsRes.json();
-      const matches = (jobsData.jobs || []).some(j => cfg.jobNames.includes(j.name) && j.status === 'in_progress');
+      const matches = (jobsData.jobs || []).some(j => cfg.jobNames.includes(j.name) && (j.status === 'in_progress' || j.status === 'queued'));
       if (matches) {
         await ghFetch(`/runs/${run.id}/cancel`, { method: 'POST' });
         cancelled++;
@@ -507,10 +516,15 @@ async function stopStage(stageNum) {
 
 async function refreshRunningStatus() {
   try {
-    const res = await ghFetch('/runs?status=in_progress&per_page=20');
-    const data = await res.json();
+    const [res1, res2] = await Promise.all([
+      ghFetch('/runs?status=in_progress&per_page=20'),
+      ghFetch('/runs?status=queued&per_page=20'),
+    ]);
+    const data1 = await res1.json();
+    const data2 = await res2.json();
+    const allRuns = [...(data1.workflow_runs || []), ...(data2.workflow_runs || [])];
     const runningJobNames = new Set();
-    for (const run of (data.workflow_runs || [])) {
+    for (const run of allRuns) {
       const jobsRes = await ghFetch(`/runs/${run.id}/jobs`);
       const jobsData = await jobsRes.json();
       for (const j of (jobsData.jobs || [])) {
