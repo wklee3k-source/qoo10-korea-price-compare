@@ -14602,5 +14602,57 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210694261",
+    "translated_kr": "[NEW]레티날펩타이드데일리마스크25매입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1176344647",
+    "translated_kr": "[1+1]갈락토포어워터풀클렌징오일,200ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "쌔뮤 갈락토 포어 워터 풀 클렌징 오일 200ml"
+    },
+    "brand": "쌔뮤",
+    "name": "쌔뮤 갈락토 포어 워터 풀 클렌징 오일 200ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21000",
+    "mall": "쌔뮤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11395937854",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8894044/88940448219.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8894044/88940448219.2.jpg",
+        "mall": "쌔뮤",
+        "link": "https://smartstore.naver.com/main/products/11395937854"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8894044/88940448220.1.jpg",
+        "mall": "쌔뮤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11395937855"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
