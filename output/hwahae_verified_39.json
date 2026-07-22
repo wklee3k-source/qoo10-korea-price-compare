@@ -18230,5 +18230,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1062953704",
+    "translated_kr": "폴리젠 플러스 샴푸 750ml x 2",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "폴리젠 씨크닝 샴푸 +폴리젠 씨크닝 스칼프 컨디셔닝 마스크",
+      "hwahae": "폴리젠 플러스 샴푸"
+    },
+    "brand": "닥터포헤어 (Dr.FORHAIR)",
+    "name": "폴리젠 플러스 샴푸",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 6000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1150322959",
+    "translated_kr": "Stem Cell 코코넛 밤 100ml + 앰플 에센스 150ml 2종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "건강쇼핑",
+      "hwahae": "리뉴얼 스템 셀 스텝2 에센스"
+    },
+    "brand": "약손명가 헬스케어 (Yakson Beauty Healthcare)",
+    "name": "리뉴얼 스템 셀 스텝2 에센스",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 74000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
