@@ -24048,5 +24048,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1044673087",
+    "translated_kr": "ミラクル カーミングバームクリーム 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레이저 마스크"
+    },
+    "brand": "미라클 (MIRACLE)",
+    "name": "레이저 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213260537",
+    "translated_kr": "한국 정규품 리뉴얼 MLE 보습 로션 120ml/200ml 민감성 피부 건성 피부 베이비 전신 피부 배리어 한국 직송",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "MLE 로션"
+    },
+    "brand": "아토팜 (ATOPALM)",
+    "name": "MLE 로션",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
