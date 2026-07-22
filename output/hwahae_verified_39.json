@@ -30360,5 +30360,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1093307398",
+    "translated_kr": "글루타치온 나이아신아마이드 바디 로션 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 나이아신아마이드 바디로션",
+      "naver": "[에이피엘비] APLB 글루타치온 나이아신아마이드 바디로션"
+    },
+    "brand": "APLB (에이피엘비)",
+    "name": "글루타치온 나이아신아마이드 바디로션",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=147021306&shop_id=44092&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5771285/57712850414.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5771285/57712850414.1.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=147021306&shop_id=44092&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1106584604",
+    "translated_kr": "[댕기머리] 허벌 헤어케어 샴푸 1000ml / 트리트먼트 1000ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로페셔널 헤어트리트먼트 실버&화이트 샴푸",
+      "naver": "헤어플러스 오프레시 딥 허벌 탈모완화 스트롱 지성두피 비듬샴푸 700ml+실크 트리트먼트 50mlx3"
+    },
+    "brand": "허벌히스패니아 (HERBALHISPANIA)",
+    "name": "프로페셔널 헤어트리트먼트 실버&화이트 샴푸",
+    "volume": "500ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25900",
+    "mall": "헤어플러스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/6273038279",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8381754/83817540768.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8381754/83817540768.11.jpg",
+        "mall": "헤어플러스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6273038279"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8381754/83817540767.12.jpg",
+        "mall": "헤어플러스본사",
+        "link": "https://smartstore.naver.com/main/products/6273038278"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
