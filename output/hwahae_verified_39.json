@@ -25763,5 +25763,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210085885",
+    "translated_kr": "プロバイオダーム3Dリフティングアイ＆リンクルクリーム, 25ml, 2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210078217",
+    "translated_kr": "PDRN 콜라겐 페이셜 샷 토너, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 콜라겐 페이셜샷 토너",
+      "naver": "몰바니 PDRN 콜라겐 페이셜샷 토너 300ml"
+    },
+    "brand": "몰바니 (molvany)",
+    "name": "PDRN 콜라겐 페이셜샷 토너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "몰바니",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://molvany.com/product/detail.html?product_no=370&cate_no=79&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6050481/60504816750.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6050481/60504816750.jpg",
+        "mall": "몰바니",
+        "link": "https://molvany.com/product/detail.html?product_no=370&cate_no=79&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118477/91184779024.jpg",
+        "mall": "몰바니",
+        "link": "https://smartstore.naver.com/main/products/13640268315"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5396076/53960760603.1.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=158980288&shop_id=50052&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6040409/60404095134.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=168385924&shop_id=50052&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
