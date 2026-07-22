@@ -175,8 +175,33 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         r = _hwahae_verify(refined, known_volume, known_brand)
         source = "hwahae"
 
-        if not r.get("corrected"):
-            print("    [3차-화해 실패] -> 4차(네이버) 시도")
+        if r.get("corrected"):
+            # 3차 성공(정상이든 단종이든): 화해로 "정확한 상품명/브랜드/단종여부"는
+            # 확인됐지만, 실제 구매는 화해가 아니라 네이버쇼핑에서 이뤄지므로
+            # (화해는 정보/리뷰 앱이지 판매처가 아님) 화해가 확인해준 정확한
+            # 이름으로 네이버를 검색해서 실제 구매정보(사진/링크/가격/판매처)를
+            # 가져온다. 단종 대체품을 찾는 게 아니라, 같은 상품을 파는 곳을
+            # 찾는 것이다 — 화해 검증 덕분에 이번엔 검색어가 훨씬 정확하다.
+            hwahae_name = r.get("corrected")
+            hwahae_brand_raw = r.get("brand") or ""
+            search_query = f"{hwahae_brand_raw} {hwahae_name}".strip()
+            print(f"    [4차-네이버] 화해가 확인해준 정식명으로 실구매정보 조회: {search_query!r}")
+            naver_r = _naver_strict_match(search_query, known_brand)
+            if naver_r:
+                # 화해의 이름/단종여부는 신뢰정보로 유지하고, 구매정보(가격/링크/
+                # 사진/판매처)만 네이버 것으로 덮어쓴다.
+                r["price"] = naver_r.get("price")
+                r["mall"] = naver_r.get("mall")
+                r["seller_trust"] = naver_r.get("seller_trust")
+                r["product_url"] = naver_r.get("product_url")
+                r["image_url"] = naver_r.get("image_url")
+                source = "hwahae+naver"
+            else:
+                print("    [4차-네이버] 실구매정보 못 찾음 — 화해 정보만 유지")
+        else:
+            # 3차 완전 실패: 화해로도 정체를 확인 못 했으니, 원래 검색어로
+            # 네이버에서 직접 찾아본다(기존 폴백 로직 그대로).
+            print("    [3차-화해 매칭실패] -> 4차(네이버) 직접 검색")
             naver_r = _naver_strict_match(refined, known_brand)
             if naver_r:
                 r = naver_r
