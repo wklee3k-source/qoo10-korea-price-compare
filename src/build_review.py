@@ -49,10 +49,14 @@ def extract_volume_ml(text: str) -> float | None:
 
 def extract_quantity(text: str) -> int:
     """제목/상품명에서 실제 수량(묶음개수)을 추출한다(한글 상품명에 개수를
-    명시적으로 표시하기 위함)."""
+    명시적으로 표시하기 위함).
+    주의: "N종세트"는 서로 다른 상품 N가지가 합쳐진 "1세트"를 뜻하므로
+    수량 N이 아니라 1로 처리한다(예: "2종세트 (2개)"는 실제로 1세트)."""
     if not text:
         return 1
     text_wo_choice = re.sub(r"\d+種(類)?から\d+つ選択", "", text)
+    if re.search(r"\d+종\s*(세트|SET|Set)", text_wo_choice):
+        return 1
     m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)
     if m:
         return int(m.group(1)) + int(m.group(2))
@@ -97,13 +101,16 @@ def build_pairs():
             translations[x["goods_no"]] = x.get("translated_kr", "")
 
     pairs = []
-    stats = {"no_link": 0, "sold_out": 0, "no_qoo10_match": 0, "ok": 0}
+    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
             continue
         if x.get("in_stock") is False:
             stats["sold_out"] += 1
+            continue
+        if x.get("obsolete"):
+            stats["obsolete"] += 1
             continue
         q = qoo10_by_goods.get(x["goods_no"])
         if not q:
@@ -144,7 +151,7 @@ def build_pairs():
             "obsolete": x.get("obsolete"),
         })
 
-    print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} "
+    print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
           f"큐텐매칭안됨={stats['no_qoo10_match']} 최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
@@ -154,6 +161,25 @@ def esc(s):
     if s is None:
         return ""
     return str(s).replace('"', "&quot;").replace("'", "&#39;")
+
+
+def dim_minor_text(text: str) -> str:
+    """번역문 안에서 프로모션/부가문구(해시태그, 대괄호 안 홍보문구, '증정'
+    '기획' '한정' 등)를 회색으로 옅게 표시하고, 핵심 상품정보는 그대로
+    둔다. 완전한 의미분석은 아니지만 실측 패턴 기반으로 상당수를 잡아낸다."""
+    if not text:
+        return text
+    escaped = esc(text)
+    # #해시태그
+    escaped = re.sub(r"(#\S+)", r'<span class="dim">\1</span>', escaped)
+    # 대괄호 안 내용 중 홍보성 키워드가 있으면 통째로 옅게
+    promo_kw = r"(신상품|신상|한정|증정|기획|선물|이벤트|사은품|프로모션|NEW|new)"
+    escaped = re.sub(
+        r"(\[[^\]]*" + promo_kw + r"[^\]]*\])",
+        r'<span class="dim">\1</span>',
+        escaped,
+    )
+    return escaped
 
 
 def build_html(pairs: list[dict]):
@@ -203,7 +229,8 @@ def build_html(pairs: list[dict]):
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    <div class="name-kr-readonly">참고 한글번역: {p['qoo10_name_kr']}</div>
+    {'<div class="qoo10-brand">큐텐 브랜드: ' + esc(p['qoo10_brand']) + '</div>' if p.get('qoo10_brand') else ''}
+    <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
     <div class="goods_no">goods_no: {goods_no}</div>
   </div>
