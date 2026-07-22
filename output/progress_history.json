@@ -1,3002 +1,2952 @@
 [
   {
-    "time_utc": "2026-07-22T04:32:21+00:00",
-    "shops": null,
-    "products": null,
+    "time_utc": "2026-07-21T09:08:49+00:00",
+    "shops": 132,
+    "products": 228,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T09:09:58+00:00",
+    "shops": 134,
+    "products": 231,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:43:47+00:00",
+    "shops": 136,
+    "products": 238,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:45:43+00:00",
+    "shops": 138,
+    "products": 240,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:47:23+00:00",
+    "shops": 140,
+    "products": 244,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:48:43+00:00",
+    "shops": 142,
+    "products": 246,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:50:35+00:00",
+    "shops": 144,
+    "products": 247,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:52:44+00:00",
+    "shops": 146,
+    "products": 249,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:54:19+00:00",
+    "shops": 148,
+    "products": 252,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:56:03+00:00",
+    "shops": 150,
+    "products": 252,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T10:58:09+00:00",
+    "shops": 152,
+    "products": 253,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:00:10+00:00",
+    "shops": 154,
+    "products": 257,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:01:58+00:00",
+    "shops": 156,
+    "products": 257,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:04:25+00:00",
+    "shops": 158,
+    "products": 263,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:06:40+00:00",
+    "shops": 160,
+    "products": 265,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:08:38+00:00",
+    "shops": 162,
+    "products": 270,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:09:46+00:00",
+    "shops": 164,
+    "products": 274,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:11:12+00:00",
+    "shops": 166,
+    "products": 276,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:13:19+00:00",
+    "shops": 168,
+    "products": 278,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:15:08+00:00",
+    "shops": 170,
+    "products": 283,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:16:59+00:00",
+    "shops": 172,
+    "products": 284,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:18:44+00:00",
+    "shops": 174,
+    "products": 292,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:19:34+00:00",
+    "shops": 176,
+    "products": 292,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:21:45+00:00",
+    "shops": 178,
+    "products": 295,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:23:28+00:00",
+    "shops": 180,
+    "products": 299,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:25:21+00:00",
+    "shops": 182,
+    "products": 303,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:26:31+00:00",
+    "shops": 184,
+    "products": 306,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:27:44+00:00",
+    "shops": 186,
+    "products": 311,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:29:22+00:00",
+    "shops": 188,
+    "products": 314,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:31:12+00:00",
+    "shops": 190,
+    "products": 317,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:32:22+00:00",
+    "shops": 192,
+    "products": 319,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:35:00+00:00",
+    "shops": 194,
+    "products": 325,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:36:49+00:00",
+    "shops": 196,
+    "products": 326,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:38:37+00:00",
+    "shops": 198,
+    "products": 331,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:40:35+00:00",
+    "shops": 200,
+    "products": 332,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:42:17+00:00",
+    "shops": 202,
+    "products": 335,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:44:29+00:00",
+    "shops": 204,
+    "products": 337,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:46:29+00:00",
+    "shops": 206,
+    "products": 343,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:49:04+00:00",
+    "shops": 208,
+    "products": 343,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:50:57+00:00",
+    "shops": 210,
+    "products": 346,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:52:49+00:00",
+    "shops": 212,
+    "products": 350,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:54:41+00:00",
+    "shops": 214,
+    "products": 354,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:56:06+00:00",
+    "shops": 216,
+    "products": 354,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:56:45+00:00",
+    "shops": 218,
+    "products": 354,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T11:59:10+00:00",
+    "shops": 220,
+    "products": 356,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:00:20+00:00",
+    "shops": 222,
+    "products": 356,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:01:42+00:00",
+    "shops": 224,
+    "products": 358,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:03:46+00:00",
+    "shops": 226,
+    "products": 361,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:05:56+00:00",
+    "shops": 228,
+    "products": 363,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:08:04+00:00",
+    "shops": 230,
+    "products": 367,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:08:46+00:00",
+    "shops": 232,
+    "products": 368,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:10:56+00:00",
+    "shops": 234,
+    "products": 372,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:12:37+00:00",
+    "shops": 236,
+    "products": 375,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:14:40+00:00",
+    "shops": 238,
+    "products": 377,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:15:57+00:00",
+    "shops": 240,
+    "products": 378,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:17:15+00:00",
+    "shops": 242,
+    "products": 380,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:19:41+00:00",
+    "shops": 244,
+    "products": 381,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:21:24+00:00",
+    "shops": 246,
+    "products": 385,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:22:14+00:00",
+    "shops": 248,
+    "products": 385,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:23:46+00:00",
+    "shops": 250,
+    "products": 386,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:25:31+00:00",
+    "shops": 252,
+    "products": 388,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:27:22+00:00",
+    "shops": 254,
+    "products": 388,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:29:16+00:00",
+    "shops": 256,
+    "products": 390,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:31:30+00:00",
+    "shops": 258,
+    "products": 391,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:33:34+00:00",
+    "shops": 260,
+    "products": 396,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:35:31+00:00",
+    "shops": 262,
+    "products": 396,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:36:42+00:00",
+    "shops": 264,
+    "products": 401,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:37:52+00:00",
+    "shops": 266,
+    "products": 404,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:39:09+00:00",
+    "shops": 268,
+    "products": 405,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:40:41+00:00",
+    "shops": 270,
+    "products": 405,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:42:22+00:00",
+    "shops": 272,
+    "products": 407,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:42:50+00:00",
+    "shops": 274,
+    "products": 407,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:44:46+00:00",
+    "shops": 276,
+    "products": 413,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:46:53+00:00",
+    "shops": 278,
+    "products": 413,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:48:28+00:00",
+    "shops": 280,
+    "products": 415,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:51:52+00:00",
+    "shops": 282,
+    "products": 417,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:53:48+00:00",
+    "shops": 284,
+    "products": 419,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:55:12+00:00",
+    "shops": 286,
+    "products": 421,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:56:39+00:00",
+    "shops": 288,
+    "products": 422,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:57:54+00:00",
+    "shops": 290,
+    "products": 426,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T12:58:21+00:00",
+    "shops": 292,
+    "products": 426,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:00:01+00:00",
+    "shops": 294,
+    "products": 430,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:01:56+00:00",
+    "shops": 296,
+    "products": 431,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:03:59+00:00",
+    "shops": 298,
+    "products": 436,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:05:55+00:00",
+    "shops": 300,
+    "products": 441,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:07:37+00:00",
+    "shops": 302,
+    "products": 441,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:09:45+00:00",
+    "shops": 304,
+    "products": 442,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:10:16+00:00",
+    "shops": 306,
+    "products": 442,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:12:56+00:00",
+    "shops": 308,
+    "products": 442,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:14:16+00:00",
+    "shops": 310,
+    "products": 446,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:15:54+00:00",
+    "shops": 312,
+    "products": 450,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:17:27+00:00",
+    "shops": 314,
+    "products": 453,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:18:36+00:00",
+    "shops": 316,
+    "products": 458,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:20:34+00:00",
+    "shops": 318,
+    "products": 464,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:21:34+00:00",
+    "shops": 320,
+    "products": 464,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:23:35+00:00",
+    "shops": 322,
+    "products": 466,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:25:20+00:00",
+    "shops": 324,
+    "products": 473,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:26:41+00:00",
+    "shops": 326,
+    "products": 475,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:28:00+00:00",
+    "shops": 328,
+    "products": 477,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:30:02+00:00",
+    "shops": 330,
+    "products": 480,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:30:38+00:00",
+    "shops": 332,
+    "products": 480,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:31:29+00:00",
+    "shops": 334,
+    "products": 481,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:34:56+00:00",
+    "shops": 336,
+    "products": 482,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:37:11+00:00",
+    "shops": 338,
+    "products": 486,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:38:40+00:00",
+    "shops": 340,
+    "products": 491,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:39:51+00:00",
+    "shops": 342,
+    "products": 491,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:40:46+00:00",
+    "shops": 344,
+    "products": 491,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:41:34+00:00",
+    "shops": 346,
+    "products": 491,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:42:20+00:00",
+    "shops": 348,
+    "products": 491,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:43:51+00:00",
+    "shops": 350,
+    "products": 494,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:46:07+00:00",
+    "shops": 352,
+    "products": 496,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:47:26+00:00",
+    "shops": 354,
+    "products": 497,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:49:31+00:00",
+    "shops": 356,
+    "products": 200,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:50:06+00:00",
+    "shops": 358,
+    "products": 201,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:52:43+00:00",
+    "shops": 360,
+    "products": 202,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:53:52+00:00",
+    "shops": 362,
+    "products": 205,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:55:06+00:00",
+    "shops": 364,
+    "products": 208,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:56:50+00:00",
+    "shops": 366,
+    "products": 211,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T13:59:08+00:00",
+    "shops": 368,
+    "products": 212,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:01:09+00:00",
+    "shops": 370,
+    "products": 217,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:03:02+00:00",
+    "shops": 372,
+    "products": 221,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:04:57+00:00",
+    "shops": 374,
+    "products": 223,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:07:18+00:00",
+    "shops": 376,
+    "products": 225,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:09:53+00:00",
+    "shops": 378,
+    "products": 225,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:10:39+00:00",
+    "shops": 380,
+    "products": 226,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:12:34+00:00",
+    "shops": 382,
+    "products": 228,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:15:20+00:00",
+    "shops": 384,
+    "products": 231,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:17:04+00:00",
+    "shops": 386,
+    "products": 231,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:19:25+00:00",
+    "shops": 388,
+    "products": 233,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:20:26+00:00",
+    "shops": 390,
+    "products": 233,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:23:11+00:00",
+    "shops": 392,
+    "products": 234,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:25:07+00:00",
+    "shops": 394,
+    "products": 237,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:27:18+00:00",
+    "shops": 396,
+    "products": 238,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:29:07+00:00",
+    "shops": 398,
+    "products": 238,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:30:56+00:00",
+    "shops": 400,
+    "products": 242,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:32:21+00:00",
+    "shops": 402,
+    "products": 242,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:34:26+00:00",
+    "shops": 404,
+    "products": 243,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:35:47+00:00",
+    "shops": 406,
+    "products": 248,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:38:39+00:00",
+    "shops": 408,
+    "products": 250,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:40:40+00:00",
+    "shops": 410,
+    "products": 256,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:44:04+00:00",
+    "shops": 412,
+    "products": 258,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:46:05+00:00",
+    "shops": 414,
+    "products": 259,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:50:52+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T14:52:14+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 5
+  },
+  {
+    "time_utc": "2026-07-21T14:52:45+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 10
+  },
+  {
+    "time_utc": "2026-07-21T14:53:24+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 15
+  },
+  {
+    "time_utc": "2026-07-21T14:54:01+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 20
+  },
+  {
+    "time_utc": "2026-07-21T14:54:37+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 25
+  },
+  {
+    "time_utc": "2026-07-21T14:55:19+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 30
+  },
+  {
+    "time_utc": "2026-07-21T14:55:55+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 35
+  },
+  {
+    "time_utc": "2026-07-21T14:56:38+00:00",
+    "shops": 416,
+    "products": 260,
     "hwahae_done": 40
   },
   {
-    "time_utc": "2026-07-22T04:32:42+00:00",
-    "shops": null,
-    "products": null,
+    "time_utc": "2026-07-21T14:56:58+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:00:50+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:04:19+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:11:20+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:14:52+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:18:41+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:25:56+00:00",
+    "shops": 416,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:47:38+00:00",
+    "shops": 418,
+    "products": 260,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:49:41+00:00",
+    "shops": 420,
+    "products": 261,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:51:57+00:00",
+    "shops": 422,
+    "products": 261,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:53:52+00:00",
+    "shops": 424,
+    "products": 265,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:56:46+00:00",
+    "shops": 426,
+    "products": 265,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T15:59:00+00:00",
+    "shops": 428,
+    "products": 265,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:00:29+00:00",
+    "shops": 430,
+    "products": 265,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:02:44+00:00",
+    "shops": 432,
+    "products": 272,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:03:53+00:00",
+    "shops": 434,
+    "products": 272,
+    "hwahae_done": null
+  },
+  {
+    "time_utc": "2026-07-21T16:05:31+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": null
+  },
+  {
+    "time_utc": "2026-07-21T16:06:59+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 5
+  },
+  {
+    "time_utc": "2026-07-21T16:07:28+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 10
+  },
+  {
+    "time_utc": "2026-07-21T16:08:05+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 15
+  },
+  {
+    "time_utc": "2026-07-21T16:08:44+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 20
+  },
+  {
+    "time_utc": "2026-07-21T16:09:19+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 25
+  },
+  {
+    "time_utc": "2026-07-21T16:09:59+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 30
+  },
+  {
+    "time_utc": "2026-07-21T16:10:34+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 35
+  },
+  {
+    "time_utc": "2026-07-21T16:11:13+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 40
+  },
+  {
+    "time_utc": "2026-07-21T16:11:34+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:19:48+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 5
+  },
+  {
+    "time_utc": "2026-07-21T16:20:32+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 10
+  },
+  {
+    "time_utc": "2026-07-21T16:21:11+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 15
+  },
+  {
+    "time_utc": "2026-07-21T16:21:49+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 20
+  },
+  {
+    "time_utc": "2026-07-21T16:22:23+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 25
+  },
+  {
+    "time_utc": "2026-07-21T16:22:58+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 30
+  },
+  {
+    "time_utc": "2026-07-21T16:23:40+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 35
+  },
+  {
+    "time_utc": "2026-07-21T16:24:15+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 40
+  },
+  {
+    "time_utc": "2026-07-21T16:24:37+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:26:33+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 5
+  },
+  {
+    "time_utc": "2026-07-21T16:27:17+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 10
+  },
+  {
+    "time_utc": "2026-07-21T16:28:00+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 15
+  },
+  {
+    "time_utc": "2026-07-21T16:28:39+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 20
+  },
+  {
+    "time_utc": "2026-07-21T16:29:15+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 25
+  },
+  {
+    "time_utc": "2026-07-21T16:29:56+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 30
+  },
+  {
+    "time_utc": "2026-07-21T16:30:34+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 35
+  },
+  {
+    "time_utc": "2026-07-21T16:31:09+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 40
+  },
+  {
+    "time_utc": "2026-07-21T16:31:31+00:00",
+    "shops": 436,
+    "products": 273,
+    "hwahae_done": 43
+  },
+  {
+    "time_utc": "2026-07-21T16:45:06+00:00",
+    "shops": 438,
+    "products": 274,
     "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T04:32:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 43
+    "time_utc": "2026-07-21T16:47:01+00:00",
+    "shops": 440,
+    "products": 278,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T04:58:24+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 43
+    "time_utc": "2026-07-21T16:48:31+00:00",
+    "shops": 442,
+    "products": 281,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:03:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 43
+    "time_utc": "2026-07-21T16:49:40+00:00",
+    "shops": 444,
+    "products": 285,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:43:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 45
+    "time_utc": "2026-07-21T16:51:38+00:00",
+    "shops": 446,
+    "products": 287,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:43:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 47
+    "time_utc": "2026-07-21T16:52:28+00:00",
+    "shops": 448,
+    "products": 287,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:43:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 49
+    "time_utc": "2026-07-21T16:53:47+00:00",
+    "shops": 450,
+    "products": 288,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:44:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 51
+    "time_utc": "2026-07-21T16:55:21+00:00",
+    "shops": 452,
+    "products": 288,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:44:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 53
+    "time_utc": "2026-07-21T18:04:38+00:00",
+    "shops": 331,
+    "products": 288,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:45:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 55
+    "time_utc": "2026-07-21T18:06:31+00:00",
+    "shops": 333,
+    "products": 288,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:45:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 57
+    "time_utc": "2026-07-21T18:07:56+00:00",
+    "shops": 335,
+    "products": 290,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:45:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 59
+    "time_utc": "2026-07-21T18:11:12+00:00",
+    "shops": 337,
+    "products": 296,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:45:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 61
+    "time_utc": "2026-07-21T18:13:45+00:00",
+    "shops": 339,
+    "products": 300,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:46:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 63
+    "time_utc": "2026-07-21T18:14:45+00:00",
+    "shops": 341,
+    "products": 301,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:46:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 65
+    "time_utc": "2026-07-21T18:16:44+00:00",
+    "shops": 343,
+    "products": 302,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:46:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 67
+    "time_utc": "2026-07-21T18:19:00+00:00",
+    "shops": 345,
+    "products": 303,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:47:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 69
+    "time_utc": "2026-07-21T18:21:00+00:00",
+    "shops": 347,
+    "products": 304,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:47:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 71
+    "time_utc": "2026-07-21T18:21:56+00:00",
+    "shops": 349,
+    "products": 307,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:47:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 73
+    "time_utc": "2026-07-21T18:23:53+00:00",
+    "shops": 351,
+    "products": 313,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:48:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 75
+    "time_utc": "2026-07-21T18:26:07+00:00",
+    "shops": 353,
+    "products": 319,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:48:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 77
+    "time_utc": "2026-07-21T18:27:48+00:00",
+    "shops": 355,
+    "products": 326,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:48:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 79
+    "time_utc": "2026-07-21T18:29:39+00:00",
+    "shops": 357,
+    "products": 332,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:48:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 81
+    "time_utc": "2026-07-21T18:31:34+00:00",
+    "shops": 359,
+    "products": 336,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:49:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 83
+    "time_utc": "2026-07-21T18:33:27+00:00",
+    "shops": 361,
+    "products": 338,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:49:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 85
+    "time_utc": "2026-07-21T18:35:18+00:00",
+    "shops": 363,
+    "products": 343,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:49:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 87
+    "time_utc": "2026-07-21T18:37:14+00:00",
+    "shops": 365,
+    "products": 347,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:50:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 89
+    "time_utc": "2026-07-21T18:39:08+00:00",
+    "shops": 367,
+    "products": 353,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:50:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 91
+    "time_utc": "2026-07-21T18:40:43+00:00",
+    "shops": 369,
+    "products": 355,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:50:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 93
+    "time_utc": "2026-07-21T18:42:36+00:00",
+    "shops": 371,
+    "products": 359,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:51:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 95
+    "time_utc": "2026-07-21T18:44:27+00:00",
+    "shops": 373,
+    "products": 369,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:51:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 97
+    "time_utc": "2026-07-21T18:46:19+00:00",
+    "shops": 375,
+    "products": 375,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:51:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 99
+    "time_utc": "2026-07-21T18:48:00+00:00",
+    "shops": 377,
+    "products": 377,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:53:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 101
+    "time_utc": "2026-07-21T18:49:51+00:00",
+    "shops": 379,
+    "products": 387,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:53:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 103
+    "time_utc": "2026-07-21T18:51:14+00:00",
+    "shops": 381,
+    "products": 389,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:54:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 105
+    "time_utc": "2026-07-21T18:52:30+00:00",
+    "shops": 383,
+    "products": 391,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:54:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 107
+    "time_utc": "2026-07-21T18:54:27+00:00",
+    "shops": 385,
+    "products": 392,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:54:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 109
+    "time_utc": "2026-07-21T18:55:35+00:00",
+    "shops": 387,
+    "products": 395,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:55:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 111
+    "time_utc": "2026-07-21T18:57:39+00:00",
+    "shops": 389,
+    "products": 400,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:55:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 113
+    "time_utc": "2026-07-21T18:59:00+00:00",
+    "shops": 391,
+    "products": 402,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:55:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 115
+    "time_utc": "2026-07-21T19:01:39+00:00",
+    "shops": 393,
+    "products": 404,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:56:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 117
+    "time_utc": "2026-07-21T19:03:34+00:00",
+    "shops": 395,
+    "products": 407,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:56:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 119
+    "time_utc": "2026-07-21T19:05:16+00:00",
+    "shops": 397,
+    "products": 412,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:56:48+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 121
+    "time_utc": "2026-07-21T19:07:10+00:00",
+    "shops": 399,
+    "products": 419,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:57:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 123
+    "time_utc": "2026-07-21T19:09:15+00:00",
+    "shops": 401,
+    "products": 424,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:57:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 125
+    "time_utc": "2026-07-21T19:10:46+00:00",
+    "shops": 403,
+    "products": 426,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:57:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 127
+    "time_utc": "2026-07-21T19:12:45+00:00",
+    "shops": 405,
+    "products": 430,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:58:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 129
+    "time_utc": "2026-07-21T19:14:11+00:00",
+    "shops": 407,
+    "products": 433,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:58:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 131
+    "time_utc": "2026-07-21T19:16:14+00:00",
+    "shops": 409,
+    "products": 437,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:58:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 133
+    "time_utc": "2026-07-21T19:17:25+00:00",
+    "shops": 411,
+    "products": 437,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:58:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 135
+    "time_utc": "2026-07-21T19:19:27+00:00",
+    "shops": 413,
+    "products": 440,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:59:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 137
+    "time_utc": "2026-07-21T19:21:18+00:00",
+    "shops": 415,
+    "products": 441,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:59:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 139
+    "time_utc": "2026-07-21T19:23:08+00:00",
+    "shops": 417,
+    "products": 442,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T05:59:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 141
+    "time_utc": "2026-07-21T19:25:03+00:00",
+    "shops": 419,
+    "products": 448,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:00:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 143
+    "time_utc": "2026-07-21T19:26:51+00:00",
+    "shops": 421,
+    "products": 452,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:00:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 145
+    "time_utc": "2026-07-21T19:29:12+00:00",
+    "shops": 423,
+    "products": 455,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:00:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 147
+    "time_utc": "2026-07-21T19:31:48+00:00",
+    "shops": 425,
+    "products": 455,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:01:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 149
+    "time_utc": "2026-07-21T19:34:02+00:00",
+    "shops": 427,
+    "products": 458,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:01:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 151
+    "time_utc": "2026-07-21T19:35:57+00:00",
+    "shops": 429,
+    "products": 462,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:01:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 153
+    "time_utc": "2026-07-21T19:37:53+00:00",
+    "shops": 431,
+    "products": 464,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:02:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 155
+    "time_utc": "2026-07-21T19:38:59+00:00",
+    "shops": 433,
+    "products": 466,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:02:22+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 157
+    "time_utc": "2026-07-21T19:40:49+00:00",
+    "shops": 435,
+    "products": 470,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:02:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 159
+    "time_utc": "2026-07-21T19:42:35+00:00",
+    "shops": 437,
+    "products": 473,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:02:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 161
+    "time_utc": "2026-07-21T19:44:50+00:00",
+    "shops": 439,
+    "products": 476,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:03:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 163
+    "time_utc": "2026-07-21T19:46:01+00:00",
+    "shops": 441,
+    "products": 476,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:03:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 165
+    "time_utc": "2026-07-21T19:49:20+00:00",
+    "shops": 443,
+    "products": 479,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:03:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 167
+    "time_utc": "2026-07-21T19:50:55+00:00",
+    "shops": 445,
+    "products": 480,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:04:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 169
+    "time_utc": "2026-07-21T19:53:00+00:00",
+    "shops": 447,
+    "products": 485,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:04:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 171
+    "time_utc": "2026-07-21T19:53:39+00:00",
+    "shops": 449,
+    "products": 485,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:04:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 173
+    "time_utc": "2026-07-21T19:55:36+00:00",
+    "shops": 451,
+    "products": 490,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:05:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 175
+    "time_utc": "2026-07-21T19:57:36+00:00",
+    "shops": 453,
+    "products": 494,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:05:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 177
+    "time_utc": "2026-07-21T19:58:49+00:00",
+    "shops": 455,
+    "products": 498,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:05:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 179
+    "time_utc": "2026-07-21T20:00:56+00:00",
+    "shops": 457,
+    "products": 500,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:06:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 181
+    "time_utc": "2026-07-21T20:02:05+00:00",
+    "shops": 459,
+    "products": 200,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:06:17+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 183
+    "time_utc": "2026-07-21T20:04:15+00:00",
+    "shops": 461,
+    "products": 205,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:06:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 185
+    "time_utc": "2026-07-21T20:05:09+00:00",
+    "shops": 463,
+    "products": 208,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:06:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 187
+    "time_utc": "2026-07-21T20:07:02+00:00",
+    "shops": 465,
+    "products": 209,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:07:20+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 189
+    "time_utc": "2026-07-21T20:08:43+00:00",
+    "shops": 467,
+    "products": 212,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:07:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 191
+    "time_utc": "2026-07-21T20:10:23+00:00",
+    "shops": 469,
+    "products": 214,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:07:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 193
+    "time_utc": "2026-07-21T20:11:03+00:00",
+    "shops": 471,
+    "products": 214,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:10:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 195
+    "time_utc": "2026-07-21T20:12:47+00:00",
+    "shops": 473,
+    "products": 216,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:11:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 197
+    "time_utc": "2026-07-21T20:14:32+00:00",
+    "shops": 475,
+    "products": 218,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:11:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 199
+    "time_utc": "2026-07-21T20:16:12+00:00",
+    "shops": 477,
+    "products": 221,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:11:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 201
+    "time_utc": "2026-07-21T20:17:38+00:00",
+    "shops": 479,
+    "products": 222,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:12:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 203
+    "time_utc": "2026-07-21T20:19:43+00:00",
+    "shops": 481,
+    "products": 224,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:12:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 205
+    "time_utc": "2026-07-21T20:21:38+00:00",
+    "shops": 483,
+    "products": 230,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:12:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 207
+    "time_utc": "2026-07-21T20:23:35+00:00",
+    "shops": 485,
+    "products": 234,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:13:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 209
+    "time_utc": "2026-07-21T20:24:44+00:00",
+    "shops": 487,
+    "products": 238,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:13:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 211
+    "time_utc": "2026-07-21T20:26:20+00:00",
+    "shops": 489,
+    "products": 241,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:14:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 213
+    "time_utc": "2026-07-21T20:28:51+00:00",
+    "shops": 491,
+    "products": 241,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:14:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 215
+    "time_utc": "2026-07-21T20:32:02+00:00",
+    "shops": 493,
+    "products": 246,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:14:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 217
+    "time_utc": "2026-07-21T20:34:14+00:00",
+    "shops": 495,
+    "products": 253,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:15:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 219
+    "time_utc": "2026-07-21T20:35:40+00:00",
+    "shops": 497,
+    "products": 255,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:15:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 221
+    "time_utc": "2026-07-21T20:38:19+00:00",
+    "shops": 499,
+    "products": 259,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:15:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 223
+    "time_utc": "2026-07-21T20:40:02+00:00",
+    "shops": 501,
+    "products": 263,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:16:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 225
+    "time_utc": "2026-07-21T20:42:32+00:00",
+    "shops": 503,
+    "products": 266,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:16:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 227
+    "time_utc": "2026-07-21T20:44:35+00:00",
+    "shops": 505,
+    "products": 269,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:16:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 229
+    "time_utc": "2026-07-21T20:46:11+00:00",
+    "shops": 507,
+    "products": 272,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:17:08+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 231
+    "time_utc": "2026-07-21T20:47:56+00:00",
+    "shops": 509,
+    "products": 274,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:17:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 233
+    "time_utc": "2026-07-21T20:50:15+00:00",
+    "shops": 511,
+    "products": 277,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:17:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 235
+    "time_utc": "2026-07-21T20:52:29+00:00",
+    "shops": 513,
+    "products": 280,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:17:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 237
+    "time_utc": "2026-07-21T20:54:18+00:00",
+    "shops": 515,
+    "products": 287,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:18:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 239
+    "time_utc": "2026-07-21T20:56:14+00:00",
+    "shops": 517,
+    "products": 288,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:18:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 241
+    "time_utc": "2026-07-21T20:57:59+00:00",
+    "shops": 519,
+    "products": 294,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:18:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 243
+    "time_utc": "2026-07-21T20:59:50+00:00",
+    "shops": 521,
+    "products": 296,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:19:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 245
+    "time_utc": "2026-07-21T21:02:15+00:00",
+    "shops": 523,
+    "products": 298,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:20:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 247
+    "time_utc": "2026-07-21T21:03:17+00:00",
+    "shops": 525,
+    "products": 298,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:20:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 249
+    "time_utc": "2026-07-21T21:05:11+00:00",
+    "shops": 527,
+    "products": 304,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:20:48+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 251
+    "time_utc": "2026-07-21T21:06:57+00:00",
+    "shops": 529,
+    "products": 310,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:21:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 253
+    "time_utc": "2026-07-21T21:09:35+00:00",
+    "shops": 531,
+    "products": 311,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:21:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 255
+    "time_utc": "2026-07-21T21:11:17+00:00",
+    "shops": 533,
+    "products": 311,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:21:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 257
+    "time_utc": "2026-07-21T21:13:00+00:00",
+    "shops": 535,
+    "products": 311,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:22:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 259
+    "time_utc": "2026-07-21T21:15:09+00:00",
+    "shops": 537,
+    "products": 316,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:22:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 261
+    "time_utc": "2026-07-21T21:16:18+00:00",
+    "shops": 539,
+    "products": 316,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:22:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 263
+    "time_utc": "2026-07-21T21:17:23+00:00",
+    "shops": 541,
+    "products": 318,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:22:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 265
+    "time_utc": "2026-07-21T21:19:13+00:00",
+    "shops": 543,
+    "products": 324,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:23:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 267
+    "time_utc": "2026-07-21T21:21:17+00:00",
+    "shops": 545,
+    "products": 325,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:23:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 269
+    "time_utc": "2026-07-21T21:23:28+00:00",
+    "shops": 547,
+    "products": 326,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:23:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 271
+    "time_utc": "2026-07-21T21:26:14+00:00",
+    "shops": 549,
+    "products": 331,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:24:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 273
+    "time_utc": "2026-07-21T21:27:39+00:00",
+    "shops": 551,
+    "products": 333,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:24:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 275
+    "time_utc": "2026-07-21T21:28:55+00:00",
+    "shops": 553,
+    "products": 336,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:24:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 277
+    "time_utc": "2026-07-21T21:31:32+00:00",
+    "shops": 555,
+    "products": 339,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:25:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 279
+    "time_utc": "2026-07-21T21:35:37+00:00",
+    "shops": 557,
+    "products": 343,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:25:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 281
+    "time_utc": "2026-07-21T21:37:15+00:00",
+    "shops": 559,
+    "products": 347,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:25:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 283
+    "time_utc": "2026-07-21T21:40:19+00:00",
+    "shops": 561,
+    "products": 353,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:26:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 285
+    "time_utc": "2026-07-21T21:42:18+00:00",
+    "shops": 563,
+    "products": 357,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:26:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 287
+    "time_utc": "2026-07-21T21:44:04+00:00",
+    "shops": 565,
+    "products": 359,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:26:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 289
+    "time_utc": "2026-07-21T21:45:59+00:00",
+    "shops": 567,
+    "products": 367,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:26:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 291
+    "time_utc": "2026-07-21T21:47:19+00:00",
+    "shops": 569,
+    "products": 368,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:27:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 293
+    "time_utc": "2026-07-21T21:48:55+00:00",
+    "shops": 571,
+    "products": 370,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:28:08+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 295
+    "time_utc": "2026-07-21T21:50:59+00:00",
+    "shops": 573,
+    "products": 370,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:28:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 297
+    "time_utc": "2026-07-21T21:56:11+00:00",
+    "shops": 575,
+    "products": 370,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:28:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 299
+    "time_utc": "2026-07-21T21:58:29+00:00",
+    "shops": 577,
+    "products": 371,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:29:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 301
+    "time_utc": "2026-07-21T21:59:55+00:00",
+    "shops": 579,
+    "products": 373,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:29:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 303
+    "time_utc": "2026-07-21T22:01:09+00:00",
+    "shops": 581,
+    "products": 375,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:29:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 305
+    "time_utc": "2026-07-21T22:04:09+00:00",
+    "shops": 583,
+    "products": 375,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:30:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 307
+    "time_utc": "2026-07-21T22:06:25+00:00",
+    "shops": 585,
+    "products": 379,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:30:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 309
+    "time_utc": "2026-07-21T22:08:17+00:00",
+    "shops": 587,
+    "products": 381,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:30:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 311
+    "time_utc": "2026-07-21T22:10:30+00:00",
+    "shops": 589,
+    "products": 385,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:31:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 313
+    "time_utc": "2026-07-21T22:12:28+00:00",
+    "shops": 591,
+    "products": 386,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:31:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 315
+    "time_utc": "2026-07-21T22:13:55+00:00",
+    "shops": 593,
+    "products": 389,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:31:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 317
+    "time_utc": "2026-07-21T22:15:45+00:00",
+    "shops": 595,
+    "products": 394,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:31:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 319
+    "time_utc": "2026-07-21T22:16:37+00:00",
+    "shops": 597,
+    "products": 394,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:32:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 321
+    "time_utc": "2026-07-21T22:17:48+00:00",
+    "shops": 599,
+    "products": 395,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:32:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 323
+    "time_utc": "2026-07-21T22:19:17+00:00",
+    "shops": 601,
+    "products": 397,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:32:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 325
+    "time_utc": "2026-07-21T22:20:39+00:00",
+    "shops": 603,
+    "products": 398,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:33:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 327
+    "time_utc": "2026-07-21T22:22:24+00:00",
+    "shops": 605,
+    "products": 403,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:33:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 329
+    "time_utc": "2026-07-21T22:23:42+00:00",
+    "shops": 607,
+    "products": 404,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:33:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 331
+    "time_utc": "2026-07-21T22:25:36+00:00",
+    "shops": 609,
+    "products": 409,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:34:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 333
+    "time_utc": "2026-07-21T22:27:16+00:00",
+    "shops": 611,
+    "products": 410,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:34:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 335
+    "time_utc": "2026-07-21T22:28:29+00:00",
+    "shops": 613,
+    "products": 410,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:34:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 337
+    "time_utc": "2026-07-21T22:29:40+00:00",
+    "shops": 615,
+    "products": 410,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:35:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 339
+    "time_utc": "2026-07-21T22:31:33+00:00",
+    "shops": 617,
+    "products": 415,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:35:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 341
+    "time_utc": "2026-07-21T22:33:20+00:00",
+    "shops": 619,
+    "products": 418,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:35:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 343
+    "time_utc": "2026-07-21T22:35:20+00:00",
+    "shops": 621,
+    "products": 419,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:36:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 345
+    "time_utc": "2026-07-21T22:37:13+00:00",
+    "shops": 623,
+    "products": 427,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:36:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 347
+    "time_utc": "2026-07-21T22:39:20+00:00",
+    "shops": 625,
+    "products": 430,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:36:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 349
+    "time_utc": "2026-07-21T22:41:16+00:00",
+    "shops": 627,
+    "products": 433,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:36:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 351
+    "time_utc": "2026-07-21T22:42:35+00:00",
+    "shops": 629,
+    "products": 435,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:37:17+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 353
+    "time_utc": "2026-07-21T22:44:19+00:00",
+    "shops": 631,
+    "products": 439,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:37:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 355
+    "time_utc": "2026-07-21T22:45:16+00:00",
+    "shops": 633,
+    "products": 439,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:37:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 357
+    "time_utc": "2026-07-21T22:45:43+00:00",
+    "shops": 635,
+    "products": 439,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:38:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 359
+    "time_utc": "2026-07-21T22:47:13+00:00",
+    "shops": 637,
+    "products": 439,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:38:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 361
+    "time_utc": "2026-07-21T22:49:17+00:00",
+    "shops": 639,
+    "products": 439,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:38:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 363
+    "time_utc": "2026-07-21T22:52:09+00:00",
+    "shops": 641,
+    "products": 440,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:39:35+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 365
+    "time_utc": "2026-07-21T22:53:45+00:00",
+    "shops": 643,
+    "products": 440,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:40:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 367
+    "time_utc": "2026-07-21T22:56:06+00:00",
+    "shops": 645,
+    "products": 441,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:40:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 369
+    "time_utc": "2026-07-21T22:57:38+00:00",
+    "shops": 647,
+    "products": 444,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:41:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 371
+    "time_utc": "2026-07-21T22:59:36+00:00",
+    "shops": 649,
+    "products": 445,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:41:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 373
+    "time_utc": "2026-07-21T23:13:21+00:00",
+    "shops": 651,
+    "products": 447,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:41:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 375
+    "time_utc": "2026-07-21T23:14:30+00:00",
+    "shops": 653,
+    "products": 447,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:42:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 377
+    "time_utc": "2026-07-21T23:17:14+00:00",
+    "shops": 655,
+    "products": 453,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:42:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 379
+    "time_utc": "2026-07-21T23:18:48+00:00",
+    "shops": 657,
+    "products": 458,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:42:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 381
+    "time_utc": "2026-07-21T23:20:50+00:00",
+    "shops": 659,
+    "products": 461,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:43:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 383
+    "time_utc": "2026-07-21T23:23:21+00:00",
+    "shops": 661,
+    "products": 467,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:43:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 385
+    "time_utc": "2026-07-21T23:25:25+00:00",
+    "shops": 663,
+    "products": 467,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:44:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 387
+    "time_utc": "2026-07-21T23:27:58+00:00",
+    "shops": 665,
+    "products": 473,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:44:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 389
+    "time_utc": "2026-07-21T23:29:34+00:00",
+    "shops": 667,
+    "products": 475,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:44:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 391
+    "time_utc": "2026-07-21T23:32:07+00:00",
+    "shops": 669,
+    "products": 480,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:45:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 393
+    "time_utc": "2026-07-21T23:34:13+00:00",
+    "shops": 671,
+    "products": 481,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:46:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 395
+    "time_utc": "2026-07-21T23:36:31+00:00",
+    "shops": 673,
+    "products": 487,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:46:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 397
+    "time_utc": "2026-07-21T23:38:40+00:00",
+    "shops": 675,
+    "products": 490,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:46:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 399
+    "time_utc": "2026-07-21T23:40:29+00:00",
+    "shops": 677,
+    "products": 497,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:47:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 401
+    "time_utc": "2026-07-21T23:42:27+00:00",
+    "shops": 679,
+    "products": 200,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:48:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 403
+    "time_utc": "2026-07-21T23:45:00+00:00",
+    "shops": 681,
+    "products": 205,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:48:22+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 405
+    "time_utc": "2026-07-21T23:47:08+00:00",
+    "shops": 683,
+    "products": 206,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:48:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 407
+    "time_utc": "2026-07-21T23:48:36+00:00",
+    "shops": 685,
+    "products": 206,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:48:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 409
+    "time_utc": "2026-07-21T23:52:20+00:00",
+    "shops": 687,
+    "products": 210,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:49:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 411
+    "time_utc": "2026-07-21T23:58:10+00:00",
+    "shops": 689,
+    "products": 213,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:49:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 413
+    "time_utc": "2026-07-22T00:00:45+00:00",
+    "shops": 691,
+    "products": 214,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:49:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 415
+    "time_utc": "2026-07-22T00:04:42+00:00",
+    "shops": 693,
+    "products": 216,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:50:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 417
+    "time_utc": "2026-07-22T00:06:58+00:00",
+    "shops": 695,
+    "products": 216,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:50:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 419
+    "time_utc": "2026-07-22T00:07:56+00:00",
+    "shops": 697,
+    "products": 216,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:50:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 421
+    "time_utc": "2026-07-22T00:12:09+00:00",
+    "shops": 699,
+    "products": 220,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:51:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 423
+    "time_utc": "2026-07-22T00:14:26+00:00",
+    "shops": 701,
+    "products": 221,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:51:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 425
+    "time_utc": "2026-07-22T00:15:47+00:00",
+    "shops": 703,
+    "products": 222,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:51:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 427
+    "time_utc": "2026-07-22T00:17:10+00:00",
+    "shops": 705,
+    "products": 222,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:52:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 429
+    "time_utc": "2026-07-22T00:19:40+00:00",
+    "shops": 707,
+    "products": 229,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:52:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 431
+    "time_utc": "2026-07-22T00:21:42+00:00",
+    "shops": 709,
+    "products": 229,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:52:45+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 433
+    "time_utc": "2026-07-22T00:23:33+00:00",
+    "shops": 711,
+    "products": 232,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:53:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 435
+    "time_utc": "2026-07-22T00:24:50+00:00",
+    "shops": 713,
+    "products": 236,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:53:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 437
+    "time_utc": "2026-07-22T00:26:20+00:00",
+    "shops": 715,
+    "products": 240,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:53:45+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 439
+    "time_utc": "2026-07-22T00:28:13+00:00",
+    "shops": 717,
+    "products": 241,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:54:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 441
+    "time_utc": "2026-07-22T00:30:20+00:00",
+    "shops": 719,
+    "products": 242,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:54:20+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 443
+    "time_utc": "2026-07-22T00:31:20+00:00",
+    "shops": 721,
+    "products": 244,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:54:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 445
+    "time_utc": "2026-07-22T00:34:33+00:00",
+    "shops": 723,
+    "products": 250,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:55:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 447
+    "time_utc": "2026-07-22T00:36:19+00:00",
+    "shops": 725,
+    "products": 252,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:55:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 449
+    "time_utc": "2026-07-22T00:38:22+00:00",
+    "shops": 727,
+    "products": 255,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:55:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 451
+    "time_utc": "2026-07-22T00:39:30+00:00",
+    "shops": 729,
+    "products": 255,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:55:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 453
+    "time_utc": "2026-07-22T00:42:03+00:00",
+    "shops": 731,
+    "products": 258,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:56:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 455
+    "time_utc": "2026-07-22T00:44:24+00:00",
+    "shops": 733,
+    "products": 264,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:56:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 457
+    "time_utc": "2026-07-22T00:46:30+00:00",
+    "shops": 735,
+    "products": 267,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:56:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 459
+    "time_utc": "2026-07-22T00:47:58+00:00",
+    "shops": 737,
+    "products": 268,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:57:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 461
+    "time_utc": "2026-07-22T00:50:33+00:00",
+    "shops": 739,
+    "products": 269,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:57:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 463
+    "time_utc": "2026-07-22T00:52:51+00:00",
+    "shops": 741,
+    "products": 271,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:58:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 465
+    "time_utc": "2026-07-22T00:54:39+00:00",
+    "shops": 743,
+    "products": 272,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:58:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 467
+    "time_utc": "2026-07-22T00:57:29+00:00",
+    "shops": 745,
+    "products": 273,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:58:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 469
+    "time_utc": "2026-07-22T00:59:49+00:00",
+    "shops": 747,
+    "products": 278,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:58:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 471
+    "time_utc": "2026-07-22T01:01:13+00:00",
+    "shops": 749,
+    "products": 281,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:59:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 473
+    "time_utc": "2026-07-22T01:04:07+00:00",
+    "shops": 751,
+    "products": 286,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:59:22+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 475
+    "time_utc": "2026-07-22T01:05:29+00:00",
+    "shops": 753,
+    "products": 286,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:59:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 477
+    "time_utc": "2026-07-22T01:08:52+00:00",
+    "shops": 755,
+    "products": 291,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T06:59:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 479
+    "time_utc": "2026-07-22T01:11:54+00:00",
+    "shops": 757,
+    "products": 292,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:00:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 481
+    "time_utc": "2026-07-22T01:13:50+00:00",
+    "shops": 759,
+    "products": 295,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:00:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 483
+    "time_utc": "2026-07-22T01:14:48+00:00",
+    "shops": 761,
+    "products": 296,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:00:48+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 485
+    "time_utc": "2026-07-22T01:16:08+00:00",
+    "shops": 763,
+    "products": 296,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:01:06+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 487
+    "time_utc": "2026-07-22T01:18:37+00:00",
+    "shops": 765,
+    "products": 304,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:01:22+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 489
+    "time_utc": "2026-07-22T01:20:03+00:00",
+    "shops": 767,
+    "products": 309,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:01:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 491
+    "time_utc": "2026-07-22T01:23:09+00:00",
+    "shops": 769,
+    "products": 310,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:01:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 493
+    "time_utc": "2026-07-22T01:25:17+00:00",
+    "shops": 771,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:02:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 495
+    "time_utc": "2026-07-22T01:27:02+00:00",
+    "shops": 773,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:02:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 497
+    "time_utc": "2026-07-22T01:28:37+00:00",
+    "shops": 775,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:02:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 499
+    "time_utc": "2026-07-22T01:29:50+00:00",
+    "shops": 777,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:03:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 501
+    "time_utc": "2026-07-22T01:31:13+00:00",
+    "shops": 779,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:03:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 503
+    "time_utc": "2026-07-22T01:33:37+00:00",
+    "shops": 781,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:03:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 505
+    "time_utc": "2026-07-22T01:34:48+00:00",
+    "shops": 783,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:04:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 507
+    "time_utc": "2026-07-22T01:37:14+00:00",
+    "shops": 785,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:04:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 509
+    "time_utc": "2026-07-22T01:39:29+00:00",
+    "shops": 787,
+    "products": 314,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:05:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 511
+    "time_utc": "2026-07-22T01:41:00+00:00",
+    "shops": 789,
+    "products": 317,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:05:35+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 513
+    "time_utc": "2026-07-22T01:44:09+00:00",
+    "shops": 791,
+    "products": 318,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:06:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 515
+    "time_utc": "2026-07-22T01:46:28+00:00",
+    "shops": 793,
+    "products": 324,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:06:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 517
+    "time_utc": "2026-07-22T01:48:54+00:00",
+    "shops": 795,
+    "products": 324,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:06:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 519
+    "time_utc": "2026-07-22T01:51:06+00:00",
+    "shops": 797,
+    "products": 326,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:07:08+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 521
+    "time_utc": "2026-07-22T01:51:52+00:00",
+    "shops": 799,
+    "products": 326,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:07:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 523
+    "time_utc": "2026-07-22T01:54:11+00:00",
+    "shops": 801,
+    "products": 329,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:07:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 525
+    "time_utc": "2026-07-22T01:54:57+00:00",
+    "shops": 803,
+    "products": 329,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:08:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 527
+    "time_utc": "2026-07-22T01:57:24+00:00",
+    "shops": 805,
+    "products": 333,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:08:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 529
+    "time_utc": "2026-07-22T01:59:30+00:00",
+    "shops": 807,
+    "products": 335,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:08:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 531
+    "time_utc": "2026-07-22T02:01:50+00:00",
+    "shops": 809,
+    "products": 339,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:08:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 533
+    "time_utc": "2026-07-22T02:05:55+00:00",
+    "shops": 811,
+    "products": 342,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:09:08+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 535
+    "time_utc": "2026-07-22T02:09:18+00:00",
+    "shops": 813,
+    "products": 345,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:09:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 537
+    "time_utc": "2026-07-22T02:11:35+00:00",
+    "shops": 815,
+    "products": 345,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:09:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 539
+    "time_utc": "2026-07-22T02:13:56+00:00",
+    "shops": 817,
+    "products": 345,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:10:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 541
+    "time_utc": "2026-07-22T02:16:23+00:00",
+    "shops": 819,
+    "products": 347,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:10:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 543
+    "time_utc": "2026-07-22T02:18:44+00:00",
+    "shops": 821,
+    "products": 349,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:10:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 545
+    "time_utc": "2026-07-22T02:23:18+00:00",
+    "shops": 823,
+    "products": 351,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:10:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 547
+    "time_utc": "2026-07-22T02:26:35+00:00",
+    "shops": 825,
+    "products": 353,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:11:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 549
+    "time_utc": "2026-07-22T02:28:59+00:00",
+    "shops": 827,
+    "products": 355,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:11:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 551
+    "time_utc": "2026-07-22T02:30:31+00:00",
+    "shops": 829,
+    "products": 355,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:11:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 553
+    "time_utc": "2026-07-22T02:31:51+00:00",
+    "shops": 831,
+    "products": 359,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:12:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 555
+    "time_utc": "2026-07-22T02:33:37+00:00",
+    "shops": 833,
+    "products": 361,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:12:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 557
+    "time_utc": "2026-07-22T02:34:31+00:00",
+    "shops": 835,
+    "products": 361,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:12:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 559
+    "time_utc": "2026-07-22T02:35:06+00:00",
+    "shops": 837,
+    "products": 361,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:13:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 561
+    "time_utc": "2026-07-22T02:37:33+00:00",
+    "shops": 839,
+    "products": 361,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:13:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 563
+    "time_utc": "2026-07-22T02:40:58+00:00",
+    "shops": 841,
+    "products": 362,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:14:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 565
+    "time_utc": "2026-07-22T02:43:52+00:00",
+    "shops": 843,
+    "products": 364,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:14:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 567
+    "time_utc": "2026-07-22T02:44:33+00:00",
+    "shops": 845,
+    "products": 364,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:14:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 569
+    "time_utc": "2026-07-22T02:47:05+00:00",
+    "shops": 847,
+    "products": 364,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:15:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 571
+    "time_utc": "2026-07-22T02:49:42+00:00",
+    "shops": 849,
+    "products": 365,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:15:20+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 573
+    "time_utc": "2026-07-22T02:51:05+00:00",
+    "shops": 851,
+    "products": 366,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:15:35+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 575
+    "time_utc": "2026-07-22T02:54:51+00:00",
+    "shops": 853,
+    "products": 367,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:16:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 577
+    "time_utc": "2026-07-22T02:57:37+00:00",
+    "shops": 855,
+    "products": 369,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:16:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 579
+    "time_utc": "2026-07-22T03:00:08+00:00",
+    "shops": 857,
+    "products": 373,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:16:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 581
+    "time_utc": "2026-07-22T03:02:08+00:00",
+    "shops": 859,
+    "products": 375,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:17:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 583
+    "time_utc": "2026-07-22T03:05:00+00:00",
+    "shops": 861,
+    "products": 375,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:17:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 585
+    "time_utc": "2026-07-22T03:07:26+00:00",
+    "shops": 863,
+    "products": 377,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:17:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 587
+    "time_utc": "2026-07-22T03:08:08+00:00",
+    "shops": 865,
+    "products": 377,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:17:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 589
+    "time_utc": "2026-07-22T03:09:45+00:00",
+    "shops": 867,
+    "products": 378,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:18:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 591
+    "time_utc": "2026-07-22T03:12:24+00:00",
+    "shops": 869,
+    "products": 382,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:18:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 593
+    "time_utc": "2026-07-22T03:16:37+00:00",
+    "shops": 871,
+    "products": 384,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:18:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 595
+    "time_utc": "2026-07-22T03:18:40+00:00",
+    "shops": 873,
+    "products": 384,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:19:05+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 597
+    "time_utc": "2026-07-22T03:20:09+00:00",
+    "shops": 875,
+    "products": 387,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:19:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 599
+    "time_utc": "2026-07-22T03:22:12+00:00",
+    "shops": 877,
+    "products": 390,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:19:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 601
+    "time_utc": "2026-07-22T03:24:39+00:00",
+    "shops": 879,
+    "products": 392,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:20:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 603
+    "time_utc": "2026-07-22T03:26:43+00:00",
+    "shops": 881,
+    "products": 396,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:20:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 605
+    "time_utc": "2026-07-22T03:28:35+00:00",
+    "shops": 883,
+    "products": 399,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:20:45+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 607
+    "time_utc": "2026-07-22T03:30:37+00:00",
+    "shops": 885,
+    "products": 401,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:21:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 609
+    "time_utc": "2026-07-22T03:33:43+00:00",
+    "shops": 887,
+    "products": 403,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:21:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 611
+    "time_utc": "2026-07-22T03:35:18+00:00",
+    "shops": 889,
+    "products": 406,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:21:30+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 613
+    "time_utc": "2026-07-22T03:36:07+00:00",
+    "shops": 891,
+    "products": 407,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:21:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 615
+    "time_utc": "2026-07-22T03:38:10+00:00",
+    "shops": 893,
+    "products": 410,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:22:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 617
+    "time_utc": "2026-07-22T03:39:10+00:00",
+    "shops": 895,
+    "products": 410,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:22:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 619
+    "time_utc": "2026-07-22T03:41:41+00:00",
+    "shops": 897,
+    "products": 413,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:22:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 621
+    "time_utc": "2026-07-22T08:21:33+00:00",
+    "shops": 897,
+    "products": 413,
+    "translated": 889,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:22:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 623
+    "time_utc": "2026-07-22T08:32:11+00:00",
+    "shops": 897,
+    "products": 413,
+    "translated": 899,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:23:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 625
+    "time_utc": "2026-07-22T08:32:41+00:00",
+    "shops": 897,
+    "products": 413,
+    "translated": 903,
+    "hwahae_done": 42
   },
   {
-    "time_utc": "2026-07-22T07:23:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 627
-  },
-  {
-    "time_utc": "2026-07-22T07:24:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 629
-  },
-  {
-    "time_utc": "2026-07-22T07:24:49+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 631
-  },
-  {
-    "time_utc": "2026-07-22T07:25:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 633
-  },
-  {
-    "time_utc": "2026-07-22T07:25:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 635
-  },
-  {
-    "time_utc": "2026-07-22T07:25:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 637
-  },
-  {
-    "time_utc": "2026-07-22T07:26:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 639
-  },
-  {
-    "time_utc": "2026-07-22T07:26:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 641
-  },
-  {
-    "time_utc": "2026-07-22T07:26:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 643
-  },
-  {
-    "time_utc": "2026-07-22T07:27:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 645
-  },
-  {
-    "time_utc": "2026-07-22T07:27:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 647
-  },
-  {
-    "time_utc": "2026-07-22T07:28:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 649
-  },
-  {
-    "time_utc": "2026-07-22T07:28:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 651
-  },
-  {
-    "time_utc": "2026-07-22T07:28:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 653
-  },
-  {
-    "time_utc": "2026-07-22T07:29:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 655
-  },
-  {
-    "time_utc": "2026-07-22T07:29:31+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 657
-  },
-  {
-    "time_utc": "2026-07-22T07:30:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 659
-  },
-  {
-    "time_utc": "2026-07-22T07:30:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 661
-  },
-  {
-    "time_utc": "2026-07-22T07:30:56+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 663
-  },
-  {
-    "time_utc": "2026-07-22T07:31:23+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 665
-  },
-  {
-    "time_utc": "2026-07-22T07:31:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 667
-  },
-  {
-    "time_utc": "2026-07-22T07:32:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 669
-  },
-  {
-    "time_utc": "2026-07-22T07:32:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 671
-  },
-  {
-    "time_utc": "2026-07-22T07:32:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 673
-  },
-  {
-    "time_utc": "2026-07-22T07:32:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 675
-  },
-  {
-    "time_utc": "2026-07-22T07:33:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 677
-  },
-  {
-    "time_utc": "2026-07-22T07:33:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 679
-  },
-  {
-    "time_utc": "2026-07-22T07:33:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 681
-  },
-  {
-    "time_utc": "2026-07-22T07:34:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 683
-  },
-  {
-    "time_utc": "2026-07-22T07:34:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 685
-  },
-  {
-    "time_utc": "2026-07-22T07:34:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 687
-  },
-  {
-    "time_utc": "2026-07-22T07:34:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 689
-  },
-  {
-    "time_utc": "2026-07-22T07:35:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 691
-  },
-  {
-    "time_utc": "2026-07-22T07:35:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 693
-  },
-  {
-    "time_utc": "2026-07-22T07:45:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 110
-  },
-  {
-    "time_utc": "2026-07-22T07:45:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 112
-  },
-  {
-    "time_utc": "2026-07-22T07:46:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 114
-  },
-  {
-    "time_utc": "2026-07-22T07:46:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 116
-  },
-  {
-    "time_utc": "2026-07-22T07:46:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 118
-  },
-  {
-    "time_utc": "2026-07-22T07:47:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 120
-  },
-  {
-    "time_utc": "2026-07-22T07:47:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 122
-  },
-  {
-    "time_utc": "2026-07-22T07:47:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 124
-  },
-  {
-    "time_utc": "2026-07-22T07:48:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 126
-  },
-  {
-    "time_utc": "2026-07-22T07:48:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 128
-  },
-  {
-    "time_utc": "2026-07-22T07:48:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 130
-  },
-  {
-    "time_utc": "2026-07-22T07:49:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 132
-  },
-  {
-    "time_utc": "2026-07-22T07:49:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 134
-  },
-  {
-    "time_utc": "2026-07-22T07:49:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 136
-  },
-  {
-    "time_utc": "2026-07-22T07:49:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 138
-  },
-  {
-    "time_utc": "2026-07-22T07:50:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 140
-  },
-  {
-    "time_utc": "2026-07-22T07:50:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 142
-  },
-  {
-    "time_utc": "2026-07-22T07:50:45+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 144
-  },
-  {
-    "time_utc": "2026-07-22T07:51:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 146
-  },
-  {
-    "time_utc": "2026-07-22T07:51:17+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 148
-  },
-  {
-    "time_utc": "2026-07-22T07:51:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 150
-  },
-  {
-    "time_utc": "2026-07-22T07:51:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 152
-  },
-  {
-    "time_utc": "2026-07-22T07:52:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 154
-  },
-  {
-    "time_utc": "2026-07-22T07:52:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 156
-  },
-  {
-    "time_utc": "2026-07-22T07:52:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 158
-  },
-  {
-    "time_utc": "2026-07-22T07:53:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 160
-  },
-  {
-    "time_utc": "2026-07-22T07:53:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 162
-  },
-  {
-    "time_utc": "2026-07-22T07:53:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 164
-  },
-  {
-    "time_utc": "2026-07-22T07:54:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 166
-  },
-  {
-    "time_utc": "2026-07-22T07:54:22+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 168
-  },
-  {
-    "time_utc": "2026-07-22T07:54:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 170
-  },
-  {
-    "time_utc": "2026-07-22T07:55:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 172
-  },
-  {
-    "time_utc": "2026-07-22T07:55:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 174
-  },
-  {
-    "time_utc": "2026-07-22T07:55:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 176
-  },
-  {
-    "time_utc": "2026-07-22T07:56:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 178
-  },
-  {
-    "time_utc": "2026-07-22T07:56:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 180
-  },
-  {
-    "time_utc": "2026-07-22T07:56:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 182
-  },
-  {
-    "time_utc": "2026-07-22T07:56:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 184
-  },
-  {
-    "time_utc": "2026-07-22T07:57:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 186
-  },
-  {
-    "time_utc": "2026-07-22T07:58:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 188
-  },
-  {
-    "time_utc": "2026-07-22T07:58:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 190
-  },
-  {
-    "time_utc": "2026-07-22T07:58:40+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 192
-  },
-  {
-    "time_utc": "2026-07-22T07:58:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 194
-  },
-  {
-    "time_utc": "2026-07-22T07:59:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 196
-  },
-  {
-    "time_utc": "2026-07-22T07:59:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 198
-  },
-  {
-    "time_utc": "2026-07-22T07:59:51+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 200
-  },
-  {
-    "time_utc": "2026-07-22T08:00:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 202
-  },
-  {
-    "time_utc": "2026-07-22T08:00:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 204
-  },
-  {
-    "time_utc": "2026-07-22T08:00:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 206
-  },
-  {
-    "time_utc": "2026-07-22T08:01:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 208
-  },
-  {
-    "time_utc": "2026-07-22T08:01:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 210
-  },
-  {
-    "time_utc": "2026-07-22T08:01:47+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 212
-  },
-  {
-    "time_utc": "2026-07-22T08:02:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 214
-  },
-  {
-    "time_utc": "2026-07-22T08:02:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 216
-  },
-  {
-    "time_utc": "2026-07-22T08:02:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 218
-  },
-  {
-    "time_utc": "2026-07-22T08:02:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 220
-  },
-  {
-    "time_utc": "2026-07-22T08:03:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 222
-  },
-  {
-    "time_utc": "2026-07-22T08:03:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 224
-  },
-  {
-    "time_utc": "2026-07-22T08:03:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 226
-  },
-  {
-    "time_utc": "2026-07-22T08:04:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 228
-  },
-  {
-    "time_utc": "2026-07-22T08:04:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 230
-  },
-  {
-    "time_utc": "2026-07-22T08:04:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 232
-  },
-  {
-    "time_utc": "2026-07-22T08:05:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 234
-  },
-  {
-    "time_utc": "2026-07-22T08:05:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 236
-  },
-  {
-    "time_utc": "2026-07-22T08:05:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 238
-  },
-  {
-    "time_utc": "2026-07-22T08:05:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 240
-  },
-  {
-    "time_utc": "2026-07-22T08:06:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 242
-  },
-  {
-    "time_utc": "2026-07-22T08:06:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 244
-  },
-  {
-    "time_utc": "2026-07-22T08:06:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 246
-  },
-  {
-    "time_utc": "2026-07-22T08:07:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 248
-  },
-  {
-    "time_utc": "2026-07-22T08:07:27+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 250
-  },
-  {
-    "time_utc": "2026-07-22T08:07:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 252
-  },
-  {
-    "time_utc": "2026-07-22T08:08:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 254
-  },
-  {
-    "time_utc": "2026-07-22T08:08:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 256
-  },
-  {
-    "time_utc": "2026-07-22T08:08:35+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 258
-  },
-  {
-    "time_utc": "2026-07-22T08:08:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 260
-  },
-  {
-    "time_utc": "2026-07-22T08:09:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 262
-  },
-  {
-    "time_utc": "2026-07-22T08:09:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 264
-  },
-  {
-    "time_utc": "2026-07-22T08:09:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 266
-  },
-  {
-    "time_utc": "2026-07-22T08:10:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 268
-  },
-  {
-    "time_utc": "2026-07-22T08:10:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 270
-  },
-  {
-    "time_utc": "2026-07-22T08:10:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 272
-  },
-  {
-    "time_utc": "2026-07-22T08:10:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 274
-  },
-  {
-    "time_utc": "2026-07-22T08:11:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 276
-  },
-  {
-    "time_utc": "2026-07-22T08:12:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 278
-  },
-  {
-    "time_utc": "2026-07-22T08:12:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 280
-  },
-  {
-    "time_utc": "2026-07-22T08:12:39+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 282
-  },
-  {
-    "time_utc": "2026-07-22T08:12:57+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 284
-  },
-  {
-    "time_utc": "2026-07-22T08:13:14+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 286
-  },
-  {
-    "time_utc": "2026-07-22T08:13:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 288
-  },
-  {
-    "time_utc": "2026-07-22T08:14:00+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 290
-  },
-  {
-    "time_utc": "2026-07-22T08:14:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 292
-  },
-  {
-    "time_utc": "2026-07-22T08:14:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 294
-  },
-  {
-    "time_utc": "2026-07-22T08:14:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 296
-  },
-  {
-    "time_utc": "2026-07-22T08:15:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 298
-  },
-  {
-    "time_utc": "2026-07-22T08:15:24+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 300
-  },
-  {
-    "time_utc": "2026-07-22T08:15:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 302
-  },
-  {
-    "time_utc": "2026-07-22T08:15:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 304
-  },
-  {
-    "time_utc": "2026-07-22T08:16:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 306
-  },
-  {
-    "time_utc": "2026-07-22T08:16:38+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 308
-  },
-  {
-    "time_utc": "2026-07-22T08:17:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 310
-  },
-  {
-    "time_utc": "2026-07-22T08:17:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 312
-  },
-  {
-    "time_utc": "2026-07-22T08:17:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 314
-  },
-  {
-    "time_utc": "2026-07-22T08:17:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 316
-  },
-  {
-    "time_utc": "2026-07-22T08:18:12+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 318
-  },
-  {
-    "time_utc": "2026-07-22T08:18:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 320
-  },
-  {
-    "time_utc": "2026-07-22T08:18:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 322
-  },
-  {
-    "time_utc": "2026-07-22T08:19:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 324
-  },
-  {
-    "time_utc": "2026-07-22T08:19:20+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 326
-  },
-  {
-    "time_utc": "2026-07-22T08:19:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 328
-  },
-  {
-    "time_utc": "2026-07-22T08:19:55+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 330
-  },
-  {
-    "time_utc": "2026-07-22T08:20:13+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 332
-  },
-  {
-    "time_utc": "2026-07-22T08:20:29+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 334
-  },
-  {
-    "time_utc": "2026-07-22T08:20:46+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 336
-  },
-  {
-    "time_utc": "2026-07-22T08:21:04+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 338
-  },
-  {
-    "time_utc": "2026-07-22T08:21:24+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 340
-  },
-  {
-    "time_utc": "2026-07-22T08:21:42+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 342
-  },
-  {
-    "time_utc": "2026-07-22T08:21:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 344
-  },
-  {
-    "time_utc": "2026-07-22T08:22:17+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 346
-  },
-  {
-    "time_utc": "2026-07-22T08:22:34+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 348
-  },
-  {
-    "time_utc": "2026-07-22T08:22:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 350
-  },
-  {
-    "time_utc": "2026-07-22T08:23:08+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 352
-  },
-  {
-    "time_utc": "2026-07-22T08:23:25+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 354
-  },
-  {
-    "time_utc": "2026-07-22T08:23:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 356
-  },
-  {
-    "time_utc": "2026-07-22T08:23:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 358
-  },
-  {
-    "time_utc": "2026-07-22T08:24:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 360
-  },
-  {
-    "time_utc": "2026-07-22T08:24:32+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 362
-  },
-  {
-    "time_utc": "2026-07-22T08:24:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 364
-  },
-  {
-    "time_utc": "2026-07-22T08:25:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 366
-  },
-  {
-    "time_utc": "2026-07-22T08:25:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 368
-  },
-  {
-    "time_utc": "2026-07-22T08:25:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 370
-  },
-  {
-    "time_utc": "2026-07-22T08:26:02+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 372
-  },
-  {
-    "time_utc": "2026-07-22T08:26:21+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 374
-  },
-  {
-    "time_utc": "2026-07-22T08:26:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 376
-  },
-  {
-    "time_utc": "2026-07-22T08:27:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 378
-  },
-  {
-    "time_utc": "2026-07-22T08:27:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 380
-  },
-  {
-    "time_utc": "2026-07-22T08:27:35+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 382
-  },
-  {
-    "time_utc": "2026-07-22T08:27:52+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 384
-  },
-  {
-    "time_utc": "2026-07-22T08:28:09+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 386
-  },
-  {
-    "time_utc": "2026-07-22T08:28:28+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 388
-  },
-  {
-    "time_utc": "2026-07-22T08:28:44+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 390
-  },
-  {
-    "time_utc": "2026-07-22T08:29:01+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 392
-  },
-  {
-    "time_utc": "2026-07-22T08:29:19+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 394
-  },
-  {
-    "time_utc": "2026-07-22T08:29:36+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 396
-  },
-  {
-    "time_utc": "2026-07-22T08:29:53+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 398
-  },
-  {
-    "time_utc": "2026-07-22T08:30:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 400
-  },
-  {
-    "time_utc": "2026-07-22T08:30:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 402
-  },
-  {
-    "time_utc": "2026-07-22T08:30:45+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 404
-  },
-  {
-    "time_utc": "2026-07-22T08:31:03+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 406
-  },
-  {
-    "time_utc": "2026-07-22T08:31:20+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 408
-  },
-  {
-    "time_utc": "2026-07-22T08:31:37+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 410
-  },
-  {
-    "time_utc": "2026-07-22T08:32:18+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 412
-  },
-  {
-    "time_utc": "2026-07-22T08:32:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 414
-  },
-  {
-    "time_utc": "2026-07-22T08:33:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 416
-  },
-  {
-    "time_utc": "2026-07-22T08:33:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 418
-  },
-  {
-    "time_utc": "2026-07-22T08:33:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 420
-  },
-  {
-    "time_utc": "2026-07-22T08:34:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 422
-  },
-  {
-    "time_utc": "2026-07-22T08:34:24+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 424
-  },
-  {
-    "time_utc": "2026-07-22T08:34:41+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 426
-  },
-  {
-    "time_utc": "2026-07-22T08:34:58+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 428
-  },
-  {
-    "time_utc": "2026-07-22T08:35:15+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 430
-  },
-  {
-    "time_utc": "2026-07-22T08:35:59+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 432
-  },
-  {
-    "time_utc": "2026-07-22T08:36:16+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 434
-  },
-  {
-    "time_utc": "2026-07-22T08:36:33+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 436
-  },
-  {
-    "time_utc": "2026-07-22T08:36:50+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 438
-  },
-  {
-    "time_utc": "2026-07-22T08:37:07+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 440
-  },
-  {
-    "time_utc": "2026-07-22T08:37:26+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 442
-  },
-  {
-    "time_utc": "2026-07-22T08:37:43+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 444
-  },
-  {
-    "time_utc": "2026-07-22T08:38:11+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 446
-  },
-  {
-    "time_utc": "2026-07-22T08:38:54+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 448
+    "time_utc": "2026-07-22T08:35:11+00:00",
+    "shops": 897,
+    "products": 413,
+    "translated": 908,
+    "hwahae_done": 42
   }
 ]
