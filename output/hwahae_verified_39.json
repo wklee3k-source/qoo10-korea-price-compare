@@ -6289,5 +6289,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1175263787",
+    "translated_kr": "토리든 밸런스풀 시카오일컨트롤 선스틱 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토리든 밸런스풀 포맨 시카 오일 컨트롤 선스틱 ...",
+      "hwahae": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202412626",
+    "translated_kr": "벤튼 퍼펙트프레시 맨즈 남성용세정제 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "벤튼 퍼펙트 프레쉬 남성청결제 항문세정제 m존케어",
+      "hwahae": "퍼펙트 프레쉬 남성청결제"
+    },
+    "brand": "벤튼 (BENTON)",
+    "name": "퍼펙트 프레쉬 남성청결제",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
