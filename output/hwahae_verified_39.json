@@ -11002,5 +11002,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1213026130",
+    "translated_kr": "NILE헤어오일안씻어내는트리트먼트미들데미지스무딩모이스처(애플블룸향)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "NILE ヘアオイル 洗い流さないトリートメント ミドルダメージ ..."
+    },
+    "brand": null,
+    "name": "NILE ヘアオイル 洗い流さないトリートメント ミドルダメージ ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1185398185",
+    "translated_kr": "무인양품약용클리어케어화장수(리필용)270mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "무인양품 약용 클리어 케어 화장수 리필용",
+      "hwahae": "클리어케어 화장수"
+    },
+    "brand": "무인양품 (MUJI)",
+    "name": "클리어케어 화장수",
+    "volume": "200g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 17900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
