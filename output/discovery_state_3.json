@@ -1,7 +1,10 @@
 {
   "visited_shops": [
-    "lilyhouse_jp",
-    "cosmeticmall"
+    "lilicoco",
+    "jp-mong",
+    "cosmeticmall",
+    "HDSelectShop",
+    "lilyhouse_jp"
   ],
   "all_products": [
     {
@@ -63,14 +66,136 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1180595613",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/476/076/8199076476.g_300-w-st_g.jpg",
+      "title": "PDRN 100ヒアルロン酸 ブースター トナー 250ml + PDRNヒアルロン酸100モイスチャライジングクリーム 60ml + PDRN ヒアルロン酸カプセル 100セラム 30ml",
+      "brand": "アヌア",
+      "price_jpy": 11931,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180595613",
+      "shop_id": "HDSelectShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1174748969",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/958/412/7586412958.g_300-w-st_g.jpg",
+      "title": "[NEW] [新商品] ドクダミポアディープクレンジングフォーム 150ml (2個)",
+      "brand": "アヌア",
+      "price_jpy": 4431,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1174748969",
+      "shop_id": "HDSelectShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1171434085",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/923/597/7502597923.g_300-w-st_g.jpg",
+      "title": "PDRNヒアルロン酸100モイスチャライジングクリーム 60ml (2個) + PDRN ヒアルロン酸カプセル 100セラム 30ml",
+      "brand": "アヌア",
+      "price_jpy": 12801,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1171434085",
+      "shop_id": "HDSelectShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1151371296",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/371/224/7023224371.g_300-w-st_g.jpg",
+      "title": "アトバリア365 ハイドロエッセンス 200ml (2個)",
+      "brand": "AESTURA",
+      "price_jpy": 8763,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1151371296",
+      "shop_id": "HDSelectShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1127146298",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/085/212/6504212085.g_300-w-st_g.jpg",
+      "title": "5番 マスクパック (10枚) / 白玉グルタチオンＣふりかけマスク",
+      "brand": "ナンバーズイン",
+      "price_jpy": 4695,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1127146298",
+      "shop_id": "HDSelectShop",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1154643575",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/534/641/8341641534.g_300-w-st_g.jpg",
+      "title": "UVシールド トーンアップサン SPF50+ PA++++ 50ml(+贈呈25ml), 1個 / 韓国 人気 シミ しみ たるみ エイジングケア トーンアップ 日焼け止め クリーム",
+      "brand": "アイオペ",
+      "price_jpy": 5744,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1154643575",
+      "shop_id": "jp-mong",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1205457208",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/035/642/8341642035.g_300-w-st_g.jpg",
+      "title": "大豆エッセンス 50ml(+ツボクサエッセンス 20ml), 1個 / 韓国 人気 保湿 鎮静 ニキビ 角質 皮脂 美容液 無香料 ビーンエッセンス",
+      "brand": "ミクスン",
+      "price_jpy": 5834,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205457208",
+      "shop_id": "jp-mong",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1204840989",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/515/642/8341642515.g_300-w-st_g.jpg",
+      "title": "[1+1]3番 すべすべキメケアセラム EX 60ml(30ml+30ml) / 韓国 人気 角質 皮脂 ツヤ 毛穴ケア 導入美容液 ブースター",
+      "brand": "ナンバーズイン",
+      "price_jpy": 5203,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204840989",
+      "shop_id": "jp-mong",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/cosmeticmall",
-    "https://m.qoo10.jp/shop/lilyhouse_jp"
+    "https://m.qoo10.jp/shop/lilyhouse_jp",
+    "https://m.qoo10.jp/shop/HDSelectShop",
+    "https://m.qoo10.jp/shop/jp-mong",
+    "https://m.qoo10.jp/shop/lilicoco"
   ],
   "pending_keywords": [
-    "PDRNカプセルクリーム100",
     "ネオクッション 本品+レフィル",
     "トーン&amp;スポットコレクターアンプル",
     "トゥエンティースリーイヤーズオールド ダーマシンコンシーラー",
@@ -478,9 +603,20 @@
     "ブースターショット",
     "ヨモギクーリングカミングジェル",
     "センテラクイックカーミングパッド 入り",
-    "センテラアンプルマダガスカル産CICA 美容液"
+    "センテラアンプルマダガスカル産CICA 美容液",
+    "PDRN 100ヒアルロン酸 ブースター トナー + PDRNヒアルロン酸100モイスチャライジングクリーム + PDRN ヒアルロン酸カプセル ラム",
+    "ドクダミポアディープクレンジングフォーム",
+    "PDRNヒアルロン酸100モイスチャライジングクリーム + PDRN ヒアルロン酸カプセル ラム",
+    "アトバリア365 ハイドロエッセンス",
+    "5番 マスクパック",
+    "アトバリア365",
+    "UVシールド トーンアップサン SPF50+ PA++++",
+    "大豆エッセンス",
+    "3番 すべすべキメケアセラム EX",
+    "ゼロ毛穴"
   ],
   "seen_keywords": [
+    "PDRNカプセルクリーム100",
     "リードルショット100",
     "ダイブインセラム +スージングクリーム +トナー"
   ]
