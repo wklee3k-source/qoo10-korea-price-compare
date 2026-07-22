@@ -26676,5 +26676,73 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1167122243",
+    "translated_kr": "린제이 진정 약초 모델링팩 (컵팩) 28g [66관왕/1위]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "린제이 진정약초 모델링 팩",
+      "naver": "린제이 진정약초 모델링팩 330g +앰플(500ml) +팩도구세트"
+    },
+    "brand": null,
+    "name": "린제이 진정약초 모델링 팩",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "18800",
+    "mall": "린제이",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5529564152",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8307405/83074059667.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8307405/83074059667.jpg",
+        "mall": "린제이",
+        "link": "https://smartstore.naver.com/main/products/5529564152"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8196974/81969748976.3.jpg",
+        "mall": "린제이",
+        "link": "https://smartstore.naver.com/main/products/4425226423"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8213429/82134299540.1.jpg",
+        "mall": "린제이",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4589779372"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1858306/18583067160.10.jpg",
+        "mall": "린제이",
+        "link": "https://lindsay.co.kr/product/detail.html?product_no=2068&cate_no=172&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204303349",
+    "translated_kr": "라엘 오가닉 코튼 커버 입는 오버나이트 M 2개입 x3개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "유기농 순면커버 입는 오버나이트 세트"
+    },
+    "brand": null,
+    "name": "유기농 순면커버 입는 오버나이트 세트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
