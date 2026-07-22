@@ -3861,5 +3861,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1087789912",
+    "translated_kr": "피지모공더블클렌징세트[어성초포어컨트롤클렌징오일,200ml+어성초포어딥클렌징폼,150ml]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "아누아 어성초 클렌징 듀오 기획 (오일 ...",
+      "naver": "아누아 어성초 피지모공 더블클렌징세트 클렌징오일+클렌징폼 2종"
+    },
+    "brand": "아누아",
+    "name": "아누아 어성초 피지모공 더블클렌징세트 클렌징오일+클렌징폼 2종",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29900",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12281707328",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8982621/89826218044.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8982621/89826218044.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12281707328"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1059030924",
+    "translated_kr": "다비네스모어인사이드디스이즈어컬빌딩세럼(컬헤어용)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Curl"
+    },
+    "brand": null,
+    "name": "Curl",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
