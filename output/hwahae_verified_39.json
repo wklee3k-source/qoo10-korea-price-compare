@@ -15661,5 +15661,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1137284305",
+    "translated_kr": "[1+1]다이브인워터리모이스처선크림60ml×2개(+셀메이징톤업선크림20ml)(SPF50+PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "다이브인 워터리 모이스처 선크림",
+      "hwahae": "다이브인 워터리 모이스처 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 워터리 모이스처 선크림 [SPF50+/PA++++]",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1129334318",
+    "translated_kr": "[1+1]노스카나인트러블세럼30ml×2개(트러블진정/과잉유분개선)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "파티온 노스카나인 트러블 세럼 2개"
+    },
+    "brand": null,
+    "name": "파티온 노스카나인 트러블 세럼 2개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
