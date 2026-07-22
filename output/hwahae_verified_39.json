@@ -2152,5 +2152,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1142422101",
+    "translated_kr": "고려은단뼈건강칼마디칼슘·마그네슘·비타민D60정1개(2개월분)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "고려은단 뼈건강 칼마디 칼슘·마그네슘·비타민D 제품의 정보 ...",
+      "hwahae": "뼈건강 칼마디 칼슘·마그네슘·비타민D"
+    },
+    "brand": "고려은단 (eundan)",
+    "name": "뼈건강 칼마디 칼슘·마그네슘·비타민D",
+    "volume": "101.g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514733",
+    "translated_kr": "라이트웨이트수딩모이스처라이저,80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스알엑스 에이씨 컬렉션 라이트웨이트 수딩 모이스처라이저, , 1개",
+      "hwahae": "AC 라이트웨이트 수딩 모이스처라이저"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "AC 라이트웨이트 수딩 모이스처라이저",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
