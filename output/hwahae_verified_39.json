@@ -10318,5 +10318,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1195761907",
+    "translated_kr": "글루타치온6%앰플30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "더마팩토리 글루타치온 6% 앰플 |",
+      "hwahae": "글루타치온 6% 앰플",
+      "naver": "[또팩라운지전용] 더마팩토리 글루타치온 6% 앰플 30ml"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "글루타치온 6% 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "5850",
+    "mall": "더마팩토리 온라인스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13660962483",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120547/91205473324.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120547/91205473324.jpg",
+        "mall": "더마팩토리 온라인스토어",
+        "link": "https://smartstore.naver.com/main/products/13660962483"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210039639",
+    "translated_kr": "UV디펜스PDRN선크림50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "유브이 디펜스 PDRN 피디알엔 선크림",
+      "naver": "아이스트 쥬비렉스 Oligo PDRN 크림 20g 3개 + 리페어 하이드로겔 마스크팩 5매+UV 디펜스 T24 톤업 선크림 40ml"
+    },
+    "brand": null,
+    "name": "유브이 디펜스 PDRN 피디알엔 선크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "105000",
+    "mall": "아이스트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13576889433",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112139/91121399844.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112139/91121399844.jpg",
+        "mall": "아이스트",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13576889433"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
