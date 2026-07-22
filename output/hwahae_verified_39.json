@@ -16028,5 +16028,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1183992449",
+    "translated_kr": "[몬칫치 콜라보] 세라마이드 아르트 로션 (+몬칫치 파우치) 【한국 올리브영 구매대행】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세라마이드 로션",
+      "naver": "오프온 향좋은 퍼퓸보습제 끈적이지않는 등드름 바디밀크 살냄새보습 남자여자 올리브영 로션1개"
+    },
+    "brand": "뉴스템 (newstem)",
+    "name": "세라마이드 로션",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25800",
+    "mall": "오프온 offon",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6712037180",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8425653/84256537502.19.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8425653/84256537502.19.jpg",
+        "mall": "오프온 offon",
+        "link": "https://smartstore.naver.com/main/products/6712037180"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1145110612",
+    "translated_kr": "131 포어 세럼, 30ml 【한국 올리브영 구매대행】",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
