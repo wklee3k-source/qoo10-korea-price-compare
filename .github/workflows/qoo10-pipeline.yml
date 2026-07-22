@@ -313,6 +313,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && inputs.run_hwahae_verify
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    concurrency:
+      group: hwahae-verify-queue
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
 
