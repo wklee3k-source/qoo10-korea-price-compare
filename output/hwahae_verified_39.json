@@ -12706,5 +12706,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1187569879",
+    "translated_kr": "레티놀레티젝션세럼2%,50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[네이버 단독] 아이오페 XMD스템3 세럼 50ml + 레티놀 레티젝션 세럼 50ml"
+    },
+    "brand": "아이오페",
+    "name": "[네이버 단독] 아이오페 XMD스템3 세럼 50ml + 레티놀 레티젝션 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "144570",
+    "mall": "아이오페",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12701915965",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9024642/90246426889.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024642/90246426889.3.jpg",
+        "mall": "아이오페",
+        "link": "https://smartstore.naver.com/main/products/12701915965"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205623680",
+    "translated_kr": "[정품]NEW아토베리어365캡슐토너300ml,리뉴얼아토베리어365하이드로수딩크림80ml/화장수/크림/여드름/한국화장품한국스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
