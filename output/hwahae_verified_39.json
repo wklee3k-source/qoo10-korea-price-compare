@@ -27177,5 +27177,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1207613050",
+    "translated_kr": "라이팅 톤업 선쿠션 SPF50+PA+++000 / 미스티바블",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]"
+    },
+    "brand": "아떼 (athe)",
+    "name": "비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]",
+    "volume": "12g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193570601",
+    "translated_kr": "【코스파 앰플+로션 세트】어성초80 앰플 30ml + 어성초70 데일리 로션 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 데일리 로션"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 데일리 로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
