@@ -22347,5 +22347,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180616865",
+    "translated_kr": "소울 마이티 밤부 판테놀 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마이티 밤부 판테놀 크림"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "마이티 밤부 판테놀 크림",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193439407",
+    "translated_kr": "1.05 아스타잔틴 0.05％ NAD 1％ 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 이펙트 세럼 1.05 펌프"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "레드 이펙트 세럼 1.05 펌프",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
