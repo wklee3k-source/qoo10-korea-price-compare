@@ -9846,5 +9846,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1132391030",
+    "translated_kr": "아토베리어365크림80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203692533",
+    "translated_kr": "한국헤어케어데미지테라피노워시트리트먼트EX250ml로즈머스크향230℃열보호7종콜라겐안씻어내는아웃배스드라이기전케어한국살롱케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
