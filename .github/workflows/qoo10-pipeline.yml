@@ -306,11 +306,7 @@ jobs:
             # 넘어서 있으니 2회차부터 계속 "즉시 멈춤"만 반복하는 버그가
             # 있었다(실측: 283회 중 사실상 1회만 유효했음). 순차버전처럼
             # 매번 "현재 누적 + STEP"을 다시 계산해서 넘긴다.
-            CURRENT_VISITED=$(python3 -c "
-import json, pathlib
-p = pathlib.Path('../output/discovery_state_${B}.json')
-print(len(json.loads(p.read_text())['visited_shops']) if p.exists() else 0)
-")
+            CURRENT_VISITED=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['visited_shops']) if p.exists() else 0)")
             CAP=$((CURRENT_VISITED + STEP))
             echo "::group::브랜치 $B 반복 $ITER (누적 $CURRENT_VISITED -> 목표 $CAP)"
             python iterative_low_review_discovery.py \
