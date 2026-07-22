@@ -16744,5 +16744,62 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1152064671",
+    "translated_kr": "스템셀라인 스킨세럼크림 [중·건성피부용3종]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정"
+    },
+    "brand": "아벤느",
+    "name": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "41600",
+    "mall": "아벤느코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11730664019",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+        "mall": "아벤느코리아",
+        "link": "https://smartstore.naver.com/main/products/11730664019"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174517.jpg",
+        "mall": "아벤느",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11730664018"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1134061516",
+    "translated_kr": "[2+1]ROSE PDRN 엑소솜 미스트, ROSE 리페어 크림 미스트 80ml, 확실한 윤기, 촉촉한 차오름",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
