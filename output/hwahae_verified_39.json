@@ -7627,5 +7627,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180595613",
+    "translated_kr": "PDRN100히알루론산부스터토너250ml+PDRN히알루론산100모이스처라이징크림60ml+PDRN히알루론산캡슐100세럼30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "PDRN 히알루론산 100 수분 크림",
+      "hwahae": "피디알엔 100 히알루론산 부스터 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "피디알엔 100 히알루론산 부스터 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1174748969",
+    "translated_kr": "[NEW][신상품]어성초포어딥클렌징폼150ml(2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 쿼세티놀™ 포어 딥 클렌징 폼",
+      "hwahae": "어성초 쿼세티놀™ 모공 딥 클렌징 폼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
