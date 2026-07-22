@@ -27470,5 +27470,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1180441965",
+    "translated_kr": "마데카 릴리프 토너+로션 세트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1167101287",
+    "translated_kr": "풀피트 프로폴리스 라이트 앰플 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 라이트 앰플"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
