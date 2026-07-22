@@ -2350,5 +2350,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1194955894",
+    "translated_kr": "토탈리커버리크리미바디워시300ml/500ml/한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토탈 리커버리 크리미 바디워시",
+      "hwahae": "토탈리커버리 크리미 바디워시"
+    },
+    "brand": "비욘드 (BEYOND)",
+    "name": "토탈리커버리 크리미 바디워시",
+    "volume": "300mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195546458",
+    "translated_kr": "한방수필링젤180ml3개/각질케어/모공케어/각질제거/스킨케어/한국화장품",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "각질 스크럽 아라한 한방 필링젤 각질 피지, , 2개"
+    },
+    "brand": null,
+    "name": "각질 스크럽 아라한 한방 필링젤 각질 피지, , 2개",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
