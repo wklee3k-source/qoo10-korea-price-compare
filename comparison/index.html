@@ -9,7 +9,7 @@
   :root {
     --bg: #0a0e14; --panel: #10151d; --panel-border: #1e2733;
     --text: #e6edf3; --text-dim: #7d8998;
-    --ok: #4fd1a5; --bad: #e5534b; --qoo: #ff6b35; --kr: #4a90d9;
+    --ok: #4fd1a5; --bad: #e5534b; --warn: #d9a15b; --qoo: #ff6b35; --kr: #4a90d9;
     --mono: 'JetBrains Mono', monospace; --sans: 'Inter', sans-serif;
   }
   * { box-sizing: border-box; }
@@ -36,6 +36,7 @@
   .badge { padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; }
   .badge.match { background: rgba(79,209,165,0.15); color: var(--ok); }
   .badge.mismatch { background: rgba(229,83,75,0.15); color: var(--bad); }
+  .badge.unknown { background: rgba(217,161,91,0.15); color: var(--warn); }
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; }
   @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
   .side { padding: 16px; }
@@ -68,8 +69,9 @@
   </header>
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">전체</button>
-    <button class="filter-btn" data-filter="mismatch">불일치만</button>
-    <button class="filter-btn" data-filter="match">일치만</button>
+    <button class="filter-btn" data-filter="mismatch">브랜드 불일치</button>
+    <button class="filter-btn" data-filter="unknown">판단불가</button>
+    <button class="filter-btn" data-filter="match">브랜드 일치</button>
   </div>
   <div id="cards"></div>
   <footer>큐텐 데이터: discovery-live 브랜치 · 국내 데이터: hwahae-live 브랜치</footer>
@@ -86,12 +88,12 @@ const PAIRS_DATA = [
     "kr_brand": "블랑카우 (BLANCOW)",
     "kr_name": "밀키스킨 리얼 클렌징폼",
     "kr_volume": "150ml",
-    "kr_image": "https://img.hwahae.co.kr/products/1879808/1879808_20220801000000.jpg",
+    "kr_image": null,
     "kr_price": 20000,
-    "kr_url": "https://www.hwahae.co.kr/goods/1879808",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1203041226",
@@ -103,12 +105,12 @@ const PAIRS_DATA = [
     "kr_brand": "46cm (46센티미터)",
     "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
     "kr_volume": "600mL",
-    "kr_image": "https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg",
+    "kr_image": null,
     "kr_price": 29800,
-    "kr_url": "https://www.hwahae.co.kr/goods/2137133",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1191395895",
@@ -120,12 +122,12 @@ const PAIRS_DATA = [
     "kr_brand": "Snp (에스엔피)",
     "kr_name": "피디알엔 엑토인 UV 에이징 리커버리 선 세럼 [SPF50+/PA++++]",
     "kr_volume": "50ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2137782/2137782_20250409143332.jpg",
+    "kr_image": null,
     "kr_price": 27000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2137782",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "unknown"
   },
   {
     "goods_no": "1199735232",
@@ -137,12 +139,12 @@ const PAIRS_DATA = [
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]",
     "kr_volume": "30ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2131581/2131581_20250211112015.jpg",
+    "kr_image": null,
     "kr_price": 44000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2131581",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1208085514",
@@ -154,12 +156,12 @@ const PAIRS_DATA = [
     "kr_brand": "46cm (46센티미터)",
     "kr_name": "체취케어 데오드란트 바디워시 [시트러스향]",
     "kr_volume": "600mL",
-    "kr_image": "https://img.hwahae.co.kr/products/2137133/2137133_20250403115339.jpg",
+    "kr_image": null,
     "kr_price": 29800,
-    "kr_url": "https://www.hwahae.co.kr/goods/2137133",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1098318150",
@@ -171,29 +173,12 @@ const PAIRS_DATA = [
     "kr_brand": "넘버즈인 (numbuzin)",
     "kr_name": "5번 글루타치온C 비타수액 에센셜 토너",
     "kr_volume": "200ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2086693/2086693_20240126134120.jpg",
+    "kr_image": null,
     "kr_price": 24000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2086693",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
-  },
-  {
-    "goods_no": "1098317948",
-    "qoo10_title": "オールデイタイトメイクセッティングピクサー75ml/makeup setting fixx/韓国コスメ",
-    "qoo10_brand": "ソーナチュラル",
-    "qoo10_image": "https://gd.image-qoo10.jp/li/628/776/6883776628.g_300-w-st_g.jpg",
-    "qoo10_price_jpy": 2519,
-    "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1098317948",
-    "kr_brand": "쏘내추럴 (SO'NATURAL)",
-    "kr_name": "올데이 타이트 메이크업 세팅 픽서",
-    "kr_volume": "75ml",
-    "kr_image": "https://img.hwahae.co.kr/products/9031/9031_20220801000000.jpg",
-    "kr_price": 15000,
-    "kr_url": "https://www.hwahae.co.kr/goods/9031",
-    "kr_source": "hwahae",
-    "vol_match": true,
-    "brand_match": false
+    "brand_status": "unknown"
   },
   {
     "goods_no": "1172085888",
@@ -205,12 +190,12 @@ const PAIRS_DATA = [
     "kr_brand": "코스알엑스 (COSRX)",
     "kr_name": "풀핏 프로폴리스 라이트 앰플",
     "kr_volume": "30ml",
-    "kr_image": "https://img.hwahae.co.kr/products/1737446/1737446_20221201121515.jpg",
+    "kr_image": null,
     "kr_price": 23500,
-    "kr_url": "https://www.hwahae.co.kr/goods/1737446",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1161371182",
@@ -220,14 +205,14 @@ const PAIRS_DATA = [
     "qoo10_price_jpy": 3154,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161371182",
     "kr_brand": "제니하우스 (jennyhouse)",
-    "kr_name": "루트 볼륨 픽서",
-    "kr_volume": "200ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2195665/2195665_20260323161619.jpg",
-    "kr_price": 23000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2195665",
+    "kr_name": "살롱하우스 마일드 헤어 클렌저",
+    "kr_volume": "500ml",
+    "kr_image": null,
+    "kr_price": 63500,
+    "kr_url": null,
     "kr_source": "hwahae",
-    "vol_match": true,
-    "brand_match": true
+    "vol_match": false,
+    "brand_status": "match"
   },
   {
     "goods_no": "1210835765",
@@ -239,12 +224,12 @@ const PAIRS_DATA = [
     "kr_brand": "아누아 (Anua)",
     "kr_name": "어성초 77 히알루론 토너",
     "kr_volume": "250mL",
-    "kr_image": "https://img.hwahae.co.kr/products/2181659/2181659_20260102154726.jpg",
+    "kr_image": null,
     "kr_price": 25000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2181659",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1134579258",
@@ -261,7 +246,7 @@ const PAIRS_DATA = [
     "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1175557299",
@@ -273,12 +258,12 @@ const PAIRS_DATA = [
     "kr_brand": "다슈 (DASHU)",
     "kr_name": "밀크씨슬 블루바이옴 스칼프 샴푸",
     "kr_volume": "500ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2191244/2191244_20260225112040.jpg",
+    "kr_image": null,
     "kr_price": 27000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2191244",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1196815742",
@@ -290,12 +275,12 @@ const PAIRS_DATA = [
     "kr_brand": "아비브 (Abib)",
     "kr_name": "모델링 크림 마스크 [어성초스쿱]",
     "kr_volume": "71ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2135913/2135913_20250408122745.jpg",
+    "kr_image": null,
     "kr_price": 8000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2135913",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1164705875",
@@ -304,15 +289,15 @@ const PAIRS_DATA = [
     "qoo10_image": "https://gd.image-qoo10.jp/li/021/840/7339840021.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 5499,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1164705875",
-    "kr_brand": "부쉬맨 (BUSHMAN)",
-    "kr_name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
-    "kr_volume": "50g",
-    "kr_image": "https://img.hwahae.co.kr/products/1884027/1884027_20230503122212.jpg",
-    "kr_price": 25000,
-    "kr_url": "https://www.hwahae.co.kr/goods/1884027",
+    "kr_brand": "무신사 스탠다드 뷰티 (musinsa standard BEAUTY)",
+    "kr_name": "히알루론산 밸런싱 크림",
+    "kr_volume": "50ml",
+    "kr_image": null,
+    "kr_price": 5900,
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1105980668",
@@ -324,12 +309,12 @@ const PAIRS_DATA = [
     "kr_brand": "오휘 (OHUI)",
     "kr_name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
     "kr_volume": "50ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2130825/2130825_20250204100645.jpg",
+    "kr_image": null,
     "kr_price": 80000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2130825",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1105980665",
@@ -341,12 +326,12 @@ const PAIRS_DATA = [
     "kr_brand": "오휘 (OHUI)",
     "kr_name": "에이지 리커버리 아이크림",
     "kr_volume": "25ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2096853/2096853_20240502181620.jpg",
+    "kr_image": null,
     "kr_price": 105000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2096853",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1044307238",
@@ -355,15 +340,15 @@ const PAIRS_DATA = [
     "qoo10_image": "https://gd.image-qoo10.jp/li/620/110/8395110620.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2774,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1044307238",
-    "kr_brand": "11번가",
-    "kr_name": "엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x2개",
+    "kr_brand": "엘라스틴",
+    "kr_name": "엘라스틴 엘라스틴 실크리페어 트리트먼트 샤이닝 골드 300ml 2개",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5903047/59030472616.jpg",
-    "kr_price": "11070",
-    "kr_url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=7145730565&tid=1000000061",
+    "kr_image": null,
+    "kr_price": "13210",
+    "kr_url": null,
     "kr_source": "naver",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1193729683",
@@ -375,12 +360,12 @@ const PAIRS_DATA = [
     "kr_brand": "유세린 (Eucerin)",
     "kr_name": "하이알루론 부스팅 에센스",
     "kr_volume": "100ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2118741/2118741_20241011104958.jpg",
+    "kr_image": null,
     "kr_price": 48000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2118741",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "unknown"
   },
   {
     "goods_no": "1175263787",
@@ -392,12 +377,12 @@ const PAIRS_DATA = [
     "kr_brand": "토리든 (Torriden)",
     "kr_name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
     "kr_volume": "20g",
-    "kr_image": "https://img.hwahae.co.kr/products/2202691/2202691_20260506094325.jpg",
+    "kr_image": null,
     "kr_price": 23000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2202691",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1209710276",
@@ -406,15 +391,15 @@ const PAIRS_DATA = [
     "qoo10_image": "https://gd.image-qoo10.jp/li/811/353/8377353811.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 4344,
     "qoo10_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209710276",
-    "kr_brand": "어라운드미 (AROUNDME)",
-    "kr_name": "퍼퓸드 아르간 헤어 샴푸",
-    "kr_volume": "200ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2016985/2016985_20221130100323.jpg",
-    "kr_price": 9000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2016985",
+    "kr_brand": "더프트앤도프트 (DUFT&DOFT)",
+    "kr_name": "퍼퓸드 헤어 샴푸 [소피소피]",
+    "kr_volume": "500ml",
+    "kr_image": null,
+    "kr_price": 10900,
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1202412626",
@@ -426,12 +411,12 @@ const PAIRS_DATA = [
     "kr_brand": "듀이트리 (DEWYTREE)",
     "kr_name": "ph6.9 위치하젤 프레쉬 젤 클렌저",
     "kr_volume": "",
-    "kr_image": "https://img.hwahae.co.kr/products/1712521/1712521_20220801000000.jpg",
+    "kr_image": null,
     "kr_price": null,
-    "kr_url": "https://www.hwahae.co.kr/goods/1712521",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "unknown"
   },
   {
     "goods_no": "1200863342",
@@ -443,12 +428,12 @@ const PAIRS_DATA = [
     "kr_brand": "AHC (에이에이치씨)",
     "kr_name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
     "kr_volume": "14g",
-    "kr_image": "https://img.hwahae.co.kr/products/2194632/2194632_20260318101107.jpg",
+    "kr_image": null,
     "kr_price": 18900,
-    "kr_url": "https://www.hwahae.co.kr/goods/2194632",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1196939883",
@@ -460,12 +445,12 @@ const PAIRS_DATA = [
     "kr_brand": "아비브",
     "kr_name": "아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 Retinal Eye Serum",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg",
+    "kr_image": null,
     "kr_price": "30590",
-    "kr_url": "https://smartstore.naver.com/main/products/13332115550",
+    "kr_url": null,
     "kr_source": "naver",
     "vol_match": false,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1182595010",
@@ -477,12 +462,12 @@ const PAIRS_DATA = [
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "PDRN 비타 코팅 마스크",
     "kr_volume": "22g",
-    "kr_image": "https://img.hwahae.co.kr/products/2132660/2132660_20250219182024.jpg",
+    "kr_image": null,
     "kr_price": 5000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2132660",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1186682635",
@@ -494,12 +479,12 @@ const PAIRS_DATA = [
     "kr_brand": "아누아",
     "kr_name": "B11756 Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum 1.0 oz Skin Care",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_6058410/60584105393.jpg",
+    "kr_image": null,
     "kr_price": "45700",
-    "kr_url": "http://jelly-pop.com/prod/content.asp?PMInc=12253078",
+    "kr_url": null,
     "kr_source": "naver",
     "vol_match": false,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1199084782",
@@ -511,12 +496,12 @@ const PAIRS_DATA = [
     "kr_brand": "닥터슈라클",
     "kr_name": "닥터슈라클 비건 콤부차 티 에센스 스타레나  1개  150ml",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5929855/59298550550.4.jpg",
+    "kr_image": null,
     "kr_price": "36980",
-    "kr_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=7096040051&ctag=7096040051&lptag=V84862403844&itemId=20149212318&vendorItemId=84862403844&spec=10305199",
+    "kr_url": null,
     "kr_source": "naver",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "match"
   },
   {
     "goods_no": "1206207561",
@@ -528,12 +513,12 @@ const PAIRS_DATA = [
     "kr_brand": "로하시스 (LOHASYS)",
     "kr_name": "피에잇 톤업 앤 브라이트닝 크림 EX",
     "kr_volume": "30g",
-    "kr_image": "https://img.hwahae.co.kr/products/1841007/1841007_20220801000000.jpg",
+    "kr_image": null,
     "kr_price": 29000,
-    "kr_url": "https://www.hwahae.co.kr/goods/1841007",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1205776987",
@@ -545,12 +530,12 @@ const PAIRS_DATA = [
     "kr_brand": "메디큐브 (medicube)",
     "kr_name": "에이지알 글루타치온 글로우 캡슐 크림",
     "kr_volume": "50ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2097276/2097276_20240509172521.jpg",
+    "kr_image": null,
     "kr_price": 62000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2097276",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1198940759",
@@ -562,12 +547,12 @@ const PAIRS_DATA = [
     "kr_brand": "메이베나 (MAYBENA)",
     "kr_name": "73선에센스 [SPF50+/PA++++]",
     "kr_volume": "50ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2062601/2062601_20230830134544.jpg",
+    "kr_image": null,
     "kr_price": 35000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2062601",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1205562844",
@@ -579,12 +564,12 @@ const PAIRS_DATA = [
     "kr_brand": "유시몰",
     "kr_name": "유시몰 브레쓰 민트볼 20입",
     "kr_volume": "",
-    "kr_image": "https://shopping-phinf.pstatic.net/main_5670795/56707956809.1.jpg",
+    "kr_image": null,
     "kr_price": "6500",
-    "kr_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000199340",
+    "kr_url": null,
     "kr_source": "naver",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1212630238",
@@ -596,12 +581,12 @@ const PAIRS_DATA = [
     "kr_brand": "산다화 (Sandawha)",
     "kr_name": "울트라 젠틀 약산성 세안제",
     "kr_volume": "100g",
-    "kr_image": "https://img.hwahae.co.kr/products/2207218/2207218_20260618180012.jpg",
+    "kr_image": null,
     "kr_price": 27000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2207218",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "mismatch"
   },
   {
     "goods_no": "1210464824",
@@ -613,12 +598,12 @@ const PAIRS_DATA = [
     "kr_brand": "엘리자베카 (Elizavecca)",
     "kr_name": "콜라겐 코팅 헤어 A+ 머슬 헬토네이도 샴푸 CER-100",
     "kr_volume": "500ml",
-    "kr_image": "https://img.hwahae.co.kr/products/2201299/2201299_20260420181258.jpg",
+    "kr_image": null,
     "kr_price": 25000,
-    "kr_url": "https://www.hwahae.co.kr/goods/2201299",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": true,
-    "brand_match": true
+    "brand_status": "match"
   },
   {
     "goods_no": "1186310271",
@@ -630,14 +615,16 @@ const PAIRS_DATA = [
     "kr_brand": "셀리맥스 (celimax)",
     "kr_name": "노니 밸런싱 토너",
     "kr_volume": "150ml",
-    "kr_image": "https://img.hwahae.co.kr/products/1862406/1862406_20220801000000.jpg",
+    "kr_image": null,
     "kr_price": 25000,
-    "kr_url": "https://www.hwahae.co.kr/goods/1862406",
+    "kr_url": null,
     "kr_source": "hwahae",
     "vol_match": false,
-    "brand_match": false
+    "brand_status": "match"
   }
 ];
+
+const BADGE_LABEL = { match: '일치', mismatch: '불일치', unknown: '판단불가' };
 
 function fmtPrice(p, unit) {
   if (p == null) return '가격정보없음';
@@ -646,18 +633,14 @@ function fmtPrice(p, unit) {
 
 function render(filter) {
   const cards = document.getElementById('cards');
-  const filtered = PAIRS_DATA.filter(p => {
-    if (filter === 'match') return p.brand_match && p.vol_match;
-    if (filter === 'mismatch') return !p.brand_match || !p.vol_match;
-    return true;
-  });
+  const filtered = PAIRS_DATA.filter(p => filter === 'all' || p.brand_status === filter);
 
   cards.innerHTML = filtered.map(p => `
     <div class="card">
       <div class="card-header">
         <span>상품번호: ${p.goods_no}</span>
         <div class="badges">
-          <span class="badge ${p.brand_match ? 'match' : 'mismatch'}">브랜드 ${p.brand_match ? '일치' : '불일치'}</span>
+          <span class="badge ${p.brand_status}">브랜드 ${BADGE_LABEL[p.brand_status]}</span>
           <span class="badge ${p.vol_match ? 'match' : 'mismatch'}">용량 ${p.vol_match ? '일치' : '불일치'}</span>
         </div>
       </div>
@@ -686,9 +669,11 @@ function render(filter) {
     </div>
   `).join('');
 
-  const matchCount = PAIRS_DATA.filter(p => p.brand_match && p.vol_match).length;
+  const matchCount = PAIRS_DATA.filter(p => p.brand_status === 'match').length;
+  const mismatchCount = PAIRS_DATA.filter(p => p.brand_status === 'mismatch').length;
+  const unknownCount = PAIRS_DATA.filter(p => p.brand_status === 'unknown').length;
   document.getElementById('summaryLine').textContent =
-    `전체 ${PAIRS_DATA.length}건 중 브랜드+용량 완전일치 ${matchCount}건 · 지금 표시 ${filtered.length}건`;
+    `전체 ${PAIRS_DATA.length}건 · 브랜드일치 ${matchCount} · 불일치 ${mismatchCount} · 판단불가 ${unknownCount} · 지금 표시 ${filtered.length}건`;
 }
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
