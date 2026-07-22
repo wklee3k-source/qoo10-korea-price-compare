@@ -10259,5 +10259,64 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205657917",
+    "translated_kr": "선뮤즈톤업&코렉팅피치핑크선스크린SPF50+PA++++50ml x1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비플레인 선뮤즈 톤업 앤 코렉팅 ...",
+      "hwahae": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++] [피치 핑크]"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++] [피치 핑크]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205515583",
+    "translated_kr": "[NEW]레티놀나이아신나이트케어마스크24mL10매",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "레티놀 나이아신 나이트 케어 마스크",
+      "naver": "아누아 레티놀 나이아신 나이트 케어 마스크 24mL 10매, 1개"
+    },
+    "brand": "아누아",
+    "name": "아누아 레티놀 나이아신 나이트 케어 마스크 24mL 10매, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "19200",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12978549991",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9052306/90523061001.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052306/90523061001.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12978549991"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052306/90523061002.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12978549992"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
