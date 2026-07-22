@@ -26503,5 +26503,62 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1024214983",
+    "translated_kr": "르네르지 M 메모리 쉐이프 로션 400ml [한정]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "레네르지 메모리 쉐이프 젤-인-로션 400ml"
+    },
+    "brand": "랑콤",
+    "name": "레네르지 메모리 쉐이프 젤-인-로션 400ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "137750",
+    "mall": "랑콤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4973723113",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8251824/82518243437.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8251824/82518243437.8.jpg",
+        "mall": "랑콤",
+        "link": "https://smartstore.naver.com/main/products/4973723113"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8259199/82591993288.6.jpg",
+        "mall": "랑콤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5047472204"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193991472",
+    "translated_kr": "티트리카 릴리프 앰플, 1개, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 티트리카 릴리프 앰플"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 티트리카 릴리프 앰플",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
