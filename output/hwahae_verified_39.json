@@ -29321,5 +29321,65 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1205746446",
+    "translated_kr": "[1+1] 익스트림 크림 라이트 65ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "페이셜케어 > 익스트림 크림 라이트 튜브형 1+1",
+      "hwahae": "익스트림 크림 라이트",
+      "naver": "리얼베리어 익스트림 크림 라이트 65ml, 1개"
+    },
+    "brand": "리얼베리어 (RealBarrier)",
+    "name": "익스트림 크림 라이트",
+    "volume": "65ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24200",
+    "mall": "리얼베리어 본사 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9979856733",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8752435/87524359006.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8752435/87524359006.15.jpg",
+        "mall": "리얼베리어 본사 스토어",
+        "link": "https://smartstore.naver.com/main/products/9979856733"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8752435/87524359005.2.jpg",
+        "mall": "리얼베리어",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9979856732"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205746320",
+    "translated_kr": "리치 살롱 모로칸 아르간 오일 세럼 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "MUSINSA",
+      "hwahae": "리치살롱 모로코 아르간 오일세럼"
+    },
+    "brand": "사라나라 (saranara)",
+    "name": "리치살롱 모로코 아르간 오일세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
