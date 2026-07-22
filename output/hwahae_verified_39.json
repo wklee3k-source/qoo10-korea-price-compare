@@ -1300,5 +1300,74 @@
         "link": "https://link.auction.co.kr/gate/pcs?item-no=F492836817&sub-id=1&service-code=10000003"
       }
     ]
+  },
+  {
+    "goods_no": "1202412626",
+    "translated_kr": "벤튼 퍼펙트프레시 맨즈 남성용세정제 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "벤튼 퍼펙트 프레쉬 남성청결제 항문세정제 m존케어",
+      "hwahae": "퍼펙트 프레쉬 남성청결제"
+    },
+    "brand": "벤튼 (BENTON)",
+    "name": "퍼펙트 프레쉬 남성청결제",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2052740",
+    "image_url": "https://img.hwahae.co.kr/products/2052740/2052740_20230718182203.jpg",
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200863342",
+    "translated_kr": "AHC 마스터즈 아이시젤리 선스틱 14g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "AHC 마스터즈 아이시 젤리 선스틱",
+      "hwahae": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
+      "naver": "AHC 마스터즈 아이시 쿨링 젤리 선스틱 SPF44 PA+++  14g  6개"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
+    "volume": "14g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "84840",
+    "mall": "쿠팡",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9442849880&ctag=9442849880&lptag=I28474158780&itemId=28474158780&vendorItemId=95424393399&spec=10305197",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6021125/60211259772.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6021125/60211259772.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9442849880&ctag=9442849880&lptag=I28474158780&itemId=28474158780&vendorItemId=95424393399&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5950319/59503191421.20260402102423.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59503191421"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110758/91107589388.1.jpg",
+        "mall": "The 나누다",
+        "link": "https://smartstore.naver.com/main/products/13563079021"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096700/90967001204.jpg",
+        "mall": "브랜D샵",
+        "link": "https://smartstore.naver.com/main/products/13422490868"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121144/91211449378.jpg",
+        "mall": "몰아크로",
+        "link": "https://smartstore.naver.com/main/products/13666938470"
+      }
+    ]
   }
 ]
