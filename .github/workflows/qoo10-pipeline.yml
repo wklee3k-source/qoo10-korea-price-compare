@@ -90,6 +90,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Switch to dedicated branch (avoids push contention with hwahae_verify)
+        run: |
+          git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
+          git merge origin/main --no-edit -X theirs 2>/dev/null || true
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -167,12 +172,10 @@ jobs:
             git add ../output/discovery_state.json ../output/discovery_result.xlsx ../output/discovery_skip_log.json ../output/discovery_seed_log.json ../output/progress_history.json ../output/archive/ 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit -m "Auto: discovery progress (상점 목표 $next)"
-              for i in $(seq 1 15); do
-                if git push; then break; fi
-                sleep_time=$((RANDOM % 8 + 2))
-                echo "push 실패, ${sleep_time}초 대기 후 pull --rebase 재시도 ($i/15)"
-                sleep "$sleep_time"
-                git pull --rebase
+              for i in 1 2 3; do
+                if git push origin discovery-live; then break; fi
+                echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+                git pull --rebase origin discovery-live
               done
             fi
             current=$next
@@ -313,6 +316,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Switch to dedicated branch (avoids push contention with discover)
+        run: |
+          git fetch origin hwahae-live 2>/dev/null && git checkout hwahae-live || git checkout -b hwahae-live
+          git merge origin/main --no-edit -X theirs 2>/dev/null || true
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -366,12 +374,10 @@ jobs:
             git add ../output/hwahae_verified_39.json ../output/progress_history.json
             if ! git diff --cached --quiet; then
               git commit -m "Auto: hwahae verification progress"
-              for i in $(seq 1 15); do
-                if git push; then break; fi
-                sleep_time=$((RANDOM % 8 + 2))
-                echo "push 실패, ${sleep_time}초 대기 후 pull --rebase 재시도 ($i/15)"
-                sleep "$sleep_time"
-                git pull --rebase
+              for i in 1 2 3; do
+                if git push origin hwahae-live; then break; fi
+                echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+                git pull --rebase origin hwahae-live
               done
             fi
 

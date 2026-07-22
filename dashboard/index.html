@@ -347,8 +347,7 @@
 
 <script>
 const REPO = "wklee3k-source/qoo10-korea-price-compare";
-const BRANCH = "main";
-const RAW = (path) => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${path}?t=${Date.now()}`;
+const RAW = (path, branch = "main") => `https://raw.githubusercontent.com/${REPO}/${branch}/${path}?t=${Date.now()}`;
 
 function fmtDelta(delta) {
   if (delta > 0) return `<span class="log-delta-pos">+${delta}</span>`;
@@ -406,7 +405,7 @@ async function loadAll() {
 
   // Stage 1
   try {
-    const res = await fetch(RAW('output/discovery_state.json'));
+    const res = await fetch(RAW('output/discovery_state.json', 'discovery-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
     const shops = (data.visited_shops || []).length;
@@ -433,7 +432,7 @@ async function loadAll() {
 
   // Stage 3
   try {
-    const res = await fetch(RAW('output/hwahae_verified_39.json'));
+    const res = await fetch(RAW('output/hwahae_verified_39.json', 'hwahae-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
     const done = data.length;
@@ -441,7 +440,7 @@ async function loadAll() {
 
     let total = done;
     try {
-      const inputRes = await fetch(RAW('output/hwahae_input_39.json'));
+      const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
       if (inputRes.ok) {
         const inputData = await inputRes.json();
         total = inputData.length;
@@ -468,22 +467,25 @@ async function loadAll() {
   } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
 
   // 조회기록은 서버(GitHub Actions)가 매 배치마다 직접 쌓아둔
-  // progress_history.json을 그대로 읽어서 보여준다 — 브라우저를 안 열고
-  // 있어도 서버 쪽에서 계속 기록되므로, 탭을 며칠 만에 열어도 그동안의
-  // 기록이 전부 보인다(클라이언트 localStorage에만 의존하면 탭이 안
-  // 열려있던 동안은 기록이 비게 되는 문제가 있었다).
+  // progress_history.json을 그대로 읽어서 보여준다. 이제 1단계(discovery-live)와
+  // 3단계(hwahae-live)가 서로 다른 브랜치에 각자 기록하므로, 둘 다 가져와서
+  // 시간순으로 합쳐서 보여준다.
   try {
-    const res = await fetch(RAW('output/progress_history.json'));
-    if (res.ok) {
-      const history = await res.json();
-      const log = history.slice().reverse().map((row) => ({
-        time: new Date(row.time_utc).toLocaleString('ko-KR'),
-        shops: row.shops,
-        products: row.products,
-        hwahae_done: row.hwahae_done,
-      }));
-      renderLog(log);
-    }
+    const [res1, res3] = await Promise.all([
+      fetch(RAW('output/progress_history.json', 'discovery-live')).catch(() => null),
+      fetch(RAW('output/progress_history.json', 'hwahae-live')).catch(() => null),
+    ]);
+    let combined = [];
+    if (res1 && res1.ok) combined = combined.concat(await res1.json());
+    if (res3 && res3.ok) combined = combined.concat(await res3.json());
+    combined.sort((a, b) => new Date(b.time_utc) - new Date(a.time_utc));
+    const log = combined.map((row) => ({
+      time: new Date(row.time_utc).toLocaleString('ko-KR'),
+      shops: row.shops,
+      products: row.products,
+      hwahae_done: row.hwahae_done,
+    }));
+    renderLog(log);
   } catch (e) { /* 서버 기록이 아직 없으면(구버전 저장소 등) 조용히 넘어감 */ }
 
   dot.className = 'dot ' + (hadError ? 'err' : 'ok');
