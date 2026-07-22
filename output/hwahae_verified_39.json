@@ -3424,5 +3424,69 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204456937",
+    "translated_kr": "[세트]유라덤크림+클리아틴외용액요소20%배합발꿈치·팔꿈치건성피부케어크림",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "코와 케라치나민코와 20% 요소 함유 크림｜요소 20% 함유로 거칠어진 피부를 촉촉하게 보습​ – Japan Drug"
+    },
+    "brand": null,
+    "name": "코와 케라치나민코와 20% 요소 함유 크림｜요소 20% 함유로 거칠어진 피부를 촉촉하게 보습​ – Japan Drug",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211677072",
+    "translated_kr": "부케가르니바디워시베이비파우더520mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "부케가르니 바디워시 베이비파우더향, , 2개",
+      "hwahae": "바디워시 [베이비파우더향]",
+      "naver": "[김채원 추천템] [샤워SET] 부케가르니 모이스처 바디워시 1.5L 3개+바디로션1.5L 1개"
+    },
+    "brand": "부케가르니 (BouquetGarni)",
+    "name": "바디워시 [베이비파우더향]",
+    "volume": "520ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29700",
+    "mall": "부케가르니",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10898233486",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8844273/88442739521.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8844273/88442739521.7.jpg",
+        "mall": "부케가르니",
+        "link": "https://smartstore.naver.com/main/products/10898233486"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880893/88808934414.jpg",
+        "mall": "부케가르니",
+        "link": "https://smartstore.naver.com/main/products/11264424083"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9042589/90425891541.1.jpg",
+        "mall": "부케가르니",
+        "link": "https://smartstore.naver.com/main/products/12881380549"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
