@@ -20692,5 +20692,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209383972",
+    "translated_kr": "라이트온 인샤워 바디 톤 업 290ml 바디 크림 로션 바디 케어 한국 코스메 데리케이트존 검은 점 칙칙함 피부색 보정 화이트닝",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203402766",
+    "translated_kr": "더 블루 펩타이드 박치올 세로 모공 세럼 50mL",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 50ml"
+    },
+    "brand": "코스알엑스",
+    "name": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "26040",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13622540312",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116705/91167050729.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116705/91167050729.1.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/13622540312"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116705/91167050730.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13622540313"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117964/91179640106.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/13635129425"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
