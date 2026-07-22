@@ -23128,5 +23128,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191723236",
+    "translated_kr": "화이트 티 진저 릴리 바디 크림 400ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림"
+    },
+    "brand": "엘리자베스아덴 (ElizabethArden)",
+    "name": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 60000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203745241",
+    "translated_kr": "스킨 컨디셔너 에센셜 330ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런싱 스킨 컨디셔너"
+    },
+    "brand": "마이에센스 (miessence)",
+    "name": "밸런싱 스킨 컨디셔너",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
