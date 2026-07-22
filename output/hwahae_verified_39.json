@@ -348,5 +348,79 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172085888",
+    "translated_kr": "COSRX 풀핏 프로폴리스 라이트앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Full fit Propolis Light Ampoule",
+      "hwahae": "풀핏 프로폴리스 라이트 앰플",
+      "naver": "코스알엑스 풀핏 프로폴리스 라이트 앰플 30ml, 2개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "37600",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6285657022",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6285657022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159512.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6285657023"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1161371182",
+    "translated_kr": "제니하우스 루트볼륨픽서 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "제니하우스 루트 볼륨 픽서",
+      "hwahae": "루트 볼륨 픽서",
+      "naver": "제니하우스 루트 볼륨 픽서 200ml, 2개"
+    },
+    "brand": "제니하우스 (jennyhouse)",
+    "name": "루트 볼륨 픽서",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26900",
+    "mall": "제니하우스 브랜드스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11100719998",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg",
+        "mall": "제니하우스 브랜드스토어",
+        "link": "https://smartstore.naver.com/main/products/11100719998"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707426/87074267541.7.jpg",
+        "mall": "제니하우스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9529765271"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
