@@ -10604,5 +10604,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180159852",
+    "translated_kr": "트리플에스약산성탈모샴푸275ml+275ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "트리플에스 약산성 탈모샴푸, , 1개",
+      "hwahae": "약산성 탈모샴푸"
+    },
+    "brand": "트리플에스 (SSS)",
+    "name": "약산성 탈모샴푸",
+    "volume": "275ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 8900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1173527990",
+    "translated_kr": "에클라뒤탕클래리파잉키트트러블민감피지조절토너부스터앰플젤에멀전",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "에끌라두 레스퍼레이션 앰플"
+    },
+    "brand": null,
+    "name": "에끌라두 레스퍼레이션 앰플",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
