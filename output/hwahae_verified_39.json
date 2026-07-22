@@ -15578,5 +15578,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1141816327",
+    "translated_kr": "와사비 수딩 마스크 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "와사비 수딩 마스크팩"
+    },
+    "brand": "미스드래곤 (MissDragon)",
+    "name": "와사비 수딩 마스크팩",
+    "volume": "30g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1141816688",
+    "translated_kr": "톤업 화이트 머드 마스크 3개입 x 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 스페셜 캡슐 마스크 [피부진정]"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 스페셜 캡슐 마스크 [피부진정]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
