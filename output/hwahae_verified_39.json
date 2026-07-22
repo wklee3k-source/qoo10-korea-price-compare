@@ -26915,5 +26915,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190175660",
+    "translated_kr": "마다가스카르 센텔라 앰플 55ml, 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190175438",
+    "translated_kr": "노세범 선쿠션 EX SPF50+ PA++++, 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "노세범 선쿠션 [SPF50+/PA++++]",
+      "naver": "이니스프리 노세범 선쿠션 이엑스 SPF50+/PA++++"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "노세범 선쿠션 [SPF50+/PA++++]",
+    "volume": "14g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18000",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=61694&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=innisfree",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4793482/47934824272.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4793482/47934824272.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=61694&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=innisfree"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
