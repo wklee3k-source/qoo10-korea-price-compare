@@ -25145,5 +25145,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1140265006",
+    "translated_kr": "【1+1】【한국 화장품】【정품 판매점】드레스 퍼퓸 패브릭 프레그런스 No.97 에이프릴 코튼 160ml - 2개 세트로 저렴하게!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "키세스 리퀴드 매트 [No.97 옥스블러드]"
+    },
+    "brand": "버버리 (BURBERRY)",
+    "name": "키세스 리퀴드 매트 [No.97 옥스블러드]",
+    "volume": "6ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1133810636",
+    "translated_kr": "【한국 화장품】【정품 판매점】[ATO樂] 인텐시브 크림 120ml - 심층 보습과 리페어 효과!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐시브 리페어 컨센트레이트 크림"
+    },
+    "brand": "뮤스템 (MUSTEM)",
+    "name": "인텐시브 리페어 컨센트레이트 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 64000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
