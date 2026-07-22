@@ -19635,5 +19635,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193433366",
+    "translated_kr": "【공식】 코나피딜 피니시로션 CONAPIDIL Finish Lotion 20g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193433359",
+    "translated_kr": "【공식】 악센다 루티너 aXENDA Routiner 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "루티너"
+    },
+    "brand": "악센다 (AXENDA)",
+    "name": "루티너",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 55000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
