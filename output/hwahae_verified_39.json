@@ -19883,5 +19883,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1161207715",
+    "translated_kr": "촉촉한 수분 보호 5종 히알루론산×녹차 보습 크림 50mL x3",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175249089",
+    "translated_kr": "더 세라마이드 스킨배리어 모이스처라이저 크림 80ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 세라마이드 스킨 베리어 모이스처라이저",
+      "naver": "코스알엑스 더 세라마이드 스킨 베리어 모이스처라이저 / 장벽보습로션 80ml, 1개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 세라마이드 스킨 베리어 모이스처라이저",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22500",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11582200570",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8912671/89126710976.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8912671/89126710976.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/11582200570"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
