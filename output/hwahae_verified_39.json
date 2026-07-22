@@ -1824,5 +1824,86 @@
         "link": "https://www.shinsegaetvshopping.com/display/detail/73539766?inMediaCode=EC12&ckwhere=naverep"
       }
     ]
+  },
+  {
+    "goods_no": "1212630238",
+    "translated_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "온더바디 46cm 체취케어 약산성 땀냄새 체취제거 등드름 데오드란트 ...",
+      "hwahae": "체취케어 데오드란트 바디워시 [시트러스향]",
+      "naver": "OY단독 대용량 46cm 체취 솔루션 데오드란트 바디워시 720ml 2종(클린솝/시트러스) 택1 720ml 시트러스향"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "volume": "600mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23100",
+    "mall": "로키비키",
+    "seller_trust": "미확인",
+    "product_url": "https://smartstore.naver.com/main/products/13675396221",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121990/91219907240.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121990/91219907240.jpg",
+        "mall": "로키비키",
+        "link": "https://smartstore.naver.com/main/products/13675396221"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113996/91139966448.jpg",
+        "mall": "카리스광클",
+        "link": "https://smartstore.naver.com/main/products/13595456036"
+      }
+    ]
+  },
+  {
+    "goods_no": "1210464824",
+    "translated_kr": "엘리자베카 콜라겐코팅 헤어A+ 머슬샴푸",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "콜라겐 코팅 헤어 A+ 머슬 샴푸 CER",
+      "hwahae": "콜라겐 코팅 헤어 A+ 머슬 샴푸",
+      "naver": "콜라겐 코팅 헤어 A+ 머슬 샴푸 500ml"
+    },
+    "brand": "엘리자베카 (Elizavecca)",
+    "name": "콜라겐 코팅 헤어 A+ 머슬 샴푸",
+    "volume": "500ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "엘리자베카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://elizavecca.com/goods/goods_view.php?goodsNo=986&inflow=naver",
+    "image_url": "https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg",
+        "mall": "엘리자베카",
+        "link": "https://elizavecca.com/goods/goods_view.php?goodsNo=986&inflow=naver"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5822719/58227195600.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8567625601&ctag=8567625601&lptag=I25175467251&itemId=25175467251&vendorItemId=92172584100&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5822692/58226929409.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8567625601&ctag=8567625601&lptag=I25175591143&itemId=25175591143&vendorItemId=92172702455&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5619544/56195441143.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8972758715&ctag=8972758715&lptag=I26263003420&itemId=26263003420&vendorItemId=93241290598&spec=10305199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116894/91168946497.jpg",
+        "mall": "BBCARE",
+        "link": "https://smartstore.naver.com/main/products/13624436034"
+      }
+    ]
   }
 ]
