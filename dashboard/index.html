@@ -452,6 +452,19 @@ function getGhToken() {
   return token ? token.trim() : '';
 }
 const GH_API = `https://api.github.com/repos/${REPO}/actions`;
+const GH_API_REPO = `https://api.github.com/repos/${REPO}`;
+
+async function ghFetchRepo(path, options = {}) {
+  const token = getGhToken();
+  return fetch(`${GH_API_REPO}${path}`, {
+    ...options,
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json',
+      ...(options.headers || {}),
+    },
+  });
+}
 
 // 각 단계가 어떤 job 이름에 대응하는지, 트리거시 어떤 input을 켜야 하는지
 const STAGE_JOB_MAP = {
@@ -652,9 +665,7 @@ async function loadAll() {
       if (cached && cacheAge < 5 * 60 * 1000) {
         archivedCount = cached.count;
       } else {
-        const listRes = await fetch(
-          `https://api.github.com/repos/${REPO}/contents/output/archive?ref=discovery-live`
-        );
+        const listRes = await ghFetchRepo(`/contents/output/archive?ref=discovery-live`);
         if (listRes.ok) {
           const files = await listRes.json();
           const archiveFetches = files
