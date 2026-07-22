@@ -21444,5 +21444,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1213108868",
+    "translated_kr": "【ENHYPEN 포토필름 랜덤 1종 증정】콘 선 세럼 50ml + 비피다 마스크팩 1매입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204124198",
+    "translated_kr": "【PARK JIHOON 포토카드 증정】NMN 텐션 업 선 세럼 50ml / NMN 파밍 엑스퍼트 앰플 50ml(1가지 선택)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "NMN 텐션 업 선세럼 [SPF50+/PA++++]"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "NMN 텐션 업 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
