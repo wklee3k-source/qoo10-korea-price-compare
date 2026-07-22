@@ -28552,5 +28552,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1133638835",
+    "translated_kr": "어드밴스드 로션 TI 리필용 150ml 토너 산뜻한 타입 리필 [기프트 래핑 대응]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "資生堂 エリクシール アドバンスド ローションT 詰替用"
+    },
+    "brand": null,
+    "name": "資生堂 エリクシール アドバンスド ローションT 詰替用",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210626598",
+    "translated_kr": "센즈(OCEAN TRICO SENZ) 스칼프 트리트먼트 330g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "センズ アンサートリートメント",
+      "hwahae": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트"
+    },
+    "brand": "아베다 (AVEDA)",
+    "name": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 66000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
