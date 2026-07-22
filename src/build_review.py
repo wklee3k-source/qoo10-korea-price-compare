@@ -172,7 +172,7 @@ def build_html(pairs: list[dict]):
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         trust = p.get("kr_seller_trust")
         trust_badge = (
-            f'<span class="badge {"match" if trust in ("공식몰", "브랜드직영추정", "신뢰채널") else "unknown"}">{trust or "판매처미확인"}</span>'
+            f'<span class="badge {"match" if trust in ("공식몰", "브랜드직영추정", "신뢰채널", "스마트스토어") else "unknown"}">{trust or "판매처미확인"}</span>'
             if trust else ""
         )
 
