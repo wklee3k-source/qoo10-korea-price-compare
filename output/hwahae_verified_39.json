@@ -8385,5 +8385,59 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191525100",
+    "translated_kr": "바이탈라이징로즈마리올인원워시500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "바이탈라이징 로즈마리 올인원 워시 500ML",
+      "hwahae": "바이탈라이징 로즈마리 올인원 워시",
+      "naver": "아로마티카 바이탈라이징 로즈마리 올인원 로션 300ML &amp; 리필 300ML 세트"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "바이탈라이징 로즈마리 올인원 워시",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37300",
+    "mall": "아로마티카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10673476138",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8821798/88217982050.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821798/88217982050.jpg",
+        "mall": "아로마티카",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10673476138"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210847470",
+    "translated_kr": "id PLACOSMETICS리얼애프터케어미스트120ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "리얼 애프터 케어 미스트"
+    },
+    "brand": null,
+    "name": "리얼 애프터 케어 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
