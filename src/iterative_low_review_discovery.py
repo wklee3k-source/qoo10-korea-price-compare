@@ -120,24 +120,26 @@ KEEP_RECENT = 200  # 강제정리시 메인 상태파일에는 최근 이 개수
 
 
 def _fetch_translated_goods() -> set:
-    """2단계(번역) 전용 브랜치(translate-live)에서 이미 번역완료된
-    goods_no 집합을 읽기전용으로 가져온다. 실패해도 빈 집합을 반환해서
-    (아무것도 아카이브 안 하는 안전한 방향으로) 크래시하지 않는다."""
-    import subprocess
+    """2단계(번역) 전용 브랜치(translate-live)의 hwahae_input_39.json이
+    로컬에 이미 받아져 있으면(워크플로가 미리 checkout해준 경우) 그걸
+    읽어서 번역완료 goods_no 집합을 반환한다.
 
+    [중요] 여기서 git subprocess(fetch/show)를 직접 호출하지 않는다 —
+    이 함수는 discover 스크립트 실행 중(즉 상위 셸 스크립트가 동시에
+    git add/commit/push를 수행 중일 수 있는 상황)에 호출되므로, 서브
+    프로세스로 git 명령을 또 실행하면 .git/index.lock 경합으로 양쪽이
+    서로 멈춰버릴 위험이 있다(실측으로 확인된 장애 원인). 대신 로컬에
+    파일이 이미 있으면만 읽고, 없으면 빈 집합을 반환해서 안전하게
+    건너뛴다(그래도 HARD_ARCHIVE_CEILING 안전장치는 계속 동작한다)."""
+    candidate = OUTPUT_DIR.parent / "output" / "hwahae_input_39.json"
+    if not candidate.exists():
+        # translate-live 체크아웃본이 아직 로컬에 없음 — 안전하게 건너뜀
+        return set()
     try:
-        subprocess.run(
-            ["git", "fetch", "origin", "translate-live"],
-            check=True, capture_output=True, timeout=30, cwd=str(OUTPUT_DIR.parent),
-        )
-        result = subprocess.run(
-            ["git", "show", "origin/translate-live:output/hwahae_input_39.json"],
-            check=True, capture_output=True, timeout=15, cwd=str(OUTPUT_DIR.parent),
-        )
-        translated = json.loads(result.stdout.decode("utf-8"))
+        translated = json.loads(candidate.read_text(encoding="utf-8"))
         return {x["goods_no"] for x in translated}
     except Exception as e:  # noqa: BLE001
-        print(f"[ARCHIVE] translate-live 조회 실패(아카이빙 건너뜀): {type(e).__name__}: {e}")
+        print(f"[ARCHIVE] 로컬 번역파일 읽기 실패(아카이빙 건너뜀): {type(e).__name__}: {e}")
         return set()
 
 
