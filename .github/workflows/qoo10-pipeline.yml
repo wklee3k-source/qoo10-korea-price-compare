@@ -394,7 +394,8 @@ jobs:
           print(f"[DONE] 총 {len(existing)}건")
           PYEOF
 
-          git add ../output/hwahae_input_39.json
+          python append_progress_history.py ../output
+          git add ../output/hwahae_input_39.json ../output/progress_history.json
           git diff --cached --quiet && exit 0
           git commit -m "Auto: batch-translated new products via Claude Haiku API"
           for i in 1 2 3; do

@@ -34,10 +34,16 @@ def append_snapshot(output_dir: str):
     if verified_path.exists():
         hwahae_done = len(json.loads(verified_path.read_text(encoding="utf-8")))
 
+    input_path = out_dir / "hwahae_input_39.json"
+    translated = None
+    if input_path.exists():
+        translated = len(json.loads(input_path.read_text(encoding="utf-8")))
+
     entry = {
         "time_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "shops": shops,
         "products": products,
+        "translated": translated,
         "hwahae_done": hwahae_done,
     }
     history.append(entry)
