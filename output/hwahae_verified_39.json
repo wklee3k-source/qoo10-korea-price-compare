@@ -12469,5 +12469,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151012307",
+    "translated_kr": "어성초포어컨트롤클렌징오일200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초 포어 컨트롤 클렌징오일",
+      "hwahae": "어성초 포어 컨트롤 클렌징오일"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 포어 컨트롤 클렌징오일",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172781112",
+    "translated_kr": "[3종세트/기획구성/부활초마스크팩1매증정]부활초바하토너200ml+부활초비피다세럼퍼밍드롭50ml+부활초크림뉴트리션튜브75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "부활초 비피다 세럼 퍼밍 드롭",
+      "hwahae": "부활초 비피다 세럼 퍼밍 드롭"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "부활초 비피다 세럼 퍼밍 드롭",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
