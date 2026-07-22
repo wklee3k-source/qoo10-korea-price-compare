@@ -19140,5 +19140,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212659125",
+    "translated_kr": "살롱10 프로테인 헤어 트리트먼트 극손상 헤어용 250ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "살롱 플러스 클리닉 10 트리트먼트 [극손상모발용]"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱 플러스 클리닉 10 트리트먼트 [극손상모발용]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212659970",
+    "translated_kr": "살롱10 프로테인 샴푸 손상 헤어용 990ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
