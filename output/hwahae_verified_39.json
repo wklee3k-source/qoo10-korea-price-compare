@@ -15879,5 +15879,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191354937",
+    "translated_kr": "[60매] 24K 골드 레티놀 아이 패치 눈 주위 케어 안티에이징 주름 탄력 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "눈",
+      "naver": "다이아프리티 골드 24K 스네일 올 데이 아이패치 (60매)"
+    },
+    "brand": "TWW (타임웍스원더스)",
+    "name": "눈",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "다이아프리티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13280035686",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9082454/90824546018.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082454/90824546018.3.jpg",
+        "mall": "다이아프리티",
+        "link": "https://smartstore.naver.com/main/products/13280035686"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8836982/88369822237.jpg",
+        "mall": "로로스키니 브랜드",
+        "link": "https://smartstore.naver.com/main/products/10825316224"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191354082",
+    "translated_kr": "[60매] 비타민C 나이아신아마이드 아이 패치 눈 주위 팩 눈 아래 팩 트라넥삼산 히알루론산 촉촉함 보습 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "눈"
+    },
+    "brand": "TWW (타임웍스원더스)",
+    "name": "눈",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
