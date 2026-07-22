@@ -26323,5 +26323,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191589263",
+    "translated_kr": "토탈 솔루션 24K 골드 스네일 필링 젤 (150ml×3개)+마스크팩 증정/데일리 각질 케어/한국 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1131394723",
+    "translated_kr": "무드 페블 하드너 7ml 4종 매니큐어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "무드 페블 하드너 [01 코팅밀크]",
+      "naver": "[롬앤] 무드 페블 하드너 PN"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "무드 페블 하드너 [01 코팅밀크]",
+    "volume": "7ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6400",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4153130?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4915868/49158680364.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4915868/49158680364.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4153130?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5056538/50565381502.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=141572372&shop_id=14039&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
