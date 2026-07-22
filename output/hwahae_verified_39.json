@@ -9186,5 +9186,60 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1184898677",
+    "translated_kr": "순정디렉터톤업코렉팅선크림SPF50+PA++++40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에뛰드 순정 디렉터 톤업 수정 선크림 |",
+      "hwahae": "순정 디렉터 톤업 수정 선크림 [SPF50+/PA++++]",
+      "naver": "에뛰드 순정디렉터 톤업 핑크 선크림 SPF50+/PA++++"
+    },
+    "brand": "에뛰드 (ETUDE)",
+    "name": "순정 디렉터 톤업 수정 선크림 [SPF50+/PA++++]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17500",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=69222&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=etude",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5948877/59488775615.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5948877/59488775615.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=69222&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=etude"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185790423",
+    "translated_kr": "LPT케라틴리페어노워시트리트먼트70ml/안씻어내는헤어팩/고농축단백질",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "MUSINSA",
+      "hwahae": "LPT 케라틴 리페어 트리트먼트"
+    },
+    "brand": "달리프 (Daleaf)",
+    "name": "LPT 케라틴 리페어 트리트먼트",
+    "volume": "230ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
