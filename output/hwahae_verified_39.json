@@ -13124,5 +13124,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210182731",
+    "translated_kr": "내추럴올인원커버로션50g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205550642",
+    "translated_kr": "EGFx다운타임마스크팩4매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "EGFx 시그널 에센스"
+    },
+    "brand": "이지듀 (Easydew)",
+    "name": "EGFx 시그널 에센스",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 99000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
