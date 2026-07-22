@@ -18696,5 +18696,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1174945980",
+    "translated_kr": "나이아신아마이드 10 TXA 4 다크스팟 컬렉션 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202768424",
+    "translated_kr": "포어+다크스팟 브라이트닝 세럼 30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "셀리맥스"
+    },
+    "brand": null,
+    "name": "셀리맥스",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
