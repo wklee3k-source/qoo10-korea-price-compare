@@ -25364,5 +25364,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210626598",
+    "translated_kr": "센즈 (OCEAN TRICO SENZ) 스칼프 트리트먼트 330g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트"
+    },
+    "brand": "아베다 (AVEDA)",
+    "name": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 66000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197910915",
+    "translated_kr": "엘릭시르 슈페리엘 데이케어 레볼루션 톤업 BE+ca 퓨어 베이지 주간용 미용액 SPF50+PA++++ 35g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "24H 밀착 커버 쿠션 [SPF50+/PA++++] [No.23 베이지]"
+    },
+    "brand": "베베코 (BE'BE'CO)",
+    "name": "24H 밀착 커버 쿠션 [SPF50+/PA++++] [No.23 베이지]",
+    "volume": "15g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
