@@ -28140,5 +28140,57 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1141964078",
+    "translated_kr": "슬리핑 코팩 캐밍 4장",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "동국제약 마데캄 슬리핑 코팩"
+    },
+    "brand": "동국제약",
+    "name": "동국제약 마데캄 슬리핑 코팩",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "11500",
+    "mall": "동국제약 팜스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13586329974",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113084/91130840386.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113084/91130840386.1.jpg",
+        "mall": "동국제약 팜스토어",
+        "link": "https://smartstore.naver.com/main/products/13586329974"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5645810/56458103016.2.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000226627"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1174362545",
+    "translated_kr": "브라이트닝 모공 저그 티 팩 본품 40장+10장(추가 증정)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
