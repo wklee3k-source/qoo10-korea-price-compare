@@ -14963,5 +14963,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1196192763",
+    "translated_kr": "데오드란트롤온50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개"
+    },
+    "brand": "보로탈코",
+    "name": "보로탈코 누오바 데오드란트 롤온 오리지널 50ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "12000",
+    "mall": "보로탈코",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13074261482",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061877/90618772574.2.jpg",
+        "mall": "보로탈코",
+        "link": "https://smartstore.naver.com/main/products/13074261482"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196187986",
+    "translated_kr": "프로티니폴리펩타이드크림50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
