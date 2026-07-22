@@ -1693,5 +1693,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204188494",
+    "translated_kr": "어성초시카쿨링수분크림100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어성초시카 쿨링 수분 크림",
+      "hwahae": "어성초시카 쿨링 수분 크림"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "어성초시카 쿨링 수분 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1129379625",
+    "translated_kr": "MEGA[토리든]다이브인워터리모이스처선크림60ml SPF50+PA++++자외선차단제",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "NEW ARRIVAL"
+    },
+    "brand": null,
+    "name": "NEW ARRIVAL",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
