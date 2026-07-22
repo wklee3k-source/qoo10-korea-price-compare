@@ -29190,5 +29190,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1213426114",
+    "translated_kr": "실키 벨벳 브라이트 부스팅 바디워시 750ml / 색소침착 케어 / 윤기 피부 / 약산성 /톤 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "바디언스 실키벨벳 브라이트 부스팅 향좋은 바디워시 750ml 피부톤케어 칙칙한 피부용"
+    },
+    "brand": "바디언스",
+    "name": "바디언스 실키벨벳 브라이트 부스팅 향좋은 바디워시 750ml 피부톤케어 칙칙한 피부용",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24800",
+    "mall": "바디언스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://bodiance.net/product/detail.html?product_no=86&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6019226/60192262057.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6019226/60192262057.2.jpg",
+        "mall": "바디언스",
+        "link": "https://bodiance.net/product/detail.html?product_no=86&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1167458044",
+    "translated_kr": "[대인기 신상품] 마인드오버바디 핑크 버블 클럽 프루티 플로랄 향 복숭아 향 금목서 향 살구 향 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
