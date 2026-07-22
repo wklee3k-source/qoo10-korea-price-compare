@@ -3747,5 +3747,69 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193643034",
+    "translated_kr": "[정품]콜라겐나이트랩핑마스크75ml+브러시",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "메디큐브 콜라겐 나이트 랩핑 마스크 (+ ..."
+    },
+    "brand": null,
+    "name": "메디큐브 콜라겐 나이트 랩핑 마스크 (+ ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212001366",
+    "translated_kr": "딜런퍼플팜므EDP SP100ml[테스터][향수여성용]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "핸드크림+베르사체 뿌르 팜므 딜런 퍼플 EDP 테스터",
+      "hwahae": "뿌르 팜므 딜런 EDP [퍼플]",
+      "naver": "[여자향수] 베르사체 뿌르 팜므 딜런 퍼플 EDP 100ml"
+    },
+    "brand": "베르사체 (VERSACE)",
+    "name": "뿌르 팜므 딜런 EDP [퍼플]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "122850",
+    "mall": "베르사체/엣킨슨 퍼퓸",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13322350966",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9086686/90866861298.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9086686/90866861298.1.jpg",
+        "mall": "베르사체/엣킨슨 퍼퓸",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13322350966"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101655/91016556725.jpg",
+        "mall": "베르사체/엣킨슨 퍼퓸",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13472046373"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085357/90853573590.2.jpg",
+        "mall": "베르사체/엣킨슨 퍼퓸",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13309063258"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
