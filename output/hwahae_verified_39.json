@@ -8746,5 +8746,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212606720",
+    "translated_kr": "콜라겐젤리세럼미스트,50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "바이오던스 콜라겐 펩타이드 젤리 세럼 미스트"
+    },
+    "brand": null,
+    "name": "바이오던스 콜라겐 펩타이드 젤리 세럼 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211961379",
+    "translated_kr": "셀메이징콜라겐포어앰플,30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "셀메이징 저분자 콜라겐 모공 탄력앰플",
+      "hwahae": "셀메이징 저분자 콜라겐 모공 탄력 앰플"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 모공 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
