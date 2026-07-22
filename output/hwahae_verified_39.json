@@ -12168,5 +12168,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1189385392",
+    "translated_kr": "[마일드]제로모공패드마일드70매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로모공패드 [마일드]"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로모공패드 [마일드]",
+    "volume": "155g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210576443",
+    "translated_kr": "코지산비타젤리세럼미스트,100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
