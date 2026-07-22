@@ -1205,5 +1205,100 @@
         "link": "https://smartstore.naver.com/main/products/11804548175"
       }
     ]
+  },
+  {
+    "goods_no": "1175263787",
+    "translated_kr": "토리든 밸런스풀 시카오일컨트롤 선스틱 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토리든 밸런스풀 포맨 시카 오일 컨트롤 선스틱 ...",
+      "hwahae": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
+      "naver": "오늘할인 토리든 밸런스풀 포맨 시카 오일 컨트롤 선스틱 20g 기획(+이상해씨 러기지택 올인원 20g)"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
+    "volume": "20g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26510",
+    "mall": "11번가",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9429115310&tid=1000000061",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6045280/60452806266.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6045280/60452806266.jpg",
+        "mall": "11번가",
+        "link": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9429115310&tid=1000000061"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5949245/59492457798.20260402110706.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/59492457798"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110306/91103062943.jpg",
+        "mall": "KILO RUNNING",
+        "link": "https://smartstore.naver.com/main/products/13558552576"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117108/91171089930.jpg",
+        "mall": "별별올리브",
+        "link": "https://smartstore.naver.com/main/products/13626579321"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084206/90842067879.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13297557547"
+      }
+    ]
+  },
+  {
+    "goods_no": "1209710276",
+    "translated_kr": "La'dor 퍼퓸헤어샴푸 530ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "아도르 퍼퓸 헤어 샴푸 530+ 기획 라피타",
+      "naver": "퍼퓸 헤어 샴푸 530ml"
+    },
+    "brand": "아도르",
+    "name": "퍼퓸 헤어 샴푸 530ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29000",
+    "mall": "아도르공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://lador.co.kr/product/detail.html?product_no=390&cate_no=82&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg",
+        "mall": "아도르공식몰",
+        "link": "https://lador.co.kr/product/detail.html?product_no=390&cate_no=82&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956085/89560854101.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/12016343409"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956089/89560891334.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/12016380642"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119133/91191336798.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/13646826019"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5907894/59078949694.1.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=F492836817&sub-id=1&service-code=10000003"
+      }
+    ]
   }
 ]
