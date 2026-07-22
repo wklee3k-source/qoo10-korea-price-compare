@@ -24382,5 +24382,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203285017",
+    "translated_kr": "[Ultra Xecond Ski] 퍼펙트 누드 투명 선 패치(골프 선 패치) 10회분(총 20장) UVA&UVB 강력 차단/자외선 차단 패치/골프 패치/테니스/야외 스포츠/자외선",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Ultra Xecond Skin Perfect Nude Sun Patch",
+      "hwahae": "UVA/UVB 디펜스 [SPF50+]"
+    },
+    "brand": "세타필 (Cetaphil)",
+    "name": "UVA/UVB 디펜스 [SPF50+]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194293129",
+    "translated_kr": "나이아신아마이드 20 세럼 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "나이아신아마이드 20 세럼",
+      "hwahae": "나이아신아마이드 20% 세럼"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "나이아신아마이드 20% 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 6000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
