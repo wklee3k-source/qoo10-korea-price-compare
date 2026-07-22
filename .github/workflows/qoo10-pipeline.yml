@@ -214,6 +214,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
     runs-on: ubuntu-latest
     timeout-minutes: 300
+    concurrency:
+      group: discover-parallel-branch-${{ matrix.branch }}
+      cancel-in-progress: false
     strategy:
       matrix:
         branch: [0, 1, 2, 3]
@@ -336,6 +339,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && inputs.run_merge_discovery
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    concurrency:
+      group: merge-discovery-shards-queue
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
 
