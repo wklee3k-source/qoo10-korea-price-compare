@@ -26930,5 +26930,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1141203372",
+    "translated_kr": "봄의 식사는 최고의 포슬 인형 코스튬_춘식",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "카카오프렌즈 춘식이는 최고양 포슬인형 코스튬"
+    },
+    "brand": null,
+    "name": "카카오프렌즈 춘식이는 최고양 포슬인형 코스튬",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1044673087",
+    "translated_kr": "미라클 카밍 밤 크림 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "르네셀 미라클 카밍밤 크림",
+      "hwahae": "미라클 카밍밤 크림"
+    },
+    "brand": "르네셀 (Rene-Cell)",
+    "name": "미라클 카밍밤 크림",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
