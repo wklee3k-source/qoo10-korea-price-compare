@@ -29851,5 +29851,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1064225701",
+    "translated_kr": "닥터 펩티 인텐시브 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐시브 크림",
+      "naver": "닥터펩티 인텐시브 크림 EX 100ml, 1개"
+    },
+    "brand": "닥터펩티 (DR.PEPTI)",
+    "name": "인텐시브 크림",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "68900",
+    "mall": "닥터펩티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2663021550",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8016076/80160765222.18.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8016076/80160765222.18.jpg",
+        "mall": "닥터펩티",
+        "link": "https://smartstore.naver.com/main/products/2663021550"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8022476/80224760131.18.jpg",
+        "mall": "닥터펩티",
+        "link": "https://shopping.naver.com/outlink/itemdetail/2727016384"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1089870107",
+    "translated_kr": "카카오 프렌즈 비행 고고스 자동차용 향기_라이언",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
