@@ -10002,5 +10002,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1200523478",
+    "translated_kr": "셀메이징콜라겐젤마스크,10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "셀메이징 저분자 콜라겐 모공 탄력 마스크 10매",
+      "hwahae": "셀메이징 저분자 콜라겐 탄력 겔 마스크"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 탄력 겔 마스크",
+    "volume": "45g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 7500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203428079",
+    "translated_kr": "페이스팩,시트마스크대용량개별포장,비타민C히알루론산에센스마스크,시원한냉감모공케어,여름용시원한스킨케어,아침팩페이스마스크",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "크라이오 러버™ 모이스처 마스크"
+    },
+    "brand": null,
+    "name": "크라이오 러버™ 모이스처 마스크",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
