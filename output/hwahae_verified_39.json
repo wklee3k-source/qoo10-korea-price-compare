@@ -19384,5 +19384,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192209159",
+    "translated_kr": "실루엣 헤어 팰팜 68ml 기획 2종 택 1",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "퍼퓸 헤어미스트 듀오세트 택1"
+    },
+    "brand": null,
+    "name": "퍼퓸 헤어미스트 듀오세트 택1",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206600283",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아누아 피디알엔 히알루론산 수분 캡슐 미스트 ...",
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
