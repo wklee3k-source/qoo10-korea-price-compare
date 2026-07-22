@@ -12246,5 +12246,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210181174",
+    "translated_kr": "[정품]PDRN콜라겐멜팅넥패치4매/목전용집중케어/탄력·보습동시케어/피부에밀착되는넥패치",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PDRN Collagen Melting Patch For Neck 4ea"
+    },
+    "brand": null,
+    "name": "PDRN Collagen Melting Patch For Neck 4ea",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209246381",
+    "translated_kr": "[140ml][정품]AGE-R글루타치온글로우토너140ml/촉촉함&윤기케어/매일보습화장수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이지알 글루타치온 글로우 토너",
+      "hwahae": "에이지알 부스터 젤"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 부스터 젤",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
