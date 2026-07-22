@@ -162,7 +162,7 @@ def build_html(pairs: list[dict]):
             kr_site_text += f" · {p['kr_mall']}"
 
         cards_html.append(f'''
-<div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="{esc(p['kr_name'])}" data-kr-site="{esc(kr_site_text)}">
+<div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
   <div class="side">
     <h3>큐텐 원본</h3>
     <div class="mainrow">{qoo10_img_html}</div>
@@ -175,7 +175,8 @@ def build_html(pairs: list[dict]):
   <div class="side">
     <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
-    <div class="name">{p['kr_brand'] or ''} {p['kr_name'] or ''} {('(' + p['kr_volume'] + ')') if p.get('kr_volume') else ''}</div>
+    <div class="name-label">한글 상품명(수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(p['kr_brand'] or '')} {esc(p['kr_name'] or '')} {('(' + esc(p['kr_volume']) + ')') if p.get('kr_volume') else ''}</textarea>
     <div class="price">{p['kr_price'] or '-'} 원</div>
     <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
   </div>
