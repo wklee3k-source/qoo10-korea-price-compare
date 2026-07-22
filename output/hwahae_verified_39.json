@@ -536,5 +536,101 @@
         "link": "https://search.shopping.naver.com/catalog/51929236188"
       }
     ]
+  },
+  {
+    "goods_no": "1172085888",
+    "translated_kr": "COSRX 풀핏 프로폴리스 라이트앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Full fit Propolis Light Ampoule",
+      "hwahae": "풀핏 프로폴리스 라이트 앰플",
+      "naver": "코스알엑스 풀핏 프로폴리스 라이트 앰플 30ml, 2개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "37600",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6285657022",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6285657022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383015/83830159512.13.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6285657023"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192925/51929250079.20241213210355.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929250079"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192957/51929573677.20241213221224.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929573677"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986551/89865510048.jpg",
+        "mall": "데일리케어샵",
+        "link": "https://smartstore.naver.com/main/products/12320999331"
+      }
+    ]
+  },
+  {
+    "goods_no": "1161371182",
+    "translated_kr": "제니하우스 루트볼륨픽서 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "제니하우스 코스메틱",
+      "hwahae": "루트 볼륨 픽서",
+      "naver": "제니하우스 루트 볼륨 픽서 200ml, 2개"
+    },
+    "brand": "제니하우스 (jennyhouse)",
+    "name": "루트 볼륨 픽서",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26900",
+    "mall": "제니하우스 브랜드스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11100719998",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg",
+        "mall": "제니하우스 브랜드스토어",
+        "link": "https://smartstore.naver.com/main/products/11100719998"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707426/87074267541.7.jpg",
+        "mall": "제니하우스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9529765271"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5649784/56497840982.20250829105615.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/56497840982"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5698786/56987868625.20260621081420.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/56987868625"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881001/88810015210.jpg",
+        "mall": "모 두 모 아",
+        "link": "https://smartstore.naver.com/main/products/11265504879"
+      }
+    ]
   }
 ]
