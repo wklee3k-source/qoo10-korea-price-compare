@@ -7545,5 +7545,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199093657",
+    "translated_kr": "[전국배송비무료]카라타스샴푸히트케어250ml블랙화이트자스민",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "kerasys 닥터루티어 자스민향 탈모 샴푸 블랙포레 60ML 추가"
+    },
+    "brand": null,
+    "name": "kerasys 닥터루티어 자스민향 탈모 샴푸 블랙포레 60ML 추가",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1177950809",
+    "translated_kr": "포도당하이드로에센스토너,500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "포도당 하이드로 에센스 토너",
+      "hwahae": "포도당 하이드로 에센스토너"
+    },
+    "brand": "파티온 (FATION)",
+    "name": "포도당 하이드로 에센스토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
