@@ -18157,5 +18157,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1117984435",
+    "translated_kr": "러시 더티 셰이빙크림 225g 셰이빙크림 정품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "쉐이빙 크림 [더티]"
+    },
+    "brand": "러쉬 (LUSH)",
+    "name": "쉐이빙 크림 [더티]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1114435383",
+    "translated_kr": "기모노 유이 퍼퓸드 바디로션 (200mL) 【점두 동일한 국내정품】",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
