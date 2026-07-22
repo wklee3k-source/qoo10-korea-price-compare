@@ -24336,5 +24336,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1089749665",
+    "translated_kr": "프로테러 비 벨벳 커버 쿠션 13g + 퍼프 22호 페탈",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에스쁘아 프로테일러 비벨벳 커버 쿠션 파운데이션 뉴클래스 ...",
+      "hwahae": "프로테일러 비벨벳 커버 쿠션 뉴클래스 [SPF34/PA++] [22호 페탈]"
+    },
+    "brand": "에스쁘아 (espoir)",
+    "name": "프로테일러 비벨벳 커버 쿠션 뉴클래스 [SPF34/PA++] [22호 페탈]",
+    "volume": "13g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1082146721",
+    "translated_kr": "[비건 인증]다마팩토리 히알루론산 3% 세럼(히알루론산 1% 세럼) 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비건인증 히알루론 3% 세럼",
+      "hwahae": "히알루론 3% 세럼"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "히알루론 3% 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 9000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
