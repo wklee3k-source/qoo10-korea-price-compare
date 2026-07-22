@@ -3149,5 +3149,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195778590",
+    "translated_kr": "안텔리오스선플루이드50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "안뗄리오스 선 플루이드",
+      "hwahae": "안뗄리오스 선 플루이드 [SPF50+/PA++++]"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "안뗄리오스 선 플루이드 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1118600402",
+    "translated_kr": "[정품]마데카크림타임리버스,50ml,2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "센텔리안24 마데카크림 타임리버스 2개 / 240시간 보습",
+      "hwahae": "마데카크림 타임리버스"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "마데카크림 타임리버스",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
