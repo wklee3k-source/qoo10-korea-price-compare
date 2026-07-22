@@ -7012,5 +7012,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192519528",
+    "translated_kr": "녹두클레이마스크팩,120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비플레인 녹두 모공 클레이 팩",
+      "hwahae": "녹두 모공 클레이 팩"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 모공 클레이 팩",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211134600",
+    "translated_kr": "[NEW]쉐이킹미스트",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "쉐이킹 세럼 미스트 써니 글로우"
+    },
+    "brand": null,
+    "name": "쉐이킹 세럼 미스트 써니 글로우",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
