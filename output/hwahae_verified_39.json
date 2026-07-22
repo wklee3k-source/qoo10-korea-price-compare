@@ -6612,5 +6612,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1173118335",
+    "translated_kr": "[Qoo10더블한정기획]다이브인저분자히알루론산세럼50ml+리필50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토리든 다이브인 저분자 히알루론산 ...",
+      "hwahae": "다이브인 저분자 히알루론산 세럼",
+      "naver": "[NEW/1등수분세럼] 토리든 다이브인 저분자 히알루론산 세럼 50ml 리필 기획(+리필 50ml)"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "36000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258291",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6041917/60419172729.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6041917/60419172729.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258291"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1097995675",
+    "translated_kr": "루비셀최신진짜보호마일드라인밀크50ml강력하고순수한데일리라인밀크50+",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "프로텍션 마일드 선 밀크"
+    },
+    "brand": null,
+    "name": "프로텍션 마일드 선 밀크",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
