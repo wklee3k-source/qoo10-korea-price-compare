@@ -14732,5 +14732,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208808866",
+    "translated_kr": "이론레드시그널부스터30ml/진정부스터",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "레드 시그널 부스터"
+    },
+    "brand": null,
+    "name": "레드 시그널 부스터",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212751653",
+    "translated_kr": "[2개세트]리쥬양PDRN10000크림30ml+주베크르PDLLA10000+크림30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "쥬베룩스킨케어",
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
