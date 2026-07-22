@@ -18651,5 +18651,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165983721",
+    "translated_kr": "1+1 마다가스카르 센텔라 히알루 시카 실키 핏 선스틱 20g SPF50+",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 히알루",
+      "hwahae": "마다가스카르 센텔라 히알루-시카 실키핏 선 스틱 [SPF50+/PA++++]"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 실키핏 선 스틱 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191147845",
+    "translated_kr": "더 비타 A 레티널 샷 타이트닝 부스터 15ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터"
+    },
+    "brand": null,
+    "name": "셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
