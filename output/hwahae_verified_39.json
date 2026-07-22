@@ -10952,5 +10952,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202885059",
+    "translated_kr": "콜라겐리프팅마스크10매/탄력UP!조임케어로탱글윤기피부로",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1142414100",
+    "translated_kr": "더마힐러모이스처트리트먼트앰플30mL에센스스킨케어한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[라운지 단독] 리쥬란 더마 힐러 모이스처 트리트먼트 앰플 30mL 2개 + 더마 힐러 에센스 70g 1개 SET"
+    },
+    "brand": "리쥬란",
+    "name": "[라운지 단독] 리쥬란 더마 힐러 모이스처 트리트먼트 앰플 30mL 2개 + 더마 힐러 에센스 70g 1개 SET",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "96000",
+    "mall": "리쥬란 코스메틱",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11734768600",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8927927/89279279099.22.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927927/89279279099.22.jpg",
+        "mall": "리쥬란 코스메틱",
+        "link": "https://smartstore.naver.com/main/products/11734768600"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
