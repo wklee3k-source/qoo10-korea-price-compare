@@ -17491,5 +17491,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1145110612",
+    "translated_kr": "131 포어 세럼, 30ml 【한국 올리브영 구매대행】",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "131ポアセラム"
+    },
+    "brand": null,
+    "name": "131ポアセラム",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190305789",
+    "translated_kr": "RX 더 나이아신아마이드15 세럼, 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스알엑스 더 나이아신아마이드 15 세럼, , 1개",
+      "hwahae": "더 나이아신아마이드 15 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 나이아신아마이드 15 세럼",
+    "volume": "20mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
