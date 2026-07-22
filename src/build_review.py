@@ -47,6 +47,23 @@ def extract_volume_ml(text: str) -> float | None:
     return num * 1000 if unit == "l" else num
 
 
+def extract_quantity(text: str) -> int:
+    """제목/상품명에서 실제 수량(묶음개수)을 추출한다(한글 상품명에 개수를
+    명시적으로 표시하기 위함)."""
+    if not text:
+        return 1
+    text_wo_choice = re.sub(r"\d+種(類)?から\d+つ選択", "", text)
+    m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)
+    if m:
+        return int(m.group(1)) + int(m.group(2))
+    m = re.search(r"(\d+)\s*(個|개|매|입|병|枚|本|장)\b", text_wo_choice)
+    if m:
+        return int(m.group(1))
+    if re.search(r"세트|SET|Set|1\+1", text_wo_choice):
+        return 2
+    return 1
+
+
 def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
@@ -106,11 +123,13 @@ def build_pairs():
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
         stats["ok"] += 1
+        kr_qty = extract_quantity(x.get("name") or "")
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": x.get("name"), "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
+            "kr_qty": kr_qty,
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
@@ -176,7 +195,7 @@ def build_html(pairs: list[dict]):
     <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(수정가능):</div>
-    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(p['kr_brand'] or '')} {esc(p['kr_name'] or '')} {('(' + esc(p['kr_volume']) + ')') if p.get('kr_volume') else ''}</textarea>
+    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(p['kr_brand'] or '')} {esc(p['kr_name'] or '')} {('(' + esc(p['kr_volume']) + ')') if p.get('kr_volume') else ''} {('x' + str(p['kr_qty']) + '개') if p.get('kr_qty', 1) > 1 else ''}</textarea>
     <div class="price">{p['kr_price'] or '-'} 원</div>
     <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
   </div>
