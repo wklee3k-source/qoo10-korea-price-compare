@@ -24801,5 +24801,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1134145881",
+    "translated_kr": "【메가 할인 특가】프로바이오더름 3D 리프팅 L-PDRN 크림 50ml/boh/PROBIODERM 3D Lifting L-PDRN Cream/PDRN",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1145562017",
+    "translated_kr": "【한국 코스메】【정품 취급점】인테카 수딩 크림 80ml(+크림 31ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인테카 수딩 크림"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 수딩 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
