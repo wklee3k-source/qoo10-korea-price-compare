@@ -22430,5 +22430,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1186048420",
+    "translated_kr": "브로우 칼라(애쉬 브라운/베이지 브라운) 20g+(3g*6ea) :: 눈썹 브리치 / 눈썹 탈색 / 눈썹 컬러링 / 눈썹",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "컬러링 아이브로우 [01 브라운]",
+      "naver": "에뛰드 [NEW COLOR] 드로잉 아이즈 컬러링 브로우카라"
+    },
+    "brand": "스쿠 (SUQQU)",
+    "name": "컬러링 아이브로우 [01 브라운]",
+    "volume": "5.4g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6750",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=68469&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=etude",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5875370/58753707716.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5875370/58753707716.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=68469&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=etude"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5834887/58348874741.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=159061915&shop_id=20400&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142533414",
+    "translated_kr": "모이스트풀 콜라겐 미용액(에센스) 80ml :: 보습 미용액 / 건성피부 / 슈퍼 콜라겐 / 바오밥 과실 에센스",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
