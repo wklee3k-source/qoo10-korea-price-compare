@@ -23697,5 +23697,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193627470",
+    "translated_kr": "[SKIN_1004] 30ml 센텔라 레티놀 매트릭실 나이아신아마이드 부스팅 샷 앰플",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 매트릭실 10 부스팅샷 앰플"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 매트릭실 10 부스팅샷 앰플",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1057581010",
+    "translated_kr": "[Isn tree] 히알루론산 워터 선 젤 크림 스틱 SPF50+ PA++++ 히알루론산 워터 선 젤 크림 스틱",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히아루론산 워터리 선 젤 [SPF50+/PA++++]"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "히아루론산 워터리 선 젤 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
