@@ -11604,5 +11604,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1196026663",
+    "translated_kr": "톤업마스크5개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203766483",
+    "translated_kr": "워터프루프서핑선스틱20g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "부쉬맨 워터프루프 서핑 선스틱 SPF50+ PA++++ 20g, 2개"
+    },
+    "brand": "부쉬맨",
+    "name": "부쉬맨 워터프루프 서핑 선스틱 SPF50+ PA++++ 20g, 2개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "33900",
+    "mall": "부쉬맨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11572716180",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8911722/89117226586.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8911722/89117226586.5.jpg",
+        "mall": "부쉬맨",
+        "link": "https://smartstore.naver.com/main/products/11572716180"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8911722/89117226585.5.jpg",
+        "mall": "부쉬맨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11572716179"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
