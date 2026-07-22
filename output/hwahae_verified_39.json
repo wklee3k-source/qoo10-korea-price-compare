@@ -13966,5 +13966,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206535411",
+    "translated_kr": "[정품]EGFx다운타임오인트젤15ml기획(+크림7ml)+크림60ml기획(+오인트젤5ml)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[트러블SOS진정]이지듀 EGFx 다운타임 오인트 겔 15ml 기획(+크림 7ml)"
+    },
+    "brand": "이지듀",
+    "name": "[트러블SOS진정]이지듀 EGFx 다운타임 오인트 겔 15ml 기획(+크림 7ml)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250106",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6020805/60208056873.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6020805/60208056873.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250106"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1171110246",
+    "translated_kr": "[1+1]더블세럼올인원멀티밤10g+10g/1초스윽케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
