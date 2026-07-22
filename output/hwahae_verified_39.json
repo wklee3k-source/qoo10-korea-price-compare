@@ -19056,5 +19056,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165169271",
+    "translated_kr": "[미니 퍼퓸/시나모롤 키링 증정] 퍼퓸 미스트 94ml 10종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "바디판타지 퍼퓸 미스트 10종 택 1",
+      "hwahae": "퍼퓸 헤어 미스트 [10 꿀먹은자몽]"
+    },
+    "brand": "라모수 (RAMOSU)",
+    "name": "퍼퓸 헤어 미스트 [10 꿀먹은자몽]",
+    "volume": "90ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165634740",
+    "translated_kr": "헤어 쉴드 (헤어 픽서/스프레이 분사형)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "유리카 헤어실드",
+      "hwahae": "퍼펙트 쉴드 노워시 헤어 트리트먼트 밤"
+    },
+    "brand": "머지 (MERZY)",
+    "name": "퍼펙트 쉴드 노워시 헤어 트리트먼트 밤",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 15900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
