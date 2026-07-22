@@ -4764,5 +4764,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188994112",
+    "translated_kr": "콜라겐드림올인원래디언스톤업크림50ml2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "콜라겐 드림 올인원 래디언스 톤 업 크림 (미백",
+      "hwahae": "콜라겐 드림 50 올인원 래디언스 톤 업 크림",
+      "naver": "주름개선 탄력 네이처리퍼블릭 콜라겐 드림 올인원 래디언스 톤업 크림 50ml"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "콜라겐 드림 50 올인원 래디언스 톤 업 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14900",
+    "mall": "네이처리퍼블릭",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5301992339",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8284648/82846484705.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8284648/82846484705.6.jpg",
+        "mall": "네이처리퍼블릭",
+        "link": "https://smartstore.naver.com/main/products/5301992339"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177099755",
+    "translated_kr": "오드퍼퓸타입선택1",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "아비브 오 드 퍼퓸 타입 N -"
+    },
+    "brand": null,
+    "name": "아비브 오 드 퍼퓸 타입 N -",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
