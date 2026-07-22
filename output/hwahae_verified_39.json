@@ -19863,5 +19863,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1145971932",
+    "translated_kr": "[1+1] 시카 카밍 크림 50ml 2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "'VT 시카 카밍 크림, , 2개' 최저가 검색, 최저가 15,730원"
+    },
+    "brand": null,
+    "name": "'VT 시카 카밍 크림, , 2개' 최저가 검색, 최저가 15,730원",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1160365138",
+    "translated_kr": "RGIII 레드 진삼 스칼프 샴푸 300ml + 헤어 팩 200ml 스칼프 & 헤어 집중 케어 세트 홍삼 고영양 케어 탈모 대책",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "RGIII 레드진생 스칼프 샴푸, 1개,",
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
