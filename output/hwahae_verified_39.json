@@ -8535,5 +8535,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212943200",
+    "translated_kr": "글라이콜릭애씨드7%엑스폴리에이팅토너240ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179913892",
+    "translated_kr": "마미케어비비립LED립글로우립마스크1개케이스립밤2종건전지",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "마미케어 비비립 LED 립글로우 립마스크 1개 ,케이스,립밤2종,건전지"
+    },
+    "brand": "마미케어",
+    "name": "마미케어 비비립 LED 립글로우 립마스크 1개 ,케이스,립밤2종,건전지",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "39900",
+    "mall": "마미케어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11702221613",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8924673/89246732080.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924673/89246732080.1.jpg",
+        "mall": "마미케어",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11702221613"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924673/89246732081.1.jpg",
+        "mall": "마미케어mommycare",
+        "link": "https://smartstore.naver.com/main/products/11702221614"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
