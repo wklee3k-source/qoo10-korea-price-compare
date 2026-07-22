@@ -23430,5 +23430,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1168045367",
+    "translated_kr": "緑豆 弱酸性 クレンジングフォーム 80ml + 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "망곰 콜라보 녹두 약산성 클렌징폼"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "망곰 콜라보 녹두 약산성 클렌징폼",
+    "volume": "160ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1121145364",
+    "translated_kr": "리들샷 300 에센스 50ml(+리들샷 시너지 리페어 크림 50)/리들샷/리들샷 300",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
