@@ -718,5 +718,74 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1175263787",
+    "translated_kr": "토리든 밸런스풀 시카오일컨트롤 선스틱 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "토리든 밸런스풀 포맨 시카 오일 컨트롤 선스틱 기획(+ ...",
+      "hwahae": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "포켓몬 에디션 밸런스풀 포맨 시카 오일 컨트롤 선스틱 [SPF50+-/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209710276",
+    "translated_kr": "La'dor 퍼퓸헤어샴푸 530ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "아도르 퍼퓸 헤어 샴푸",
+      "naver": "퍼퓸 헤어 샴푸 530ml"
+    },
+    "brand": "아도르",
+    "name": "퍼퓸 헤어 샴푸 530ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29000",
+    "mall": "아도르공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://lador.co.kr/product/detail.html?product_no=390&cate_no=82&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg",
+        "mall": "아도르공식몰",
+        "link": "https://lador.co.kr/product/detail.html?product_no=390&cate_no=82&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956085/89560854101.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/12016343409"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956089/89560891334.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/12016380642"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119133/91191336798.jpg",
+        "mall": "아도르",
+        "link": "https://smartstore.naver.com/main/products/13646826019"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
