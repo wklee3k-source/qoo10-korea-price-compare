@@ -15318,5 +15318,77 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1149689597",
+    "translated_kr": "EDP셀프블룸20ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "호텔도슨 오 드 퍼퓸 셀프블룸",
+      "naver": "블룸 서브마리노 오드퍼퓸 30ML"
+    },
+    "brand": null,
+    "name": "호텔도슨 오 드 퍼퓸 셀프블룸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "10000",
+    "mall": "서브마리노",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11957794545",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8950230/89502305233.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8950230/89502305233.jpg",
+        "mall": "서브마리노",
+        "link": "https://smartstore.naver.com/main/products/11957794545"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206045515",
+    "translated_kr": "[2026신작/시프레]오드퍼퓸10ml(2종중1택)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "오 드 퍼퓸",
+      "naver": "블랑쉬 니치향수 명품 살냄새 비누향 서브마리노 오드퍼퓸 30ml"
+    },
+    "brand": null,
+    "name": "오 드 퍼퓸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "10000",
+    "mall": "서브마리노",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4843991390",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8238851/82388514544.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8238851/82388514544.9.jpg",
+        "mall": "서브마리노",
+        "link": "https://smartstore.naver.com/main/products/4843991390"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8760835/87608350139.8.jpg",
+        "mall": "912 LAB",
+        "link": "https://smartstore.naver.com/main/products/10063847515"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8224324/82243246039.29.jpg",
+        "mall": "떼시스",
+        "link": "https://smartstore.naver.com/main/products/4698725205"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
