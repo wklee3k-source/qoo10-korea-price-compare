@@ -1014,5 +1014,101 @@
         "link": "https://smartstore.naver.com/main/products/11916157561"
       }
     ]
+  },
+  {
+    "goods_no": "1105980665",
+    "translated_kr": "오휘 에이지리커버리 아이크림 25ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이지 리커버리 아이크림",
+      "hwahae": "에이지 리커버리 아이크림",
+      "naver": "오휘 오휘 에이지 리커버리 아이크림 50ml 스페셜 세트"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "에이지 리커버리 아이크림",
+    "volume": "25ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "52960",
+    "mall": "G마켓",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.gmarket.co.kr/gate/pcs?item-no=3186641618&sub-id=1003&service-code=10000003&lcd=100000005",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5810553/58105533250.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5810553/58105533250.jpg",
+        "mall": "G마켓",
+        "link": "https://link.gmarket.co.kr/gate/pcs?item-no=3186641618&sub-id=1003&service-code=10000003&lcd=100000005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8219792/82197929332.4.jpg",
+        "mall": "케이뷰티즈",
+        "link": "https://smartstore.naver.com/main/products/4653408857"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192928/51929285887.20241213210714.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929285887"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8382035/83820357440.2.jpg",
+        "mall": "곤쥬르",
+        "link": "https://smartstore.naver.com/main/products/6275854951"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8990088/89900883441.jpg",
+        "mall": "여인닷컴",
+        "link": "https://smartstore.naver.com/main/products/12356372724"
+      }
+    ]
+  },
+  {
+    "goods_no": "1044307238",
+    "translated_kr": "엘라스틴 실크리페어 퍼펙트샤이닝 골드트리트먼트 300ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "엘라스틴 실크 샤이닝골드 트리트먼트 300ML x 2개",
+      "hwahae": "실크리페어 퍼펙트 샤이닝 골드실크 트리트먼트",
+      "naver": "엘라스틴 (손상케어)엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x 4개"
+    },
+    "brand": "엘라스틴",
+    "name": "엘라스틴 (손상케어)엘라스틴 실크리페어 퍼펙트 샤이닝 골드 트리트먼트 300ml x 4개",
+    "volume": "1000ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18910",
+    "mall": "옥션",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.auction.co.kr/gate/pcs?item-no=B772745837&sub-id=1&service-code=10000003",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5437757/54377575570.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5437757/54377575570.2.jpg",
+        "mall": "옥션",
+        "link": "https://link.auction.co.kr/gate/pcs?item-no=B772745837&sub-id=1&service-code=10000003"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4545713/45457139324.3.jpg",
+        "mall": "쿠팡",
+        "link": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=6763108611&ctag=6763108611&lptag=I21401502670&itemId=21401502670&vendorItemId=88458118673&spec=10305197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5380419/53804192446.20250327110304.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/53804192446"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881107/88811073109.1.jpg",
+        "mall": "해피홈마트",
+        "link": "https://smartstore.naver.com/main/products/11266562778"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8692618/86926181575.jpg",
+        "mall": "몰앤드몰",
+        "link": "https://smartstore.naver.com/main/products/9381681252"
+      }
+    ]
   }
 ]
