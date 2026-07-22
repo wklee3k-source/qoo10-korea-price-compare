@@ -6469,5 +6469,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212630238",
+    "translated_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "온더바디 46cm 체취케어 약산성 땀냄새 체취제거 등드름 ...",
+      "hwahae": "체취케어 데오드란트 바디워시 [시트러스향]"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "volume": "600mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1186310271",
+    "translated_kr": "셀리맥스 더리얼노니 모이스처 밸런싱토너 320ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "셀리맥스 더 리얼 노니 수분 밸런싱 토너"
+    },
+    "brand": null,
+    "name": "셀리맥스 더 리얼 노니 수분 밸런싱 토너",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
