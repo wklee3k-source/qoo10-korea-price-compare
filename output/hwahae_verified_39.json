@@ -17303,5 +17303,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194502685",
+    "translated_kr": "[NEW/투명 케어] 스킨&랩 글루타치온 토너 200ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 앰플 토너"
+    },
+    "brand": "스킨앤랩 (SKIN&LAB)",
+    "name": "글루타치온 앰플 토너",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1156741239",
+    "translated_kr": "어성초 히알루론산 수징 앰플 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
