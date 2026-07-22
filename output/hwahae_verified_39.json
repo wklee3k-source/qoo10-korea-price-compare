@@ -13775,5 +13775,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1166654874",
+    "translated_kr": "[26SS/신상](+언더블한유진포토프레임)에클라드아르페주화이트티EDP30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "랑방 향수가 베스트셀러 '에끌라 드 아르페쥬'의 신제품 '화이트 ...",
+      "naver": "엘리자베스아덴 화이트티 향수 EDP 100ml"
+    },
+    "brand": null,
+    "name": "랑방 향수가 베스트셀러 '에끌라 드 아르페쥬'의 신제품 '화이트 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "46800",
+    "mall": "엘리자베스아덴",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/7229897645",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8477439/84774397967.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8477439/84774397967.6.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7229897645"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821892/88218923836.2.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10674417914"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821898/88218986891.3.jpg",
+        "mall": "엘리자베스아덴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10674480969"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212904501",
+    "translated_kr": "pH밸런스땀억제제데오드란트샤워프레시,73g,2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Secret pH 균형 땀 억제제/데오드란트 투명한 고체형 파우더 ..."
+    },
+    "brand": null,
+    "name": "Secret pH 균형 땀 억제제/데오드란트 투명한 고체형 파우더 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
