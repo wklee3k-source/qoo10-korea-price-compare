@@ -29112,5 +29112,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211723803",
+    "translated_kr": "moumou(무무) 오드파르팡(향수) 리넨(맑고 상큼한 향기) 10ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "킬커버 진정쿠션 [SPF40/PA++] [3호 리넨]"
+    },
+    "brand": "클리오 (CLIO)",
+    "name": "킬커버 진정쿠션 [SPF40/PA++] [3호 리넨]",
+    "volume": "12g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1177600334",
+    "translated_kr": "비타C플러스 데일리 토닝 시트마스크 30장입 2개/토닝마스크/데일리/시트/저자극/촉촉 보습/밝은 피부/투명 피부/톤업 케어/비타민 케어/생생한 피부",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
