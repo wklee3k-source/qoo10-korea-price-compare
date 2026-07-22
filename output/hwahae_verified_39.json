@@ -25756,5 +25756,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1065570029",
+    "translated_kr": "씨크루노 바디 크림 센트로 팔레스 410 【배와 머스크 향】",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "ボディクリーム セントロパレス410 / SE:CRUNOの通販"
+    },
+    "brand": null,
+    "name": "ボディクリーム セントロパレス410 / SE:CRUNOの通販",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1096495928",
+    "translated_kr": "씨크루노 UV 스무스 크림 비탈리프시 0101 【화이트 릴리 향】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "UVスムースクリーム ヴィタリーフシ0101 / SE:CRUNOの通販",
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
