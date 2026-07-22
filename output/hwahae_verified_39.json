@@ -9280,5 +9280,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1147973479",
+    "translated_kr": "[정품]다이브인저분자히알루론산세럼50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "다이브인 저분자 히알루론산 세럼",
+      "hwahae": "다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1145690161",
+    "translated_kr": "[정품]아스트라에이시카365쿨링팩패드pH4.5 110ml60매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이시카 365 쿨링팩패드pH4.5",
+      "hwahae": "에이시카365 수분토너 pH4.5"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 수분토너 pH4.5",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
