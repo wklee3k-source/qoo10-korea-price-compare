@@ -12989,5 +12989,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1208115061",
+    "translated_kr": "PDRN히알루론산하이드레이팅미스트,100ml,2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PDRN 히알루론산 수분 캡슐 미스트"
+    },
+    "brand": null,
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208232536",
+    "translated_kr": "익스트림크림오리지널(자타입),70ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "모토로라 엣지 70 맥스 출시: 스냅드래곤 8 5세대 칩과 7,100mAh 실리콘",
+      "naver": "리얼베리어 익스트림 크림 오리지널 65ml 1+1 기획세트[구성품]크림 25ml + 클렌징 폼 15ml"
+    },
+    "brand": null,
+    "name": "모토로라 엣지 70 맥스 출시: 스냅드래곤 8 5세대 칩과 7,100mAh 실리콘",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "37000",
+    "mall": "리얼베리어 본사 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11363304894",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8890781/88907815259.17.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890781/88907815259.17.jpg",
+        "mall": "리얼베리어 본사 스토어",
+        "link": "https://smartstore.naver.com/main/products/11363304894"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
