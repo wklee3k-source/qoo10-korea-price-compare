@@ -1,20 +1,20 @@
 """
-hwahae_verify_batch.py (v4 — 병렬탐색+투표 구조)
+hwahae_verify_batch.py (v5 — API 호출 3회로 절감)
 
-문제의식(사용자 지적): 이전 구조(클로드번역 -> Exa정교화 -> 화해 -> 네이버)는
-순차 파이프라인이라 1단계(Exa)가 잘못 정교화하면 뒤(화해/네이버)까지 전부
-틀어진다. 실제로 화해나 네이버가 클로드의 대충번역만으로 더 정확하게 찾는
-경우도 많았다.
+문제의식(사용자 지적): 이전 구조는 2차(Exa/화해/네이버 초기조회) 이후에
+4차(화해 재확인)와 5차(네이버 구매정보)를 또 호출해서 상품 1건당 API를
+최대 5번(Exa1+화해2+네이버2) 썼다. 화해와 네이버는 처음 조회할 때 이미
+필요한 정보(단종여부/가격/사진/링크)를 전부 받아올 수 있으므로, 그걸 그대로
+쓰면 재호출이 필요 없다.
 
-새 구조:
+새 구조(3회 호출):
     1차. 클로드 대충번역(입력 그대로)을
-    2차. Exa / 화해 / 네이버 세 곳에 각각 독립적으로(병렬 개념) 검색해서
-         후보 3개를 모은다 — 한 곳이 틀려도 다른 곳이 살아있다.
+    2차. Exa / 화해 / 네이버 세 곳에 각각 1번씩만 검색 — 화해와 네이버는
+         이 1번의 호출에서 단종여부/가격/사진/구매링크까지 전부 뽑아둔다.
     3차. known_brand/known_volume과의 일치도 + 소스간 합의(consensus)로
-         점수를 매겨 가장 적합한 후보(확정 상품명+브랜드)를 선정한다.
-    4차. 확정된 이름으로 화해에서 최종 단종여부를 확인한다.
-    5차. 확정된 이름으로 네이버에서 실제 구매정보(사진/가격/링크/판매처)를
-         가져온다(화해는 검증용일 뿐 구매처가 아니므로).
+         점수를 매겨 가장 적합한 후보(확정 상품명+브랜드)를 선정하고,
+         구매정보는 2차에서 이미 받아온 화해/네이버 데이터를 그대로 쓴다
+         (재호출 없음).
 
 GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 저장한다.
 
@@ -97,7 +97,9 @@ def _search_exa(keyword: str) -> dict | None:
 
 
 def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | None:
-    """후보2: 화해 검색(원본 번역 그대로, 격리된 서브프로세스)."""
+    """후보2: 화해 검색(원본 번역 그대로, 격리된 서브프로세스). 나중에
+    재확인 호출을 안 해도 되도록, 필요한 정보(단종여부/가격/사진/링크)를
+    이 1번의 호출에서 전부 뽑아둔다."""
     try:
         proc = subprocess.run(
             [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), keyword, known_volume, known_brand],
@@ -114,6 +116,10 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
             "brand": r.get("brand"),
             "volume": r.get("volume"),
             "obsolete": r.get("obsolete"),
+            "sale": r.get("sale"),
+            "price": r.get("price"),
+            "image_url": r.get("image_url"),
+            "product_url": r.get("product_url"),
         }
     except Exception as e:  # noqa: BLE001
         print(f"    [화해 실패] {type(e).__name__}: {e}", file=sys.stderr)
@@ -121,7 +127,9 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
 
 
 def _search_naver(keyword: str, known_brand: str) -> dict | None:
-    """후보3: 네이버쇼핑 검색(원본 번역 그대로)."""
+    """후보3: 네이버쇼핑 검색(원본 번역 그대로). 나중에 별도 "구매정보"
+    재호출을 안 해도 되도록, 이 1번의 호출에서 가격/링크/사진후보까지
+    전부 뽑아둔다."""
     try:
         from naver_shop_search import search as naver_search
 
@@ -129,7 +137,25 @@ def _search_naver(keyword: str, known_brand: str) -> dict | None:
         if not items:
             return None
         top = items[0]
-        return {"source": "naver", "name": top["title"], "brand": top.get("brand"), "volume": None}
+        seen = set()
+        image_candidates = []
+        for it in items:
+            img = it.get("image")
+            if img and img not in seen:
+                seen.add(img)
+                image_candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
+        return {
+            "source": "naver",
+            "name": top["title"],
+            "brand": top.get("brand"),
+            "volume": None,
+            "price": top.get("lprice"),
+            "mall": top.get("mallName"),
+            "seller_trust": top.get("seller_trust"),
+            "product_url": top.get("link"),
+            "image_url": top.get("image"),
+            "image_candidates": image_candidates,
+        }
     except Exception as e:  # noqa: BLE001
         print(f"    [네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
         return None
@@ -223,42 +249,30 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         winner_name = winner.get("name") or ""
         winner_brand = winner.get("brand") or ""
-        confirmed_query = f"{winner_brand} {winner_name}".strip() or kw_cleaned
 
-        # 4차: 확정된 이름으로 화해에서 최종 단종여부 확인
-        print(f"    [4차-화해 재확인] {confirmed_query!r}")
-        hwahae_final = _search_hwahae(confirmed_query, known_volume, known_brand) or {}
-        # _search_hwahae는 매칭실패시 None을 반환하므로 원본 서브프로세스 결과를 다시 조회해 obsolete 등 상세를 얻는다
-        try:
-            proc = subprocess.run(
-                [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), confirmed_query, known_volume, known_brand],
-                capture_output=True, text=True, timeout=30,
-            )
-            hwahae_raw = json.loads(proc.stdout)
-        except Exception:  # noqa: BLE001
-            hwahae_raw = {}
-
-        # 5차: 확정된 이름으로 네이버에서 실구매정보 확보
-        print(f"    [5차-네이버 구매정보] {confirmed_query!r}")
-        naver_final = _search_naver_full(confirmed_query, known_brand)
+        # (4차/5차 재확인 호출 제거 — 2차에서 이미 화해/네이버를 각각 1번씩
+        # 호출하면서 필요한 정보를 전부 뽑아뒀으므로, 그 결과를 그대로 쓴다.
+        # API 호출 수: Exa(1) + 화해(1) + 네이버(1) = 3회로 절감.)
+        hwahae_data = cand_hwahae or {}
+        naver_data = cand_naver or {}
 
         entry = {
             "goods_no": item["goods_no"],
             "translated_kr": kw_raw,
             "winner_source": winner["source"],
             "candidates_summary": {c["source"]: c.get("name") for c in candidates},
-            "brand": winner_brand or hwahae_raw.get("brand"),
-            "name": winner_name or hwahae_raw.get("corrected"),
-            "volume": winner.get("volume") or hwahae_raw.get("volume") or "",
-            "source": "hwahae+naver" if naver_final else "winner_only",
-            "obsolete": hwahae_raw.get("obsolete"),
-            "sale": hwahae_raw.get("sale"),
-            "price": (naver_final or {}).get("price"),
-            "mall": (naver_final or {}).get("mall"),
-            "seller_trust": (naver_final or {}).get("seller_trust"),
-            "product_url": (naver_final or {}).get("product_url"),
-            "image_url": (naver_final or {}).get("image_url"),
-            "image_candidates": (naver_final or {}).get("image_candidates") or [],
+            "brand": winner_brand or hwahae_data.get("brand"),
+            "name": winner_name or hwahae_data.get("name"),
+            "volume": winner.get("volume") or hwahae_data.get("volume") or "",
+            "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
+            "obsolete": hwahae_data.get("obsolete"),
+            "sale": hwahae_data.get("sale"),
+            "price": naver_data.get("price") or hwahae_data.get("price"),
+            "mall": naver_data.get("mall"),
+            "seller_trust": naver_data.get("seller_trust"),
+            "product_url": naver_data.get("product_url") or hwahae_data.get("product_url"),
+            "image_url": naver_data.get("image_url") or hwahae_data.get("image_url"),
+            "image_candidates": naver_data.get("image_candidates") or [],
         }
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -268,40 +282,6 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         print(f"    -> [{entry['winner_source']}] {entry['brand']} {status}")
 
     print(f"\n[DONE] 이번 호출에서 {processed_this_call}건 처리, 누적 {len(results)}/{len(items)}건 -> {output_path}")
-
-
-def _search_naver_full(keyword: str, known_brand: str) -> dict | None:
-    """5차 전용: 네이버쇼핑에서 실구매정보(가격/링크/사진후보들)까지 전부 가져온다."""
-    try:
-        from naver_shop_search import search as naver_search
-
-        items = naver_search(keyword, display=5, known_brand=known_brand)
-        if not items:
-            import time
-
-            time.sleep(2)
-            items = naver_search(keyword, display=5, known_brand=known_brand)
-        if not items:
-            return None
-        top = items[0]
-        seen = set()
-        candidates = []
-        for it in items:
-            img = it.get("image")
-            if img and img not in seen:
-                seen.add(img)
-                candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
-        return {
-            "price": top.get("lprice"),
-            "mall": top.get("mallName"),
-            "seller_trust": top.get("seller_trust"),
-            "product_url": top.get("link"),
-            "image_url": top.get("image"),
-            "image_candidates": candidates,
-        }
-    except Exception as e:  # noqa: BLE001
-        print(f"    [5차-네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        return None
 
 
 if __name__ == "__main__":
