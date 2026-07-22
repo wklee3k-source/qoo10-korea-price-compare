@@ -23978,5 +23978,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1167785009",
+    "translated_kr": "어드밴스드 10X 리페어 앰플 헤어팩 300ml 3개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "케라시스 어드밴스드 10x 리페어 앰플 헤어팩 3개",
+      "hwahae": "어드밴스드 10X 토탈리커버리 앰플 헤어팩"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 10X 토탈리커버리 앰플 헤어팩",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1168077697",
+    "translated_kr": "【1+1】No.3 쌀 누룩 효소 사우나 고마주 폼(세안 폼) 170ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "넘버즈인 3번 쌀누룩 효소사우나 고마쥬폼 더블 기획",
+      "hwahae": "3번 쌀누룩 효소사우나 고마쥬폼"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "3번 쌀누룩 효소사우나 고마쥬폼",
+    "volume": "170ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
