@@ -308,6 +308,28 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "image_url": naver_data.get("image_url") or hwahae_data.get("image_url"),
             "image_candidates": naver_data.get("image_candidates") or [],
         }
+
+        # 4차: 확정된 구매링크가 실제로 품절인지 확인한다(재사용 목적:
+        # 큐텐 등록 이후에도 주기적으로 이 링크가 여전히 살아있는지 재확인하는
+        # 용도로 stock_checker.py를 계속 쓸 수 있다). "숨겨진 품절배지"로 인한
+        # 오탐을 피하려고 실제로 화면에 보이는 요소만 판정에 쓴다.
+        if entry["product_url"]:
+            try:
+                from stock_checker import check_stock
+
+                stock_result = check_stock(entry["product_url"])
+                entry["in_stock"] = stock_result.get("in_stock")
+                entry["stock_evidence"] = stock_result.get("evidence")
+                if stock_result.get("in_stock") is False:
+                    print(f"    [품절감지] {entry['product_url']} — {stock_result.get('evidence')}")
+            except Exception as e:  # noqa: BLE001
+                print(f"    [품절체크 실패] {type(e).__name__}: {e}")
+                entry["in_stock"] = None
+                entry["stock_evidence"] = []
+        else:
+            entry["in_stock"] = None
+            entry["stock_evidence"] = []
+
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
         processed_this_call += 1
