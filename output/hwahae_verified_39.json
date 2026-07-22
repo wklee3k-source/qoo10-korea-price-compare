@@ -828,5 +828,54 @@
         "link": "https://smartstore.naver.com/main/products/5300270782"
       }
     ]
+  },
+  {
+    "goods_no": "1206207561",
+    "translated_kr": "MAY ISLAND 톤업펄크림 본품30g+30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "May Island Brightening Tone Up Pearl Cream",
+      "hwahae": "퓨어 아일랜드"
+    },
+    "brand": "아워블렌드 (Ourblend)",
+    "name": "퓨어 아일랜드",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.hwahae.co.kr/goods/2151543",
+    "image_url": "https://img.hwahae.co.kr/products/2151543/2151543_20250717153342.jpg",
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205776987",
+    "translated_kr": "메디큐브 AGE-R 글루타치온글로우캡슐크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에이지알 글루타치온 글로우 캡슐 크림",
+      "hwahae": "에이지알 글루타치온 글로우 캡슐 크림",
+      "naver": "에이지알 글루타치온 글로우 캡슐 크림"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 글루타치온 글로우 캡슐 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "49000",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ]
   }
 ]
