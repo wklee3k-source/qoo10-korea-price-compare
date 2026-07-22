@@ -924,5 +924,61 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1171042386",
+    "translated_kr": "미장센 데미지케어레드프로틴컨디셔너 680ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "데미지케어 레드 프로틴 컨디셔너",
+      "hwahae": "데미지케어 레드 프로틴 컨디셔너",
+      "naver": "미쟝센 데미지케어 레드 프로틴 컨디셔너"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "데미지케어 레드 프로틴 컨디셔너",
+    "volume": "680ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "6900",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=60852&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=miseenscene",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4580989/45809896280.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4580989/45809896280.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=60852&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=miseenscene"
+      }
+    ]
+  },
+  {
+    "goods_no": "1198716617",
+    "translated_kr": "케라스타즈 제네시스 새싹세럼 90ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "케라스타즈 제네시스 새싹 ...",
+      "hwahae": "제네시스 두피세럼",
+      "naver": "[7월올영픽/두피쿨링세럼] 케라스타즈 제네시스 새싹 세럼 90ml 기획/단품"
+    },
+    "brand": "케라스타즈",
+    "name": "[7월올영픽/두피쿨링세럼] 케라스타즈 제네시스 새싹 세럼 90ml 기획/단품",
+    "volume": "90ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "57370",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000212122",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6038778/60387783706.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6038778/60387783706.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000212122"
+      }
+    ]
   }
 ]
