@@ -23015,5 +23015,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203402766",
+    "translated_kr": "더 블루 펩타이드 박치올 세로 모공 세럼 50mL",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "코스알엑스 더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 -",
+      "naver": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 50ml"
+    },
+    "brand": "코스알엑스",
+    "name": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "26040",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13622540312",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116705/91167050729.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116705/91167050729.1.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/13622540312"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116705/91167050730.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13622540313"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117964/91179640106.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/13635129425"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1084157676",
+    "translated_kr": "프로바이오더름 콜라겐 리모델링 세럼마스크 5+1매 #모공탄력세럼",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "프로바이오덤 콜라겐 리모델링 세럼 겔 마스크 ..."
+    },
+    "brand": null,
+    "name": "프로바이오덤 콜라겐 리모델링 세럼 겔 마스크 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
