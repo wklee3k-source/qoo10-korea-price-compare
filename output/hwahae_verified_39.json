@@ -7895,5 +7895,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172104818",
+    "translated_kr": "뉴스킨에포크글레이셜마린머드125g워시오프머드팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "뉴스킨 에포크 글레이셜 마린 머드 팩",
+      "hwahae": "에포크 글레이셜 머린 머드"
+    },
+    "brand": "뉴스킨 (NUSKIN)",
+    "name": "에포크 글레이셜 머린 머드",
+    "volume": "125g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169173710",
+    "translated_kr": "뉴욕인티머시오드퍼퓸EDP10ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "비비앙 뉴욕인틸리 오 드 퍼퓸 EDP"
+    },
+    "brand": null,
+    "name": "비비앙 뉴욕인틸리 오 드 퍼퓸 EDP",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
