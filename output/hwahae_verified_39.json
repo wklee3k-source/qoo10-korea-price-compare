@@ -18960,5 +18960,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188958801",
+    "translated_kr": "레버런스 핸드 워시 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레버런스 아로마틱 핸드 워시"
+    },
+    "brand": "이솝 (Aesop)",
+    "name": "레버런스 아로마틱 핸드 워시",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 53000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1200843360",
+    "translated_kr": "얼굴용/얼굴 제모/바디 겸용 제모 크림 산모/수염 케어 보습 매끄러운 피부 데리케이트존 간편 제모 페이스 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
