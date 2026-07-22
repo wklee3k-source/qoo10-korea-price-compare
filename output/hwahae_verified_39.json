@@ -19908,5 +19908,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212714696",
+    "translated_kr": "셰이킹 미스트 50ml 전3종(프로즌 젤리/펄 글로우/파우더 키프) 한국 코스메 베이스 메이크업 키프 미스트",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "KOSE Make Keep Fixer Mist Type Spray Make Keep"
+    },
+    "brand": null,
+    "name": "KOSE Make Keep Fixer Mist Type Spray Make Keep",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1117984435",
+    "translated_kr": "러시 더티 셰이빙크림 225g 셰이빙크림 정품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "러쉬 더티 쉐이빙 크림 /",
+      "hwahae": "쉐이빙 크림 [더티]"
+    },
+    "brand": "러쉬 (LUSH)",
+    "name": "쉐이빙 크림 [더티]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
