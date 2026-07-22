@@ -17961,5 +17961,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204176921",
+    "translated_kr": "[medicube] 블랙헤드 모공 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Multi Blackhead Pore Brush",
+      "hwahae": "멀티 블랙헤드 모공 브러쉬"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "멀티 블랙헤드 모공 브러쉬",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11400,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164465472",
+    "translated_kr": "시크릿 솔루션 웨딩드레스 퓨어 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "잇츠스킨 시크릿 솔루션 웨딩 드레스 퓨어 크림",
+      "hwahae": "시크릿 솔루션 웨딩 드레스 퓨어 크림"
+    },
+    "brand": "잇츠스킨 (IT'SSKIN)",
+    "name": "시크릿 솔루션 웨딩 드레스 퓨어 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
