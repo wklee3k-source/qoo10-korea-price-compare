@@ -26404,5 +26404,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1200324318",
+    "translated_kr": "히알루론산 2% + B5 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "디오디너리 히알루로닉 애시드 2% + B5",
+      "hwahae": "히알루로닉 애시드 2% + B5"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14200,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197354746",
+    "translated_kr": "345 릴리프 크림 미스트 1개 100ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "345 릴리프 크림 미스트 /"
+    },
+    "brand": null,
+    "name": "345 릴리프 크림 미스트 /",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
