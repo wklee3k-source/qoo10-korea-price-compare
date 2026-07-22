@@ -20827,5 +20827,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212102383",
+    "translated_kr": "미라클 2X 헤어 트리트먼트 네롤리 향 180ml / 네롤리 플라워 / 손상케어·집중 보습 / 살롱 품질 / 씻어내지 않는 트리트먼트 / 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172442514",
+    "translated_kr": "바비 브라운 BOBBI BROWN 비타 엔리치드 크림 & 페이스베이스 플러스 15mL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
