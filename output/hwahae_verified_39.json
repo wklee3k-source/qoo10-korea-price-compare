@@ -8960,5 +8960,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194866152",
+    "translated_kr": "[정품]퓨어오일퍼퓸향수퍼퓸10ml봄쉘",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194857049",
+    "translated_kr": "풀리립케어2종(그린토마토/레드토마토)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "풀리 립케어 2종 세트"
+    },
+    "brand": "풀리",
+    "name": "풀리 립케어 2종 세트",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "15900",
+    "mall": "풀리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://full-y.co.kr/product/detail.html?product_no=180&cate_no=49&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5622813/56228138971.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5622813/56228138971.3.jpg",
+        "mall": "풀리",
+        "link": "https://full-y.co.kr/product/detail.html?product_no=180&cate_no=49&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5770549/57705499403.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000235418"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
