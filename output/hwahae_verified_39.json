@@ -26059,5 +26059,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209318877",
+    "translated_kr": "【정규품】VQM 피토신 코나피디르 슈퍼젝션 크림 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코나피딜 슈퍼젝션크림 20ml기미 잡티 색소생성관리 파메 ...",
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209318688",
+    "translated_kr": "【정규품】피토신 VIBANQM 로션 30ml + 코나피디르 피니시 로션 20g 피부보호·촉촉함 케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "코나피딜 피니쉬 로션 + 비반콴트망카 파데프리 파이토신 V2 세트"
+    },
+    "brand": null,
+    "name": "코나피딜 피니쉬 로션 + 비반콴트망카 파데프리 파이토신 V2 세트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
