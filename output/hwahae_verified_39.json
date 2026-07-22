@@ -13845,5 +13845,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211721947",
+    "translated_kr": "포어타이트닝클렌징밤50ml×2개세트",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "포어 타이트닝 클렌징 밤"
+    },
+    "brand": null,
+    "name": "포어 타이트닝 클렌징 밤",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211388494",
+    "translated_kr": "워터캡슐선세럼SPF50+/PA+++40ml×2개세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "워터 캡슐 선세럼",
+      "hwahae": "워터 캡슐 선세럼  [SPF50+/PA+++]"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "워터 캡슐 선세럼  [SPF50+/PA+++]",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
