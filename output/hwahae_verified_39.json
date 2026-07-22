@@ -10610,5 +10610,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1156582764",
+    "translated_kr": "아토마일드선크림SPF50+PA++++75ml1개저자극보습효과",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "아토 마일드 선크림 SPF50+ PA++++",
+      "hwahae": "이피아이 선블락 [SPF50/PA++++] [라이트]"
+    },
+    "brand": "실리스카 (silisca®)",
+    "name": "이피아이 선블락 [SPF50/PA++++] [라이트]",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 89000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162983448",
+    "translated_kr": "실크펩타이드인텐시브리프팅크림50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "실크 펩타이드 인텐시브 리프팅 크림"
+    },
+    "brand": null,
+    "name": "실크 펩타이드 인텐시브 리프팅 크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
