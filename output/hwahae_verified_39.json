@@ -24069,5 +24069,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1138225289",
+    "translated_kr": "시그니처 팔팜 50ml 1개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Jennifer Lopez 제니퍼 로페즈 제니퍼 로페즈 스틸 오드 팔팜 ..."
+    },
+    "brand": null,
+    "name": "Jennifer Lopez 제니퍼 로페즈 제니퍼 로페즈 스틸 오드 팔팜 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213161313",
+    "translated_kr": "언리미티드 메이크업 픽스 미스트 매트, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "슈에무라 언리미티드 메이크업 픽스 미스트",
+      "hwahae": "언리미티드 메이크업 미스트"
+    },
+    "brand": "슈에무라 (shuuemura)",
+    "name": "언리미티드 메이크업 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
