@@ -18538,5 +18538,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210268653",
+    "translated_kr": "아젤라산 나이아신아마이드 클리어 토너, 250ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204022304",
+    "translated_kr": "스테이프레시 톤업 선크림 퍼플, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
