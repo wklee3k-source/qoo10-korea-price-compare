@@ -24728,5 +24728,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191487583",
+    "translated_kr": "대두 에센스 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1176819992",
+    "translated_kr": "플루이드 발효 톤업 패드 250ml(50매입)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플루이드 퍼멘트 톤업 패드"
+    },
+    "brand": "네오젠더마로지 (NEOGENDERMALOGY)",
+    "name": "플루이드 퍼멘트 톤업 패드",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
