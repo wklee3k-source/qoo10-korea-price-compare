@@ -586,5 +586,19 @@
     "price": 25000,
     "mall": null,
     "seller_trust": null
+  },
+  {
+    "goods_no": "1098317948",
+    "translated_kr": "소내추럴 올데이타이트 메이크업세팅픽서 75ml",
+    "exa_refined": "쏘내추럴 올데이 타이트 메이크업 세팅 픽서",
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 세팅 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null
   }
 ]
