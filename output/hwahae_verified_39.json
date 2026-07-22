@@ -24516,5 +24516,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1089315295",
+    "translated_kr": "어반셰이드 커큐민 선 스틱 SPF50+PA++++ 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어반 쉐이드 쿨 카밍 선스틱 SPF50+ PA++++",
+      "hwahae": "어반 쉐이드 쿨 카밍 선스틱 [SPF50+/PA++++]"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "어반 쉐이드 쿨 카밍 선스틱 [SPF50+/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1111455317",
+    "translated_kr": "히스트랩 비타씨 컴플렉스 앰플 47% 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "히스토랩 비타 씨 컴플렉스 앰플 47%",
+      "hwahae": "비타 씨 컴플렉스 앰플 47"
+    },
+    "brand": "히스토랩 (HISTOLAB)",
+    "name": "비타 씨 컴플렉스 앰플 47",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 61600,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
