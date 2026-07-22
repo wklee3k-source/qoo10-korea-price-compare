@@ -24158,5 +24158,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1101562835",
+    "translated_kr": "비피다 바이옴 앰플 패드 70장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "마녀공장 비피다 바이옴 앰플 패드 70매",
+      "hwahae": "비피다 바이옴 앰플 패드"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "비피다 바이옴 앰플 패드",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1095687901",
+    "translated_kr": "[KERASYS] 어드밴스드 케라마이드 트리트먼트! 헤어 팩! 샴푸! 인기 상품 세트 1+1 [정품] 한국 브랜드(진정/탄력/보습/영양 공급/활력)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "케라시스 케라마이드 EX 더 프리미엄 살롱 트리트먼트 + 케라마이드 샴푸 증정 구성 -"
+    },
+    "brand": null,
+    "name": "케라시스 케라마이드 EX 더 프리미엄 살롱 트리트먼트 + 케라마이드 샴푸 증정 구성 -",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
