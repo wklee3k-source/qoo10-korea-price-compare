@@ -3816,5 +3816,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195231376",
+    "translated_kr": "오르페온EDP SP7.5ml[미니향수][향수남녀공용]",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "DIPTYQUE オルフェオン DIPTYQUEORPHEON オルフェオン オードパルファム"
+    },
+    "brand": null,
+    "name": "DIPTYQUE オルフェオン DIPTYQUEORPHEON オルフェオン オードパルファム",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195229657",
+    "translated_kr": "디올미스디올블루밍부케EDT SP30ml[향수여성용]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "미스 디올 블루밍 부케: 산뜻하고 부드러운 노트의 오 드 뚜왈렛",
+      "hwahae": "미스 디올 블루밍 부케 헤어 미스트"
+    },
+    "brand": "디올 (Dior)",
+    "name": "미스 디올 블루밍 부케 헤어 미스트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 77000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
