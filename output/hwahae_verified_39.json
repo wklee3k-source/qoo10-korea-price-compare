@@ -7587,5 +7587,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1138793833",
+    "translated_kr": "[한국올리브영한정판]비타민C그린티엔자임브라이트닝세럼30ml+30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "이니스프리 비타민C 그린티 엔자임 세럼 ...",
+      "hwahae": "비타민C 세럼"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "비타민C 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1182413108",
+    "translated_kr": "[한국올리브영한정판]비타민C그린티엔자임브라이트닝세럼30ml+30ml리필+파우치",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "이니스프리 비타민C 그린티 엔자임 세럼 ..."
+    },
+    "brand": null,
+    "name": "이니스프리 비타민C 그린티 엔자임 세럼 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
