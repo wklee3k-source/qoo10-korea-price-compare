@@ -20788,5 +20788,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1133723585",
+    "translated_kr": "라네주 LANEIGE 바운시 & 펌 아이스 슬리핑 마스크 20g 아이케어 [155879]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바운시 앤 펌 아이 슬리핑 마스크"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "바운시 앤 펌 아이 슬리핑 마스크",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212499809",
+    "translated_kr": "비타K 다크 클리어 아이크림 15ml 리필",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
