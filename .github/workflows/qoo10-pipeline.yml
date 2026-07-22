@@ -38,6 +38,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_auto_translate:
+        description: "1단계에서 새로 발굴된(아직 번역 안 된) 상품을 Claude Haiku API로 자동번역할지"
+        required: false
+        type: boolean
+        default: false
       run_discovery:
         description: "1단계(저리뷰 상점 크롤링)를 돌릴지 — 이걸 꺼두면 다른 job(화해검증 등)만 단독 실행 가능"
         required: false
@@ -304,6 +309,98 @@ jobs:
             sleep_time=$((RANDOM % 8 + 2))
             sleep "$sleep_time"
             git pull --rebase
+          done
+
+  auto_translate:
+    # 1단계에서 발굴된 큐텐 상품 중 아직 번역 안 된 것들을 Claude Haiku API로
+    # 자동번역해서 output/hwahae_input_39.json에 추가한다(그동안 사람이 직접
+    # 하나하나 번역하던 2단계를 자동화). 화장품 도메인 특화 오역(어성초/병풀/
+    # 시카 등)을 방지하도록 시스템 프롬프트에 대응표를 넣어뒀다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_auto_translate
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    concurrency:
+      group: hwahae-verify-queue
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Switch to dedicated branch (same as hwahae_verify, avoids contention)
+        run: |
+          git fetch origin hwahae-live 2>/dev/null && git checkout hwahae-live || git checkout -b hwahae-live
+          git merge origin/main --no-edit -X theirs 2>/dev/null || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests --break-system-packages
+
+      - name: Fetch latest discovery data and find untranslated products
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: src
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # discovery-live 브랜치의 최신 상품 목록(메인+아카이브)을 가져온다
+          git fetch origin discovery-live
+          git show origin/discovery-live:output/discovery_state.json > /tmp/ds.json
+          mkdir -p /tmp/arch
+          for f in $(git ls-tree -r --name-only origin/discovery-live -- output/archive/ 2>/dev/null); do
+            git show origin/discovery-live:$f > "/tmp/arch/$(basename $f)" 2>/dev/null || true
+          done
+
+          python3 << 'PYEOF'
+          import json, glob, subprocess, sys
+
+          main = json.load(open('/tmp/ds.json'))['all_products']
+          archived = []
+          for f in glob.glob('/tmp/arch/*.json'):
+              archived.extend(json.load(open(f)))
+          all_qoo10 = {p['goods_no']: p for p in main + archived}
+
+          existing = json.load(open('../output/hwahae_input_39.json'))
+          existing_goods = set(x['goods_no'] for x in existing)
+
+          new_products = [p for p in all_qoo10.values() if p['goods_no'] not in existing_goods]
+          # 이번 실행에서는 최대 200건까지만(타임아웃/비용 관리)
+          batch = new_products[:200]
+          json.dump(batch, open('/tmp/new_batch.json', 'w'), ensure_ascii=False)
+          print(f"[INFO] 신규 상품 {len(new_products)}건 중 {len(batch)}건 이번에 번역", file=sys.stderr)
+          PYEOF
+
+          python3 auto_translate.py /tmp/new_batch.json /tmp/translated.json 15
+
+          python3 << 'PYEOF'
+          import json
+
+          brand_dict = json.load(open('../data/brand_translations_learned.json'))
+          brand_dict.pop('_설명', None)
+          brand_dict.pop('_아도르_참고', None)
+
+          new_qoo10 = {p['goods_no']: p for p in json.load(open('/tmp/new_batch.json'))}
+          translated = json.load(open('/tmp/translated.json'))
+          for t in translated:
+              q = new_qoo10.get(t['goods_no'], {})
+              t['known_brand'] = brand_dict.get(q.get('brand', ''), '')
+
+          existing = json.load(open('../output/hwahae_input_39.json'))
+          existing.extend(translated)
+          json.dump(existing, open('../output/hwahae_input_39.json', 'w'), ensure_ascii=False, indent=2)
+          print(f"[DONE] 총 {len(existing)}건")
+          PYEOF
+
+          git add ../output/hwahae_input_39.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: batch-translated new products via Claude Haiku API"
+          for i in 1 2 3; do
+            if git push origin hwahae-live; then break; fi
+            echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+            git pull --rebase origin hwahae-live
           done
 
   hwahae_verify:
