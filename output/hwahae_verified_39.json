@@ -16922,5 +16922,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192506745",
+    "translated_kr": "베이킹 파우더 콜라겐 모공 스크럽 25포입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "Farmstay Baking Pow Collagen Pore Scrub",
+      "hwahae": "베이킹 파우더 콜라겐 포어 스크럽"
+    },
+    "brand": "팜스테이 (Farmstay)",
+    "name": "베이킹 파우더 콜라겐 포어 스크럽",
+    "volume": "7g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1141816327",
+    "translated_kr": "와사비 수딩 마스크 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "미스드래곤",
+      "hwahae": "와사비 수딩 마스크팩"
+    },
+    "brand": "미스드래곤 (MissDragon)",
+    "name": "와사비 수딩 마스크팩",
+    "volume": "30g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
