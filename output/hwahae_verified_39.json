@@ -26148,5 +26148,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209715655",
+    "translated_kr": "[NEW]【정규품】세팅 스프레이 118ML/리뉴얼판/메이크업 킵 스프레이 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "어반디케이 올 나이터 메이크업 세팅 스프레이 글로우",
+      "hwahae": "핑크 롤 메이크업 브러쉬 세트"
+    },
+    "brand": "코링코 (CORINGCO)",
+    "name": "핑크 롤 메이크업 브러쉬 세트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172425476",
+    "translated_kr": "화이트 트러플 바이탈 스프레이 세럼 (레드 미스트 세럼) 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "화이트 트러플 바이탈 스프레이 세럼 나이아신아마이드 5퍼센트",
+      "hwahae": "화이트 트러플 바이탈 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 바이탈 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
