@@ -22548,5 +22548,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1137329434",
+    "translated_kr": "다크스팟 세럼 30ml (나이아신아마이드 10%, 트라넥삼산 4%)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1111309194",
+    "translated_kr": "슈퍼 멜팅 세붐 소프트 토너 3점 세트 (소프트 토너+코튼 패드+블랙헤드 제거기)/모공 검은 피지 제거에 효과적",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Ilso Sebum Softener + Blackhead Remover + Cotton Pads 20ea #일소,#피지연화제,#블랙헤드제거기,#화장솜 on Bunjang Global Site."
+    },
+    "brand": null,
+    "name": "Ilso Sebum Softener + Blackhead Remover + Cotton Pads 20ea #일소,#피지연화제,#블랙헤드제거기,#화장솜 on Bunjang Global Site.",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
