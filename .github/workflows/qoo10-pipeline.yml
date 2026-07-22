@@ -312,7 +312,7 @@ jobs:
     # 저장하므로 타임아웃 걸려도 재실행하면 이어서 진행된다.
     if: github.event_name == 'workflow_dispatch' && inputs.run_hwahae_verify
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
 

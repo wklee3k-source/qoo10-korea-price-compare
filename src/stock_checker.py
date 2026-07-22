@@ -41,7 +41,7 @@ DESKTOP_UA = (
 )
 
 
-def check_stock(url: str, wait_seconds: float = 2.5) -> dict:
+def check_stock(url: str, wait_seconds: float = 1.2) -> dict:
     result = {
         "url": url,
         "in_stock": None,  # True/False/None(확인불가)
@@ -54,7 +54,7 @@ def check_stock(url: str, wait_seconds: float = 2.5) -> dict:
             browser = p.chromium.launch(headless=True)
             context = browser.new_context(user_agent=DESKTOP_UA, ignore_https_errors=True)
             page = context.new_page()
-            page.goto(url, timeout=30000, wait_until="load")
+            page.goto(url, timeout=15000, wait_until="domcontentloaded")
             time.sleep(wait_seconds)
 
             visible_soldout = []
