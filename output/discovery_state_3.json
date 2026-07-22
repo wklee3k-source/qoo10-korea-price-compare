@@ -1,13 +1,16 @@
 {
   "visited_shops": [
-    "gmarketplus",
-    "lilyhouse_jp",
-    "cosmeticmall",
+    "ooznary",
     "HDSelectShop",
+    "lilyhouse_jp",
+    "dire",
     "gmarket_jp",
-    "jp-mong",
     "lilicoco",
-    "chinju"
+    "chinju",
+    "jp-mong",
+    "cosmeticmall",
+    "mijin-cosme",
+    "gmarketplus"
   ],
   "all_products": [
     {
@@ -249,6 +252,81 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1208337865",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/542/086/8332086542.g_300-w-st_g.jpg",
+      "title": "グロウトックス ライスセラム 30ml / 米エキス・スクワラン配合 / キメを整える集中ケア美容液",
+      "brand": "DI / RE",
+      "price_jpy": 6300,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208337865",
+      "shop_id": "dire",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1194316158",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/554/281/8037281554.g_300-w-st_g.jpg",
+      "title": "メール便 無料 - アクロパス ニードルパッチ 目元 ほうれい線 レチアールエヌ スリム パッチ 3box - PDRN × レチノール配合 - 部分集中ケア - 正規品",
+      "brand": "ACROPASS",
+      "price_jpy": 8700,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194316158",
+      "shop_id": "mijin-cosme",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1173424338",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/665/722/7533722665.g_300-w-st_g.jpg",
+      "title": "国内発送 - メール便 - H セラム スティック ハニーゴールド (マルチバーム) 10g 【1個】 - マルチバーム（保湿） - 韓国コスメ - 3営業日以内(土日祝除く)に発送 - 正規品",
+      "brand": "チョソンア",
+      "price_jpy": 3300,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1173424338",
+      "shop_id": "mijin-cosme",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1194316148",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/543/281/8037281543.g_300-w-st_g.jpg",
+      "title": "メディヒール パック 詰め替え用 MEDIHEAL PDRN フェイスマスク 【 リフィル 】 30枚 - 毛穴 弾力ケア シートマスク - 韓国コスメ - シートマスクパック - 正規品",
+      "brand": "メディヒール",
+      "price_jpy": 1980,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194316148",
+      "shop_id": "mijin-cosme",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 2,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1194316155",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/437/886/8384886437.g_300-w-st_g.jpg",
+      "title": "メディヒール パック 詰め替え用 MEDIHEAL コラーゲン フェイスマスク 【 リフィル 】 30枚 - 弾力ケア シートマスク - 韓国コスメ - シートマスクパック - 正規品",
+      "brand": "メディヒール",
+      "price_jpy": 1980,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194316155",
+      "shop_id": "mijin-cosme",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -259,11 +337,12 @@
     "https://m.qoo10.jp/shop/lilicoco",
     "https://m.qoo10.jp/shop/chinju",
     "https://m.qoo10.jp/shop/gmarketplus",
-    "https://m.qoo10.jp/shop/gmarket_jp"
+    "https://m.qoo10.jp/shop/gmarket_jp",
+    "https://m.qoo10.jp/shop/ooznary",
+    "https://m.qoo10.jp/shop/dire",
+    "https://m.qoo10.jp/shop/mijin-cosme"
   ],
   "pending_keywords": [
-    "ケアセラム",
-    "メール便 無料 - アクロパス ニードルパッチ 目元 ほうれい線 レチアールエヌ スリム パッチ 3box - PDRN レチノール配合 - 部分集中ケア - 正規品",
     "メディヒール パック 詰め替え用 MEDIHEAL コラーゲン フェイスマスク - 弾力ケア シートマスク - 韓国コスメ - シートマスクパック - 正規品",
     "『JUNG SAEM MOOL・ジョンセンムル』 スキンヌーダークッション SPF50+",
     "ベーキングパウダー コラーゲン 毛穴スクラブ 25包入り",
@@ -683,16 +762,31 @@
     "The Alpha Arbutin Discoloration Care Hydrogel Mask 3ea",
     "ニュートロジーナ レインバス ボディウォッシュ",
     "1+1キャンペーン／薬局入店 PDRN ピーディーアールエヌ リジュディンクリーム／ダメージ肌バリアのと鎮静",
-    "サンリオキャラクターズ マウスパッド 1p コンピューターデスクパッド マイメロディ クロミ シナモロール ハローキティ ポチャコ ポンポンプリン"
+    "サンリオキャラクターズ マウスパッド 1p コンピューターデスクパッド マイメロディ クロミ シナモロール ハローキティ ポチャコ ポンポンプリン",
+    "ビタ３オーロラミスト ビタミン メイクキープ 微細ミスト ツヤ肌 乾燥肌 水分 保湿 セラミド メラニンケア ツボクサ メイクキープミスト 高密着 持ち運びタイプ",
+    "アゼライン酸CICA ラム アゼライン酸 CICA トラブルケア 皮脂 鎮静 オイルセラム 毛穴 ニキビ コウジ酸 油水分バランス 脂性肌 角質ケア 赤みケア 色素沈着",
+    "ジェットブルートナー エッセンストナー 化粧水 肌トラブル 鎮静 角質ケア 水分 栄養 インナードライ 油分 白ニキビ 保湿 アミノ酸 乾燥肌 角質ケア 肌熱 低刺激 大容量",
+    "レストアンドザサン SPF50+PA++++ UVケア サンクリーム 水分クリーム スージングクリーム メイクのり抜群 ツヤ肌 水光肌 保湿 キメ 鎮静",
+    "ジェットブルーセラム インナードライ ツヤ肌 角質ケア ヒアルロン酸 乾燥肌 ピーリング 保湿 毛穴ケア 水分 セラミド アミノ酸 鎮静 肌熱 キメケア 美容液 水分セラム",
+    "グロウトックス ライスセラム",
+    "キャッサバ クリームマスク",
+    "グロウトックス ライスサンクリーム",
+    "メール便 無料 - アクロパス ニードルパッチ 目元 ほうれい線 レチアールエヌ スリム パッチ 3box - PDRN レチノール配合 - 部分集中ケア - 正規品",
+    "国内発送 - メール便 - H セラム スティック ハニーゴールド - マルチバーム - 韓国コスメ - 3営業日以内 に発送 - 正規品",
+    "国内発送 送料無料 ! MJcare +おまけシートマスク1位 MJ Care シートマスク パック ット ノンアルコール",
+    "メディヒール パック 詰め替え用 MEDIHEAL PDRN フェイスマスク - 毛穴 弾力ケア シートマスク - 韓国コスメ - シートマスクパック - 正規品",
+    "メディヒール パック 詰め替え用 MEDIHEAL コラーゲン フェイスマスク - 弾力ケア シートマスク - 韓国コスメ - シートマスクパック - 正規品"
   ],
   "seen_keywords": [
     "ネオクッション 本品+レフィル",
-    "トゥエンティースリーイヤーズオールド ダーマシンコンシーラー",
-    "Low pH Good Morning Gel Cleanser",
+    "ケアセラム",
     "ット マックセルスキンサイエンス365 シンエイク ゴールド アイセラム 2",
     "PDRNカプセルクリーム100",
-    "トーン&amp;スポットコレクターアンプル",
+    "トゥエンティースリーイヤーズオールド ダーマシンコンシーラー",
+    "メール便 無料 - アクロパス ニードルパッチ 目元 ほうれい線 レチアールエヌ スリム パッチ 3box - PDRN レチノール配合 - 部分集中ケア - 正規品",
     "リードルショット100",
-    "ダイブインセラム +スージングクリーム +トナー"
+    "Low pH Good Morning Gel Cleanser",
+    "ダイブインセラム +スージングクリーム +トナー",
+    "トーン&amp;スポットコレクターアンプル"
   ]
 }
