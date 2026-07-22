@@ -29276,5 +29276,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209956990",
+    "translated_kr": "나이아신아마이드10% + 징크1% 에센스_30ml_1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10％ + 징크 1％"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "나이아신아마이드 10％ + 징크 1％",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 8700,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1185951937",
+    "translated_kr": "[한국 인기] 톤&스팟 컬렉터 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "톤앤스팟 코렉터 앰플",
+      "naver": "[7월 제조] 바이알레시피 순수 비타민 CE페룰릭 맑은 광채 기미앰플 잡티 검버섯 색소침착 흑자 미백 항산화 밝은 피부톤 비타민C앰플"
+    },
+    "brand": "리덴스 (Re:dence)",
+    "name": "톤앤스팟 코렉터 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36800",
+    "mall": "바이알레시피",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10035737872",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8758024/87580240376.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8758024/87580240376.5.jpg",
+        "mall": "바이알레시피",
+        "link": "https://smartstore.naver.com/main/products/10035737872"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
