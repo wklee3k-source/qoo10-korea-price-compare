@@ -4780,5 +4780,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1085425820",
+    "translated_kr": "쏘내추럴 올데이타이트 메이크업세팅픽스미스트 35ml/75ml/100ml/120ml/FIXX",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "쏘내추럴 올 데이 타이트 메이크업 세팅 픽서 더블기획 ( ...",
+      "hwahae": "올데이 타이트 메이크업 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208955036",
+    "translated_kr": "[NEW]바디미스트 100ml(6종중1택)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "퍼퓸 헤어&바디 미스트 3종"
+    },
+    "brand": null,
+    "name": "퍼퓸 헤어&바디 미스트 3종",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
