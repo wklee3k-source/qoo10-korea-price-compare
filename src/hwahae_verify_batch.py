@@ -126,6 +126,27 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
         return None
 
 
+def _extract_quantity(text: str) -> int:
+    """제목/상품명에서 실제 수량(묶음개수)을 추출한다.
+    - "1+1", "2+1" 같은 증정/묶음 표기 → 앞뒤 숫자 합
+    - "2個", "2개", "2매", "2입", "2병", "SET", "세트" → 배수로 판단
+    - "2種から1つ選択"(2종류 중 1개 선택) → 실제로는 1개이므로 수량에 안 잡히게 예외처리
+    - 아무 표기도 없으면 1개로 간주"""
+    if not text:
+        return 1
+    # "N種類から1つ選択" 류는 실제 수량이 1개이므로 먼저 제거하고 판단
+    text_wo_choice = re.sub(r"\d+種(類)?から\d+つ選択", "", text)
+    m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)  # "1+1" 등
+    if m:
+        return int(m.group(1)) + int(m.group(2))
+    m = re.search(r"(\d+)\s*(個|개|매|입|병|枚|本|장)\b", text_wo_choice)
+    if m:
+        return int(m.group(1))
+    if re.search(r"세트|SET|Set", text_wo_choice):
+        return 2  # 세트는 최소 2개 이상으로 간주(정확한 숫자 불명이면 보수적으로)
+    return 1
+
+
 def _search_naver(keyword: str, known_brand: str) -> dict | None:
     """후보3: 네이버쇼핑 검색(원본 번역 그대로). 나중에 별도 "구매정보"
     재호출을 안 해도 되도록, 이 1번의 호출에서 가격/링크/사진후보까지
@@ -222,6 +243,19 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         cand_exa = _search_exa(kw_raw)
         cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
+
+        # 수량(묶음개수) 일치 확인: 큐텐 원본과 네이버 결과의 수량이 다르면
+        # "1개" 기준으로 다시 찾는다(추가 검색 1회, 수량 불일치일 때만 발생).
+        if cand_naver:
+            qoo10_qty = _extract_quantity(kw_raw)
+            naver_qty = _extract_quantity(cand_naver.get("name") or "")
+            if qoo10_qty != naver_qty:
+                print(f"    [수량불일치] 큐텐={qoo10_qty}개 vs 네이버={naver_qty}개 -> 1개 기준으로 재검색")
+                requery = f"{known_brand or cand_hwahae and cand_hwahae.get('brand') or ''} {kw_cleaned} 1개".strip()
+                cand_naver_retry = _search_naver(requery, known_brand)
+                if cand_naver_retry:
+                    cand_naver = cand_naver_retry
+
         candidates = [c for c in [cand_exa, cand_hwahae, cand_naver] if c]
 
         if not candidates:
