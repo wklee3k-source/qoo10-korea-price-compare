@@ -17378,5 +17378,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1187571477",
+    "translated_kr": "데미지 테라피 헤어 오일 65ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "데미지 테라피 헤어 오일",
+      "naver": "그로우어스 데미지 테라피 헤어 오일 65ml, 1개"
+    },
+    "brand": null,
+    "name": "데미지 테라피 헤어 오일",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "18600",
+    "mall": "그로우어스 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10208606884",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8775311/87753110397.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8775311/87753110397.11.jpg",
+        "mall": "그로우어스 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/10208606884"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8775311/87753110398.11.jpg",
+        "mall": "그로우어스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10208606886"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1171497230",
+    "translated_kr": "노스카 나인 트러블 세럼 30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "NOSCA9TROUBLE SERUM"
+    },
+    "brand": null,
+    "name": "NOSCA9TROUBLE SERUM",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
