@@ -15838,5 +15838,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206908379",
+    "translated_kr": "(+마스크팩증정)MGF리턴크림70ml재생크림",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "ASKIN 리바이탈라이즈 MGF 리페어 크림"
+    },
+    "brand": null,
+    "name": "ASKIN 리바이탈라이즈 MGF 리페어 크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207321955",
+    "translated_kr": "판테놀배리어크림50ml보습크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "코스노리 판테놀 베리어 크림",
+      "hwahae": "선크림 [SPF50+/PA++++] [판테놀베리어]"
+    },
+    "brand": "코스노리 (COSNORI)",
+    "name": "선크림 [SPF50+/PA++++] [판테놀베리어]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
