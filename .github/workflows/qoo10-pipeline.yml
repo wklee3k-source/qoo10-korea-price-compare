@@ -318,7 +318,7 @@ jobs:
     # 시카 등)을 방지하도록 시스템 프롬프트에 대응표를 넣어뒀다.
     if: github.event_name == 'workflow_dispatch' && inputs.run_auto_translate
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 180
     concurrency:
       group: hwahae-verify-queue
       cancel-in-progress: false
@@ -368,7 +368,7 @@ jobs:
 
           new_products = [p for p in all_qoo10.values() if p['goods_no'] not in existing_goods]
           # 이번 실행에서는 최대 200건까지만(타임아웃/비용 관리)
-          batch = new_products[:200]
+          batch = new_products  # 캡 없이 전부 처리(Haiku는 저렴하고 빠름)
           json.dump(batch, open('/tmp/new_batch.json', 'w'), ensure_ascii=False)
           print(f"[INFO] 신규 상품 {len(new_products)}건 중 {len(batch)}건 이번에 번역", file=sys.stderr)
           PYEOF

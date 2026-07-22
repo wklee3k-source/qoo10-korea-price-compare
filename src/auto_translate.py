@@ -92,18 +92,28 @@ if __name__ == "__main__":
 
     products = json.loads(open(sys.argv[1], encoding="utf-8").read())
     batch_size = int(sys.argv[3]) if len(sys.argv) > 3 else 10
+    out_path = sys.argv[2]
 
-    titles = [p["title"] for p in products]
-    print(f"[INFO] {len(titles)}건 번역 시작 (배치크기 {batch_size})", file=sys.stderr)
-    translated = translate_batch(titles, batch_size)
+    # 이어서 진행: 출력파일에 이미 있는 goods_no는 건너뛴다(타임아웃 대비)
+    try:
+        results = json.load(open(out_path, encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        results = []
+    done_goods = {r["goods_no"] for r in results}
+    remaining = [p for p in products if p["goods_no"] not in done_goods]
+    print(f"[INFO] 전체 {len(products)}건 중 이미 처리된 {len(done_goods)}건부터 이어서 진행 ({len(remaining)}건 남음)", file=sys.stderr)
 
-    results = []
-    for p, t in zip(products, translated):
-        results.append({
-            "goods_no": p["goods_no"],
-            "translated_kr": t,
-            "known_brand": p.get("known_brand", ""),
-        })
+    for i in range(0, len(remaining), batch_size):
+        chunk = remaining[i:i + batch_size]
+        titles = [p["title"] for p in chunk]
+        translated = translate_batch(titles, batch_size=len(chunk))
+        for p, t in zip(chunk, translated):
+            results.append({
+                "goods_no": p["goods_no"],
+                "translated_kr": t,
+                "known_brand": p.get("known_brand", ""),
+            })
+        json.dump(results, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        print(f"[진행] {len(results)}/{len(products)}건 완료 -> {out_path}", file=sys.stderr)
 
-    json.dump(results, open(sys.argv[2], "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    print(f"[DONE] {len(results)}건 번역 완료 -> {sys.argv[2]}", file=sys.stderr)
+    print(f"[DONE] {len(results)}건 번역 완료 -> {out_path}", file=sys.stderr)
