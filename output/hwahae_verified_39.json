@@ -5447,5 +5447,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180583345",
+    "translated_kr": "[NEW][신상품]화이트트러플퍼스트스프레이세럼100ml(3개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "화이트 트러플 퍼스트 스프레이 세럼 펩타이드 ...",
+      "hwahae": "화이트 트러플 퍼스트 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 퍼스트 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1166211480",
+    "translated_kr": "복숭아77나이아신에센스토너250ml+복숭아77나이아신컨디셔닝밀크150ml+복숭아70나이아신아마이드세럼30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "복숭아 77 나이아신 에센스 토너"
+    },
+    "brand": null,
+    "name": "복숭아 77 나이아신 에센스 토너",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
