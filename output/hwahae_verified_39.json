@@ -19484,5 +19484,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1204581160",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트, 100ml, 2개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "PDRN 히알루론산 수분 캡슐 미스트"
+    },
+    "brand": null,
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203907708",
+    "translated_kr": "톤 브라이트닝 캡슐 앰플, 100ml, 2개 뷰티액 세럼 센텔라 민감성 피부 모공케어 보습 칙칙함 병풀 저자극 약산성 나이아신아마이드 대용량 트러블케어 트라넥삼산",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플",
+      "naver": "마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플 100ml"
+    },
+    "brand": "스킨1004",
+    "name": "마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플 100ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23760",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5627604625",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8317210/83172101428.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8317210/83172101428.3.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/5627604625"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
