@@ -10534,5 +10534,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202057017",
+    "translated_kr": "[NEW]더블루펩타이드세럼,50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+      "naver": "코스알엑스 더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22400",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70187&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6035690/60356906307.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6035690/60356906307.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70187&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6060326/60603263757.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258879"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185443098",
+    "translated_kr": "[메디힐마스크팩증정][정품][화장품보다먼저세포랩]세포랩바이오제닉에센스90%3종/2종중1택/여배우용에센스/수분/보습/탄력/민감성피부케어/한국에센스",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
