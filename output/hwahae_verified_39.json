@@ -21358,5 +21358,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212341086",
+    "translated_kr": "【블랙핑크 제니 피크】【신제품】바셀린 글루타히아 세럼 바디로션 3종 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "#ad 제니 PICK 바디로션 차원이 달라•• 끈적임 없이 촉촉하게 ...",
+      "hwahae": "(해외) 글루타-히아 세럼 버스트 로션 듀이 래디언스"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "(해외) 글루타-히아 세럼 버스트 로션 듀이 래디언스",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1198755469",
+    "translated_kr": "비건제주 연꽃 순한 각질제거 토너패드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "비건 제주 연꽃 마일드 각질 케어 토너패드",
+      "hwahae": "비건 제주 연꽃 마일드 각질케어 70송이 토너패드"
+    },
+    "brand": "키위글로우 (KIWIGLOW)",
+    "name": "비건 제주 연꽃 마일드 각질케어 70송이 토너패드",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
