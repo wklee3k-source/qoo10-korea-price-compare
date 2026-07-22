@@ -118,7 +118,8 @@ def _hwahae_verify(keyword: str, known_volume: str, known_brand: str) -> dict:
 
 def _naver_strict_match(keyword: str, known_brand: str) -> dict | None:
     """4차: 화해가 못 찾았을 때, 네이버쇼핑에서 브랜드가 정확히 일치하는
-    정규품만 골라낸다."""
+    정규품만 골라낸다. 상위 몇 개 리스팅(서로 다른 판매자)의 사진을
+    전부 후보(image_candidates)로 모아서, 검수 화면에서 고를 수 있게 한다."""
     print(f"    [4차-네이버] keyword={keyword!r} known_brand={known_brand!r}", file=sys.stderr)
     try:
         from naver_shop_search import search as naver_search
@@ -132,8 +133,16 @@ def _naver_strict_match(keyword: str, known_brand: str) -> dict | None:
         if not items:
             return None
         top = items[0]
+        # 서로 다른 판매자 리스팅의 사진들을 후보로 모은다(중복 URL 제거)
+        seen = set()
+        candidates = []
+        for it in items:
+            img = it.get("image")
+            if img and img not in seen:
+                seen.add(img)
+                candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
         return {
-            "brand": top.get("brand") or top.get("mallName"),
+            "brand": top.get("brand") or None,  # mallName은 판매처지 브랜드가 아니므로 fallback하지 않는다
             "corrected": top["title"],
             "volume": "",
             "price": top.get("lprice"),
@@ -141,6 +150,7 @@ def _naver_strict_match(keyword: str, known_brand: str) -> dict | None:
             "seller_trust": top.get("seller_trust"),
             "product_url": top.get("link"),
             "image_url": top.get("image"),
+            "image_candidates": candidates,
         }
     except Exception as e:  # noqa: BLE001
         print(f"    [4차-네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
@@ -195,6 +205,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 r["seller_trust"] = naver_r.get("seller_trust")
                 r["product_url"] = naver_r.get("product_url")
                 r["image_url"] = naver_r.get("image_url")
+                r["image_candidates"] = naver_r.get("image_candidates")
                 source = "hwahae+naver"
             else:
                 print("    [4차-네이버] 실구매정보 못 찾음 — 화해 정보만 유지")
@@ -222,6 +233,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "seller_trust": r.get("seller_trust"),
             "product_url": r.get("product_url"),
             "image_url": r.get("image_url"),
+            "image_candidates": r.get("image_candidates") or [],
         }
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
