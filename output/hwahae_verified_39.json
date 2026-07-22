@@ -8923,5 +8923,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1160418590",
+    "translated_kr": "[2종세트]브링그린티트리시카수딩토너250ml+크림100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "브링그린 티트리 시카 수딩 토너&크림",
+      "hwahae": "티트리 시카 수딩 토너"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리 시카 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152030824",
+    "translated_kr": "[인기2종세트]화이트트러플퍼스트스프레이세럼100ml+워터풀톤업선크림50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "화이트 트러플 퍼스트 스프레이 세럼 + ...",
+      "hwahae": "화이트 트러플 퍼스트 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 퍼스트 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
