@@ -7211,5 +7211,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206876054",
+    "translated_kr": "[브러시원조]글로우턴엑소좀브러시앰플130ml기획(+30ml)",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "릴리이브 그로우턴 엑소좀 브러쉬 앰플 ..."
+    },
+    "brand": null,
+    "name": "릴리이브 그로우턴 엑소좀 브러쉬 앰플 ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1184747814",
+    "translated_kr": "V10비타민화이트닝슬리핑팩80ml/100ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "BRTC V10 비타민 화이트닝 슬리핑팩",
+      "hwahae": "V10 멀티 리프트 슬리핑 팩",
+      "naver": "BRTC V10 비타민 화이트닝 슬리핑팩 100ml"
+    },
+    "brand": "BRTC",
+    "name": "BRTC V10 비타민 화이트닝 슬리핑팩 100ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000113988",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5952930/59529309165.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5952930/59529309165.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000113988"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
