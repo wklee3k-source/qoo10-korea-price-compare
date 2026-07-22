@@ -14642,5 +14642,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205550457",
+    "translated_kr": "내추럴모이스처라이징팩터스+HA100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "디오디너리 내추럴 모이스처라이징 팩터스 + HA ...",
+      "hwahae": "내추럴 모이스처라이징 팩터스 + HA 포 스칼프"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "내추럴 모이스처라이징 팩터스 + HA 포 스칼프",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22300,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205550248",
+    "translated_kr": "자작나무모이스처선크림50ml(SPF50+PA+++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "자작나무 수분 선크림",
+      "hwahae": "자작나무 수분 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
