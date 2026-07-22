@@ -918,5 +918,101 @@
         "link": "https://smartstore.naver.com/main/products/11379354230"
       }
     ]
+  },
+  {
+    "goods_no": "1164705875",
+    "translated_kr": "BUSHMAN 워터프루프프로 선크림 50g+선스틱20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "부쉬맨 워터프루프 선크림,선스틱 SPF50+PA++++ 2 ...",
+      "hwahae": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+      "naver": "부쉬맨 워터프루프 프로 선크림 150g,선스틱 20g SPF50+ PA+++ 2종세트"
+    },
+    "brand": "부쉬맨 (BUSHMAN)",
+    "name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "55300",
+    "mall": "부쉬맨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11814237712",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg",
+        "mall": "부쉬맨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11814237712"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192935/51929350628.20241213211312.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929350628"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9018487/90184874606.jpg",
+        "mall": "원학이커머스2",
+        "link": "https://smartstore.naver.com/main/products/12640363700"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8608744/86087440065.jpg",
+        "mall": "보따리USA",
+        "link": "https://smartstore.naver.com/main/products/8542939742"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8948631/89486317197.jpg",
+        "mall": "우산조아",
+        "link": "https://smartstore.naver.com/main/products/11941806509"
+      }
+    ]
+  },
+  {
+    "goods_no": "1105980668",
+    "translated_kr": "오휘 프라임어드밴서 디에이징앰플세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "프라임 어드밴서 디에이징 앰플 세럼",
+      "hwahae": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+      "naver": "오휘 프라임 어드밴서 디에이징 앰플 세럼 에센스 기획세트"
+    },
+    "brand": "오휘 (OHUI)",
+    "name": "프라임 어드밴서 디에이징 PDRN 부스터샷",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "49900",
+    "mall": "뷰라벨",
+    "seller_trust": "미확인",
+    "product_url": "https://smartstore.naver.com/main/products/7198781011",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8474328/84743281333.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8474328/84743281333.3.jpg",
+        "mall": "뷰라벨",
+        "link": "https://smartstore.naver.com/main/products/7198781011"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5192928/51929287247.20241213211231.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/51929287247"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5472458/54724586315.20250512171821.jpg",
+        "mall": "네이버",
+        "link": "https://search.shopping.naver.com/catalog/54724586315"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8850286/88502864737.5.jpg",
+        "mall": "케이뷰티즈",
+        "link": "https://smartstore.naver.com/main/products/10958358702"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8946066/89460668170.jpg",
+        "mall": "여인닷컴",
+        "link": "https://smartstore.naver.com/main/products/11916157561"
+      }
+    ]
   }
 ]
