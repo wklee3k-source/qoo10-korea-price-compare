@@ -25952,5 +25952,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205743739",
+    "translated_kr": "[1+1] 에그 비타 필링 젤 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그 비타 필링 젤",
+      "naver": "투쿨포스쿨 에그 비타 필링 젤 100g"
+    },
+    "brand": "투쿨포스쿨 (toocoolforschool)",
+    "name": "에그 비타 필링 젤",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "투쿨포스쿨 본사직영샵",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9200884137",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8674538/86745384459.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674538/86745384459.jpg",
+        "mall": "투쿨포스쿨 본사직영샵",
+        "link": "https://smartstore.naver.com/main/products/9200884137"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205746446",
+    "translated_kr": "[1+1] 익스트림 크림 라이트 65ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "익스트림 크림 라이트",
+      "naver": "리얼베리어 익스트림 크림 라이트 65ml, 1개"
+    },
+    "brand": "리얼베리어 (RealBarrier)",
+    "name": "익스트림 크림 라이트",
+    "volume": "65ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24200",
+    "mall": "리얼베리어 본사 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9979856733",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8752435/87524359006.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8752435/87524359006.15.jpg",
+        "mall": "리얼베리어 본사 스토어",
+        "link": "https://smartstore.naver.com/main/products/9979856733"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8752435/87524359005.2.jpg",
+        "mall": "리얼베리어",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9979856732"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
