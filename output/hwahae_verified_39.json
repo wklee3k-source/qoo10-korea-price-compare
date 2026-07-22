@@ -14435,5 +14435,73 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205811086",
+    "translated_kr": "브링그린공식브링그린티트리C토너500ml화장수",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "exa": "올리브영 국민토너 브링그린 티트리 시카 수딩 토너 단 하루 ...",
+      "naver": "브링그린 티트리 시카 수딩 토너 500ml 1개"
+    },
+    "brand": "브링그린",
+    "name": "브링그린 티트리 시카 수딩 토너 500ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23200",
+    "mall": "바디키퍼 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/12837280013",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9038179/90381791005.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038179/90381791005.jpg",
+        "mall": "바디키퍼 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12837280013"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209779514",
+    "translated_kr": "[JTra]프리미엄비건톤업선크림50ml·SPF50+PA++++·자외선대책·피부색보정·보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "PRETTYSKIN",
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "naver": "아떼 비건 릴리프 톤업 선 에센스 50ml SPF50+ PA++++ (2colors)"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "인진쑥 진정 보습 세럼",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18900",
+    "mall": "아떼",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11604409441",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8914891/89148919847.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8914891/89148919847.6.jpg",
+        "mall": "아떼",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11604409441"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8787805/87878056962.1.jpg",
+        "mall": "키넬 KINEL",
+        "link": "https://smartstore.naver.com/main/products/10333552751"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
