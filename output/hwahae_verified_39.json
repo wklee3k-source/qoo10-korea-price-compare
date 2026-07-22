@@ -26963,5 +26963,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1181822405",
+    "translated_kr": "ACON 엑손디프 클렌징폼 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "애크온 딥 클렌징 폼"
+    },
+    "brand": "동아제약",
+    "name": "애크온 딥 클렌징 폼",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1181822404",
+    "translated_kr": "컨센트레이트 앰플 30ml 클리닉라인",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리닉 컨센트레이트 앰플"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "클리닉 컨센트레이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 100000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
