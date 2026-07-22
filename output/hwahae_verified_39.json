@@ -30578,5 +30578,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195801792",
+    "translated_kr": "올리브영 클렌징폼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리시카딥클렌징폼",
+      "naver": "[고밀도효소거품] 브링그린 티트리 시카 딥클렌징폼 기획 (더블/대용량)"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리시카딥클렌징폼",
+    "volume": "120mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "10000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248626",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5982700/59827002805.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5982700/59827002805.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248626"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201556358",
+    "translated_kr": "Linoia 톤업바디크림(SPF35 PA++) 200ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
