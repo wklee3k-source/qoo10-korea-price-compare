@@ -20042,5 +20042,69 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210849711",
+    "translated_kr": "레티날 레티놀 2000+ NAD 세럼 30ml 1개",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "레티놀 레티날* 2000 엔에이디+세럼",
+      "hwahae": "BFT 진정 세럼",
+      "naver": "퓨리토 레티날 레티놀 2000+ NAD 세럼"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "레티놀 레티날* 2000 엔에이디+세럼",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "30000",
+    "mall": "퓨리토",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13557882334",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110239/91102392701.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110239/91102392701.1.jpg",
+        "mall": "퓨리토",
+        "link": "https://smartstore.naver.com/main/products/13557882334"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210232363",
+    "translated_kr": "1025 독도 수분 선크림 SPF50+ PA++++ 50ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "1025 독도 선크림",
+      "hwahae": "1025 독도 선크림 [SPF50+/PA++++]",
+      "naver": "라운드랩 1025 독도 선크림 50ml (SPF 50+ PA++++)"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "1025 독도 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15000",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8934509037",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8647900/86479009360.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8647900/86479009360.5.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8934509037"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
