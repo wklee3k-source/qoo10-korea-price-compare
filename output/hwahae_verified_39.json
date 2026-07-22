@@ -10191,5 +10191,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1184810924",
+    "translated_kr": "[퓨리토]퓨리토서울아젤라익애씨드10코직티트리세럼30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1099020123",
+    "translated_kr": "[썸바이미]유자나이아신안티블레미쉬세럼50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[썸바이미] 유자 나이아신 안티 블레미쉬 세럼 50ml"
+    },
+    "brand": "썸바이미",
+    "name": "[썸바이미] 유자 나이아신 안티 블레미쉬 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21600",
+    "mall": "썸바이미",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4678264578",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8222278/82222785296.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8222278/82222785296.9.jpg",
+        "mall": "썸바이미",
+        "link": "https://smartstore.naver.com/main/products/4678264578"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
