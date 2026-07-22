@@ -8241,5 +8241,74 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188002169",
+    "translated_kr": "리프팅크림1618글로우래디언스보습50ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "알펜무어1618 글로우 리프팅 래디언스 크림"
+    },
+    "brand": null,
+    "name": "알펜무어1618 글로우 리프팅 래디언스 크림",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1180096871",
+    "translated_kr": "소나무진정시카토너250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "소나무 진정 시카 토너",
+      "hwahae": "소나무 진정 시카 토너",
+      "naver": "라운드랩 소나무 진정 시카 토너 250ml (+늘어나는 스킨패드 40매입)"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "소나무 진정 시카 토너",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14900",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/7086567094",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8463106/84631067416.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8463106/84631067416.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/7086567094"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8463106/84631067417.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7086567095"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9057054/90570546312.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/13026035220"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5114077/51140774809.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000184790"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
