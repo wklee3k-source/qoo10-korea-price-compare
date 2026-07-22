@@ -287,7 +287,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
-          STEP=10
+          STEP=3
           ITER=0
           while true; do
             ITER=$((ITER + 1))
