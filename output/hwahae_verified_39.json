@@ -15434,5 +15434,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193369860",
+    "translated_kr": "신작티트리오일롤온5ml여드름진정",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "티트리오일 롤온"
+    },
+    "brand": null,
+    "name": "티트리오일 롤온",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206535075",
+    "translated_kr": "[NEW]9배고농축어성초토너패드70매모공케어진정케어",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "9배 고농축 어성초 토너패드",
+      "naver": "블랑네이처 9배 고농축 어성초 토너패드 70매"
+    },
+    "brand": null,
+    "name": "9배 고농축 어성초 토너패드",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "25900",
+    "mall": "블랑네이처",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13562879766",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110739/91107390133.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110739/91107390133.jpg",
+        "mall": "블랑네이처",
+        "link": "https://smartstore.naver.com/main/products/13562879766"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
