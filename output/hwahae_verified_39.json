@@ -27414,5 +27414,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1164708889",
+    "translated_kr": "아트락 스킨펜스 크림 120ml (아트락 모이스처 크림 리뉴얼)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "루비셀 아토락 스킨펜스 크림",
+      "hwahae": "스킨펜스 크림"
+    },
+    "brand": "아토락 (ATO樂)",
+    "name": "스킨펜스 크림",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213065508",
+    "translated_kr": "【2026신작】달바 에어핏 블루 톤업 UV 파우더 5.5g SPF UV케어 모공커버 테카리 케어 비건",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "CHICOR"
+    },
+    "brand": null,
+    "name": "CHICOR",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
