@@ -23887,5 +23887,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204124198",
+    "translated_kr": "【PARK JIHOON 포토카드 증정】NMN 텐션 업 선 세럼 50ml / NMN 파밍 엑스퍼트 앰플 50ml(1가지 선택)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "NMN 엔엠엔 퍼밍 엑스퍼트 탄력 앰플",
+      "hwahae": "NMN 텐션 업 선세럼 [SPF50+/PA++++]"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "NMN 텐션 업 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1092646924",
+    "translated_kr": "[LE SSERAFIM 호윤진 착용] Pearl In Love Necklace 실버",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Le sserafim Yun"
+    },
+    "brand": null,
+    "name": "Le sserafim Yun",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
