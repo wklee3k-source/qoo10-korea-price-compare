@@ -10481,5 +10481,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209373156",
+    "translated_kr": "트리플레티놀워시필,30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204927023",
+    "translated_kr": "[대용량]아토베리어365캡슐토너,300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 캡슐 토너",
+      "naver": "에스트라 NEW 아토베리어365 캡슐 토너"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 캡슐 토너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25500",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=69857&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6026207/60262076846.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6026207/60262076846.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=69857&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6030052/60300523190.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6514927?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
