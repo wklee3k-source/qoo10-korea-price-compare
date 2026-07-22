@@ -12294,5 +12294,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208232536",
+    "translated_kr": "익스트림크림오리지널(자타입),70ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "리얼베리어 익스트림 크림 오리지널 65ml 1+1 기획세트[구성품]크림 25ml + 클렌징 폼 15ml"
+    },
+    "brand": "리얼베리어",
+    "name": "리얼베리어 익스트림 크림 오리지널 65ml 1+1 기획세트[구성품]크림 25ml + 클렌징 폼 15ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "37000",
+    "mall": "리얼베리어 본사 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11363304894",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8890781/88907815259.17.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890781/88907815259.17.jpg",
+        "mall": "리얼베리어 본사 스토어",
+        "link": "https://smartstore.naver.com/main/products/11363304894"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208144551",
+    "translated_kr": "대두에센스,50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
