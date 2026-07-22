@@ -16801,5 +16801,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1135008729",
+    "translated_kr": "BB세럼7ml*5바이알 믹스키트BB글로우 메소 더마 앰플 4가지 색상",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1135194256",
+    "translated_kr": "HS 헤어 증모 세럼 7ml*10본 세트 마이크로니들링 전용",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 세럼"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 워터링 핏 세럼",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
