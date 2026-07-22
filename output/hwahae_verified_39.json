@@ -8355,5 +8355,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192357673",
+    "translated_kr": "NMN15%리포좀150,000ppm원액앰플10ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "Nanorecipe NMN 15% liposome 150 000ppm undiluted solution ampoule ...",
+      "naver": "나노레시피 NMN 150,000ppm 리포좀 원액 10ml"
+    },
+    "brand": null,
+    "name": "Nanorecipe NMN 15% liposome 150 000ppm undiluted solution ampoule ...",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "15800",
+    "mall": "나노레시피",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12205076414",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8974958/89749587119.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8974958/89749587119.2.jpg",
+        "mall": "나노레시피",
+        "link": "https://smartstore.naver.com/main/products/12205076414"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191525100",
+    "translated_kr": "바이탈라이징로즈마리올인원워시500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "바이탈라이징 로즈마리 올인원 워시 500ML",
+      "hwahae": "바이탈라이징 로즈마리 올인원 워시",
+      "naver": "아로마티카 바이탈라이징 로즈마리 올인원 로션 300ML &amp; 리필 300ML 세트"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "바이탈라이징 로즈마리 올인원 워시",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37300",
+    "mall": "아로마티카",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10673476138",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8821798/88217982050.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821798/88217982050.jpg",
+        "mall": "아로마티카",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10673476138"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
