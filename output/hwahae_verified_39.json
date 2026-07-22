@@ -25950,5 +25950,50 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210141743",
+    "translated_kr": "3W클리닉 국산 에고마 나이아신아마이드 크림 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "3W클리닉 들깨 나이아신 크림",
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206649778",
+    "translated_kr": "노스웨트 30ml 노스웨트 센스 30ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "노스엣 센스액"
+    },
+    "brand": null,
+    "name": "노스엣 센스액",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
