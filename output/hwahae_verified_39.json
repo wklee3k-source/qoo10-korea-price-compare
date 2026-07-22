@@ -9705,5 +9705,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195929409",
+    "translated_kr": "익스퍼트마데카멜라캡처앰플프로30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엑스퍼트 마데카 멜라캡처앰플 프로"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "엑스퍼트 마데카 멜라캡처앰플 프로",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1200523478",
+    "translated_kr": "셀메이징콜라겐젤마스크,10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "셀메이징 저분자 콜라겐 탄력 겔 마스크"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 탄력 겔 마스크",
+    "volume": "45g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 7500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
