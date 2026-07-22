@@ -4818,5 +4818,59 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151302581",
+    "translated_kr": "[정품]두피강화클리닉탈모증상완화약산성저자극샴푸400ml",
+    "winner_source": "exa",
+    "candidates_summary": {
+      "exa": "두피강화 클리닉 탈모증상완화 샴푸",
+      "naver": "라보에이치 두피강화클리닉 탈모증상완화 약산성 저자극 샴푸 400ml"
+    },
+    "brand": null,
+    "name": "두피강화 클리닉 탈모증상완화 샴푸",
+    "volume": "",
+    "source": "exa",
+    "obsolete": null,
+    "sale": null,
+    "price": "17280",
+    "mall": "라보에이치",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/4821989532",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8236651/82366512384.53.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8236651/82366512384.53.jpg",
+        "mall": "라보에이치",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4821989532"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1147973479",
+    "translated_kr": "[정품]다이브인저분자히알루론산세럼50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "다이브인 저분자 히알루론산 세럼",
+      "hwahae": "다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
