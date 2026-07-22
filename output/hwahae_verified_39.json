@@ -18380,5 +18380,51 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1135194256",
+    "translated_kr": "HS 헤어 증모 세럼 7ml*10본 세트 마이크로니들링 전용",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "BRÜUN HS",
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 세럼"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 워터링 핏 세럼",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1135019178",
+    "translated_kr": "연어DNA PDRN 20% 함유 앰플 마이크로니들링 브라이트닝 모이스처 세럼 7ml*10본",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "exa": "에클리스 PDRN 20% 바이알 MTS 연어 스킨부스터 앰플",
+      "hwahae": "레몬 바이틱스 브라이트닝 세럼"
+    },
+    "brand": "듀댑 (dewdap)",
+    "name": "레몬 바이틱스 브라이트닝 세럼",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
