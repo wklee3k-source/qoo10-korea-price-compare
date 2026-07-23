@@ -26670,5 +26670,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1181822404",
+    "translated_kr": "컨센트레이트 앰플 30ml 클리닉라인",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리닉 컨센트레이트 앰플"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "클리닉 컨센트레이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 100000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1161193499",
+    "translated_kr": "【한국 공식 화장품】EGF 스케일링 모이스처 풋크림 130g 각질 케어 한국 코스메 고보습",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
