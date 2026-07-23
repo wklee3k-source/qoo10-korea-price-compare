@@ -31147,5 +31147,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1025092193",
+    "translated_kr": "若よもぎ 水分鎮静 フルイド 125ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어린쑥 수분진정 크림"
+    },
+    "brand": "한율 (HANYUL)",
+    "name": "어린쑥 수분진정 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1143053232",
+    "translated_kr": "資生堂 SHISEIDO オイデルミン エッセンスローション 145ml 化粧水 化粧液 保湿 透明感",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
