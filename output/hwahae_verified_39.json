@@ -35273,5 +35273,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1208505277",
+    "translated_kr": "3가지 중 선택 가능 밀본 니젤 드레시아 에어리 미러 스탑 필터 180g 헤어 스프레이",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178716974",
+    "translated_kr": "유니존 도쿄 AND ONE 셀렉트 리페어 밀크 140g 헤어 트리트먼트 집중 케어 밀크 &ONE",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 앰플 [리페어]"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 앰플 [리페어]",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
