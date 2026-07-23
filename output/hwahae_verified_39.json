@@ -30313,5 +30313,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188966580",
+    "translated_kr": "대두 크림, 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1173839756",
+    "translated_kr": "P-TIOX 링클 스트레이트닝 세럼 30ml(+미니 4ml x2)+2마스크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피티옥스"
+    },
+    "brand": "스킨수티컬즈 (SKINCEUTICALS)",
+    "name": "피티옥스",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
