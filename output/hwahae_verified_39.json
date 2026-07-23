@@ -29524,5 +29524,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1180407701",
+    "translated_kr": "엔조이 더 선 UV 프로텍션 크림 SPF50+ PA++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "맨 클리어 스틱 UV 프로텍터 [SPF50+/PA++++]"
+    },
+    "brand": "시세이도 (SHISEIDO)",
+    "name": "맨 클리어 스틱 UV 프로텍터 [SPF50+/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210946100",
+    "translated_kr": "올리브영 프레스티지 로션 투엑스 진센 데스카르고 140ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
