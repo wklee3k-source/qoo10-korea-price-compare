@@ -34711,5 +34711,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514653",
+    "translated_kr": "쑥 마스크 110g _Beautiful_K",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 쑥"
+    },
+    "brand": "이솔 (2SOL)",
+    "name": "더 쑥",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 18900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211694332",
+    "translated_kr": "쥬를리크 JURLIQUE RO 밸런싱 미스트 100ml 화장수 [169628]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
