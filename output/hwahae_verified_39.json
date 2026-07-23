@@ -39616,5 +39616,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1131598884",
+    "translated_kr": "シカペアスリーペアインテンシブスージングリペアマスク, 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 슬리페어 인텐시브 수딩 리페어 마스크"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 슬리페어 인텐시브 수딩 리페어 마스크",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213147250",
+    "translated_kr": "アドバンスドスネイル96ムチンパワーエッセンス, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드벤스드 스네일 뮤신 글래스 글로우 하이드로겔 마스크",
+      "naver": "코스알엑스 어드벤스드 스네일 뮤신 글래스 글로우 하이드로겔 마스크 1매"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "어드벤스드 스네일 뮤신 글래스 글로우 하이드로겔 마스크",
+    "volume": "34g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "4200",
+    "mall": "라온제나랑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13521124995",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9106563/91065635347.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106563/91065635347.jpg",
+        "mall": "라온제나랑",
+        "link": "https://smartstore.naver.com/main/products/13521124995"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
