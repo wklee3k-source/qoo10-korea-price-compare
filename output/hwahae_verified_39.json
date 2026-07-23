@@ -42655,5 +42655,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1175793124",
+    "translated_kr": "[신모델] 요루(YOLU) 샴푸 트리트먼트 세트 릴렉스 나이트 리페어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "릴렉스 나이트 리페어 샴푸",
+      "naver": "YOLU 뉴 릴렉스 나이트 리페어 3종 세트 샴푸 트리트먼트 헤어미스트"
+    },
+    "brand": "요루 (YOLU)",
+    "name": "릴렉스 나이트 리페어 샴푸",
+    "volume": "440ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "52500",
+    "mall": "코너프샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12729343158",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9027385/90273854108.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9027385/90273854108.1.jpg",
+        "mall": "코너프샵",
+        "link": "https://smartstore.naver.com/main/products/12729343158"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113129/91131298299.1.jpg",
+        "mall": "하루하나픽",
+        "link": "https://smartstore.naver.com/main/products/13586787887"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120615/91206156531.jpg",
+        "mall": "제타스타",
+        "link": "https://smartstore.naver.com/main/products/13661645690"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120615/91206153541.jpg",
+        "mall": "제타스타",
+        "link": "https://smartstore.naver.com/main/products/13661642700"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1054855097",
+    "translated_kr": "1+1 눈가 주름 케어! 프라이빗 리얼 아이크림 포 페이스 에디션 골드 30ml*2",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
