@@ -44306,5 +44306,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1152579895",
+    "translated_kr": "【リニューアル】 グリーントマト NMN ポア ハイドロ スージング トナー 350ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린토마토 NMN 포어 하이드로 수딩 토너",
+      "naver": "성분에디터 그린토마토 NMN 포어 하이드로 수딩 토너 350mL"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "그린토마토 NMN 포어 하이드로 수딩 토너",
+    "volume": "350g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18230",
+    "mall": "레인보우USA",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13490287445",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103479/91034797797.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103479/91034797797.jpg",
+        "mall": "레인보우USA",
+        "link": "https://smartstore.naver.com/main/products/13490287445"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152579921",
+    "translated_kr": "リジュダーマ アトクリーム MD 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
