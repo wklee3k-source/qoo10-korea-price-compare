@@ -41654,5 +41654,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213007507",
+    "translated_kr": "에어리핏 선스틱",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에어리핏 선스틱 [SPF50+/PA++++]",
+      "naver": "가히 에어리핏 선스틱 14g"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "에어리핏 선스틱 [SPF50+/PA++++]",
+    "volume": "14g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14800",
+    "mall": "고운매마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10791504958",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8833601/88336010948.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8833601/88336010948.2.jpg",
+        "mall": "고운매마켓",
+        "link": "https://smartstore.naver.com/main/products/10791504958"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820350/88203502699.jpg",
+        "mall": "데이링케어",
+        "link": "https://smartstore.naver.com/main/products/10658996785"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208546349",
+    "translated_kr": "[1+1] 퓨어 클렌징오일 200ml / 2개입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
