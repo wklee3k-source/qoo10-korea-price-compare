@@ -34241,5 +34241,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1171042034",
+    "translated_kr": "액티브 클린업 클렌징 파우더 효소 세안제 80g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1096782550",
+    "translated_kr": "아쿠아 히알루론산 에센스 대용량 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히아루론산 100 대용량",
+      "naver": "로벡틴 아쿠아 히알루론산 수분 에센스 100ml"
+    },
+    "brand": "미즈온 (MIZON)",
+    "name": "히아루론산 100 대용량",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12100",
+    "mall": "로벡틴",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2762174987",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8025991/80259918733.19.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8025991/80259918733.19.jpg",
+        "mall": "로벡틴",
+        "link": "https://smartstore.naver.com/main/products/2762174987"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8025991/80259918735.19.jpg",
+        "mall": "로벡틴",
+        "link": "https://shopping.naver.com/outlink/itemdetail/2762174988"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
