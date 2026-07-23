@@ -43458,5 +43458,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211279348",
+    "translated_kr": "불도그 불도그 오리지널 쉐이빙 젤 175ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "불독 오리지널 쉐이브젤 175ml"
+    },
+    "brand": "불독",
+    "name": "불독 오리지널 쉐이브젤 175ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "13500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000007081",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5775440/57754406896.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5775440/57754406896.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000007081"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8804827/88048279470.4.jpg",
+        "mall": "온누리Store",
+        "link": "https://smartstore.naver.com/main/products/10503774118"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8888414/88884143126.4.jpg",
+        "mall": "뷰티셋업",
+        "link": "https://smartstore.naver.com/main/products/11339632795"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8597616/85976161122.jpg",
+        "mall": "마르크유로",
+        "link": "https://smartstore.naver.com/main/products/8431660803"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8868027/88680279188.2.jpg",
+        "mall": "온누리Store",
+        "link": "https://smartstore.naver.com/main/products/11135768866"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172395755",
+    "translated_kr": "【1+1】 プロフェッショナル 24K ゴールド フォームクレンジング 100ml 保湿 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
