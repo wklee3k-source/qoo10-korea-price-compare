@@ -7931,5 +7931,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151371296",
+    "translated_kr": "아토베리어365하이드로에센스200ml(2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 하이드로 에센스",
+      "naver": "[싱글] 에스트라 아토베리어365 하이드로에센스 200ml x 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 하이드로 에센스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25600",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5901280332",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8344577/83445779820.174.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8344577/83445779820.174.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/5901280332"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158858031",
+    "translated_kr": "아토덤샤워오일1L고보습민감성피부건성피부바디워시프랑스화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
