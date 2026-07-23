@@ -49537,5 +49537,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195385469",
+    "translated_kr": "[スキンブースター/保湿] ドクタージー スキンブースト PDRN サンスセラム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨부스트 PDRN 선세럼 [SPF50+/PA++++]"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "스킨부스트 PDRN 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1181759033",
+    "translated_kr": "ビジャトラブルトナー, 170ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
