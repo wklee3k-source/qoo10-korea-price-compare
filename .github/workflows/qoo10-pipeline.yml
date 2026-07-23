@@ -708,14 +708,6 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
-      - name: Investigate remaining failures
-        working-directory: src
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
-        run: |
-          python _investigate_full_pipeline.py
 
   build_excel:
     if: github.event_name == 'push'
