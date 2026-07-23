@@ -28786,5 +28786,71 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1203745241",
+    "translated_kr": "스킨 컨디셔너 에센셜 330ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런싱 스킨 컨디셔너",
+      "naver": "알비온 스킨 컨디셔너 에센셜 토너 330ml"
+    },
+    "brand": "마이에센스 (miessence)",
+    "name": "밸런싱 스킨 컨디셔너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "111100",
+    "mall": "BLUE CHERRY",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10150322593",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8769482/87694825847.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8769482/87694825847.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/10150322593"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210202611",
+    "translated_kr": "리바이브 테라피 NF 앰플/30ml/PDRN 앰플 덱스판테놀 비타민 B5",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "스킨구하리 / 리바이브 테라피 엔에프 앰플 / 30ml / PDRN 앰플, 덱스판테놀, 비타민B5"
+    },
+    "brand": "스킨구하리",
+    "name": "스킨구하리 / 리바이브 테라피 엔에프 앰플 / 30ml / PDRN 앰플, 덱스판테놀, 비타민B5",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "31000",
+    "mall": "스킨구하리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4671334582",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8221585/82215855297.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8221585/82215855297.11.jpg",
+        "mall": "스킨구하리",
+        "link": "https://smartstore.naver.com/main/products/4671334582"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626424/86264243471.8.jpg",
+        "mall": "스킨구하리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8719743148"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
