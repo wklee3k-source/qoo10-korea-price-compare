@@ -35931,5 +35931,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1193127526",
+    "translated_kr": "루트부스터 샴푸 500ml 두피케어 볼륨타입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "헤어케어 스칼프 볼륨 부스팅 샴푸",
+      "naver": "가히 공주부양 엑스트라 볼륨 부스터 샴푸 500ml 1개 + 샴푸 50ml 2개 2종세트"
+    },
+    "brand": "아이워크 (iwoke)",
+    "name": "헤어케어 스칼프 볼륨 부스팅 샴푸",
+    "volume": "350ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "33000",
+    "mall": "가히",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11227988339",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8877249/88772498670.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8877249/88772498670.1.jpg",
+        "mall": "가히",
+        "link": "https://smartstore.naver.com/main/products/11227988339"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1062391008",
+    "translated_kr": "마스터즈 프로팩 8g + 자외선차단제 SPF50 + PA +++ 1.5mL 4세트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
