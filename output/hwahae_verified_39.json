@@ -32023,5 +32023,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1163545805",
+    "translated_kr": "수분 배리어 PANG 히알루론산 판테놀 앰플 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "수분 장벽 팡 히알루론산 판테놀 앰플",
+      "naver": "배리어글로우 앰플 더블 세트 광토닝 앰플 50ml + 히알루로닉 광앰플 55ml"
+    },
+    "brand": "에딧비 (EDIT.B)",
+    "name": "수분 장벽 팡 히알루론산 판테놀 앰플",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "98000",
+    "mall": "배리어글로우",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12544055447",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9008856/90088566300.10.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9008856/90088566300.10.jpg",
+        "mall": "배리어글로우",
+        "link": "https://smartstore.naver.com/main/products/12544055447"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9031597/90315970806.2.jpg",
+        "mall": "딥퍼센트",
+        "link": "https://smartstore.naver.com/main/products/12771459857"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1132572987",
+    "translated_kr": "살롱10 앰플 헤어 미스트 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "살롱 플러스 클리닉 10 글로우 앰플 트리트먼트"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱 플러스 클리닉 10 글로우 앰플 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
