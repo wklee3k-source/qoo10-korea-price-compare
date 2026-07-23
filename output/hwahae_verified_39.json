@@ -37489,5 +37489,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1085260269",
+    "translated_kr": "아몬드 밀크 바디 모이스처라이저 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스춰라이징 스위트 아몬드 오일 바디 로션"
+    },
+    "brand": "바이빠세 (BYPHASSE)",
+    "name": "모이스춰라이징 스위트 아몬드 오일 바디 로션",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1081721110",
+    "translated_kr": "바디 핏 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐시브 슬림 핏 바디스크럽"
+    },
+    "brand": "플루 (Plu)",
+    "name": "인텐시브 슬림 핏 바디스크럽",
+    "volume": "180g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
