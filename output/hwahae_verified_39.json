@@ -38233,5 +38233,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208735798",
+    "translated_kr": "バハ リキッド 118ml / BHA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바하 리퀴드 엑스폴리언트",
+      "naver": "[대용량] 폴라초이스 바하 리퀴드 엑스폴리언트 236ml, 1개"
+    },
+    "brand": "폴라초이스 (PAULA'SCHOICE)",
+    "name": "바하 리퀴드 엑스폴리언트",
+    "volume": "118ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "47000",
+    "mall": "폴라초이스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12298512050",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8984302/89843022766.22.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8984302/89843022766.22.jpg",
+        "mall": "폴라초이스",
+        "link": "https://smartstore.naver.com/main/products/12298512050"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8984302/89843022767.19.jpg",
+        "mall": "폴라초이스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12298512052"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8023738/80237387341.95.jpg",
+        "mall": "폴라초이스",
+        "link": "https://smartstore.naver.com/main/products/2739643594"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8023738/80237387342.91.jpg",
+        "mall": "폴라초이스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/2739643595"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211129679",
+    "translated_kr": "ピュア ビタミンC E フェルラ酸 アンプル 22ml / ビタミンC 15% 高配合 ブライトケア トーンアップ 透明感",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
