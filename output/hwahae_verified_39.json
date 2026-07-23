@@ -44979,5 +44979,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172686121",
+    "translated_kr": "Niacinamide 10% + Zinc 1% 30ml ナイアシンアミド10%+ジンク1%30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10％ + 징크 1％",
+      "naver": "나이아신아마이드 10% + 징크 1% 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "나이아신아마이드 10％ + 징크 1％",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15700",
+    "mall": "TheOrdinary",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7245979650",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8479047/84790479972.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8479047/84790479972.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7245979650"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8479048/84790483276.6.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7245982954"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8950466/89504665861.1.jpg",
+        "mall": "엄마의 선물 추천",
+        "link": "https://smartstore.naver.com/main/products/11960155173"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1092755563",
+    "translated_kr": "ベイキング パウダー サクサク 毛穴 スクラブ 200gx2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
