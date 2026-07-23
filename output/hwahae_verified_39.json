@@ -37988,5 +37988,57 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1176564980",
+    "translated_kr": "[한정 세일]블랑네이처 매직티트리오일 20ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "블랑네이처 5배 고농축 매직 티트리 오일 대용량 20ml"
+    },
+    "brand": "블랑네이처",
+    "name": "블랑네이처 5배 고농축 매직 티트리 오일 대용량 20ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "19800",
+    "mall": "블랑네이처",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2230399962",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1246084/12460849143.31.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1246084/12460849143.31.jpg",
+        "mall": "블랑네이처",
+        "link": "https://smartstore.naver.com/main/products/2230399962"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164170834",
+    "translated_kr": "[SKIN1004] (jL) Madagascar Centella Poremizing Light Gel Cream 75ml/마다가스카르 센텔라 포어미제이징 라이트 젤 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 포어마이징 라이트 젤 크림"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 포어마이징 라이트 젤 크림",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
