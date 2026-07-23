@@ -35914,5 +35914,77 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1167189215",
+    "translated_kr": "ドクダミヒアルロンスージング アンプル 50ml/ 어성초 히알루론 수딩 앰플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 히알루론 수딩 앰플",
+      "naver": "구달 어성초 히알루론 수딩 앰플 50ml (~27.10.06)"
+    },
+    "brand": "구달 (goodal)",
+    "name": "어성초 히알루론 수딩 앰플",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "iwillcosmetics",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11647737091",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8919224/89192247557.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8919224/89192247557.1.jpg",
+        "mall": "iwillcosmetics",
+        "link": "https://smartstore.naver.com/main/products/11647737091"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1083286884",
+    "translated_kr": "[ エンジェルスリキッド ] グルタチオンプラス ナイアシンアミド 700vクリーム 50ml/나이아신아마이드 700v 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온+ 나이아신아마이드 700V 크림",
+      "naver": "제네틱 씬크로 250ml"
+    },
+    "brand": "엔젤스리퀴드 (Angel's Liquid)",
+    "name": "글루타치온+ 나이아신아마이드 700V 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "147000",
+    "mall": "트리플비 마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4723210078",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8226773/82267731303.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8226773/82267731303.jpg",
+        "mall": "트리플비 마켓",
+        "link": "https://smartstore.naver.com/main/products/4723210078"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834272/88342721456.jpg",
+        "mall": "스킨몽",
+        "link": "https://smartstore.naver.com/main/products/10798215466"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8736882/87368823417.jpg",
+        "mall": "유럽코코",
+        "link": "https://smartstore.naver.com/main/products/9824321144"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
