@@ -31712,5 +31712,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1171498084",
+    "translated_kr": "레드 아크네 바디 소프, 400g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 아크네 바디 필링 샷"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "레드 아크네 바디 필링 샷",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162429093",
+    "translated_kr": "코달리 비노 퍼펙트 래디언스 세럼 30ml 화이트닝 화이트닝 앰플(프랑스 세럼)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 비노퍼펙트 래디언스 세럼 컴플렉션 코렉팅"
+    },
+    "brand": "꼬달리 (CAUDALIE)",
+    "name": "(해외) 비노퍼펙트 래디언스 세럼 컴플렉션 코렉팅",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
