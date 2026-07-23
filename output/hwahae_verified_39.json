@@ -30578,5 +30578,67 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1189247744",
+    "translated_kr": "알티움8 서블림 뷰티 클렌징 오일 150ml (메이크업 리무버) 【정품】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "슈에무라 알티움8 서브라임 동백 뷰티 클렌징 오일 150ml"
+    },
+    "brand": "슈에무라",
+    "name": "슈에무라 알티움8 서브라임 동백 뷰티 클렌징 오일 150ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "89500",
+    "mall": "잇츠재팬직구마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12143957308",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8968846/89688468013.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8968846/89688468013.jpg",
+        "mall": "잇츠재팬직구마켓",
+        "link": "https://smartstore.naver.com/main/products/12143957308"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8968845/89688452791.jpg",
+        "mall": "잇츠재팬직구마켓",
+        "link": "https://smartstore.naver.com/main/products/12143942086"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9012174/90121743571.jpg",
+        "mall": "츄스글로벌",
+        "link": "https://smartstore.naver.com/main/products/12577232715"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "886598736",
+    "translated_kr": "아나수이 나이트 오브 팬시 EDT SP 50ml 오드트왈렛 향수 프레그랑스 박스손상있음",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "7무 화이트듀 나이트 트리트먼트"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "7무 화이트듀 나이트 트리트먼트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
