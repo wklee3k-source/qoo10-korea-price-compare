@@ -39341,5 +39341,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208425109",
+    "translated_kr": "시크릿 라이스 누룩 필링 투포 클렌저 120g 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시크릿 라이스 누룩 필링 투 폼 클렌저",
+      "naver": "숨37 X 월레스와그로밋 시크릿 라이스 누룩 필링 투 폼 클렌저 1개 피부결정리"
+    },
+    "brand": "숨37도 (SUM37)",
+    "name": "시크릿 라이스 누룩 필링 투 폼 클렌저",
+    "volume": "120g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "42500",
+    "mall": "TOOTOO샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13082171826",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9062668/90626682918.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9062668/90626682918.jpg",
+        "mall": "TOOTOO샵",
+        "link": "https://smartstore.naver.com/main/products/13082171826"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193452641",
+    "translated_kr": "2026.1.16 발매 화이트로지스트 크로노제네시스 브라이트닝 컨센트레이트·1.8X(1.8배 최고농도 코직산 배합) 국내정규품 2가지 농도의 미백미용액 철저한 주근깨 대책 높은 침투감",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
