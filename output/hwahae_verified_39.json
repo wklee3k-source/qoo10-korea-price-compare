@@ -37182,5 +37182,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200862105",
+    "translated_kr": "【2개세트】차콧 피니싱키프미스트 쿨 50ml×2 메이크업 마무리와 베이스로 사용 가능한 2WAY 미스트 청량감과 촉촉함을 부여하여 메이크업을 고정 푸슬푸슬한 미세 미스트의 1층식 일본제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190965338",
+    "translated_kr": "비프로즌 포어 팩투폼 세안료 120g 쿨링 모공 팩폼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비 프로즌 포어 팩 투 폼 클렌저"
+    },
+    "brand": "아페리레 (Aperire)",
+    "name": "비 프로즌 포어 팩 투 폼 클렌저",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
