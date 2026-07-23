@@ -32599,5 +32599,77 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1179656795",
+    "translated_kr": "코스 알엑스 원스텝 패드/아저씨 패드/핌플 패드 70장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "원스텝 오리지널 클리어 패드",
+      "naver": "코스알엑스 원스텝 오리지널 클리어 패드 90매"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "원스텝 오리지널 클리어 패드",
+    "volume": "185ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "39700",
+    "mall": "로하스힐링",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6445699235",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8399019/83990199568.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8399019/83990199568.1.jpg",
+        "mall": "로하스힐링",
+        "link": "https://smartstore.naver.com/main/products/6445699235"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8951629/89516292242.1.jpg",
+        "mall": "로하스힐링",
+        "link": "https://smartstore.naver.com/main/products/11971781554"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1134795243",
+    "translated_kr": "테라 클네 365 클리어 딥 클렌징 폼, 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "테라크네 365 클리어 딥 클렌징 폼",
+      "naver": "[싱글] 에스트라 테라크네365 클리어딥클렌징폼 200g x 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "테라크네 365 클리어 딥 클렌징 폼",
+    "volume": "200g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18400",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5590786780",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8313528/83135283067.64.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8313528/83135283067.64.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/5590786780"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754284/87542842588.18.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/9998340315"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
