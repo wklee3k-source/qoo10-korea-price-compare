@@ -30993,5 +30993,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1142237251",
+    "translated_kr": "BTS 정국 향수 50ml / 포르멘트 코튼허그 BTS 정국",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1146592877",
+    "translated_kr": "프로샷 콜라주베네이션 아이 크림 포 페이스 30ml + 세럼 10ml + T 애플리케이터 기획 상품 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플루이드 [아이]",
+      "naver": "메트리젠 아이 플루이드"
+    },
+    "brand": "메트리젠 (MATRIGEN)",
+    "name": "플루이드 [아이]",
+    "volume": "1ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "45000",
+    "mall": "메조팜",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9386297433",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8693079/86930797756.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8693079/86930797756.1.jpg",
+        "mall": "메조팜",
+        "link": "https://smartstore.naver.com/main/products/9386297433"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041812/90418122186.jpg",
+        "mall": "성림 몰",
+        "link": "https://smartstore.naver.com/main/products/12873611194"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
