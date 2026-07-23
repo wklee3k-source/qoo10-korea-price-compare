@@ -33537,5 +33537,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188510609",
+    "translated_kr": "슈퍼 젝션 크림, 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼젝션 크림"
+    },
+    "brand": "코나피딜 (CONAPIDIL)",
+    "name": "슈퍼젝션 크림",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 177000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1149395148",
+    "translated_kr": "나이아신아마이드 20% 세럼 80ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
