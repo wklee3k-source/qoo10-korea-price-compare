@@ -32168,5 +32168,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1101773535",
+    "translated_kr": "XMD 스템3 클리니컬 리커버리 세럼 5ml x 6개 샘플/STEM Clinical",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "XMD 스템3 클리니컬 리커버리 크림"
+    },
+    "brand": "아이오페 (IOPE)",
+    "name": "XMD 스템3 클리니컬 리커버리 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 80000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194183508",
+    "translated_kr": "하이드로 세라놀 리얼 딥 뷰티 마스크, 4매, 1.19 oz (34 g) 각각",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
