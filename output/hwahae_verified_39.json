@@ -27416,5 +27416,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1142237251",
+    "translated_kr": "BTS정국퍼퓨마 50ml / 포르멘트 코튼허그 BTS 정국",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "BTS 에디션 디엔에이 프로아틴 마스크"
+    },
+    "brand": "메디힐 (MEDIHEAL)",
+    "name": "BTS 에디션 디엔에이 프로아틴 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1080079065",
+    "translated_kr": "데일리 마스크팩 30장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
