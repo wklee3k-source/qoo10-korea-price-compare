@@ -36498,5 +36498,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205747267",
+    "translated_kr": "액니 닥터 퍼스트 블랙 딥 클렌징 폼 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아크니 닥터 1st 블랙 딥 클렌징 폼"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "아크니 닥터 1st 블랙 딥 클렌징 폼",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205744981",
+    "translated_kr": "시카 카밍 파우더 워시 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 카밍 파우더 워시",
+      "naver": "[토코보] 시카 카밍 파우더 워시 50g 8809835060607"
+    },
+    "brand": "토코보 (TOCOBO)",
+    "name": "시카 카밍 파우더 워시",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17600",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4192694?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6038604/60386040955.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6038604/60386040955.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4192694?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
