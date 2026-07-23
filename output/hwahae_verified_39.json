@@ -31267,5 +31267,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1204348954",
+    "translated_kr": "헬프미 닥트 패드, 60장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204243219",
+    "translated_kr": "원더 세라마이드 모찌 토너, 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "원더 비건라벨 세라마이드 모찌 진정 토너"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "원더 비건라벨 세라마이드 모찌 진정 토너",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
