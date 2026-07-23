@@ -36371,5 +36371,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209235398",
+    "translated_kr": "엑소솜 보습크림 50ml 한국코스메 한국브랜드 공식숍 한국스킨케어 스킨케어 화장품 민감성피부 건성피부 수분케어 촉촉함 한국앰플 선물 PDRN 시카",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "솔아토24 진정 보습크림"
+    },
+    "brand": "솔포그 (SOLFOG)",
+    "name": "솔아토24 진정 보습크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 77000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210318709",
+    "translated_kr": "엑소솜 보습앰플 30ml 2개세트 1+1 미용액 세럼 한국코스메 한국스킨케어 화장품 스킨케어 PDRN 파인샷 엑소솜 시카 촉촉함 수분 앰플",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
