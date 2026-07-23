@@ -36969,5 +36969,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1170084146",
+    "translated_kr": "[2종 선택] 맥스 플러스 패드 / 센시티브 패드 [55장]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "맥스플러스 패드"
+    },
+    "brand": "스트라이덱스 (STRIDEX)",
+    "name": "맥스플러스 패드",
+    "volume": "180g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1122416561",
+    "translated_kr": "포어 마이징 클리어 토너 210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 포어마이징 클리어 토너",
+      "naver": "스킨1004 센텔라 포어마이징 클리어 토너 210ml, 1개"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 포어마이징 클리어 토너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "14900",
+    "mall": "originbe",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13646923974",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119143/91191434753.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119143/91191434753.jpg",
+        "mall": "originbe",
+        "link": "https://smartstore.naver.com/main/products/13646923974"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
