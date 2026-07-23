@@ -39038,5 +39038,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1154827017",
+    "translated_kr": "맨 하드 밤 60g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포 맨 밤부 포레스트 메가 하드 스프레이",
+      "naver": "[BEST 내츄럴 스타일링 제품] 도어스 비치오렌지 하드밤 80g 포마드 남성 헤어왁스"
+    },
+    "brand": "다슈 (DASHU)",
+    "name": "포 맨 밤부 포레스트 메가 하드 스프레이",
+    "volume": "180ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25000",
+    "mall": "도어스 헤어그루밍",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9159915414",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8670441/86704415737.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8670441/86704415737.2.jpg",
+        "mall": "도어스 헤어그루밍",
+        "link": "https://smartstore.naver.com/main/products/9159915414"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185299459",
+    "translated_kr": "ululis 울리스 VITA.C 건조·파사함 케어의 비타씨 워터 콩크 EX 리페어 헤어오일 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "D.N.A. 인퓨전 리페어 에센스",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 63000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
