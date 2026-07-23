@@ -35668,5 +35668,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1160418590",
+    "translated_kr": "[2종 세트]브링그린 티트리 시카 수딩 토너 250ml + 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리 시카 수딩 토너",
+      "naver": "브링그린 티트리 시카 수딩 토너 250ml + 크림 100ml 2종 기획 세트"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리 시카 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "22700",
+    "mall": "코쿤샵1",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13253783547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9079829/90798293879.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079829/90798293879.jpg",
+        "mall": "코쿤샵1",
+        "link": "https://smartstore.naver.com/main/products/13253783547"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152030824",
+    "translated_kr": "[인기 2종 세트]화이트 트러플 퍼스트 스프레이 세럼 100ml + 워터풀 톤업 선크림 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
