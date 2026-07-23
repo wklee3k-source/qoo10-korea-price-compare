@@ -39775,5 +39775,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1159643310",
+    "translated_kr": "해피 포맨 EDC 50ml SP (향수)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베티버 EDC"
+    },
+    "brand": "베르두1902 (BERDOUES1902)",
+    "name": "베티버 EDC",
+    "volume": "125ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158430479",
+    "translated_kr": "아벤느워터 300ml 3개 세트 (화장수)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
