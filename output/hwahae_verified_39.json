@@ -39135,5 +39135,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193058658",
+    "translated_kr": "레드이치 케어크림 330ml(20ml 오일 포함)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드이치 케어크림"
+    },
+    "brand": "일리윤 (ILLIYOON)",
+    "name": "레드이치 케어크림",
+    "volume": "128ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190762638",
+    "translated_kr": "Wonjungyo 원정요 모이스트 업 레디 스킨 팩 50장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
