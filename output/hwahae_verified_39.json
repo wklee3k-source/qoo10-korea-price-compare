@@ -39481,5 +39481,67 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169812368",
+    "translated_kr": "[NEW]ラウンドアラウンド センテッド ヘア&amp;ボディ ミスト 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1155304298",
+    "translated_kr": "ZARA 香水 HIBISCUS 90ML オードパフューム [EDP]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "ZARA 자라 HIBISCUS 오드 퍼퓸 90ML(3.0 FL. OZ.) 0120830 999"
+    },
+    "brand": "자라홈",
+    "name": "ZARA 자라 HIBISCUS 오드 퍼퓸 90ML(3.0 FL. OZ.) 0120830 999",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "53290",
+    "mall": "ZARA HOME 자라홈",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12802645669",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9034715/90347156618.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9034715/90347156618.jpg",
+        "mall": "ZARA HOME 자라홈",
+        "link": "https://smartstore.naver.com/main/products/12802645669"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8892453/88924537539.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/11380027176"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8581733/85817331338.1.jpg",
+        "mall": "GIVEN",
+        "link": "https://smartstore.naver.com/main/products/8272831015"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073976/90739762366.jpg",
+        "mall": "향수셀렉터",
+        "link": "https://smartstore.naver.com/main/products/13195251269"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
