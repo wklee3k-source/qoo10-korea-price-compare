@@ -45385,5 +45385,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163367685",
+    "translated_kr": "[NEW]レッド アクネ ボディピーリングショット 110g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206889838",
+    "translated_kr": "スーディング プリップ リップマスク",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마스크 [수딩앤모이스춰]",
+      "naver": "레디 [레디] 이브에버 수딩 앤 모이스춰 마스크 450g 1개 수분 공급 워시오프 팩"
+    },
+    "brand": "이브에버 (EVEVER)",
+    "name": "마스크 [수딩앤모이스춰]",
+    "volume": "450g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36900",
+    "mall": "롯데백화점 중동점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13495707963",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104021/91040218315.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104021/91040218315.jpg",
+        "mall": "롯데백화점 중동점",
+        "link": "https://smartstore.naver.com/main/products/13495707963"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104021/91040218358.jpg",
+        "mall": "롯데백화점 중동점",
+        "link": "https://smartstore.naver.com/main/products/13495708006"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
