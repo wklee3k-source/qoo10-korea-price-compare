@@ -40731,5 +40731,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1137010633",
+    "translated_kr": "살롱10 프로페셔널 시카 세라마이드 오일 세럼 60ml+25ml×1 촉촉한 모발 K뷰티 헤어케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1118245002",
+    "translated_kr": "에어리핏 선스틱 14g SPF 50+ PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에어리핏 선스틱 [SPF50+/PA++++]"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "에어리핏 선스틱 [SPF50+/PA++++]",
+    "volume": "14g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
