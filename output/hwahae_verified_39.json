@@ -31287,5 +31287,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212657160",
+    "translated_kr": "레드토마토 젤리 립마스크 / 그린토마토 스무디 립스크럽 12g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린 토마토 스무디 립 스크럽",
+      "naver": "레드 토마토 젤리 립 마스크 12g"
+    },
+    "brand": "풀리 (FULLY)",
+    "name": "그린 토마토 스무디 립 스크럽",
+    "volume": "12g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15900",
+    "mall": "풀리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://full-y.co.kr/product/detail.html?product_no=234&cate_no=76&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5784318/57843187406.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5784318/57843187406.jpg",
+        "mall": "풀리",
+        "link": "https://full-y.co.kr/product/detail.html?product_no=234&cate_no=76&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6059069/60590691585.jpg",
+        "mall": "풀리",
+        "link": "https://full-y.co.kr/product/detail.html?product_no=577&cate_no=102&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193630936",
+    "translated_kr": "갈락 나이아신아마이드 3.0 에센스 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "갈락 나이아신 3.0 에센스"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "갈락 나이아신 3.0 에센스",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
