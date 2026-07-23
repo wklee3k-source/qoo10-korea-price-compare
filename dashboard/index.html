@@ -291,6 +291,13 @@
   .ctrl-btn.start { color: var(--ok, #4fd1a5); }
   .ctrl-btn.stop { color: var(--bad, #e5534b); }
   .ctrl-note { font-size: 10px; color: var(--text-dim); margin-top: 6px; }
+  .worker-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 8px;
+  }
+  .worker-cell {
+    font-size: 10px; color: var(--text-dim); background: rgba(125,137,152,0.08);
+    border-radius: 4px; padding: 4px 6px; font-family: var(--mono);
+  }
 </style>
 </head>
 <body>
@@ -330,12 +337,24 @@
         </div>
       </div>
       <div class="progress-note" id="s1-note">불러오는 중…</div>
+      <div class="worker-grid" id="s1-workers">
+        <div class="worker-cell" id="s1-w0">브랜치0 —</div>
+        <div class="worker-cell" id="s1-w1">브랜치1 —</div>
+        <div class="worker-cell" id="s1-w2">브랜치2 —</div>
+        <div class="worker-cell" id="s1-w3">브랜치3 —</div>
+      </div>
       <div class="stage-controls">
         <span class="run-badge idle" id="s1-run-badge">확인중</span>
         <button class="ctrl-btn start" id="s1-start-btn" onclick="triggerStage(1)">▶ 진행</button>
         <button class="ctrl-btn stop" id="s1-stop-btn" onclick="stopStage(1)" disabled>■ 정지</button>
       </div>
       <div class="ctrl-note">정지해도 다음 진행 때 이어서 계속됩니다</div>
+      <div class="stage-controls" style="margin-top:8px;">
+        <span class="run-badge idle" id="s15-run-badge">확인중</span>
+        <span style="font-size:11px;color:var(--text-dim);">1.5단계 병합</span>
+        <button class="ctrl-btn start" id="s15-start-btn" onclick="triggerStage(15)">▶ 병합</button>
+        <button class="ctrl-btn stop" id="s15-stop-btn" onclick="stopStage(15)" disabled>■ 정지</button>
+      </div>
     </div>
 
     <div class="card stage2">
@@ -469,6 +488,7 @@ async function ghFetchRepo(path, options = {}) {
 // 각 단계가 어떤 job 이름에 대응하는지, 트리거시 어떤 input을 켜야 하는지
 const STAGE_JOB_MAP = {
   1: { jobNames: ['discover_low_review_shops', 'discover_low_review_shops_parallel'], input: 'run_discovery' },
+  15: { jobNames: ['merge_discovery_shards'], input: 'run_merge_discovery' },
   2: { jobNames: ['auto_translate'], input: 'run_auto_translate' },
   3: { jobNames: ['hwahae_verify'], input: 'run_hwahae_verify' },
 };
@@ -493,8 +513,7 @@ async function triggerStage(stageNum) {
   try {
     const inputs = { [cfg.input]: 'true' };
     if (stageNum === 1) {
-      inputs.discovery_max_shops = '999999';
-      inputs.discovery_target_products = '999999';
+      inputs.discovery_parallel = 'true';
     }
     const res = await ghFetch('/workflows/qoo10-pipeline.yml/dispatches', {
       method: 'POST',
@@ -698,6 +717,22 @@ async function loadAll() {
     document.getElementById('s1-note').textContent = '불러오기 실패';
     errorBox.innerHTML += `<div class="error-box">STAGE 1: ${e.message}</div>`;
   }
+
+  // Stage 1 워커별(0~3) 개별 진행상황 — 각자 전용 파일을 직접 조회한다.
+  // 병합 전 데이터라 위의 s1-total과는 별개(참고용 실시간 지표).
+  await Promise.all([0, 1, 2, 3].map(async (B) => {
+    const cell = document.getElementById(`s1-w${B}`);
+    try {
+      const res = await fetch(RAW(`output/discovery_state_${B}.json`, 'discovery-live'));
+      if (!res.ok) { cell.textContent = `브랜치${B} 없음`; return; }
+      const d = await res.json();
+      const shops = (d.visited_shops || []).length;
+      const products = (d.all_products || []).length;
+      cell.textContent = `브랜치${B}: 상점${shops} 상품${products}`;
+    } catch (e) {
+      cell.textContent = `브랜치${B} 조회실패`;
+    }
+  }));
 
   // Stage 2 (번역) — hwahae_input_39.json이 번역 완료 목록. 전체상품(1단계와
   // 동일 기준) 대비 완료(%)/대기를 계산한다.
