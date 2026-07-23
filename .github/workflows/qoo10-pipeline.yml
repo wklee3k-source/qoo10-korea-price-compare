@@ -857,15 +857,7 @@ jobs:
           python hwahae_brand_lookup.py ../data/test_brands_temp.json /tmp/hwahae_new_mappings.json
           echo "=== 결과 ==="
           cat /tmp/hwahae_new_mappings.json
-          python3 -c "
-import json
-existing = json.load(open('../data/brand_translations_learned.json'))
-new = json.load(open('/tmp/hwahae_new_mappings.json'))
-before = len(existing)
-existing.update(new)
-json.dump(existing, open('../data/brand_translations_learned.json', 'w'), ensure_ascii=False, indent=2)
-print(f'사전 {before}개 -> {len(existing)}개 ({len(existing)-before}개 신규 추가)')
-"
+          python3 -c "import json; existing = json.load(open('../data/brand_translations_learned.json')); new = json.load(open('/tmp/hwahae_new_mappings.json')); before = len(existing); existing.update(new); json.dump(existing, open('../data/brand_translations_learned.json', 'w'), ensure_ascii=False, indent=2); print(f'사전 {before}개 -> {len(existing)}개 ({len(existing)-before}개 신규 추가)')"
           git add ../data/brand_translations_learned.json
           git diff --cached --quiet || git commit -m "Auto: hwahae brand lookup added new brand mappings"
           for i in $(seq 1 10); do
