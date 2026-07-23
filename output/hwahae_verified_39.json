@@ -45187,5 +45187,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205554324",
+    "translated_kr": "[NEW][ダルバ ウォータフル パンテノール UVセラム 50ml クーリング 水分UV 低刺激 ヴィーガン 敏感肌 韓国コスメ SPF50+ PA++++",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1125939784",
+    "translated_kr": "【正規品】グローアップインシャワートーンアップミルク300g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우업 인샤워 톤업밀크",
+      "naver": "글로우업 인샤워 톤업밀크 80g (튜브형)"
+    },
+    "brand": "메디픽미 (MEDIPICKME)",
+    "name": "글로우업 인샤워 톤업밀크",
+    "volume": "80g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15900",
+    "mall": "메디픽미",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://medipickme.com/product/detail.html?product_no=24&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5790431/57904315293.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5790431/57904315293.jpg",
+        "mall": "메디픽미",
+        "link": "https://medipickme.com/product/detail.html?product_no=24&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
