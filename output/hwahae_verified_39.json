@@ -43187,5 +43187,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1117286135",
+    "translated_kr": "Mung Bean Pore Tight-Up Serum 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "녹두 모공 타이트업 세럼"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 모공 타이트업 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1117285372",
+    "translated_kr": "Mung Bean pH-balanced Cleansing Foam 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "녹두 약산성 클렌징폼"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 약산성 클렌징폼",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
