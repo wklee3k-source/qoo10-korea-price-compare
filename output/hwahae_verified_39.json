@@ -23197,5 +23197,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203100590",
+    "translated_kr": "화이트 트러플 아쿠아마린 에너지 세럼160ml blue mist",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1146023742",
+    "translated_kr": "인테카 진정 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인테카 진정 토너"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 진정 토너",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
