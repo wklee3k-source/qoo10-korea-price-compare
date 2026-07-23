@@ -38254,5 +38254,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1134796920",
+    "translated_kr": "레드 폼 클렌저 120ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170084146",
+    "translated_kr": "[2종 선택] 맥스플러스 패드 / 센시티브 패드 [55장]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "맥스플러스 패드"
+    },
+    "brand": "스트라이덱스 (STRIDEX)",
+    "name": "맥스플러스 패드",
+    "volume": "180g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
