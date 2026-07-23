@@ -35394,5 +35394,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203000979",
+    "translated_kr": "대두 에센스, 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1198208356",
+    "translated_kr": "아누카틴 샴푸, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모엔 아누카틴 샴푸"
+    },
+    "brand": "닥터비움 (Dr.Viuum)",
+    "name": "모엔 아누카틴 샴푸",
+    "volume": "750ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
