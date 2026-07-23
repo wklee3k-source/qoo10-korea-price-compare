@@ -31540,5 +31540,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1167189098",
+    "translated_kr": "한국 블랙스네일 콜라겐 투미스트 세럼 100ml 3+3",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랙 스네일 콜라겐 투 미스트 세럼"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "블랙 스네일 콜라겐 투 미스트 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1163541573",
+    "translated_kr": "아누브 글로우 바디 로션 290ml×2 누바바닐라 한국 뷰티 바디 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
