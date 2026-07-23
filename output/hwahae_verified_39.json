@@ -49634,5 +49634,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1190935815",
+    "translated_kr": "2XビタミンCトーニングアンプル50ml /スキンケア",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "투엑스 비타민C 토닝 앰플",
+      "naver": "토니모리 투엑스 비타민C 토닝 앰플"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "투엑스 비타민C 토닝 앰플",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "11900",
+    "mall": "동아 수성점 토니모리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13327380253",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9087189/90871890585.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087189/90871890585.1.jpg",
+        "mall": "동아 수성점 토니모리",
+        "link": "https://smartstore.naver.com/main/products/13327380253"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191833877",
+    "translated_kr": "トリプルコラーゲントータルテンションクリーム80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트리플 콜라겐 토탈 텐션 크림"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "트리플 콜라겐 토탈 텐션 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
