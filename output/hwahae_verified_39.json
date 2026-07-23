@@ -31984,5 +31984,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206876078",
+    "translated_kr": "[1+1] 부활초 비피다 세럼 파밍 드롭 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "부활초 비피다 세럼 퍼밍 드롭"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "부활초 비피다 세럼 퍼밍 드롭",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191781202",
+    "translated_kr": "메디힐 토너 패드 2.0 리필 70장×2개 세트 4가지 타입 선택 가능",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
