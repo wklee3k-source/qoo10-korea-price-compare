@@ -322,20 +322,43 @@ jobs:
             # 커밋/push한다. discovery_state.json(공유파일)은 절대 안 건드린다
             # — 그래서 워커끼리는 파일이 겹칠 일이 구조적으로 없다. 병합은
             # 이 job이 아니라 완전히 별도인 "1.5단계"(merge_discovery_shards)
-            # job이 전담한다. 스크래핑(수집)과 병합의 속도가 서로 전혀
-            # 영향을 안 주므로, 예전에 겪은 "병합이 수집 속도에 끌려가며
-            # 느려지는" 문제가 원천적으로 사라진다.
+            # job이 전담한다.
+            #
+            # [중요 버그 수정] 예전엔 매 반복마다 즉시 push를 시도했는데,
+            # 다른 워커/병합job이 매우 자주 discovery-live에 커밋하는
+            # 상황에서는 30번 재시도로도 못 따라잡아 push가 통째로 실패하고
+            # 몇 시간치 작업(실측: 128개 상점)이 그대로 유실되는 사고가 있었다.
+            # 이제 3반복(최대 9개 상점)마다 한 번만 push해서 시도 빈도를
+            # 줄이고, 재시도도 "git pull --rebase"(바이너리 파일 있으면
+            # 종종 조용히 실패) 대신 "내 파일을 백업 -> origin 최신으로
+            # 리셋 -> 백업 복원 -> 재커밋" 방식을 써서 확실하게 성공시킨다.
             git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER)"
-              for i in $(seq 1 30); do
-                if git push origin discovery-live; then break; fi
-                sleep_time=$((RANDOM % 6 + 1))
-                echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/30)"
+            fi
+
+            if [ $((ITER % 3)) -eq 0 ]; then
+              PUSHED=0
+              for i in $(seq 1 40); do
+                if git push origin discovery-live; then PUSHED=1; break; fi
+                sleep_time=$((RANDOM % 5 + 1))
+                echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/40)"
                 sleep "$sleep_time"
+                # 내 전용 파일을 안전하게 백업해두고, origin 최신본으로
+                # 완전히 리셋한 뒤, 백업을 되살려 다시 커밋한다(rebase보다
+                # 확실함 — 내 파일은 나만 쓰니 항상 최신이 곧 정답).
+                cp "../output/discovery_state_${B}.json" "/tmp/dstate_${B}_backup.json" 2>/dev/null || true
+                cp "../output/discovery_result_${B}.xlsx" "/tmp/dresult_${B}_backup.xlsx" 2>/dev/null || true
                 git fetch origin discovery-live 2>/dev/null
-                git pull --rebase origin discovery-live -q 2>/dev/null || true
+                git reset --hard origin/discovery-live -q 2>/dev/null || true
+                cp "/tmp/dstate_${B}_backup.json" "../output/discovery_state_${B}.json" 2>/dev/null || true
+                cp "/tmp/dresult_${B}_backup.xlsx" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
+                git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
+                git diff --cached --quiet || git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER, 재시도)"
               done
+              if [ "$PUSHED" != "1" ]; then
+                echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
+              fi
             fi
           done
 
