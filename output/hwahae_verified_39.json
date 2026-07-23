@@ -35346,5 +35346,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1025023517",
+    "translated_kr": "다이브인 저분자 히알루론산 수딩 크림 100ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 수딩 크림",
+      "naver": "[NEW] 토리든 다이브인 저분자 히알루론산 수딩 크림 (단지형)100ml, 1개"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 수딩 크림",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19000",
+    "mall": "토리든",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13501631121",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104614/91046141473.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104614/91046141473.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/13501631121"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206859281",
+    "translated_kr": "포어 브라이트닝 시미 케어 크림 마스크, 4장 /브라이트닝/한국 마스크팩/나이아신아마이드/보습/수분/피부 톤 개선/얼굴 뺨 리프팅",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
