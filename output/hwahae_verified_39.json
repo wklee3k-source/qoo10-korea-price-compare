@@ -36078,5 +36078,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1094595212",
+    "translated_kr": "パンキニパフュームハンドクリームミニ 15ml / PUMKINI, CHAMO,FEY9,VEIN / 香水 ハンド",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212749218",
+    "translated_kr": "【한국코스메】유산(Lactic Acid)10%+히알루론산HA 30ml 미용액 각질케어 보습 결 매끄러운피부 페이스세럼 스킨케어 한국미용액 인기",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매트릭실 10% + HA",
+      "naver": "매트릭실 10% + HA 30ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "매트릭실 10% + HA",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "16600",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10248991257",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8779349/87793494901.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779349/87793494901.1.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10248991257"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2333347/23333478726.2.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000141333"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5598462/55984626784.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3647622?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8513470/85134703579.2.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7590203257"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
