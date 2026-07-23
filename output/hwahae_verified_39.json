@@ -31675,5 +31675,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209977461",
+    "translated_kr": "여름 축제 MJ케어 시트 마스크 [60장] SALE 선택 세트 (6종 X 각 10장) 자유 조합 - 플러스 1장 증정 - 보습 세트 개별 포장 한국 팩 대용량 시트 팩 페이스 팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TPO 팩 [운동]"
+    },
+    "brand": "리플라이미 (reply:me)",
+    "name": "TPO 팩 [운동]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205506863",
+    "translated_kr": "[전 상품 자유선택] 본딩 케라틴 폼 트리트먼트 200ml / 본딩 알파 케라틴 헤어 팩 260g / 누드 머스크 / 그린 제스트 / 손상 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "본딩 알파 케라틴 헤어팩 그린제스트 누드머스크"
+    },
+    "brand": "오하입 (ohype)",
+    "name": "본딩 알파 케라틴 헤어팩 그린제스트 누드머스크",
+    "volume": "260g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
