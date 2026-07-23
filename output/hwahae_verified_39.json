@@ -41789,5 +41789,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209222941",
+    "translated_kr": "엑소좀 보습 토너 150ml 한국 스킨케어 한국 코스메 스킨케어 PDRN CICA 히알루론산 수분 케어 건성 피부 로션 화장수 정피부 성분 매일의 케어 약산성 한국 상품 고보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "닥터지 레드 블레미쉬 클리어 수딩 토너 500ml 1개"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "13970",
+    "mall": "예스유니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13629880077",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117439/91174390686.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117439/91174390686.jpg",
+        "mall": "예스유니",
+        "link": "https://smartstore.naver.com/main/products/13629880077"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1134145901",
+    "translated_kr": "ダイブイン トナー 500ml+コットン60枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
