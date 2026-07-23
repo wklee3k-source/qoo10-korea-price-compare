@@ -37611,5 +37611,57 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1198894604",
+    "translated_kr": "티파니 TIFFANY & 러브 포 히ム EDT + & 러브 포 하 EDP 미니향수 세트 1.2ml×2 샘플[6495] 메일 배송 무료[B][BP3]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "IN2U 포 허 EDT"
+    },
+    "brand": "CK (캘빈클라인씨케이)",
+    "name": "IN2U 포 허 EDT",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 63000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1196826611",
+    "translated_kr": "블루빈 B5-PDRN 마일드 로션 230ml / 보습 유액 민감성 피부 대응 촉촉함 케어 스킨케어 로션 한국 화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[화해1위] 브링그린 블루빈 B5-PDRN 마일드 로션 230ml (+블루빈크림 7ml)"
+    },
+    "brand": "브링그린",
+    "name": "[화해1위] 브링그린 블루빈 B5-PDRN 마일드 로션 230ml (+블루빈크림 7ml)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "16300",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000234380",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5678321/56783213284.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5678321/56783213284.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000234380"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
