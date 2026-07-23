@@ -38813,5 +38813,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162205021",
+    "translated_kr": "스킨프렙 쿨링 무스 토너 70ml 차가운 보습 모공 케어 미스트 화장수 가벼운 거품 타입 번들거림 대책 여름 스킨케어 상큼한 사용감 한국 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160337522",
+    "translated_kr": "썸머바 샴푸 쿨7 500ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "포레스트스토리 B7 약산성 탈모 샴푸, 1000ml, 1개"
+    },
+    "brand": "포레스트스토리",
+    "name": "포레스트스토리 B7 약산성 탈모 샴푸, 1000ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "13900",
+    "mall": "지엘코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5009577859",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8255409/82554098526.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8255409/82554098526.5.jpg",
+        "mall": "지엘코스",
+        "link": "https://smartstore.naver.com/main/products/5009577859"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026201/90262013940.jpg",
+        "mall": "지엘코스",
+        "link": "https://smartstore.naver.com/main/products/12717503017"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
