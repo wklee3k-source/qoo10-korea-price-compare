@@ -36689,5 +36689,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1205431137",
+    "translated_kr": "밀본 제미르 프랑 멜티 버터 밤 40g 2개 세트 헹굼 없는 트리트먼트 아웃바스 핸드크림 미용실 살롱 전용품 밀본 milbon 헤어케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "brand": "닥터포포 (Dr.PAWPAW)",
+    "name": "모카 밤",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193433365",
+    "translated_kr": "【공식】 코나피딜 픽시카 CONAPIDIL Fixcica 13g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "픽시카",
+      "naver": "코나피딜 픽시카겔 안면 피부 진정 착색 크림 트러블 스팟 크림 피부 열감 샘플 증정"
+    },
+    "brand": "코나피딜 (CONAPIDIL)",
+    "name": "픽시카",
+    "volume": "13g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "32050",
+    "mall": "구미당 스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12701714118",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9024622/90246225042.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024622/90246225042.1.jpg",
+        "mall": "구미당 스토어",
+        "link": "https://smartstore.naver.com/main/products/12701714118"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113901/91139018055.2.jpg",
+        "mall": "4.95",
+        "link": "https://smartstore.naver.com/main/products/13594507643"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
