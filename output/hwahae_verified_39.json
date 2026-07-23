@@ -38899,5 +38899,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1192655535",
+    "translated_kr": "덴스오일 사쿠라 90ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164282563",
+    "translated_kr": "プロテクション マイルド サンミルク 50ml (2個)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마일드"
+    },
+    "brand": "드라마 (DeRAMA)",
+    "name": "마일드",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 550000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
