@@ -22779,5 +22779,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199855426",
+    "translated_kr": "투명 선패치 네이키드 선실드 펩타이드 18회분 /골프패치/투명 UV카트 패치",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1090206932",
+    "translated_kr": "큐티클 3-스텝 케어 키트(큐티클 오일+큐티클 리무버+크리스탈 펜 푸셔)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시너지 이펙터 3스텝 키트 [하이드레이팅]",
+      "naver": "반디 네일스팀 큐티클 3-Step 케어 키트"
+    },
+    "brand": "스킨플래닛 (Skin Planet)",
+    "name": "시너지 이펙터 3스텝 키트 [하이드레이팅]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18900",
+    "mall": "bandinail",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10333111863",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8787761/87877616073.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8787761/87877616073.1.jpg",
+        "mall": "bandinail",
+        "link": "https://smartstore.naver.com/main/products/10333111863"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
