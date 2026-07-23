@@ -44538,5 +44538,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191488311",
+    "translated_kr": "アクアティカ サンスプレー 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아쿠아티카 썬 스프레이 [SPF50+/PA++++]",
+      "naver": "셀퓨전씨 아쿠아티카 썬 스프레이 100mL SPF50+ PA++++ / 수분 진정 뿌리는 선크림 in 안개분사 미스트"
+    },
+    "brand": "셀퓨전씨 (CellFusionC)",
+    "name": "아쿠아티카 썬 스프레이 [SPF50+/PA++++]",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "22900",
+    "mall": "셀퓨전씨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11978999763",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8952351/89523510450.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8952351/89523510450.1.jpg",
+        "mall": "셀퓨전씨",
+        "link": "https://smartstore.naver.com/main/products/11978999763"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8952359/89523596929.jpg",
+        "mall": "셀퓨전씨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11979086241"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5760179/57601795749.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5685040?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113386/91133866515.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13589356103"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195790484",
+    "translated_kr": "【限定15%OFF】イロン ダンギ スージングジェル 500ml 韓国コスメ l マルチジェル l うるおいケア l さっぱりとしたテクスチャー l 熱感ケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
