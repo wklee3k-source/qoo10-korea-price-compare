@@ -33774,5 +33774,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1149457939",
+    "translated_kr": "포스트알파 쿨링 패드 70장 / 포스트알파 시카 쿨링 패드 70장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포스트 알파 시카 쿨링 패드",
+      "naver": "[민감진정/리얼시카패드] 셀퓨전씨 포스트 알파 시카 쿨링 패드 70매 더블기획"
+    },
+    "brand": "셀퓨전씨 (CellFusionC)",
+    "name": "포스트 알파 시카 쿨링 패드",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28400",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222910",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6018785/60187853000.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6018785/60187853000.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222910"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1143959163",
+    "translated_kr": "로레알 파리 토탈 리페어 5 모이스처 크림 프로엑스 헤어 로션 110g x 1개 또는 2개 선택",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 앰플 [리페어]"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 앰플 [리페어]",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
