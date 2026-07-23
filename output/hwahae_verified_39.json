@@ -38376,5 +38376,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1151569871",
+    "translated_kr": "데일리 안티 헤어로스 단백질 트리트먼트 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "데일리 안티 헤어로스 단백질 트리트먼트"
+    },
+    "brand": "다슈 (DASHU)",
+    "name": "데일리 안티 헤어로스 단백질 트리트먼트",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1101761023",
+    "translated_kr": "[신제품] 올데이 노-세붐 톤업 선 쿠션 / SPF50+ PA++++ / UV차단 / 톤업 / 노-세붐 / 자외선 차단제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "73선에센스 [SPF50+/PA++++]"
+    },
+    "brand": "메이베나 (MAYBENA)",
+    "name": "73선에센스 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
