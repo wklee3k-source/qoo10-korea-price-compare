@@ -38364,5 +38364,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1176812478",
+    "translated_kr": "[2個]トータルリペア5 ミラクル ヘアパック 170ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "토탈 리페어 5 헤어팩"
+    },
+    "brand": "로레알파리 (L'OREALPARIS)",
+    "name": "토탈 리페어 5 헤어팩",
+    "volume": "280ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1163675853",
+    "translated_kr": "리퓨얼리 액티베이션 리페어링 앰플 30ml X 1개, 피부 요철 전용 케어, 하얀 오돌록, 눈 주변 밀리아, 속립종 케어, 눈 아래 뾰루지, Repairing Ampoule",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "눈"
+    },
+    "brand": "TWW (타임웍스원더스)",
+    "name": "눈",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
