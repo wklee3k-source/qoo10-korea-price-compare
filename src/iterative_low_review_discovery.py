@@ -19,6 +19,7 @@ iterative_low_review_discovery.py
 
 import json
 import re
+import signal
 import sys
 from pathlib import Path
 
@@ -47,7 +48,7 @@ COSMETIC_ALLOWED_CATEGORIES = {
     "120000022",  # 향수
     "120000023",  # 맨즈뷰티
 }
-REVIEW_THRESHOLD = 4  # "3개 이하"까지 통과시키려면 4 미만(<4, 즉 0~3)이어야 함
+REVIEW_THRESHOLD = 6  # "5개 이하"까지 통과시키려면 6 미만(<6, 즉 0~5). 발굴량 확대를 위해 4->6으로 완화(기존 0~3 -> 0~5)
 MIN_PRICE_JPY = 1500  # 이 가격 이하(너무 저가) 상품은 제외
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
@@ -113,35 +114,13 @@ def _protect_and_translate(text: str, translator) -> str:
 
 SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
 SEED_LOG_PATH = OUTPUT_DIR / "discovery_seed_log.json"
-ARCHIVE_DIR = OUTPUT_DIR / "archive"
-ARCHIVE_THRESHOLD = 500  # all_products가 이 개수를 넘으면 오래된 것부터 아카이브로 이동
-KEEP_RECENT = 200  # 메인 상태파일에는 최근 이 개수만 남긴다
-
-
-def _archive_old_products(all_products: dict) -> dict:
-    """all_products가 너무 커지면(GitHub 파일크기/저장소 용량 문제 방지) 오래된
-    것부터 output/archive/discovery_archive_<날짜>.json로 옮기고, 메인
-    상태파일에는 최근 것만 남긴다. visited_shops/pending_keywords 등은
-    안 건드린다(재방문 방지 로직에 필요하니 계속 유지)."""
-    if len(all_products) <= ARCHIVE_THRESHOLD:
-        return all_products
-
-    ARCHIVE_DIR.mkdir(exist_ok=True, parents=True)
-    items = list(all_products.items())
-    to_archive = items[: len(items) - KEEP_RECENT]
-    to_keep = dict(items[len(items) - KEEP_RECENT :])
-
-    if to_archive:
-        from datetime import datetime, timezone
-
-        stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-        archive_path = ARCHIVE_DIR / f"discovery_archive_{stamp}.json"
-        archive_path.write_text(
-            json.dumps([v for _, v in to_archive], ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        print(f"[ARCHIVE] {len(to_archive)}건을 {archive_path.name}(으)로 이동, 메인엔 최근 {len(to_keep)}건만 유지")
-
-    return to_keep
+# [단순화] 아카이빙 로직은 이제 여기(1단계)에 없다 — 1단계는 순수하게
+# 발굴+병합만 한다. "번역완료된 것을 아카이브로 옮기는" 책임은 2단계
+# (auto_translate)로 옮겼다: 2단계가 번역을 마친 직후, discovery-live의
+# discovery_state.json에서 방금 번역한 것들을 archive/로 옮긴다. 이렇게
+# 하면 1단계가 다른 브랜치(translate-live)의 상태를 알 필요가 아예
+# 없어져서 훨씬 단순해지고, 지금까지 겪었던 여러 버그(subprocess git lock
+# 경합, 브랜치 기본값 불일치 등)의 근본 원인 자체가 사라진다.
 
 
 
@@ -268,6 +247,33 @@ def _save_state(state: dict, suffix: str | None = None):
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+class _ShopTimeout(Exception):
+    pass
+
+
+def _shop_timeout_handler(signum, frame):  # noqa: ARG001
+    raise _ShopTimeout()
+
+
+def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> list[dict]:
+    """crawl_shop_best5에 상점 전체 처리 시간 상한을 씌운다. 개별 페이지
+    로딩엔 이미 20초 타임아웃이 있지만, 베스트5 상품 각각(최대 5개) +
+    랭킹조회까지 합치면 최악의 경우 몇 분씩 걸릴 수 있어서(실측으로 확인된
+    지연 원인), 상점 하나당 전체 처리시간에도 상한을 둔다. 초과하면 이
+    상점은 포기하고 다음 상점으로 넘어간다(데이터 유실 없음 — 그냥 이번엔
+    스킵될 뿐, 나중에 다시 만나면 재시도됨)."""
+    old_handler = signal.signal(signal.SIGALRM, _shop_timeout_handler)
+    signal.alarm(timeout_seconds)
+    try:
+        return crawl_shop_best5(shop_id)
+    except _ShopTimeout:
+        print(f"  [TIMEOUT] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 포기하고 다음으로 넘어감")
+        return []
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
+
+
 def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None, state_suffix: str | None = None):
     state = _load_state(state_suffix)
     visited_shops = set(state["visited_shops"])
@@ -286,7 +292,6 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
 
     def save():
         nonlocal all_products
-        all_products = _archive_old_products(all_products)
         _save_state(
             {
                 "visited_shops": list(visited_shops),
@@ -325,7 +330,7 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             shop_urls.append(f"https://m.qoo10.jp/shop/{shop_id}")
             print(f"\n  [상점진입] {shop_id} (review={shop['review_count']})")
 
-            crawled_items = crawl_shop_best5(shop_id)
+            crawled_items = crawl_shop_best5_with_timeout(shop_id)
             seed_entries = []
             for item in crawled_items:
                 # 시드는 필터 통과여부와 무관하게 전부 생성(사용자 지적사항 반영)
@@ -411,9 +416,7 @@ def main():
 
     products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword, state_suffix=state_suffix)
     export_excel(products, out_path)
-    print("\n방문한 상점 URL:")
-    for u in shop_urls:
-        print(" ", u)
+    print(f"\n방문한 상점: 누적 {len(shop_urls)}개 (최근 5개: {shop_urls[-5:]})")
 
 
 if __name__ == "__main__":

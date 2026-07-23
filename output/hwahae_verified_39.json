@@ -28395,5 +28395,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206682479",
+    "translated_kr": "그린 프로폴리스 두피 클렌징 샴푸+트리트먼트 [1000ml+1000ml] 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린프로폴리스 스칼프 클렌징 샴푸",
+      "naver": "케라시스 프로폴리스 샴푸 그린 스칼프클렌징, 1L, 2개"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "그린프로폴리스 스칼프 클렌징 샴푸",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18900",
+    "mall": "크린다미",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10106166948",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8765066/87650669718.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8765066/87650669718.jpg",
+        "mall": "크린다미",
+        "link": "https://smartstore.naver.com/main/products/10106166948"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019809/90198097999.jpg",
+        "mall": "HDBmall",
+        "link": "https://smartstore.naver.com/main/products/12653587093"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180616865",
+    "translated_kr": "소울마이티 대나무 판테놀 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마이티 밤부 판테놀 크림",
+      "naver": "퓨리토 서울 마이티 밤부 판테놀 크림 100ml 듀오 기획 (+15ml)"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "마이티 밤부 판테놀 크림",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37600",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000245048",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6048814/60488141571.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6048814/60488141571.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000245048"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081919/90819198779.jpg",
+        "mall": "비래유통",
+        "link": "https://smartstore.naver.com/main/products/13274688447"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122293/91222934612.jpg",
+        "mall": "비래유통",
+        "link": "https://smartstore.naver.com/main/products/13678423521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]

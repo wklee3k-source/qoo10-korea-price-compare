@@ -99,8 +99,9 @@ def fetch_item_detail(goods_no_or_url: str, wait_seconds: int = 4, save_hires_im
             ignore_https_errors=True,
         )
         page = context.new_page()
+        # 속도 개선: 텍스트 데이터만 필요하므로 이미지/폰트/CSS/미디어는 아예 안 받는다
         try:
-            page.goto(url, timeout=45000, wait_until="load")
+            page.goto(url, timeout=20000, wait_until="load")
         except Exception as e:  # noqa: BLE001
             print(f"[WARN] goto issue for {url}: {e}", file=sys.stderr)
         time.sleep(wait_seconds)

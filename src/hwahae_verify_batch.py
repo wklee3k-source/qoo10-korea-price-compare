@@ -127,10 +127,16 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
 
 
 def _extract_quantity(text: str) -> int:
-    """제목/상품명에서 실제 수량(묶음개수)을 추출한다.
+    """제목/상품명에서 실제 구매수량(묶음개수)을 추출한다.
     - "1+1", "2+1" 같은 증정/묶음 표기 → 앞뒤 숫자 합
-    - "2個", "2개", "2매", "2입", "2병", "SET", "세트" → 배수로 판단
+    - "2個", "2개", "2입", "2병", "SET", "세트" → 배수로 판단
     - "2種から1つ選択"(2종류 중 1개 선택) → 실제로는 1개이므로 수량에 안 잡히게 예외처리
+    - [중요] "매/枚"(마스크팩/패치/시트 등)는 일부러 제외한다 — 이건 대부분
+      "그 상품 1세트 안에 몇 장이 들었는지"(상품 구성정보)를 나타내지
+      "몇 개를 살지"(구매수량)가 아니다. 예: "PDRN 마스크 10매"는 1개
+      상품(마스크팩 1박스)인데 안에 10장이 든 것 — 이걸 수량10으로 잘못
+      해석하면 정상 매칭도 전부 "수량불일치"로 오판하게 된다(실측으로
+      확인된 버그: 이 버그 하나로 실패건의 상당수가 잘못 걸러지고 있었음).
     - 아무 표기도 없으면 1개로 간주"""
     if not text:
         return 1
@@ -139,7 +145,7 @@ def _extract_quantity(text: str) -> int:
     m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)  # "1+1" 등
     if m:
         return int(m.group(1)) + int(m.group(2))
-    m = re.search(r"(\d+)\s*(個|개|매|입|병|枚|本|장)\b", text_wo_choice)
+    m = re.search(r"(\d+)\s*(個|개|입|병|本)\b", text_wo_choice)
     if m:
         return int(m.group(1))
     if re.search(r"세트|SET|Set", text_wo_choice):
@@ -244,8 +250,23 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
 
+        # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해가
+        # 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로 네이버를
+        # 한 번 더 검색한다. 초벌번역이 부정확해서 네이버에서 못 찾는
+        # 케이스가 상당수 있었다(실측: 화해만 찾고 네이버 구매링크 없는
+        # 실패가 528건).
+        if not cand_naver and cand_hwahae and cand_hwahae.get("name"):
+            hwahae_query = f"{cand_hwahae.get('brand') or ''} {cand_hwahae['name']}".strip()
+            print(f"    [화해이름 재검색] '{kw_cleaned}' 실패 -> 화해확인명 '{hwahae_query}'로 재검색")
+            cand_naver_retry = _search_naver(hwahae_query, known_brand)
+            if cand_naver_retry:
+                cand_naver = cand_naver_retry
+
         # 수량(묶음개수) 일치 확인: 큐텐 원본과 네이버 결과의 수량이 다르면
         # "1개" 기준으로 다시 찾는다(추가 검색 1회, 수량 불일치일 때만 발생).
+        # 재검색해도 여전히 안 맞으면(검색어에 "1개"를 붙인다고 결과가 항상
+        # 바뀌는 건 아님) 차라리 그 네이버 후보를 버린다 — 틀린 수량으로
+        # 잘못 매칭하는 것보다 안전하다.
         if cand_naver:
             qoo10_qty = _extract_quantity(kw_raw)
             naver_qty = _extract_quantity(cand_naver.get("name") or "")
@@ -253,8 +274,11 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 print(f"    [수량불일치] 큐텐={qoo10_qty}개 vs 네이버={naver_qty}개 -> 1개 기준으로 재검색")
                 requery = f"{known_brand or cand_hwahae and cand_hwahae.get('brand') or ''} {kw_cleaned} 1개".strip()
                 cand_naver_retry = _search_naver(requery, known_brand)
-                if cand_naver_retry:
+                if cand_naver_retry and _extract_quantity(cand_naver_retry.get("name") or "") == qoo10_qty:
                     cand_naver = cand_naver_retry
+                else:
+                    print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
+                    cand_naver = None
 
         candidates = [c for c in [cand_exa, cand_hwahae, cand_naver] if c]
 
