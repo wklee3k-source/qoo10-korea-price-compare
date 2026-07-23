@@ -39708,5 +39708,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169201226",
+    "translated_kr": "[1+1]젠틀블랙 프레쉬 클렌징 오일 150ml+150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "젠틀 블랙 프레쉬 클렌징 오일",
+      "naver": "젠틀 블랙 프레쉬 클렌징 오일 150ml"
+    },
+    "brand": "디어클레어스 (dearKlairs)",
+    "name": "젠틀 블랙 프레쉬 클렌징 오일",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17000",
+    "mall": "디어클레어스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5110134373",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8265465/82654656419.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8265465/82654656419.7.jpg",
+        "mall": "디어클레어스",
+        "link": "https://smartstore.naver.com/main/products/5110134373"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5176440/51764402028.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000174253"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1110101930",
+    "translated_kr": "포리젠 샴푸 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴리젠 플러스 탈모 완화 샴푸",
+      "naver": "닥터포헤어 저자극 볼륨강화 탈모샴푸 폴리젠 씨크닝 샴푸 대용량 500ml+500ml리필+100ml"
+    },
+    "brand": "닥터포헤어 (Dr.FORHAIR)",
+    "name": "폴리젠 플러스 탈모 완화 샴푸",
+    "volume": "70ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30900",
+    "mall": "닥터포헤어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12799575836",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9034408/90344086785.22.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9034408/90344086785.22.jpg",
+        "mall": "닥터포헤어",
+        "link": "https://smartstore.naver.com/main/products/12799575836"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
