@@ -51240,5 +51240,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1118484826",
+    "translated_kr": "ナイアシンアミド 10% カラミンクリーム 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10% 칼라민 크림",
+      "naver": "[더마팩토리] 비건인증 나이아신아마이드 10% 칼라민 크림 (내추럴톤업) 30g"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "나이아신아마이드 10% 칼라민 크림",
+    "volume": "30g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6930",
+    "mall": "바로이샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9893265521",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8743776/87437767794.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8743776/87437767794.jpg",
+        "mall": "바로이샵",
+        "link": "https://smartstore.naver.com/main/products/9893265521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142298931",
+    "translated_kr": "[ビッグセール 最安値] NEW ノスカナイン トラブル毛穴ハリクリーム 45mL うるおい弾力UP！肌荒れを整え 毛穴をキュッと引き締める",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
