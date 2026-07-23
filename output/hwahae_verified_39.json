@@ -34524,5 +34524,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1207138612",
+    "translated_kr": "비네이처 바나나 화이트 마스크팩 10장입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비 네이처 마스크 [바나나&화이트닝]",
+      "naver": "JMsolution 제이엠솔루션 비 네이처 바나나 &amp; 화이트닝 마스크 24ml 10매입"
+    },
+    "brand": "제이엠솔루션 (JMsolution)",
+    "name": "비 네이처 마스크 [바나나&화이트닝]",
+    "volume": "24ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6000",
+    "mall": "제이엠솔루션",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://jmsolutioncm.cafe24.com/product/detail.html?product_no=2919&cate_no=222&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5540013/55400134452.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5540013/55400134452.jpg",
+        "mall": "제이엠솔루션",
+        "link": "https://jmsolutioncm.cafe24.com/product/detail.html?product_no=2919&cate_no=222&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180574367",
+    "translated_kr": "[10Sマイクロバブルパック 4種] エア** バブルCDS マスク パック 80ml, 4種の中から選択 (ハリ/ブライトニング/鎮静/水分) 150 回分",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
