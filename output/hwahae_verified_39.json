@@ -36456,5 +36456,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1115552034",
+    "translated_kr": "[1+1] [SNS, AMAZON 대인기] 라이스 선 크림 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1188958801",
+    "translated_kr": "レバレンス ハンド ウォッシュ 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리브레 핸드 워시",
+      "naver": "[프랑스직배송] 리투알 징 핸드 워시 300ml"
+    },
+    "brand": "테이크어샤워 (TAKEASHOWER)",
+    "name": "리브레 핸드 워시",
+    "volume": "280ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "파리앙쥬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7913297645",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8545779/85457797968.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8545779/85457797968.1.jpg",
+        "mall": "파리앙쥬",
+        "link": "https://smartstore.naver.com/main/products/7913297645"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779758/87797583637.jpg",
+        "mall": "더마마슈퍼",
+        "link": "https://smartstore.naver.com/main/products/10253079939"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8777582/87775820750.jpg",
+        "mall": "더마마슈퍼",
+        "link": "https://smartstore.naver.com/main/products/10231317199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8617102/86171027005.2.jpg",
+        "mall": "뷰티픽",
+        "link": "https://smartstore.naver.com/main/products/8626526682"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
