@@ -46989,5 +46989,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "994119926",
+    "translated_kr": "アブソリュートセレクティブスキンケア6点セット エイソルート セレクティブ 6種セットA-SOLUTE SELECTIVE スキンケア6種セット エイソルート セレクティブ 基礎化粧品6種セット",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1162975495",
+    "translated_kr": "韓方ヘアシャンプー500ml+ヘアコンディショナー500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Radical Recovery After Sun Lotion (이알플러스레디컬리커버리애프터선로션)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Radical Recovery After Sun Lotion (이알플러스레디컬리커버리애프터선로션)",
+    "volume": "180ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 59000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
