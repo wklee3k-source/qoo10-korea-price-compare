@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from auto_translate import translate_batch  # noqa: E402
 
 
-def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json"):
+def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 20):
     path = Path(state_path)
     if not path.exists():
         print(f"[SKIP] {path} 없음")
@@ -34,6 +34,13 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     if not to_translate:
         print("[INFO] 새로 번역할 상품 없음")
         return
+    if len(to_translate) < threshold:
+        # [비용효율] 시스템프롬프트(약 400토큰)를 매번 반복 전송하는 게
+        # 낭비이므로, threshold개 이상 모일 때까지 기다렸다가 한 번에
+        # 번역한다 — 워커별로 독립적으로 판단하니 별도 동기화 없이도
+        # "먼저 채운 워커부터 순서대로 번역"이 자연히 이뤄진다.
+        print(f"[WAIT] {len(to_translate)}건 대기중(threshold={threshold} 미만, 더 모일 때까지 보류)")
+        return
 
     print(f"[INFO] {len(to_translate)}건 신규 번역 시작")
 
@@ -45,7 +52,7 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
         brand_dict = {}
 
     titles = [p["title"] for p in to_translate]
-    translated = translate_batch(titles, batch_size=15)
+    translated = translate_batch(titles, batch_size=len(titles))
 
     for p, t in zip(to_translate, translated):
         p["translated_kr"] = t
