@@ -26958,5 +26958,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1065580984",
+    "translated_kr": "글로우 바이 제이로 EDT SP 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그클리닉 콜라보 수딩 글로우 크림"
+    },
+    "brand": "블루 씨피알 (Blue CPR)",
+    "name": "에그클리닉 콜라보 수딩 글로우 크림",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1141019983",
+    "translated_kr": "로에베 001 우먼 EDP SP 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1150000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
