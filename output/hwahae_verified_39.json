@@ -42308,5 +42308,65 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1151142091",
+    "translated_kr": "【공식】골드실 펩타이드 콜라겐 주름 리프팅 앰플 30ml 탄력피부·안티에이징케어·한국코스메",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디테라피 슈마지 샷 골드실 리프팅 앰플 12ml (C)[35411496]"
+    },
+    "brand": "메디테라피",
+    "name": "메디테라피 슈마지 샷 골드실 리프팅 앰플 12ml (C)[35411496]",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "14500",
+    "mall": "NS홈쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12873662084",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9041817/90418173076.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041817/90418173076.jpg",
+        "mall": "NS홈쇼핑",
+        "link": "https://smartstore.naver.com/main/products/12873662084"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1140049631",
+    "translated_kr": "【공식】 눈가 리프팅 스피큘 펩타이드 아이크림 15ml 처짐·주름·안티에이징케어·한국코스메",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더마센트릭 피부과 아이백 리프팅 레티놀 비건 아이크림 30ml 1개"
+    },
+    "brand": "더마센트릭",
+    "name": "더마센트릭 피부과 아이백 리프팅 레티놀 비건 아이크림 30ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "36000",
+    "mall": "더마센트릭",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9607427994",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8715193/87151930264.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8715193/87151930264.5.jpg",
+        "mall": "더마센트릭",
+        "link": "https://smartstore.naver.com/main/products/9607427994"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
