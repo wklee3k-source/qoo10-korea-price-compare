@@ -31336,5 +31336,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205562844",
+    "translated_kr": "euthymol 브레스민트볼 20개입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212630238",
+    "translated_kr": "46CM 체취케어 데오드란트 바디솝 600ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "체취케어 데오드란트 바디워시 [시트러스향]"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "체취케어 데오드란트 바디워시 [시트러스향]",
+    "volume": "600mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
