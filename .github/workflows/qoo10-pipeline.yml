@@ -315,21 +315,17 @@ jobs:
       # 이상 여기서 안 하고 1.5단계(병합)로 옮겼다 — 한 곳에서만 번역
       # API를 호출해야 배치를 크게 모을 수 있고, 병합본(2단계가 실제로
       # 보는 파일)과 번역상태가 항상 일치한다. 대신 이 워커가 신규상품을
-      # 5개 이상 쌓을 때마다, 병합job을 자동으로 트리거해서 사람이 매번
-      # 수동으로 안 눌러도 파이프라인이 스스로 이어지게 한다.
       - name: Run discovery in small increments (own file only)
         working-directory: src
         env:
           TARGET: ${{ inputs.discovery_target_products || '999999' }}
           SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
           STEP=3
           ITER=0
-          LAST_MERGE_TRIGGER_COUNT=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['all_products']) if p.exists() else 0)")
           while true; do
             ITER=$((ITER + 1))
             # [중요] max_shops는 "이번 호출에서 몇 개 방문할지"가 아니라
@@ -392,19 +388,6 @@ jobs:
               if [ "$PUSHED" != "1" ]; then
                 echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
               fi
-            fi
-
-            # [자동연계] 신규상품이 5개 이상 쌓이면 병합job을 자동으로
-            # 트리거한다(사람이 매번 수동으로 안 눌러도 됨). 트리거 자체는
-            # 병합job의 concurrency 큐에 들어갈 뿐이라 여러 워커가 동시에
-            # 트리거해도 안전하다(중복 실행은 큐에서 순서대로 처리됨).
-            CURRENT_COUNT=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['all_products']) if p.exists() else 0)")
-            if [ $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT)) -ge 15 ]; then
-              echo "[자동트리거] 브랜치 $B 신규상품 $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT))개 누적 -> 병합job 트리거"
-              curl -s -X POST -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-                "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
-                -d '{"ref":"main","inputs":{"run_merge_discovery":"true"}}' || true
-              LAST_MERGE_TRIGGER_COUNT=$CURRENT_COUNT
             fi
           done
 
