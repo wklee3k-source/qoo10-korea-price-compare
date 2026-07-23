@@ -33436,5 +33436,87 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1178756887",
+    "translated_kr": "パワーネイル マグネット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자석 탑젤",
+      "naver": "발라 마그넷탑젤 10ml 고운화이트입자 논와이프 퍼펙트 자석탑 후루츄 후루츠"
+    },
+    "brand": "발라 (VALLA)",
+    "name": "자석 탑젤",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13000",
+    "mall": "네일창고",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13555125365",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9109963/91099635732.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109963/91099635732.jpg",
+        "mall": "네일창고",
+        "link": "https://smartstore.naver.com/main/products/13555125365"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095300/90953007119.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/13408496783"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8803767/88037672423.1.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/10493167122"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674332/86743328183.2.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/9198827860"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204176921",
+    "translated_kr": "[medicube] ブラックヘッド毛穴ブラシ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 블랙헤드 모공 브러쉬",
+      "naver": "메디큐브 멀티 포어 브러시 페이스 마스크 어플리케이터 블루"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "멀티 블랙헤드 모공 브러쉬",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24400",
+    "mall": "StreetMap",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13620653550",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116516/91165163967.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116516/91165163967.jpg",
+        "mall": "StreetMap",
+        "link": "https://smartstore.naver.com/main/products/13620653550"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9046098/90460982331.jpg",
+        "mall": "늘곁마켓",
+        "link": "https://smartstore.naver.com/main/products/12916471339"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
