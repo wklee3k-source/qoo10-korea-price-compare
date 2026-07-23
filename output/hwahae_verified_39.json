@@ -38069,5 +38069,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1189436342",
+    "translated_kr": "VT 리들샷 유니버스 키트 2ml × 5개 x 9종 (총 45개) 정품 한국화장품 한국코스메",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193871599",
+    "translated_kr": "어니언 뉴페어 클리어 패드 60장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어니언 뉴페어 클리어 패드",
+      "naver": "[이즈앤트리] 어니언 뉴페어 클리어 패드 20매(리필)2+1 11202R"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "어니언 뉴페어 클리어 패드",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3664924?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4408615/44086159047.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4408615/44086159047.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3664924?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
