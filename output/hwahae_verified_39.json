@@ -26792,5 +26792,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193570601",
+    "translated_kr": "【코스파 앰플+로션 세트】어성초80 앰플 30ml + 어성초70 데일리 로션 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 데일리 로션"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 데일리 로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1179238550",
+    "translated_kr": "【레드 코스파 세트】레드 블레미시 세럼 80ml + 크림 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 크림"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 크림",
+    "volume": "70ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
