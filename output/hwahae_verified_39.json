@@ -30785,5 +30785,82 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1183179464",
+    "translated_kr": "허 런던 드림 EDP SP 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "허",
+      "naver": "버버리 허 런던 드림 EDP 100ml"
+    },
+    "brand": "루이스1987 (LOUIS1987)",
+    "name": "허",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "135000",
+    "mall": "드라코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11826682209",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8937119/89371192796.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937119/89371192796.2.jpg",
+        "mall": "드라코스",
+        "link": "https://smartstore.naver.com/main/products/11826682209"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8922908/89229086386.1.jpg",
+        "mall": "오빠에반하다",
+        "link": "https://smartstore.naver.com/main/products/11684575919"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119976/91199769538.jpg",
+        "mall": "향기데이닷컴",
+        "link": "https://smartstore.naver.com/main/products/13655258753"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183179421",
+    "translated_kr": "폴로 레드 (튜브 샘플) EDT SP 1.2ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴로 레드 EDT",
+      "naver": "향수가 랄프로렌 폴로레드 EDT 75ML"
+    },
+    "brand": "랄프로렌 (RALPHLAUREN)",
+    "name": "폴로 레드 EDT",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "132300",
+    "mall": "박가분",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12298584654",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8984309/89843095370.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8984309/89843095370.jpg",
+        "mall": "박가분",
+        "link": "https://smartstore.naver.com/main/products/12298584654"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8984307/89843072420.jpg",
+        "mall": "박가분",
+        "link": "https://smartstore.naver.com/main/products/12298561704"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
