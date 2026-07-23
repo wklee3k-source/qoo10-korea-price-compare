@@ -45991,5 +45991,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1132391030",
+    "translated_kr": "アトバリア 365 クリーム 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1064609458",
+    "translated_kr": "テラクネ365アクティブセラム, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "테라크네 365 클리어 딥 클렌징 폼",
+      "naver": "[싱글] 에스트라 테라크네365 클리어딥클렌징폼 200g x 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "테라크네 365 클리어 딥 클렌징 폼",
+    "volume": "200g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19550",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5590786780",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8313528/83135283067.64.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8313528/83135283067.64.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/5590786780"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754284/87542842588.18.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/9998340315"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
