@@ -47470,5 +47470,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1146074335",
+    "translated_kr": "タヨースペシャルキッズバス友達セット6ラッチャキャリーティーチおもちゃミニカー車",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1145379912",
+    "translated_kr": "ダニエルトルースオイルパルファムナイトシェル10ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 울트라 스웨이드® 스컬프팅 립 펜슬 [다니엘]",
+      "naver": "메이크업 by 마리오 울트라 스웨이드 스컬프팅 립 펜슬 - 다니엘 1.4g"
+    },
+    "brand": "메이크업바이마리오 (MAKEUPBYMARIO)",
+    "name": "(해외) 울트라 스웨이드® 스컬프팅 립 펜슬 [다니엘]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "50600",
+    "mall": "Market Heaven",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12911294098",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045580/90455805090.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045580/90455805090.jpg",
+        "mall": "Market Heaven",
+        "link": "https://smartstore.naver.com/main/products/12911294098"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
