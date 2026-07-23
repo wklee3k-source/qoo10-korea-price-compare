@@ -29862,5 +29862,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204555836",
+    "translated_kr": "PDRN 비타펩티드 모공 리페어 세럼 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타민 PDRN 모공 탄력 세럼",
+      "naver": "클레어스 비타민 PDRN 모공 탄력 세럼 35ml+비타민 토닝 베리어 크림 60g"
+    },
+    "brand": "디어클레어스 (dearKlairs)",
+    "name": "비타민 PDRN 모공 탄력 세럼",
+    "volume": "35ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "34900",
+    "mall": "디어클레어스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12935235341",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9047974/90479746351.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047974/90479746351.7.jpg",
+        "mall": "디어클레어스",
+        "link": "https://smartstore.naver.com/main/products/12935235341"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056309/90563098698.jpg",
+        "mall": "뷰티 직구 스토어",
+        "link": "https://smartstore.naver.com/main/products/13018587606"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052989/90529890574.jpg",
+        "mall": "바로어썸",
+        "link": "https://smartstore.naver.com/main/products/12985379564"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205746320",
+    "translated_kr": "リッチサロン モロッコアルガンオイルセラム 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리치살롱 모로코 아르간 오일세럼"
+    },
+    "brand": "사라나라 (saranara)",
+    "name": "리치살롱 모로코 아르간 오일세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
