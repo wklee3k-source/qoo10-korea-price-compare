@@ -36636,5 +36636,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1198755469",
+    "translated_kr": "ビーガンジェジュ 蓮マイルド角質ケアトナーパッド",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아로마비누 [어성초]"
+    },
+    "brand": "네츄럴팁스 (NATURALTIPS)",
+    "name": "아로마비누 [어성초]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 4500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190126098",
+    "translated_kr": "스피케어 V3 엑사이팅 파운데이션 15g 본체 SPICARE 한국 화장품 LOT번호 포함",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "FB22 베이스 마스터 파운데이션",
+      "naver": "[피카소] FB22 베이스 마스터 파운데이션 브러쉬 1ea(N배송)"
+    },
+    "brand": "피카소 (piccasso)",
+    "name": "FB22 베이스 마스터 파운데이션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "40900",
+    "mall": "피카소 라운지",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13094392048",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9063890/90638903140.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063890/90638903140.4.jpg",
+        "mall": "피카소 라운지",
+        "link": "https://smartstore.naver.com/main/products/13094392048"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
