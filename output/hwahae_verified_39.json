@@ -34628,5 +34628,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202051148",
+    "translated_kr": "인퓨징 콜라겐 파우더 1.5g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 파우더 [인퓨징]"
+    },
+    "brand": "뷰디아니 (BEAUDIANI)",
+    "name": "콜라겐 파우더 [인퓨징]",
+    "volume": "1.5g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202043668",
+    "translated_kr": "[1+1] 인퓨징 콜라겐 미스트 50ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 미스트 [인퓨징]"
+    },
+    "brand": "뷰디아니 (BEAUDIANI)",
+    "name": "콜라겐 미스트 [인퓨징]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
