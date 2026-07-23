@@ -39213,5 +39213,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206526891",
+    "translated_kr": "[NEW] 에어로 쿨링 샴푸 400ml＋70ml / -5.2도 급속 냉각",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197915395",
+    "translated_kr": "바디워시 보습 민감성 피부 건성 피부용 532ml×2개 대용량 펌프식 데일리 모이스처라이징",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "은은들꽃향 아비노 고보습 민감피부 저자극 바디워시 데일리모이스춰라이징, 532ml, 2개"
+    },
+    "brand": "아비노",
+    "name": "은은들꽃향 아비노 고보습 민감피부 저자극 바디워시 데일리모이스춰라이징, 532ml, 2개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21900",
+    "mall": "켄뷰 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/6985696519",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8453019/84530196842.10.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8453019/84530196842.10.jpg",
+        "mall": "켄뷰 공식몰",
+        "link": "https://smartstore.naver.com/main/products/6985696519"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
