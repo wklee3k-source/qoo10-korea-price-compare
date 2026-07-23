@@ -32439,5 +32439,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1189270361",
+    "translated_kr": "【Wid】 폴리겐 토닉 120ml 2개 세트·두피 케어·헤어 토닉·탈모 예방·두피 영양·스칼프 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "탈모증상집중케어 멀티퍼펙션 두피 영양 토닉",
+      "naver": "에브리톡톡 대용량 헤어토닉 200ml 리필 8개+헤드 2개 13개월 관리 세트+흐름방지링 포함"
+    },
+    "brand": "닥터그루트 (Dr.Groot)",
+    "name": "탈모증상집중케어 멀티퍼펙션 두피 영양 토닉",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "136000",
+    "mall": "에브리톡톡",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5805154463",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8334965/83349653877.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8334965/83349653877.1.jpg",
+        "mall": "에브리톡톡",
+        "link": "https://smartstore.naver.com/main/products/5805154463"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188452071",
+    "translated_kr": "【Wid】 아스코르빌 테트라이소팔미테이트 솔루션 20% 인 비타민 F / 30ml / 1개 / 비타민 C 뷰티 에센스 / 오일 뷰티 에센스 / 투명감 / 탄력 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
