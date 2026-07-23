@@ -37663,5 +37663,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1190126098",
+    "translated_kr": "스피케어 V3 엑사이팅 파운데이션 15g 본품 SPICARE 한국 화장품 LOT번호 포함",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "FB22 베이스 마스터 파운데이션"
+    },
+    "brand": "피카소 (piccasso)",
+    "name": "FB22 베이스 마스터 파운데이션",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 49000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205431137",
+    "translated_kr": "밀본 제미르 프란 멜티 버터 밤 40g 2개 세트 헹굼 없는 트리트먼트 아웃배스 핸드크림 미용실 살롱 전문가 제품 밀본 milbon 헤어케어 추천",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "brand": "닥터포포 (Dr.PAWPAW)",
+    "name": "모카 밤",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
