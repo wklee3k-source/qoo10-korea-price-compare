@@ -28979,5 +28979,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205368128",
+    "translated_kr": "어성초 포어 딥 클렌징 폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 쿼세티놀™ 모공 딥 클렌징 폼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1171440317",
+    "translated_kr": "BRING GREEN 공식 브링그린 알로에 97% 수딩 젤 300ml+300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포켓몬에디션 알로에 97% 수딩젤"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "포켓몬에디션 알로에 97% 수딩젤",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12100,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
