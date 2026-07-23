@@ -29925,5 +29925,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180624495",
+    "translated_kr": "귀리 진정 젤 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "진정 수딩 크림",
+      "naver": "Aveeno 아비노 페이스 캄 앤 리스토어 오트 귀리 젤 모이스처라이저 수분크림 50ml 4팩"
+    },
+    "brand": "버진팜스 (VIRGINFARMS)",
+    "name": "진정 수딩 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "83900",
+    "mall": "직구촌세상",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8284731267",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8582923/85829231590.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8582923/85829231590.1.jpg",
+        "mall": "직구촌세상",
+        "link": "https://smartstore.naver.com/main/products/8284731267"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111724/91117247705.jpg",
+        "mall": "아마브릿지",
+        "link": "https://smartstore.naver.com/main/products/13572737294"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837047/88370476191.jpg",
+        "mall": "코브상사",
+        "link": "https://smartstore.naver.com/main/products/10825970178"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207549191",
+    "translated_kr": "【公式】【香水6種】 シグネチャー EDP 30ml パフューム / フレグランス / オードパルファム",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
