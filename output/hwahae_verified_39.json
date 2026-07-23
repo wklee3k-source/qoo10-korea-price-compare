@@ -34452,5 +34452,77 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1197720706",
+    "translated_kr": "[지금만 한정! 기획] 캐롯 카로틴 카밍 워터 패드 60장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "캐롯 카로틴 카밍 워터 패드",
+      "naver": "스킨푸드 캐롯 카로틴 카밍 워터 패드 30매 (리필) 당근패드"
+    },
+    "brand": "스킨푸드 (SKINFOOD)",
+    "name": "캐롯 카로틴 카밍 워터 패드",
+    "volume": "250g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "5480",
+    "mall": "패션뷰티몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9643333302",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8718783/87187835572.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8718783/87187835572.3.jpg",
+        "mall": "패션뷰티몰",
+        "link": "https://smartstore.naver.com/main/products/9643333302"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188188856",
+    "translated_kr": "마다가스카르 센텔라 프로바이오 시카 인텐시브 앰플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 프로바이오시카 인텐시브 앰플",
+      "naver": "스킨1004 마다가스카르 센텔라 프로바이오시카 인텐시브 앰플 50ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 프로바이오시카 인텐시브 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18350",
+    "mall": "Top뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11272530911",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8881704/88817041242.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881704/88817041242.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/11272530911"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8718512/87185120193.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/9640617923"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8718512/87185122028.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/9640619758"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
