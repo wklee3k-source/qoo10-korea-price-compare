@@ -43401,5 +43401,62 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1187987443",
+    "translated_kr": "ink. 클렌징 바움 3개 세트 (클레이(무향료))",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "ink.LiT 인크리트 튜브 클렌징 밤 3개 세트 프레시 시트러스"
+    },
+    "brand": null,
+    "name": "ink.LiT 인크리트 튜브 클렌징 밤 3개 세트 프레시 시트러스",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "47610",
+    "mall": "우주인우츄진",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13156816653",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070132/90701327750.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070132/90701327750.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13156816653"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9076376/90763760316.jpg",
+        "mall": "Step Forward",
+        "link": "https://smartstore.naver.com/main/products/13219249985"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9036926/90369265927.jpg",
+        "mall": "Smile-JP-Store",
+        "link": "https://smartstore.naver.com/main/products/12824754978"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211279738",
+    "translated_kr": "오르가닉스 컨디셔너 비오틴 & 콜라겐 385 ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
