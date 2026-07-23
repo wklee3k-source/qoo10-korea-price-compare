@@ -39577,5 +39577,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202165457",
+    "translated_kr": "[RYO] Root Gen Hair Loss Care Scalp Essence, 80mL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1040290899",
+    "translated_kr": "[GRANHAND]【1+1】 핸드 크림 60g 3종 SUSIE SALMON",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 퍼퓸 (SUSIE SALMON)"
+    },
+    "brand": "그랑핸드 (GRANHAND)",
+    "name": "멀티 퍼퓸 (SUSIE SALMON)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
