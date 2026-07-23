@@ -33939,5 +33939,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204322875",
+    "translated_kr": "D-UV 쉴드 톤업 SPF50+ PA++++ 본체 로즈 30g 썬크림 UV[기프트래핑 대응]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리뉴 유브이 쉴드 톤 업 선크림 [SPF50+/PA+++]"
+    },
+    "brand": "레디우스 (RADIEUX)",
+    "name": "리뉴 유브이 쉴드 톤 업 선크림 [SPF50+/PA+++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 58000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213547055",
+    "translated_kr": "트리플 쉴드 하이드로락 선세럼 SPF50+ PA++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트리플 쉴드 하이드로 락 선세럼 [SPF50+/PA++++]",
+      "naver": "세인트프랑 트리플 쉴드 선세럼 30ml"
+    },
+    "brand": "포렌코즈 (FORENCOS)",
+    "name": "트리플 쉴드 하이드로 락 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "27000",
+    "mall": "세인트프랑",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10311118452",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8785562/87855622558.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8785562/87855622558.1.jpg",
+        "mall": "세인트프랑",
+        "link": "https://smartstore.naver.com/main/products/10311118452"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
