@@ -29204,5 +29204,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1204317855",
+    "translated_kr": "プロテインボンド ウォーターエッセンス＋ピカチュウ ミラーコーム セット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "단백질 본드 워터 에센스",
+      "naver": "[1등][손상모 케어] 헤어플러스 단백질 본드 워터에센스 200ml+50ml 기획"
+    },
+    "brand": "헤어플러스 (HAIR+)",
+    "name": "단백질 본드 워터 에센스",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000210303",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5811592/58115928032.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5811592/58115928032.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000210303"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5285561/52855614132.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2354899?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151671051",
+    "translated_kr": "【国内百貨店】ルラボベルガモット22オードパルファム15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베르가못 22 오드퍼퓸",
+      "naver": "로제르 베르가못 22 오드퍼퓸 30ml"
+    },
+    "brand": "로제르 (ROSEUR)",
+    "name": "베르가못 22 오드퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29900",
+    "mall": "로제르",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4665049286",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8220956/82209569920.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8220956/82209569920.3.jpg",
+        "mall": "로제르",
+        "link": "https://smartstore.naver.com/main/products/4665049286"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
