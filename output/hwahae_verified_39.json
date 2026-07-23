@@ -34163,5 +34163,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1199639298",
+    "translated_kr": "헤트라스 버블 핸드솝 2개입 - 7가지 향",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196819316",
+    "translated_kr": "글루타치온 비타 시트 마스크 데일리 픽 30장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 비타 시트 마스크 데일리 픽"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "글루타치온 비타 시트 마스크 데일리 픽",
+    "volume": "350ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
