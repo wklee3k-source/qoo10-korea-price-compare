@@ -35986,5 +35986,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1165634740",
+    "translated_kr": "ヘアシールド（ヘアフィクサー/スプレー噴射型）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "헤어실드",
+      "naver": "유리카 헤어 실드 80ml + 여행용미니치약구성"
+    },
+    "brand": "유리카 (YURICA)",
+    "name": "헤어실드",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11050",
+    "mall": "Nuvianne",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13646962775",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+        "mall": "Nuvianne",
+        "link": "https://smartstore.naver.com/main/products/13646962775"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889435/88894351701.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11349841359"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165169271",
+    "translated_kr": "[ミニパフューム/シナモロール キーリング 贈呈] パフューム ミスト 94ml 10種",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
