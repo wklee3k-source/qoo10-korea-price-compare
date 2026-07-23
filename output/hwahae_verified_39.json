@@ -35979,5 +35979,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201575924",
+    "translated_kr": "[26SS/신상]피치페어 비건 톤업 캡슐 선스크린 50ml #SPF50+ PA++++ #글루타치온 #나이아신아마이드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피치페어 비건 톤업 캡슐 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "휩드 (WHIPPED)",
+    "name": "피치페어 비건 톤업 캡슐 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201571343",
+    "translated_kr": "[25SS/신작]4GF 더마 리페어 하이드로 세럼 30ml #엑소솜 #나이아신아마이드 #펩타이드 #논코메도제닉",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "D.N.A. 인퓨전 리페어 에센스",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 63000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
