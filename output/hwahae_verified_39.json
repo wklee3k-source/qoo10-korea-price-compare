@@ -47750,5 +47750,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202125379",
+    "translated_kr": "BENTON Guava Moisture Soothing Cream 80mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "구아바 수분 진정 크림",
+      "naver": "벤튼 구아바 수분 진정 크림 80mL 속건조 화잘먹 뷰티크림 스쿠알란"
+    },
+    "brand": "벤튼 (BENTON)",
+    "name": "구아바 수분 진정 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "21000",
+    "mall": "벤튼",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9927173252",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8747167/87471675525.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8747167/87471675525.13.jpg",
+        "mall": "벤튼",
+        "link": "https://smartstore.naver.com/main/products/9927173252"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749907/87499078468.13.jpg",
+        "mall": "벤튼",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9954576195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8801227/88012275835.jpg",
+        "mall": "MWstore",
+        "link": "https://smartstore.naver.com/main/products/10467770627"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199098148",
+    "translated_kr": "[モンチッチコラボ] ベージュトーンアップ365ヴィーガンサンクリーム 40ml SPF50 トーンアップUV ノーファンデ 化粧下地 韓国日焼け止め",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
