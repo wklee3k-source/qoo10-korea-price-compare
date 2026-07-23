@@ -38508,5 +38508,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205625745",
+    "translated_kr": "판테놀 크림 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "판테놀 크림"
+    },
+    "brand": "아토팜 (ATOPALM)",
+    "name": "판테놀 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201757060",
+    "translated_kr": "멀티 펩타이드 세럼 포 헤어 덴시티 60ml 2개 헤어 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티-펩타이드 세럼 포 헤어 덴시티"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "멀티-펩타이드 세럼 포 헤어 덴시티",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
