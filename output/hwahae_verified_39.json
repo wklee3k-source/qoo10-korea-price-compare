@@ -35606,5 +35606,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212968157",
+    "translated_kr": "【눈가 탄력 케어】아이팔트 아이백 크림 10ml 눈가 처짐 아이크림 보습 레티놀 EGF 나이아신아마이드 세라마이드 눈가 케어 건조 주름 한국 화장품 다크서클 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "[약국입점]썸블라썸 아이백 크림 PDRN 눈밑 꺼짐 처짐 지방 팔자주름 목주름 리프팅"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "38900",
+    "mall": "썸블라썸",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11499326041",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8904383/89043836406.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8904383/89043836406.1.jpg",
+        "mall": "썸블라썸",
+        "link": "https://smartstore.naver.com/main/products/11499326041"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192678454",
+    "translated_kr": "【한국 피부과의 추천 No.1】피부 트러블·건조 칙칙함 대책에! 에이시카365 트러블 릴리프 세럼 pH4.5 40ml 피부 트러블 칙칙함 건조 미용액",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이시카365 수분토너 pH4.5"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 수분토너 pH4.5",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
