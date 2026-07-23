@@ -31626,5 +31626,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177385233",
+    "translated_kr": "픽스디테일 헤어 마스카라 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "픽스 디테일 헤어 마스카라",
+      "naver": "올리브영잔머리픽서 차홍 픽스 디테일 헤어 마스카라 15ml"
+    },
+    "brand": "차홍 (CHAHONG)",
+    "name": "픽스 디테일 헤어 마스카라",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23900",
+    "mall": "스웨티클럽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13620718206",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116522/91165228623.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116522/91165228623.jpg",
+        "mall": "스웨티클럽",
+        "link": "https://smartstore.naver.com/main/products/13620718206"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205368128",
+    "translated_kr": "어성초 포어 딥 클렌징 폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+      "naver": "아누아 어성초 쿼세티놀 피지 모공 클렌징폼 150ml, 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8084627378",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8562912/85629127701.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562912/85629127701.5.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/8084627378"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562912/85629127702.5.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8084627379"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
