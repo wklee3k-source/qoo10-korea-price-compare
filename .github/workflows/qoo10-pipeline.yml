@@ -399,7 +399,7 @@ jobs:
             # 병합job의 concurrency 큐에 들어갈 뿐이라 여러 워커가 동시에
             # 트리거해도 안전하다(중복 실행은 큐에서 순서대로 처리됨).
             CURRENT_COUNT=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['all_products']) if p.exists() else 0)")
-            if [ $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT)) -ge 5 ]; then
+            if [ $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT)) -ge 15 ]; then
               echo "[자동트리거] 브랜치 $B 신규상품 $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT))개 누적 -> 병합job 트리거"
               curl -s -X POST -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" \
                 "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
