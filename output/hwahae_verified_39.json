@@ -32950,5 +32950,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1200735680",
+    "translated_kr": "[정품]올 뉴 시그니아 리파이닝 워터 에센스 180ml, 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196714483",
+    "translated_kr": "[정품] 레티놀 레티제션 세럼 30ml, 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아이오페 레티놀 슈퍼 바운스 세럼 (모공탄력 / 자극도 0.0) 30ml, 1개"
+    },
+    "brand": "아이오페",
+    "name": "아이오페 레티놀 슈퍼 바운스 세럼 (모공탄력 / 자극도 0.0) 30ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "42500",
+    "mall": "아이오페",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11263401215",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8880791/88807911546.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880791/88807911546.11.jpg",
+        "mall": "아이오페",
+        "link": "https://smartstore.naver.com/main/products/11263401215"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
