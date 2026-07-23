@@ -45337,5 +45337,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1102457193",
+    "translated_kr": "ブランマジックティーツリーオイル 20ml 5倍高濃縮ティーツリー成分 /ニキビ超急速ケア/赤ニキビ,白ニキビ,大人ニキビ,思春期ニキビ,ニキビ跡",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194293129",
+    "translated_kr": "ナイアシンアミド20 セラム 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 20% 세럼",
+      "naver": "더마팩토리 나이아신아마이드 20%(200,000ppm) 세럼 30ml"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "나이아신아마이드 20% 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "6000",
+    "mall": "더마팩토리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10661966119",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8820647/88206472033.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820647/88206472033.jpg",
+        "mall": "더마팩토리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10661966119"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
