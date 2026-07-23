@@ -32008,5 +32008,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1196368028",
+    "translated_kr": "メゾン オルキデ ケアオイル 洗い流さないヘアオイル 100ml アルガンオイル配合 オーキッドエキス ビタミンC誘導体 レブリン酸 チアシードオイル 大容量 フローラル香り 日本製 人気",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213005718",
+    "translated_kr": "페이스마스크 하이드라 PD 28장입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "naver": "LuLuLun 루루룬 하이드라 EX 페이스 마스크 대용량 28장입"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "41600",
+    "mall": "로맨틱비주얼",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11097122823",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8864163/88641633145.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8864163/88641633145.jpg",
+        "mall": "로맨틱비주얼",
+        "link": "https://smartstore.naver.com/main/products/11097122823"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
