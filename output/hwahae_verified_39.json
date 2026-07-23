@@ -9054,5 +9054,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202337775",
+    "translated_kr": "바운시슬리핑마스크60ml콜라겐으로탱글한탄력피부로",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202850909",
+    "translated_kr": "리얼카로틴IPMP블레미쉬세럼팩패드80매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "캐로틴 IPMP 바디로션"
+    },
+    "brand": "에이프릴스킨 (APRILSKIN)",
+    "name": "캐로틴 IPMP 바디로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
