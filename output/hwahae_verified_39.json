@@ -39389,5 +39389,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211090307",
+    "translated_kr": "글리콜산 7% 토너 240ml 레티놀 0.5% 인 스쿠알란 30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179706493",
+    "translated_kr": "제로모공 엑소솜샷2000 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "원데이 엑소좀 샷 모공 앰플 2000",
+      "naver": "제로 원데이 엑소좀 샷 모공 앰플 2000"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "원데이 엑소좀 샷 모공 앰플 2000",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "33400",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1508&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4514512/45145122071.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4514512/45145122071.3.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1508&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8814969/88149699114.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/10605193524"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8768714/87687144527.1.jpg",
+        "mall": "석플러스",
+        "link": "https://smartstore.naver.com/main/products/10142641323"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
