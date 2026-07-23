@@ -31005,5 +31005,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212016450",
+    "translated_kr": "약손이름가 V한 리프팅 패치 PDRN 10K (5장) / 올리양 단독 기획 이중턱 V라인 집중 케어 한국 코스메",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "V-PDRN 너리싱 프렙 크림"
+    },
+    "brand": "ELT (이엘티)",
+    "name": "V-PDRN 너리싱 프렙 크림",
+    "volume": "50mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212903876",
+    "translated_kr": "마데카 크림 시즌 7 타임 리버스 50ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
