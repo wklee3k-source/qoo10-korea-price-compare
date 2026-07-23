@@ -34202,5 +34202,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1182043662",
+    "translated_kr": "엑소솜 시카 병풀 진정 크림 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205563457",
+    "translated_kr": "갈락토미 엔자임 필링 젤 75ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "갈락토미 엔자임 필링젤"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "갈락토미 엔자임 필링젤",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 12000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
