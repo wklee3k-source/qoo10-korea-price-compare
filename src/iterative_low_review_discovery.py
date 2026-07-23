@@ -19,6 +19,7 @@ iterative_low_review_discovery.py
 
 import json
 import re
+import signal
 import sys
 from pathlib import Path
 
@@ -310,6 +311,33 @@ def _save_state(state: dict, suffix: str | None = None):
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+class _ShopTimeout(Exception):
+    pass
+
+
+def _shop_timeout_handler(signum, frame):  # noqa: ARG001
+    raise _ShopTimeout()
+
+
+def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> list[dict]:
+    """crawl_shop_best5에 상점 전체 처리 시간 상한을 씌운다. 개별 페이지
+    로딩엔 이미 20초 타임아웃이 있지만, 베스트5 상품 각각(최대 5개) +
+    랭킹조회까지 합치면 최악의 경우 몇 분씩 걸릴 수 있어서(실측으로 확인된
+    지연 원인), 상점 하나당 전체 처리시간에도 상한을 둔다. 초과하면 이
+    상점은 포기하고 다음 상점으로 넘어간다(데이터 유실 없음 — 그냥 이번엔
+    스킵될 뿐, 나중에 다시 만나면 재시도됨)."""
+    old_handler = signal.signal(signal.SIGALRM, _shop_timeout_handler)
+    signal.alarm(timeout_seconds)
+    try:
+        return crawl_shop_best5(shop_id)
+    except _ShopTimeout:
+        print(f"  [TIMEOUT] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 포기하고 다음으로 넘어감")
+        return []
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
+
+
 def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None, state_suffix: str | None = None):
     state = _load_state(state_suffix)
     visited_shops = set(state["visited_shops"])
@@ -367,7 +395,7 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             shop_urls.append(f"https://m.qoo10.jp/shop/{shop_id}")
             print(f"\n  [상점진입] {shop_id} (review={shop['review_count']})")
 
-            crawled_items = crawl_shop_best5(shop_id)
+            crawled_items = crawl_shop_best5_with_timeout(shop_id)
             seed_entries = []
             for item in crawled_items:
                 # 시드는 필터 통과여부와 무관하게 전부 생성(사용자 지적사항 반영)

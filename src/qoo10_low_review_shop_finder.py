@@ -51,7 +51,7 @@ def search_qoo10(keyword: str, wait_seconds: int = 4) -> str:
         )
         page = context.new_page()
         try:
-            page.goto(url, timeout=45000, wait_until="load")
+            page.goto(url, timeout=20000, wait_until="load")
         except Exception as e:  # noqa: BLE001
             print(f"[WARN] goto issue: {e}", file=sys.stderr)
         time.sleep(wait_seconds)

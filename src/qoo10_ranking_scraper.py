@@ -52,7 +52,7 @@ def fetch_shop_ranking(shop_id: str, wait_seconds: int = 6) -> list[dict]:
         )
         page = context.new_page()
         try:
-            page.goto(url, timeout=45000, wait_until="load")
+            page.goto(url, timeout=20000, wait_until="load")
         except Exception as e:  # noqa: BLE001 - best effort, content may still be usable
             print(f"[WARN] goto issue for {shop_id}: {e}", file=sys.stderr)
 
