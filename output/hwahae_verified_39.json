@@ -25267,5 +25267,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1133810636",
+    "translated_kr": "【한국 화장품】【정품 판매점】[ATO樂] 인텐시브 크림 120ml - 심층 보습과 리페어 효과!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐시브 리페어 컨센트레이트 크림"
+    },
+    "brand": "뮤스템 (MUSTEM)",
+    "name": "인텐시브 리페어 컨센트레이트 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 64000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1090106435",
+    "translated_kr": "닥터 벨머 클래리파잉 모이스처라이저 120ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
