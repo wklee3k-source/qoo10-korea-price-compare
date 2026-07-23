@@ -38736,5 +38736,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1107510664",
+    "translated_kr": "신작 무드 레이어 스틱 크레용 5색상 00 밀키 시럽 01 카라멜 드리즐 02 로즈 밀크티 03 모브 라떼",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1150363013",
+    "translated_kr": "선뮤즈 무기자차 썬크림 SPF50+/PA++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선뮤즈 무기자차 선크림 [SPF50+/PA++++]",
+      "naver": "비플레인 선뮤즈 무기자차 선크림 (SPF50+ / PA++++) 50ml, 1개"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "선뮤즈 무기자차 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16900",
+    "mall": "비플레인 beplain",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8385504239",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8593000/85930004562.19.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8593000/85930004562.19.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/8385504239"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8593000/85930004563.17.jpg",
+        "mall": "비플레인",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8385504240"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
