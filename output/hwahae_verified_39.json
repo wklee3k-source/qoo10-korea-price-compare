@@ -46049,5 +46049,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1124910554",
+    "translated_kr": "フレッシュマスク 10枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1186953765",
+    "translated_kr": "PDRNピンクヒアルロニック水分クリーム, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 히알루로닉 수분 크림",
+      "naver": "메디큐브 PDRN 핑크 히알루로닉 수분크림 기획 핑크 연어 잡티 흔적 크림"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 히알루로닉 수분 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24900",
+    "mall": "오감공감",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13648888498",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119339/91193399277.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119339/91193399277.jpg",
+        "mall": "오감공감",
+        "link": "https://smartstore.naver.com/main/products/13648888498"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8864118/88641185481.jpg",
+        "mall": "electro Z",
+        "link": "https://smartstore.naver.com/main/products/11096675159"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9015285/90152850181.jpg",
+        "mall": "샤이티스킨",
+        "link": "https://smartstore.naver.com/main/products/12608339325"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
