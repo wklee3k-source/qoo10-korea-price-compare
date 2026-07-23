@@ -50915,5 +50915,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208994497",
+    "translated_kr": "【正規品】白樺ミネラルサンクリーム SPF50+ PA++++ 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1149446206",
+    "translated_kr": "パフュームハンドクリーム/イチジクホテルウッド 50mlイチジク/ 헤트라스 핸드크림 무화과/호텔우드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "호텔 테라피 바디워시 [무화과]"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "호텔 테라피 바디워시 [무화과]",
+    "volume": "1013ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
