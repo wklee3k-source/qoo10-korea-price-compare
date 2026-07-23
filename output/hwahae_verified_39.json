@@ -31195,5 +31195,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1158425809",
+    "translated_kr": "그린 딥 포어 클렌징 밤 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린 딥 포어 클렌징 밤",
+      "naver": "[블랙헤드/모공세정] 닥터지 그린딥 포어 클렌징밤 100ml 2종 (단품/더블)"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "그린 딥 포어 클렌징 밤",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "29000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000207640",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5646832/56468321233.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5646832/56468321233.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000207640"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177829431",
+    "translated_kr": "마이 퍼스트 세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초"
+    },
+    "brand": "디마프 (De:maf)",
+    "name": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
