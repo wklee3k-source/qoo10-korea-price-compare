@@ -44708,5 +44708,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208516387",
+    "translated_kr": "【夏向けサラサラ日焼け止め】3番 ノーファンデ陶器肌トーンアップUVクリームEX, 50ml／ベタつかない／さっぱり／日差し対策／紫外線対策／ベースメイク／化粧下地／",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195095866",
+    "translated_kr": "ディープビタCパッド, 70枚",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 비타C 패드",
+      "naver": "딥 비타C 패드"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "딥 비타C 패드",
+    "volume": "150g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "31900",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1120&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3451753/34517539860.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3451753/34517539860.6.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1120&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626497/86264973626.5.jpg",
+        "mall": "예뻐지는뷰티공간",
+        "link": "https://smartstore.naver.com/main/products/8720473303"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8804344/88043446298.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/10498940946"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8758624/87586249344.1.jpg",
+        "mall": "better good",
+        "link": "https://smartstore.naver.com/main/products/10041746840"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=1120&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
   }
 ]
