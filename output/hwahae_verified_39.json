@@ -34119,5 +34119,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200859567",
+    "translated_kr": "티트리 시카 딥 클렌징 오일 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리시카딥클렌징오일"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리시카딥클렌징오일",
+    "volume": "200mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195059227",
+    "translated_kr": "터메릭 버블 딥 마스크 90g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "터메릭 버블 딥 마스크"
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "터메릭 버블 딥 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
