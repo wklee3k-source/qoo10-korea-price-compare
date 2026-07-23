@@ -31384,5 +31384,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1173839756",
+    "translated_kr": "P-TIOX 링클 스트레이트닝 세럼 30ml(+미니 4ml x2)+2마스크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피티옥스"
+    },
+    "brand": "스킨수티컬즈 (SKINCEUTICALS)",
+    "name": "피티옥스",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1171434085",
+    "translated_kr": "PDRN 히알루론산 100 모이스처라이징 크림 60ml (2개) + PDRN 히알루론산 캡슐 100 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
