@@ -37573,5 +37573,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1118545938",
+    "translated_kr": "센텔라 라이트 클렌징오일, 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 라이트 클렌징오일",
+      "naver": "스킨1004 마다가스카르 센텔라 라이트 클렌징 오일 200ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 라이트 클렌징오일",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "10600",
+    "mall": "여우화장",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13273149934",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9081766/90817660266.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081766/90817660266.1.jpg",
+        "mall": "여우화장",
+        "link": "https://smartstore.naver.com/main/products/13273149934"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8875450/88754506939.jpg",
+        "mall": "에이치에스 푸른유통",
+        "link": "https://smartstore.naver.com/main/products/11209996608"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194458592",
+    "translated_kr": "資生堂 サブリミック ワンダーシールド h レフィル 110mL 詰め替え用 洗い流さないトリートメント ヘアプロテクター ツヤケア 美容室専売品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
