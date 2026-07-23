@@ -36839,5 +36839,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1114825811",
+    "translated_kr": "닦아내는 토너팩 화장수(플럼프허니/수징그린/비타기빙)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "시카프라임스킨 닦아내는 토너 쿨바디워시 개기름 팩 시카 티트리"
+    },
+    "brand": "퍼스트픽",
+    "name": "시카프라임스킨 닦아내는 토너 쿨바디워시 개기름 팩 시카 티트리",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "35630",
+    "mall": "트리피샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12523059495",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9006757/90067570348.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9006757/90067570348.jpg",
+        "mall": "트리피샵",
+        "link": "https://smartstore.naver.com/main/products/12523059495"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078315/90783159531.jpg",
+        "mall": "8989쇼핑 5호점",
+        "link": "https://smartstore.naver.com/main/products/13238649199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8994379/89943797290.jpg",
+        "mall": "두키샵",
+        "link": "https://smartstore.naver.com/main/products/12399286565"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142629949",
+    "translated_kr": "セラ 水分バリア 日焼け止め SPF50+ PA++++ 50ml x 2個 (鎮静/弾力/保湿/栄養供給/活力/しわ防止)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
