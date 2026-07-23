@@ -7220,5 +7220,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204813717",
+    "translated_kr": "대용량토너 병풀그린더마 마일드시카 빅토너 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린더마 마일드 시카 빅토너"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "그린더마 마일드 시카 빅토너",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201899429",
+    "translated_kr": "어성초70 수딩콜라겐마스크 4매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 수딩 콜라겐 마스크"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 수딩 콜라겐 마스크",
+    "volume": "38g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
