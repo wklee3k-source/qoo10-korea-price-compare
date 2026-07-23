@@ -30017,5 +30017,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212561469",
+    "translated_kr": "딥클린 쿨링 샴푸 500ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥클린 쿨링 샴푸"
+    },
+    "brand": "비욘드 (BEYOND)",
+    "name": "딥클린 쿨링 샴푸",
+    "volume": "450ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164978194",
+    "translated_kr": "【비비안】니치 룸 스프레이 월넛 크릭 그린 100ml 1개, 패브릭 향수 패브릭 제습제 드레스 퍼퓸 Walnut Creek Green",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [월넛크릭그린]",
+      "naver": "[태산 PICK] 비비앙 월넛크릭그린 오 드 퍼퓸 EDP 50ml"
+    },
+    "brand": "비비앙 (BiBiANG)",
+    "name": "오 드 퍼퓸 [월넛크릭그린]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "91900",
+    "mall": "비비앙 Bibiang",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8680526005",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8622502/86225026328.14.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8622502/86225026328.14.jpg",
+        "mall": "비비앙 Bibiang",
+        "link": "https://smartstore.naver.com/main/products/8680526005"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4941809/49418096781.6.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4268814?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8917759/89177597156.jpg",
+        "mall": "럭스리밋",
+        "link": "https://smartstore.naver.com/main/products/11633086711"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
