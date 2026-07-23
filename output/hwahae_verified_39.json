@@ -37727,5 +37727,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1155003250",
+    "translated_kr": "윤기쌀 톤업 수분 선크림 자외선 차단 메이크업 베이스 UVカット SPF50+ PA++++ 한국 화장품 [로열샵] 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "UV 컷 하이 프로텍션 선크림 [SPF50+/PA+++]",
+      "naver": "풀리 쌀 세라 수분 선크림 50ml SPF50+ PA++++ 화잘먹 메이크업 지속력 24시간"
+    },
+    "brand": "시크릿키 (secretKey)",
+    "name": "UV 컷 하이 프로텍션 선크림 [SPF50+/PA+++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "18900",
+    "mall": "FULLY 풀리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11859576037",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8940408/89404086631.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8940408/89404086631.1.jpg",
+        "mall": "FULLY 풀리",
+        "link": "https://smartstore.naver.com/main/products/11859576037"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117117/91171170065.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/13626659456"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1157009011",
+    "translated_kr": "에어라인 KF94 황사·비말 대책 3D마스크 대형사이즈 한국 마스크 100장 세트(25장×4봉지)[화이트/블랙]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨부스터 이데베논 세럼 시트 마스크"
+    },
+    "brand": "게스통 (GASTON)",
+    "name": "스킨부스터 이데베논 세럼 시트 마스크",
+    "volume": "25g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 3000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
