@@ -32240,5 +32240,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1171434085",
+    "translated_kr": "PDRNヒアルロン酸100モイスチャライジングクリーム 60ml (2個) + PDRN ヒアルロン酸カプセル 100セラム 30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180595613",
+    "translated_kr": "PDRN 100 히알루론산 부스터 토너 250ml + PDRN 히알루론산 100 모이스처라이징 크림 60ml + PDRN 히알루론산 캡슐 100 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피디알엔 100 히알루론산 부스터 토너",
+      "naver": "[수지 PICK] 아누아 피디알엔 100 히알루론산 부스터 토너 250ml 기획 (+40ml)"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "피디알엔 100 히알루론산 부스터 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000231891",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5643944/56439447771.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5643944/56439447771.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000231891"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9099546/90995460024.jpg",
+        "mall": "별별올리브",
+        "link": "https://smartstore.naver.com/main/products/13450949672"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033937/90339370002.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/12794859054"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
