@@ -34887,5 +34887,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191514702",
+    "translated_kr": "센텔라 워터 알코올프리 토너 150ml _Beautiful_K",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "센텔라 워터 알코올 프리 토너",
+      "naver": "코스알엑스 센텔라 워터 알코올-프리 토너"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "센텔라 워터 알코올 프리 토너",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "20400",
+    "mall": "위더스유통",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11609524751",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8915403/89154035157.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8915403/89154035157.jpg",
+        "mall": "위더스유통",
+        "link": "https://smartstore.naver.com/main/products/11609524751"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191514653",
+    "translated_kr": "쑥 마스크 110g _Beautiful_K",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 쑥",
+      "naver": "한율 자연을 닮은 시트마스크 어린쑥 1매"
+    },
+    "brand": "이솔 (2SOL)",
+    "name": "더 쑥",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "2500",
+    "mall": "뷰티풀클라우드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5072607147",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8261712/82617128798.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8261712/82617128798.2.jpg",
+        "mall": "뷰티풀클라우드",
+        "link": "https://smartstore.naver.com/main/products/5072607147"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060925/90609257128.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/13064746036"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060924/90609247302.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/13064736210"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060925/90609255734.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/13064744643"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
