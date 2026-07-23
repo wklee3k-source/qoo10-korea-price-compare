@@ -50512,5 +50512,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202081690",
+    "translated_kr": "【2026年新発売・国内正規品】POLA ポーラ ホワイトショット クリアスキンローション150ml 無香料 化粧水 医薬部外品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1167469068",
+    "translated_kr": "セーフミー リリーフモイスチャー クレンジングミルク 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세이프 미 릴리프 모이스처 크림 12"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "세이프 미 릴리프 모이스처 크림 12",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
