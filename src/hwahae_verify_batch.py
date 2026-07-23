@@ -250,6 +250,18 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
 
+        # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해가
+        # 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로 네이버를
+        # 한 번 더 검색한다. 초벌번역이 부정확해서 네이버에서 못 찾는
+        # 케이스가 상당수 있었다(실측: 화해만 찾고 네이버 구매링크 없는
+        # 실패가 528건).
+        if not cand_naver and cand_hwahae and cand_hwahae.get("name"):
+            hwahae_query = f"{cand_hwahae.get('brand') or ''} {cand_hwahae['name']}".strip()
+            print(f"    [화해이름 재검색] '{kw_cleaned}' 실패 -> 화해확인명 '{hwahae_query}'로 재검색")
+            cand_naver_retry = _search_naver(hwahae_query, known_brand)
+            if cand_naver_retry:
+                cand_naver = cand_naver_retry
+
         # 수량(묶음개수) 일치 확인: 큐텐 원본과 네이버 결과의 수량이 다르면
         # "1개" 기준으로 다시 찾는다(추가 검색 1회, 수량 불일치일 때만 발생).
         # 재검색해도 여전히 안 맞으면(검색어에 "1개"를 붙인다고 결과가 항상
