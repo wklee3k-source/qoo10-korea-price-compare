@@ -19102,5 +19102,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1137324551",
+    "translated_kr": "새싹 쑥 클렌징 흡착 팩 폼 기획 세트 【120ml+15ml】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "한율 어린쑥 클렌징 흡착 팩폼 기획세트"
+    },
+    "brand": "한율",
+    "name": "한율 어린쑥 클렌징 흡착 팩폼 기획세트",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21000",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=61343&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=hanyul",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5886169/58861691112.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5886169/58861691112.1.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=61343&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=hanyul"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1170826458",
+    "translated_kr": "[콜라겐 미용액] 동백 딥 콜라겐 탄력 앰플 30ml / 미용액 / 콜라겐 / 에이징 케어 · 하리 · 처짐 · 모공 케어 · 모공 처짐 · 결을 정돈 · 리프트업 · 보습 · 수분 케어 · 한국 코스메",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
