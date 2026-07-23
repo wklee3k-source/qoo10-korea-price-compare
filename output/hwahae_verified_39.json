@@ -31108,5 +31108,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1168706253",
+    "translated_kr": "【대용량500ml】 어성초77+ 수징토너/보습·진정케어 화장수 한국코스메",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203201187",
+    "translated_kr": "라이스70 글로우 밀키토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "라이스 70 글로우 밀키 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "라이스 70 글로우 밀키 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
