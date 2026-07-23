@@ -35224,5 +35224,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1178716974",
+    "translated_kr": "ユニゾントーキョー AND ONE セレクトリペアミルク 140g ヘアトリートメント 集中ケアミルク ＆ONE",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1198208356",
+    "translated_kr": "아누카틴 샴푸, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모엔 아누카틴 샴푸",
+      "naver": "모에브 아누카틴 샴푸 탈모 증상 완화 525ml 1개"
+    },
+    "brand": "닥터비움 (Dr.Viuum)",
+    "name": "모엔 아누카틴 샴푸",
+    "volume": "750ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "28400",
+    "mall": "moev",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11749716464",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8929422/89294226983.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8929422/89294226983.2.jpg",
+        "mall": "moev",
+        "link": "https://smartstore.naver.com/main/products/11749716464"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8840486/88404862156.14.jpg",
+        "mall": "moev",
+        "link": "https://smartstore.naver.com/main/products/10860356143"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054487/90544873013.jpg",
+        "mall": "엔핑",
+        "link": "https://smartstore.naver.com/main/products/13000361921"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
