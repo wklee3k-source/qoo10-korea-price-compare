@@ -39829,5 +39829,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1174996099",
+    "translated_kr": "韓国正規品 3Dハリクリームセット 50ml 美容液15ml+ミスト20ml付 豪華2点特典 保湿 ハリケア 韓国コスメ 韓国直送",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185513461",
+    "translated_kr": "A'cure 퓨리파잉 스팟 크림 2X 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1초 매직 BB 크림 [SPF34/PA++]",
+      "naver": "에이큐어 퓨리파잉 스팟 크림 2X"
+    },
+    "brand": "마몽드 (Mamonde)",
+    "name": "1초 매직 BB 크림 [SPF34/PA++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "16150",
+    "mall": "큐템",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shop-skinmed.com/product/detail.html?product_no=97&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5634327/56343274208.17.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5634327/56343274208.17.jpg",
+        "mall": "큐템",
+        "link": "https://shop-skinmed.com/product/detail.html?product_no=97&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8590645/85906450696.10.jpg",
+        "mall": "큐템",
+        "link": "https://smartstore.naver.com/main/products/8361950373"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
