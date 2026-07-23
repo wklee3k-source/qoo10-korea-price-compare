@@ -37809,5 +37809,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193438544",
+    "translated_kr": "h&s 샴푸 920ml [3개분] 리필 초대형 에이치 앤드 에스 모이스처",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "S&H 퍼플마스크"
+    },
+    "brand": "CGC (씨지씨)",
+    "name": "S&H 퍼플마스크",
+    "volume": "600ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 69000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1184548435",
+    "translated_kr": "달바 워터풀 톤업 자외선 차단제 그린 50ml 소녀시대의 태연 걸스데이 헬리 자외선 차단제",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
