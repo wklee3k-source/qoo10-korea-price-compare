@@ -39205,5 +39205,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1119184636",
+    "translated_kr": "【2+1】라네즈 립 슬리핑 마스크 EX 베리 20g 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "립 슬리핑 마스크 EX [베리]"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "립 슬리핑 마스크 EX [베리]",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1106037437",
+    "translated_kr": "루시드 엘 하이 대미지 리페어 헤어 오일 90ml 모발질 복원",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
