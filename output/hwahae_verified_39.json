@@ -38688,5 +38688,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1149907926",
+    "translated_kr": "블랙슈가 퍼펙트 퍼스트 세럼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랙슈가 퍼펙트 PHA 앰플",
+      "naver": "[스킨푸드] 블랙슈가 퍼펙트 첫세럼 매끈새결 피부 에센셜 150ml"
+    },
+    "brand": "스킨푸드 (SKINFOOD)",
+    "name": "블랙슈가 퍼펙트 PHA 앰플",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "13500",
+    "mall": "스킨푸드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5127339794",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8267186/82671860375.47.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8267186/82671860375.47.jpg",
+        "mall": "스킨푸드",
+        "link": "https://smartstore.naver.com/main/products/5127339794"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201938749",
+    "translated_kr": "베어바니 컬렉팅 선 파우더 5g 모공 커버 4종",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
