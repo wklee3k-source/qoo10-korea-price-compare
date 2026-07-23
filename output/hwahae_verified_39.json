@@ -24610,5 +24610,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1164708889",
+    "translated_kr": "アトラク スキンフェンス クリーム 120ml (アトラク モイスチャー クリーム リニューアル)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨펜스 크림"
+    },
+    "brand": "아토락 (ATO樂)",
+    "name": "스킨펜스 크림",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213065508",
+    "translated_kr": "【2026新作】ダルバ エアフィット ブルー トーンアップUVパウダー 5.5g SPF UVケア 毛穴カバー テカリケア ヴィーガン",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
