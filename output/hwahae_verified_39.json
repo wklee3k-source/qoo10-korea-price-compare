@@ -44446,5 +44446,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193961247",
+    "translated_kr": "ドクダミ77 B3 ZINC スージングセラム, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 B3징크 트러블 세럼",
+      "naver": "[박희선 PICK/단독기획]  아누아 어성초 77 B3 징크 트러블 세럼 30ml 더블 기획"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 B3징크 트러블 세럼",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "27500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248500",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6046416/60464165921.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6046416/60464165921.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248500"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112604/91126042743.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/13581532332"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119360/91193603017.jpg",
+        "mall": "파티즌",
+        "link": "https://smartstore.naver.com/main/products/13649092238"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196665407",
+    "translated_kr": "アスパラガスグルタチオンパッド, 60枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
