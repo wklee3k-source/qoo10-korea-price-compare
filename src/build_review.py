@@ -60,7 +60,7 @@ def extract_quantity(text: str) -> int:
     m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)
     if m:
         return int(m.group(1)) + int(m.group(2))
-    m = re.search(r"(\d+)\s*(個|개|매|입|병|枚|本|장)\b", text_wo_choice)
+    m = re.search(r"(\d+)\s*(個|개|입|병|本)\b", text_wo_choice)
     if m:
         return int(m.group(1))
     if re.search(r"세트|SET|Set|1\+1", text_wo_choice):

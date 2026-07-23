@@ -127,10 +127,16 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
 
 
 def _extract_quantity(text: str) -> int:
-    """제목/상품명에서 실제 수량(묶음개수)을 추출한다.
+    """제목/상품명에서 실제 구매수량(묶음개수)을 추출한다.
     - "1+1", "2+1" 같은 증정/묶음 표기 → 앞뒤 숫자 합
-    - "2個", "2개", "2매", "2입", "2병", "SET", "세트" → 배수로 판단
+    - "2個", "2개", "2입", "2병", "SET", "세트" → 배수로 판단
     - "2種から1つ選択"(2종류 중 1개 선택) → 실제로는 1개이므로 수량에 안 잡히게 예외처리
+    - [중요] "매/枚"(마스크팩/패치/시트 등)는 일부러 제외한다 — 이건 대부분
+      "그 상품 1세트 안에 몇 장이 들었는지"(상품 구성정보)를 나타내지
+      "몇 개를 살지"(구매수량)가 아니다. 예: "PDRN 마스크 10매"는 1개
+      상품(마스크팩 1박스)인데 안에 10장이 든 것 — 이걸 수량10으로 잘못
+      해석하면 정상 매칭도 전부 "수량불일치"로 오판하게 된다(실측으로
+      확인된 버그: 이 버그 하나로 실패건의 상당수가 잘못 걸러지고 있었음).
     - 아무 표기도 없으면 1개로 간주"""
     if not text:
         return 1
@@ -139,7 +145,7 @@ def _extract_quantity(text: str) -> int:
     m = re.search(r"(\d+)\s*\+\s*(\d+)", text_wo_choice)  # "1+1" 등
     if m:
         return int(m.group(1)) + int(m.group(2))
-    m = re.search(r"(\d+)\s*(個|개|매|입|병|枚|本|장)\b", text_wo_choice)
+    m = re.search(r"(\d+)\s*(個|개|입|병|本)\b", text_wo_choice)
     if m:
         return int(m.group(1))
     if re.search(r"세트|SET|Set", text_wo_choice):
