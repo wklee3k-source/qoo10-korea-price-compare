@@ -35059,5 +35059,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1138030129",
+    "translated_kr": "【정품】345 릴리프 크림, 50ml 니키비 피부 진정 데일리 크림 relief cream",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "닥터엘시아 345 릴리프 크림 (진정재생크림) 50ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25500",
+    "mall": "Dr.Althea",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11663230883",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8920774/89207741350.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920774/89207741350.7.jpg",
+        "mall": "Dr.Althea",
+        "link": "https://smartstore.naver.com/main/products/11663230883"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8965107/89651073033.1.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12106562328"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206600283",
+    "translated_kr": "PDRNヒアルロン酸ハイドレイティングミスト, 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
