@@ -8266,5 +8266,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209395922",
+    "translated_kr": "그린토마토NMN포어리프팅앰플(40ml*2개)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195778590",
+    "translated_kr": "안텔리오스선플루이드50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "안뗄리오스 선 플루이드 [SPF50+/PA++++]"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "안뗄리오스 선 플루이드 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
