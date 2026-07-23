@@ -30435,5 +30435,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1207120487",
+    "translated_kr": "모이스처 레이어 선프로텍션 SPF50+ PA++++ 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203232874",
+    "translated_kr": "[세안팩 증정] 야마노이모 클렌징 흡착 팩 폼 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어린쑥 클렌징 흡착 팩폼"
+    },
+    "brand": "한율 (HANYUL)",
+    "name": "어린쑥 클렌징 흡착 팩폼",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
