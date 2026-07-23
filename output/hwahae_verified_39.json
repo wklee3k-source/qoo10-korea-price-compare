@@ -50590,5 +50590,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1129191908",
+    "translated_kr": "セボムコントロールシャンプー 300ml /弱酸性クレンジング/毛髪強化/かゆみ頭皮/スカルプ/毛髪ケア",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "990775487",
+    "translated_kr": "シャンプー 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "행운샴푸",
+      "naver": "LUCKA リュッカ メンズ 全身シャンプー オールインワン化粧水 ギフトセット"
+    },
+    "brand": "행운샴푸 (LuckyShampoo)",
+    "name": "행운샴푸",
+    "volume": "500ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "72260",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13566087767",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9111059/91110598164.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111059/91110598164.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/13566087767"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113138/91131388829.jpg",
+        "mall": "오션유닛47",
+        "link": "https://smartstore.naver.com/main/products/13586878417"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
