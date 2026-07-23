@@ -37921,5 +37921,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199692215",
+    "translated_kr": "라사나 해초 헤어 세럼 미스트 (200ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170385647",
+    "translated_kr": "스킨케어 3점 세트 인간줄기세포 보습 엑소소좀 인간줄기세포 배양액 무첨가 탄력 안티에이징 고보습 민감성피부 건성피부 모공 보습 미용액 미용 윤기 건조 토너 크림",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "에버셀 광노화 차단 보습 안티에이징 3종(에센스145ml+선크림 45ml+셀 프로그램1주)"
+    },
+    "brand": "에버셀",
+    "name": "에버셀 광노화 차단 보습 안티에이징 3종(에센스145ml+선크림 45ml+셀 프로그램1주)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "45000",
+    "mall": "에버셀",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8835160209",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8637966/86379660531.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8637966/86379660531.5.jpg",
+        "mall": "에버셀",
+        "link": "https://smartstore.naver.com/main/products/8835160209"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8533753/85337531403.jpg",
+        "mall": "미와수",
+        "link": "https://smartstore.naver.com/main/products/7793031030"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8637987/86379876285.5.jpg",
+        "mall": "에버셀",
+        "link": "https://smartstore.naver.com/main/products/8835375962"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
