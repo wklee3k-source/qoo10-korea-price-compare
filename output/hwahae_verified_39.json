@@ -41040,5 +41040,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1180349080",
+    "translated_kr": "シルクヘアリペアオイル130ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크 헤어 리페어 오일",
+      "naver": "더샘 실크 헤어 리페어 오일"
+    },
+    "brand": "더샘 (theSAEM)",
+    "name": "실크 헤어 리페어 오일",
+    "volume": "130ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "16000",
+    "mall": "더샘",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9817484906",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8736198/87361987178.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8736198/87361987178.2.jpg",
+        "mall": "더샘",
+        "link": "https://smartstore.naver.com/main/products/9817484906"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198095545",
+    "translated_kr": "【GIFT】洗顔/ゼロ 毛穴 ブラックヘッド ディープ クレンジングオイル 205ml/毛穴ケア/毛穴 黒ずみ/ブラックヘッド/韓国コスメ 毛穴",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
