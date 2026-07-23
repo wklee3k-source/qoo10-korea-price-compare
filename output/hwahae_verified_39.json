@@ -41905,5 +41905,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1033537643",
+    "translated_kr": "원(ONE) 전신 화장수 스프레이 상큼한 촉촉 타입 대용량 본체 280ml 머리·얼굴·몸에 사용 가능한 전신용 화장수",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1031905687",
+    "translated_kr": "데미 리페어 에멀전 75g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "컴포지오 CMC 리페어 샴푸"
+    },
+    "brand": "데미 (DEMI)",
+    "name": "컴포지오 CMC 리페어 샴푸",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
