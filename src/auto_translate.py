@@ -45,7 +45,7 @@ SYSTEM_PROMPT = """너는 큐텐재팬(일본 이커머스)의 한국 화장품 
 줄바꿈해서 출력한다. 형식: "1. 번역결과\\n2. 번역결과\\n..." """
 
 
-def _call_api(user_content: str, max_tokens: int = 2000) -> str:
+def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     payload = json.dumps({
         "model": MODEL,
         "max_tokens": max_tokens,

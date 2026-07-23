@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from auto_translate import translate_batch  # noqa: E402
 
 
-def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 20):
+def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 100):
     path = Path(state_path)
     if not path.exists():
         print(f"[SKIP] {path} 없음")
