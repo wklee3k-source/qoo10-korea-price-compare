@@ -32293,5 +32293,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1175560636",
+    "translated_kr": "헤어케어 멀티 펩타이드 세럼 포 헤어 덴시티 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티-펩타이드 세럼 포 헤어 덴시티"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "멀티-펩타이드 세럼 포 헤어 덴시티",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1146350870",
+    "translated_kr": "【NEW】 오드 파르팜 08 러브 포션 25ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [08 러브포션]"
+    },
+    "brand": "애프터블로우 (Afterblow)",
+    "name": "오 드 퍼퓸 [08 러브포션]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
