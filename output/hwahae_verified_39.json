@@ -11121,5 +11121,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1168223276",
+    "translated_kr": "살롱10프로틴990ml/샴푸/에센스팩트리트먼트/데미지/초데미지",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207468397",
+    "translated_kr": "EGFx다운타임오인트젤15ml기획세트(+크림7ml)스킨케어보습집중케어한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "EGFx 시그널 에센스"
+    },
+    "brand": "이지듀 (Easydew)",
+    "name": "EGFx 시그널 에센스",
+    "volume": "100mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 99000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
