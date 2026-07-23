@@ -35215,5 +35215,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1097848142",
+    "translated_kr": "로즈 페일 헤어케어 세트 샴푸 300ml + 트리트먼트 300ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195385472",
+    "translated_kr": "[NEW] 메디힐 마데카소사이드 UV 차단 아웃도어 선 패치 [와이드 프로텍션]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마데카소사이드 유브이 컷 아웃도어 선 패치 [와이드프로텍션]",
+      "naver": "[야구단 콜라보/2회분]메디힐 마데카소사이드 유브이 컷 아웃도어 선 패치 골라담기"
+    },
+    "brand": "메디힐 (MEDIHEAL)",
+    "name": "마데카소사이드 유브이 컷 아웃도어 선 패치 [와이드프로텍션]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "4900",
+    "mall": "메디힐 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13557180023",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110169/91101690390.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110169/91101690390.1.jpg",
+        "mall": "메디힐 스토어",
+        "link": "https://smartstore.naver.com/main/products/13557180023"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120760/91207606621.jpg",
+        "mall": "메디힐 스토어",
+        "link": "https://smartstore.naver.com/main/products/13663095660"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110169/91101690391.jpg",
+        "mall": "메디힐",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13557180024"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
