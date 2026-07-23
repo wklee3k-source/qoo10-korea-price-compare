@@ -1,11 +1,5 @@
 [
   {
-    "time_utc": "2026-07-22T07:09:20+00:00",
-    "shops": 979,
-    "products": 208,
-    "hwahae_done": 42
-  },
-  {
     "time_utc": "2026-07-22T07:10:30+00:00",
     "shops": 981,
     "products": 209,
@@ -3055,6 +3049,13 @@
     "time_utc": "2026-07-23T12:44:34+00:00",
     "shops": 1703,
     "products": 1738,
+    "translated": 43,
+    "hwahae_done": 42
+  },
+  {
+    "time_utc": "2026-07-23T12:47:56+00:00",
+    "shops": 1706,
+    "products": 1740,
     "translated": 43,
     "hwahae_done": 42
   }
