@@ -32781,5 +32781,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1089059404",
+    "translated_kr": "TXT 바디소프 500ml 화이트 머스크",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1142414152",
+    "translated_kr": "[신상품] 라이스 스킨케어 70 글로우 밀키 토너 250ml + 250ml / 촉촉함×투명감! 라이스 70%로 촉촉한 윤기 피부로 가꾸는 밀키 토너",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 라이스 70 글로우 밀키 토너 250ml"
+    },
+    "brand": "아누아",
+    "name": "아누아 라이스 70 글로우 밀키 토너 250ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10812203975",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8835670/88356709965.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8835670/88356709965.1.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/10812203975"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8835670/88356709966.1.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10812203976"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5721921/57219219698.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000224040"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
