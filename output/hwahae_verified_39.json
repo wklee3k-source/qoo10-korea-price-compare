@@ -36454,5 +36454,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1167189215",
+    "translated_kr": "어성초 히알루론 수딩 앰플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 히알루론 수딩 앰플"
+    },
+    "brand": "구달 (goodal)",
+    "name": "어성초 히알루론 수딩 앰플",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1083286884",
+    "translated_kr": "엔젤스 리퀴드 글루타치온 플러스 나이아신아마이드 700v 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온+ 나이아신아마이드 700V 크림"
+    },
+    "brand": "엔젤스리퀴드 (Angel's Liquid)",
+    "name": "글루타치온+ 나이아신아마이드 700V 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 62000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
