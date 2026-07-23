@@ -46921,5 +46921,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1080048114",
+    "translated_kr": "ルミワイズブライトニングアンプルセラム30mL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1067976758",
+    "translated_kr": "クレンジングミルク500ml/カレンデュラクリーム75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 카렌듈라 크림",
+      "naver": "프랑스 수제 화장품 유기농 카렌듈라 크림 125ml"
+    },
+    "brand": "닥터오가닉 (dr.organic)",
+    "name": "(해외) 카렌듈라 크림",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "63300",
+    "mall": "비버의 건강스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6309047503",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8385354/83853549992.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8385354/83853549992.jpg",
+        "mall": "비버의 건강스토어",
+        "link": "https://smartstore.naver.com/main/products/6309047503"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8784099/87840994560.jpg",
+        "mall": "루나인유럽",
+        "link": "https://smartstore.naver.com/main/products/10296490546"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8962439/89624392880.jpg",
+        "mall": "선인유통",
+        "link": "https://smartstore.naver.com/main/products/12079882181"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8710904/87109040247.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9564537977"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8710904/87109040246.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9564537976"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
