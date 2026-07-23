@@ -481,9 +481,7 @@ def main():
 
     products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword, state_suffix=state_suffix)
     export_excel(products, out_path)
-    print("\n방문한 상점 URL:")
-    for u in shop_urls:
-        print(" ", u)
+    print(f"\n방문한 상점: 누적 {len(shop_urls)}개 (최근 5개: {shop_urls[-5:]})")
 
 
 if __name__ == "__main__":
