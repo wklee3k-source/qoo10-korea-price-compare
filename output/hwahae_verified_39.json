@@ -31848,5 +31848,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1073637416",
+    "translated_kr": "바이탈 하이드라 솔루션 하이드로플럼프 워터 크림 50ml 1EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바이탈 하이드라 솔루션™ 하이드로 플럼프 워터 크림"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "바이탈 하이드라 솔루션™ 하이드로 플럼프 워터 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1073637368",
+    "translated_kr": "시카페어 쓰리페어 인텐시브 S 리페어 마스크 75ml 1EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "D.N.A. 인퓨전 리페어 에센스",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 63000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
