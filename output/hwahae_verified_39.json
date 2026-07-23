@@ -37935,5 +37935,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1197590797",
+    "translated_kr": "[민감성 피부 대책] 마이 퍼스트 에센서 100ml 2본 J.Y. Park 프로듀스/녹차 에키스/진정 부스터/오가닉 인증",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "휴마스크 [진정]",
+      "naver": "[스킨후리] 저자극 천연소재 휴 마스크팩 3종(미백,진정,탄력)"
+    },
+    "brand": "스킨후리 (skinfree)",
+    "name": "휴마스크 [진정]",
+    "volume": "22g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "네슈라 화장품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/519581541",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1045294/10452943586.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1045294/10452943586.3.jpg",
+        "mall": "네슈라 화장품",
+        "link": "https://smartstore.naver.com/main/products/519581541"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195971817",
+    "translated_kr": "[저자극 밀크 클렌징] 클렌즈 미 소프틀리 밀크 클렌저 시그니처 200ml 낮은 pH 고보습/더블 세안 불필요/약산성/건성피부",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "미나리 진정 클렌저"
+    },
+    "brand": "라타플랑 (rataplan)",
+    "name": "미나리 진정 클렌저",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
