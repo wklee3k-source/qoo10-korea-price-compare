@@ -45661,5 +45661,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1189376677",
+    "translated_kr": "[NEW]シェイキング シナジー ミスト 50ml / 保湿ミスト / ツヤミスト / メイクキープ / うるおいケア / ミスト化粧水",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Calming Skin Therapy Hydrating Mask (카밍스킨테라피하이드레이팅마스크)"
+    },
+    "brand": "오브리오가닉스 (AUBREYORGANICS)",
+    "name": "(해외) Calming Skin Therapy Hydrating Mask (카밍스킨테라피하이드레이팅마스크)",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1147973479",
+    "translated_kr": "【正規品】ダイブイン 低分子 ヒアルロン酸 セラム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "가나디 콜라보 다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "가나디 콜라보 다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
