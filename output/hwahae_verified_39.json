@@ -47658,5 +47658,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1160698982",
+    "translated_kr": "ジェニーハウスプレミアムヘアカラー1+1企画セット5種類から選1",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170454907",
+    "translated_kr": "No.9 NMN BIO リフティング シートマスク（4枚）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "9번 NMN BIO 리프팅 원액 에센스"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "9번 NMN BIO 리프팅 원액 에센스",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
