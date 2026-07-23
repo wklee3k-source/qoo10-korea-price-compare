@@ -34424,5 +34424,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207138612",
+    "translated_kr": "비 네이처 바나나 화이트 마스크 팩 10장입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비 네이처 마스크 [바나나&화이트닝]"
+    },
+    "brand": "제이엠솔루션 (JMsolution)",
+    "name": "비 네이처 마스크 [바나나&화이트닝]",
+    "volume": "24ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207138588",
+    "translated_kr": "플랜 시너지 실키 마스크 팩 10장입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플랜시너지 마스크 [실키]",
+      "naver": "JMsolution 제이엠솔루션 플랜시너지 실키 마스크 30ml 10매입"
+    },
+    "brand": "제이엠솔루션 (JMsolution)",
+    "name": "플랜시너지 마스크 [실키]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13000",
+    "mall": "제이엠솔루션",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://jmsolutioncm.cafe24.com/product/detail.html?product_no=1827&cate_no=222&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4126452/41264522331.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4126452/41264522331.1.jpg",
+        "mall": "제이엠솔루션",
+        "link": "https://jmsolutioncm.cafe24.com/product/detail.html?product_no=1827&cate_no=222&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
