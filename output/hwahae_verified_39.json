@@ -36209,5 +36209,92 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1138450382",
+    "translated_kr": "[BEST] スキン 1004 マダガスカル センテラ アンプル 55ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 앰플 폼",
+      "naver": "마다가스카르 센텔라 앰플 폼 125ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 앰플 폼",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15300",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/4512396903",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8205692/82056920047.10.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8205692/82056920047.10.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/4512396903"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8828941/88289414179.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/10744908257"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212749170",
+    "translated_kr": "restore pha facial r 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "링클 리스토어 콤플렉스 H+R",
+      "naver": "디지털 벽시계 LED 전자 벽걸이 무소음 캘린더형 사무실 거실 PHA-D511R"
+    },
+    "brand": "스페랑스 (SFERANGS)",
+    "name": "링클 리스토어 콤플렉스 H+R",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "69370",
+    "mall": "시우리스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12792883479",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9033739/90337394428.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033739/90337394428.jpg",
+        "mall": "시우리스토어",
+        "link": "https://smartstore.naver.com/main/products/12792883479"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033739/90337394784.jpg",
+        "mall": "시우리스토어",
+        "link": "https://smartstore.naver.com/main/products/12792883835"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033738/90337382871.jpg",
+        "mall": "시우리스토어",
+        "link": "https://smartstore.naver.com/main/products/12792871922"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033738/90337386897.jpg",
+        "mall": "시우리스토어",
+        "link": "https://smartstore.naver.com/main/products/12792875948"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033738/90337383656.jpg",
+        "mall": "시우리스토어",
+        "link": "https://smartstore.naver.com/main/products/12792872707"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
