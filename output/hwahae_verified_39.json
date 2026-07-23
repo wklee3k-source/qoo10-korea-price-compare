@@ -40804,5 +40804,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203398878",
+    "translated_kr": "마스터즈 아쿠아리치 선크림 50ml 1+1 기획(+피카츄 핀 미러)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "AHC 마스터즈 아쿠아 리치 선크림 50ml 1+1 기획 (포켓몬기획/일반기획)"
+    },
+    "brand": "AHC",
+    "name": "AHC 마스터즈 아쿠아 리치 선크림 50ml 1+1 기획 (포켓몬기획/일반기획)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "27900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000254119",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6001672/60016720192.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6001672/60016720192.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000254119"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5372296/53722962891.2.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000223207"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1189683758",
+    "translated_kr": "밸런스풀 시카 토너 패드 60매+리필 60매, 1세트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
