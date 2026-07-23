@@ -51,8 +51,10 @@ def fetch_shop_ranking(shop_id: str, wait_seconds: int = 6) -> list[dict]:
             is_mobile=True,
         )
         page = context.new_page()
+        # 속도 개선: 텍스트 데이터만 필요하므로 이미지/폰트/CSS/미디어는 아예 안 받는다
+        page.route("**/*", lambda route: route.abort() if route.request.resource_type in ("image", "font", "stylesheet", "media") else route.continue_())
         try:
-            page.goto(url, timeout=45000, wait_until="load")
+            page.goto(url, timeout=20000, wait_until="load")
         except Exception as e:  # noqa: BLE001 - best effort, content may still be usable
             print(f"[WARN] goto issue for {shop_id}: {e}", file=sys.stderr)
 

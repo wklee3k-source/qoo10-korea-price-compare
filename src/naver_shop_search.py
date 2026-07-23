@@ -12,38 +12,38 @@ import urllib.parse
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
 
-# 신뢰할 수 있는(정품/공식 가능성이 높은) 판매채널 화이트리스트.
-# 화장품 유통에서 실제로 공식/정식 채널로 통용되는 곳들 — 병행수입/구매대행
-# 같은 소규모 스토어와 구분하기 위함.
-TRUSTED_MALLS = {
-    "올리브영", "시코르", "화해쇼핑", "무신사", "쿠팡", "지그재그",
-    "롯데온", "SSG.COM", "신세계몰", "11번가", "G마켓", "옥션",
-    "롯데백화점", "신세계백화점", "현대백화점",
-}
+# 신뢰할 수 있는(정품/공식 가능성이 높은) 판매채널 화이트리스트 — 사용자
+# 지정: 무신사/지그재그/올리브영만. 그 외는 "공식몰"(mallName에 "공식"
+# 포함) 이거나 "브랜드직영추정"(mallName에 브랜드명 포함)일 때만 신뢰.
+TRUSTED_MALLS = {"무신사", "지그재그", "올리브영"}
 
 
-def _is_official_seller(mall_name: str, brand: str) -> str:
+def _is_official_seller(mall_name: str, brand: str, link: str = "") -> str:
     """판매처가 공식/신뢰 가능한 채널인지 판단한다.
     - mallName에 "공식"이 들어있으면 공식몰로 간주
     - mallName이 브랜드명 자체를 포함하면(예: "아누아" 브랜드의 "아누아" 스토어) 공식 가능성 높음
-    - TRUSTED_MALLS(올리브영/쿠팡/무신사 등 정식유통 대형몰)에 있으면 신뢰
+    - TRUSTED_MALLS(무신사/지그재그/올리브영)에 있으면 신뢰
+    - 구매링크가 smartstore.naver.com 도메인이면 "스마트스토어"로 분류한다
+      (mallName은 개별 상점명이라 텍스트로는 못 잡지만, 스마트스토어 자체가
+      사업자등록이 필요한 네이버 정식 플랫폼이라 완전 무명 사이트보다는
+      신뢰도가 있음 — 다만 공식몰/브랜드직영보다는 한 단계 낮게 취급한다)
     - 그 외(개인샵, 구매대행 등으로 보이는 소규모 스토어명)는 "미확인"으로 표시"""
-    if not mall_name:
-        return "미확인"
-    mall_lower = mall_name.lower()
+    mall_lower = (mall_name or "").lower()
     brand_lower = (brand or "").lower()
     brand_core = re.sub(r"\(.*?\)", "", brand_lower).strip()  # "아누아 (Anua)" -> "아누아"
 
-    if "공식" in mall_name:
+    if mall_name and "공식" in mall_name:
         return "공식몰"
-    if brand_core and brand_core in mall_lower:
+    if brand_core and mall_name and brand_core in mall_lower:
         return "브랜드직영추정"
-    if mall_name in TRUSTED_MALLS:
+    if mall_name and mall_name in TRUSTED_MALLS:
         return "신뢰채널"
+    if link and "smartstore.naver.com" in link:
+        return "스마트스토어"
     return "미확인"
 
 
-def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
+def search(query: str, display: int = 5, known_brand: str = "", strict_trust_only: bool = True) -> list[dict]:
     url = f"https://openapi.naver.com/v1/search/shop.json?query={urllib.parse.quote(query)}&display={display}"
     req = urllib.request.Request(url)
     req.add_header("X-Naver-Client-Id", CLIENT_ID)
@@ -63,9 +63,11 @@ def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
             "brand": brand,
             "maker": item.get("maker", ""),
             "lprice": item.get("lprice"),
+            "link": item.get("link"),
+            "image": item.get("image"),
             "mallName": mall_name,
             "productId": item.get("productId"),
-            "seller_trust": _is_official_seller(mall_name, brand),
+            "seller_trust": _is_official_seller(mall_name, brand, item.get("link", "")),
         })
 
     if known_brand:
@@ -84,8 +86,16 @@ def search(query: str, display: int = 5, known_brand: str = "") -> list[dict]:
             print(f"    [naver 브랜드필터] known_brand='{known_brand}' {len(items)}건 -> {len(filtered)}건", file=sys.stderr)
         items = filtered
 
+    if strict_trust_only:
+        # 신뢰 가능한 판매처(공식몰/브랜드직영추정/무신사/지그재그/올리브영)가
+        # 아니면 아예 제외한다 — "미확인"(개인샵/구매대행 등)은 후보에서 뺀다.
+        trusted = [it for it in items if it["seller_trust"] != "미확인"]
+        if os.environ.get("NAVER_DEBUG"):
+            print(f"    [naver 신뢰필터] {len(items)}건 -> {len(trusted)}건(미확인 판매처 제외)", file=sys.stderr)
+        items = trusted
+
     # 신뢰도 높은 판매처를 우선순위로 재정렬한다("미확인"보다 "공식몰/신뢰채널"을 앞으로)
-    trust_order = {"공식몰": 0, "브랜드직영추정": 1, "신뢰채널": 2, "미확인": 3}
+    trust_order = {"공식몰": 0, "브랜드직영추정": 1, "신뢰채널": 2, "스마트스토어": 3, "미확인": 4}
     items.sort(key=lambda it: trust_order.get(it["seller_trust"], 3))
 
     return items
