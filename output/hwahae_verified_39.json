@@ -45739,5 +45739,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198779632",
+    "translated_kr": "トルホップ サウナンソルトマスク90g /サウナンジアンソルトマスク",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사우난지앙 솔트 마스크",
+      "naver": "[한혜진PICK/온열소금팩] 토르홉 사우난지앙 솔트 마스크 90g, 1개"
+    },
+    "brand": "토르홉 (Torhop)",
+    "name": "사우난지앙 솔트 마스크",
+    "volume": "150g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "27900",
+    "mall": "토르홉 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10650945519",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8819545/88195451417.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8819545/88195451417.15.jpg",
+        "mall": "토르홉 스토어",
+        "link": "https://smartstore.naver.com/main/products/10650945519"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117069/91170692893.3.jpg",
+        "mall": "토르홉 스토어",
+        "link": "https://smartstore.naver.com/main/products/13626182284"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820651/88206516342.15.jpg",
+        "mall": "토르홉 스토어",
+        "link": "https://smartstore.naver.com/main/products/10662010428"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213399617",
+    "translated_kr": "【トナーパッド】キャロットカロテンカーミングウォーターパッド( 60枚入り, 2個)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
