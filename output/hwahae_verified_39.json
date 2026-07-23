@@ -7590,5 +7590,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210090249",
+    "translated_kr": "비타민C부스터샷1+1세트페이스&아이크림잡티색소침착케어글루타치온배합30ml×2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1142422101",
+    "translated_kr": "고려은단뼈건강칼마디칼슘·마그네슘·비타민D60정1개(2개월분)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "뼈건강 칼마디 칼슘·마그네슘·비타민D"
+    },
+    "brand": "고려은단 (eundan)",
+    "name": "뼈건강 칼마디 칼슘·마그네슘·비타민D",
+    "volume": "101.g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
