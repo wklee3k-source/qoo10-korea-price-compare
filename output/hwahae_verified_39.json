@@ -21956,5 +21956,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1191835616",
+    "translated_kr": "【지금만 한정! 1+1 기획】PDRN 히알루론산 캡슐 100 세럼 30ml+30ml/본품+본품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210449177",
+    "translated_kr": "BB 크림 남성용 남성 용 내추럴 커버 자연스러운 마무리 티나지 않음 라이트 베이지 내추럴 오클 세안 오프",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
