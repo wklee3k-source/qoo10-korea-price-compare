@@ -32487,5 +32487,67 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188452072",
+    "translated_kr": "【Wid】 글리콜산 7% 엑스폴리에이팅 토너 / 240ml / 2개 세트 / 닦아내는 화장수 / 각질 케어 / 피부 결 정리 / 윤기 피부",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204077786",
+    "translated_kr": "[50ml+20ml]대두 에센스 50ml 기획(+보틀 풀 에센스 20ml) 수분 공급 케어 건조 대책 뷰티 에센스 보습 스킨케어 끈기 없는 뷰티 에센스 병풀 에센스 콩 에센스 한국 코스메 인기",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[싱글] 에스트라 아토베리어365 세라-히알 속수분앰플 30ml x 1개"
+    },
+    "brand": "에스트라",
+    "name": "[싱글] 에스트라 아토베리어365 세라-히알 속수분앰플 30ml x 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "26400",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11217428508",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8876193/88761938839.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8876193/88761938839.5.jpg",
+        "mall": "에스트라",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11217428508"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8352005/83520052995.218.jpg",
+        "mall": "센텔리안24",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5975553507"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8265649/82656497202.18.jpg",
+        "mall": "빌리프",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5111975156"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8344577/83445779819.169.jpg",
+        "mall": "에스트라",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5901280331"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
