@@ -31351,5 +31351,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1153873935",
+    "translated_kr": "[正規品]グルタチオンソーム CCサンクリーム トーニングチューブ SPF50+ PA++++ 50ml/日焼け止め/韓国コスメ/SPF50+/ミルクタイプ/UVカットクリーム/日焼け止め おすすめ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209962351",
+    "translated_kr": "히알루론산 2% + B5 세럼_30ml_1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5",
+      "naver": "히알루로닉 애시드 2% + B5 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10248980563",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10248980563"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745261/87452613128.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908110855"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745255/87452559827.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908057554"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838536/88385360513.3.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/10840854500"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
