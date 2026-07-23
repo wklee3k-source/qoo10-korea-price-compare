@@ -39244,5 +39244,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1163059967",
+    "translated_kr": "시카페어 인센티브 수징 리페어 크림, 50ml, 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1165210718",
+    "translated_kr": "レチノール 1% スクアランセラム 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 1% 인 스쿠알란",
+      "naver": "[디오디너리] 레티놀 1％ 인 스쿠알란 30ml 0000000022600"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "레티놀 1% 인 스쿠알란",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3470281?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4347219/43472190511.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4347219/43472190511.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3470281?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8513471/85134714543.1.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7590214221"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
