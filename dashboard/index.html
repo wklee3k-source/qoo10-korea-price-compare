@@ -5,858 +5,182 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qoo10 파이프라인 모니터</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
-
   :root {
-    --bg: #0a0e14;
-    --panel: #10151d;
-    --panel-border: #1e2733;
-    --text: #e6edf3;
-    --text-dim: #7d8998;
-    --accent-1: #4fd1a5;   /* stage 1 — 크롤링 */
-    --accent-2: #4a90d9;   /* stage 2 — 번역 */
-    --accent-3: #d9a15b;   /* stage 3 — 화해검증 */
-    --up: #4fd1a5;
-    --flat: #52606d;
-    --mono: 'JetBrains Mono', monospace;
-    --sans: 'Inter', sans-serif;
+    --bg: #0f1117; --panel: #171a23; --panel-border: #262b3a;
+    --text: #e6e8ef; --text-dim: #8b93a7; --ok: #4fd1a5; --bad: #e5534b; --idle: #6b7280;
+    --mono: 'SF Mono', Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    min-height: 100vh;
-    padding: 40px 24px;
+    background: var(--bg); color: var(--text); font-family: -apple-system, 'Pretendard', sans-serif;
+    margin: 0; padding: 24px; font-size: 14px;
   }
-  .wrap { max-width: 920px; margin: 0 auto; }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 36px;
-    border-bottom: 1px solid var(--panel-border);
-    padding-bottom: 20px;
+  .wrap { max-width: 640px; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  h1 { font-size: 18px; margin: 0; }
+  .sub { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+    padding: 6px 12px; border-radius: 20px;
   }
-  h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-  .sub {
-    color: var(--text-dim);
-    font-size: 13px;
-    font-family: var(--mono);
-  }
-  .refresh-btn {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: border-color 0.15s ease;
-  }
-  .refresh-btn:hover { border-color: #3a4656; }
-  .refresh-btn:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
-  .refresh-btn svg { width: 14px; height: 14px; }
-  .refresh-btn.loading svg { animation: spin 0.8s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .stages {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
-  @media (max-width: 900px) {
-    .stages { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 640px) {
-    .stages { grid-template-columns: 1fr; }
-  }
-
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: 10px;
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  .card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--stage-color);
-  }
-  .card.stage1 { --stage-color: var(--accent-1); }
-  .card.stage2 { --stage-color: var(--accent-2); }
-  .card.stage3 { --stage-color: var(--accent-3); }
-
-  .card-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--stage-color);
-    margin-bottom: 2px;
-  }
-  .card-title {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--text);
-  }
-
-  .metric-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 14px 0;
-    border-top: 1px solid var(--panel-border);
-  }
-  .metric-row:first-of-type { border-top: none; }
-  .metric-name { font-size: 13px; color: var(--text-dim); }
-  .metric-value-group { display: flex; align-items: baseline; gap: 10px; }
-  .metric-value {
-    font-family: var(--mono);
-    font-size: 26px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-  }
-  .metric-delta {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: rgba(79, 209, 165, 0.12);
-    color: var(--up);
-  }
-  .pct {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-dim);
-    font-variant-numeric: tabular-nums;
-  }
-  .metric-delta.flat {
-    background: rgba(82, 96, 109, 0.15);
-    color: var(--flat);
-  }
-
-  .progress-note {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid var(--panel-border);
-  }
-
-  .status-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--text-dim);
-    margin-top: 24px;
-  }
-  .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: var(--flat);
-  }
-  .dot.ok { background: var(--up); box-shadow: 0 0 8px var(--up); }
-  .dot.err { background: #e5534b; }
-
-  .countdown-sep { color: var(--panel-border); }
-
-  .error-box {
-    background: rgba(229, 83, 75, 0.08);
-    border: 1px solid rgba(229, 83, 75, 0.3);
-    color: #e5534b;
-    font-family: var(--mono);
-    font-size: 12px;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-top: 12px;
-  }
-
-  .log-section {
-    margin-top: 32px;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .log-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--panel-border);
-  }
-  .log-title {
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .log-clear {
-    background: none;
-    border: none;
-    color: var(--text-dim);
-    font-family: var(--sans);
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-  }
-  .log-clear:hover { color: var(--text); }
-  .log-table-wrap {
-    max-height: 320px;
-    overflow-y: auto;
-  }
-  table.log-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--mono);
-    font-size: 12px;
-  }
-  table.log-table th {
-    position: sticky;
-    top: 0;
-    background: var(--panel);
-    text-align: right;
-    color: var(--text-dim);
-    font-weight: 500;
-    padding: 8px 20px;
-    border-bottom: 1px solid var(--panel-border);
-  }
-  table.log-table th:first-child { text-align: left; }
-  table.log-table td {
-    text-align: right;
-    padding: 7px 20px;
-    border-bottom: 1px solid var(--panel-border);
-    font-variant-numeric: tabular-nums;
-  }
-  table.log-table td:first-child { text-align: left; color: var(--text-dim); }
-  table.log-table tr:last-child td { border-bottom: none; }
-  table.log-table tr:first-child td { background: rgba(79, 209, 165, 0.06); }
-  .log-empty {
-    padding: 24px 20px;
-    text-align: center;
-    color: var(--text-dim);
-    font-family: var(--mono);
-    font-size: 12px;
-  }
-  .log-delta-pos { color: var(--up); }
-
-  footer {
-    margin-top: 32px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-    text-align: center;
-  }
-  .stage-controls {
-    display: flex; align-items: center; gap: 8px; margin-top: 14px;
-    padding-top: 12px; border-top: 1px solid var(--panel-border);
-  }
-  .run-badge {
-    font-size: 10px; padding: 3px 8px; border-radius: 10px; font-weight: 600;
-    display: inline-flex; align-items: center; gap: 5px;
-  }
-  .run-badge.running { background: rgba(79,209,165,0.15); color: var(--ok, #4fd1a5); }
-  .run-badge.idle { background: rgba(125,137,152,0.15); color: var(--text-dim); }
-  .run-badge .pulse {
-    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
-    animation: pulse 1.4s infinite;
-  }
+  .status-badge.running { background: rgba(79,209,165,0.15); color: var(--ok); }
+  .status-badge.idle { background: rgba(107,114,128,0.15); color: var(--idle); }
+  .pulse { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 1.4s infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-  .ctrl-btn {
-    font-size: 11px; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--panel-border);
-    background: var(--panel); color: var(--text); cursor: pointer; font-family: inherit;
+  .card {
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 14px;
   }
-  .ctrl-btn:hover { border-color: var(--stage-color, var(--text-dim)); }
-  .ctrl-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-  .ctrl-btn.start { color: var(--ok, #4fd1a5); }
-  .ctrl-btn.stop { color: var(--bad, #e5534b); }
-  .ctrl-note { font-size: 10px; color: var(--text-dim); margin-top: 6px; }
-  .worker-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 8px;
+  .card-title { font-size: 13px; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+  .metric-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--panel-border); }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-label { color: var(--text-dim); font-size: 13px; }
+  .metric-value { font-family: var(--mono); font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .metric-value.success { color: var(--ok); }
+  .metric-value.fail { color: var(--bad); }
+  .refresh-btn {
+    background: var(--panel); border: 1px solid var(--panel-border); color: var(--text);
+    padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 12px; display: flex; align-items: center; gap: 6px;
   }
-  .worker-cell {
-    font-size: 10px; color: var(--text-dim); background: rgba(125,137,152,0.08);
-    border-radius: 4px; padding: 4px 6px; font-family: var(--mono);
-  }
+  .refresh-btn:hover { border-color: #3b4256; }
+  .refresh-btn svg { width: 13px; height: 13px; }
+  .footer-note { text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 8px; }
+  .error-box { background: rgba(229,83,75,0.1); color: var(--bad); padding: 8px 12px; border-radius: 8px; font-size: 12px; margin-top: 10px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div>
-      <h1>Qoo10 파이프라인 모니터</h1>
-      <div class="sub">wklee3k-source/qoo10-korea-price-compare</div>
+      <h1>Qoo10 파이프라인</h1>
+      <div class="sub" id="lastUpdated">불러오는 중…</div>
     </div>
-    <button class="refresh-btn" id="refreshBtn" onclick="loadAll()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+    <button class="refresh-btn" onclick="loadAll()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
       새로고침
     </button>
   </header>
 
-  <div class="stages">
-    <div class="card stage1">
-      <div class="card-label">STAGE 1</div>
-      <div class="card-title">저리뷰 상점 크롤링</div>
-      <div class="metric-row">
-        <div class="metric-name">전체 상품</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s1-total">—</div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">신규 탐색</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s1-new">—</div>
-          <div class="metric-delta" id="s1-new-delta"></div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">아카이빙</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s1-archived">—</div>
-        </div>
-      </div>
-      <div class="progress-note" id="s1-note">불러오는 중…</div>
-      <div class="worker-grid" id="s1-workers">
-        <div class="worker-cell" id="s1-w0">브랜치0 —</div>
-        <div class="worker-cell" id="s1-w1">브랜치1 —</div>
-        <div class="worker-cell" id="s1-w2">브랜치2 —</div>
-        <div class="worker-cell" id="s1-w3">브랜치3 —</div>
-      </div>
-      <div class="stage-controls">
-        <span class="run-badge idle" id="s1-run-badge">확인중</span>
-        <button class="ctrl-btn start" id="s1-start-btn" onclick="triggerStage(1)">▶ 진행</button>
-        <button class="ctrl-btn stop" id="s1-stop-btn" onclick="stopStage(1)" disabled>■ 정지</button>
-      </div>
-      <div class="ctrl-note">정지해도 다음 진행 때 이어서 계속됩니다</div>
-      <div class="stage-controls" style="margin-top:8px;">
-        <span class="run-badge idle" id="s15-run-badge">확인중</span>
-        <span style="font-size:11px;color:var(--text-dim);">1.5단계 병합</span>
-        <button class="ctrl-btn start" id="s15-start-btn" onclick="triggerStage(15)">▶ 병합</button>
-        <button class="ctrl-btn stop" id="s15-stop-btn" onclick="stopStage(15)" disabled>■ 정지</button>
-      </div>
-    </div>
+  <div id="runningStatus" class="status-badge idle" style="margin-bottom:16px;">확인중…</div>
 
-    <div class="card stage2">
-      <div class="card-label">STAGE 2</div>
-      <div class="card-title">한글 번역</div>
-      <div class="metric-row">
-        <div class="metric-name">전체 상품</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s2-total">—</div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">번역 완료</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s2-translated">— <span class="pct" id="s2-pct"></span></div>
-          <div class="metric-delta" id="s2-translated-delta"></div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">번역 대기</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s2-pending">—</div>
-        </div>
-      </div>
-      <div class="progress-note" id="s2-note">불러오는 중…</div>
-      <div class="stage-controls">
-        <span class="run-badge idle" id="s2-run-badge">확인중</span>
-        <button class="ctrl-btn start" id="s2-start-btn" onclick="triggerStage(2)">▶ 진행</button>
-        <button class="ctrl-btn stop" id="s2-stop-btn" onclick="stopStage(2)" disabled>■ 정지</button>
-      </div>
-      <div class="ctrl-note">정지해도 다음 진행 때 이어서 계속됩니다</div>
-    </div>
-
-    <div class="card stage3">
-      <div class="card-label">STAGE 3</div>
-      <div class="card-title">화해 명칭 검증</div>
-      <div class="metric-row">
-        <div class="metric-name">전체 상품</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s3-total">—</div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">검증 완료</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s3-done">— <span class="pct" id="s3-pct"></span></div>
-          <div class="metric-delta" id="s3-done-delta"></div>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-name">검증 대기</div>
-        <div class="metric-value-group">
-          <div class="metric-value" id="s3-pending">—</div>
-        </div>
-      </div>
-      <div class="progress-note" id="s3-note">불러오는 중…</div>
-      <div class="stage-controls">
-        <span class="run-badge idle" id="s3-run-badge">확인중</span>
-        <button class="ctrl-btn start" id="s3-start-btn" onclick="triggerStage(3)">▶ 진행</button>
-        <button class="ctrl-btn stop" id="s3-stop-btn" onclick="stopStage(3)" disabled>■ 정지</button>
-      </div>
-      <div class="ctrl-note">정지해도 다음 진행 때 이어서 계속됩니다</div>
+  <div class="card">
+    <div class="card-title">1단계 (발굴 · 병합 · 번역)</div>
+    <div class="metric-row">
+      <div class="metric-label">완료 건수</div>
+      <div class="metric-value" id="s1-done">—</div>
     </div>
   </div>
 
-  <div class="status-line">
-    <span class="dot" id="statusDot"></span>
-    <span id="statusText">확인 중…</span>
-    <span class="countdown-sep">·</span>
-    <span id="countdown">60초 후 자동 새로고침</span>
+  <div class="card">
+    <div class="card-title">2단계 (검증)</div>
+    <div class="metric-row">
+      <div class="metric-label">전체</div>
+      <div class="metric-value" id="s2-total">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-label">완료</div>
+      <div class="metric-value" id="s2-done">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-label">대기</div>
+      <div class="metric-value" id="s2-pending">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-label">성공</div>
+      <div class="metric-value success" id="s2-success">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-label">실패</div>
+      <div class="metric-value fail" id="s2-fail">—</div>
+    </div>
   </div>
 
   <div id="errorBox"></div>
-
-  <div class="log-section">
-    <div class="log-header">
-      <div class="log-title">조회 기록</div>
-    </div>
-    <div class="log-table-wrap">
-      <table class="log-table">
-        <thead>
-          <tr>
-            <th>시각</th>
-            <th>방문 상점</th>
-            <th>확보 상품</th>
-            <th>번역 완료</th>
-            <th>화해 검증</th>
-          </tr>
-        </thead>
-        <tbody id="logBody">
-          <tr><td colspan="4" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <footer>output/discovery_state.json · output/hwahae_verified_39.json — GitHub raw에서 직접 조회</footer>
+  <div class="footer-note">60초마다 자동 새로고침</div>
 </div>
 
 <script>
 const REPO = "wklee3k-source/qoo10-korea-price-compare";
-const RAW = (path, branch = "main") => `https://raw.githubusercontent.com/${REPO}/${branch}/${path}?t=${Date.now()}`;
+const RAW = (path, branch) => `https://raw.githubusercontent.com/${REPO}/${branch}/${path}?t=${Date.now()}`;
 
-// 개인용 대시보드 전용 토큰 — workflow_dispatch(트리거)와 cancel(정지) API 호출용.
-// 보안을 위해 파일에 하드코딩하지 않고, 브라우저 localStorage에 저장해서 쓴다
-// (최초 1회만 입력하면 이후엔 자동으로 재사용됨). 이 대시보드를 다른 사람과
-// 공유해도 토큰 자체는 노출되지 않는다(각자 자기 브라우저에 저장).
 function getGhToken() {
   let token = localStorage.getItem('qoo10_gh_token');
   if (!token) {
-    token = prompt('GitHub 토큰을 입력하세요(진행/정지 버튼에 필요, 최초 1회만):');
+    token = prompt('GitHub 토큰을 입력하세요(실행상태 확인용, 최초 1회만):');
     if (token) localStorage.setItem('qoo10_gh_token', token.trim());
   }
   return token ? token.trim() : '';
 }
-const GH_API = `https://api.github.com/repos/${REPO}/actions`;
-const GH_API_REPO = `https://api.github.com/repos/${REPO}`;
 
-async function ghFetchRepo(path, options = {}) {
+async function ghFetch(path) {
   const token = getGhToken();
-  return fetch(`${GH_API_REPO}${path}`, {
-    ...options,
-    headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd.github+json',
-      ...(options.headers || {}),
-    },
+  return fetch(`https://api.github.com/repos/${REPO}${path}`, {
+    headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' },
   });
-}
-
-// 각 단계가 어떤 job 이름에 대응하는지, 트리거시 어떤 input을 켜야 하는지
-const STAGE_JOB_MAP = {
-  1: { jobNames: ['discover_low_review_shops', 'discover_low_review_shops_parallel'], input: 'run_discovery' },
-  15: { jobNames: ['merge_discovery_shards'], input: 'run_merge_discovery' },
-  2: { jobNames: ['auto_translate'], input: 'run_auto_translate' },
-  3: { jobNames: ['hwahae_verify'], input: 'run_hwahae_verify' },
-};
-
-async function ghFetch(path, options = {}) {
-  const token = getGhToken();
-  return fetch(`${GH_API}${path}`, {
-    ...options,
-    headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd.github+json',
-      ...(options.headers || {}),
-    },
-  });
-}
-
-async function triggerStage(stageNum) {
-  const cfg = STAGE_JOB_MAP[stageNum];
-  const btn = document.getElementById(`s${stageNum}-start-btn`);
-  btn.disabled = true;
-  btn.textContent = '요청중…';
-  try {
-    const inputs = { [cfg.input]: 'true' };
-    if (stageNum === 1) {
-      inputs.discovery_parallel = 'true';
-    }
-    const res = await ghFetch('/workflows/qoo10-pipeline.yml/dispatches', {
-      method: 'POST',
-      body: JSON.stringify({ ref: 'main', inputs }),
-    });
-    if (res.status === 204) {
-      btn.textContent = '✓ 시작됨';
-      // GitHub이 새 실행을 in_progress로 반영하는데 시간이 걸려서
-      // (몇 초~십몇 초) 여러 번 재확인한다
-      setTimeout(() => refreshRunningStatus(), 5000);
-      setTimeout(() => refreshRunningStatus(), 12000);
-      setTimeout(() => refreshRunningStatus(), 20000);
-    } else {
-      btn.textContent = '실패';
-      console.error('트리거 실패', await res.text());
-    }
-  } catch (e) {
-    btn.textContent = '실패';
-    console.error(e);
-  }
-  setTimeout(() => { btn.textContent = '▶ 진행'; btn.disabled = false; }, 4000);
-}
-
-async function stopStage(stageNum) {
-  const cfg = STAGE_JOB_MAP[stageNum];
-  const btn = document.getElementById(`s${stageNum}-stop-btn`);
-  btn.disabled = true;
-  btn.textContent = '정지중…';
-  try {
-    const [res1, res2] = await Promise.all([
-      ghFetch('/runs?status=in_progress&per_page=20'),
-      ghFetch('/runs?status=queued&per_page=20'),
-    ]);
-    const data1 = await res1.json();
-    const data2 = await res2.json();
-    const allRuns = [...(data1.workflow_runs || []), ...(data2.workflow_runs || [])];
-    let cancelled = 0;
-    for (const run of allRuns) {
-      const jobsRes = await ghFetch(`/runs/${run.id}/jobs`);
-      const jobsData = await jobsRes.json();
-      const matches = (jobsData.jobs || []).some(j => cfg.jobNames.includes(j.name) && (j.status === 'in_progress' || j.status === 'queued'));
-      if (matches) {
-        await ghFetch(`/runs/${run.id}/cancel`, { method: 'POST' });
-        cancelled++;
-      }
-    }
-    btn.textContent = cancelled ? `✓ ${cancelled}개 정지됨` : '실행중 없음';
-  } catch (e) {
-    btn.textContent = '실패';
-    console.error(e);
-  }
-  setTimeout(() => refreshRunningStatus(), 3000);
-  setTimeout(() => { btn.textContent = '■ 정지'; }, 4000);
-}
-
-async function refreshRunningStatus() {
-  try {
-    const [res1, res2] = await Promise.all([
-      ghFetch('/runs?status=in_progress&per_page=20'),
-      ghFetch('/runs?status=queued&per_page=20'),
-    ]);
-    const data1 = await res1.json();
-    const data2 = await res2.json();
-    const allRuns = [...(data1.workflow_runs || []), ...(data2.workflow_runs || [])];
-    const runningJobNames = new Set();
-    for (const run of allRuns) {
-      const jobsRes = await ghFetch(`/runs/${run.id}/jobs`);
-      const jobsData = await jobsRes.json();
-      for (const j of (jobsData.jobs || [])) {
-        if (j.status === 'in_progress' || j.status === 'queued') runningJobNames.add(j.name);
-      }
-    }
-    for (const [stageNum, cfg] of Object.entries(STAGE_JOB_MAP)) {
-      const isRunning = cfg.jobNames.some(name => runningJobNames.has(name));
-      const badge = document.getElementById(`s${stageNum}-run-badge`);
-      const startBtn = document.getElementById(`s${stageNum}-start-btn`);
-      const stopBtn = document.getElementById(`s${stageNum}-stop-btn`);
-      if (isRunning) {
-        badge.className = 'run-badge running';
-        badge.innerHTML = '<span class="pulse"></span>진행중';
-        startBtn.disabled = true;
-        stopBtn.disabled = false;
-      } else {
-        badge.className = 'run-badge idle';
-        badge.textContent = '대기중';
-        startBtn.disabled = false;
-        stopBtn.disabled = true;
-      }
-    }
-  } catch (e) {
-    console.error('실행상태 확인 실패', e);
-  }
-}
-
-function fmtDelta(delta) {
-  if (delta > 0) return `<span class="log-delta-pos">+${delta}</span>`;
-  return '';
-}
-
-function renderLog(log) {
-  const body = document.getElementById('logBody');
-  if (!log.length) {
-    body.innerHTML = '<tr><td colspan="5" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>';
-    return;
-  }
-  body.innerHTML = log.map((row, i) => {
-    const next = log[i + 1]; // 더 오래된 행(바로 아래) 대비 증가분
-    const shopsDelta = next ? row.shops - next.shops : 0;
-    const productsDelta = next ? row.products - next.products : 0;
-    const translatedDelta = next && row.translated != null && next.translated != null ? row.translated - next.translated : 0;
-    const hwahaeDelta = next ? row.hwahae_done - next.hwahae_done : 0;
-    return `<tr>
-      <td>${row.time}</td>
-      <td>${row.shops ?? '—'} ${fmtDelta(shopsDelta)}</td>
-      <td>${row.products ?? '—'} ${fmtDelta(productsDelta)}</td>
-      <td>${row.translated ?? '—'} ${fmtDelta(translatedDelta)}</td>
-      <td>${row.hwahae_done ?? '—'} ${fmtDelta(hwahaeDelta)}</td>
-    </tr>`;
-  }).join('');
-}
-
-function setDelta(el, delta) {
-  if (delta > 0) {
-    el.textContent = `+${delta}`;
-    el.classList.remove('flat');
-  } else {
-    el.textContent = '±0';
-    el.classList.add('flat');
-  }
 }
 
 async function loadAll() {
-  const btn = document.getElementById('refreshBtn');
-  const dot = document.getElementById('statusDot');
-  const statusText = document.getElementById('statusText');
   const errorBox = document.getElementById('errorBox');
-  btn.classList.add('loading');
   errorBox.innerHTML = '';
-  refreshRunningStatus();
 
-  let prev = null;
+  // 실행중 상태
   try {
-    const stored = localStorage.getItem('qoo10_last_snapshot');
-    prev = stored ? JSON.parse(stored) : null;
+    const res = await ghFetch('/actions/runs?status=in_progress&per_page=5');
+    const data = await res.json();
+    const badge = document.getElementById('runningStatus');
+    if ((data.total_count || 0) > 0) {
+      badge.className = 'status-badge running';
+      badge.innerHTML = `<span class="pulse"></span>실행중 (${data.total_count}개 작업)`;
+    } else {
+      badge.className = 'status-badge idle';
+      badge.textContent = '대기중 (실행중인 작업 없음)';
+    }
   } catch (e) {
-    prev = null;
+    document.getElementById('runningStatus').textContent = '상태확인 실패';
   }
 
-  const current = { shops: null, products: null, hwahae_done: null };
-  let hadError = false;
-
-  // Stage 1: 전체 상품(활성풀+아카이브), 신규 탐색(직전 대비 증가분), 아카이빙(아카이브 건수)
+  // 1단계: 병합된 discovery_state.json의 번역완료 건수
   try {
     const res = await fetch(RAW('output/discovery_state.json', 'discovery-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
-    let activeProducts = (data.all_products || []).length;
-    let archivedCount = 0;
-
-    // 아카이빙된 상품(별도 파일로 옮겨진 것)도 합산한다 — GitHub API로
-    // output/archive/ 폴더 목록을 가져와서 각 파일의 개수를 센다.
-    // GitHub 비인증 API는 시간당 60회 제한이라 60초 자동새로고침과 부딪히니,
-    // 5분간 캐시해서 호출 빈도를 줄인다.
-    try {
-      const cacheKey = 'archive_count_cache';
-      const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
-      const cacheAge = cached ? Date.now() - cached.ts : Infinity;
-      if (cached && cacheAge < 5 * 60 * 1000) {
-        archivedCount = cached.count;
-      } else {
-        const listRes = await ghFetchRepo(`/contents/output/archive?ref=discovery-live`);
-        if (listRes.ok) {
-          const files = await listRes.json();
-          const archiveFetches = files
-            .filter(f => f.name.endsWith('.json'))
-            .map(f => fetch(RAW(`output/archive/${f.name}`, 'discovery-live')).then(r => r.ok ? r.json() : []));
-          const archives = await Promise.all(archiveFetches);
-          archivedCount = archives.reduce((sum, arr) => sum + arr.length, 0);
-          localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), count: archivedCount }));
-        } else if (cached) {
-          archivedCount = cached.count; // rate limit 등으로 실패하면 오래된 캐시라도 사용
-        }
-      }
-    } catch (e) { /* 아카이브 조회 실패해도 메인 수치는 계속 표시 */ }
-
-    const totalProducts = activeProducts + archivedCount;
-    current.products = totalProducts;
-
-    document.getElementById('s1-total').textContent = totalProducts.toLocaleString();
-    document.getElementById('s1-new').textContent = activeProducts.toLocaleString();
-    document.getElementById('s1-archived').textContent = archivedCount.toLocaleString();
-
-    if (prev && prev.products != null) {
-      setDelta(document.getElementById('s1-new-delta'), totalProducts - prev.products);
-    } else {
-      document.getElementById('s1-new-delta').textContent = '첫 조회';
-    }
-    document.getElementById('s1-note').textContent = `남은 시드: ${(data.pending_keywords || []).length}개 · 아카이브는 번역완료된 상품만 보관`;
+    const products = data.all_products || [];
+    const done = products.filter(p => p.translated_kr).length;
+    document.getElementById('s1-done').textContent = done.toLocaleString();
   } catch (e) {
-    hadError = true;
-    document.getElementById('s1-note').textContent = '불러오기 실패';
-    errorBox.innerHTML += `<div class="error-box">STAGE 1: ${e.message}</div>`;
+    document.getElementById('s1-done').textContent = '오류';
+    errorBox.innerHTML += `<div class="error-box">1단계: ${e.message}</div>`;
   }
 
-  // Stage 1 워커별(0~3) 개별 진행상황 — 각자 전용 파일을 직접 조회한다.
-  // 병합 전 데이터라 위의 s1-total과는 별개(참고용 실시간 지표).
-  await Promise.all([0, 1, 2, 3].map(async (B) => {
-    const cell = document.getElementById(`s1-w${B}`);
-    try {
-      const res = await fetch(RAW(`output/discovery_state_${B}.json`, 'discovery-live'));
-      if (!res.ok) { cell.textContent = `브랜치${B} 없음`; return; }
-      const d = await res.json();
-      const shops = (d.visited_shops || []).length;
-      const products = (d.all_products || []).length;
-      cell.textContent = `브랜치${B}: 상점${shops} 상품${products}`;
-    } catch (e) {
-      cell.textContent = `브랜치${B} 조회실패`;
-    }
-  }));
-
-  // Stage 2 (번역) — hwahae_input_39.json이 번역 완료 목록. 전체상품(1단계와
-  // 동일 기준) 대비 완료(%)/대기를 계산한다.
-  let s2Translated = null;
-  try {
-    const res = await fetch(RAW('output/hwahae_input_39.json', 'translate-live'));
-    if (!res.ok) throw new Error(`상태코드 ${res.status}`);
-    const data = await res.json();
-    s2Translated = data.length;
-    current.s2_translated = s2Translated;
-
-    const total = current.products;
-    const pending = total != null ? Math.max(0, total - s2Translated) : null;
-    const pct = total ? Math.round(s2Translated / total * 100) : null;
-
-    document.getElementById('s2-total').textContent = total != null ? total.toLocaleString() : '—';
-    document.getElementById('s2-translated').innerHTML = `${s2Translated.toLocaleString()} <span class="pct">${pct != null ? `(${pct}%)` : ''}</span>`;
-    document.getElementById('s2-pending').textContent = pending != null ? pending.toLocaleString() : '—';
-
-    if (prev && prev.s2_translated != null) {
-      setDelta(document.getElementById('s2-translated-delta'), s2Translated - prev.s2_translated);
-    } else {
-      document.getElementById('s2-translated-delta').textContent = '첫 조회';
-    }
-    document.getElementById('s2-note').textContent = total != null
-      ? `전체 ${total}건 중 ${s2Translated}건 번역됨`
-      : '1단계 데이터 대기 중';
-  } catch (e) {
-    hadError = true;
-    document.getElementById('s2-note').textContent = '불러오기 실패';
-    errorBox.innerHTML += `<div class="error-box">STAGE 2: ${e.message}</div>`;
-  }
-
-  // Stage 3 — 전체상품(1단계와 동일 기준) 대비 검증완료(%)/대기를 계산한다.
+  // 2단계: hwahae_verified_39.json
   try {
     const res = await fetch(RAW('output/hwahae_verified_39.json', 'hwahae-live'));
     if (!res.ok) throw new Error(`상태코드 ${res.status}`);
     const data = await res.json();
-    const done = data.length;
-    current.hwahae_done = done;
+    const doneCount = data.length;
+    const success = data.filter(x => x.product_url && x.in_stock !== false).length;
+    const fail = doneCount - success;
 
-    const total = current.products;
-    const pending = total != null ? Math.max(0, total - done) : null;
-    const pct = total ? Math.round(done / total * 100) : null;
+    // 2단계 "전체"는 1단계 완료건수 기준
+    const s1Done = parseInt(document.getElementById('s1-done').textContent.replace(/,/g, '')) || 0;
+    const total = s1Done;
+    const pending = Math.max(0, total - doneCount);
 
-    document.getElementById('s3-total').textContent = total != null ? total.toLocaleString() : '—';
-    document.getElementById('s3-done').innerHTML = `${done.toLocaleString()} <span class="pct">${pct != null ? `(${pct}%)` : ''}</span>`;
-    document.getElementById('s3-pending').textContent = pending != null ? pending.toLocaleString() : '—';
-
-    if (prev && prev.hwahae_done != null) {
-      setDelta(document.getElementById('s3-done-delta'), done - prev.hwahae_done);
-    } else {
-      document.getElementById('s3-done-delta').textContent = '첫 조회';
-    }
-    document.getElementById('s3-note').textContent = total != null
-      ? `전체 ${total}건 중 ${done}건 검증됨`
-      : '1단계 데이터 대기 중';
+    document.getElementById('s2-total').textContent = total.toLocaleString();
+    document.getElementById('s2-done').textContent = doneCount.toLocaleString();
+    document.getElementById('s2-pending').textContent = pending.toLocaleString();
+    document.getElementById('s2-success').textContent = success.toLocaleString();
+    document.getElementById('s2-fail').textContent = fail.toLocaleString();
   } catch (e) {
-    hadError = true;
-    document.getElementById('s3-note').textContent = '불러오기 실패';
-    errorBox.innerHTML += `<div class="error-box">STAGE 3: ${e.message}</div>`;
+    document.getElementById('s2-total').textContent = '오류';
+    errorBox.innerHTML += `<div class="error-box">2단계: ${e.message}</div>`;
   }
 
-  try {
-    localStorage.setItem('qoo10_last_snapshot', JSON.stringify(current));
-  } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
-
-  // 조회기록은 서버(GitHub Actions)가 매 배치마다 직접 쌓아둔
-  // progress_history.json을 그대로 읽어서 보여준다. 이제 1단계(discovery-live),
-  // 2단계(translate-live), 3단계(hwahae-live)가 각자 다른 브랜치에 기록하므로,
-  // 셋 다 가져와서 시간순으로 합쳐서 보여준다.
-  try {
-    const [res1, res2, res3] = await Promise.all([
-      fetch(RAW('output/progress_history.json', 'discovery-live')).catch(() => null),
-      fetch(RAW('output/progress_history.json', 'translate-live')).catch(() => null),
-      fetch(RAW('output/progress_history.json', 'hwahae-live')).catch(() => null),
-    ]);
-    let combined = [];
-    if (res1 && res1.ok) combined = combined.concat(await res1.json());
-    if (res2 && res2.ok) combined = combined.concat(await res2.json());
-    if (res3 && res3.ok) combined = combined.concat(await res3.json());
-    combined.sort((a, b) => new Date(b.time_utc) - new Date(a.time_utc));
-    const log = combined.map((row) => ({
-      time: new Date(row.time_utc).toLocaleString('ko-KR'),
-      shops: row.shops,
-      products: row.products,
-      translated: row.translated,
-      hwahae_done: row.hwahae_done,
-    }));
-    renderLog(log);
-  } catch (e) { /* 서버 기록이 아직 없으면(구버전 저장소 등) 조용히 넘어감 */ }
-
-  dot.className = 'dot ' + (hadError ? 'err' : 'ok');
-  statusText.textContent = hadError
-    ? '일부 데이터를 불러오지 못했습니다'
-    : `마지막 갱신 ${new Date().toLocaleTimeString('ko-KR')}`;
-
-  btn.classList.remove('loading');
+  document.getElementById('lastUpdated').textContent = '마지막 갱신: ' + new Date().toLocaleTimeString('ko-KR');
 }
 
 loadAll();
-
-let secondsLeft = 60;
-const countdownEl = document.getElementById('countdown');
-
-function tickCountdown() {
-  secondsLeft -= 1;
-  if (secondsLeft <= 0) {
-    secondsLeft = 60;
-    loadAll();
-  }
-  if (countdownEl) countdownEl.textContent = `${secondsLeft}초 후 자동 새로고침`;
-}
-setInterval(tickCountdown, 1000);
-
-// 브라우저는 백그라운드 탭의 setInterval을 강제로 느리게 만드는 경우가
-// 있어서(60초 타이머가 실제론 훨씬 뜸하게 실행됨), 탭에 다시 포커스가
-//돌아올 때 즉시 한 번 새로고침해서 이 문제를 보완한다.
-document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
-    loadAll();
-    secondsLeft = 60;
-  }
-});
+setInterval(loadAll, 60000);
 </script>
 </body>
 </html>
