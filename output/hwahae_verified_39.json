@@ -34848,5 +34848,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191514399",
+    "translated_kr": "어성초 포어 클레이팩 100ml _Beautiful_K",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 모공 클레이 팩"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 모공 클레이 팩",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191514733",
+    "translated_kr": "라이트웨이트 수징 모이스처라이저 80ml _Beautiful_K",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
