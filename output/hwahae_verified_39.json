@@ -42368,5 +42368,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163874685",
+    "translated_kr": "더마 스템셀 딥글로우팩 60g 콜라겐마스크 한국페이스마스크 스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194201772",
+    "translated_kr": "FANCL 팬켈 마일드 클렌징 오일 120ml 인기 클렌징 무료 배송",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타라곤 에센셜 오일",
+      "naver": "FANCL 팬켈 마일드 클렌징 오일 블랙 앤 스무스 120ml"
+    },
+    "brand": "아유25 (AYU25)",
+    "name": "타라곤 에센셜 오일",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "44500",
+    "mall": "파라파라재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12581109849",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9012562/90125620705.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9012562/90125620705.jpg",
+        "mall": "파라파라재팬",
+        "link": "https://smartstore.naver.com/main/products/12581109849"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119513/91195136182.jpg",
+        "mall": "cocodamall",
+        "link": "https://smartstore.naver.com/main/products/13650625403"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061405/90614057359.jpg",
+        "mall": "바이온제이",
+        "link": "https://smartstore.naver.com/main/products/13069546267"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8945122/89451222819.jpg",
+        "mall": "웰니스 플래닛",
+        "link": "https://smartstore.naver.com/main/products/11906712210"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944263/89442637854.jpg",
+        "mall": "웰니스 플래닛",
+        "link": "https://smartstore.naver.com/main/products/11898127245"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
