@@ -35558,5 +35558,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188512361",
+    "translated_kr": "노니 여드름 버블 클렌저, 155ml/한국 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1130886239",
+    "translated_kr": "바이오가 비오틴 손상모발 개선 탈모 완화 샴푸 1000ml/한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바이오틴 손상모발개선 탈모완화 샴푸",
+      "naver": "바이오가 바이오틴 손상모발개선 탈모완화 샴푸"
+    },
+    "brand": "바이오가 (BIORGA)",
+    "name": "바이오틴 손상모발개선 탈모완화 샴푸",
+    "volume": "1000ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "27500",
+    "mall": "바이오가",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8399446480",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8594394/85943946803.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8594394/85943946803.2.jpg",
+        "mall": "바이오가",
+        "link": "https://smartstore.naver.com/main/products/8399446480"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
