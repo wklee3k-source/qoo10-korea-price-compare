@@ -28709,5 +28709,82 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1096495928",
+    "translated_kr": "시크루노 UV 스무스 크림 비탈리프시 0101 [화이트 릴리 향]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "시크루노 SE:CRUNO 스무스 핸드크림 비탈리프시 0101 8035547 일본 출고"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12800",
+    "mall": "직구잇템",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11805337149",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8934984/89349847736.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8934984/89349847736.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11805337149"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082575/90825759439.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/13281249107"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8936492/89364920421.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11820409834"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191723236",
+    "translated_kr": "화이트티 진저 릴리 바디 크림 400ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림",
+      "naver": "엘리자베스 아덴 화이트티 진저 릴리 바디 크림 400ml"
+    },
+    "brand": "엘리자베스아덴 (ElizabethArden)",
+    "name": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28000",
+    "mall": "아이민홍콩",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11947257685",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8949176/89491768373.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8949176/89491768373.jpg",
+        "mall": "아이민홍콩",
+        "link": "https://smartstore.naver.com/main/products/11947257685"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109380/91093807595.jpg",
+        "mall": "프레스티지 팬트리",
+        "link": "https://smartstore.naver.com/main/products/13549297242"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
