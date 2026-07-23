@@ -42844,5 +42844,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1188402116",
+    "translated_kr": "ダーマアンサー PDRN アンプル 30ml+60ml リフィル [弾力+保湿+セット]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210384893",
+    "translated_kr": "ブルー ペプチド バクチオール プランプ バウンス クリーム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 블루 펩타이드 바쿠치올 플럼프 바운스 크림",
+      "naver": "코스알엑스 더 블루 펩타이드 바쿠치올 플럼프 바운스 크림"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 블루 펩타이드 바쿠치올 플럼프 바운스 크림",
+    "volume": "50mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23200",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70188&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6035690/60356909002.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6035690/60356909002.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70188&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117964/91179642104.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/13635131423"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117964/91179642105.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13635131424"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121456/91214567697.jpg",
+        "mall": "민꼬21",
+        "link": "https://smartstore.naver.com/main/products/13670056744"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
