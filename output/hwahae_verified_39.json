@@ -48859,5 +48859,97 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1153052364",
+    "translated_kr": "グルタチオン トーニング ソリューション アンプル 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랑쉬 글루타치온 토닝 앰플",
+      "naver": "마지스레네 블랑쉬 글루타치온 토닝 앰플 50ml + 50ml"
+    },
+    "brand": "마지스레네 (MAGISLENE)",
+    "name": "블랑쉬 글루타치온 토닝 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "70000",
+    "mall": "마지스레네",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13203917775",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg",
+        "mall": "마지스레네",
+        "link": "https://smartstore.naver.com/main/products/13203917775"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8945025/89450255204.2.jpg",
+        "mall": "COSMATIC",
+        "link": "https://smartstore.naver.com/main/products/11905744595"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943611/89436113145.1.jpg",
+        "mall": "에스몰 코스메틱",
+        "link": "https://smartstore.naver.com/main/products/11891602535"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1128279938",
+    "translated_kr": "バイオ·アクティビング PDRNクリーム 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 솔루션 액티빙 에멀젼",
+      "naver": "더마라인 디렉소 PDRN 솔루션 액티빙 에멀전 200ml"
+    },
+    "brand": "더마라인 (DERMALINE)",
+    "name": "PDRN 솔루션 액티빙 에멀젼",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "36960",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000213387",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5238440/52384408180.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5238440/52384408180.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000213387"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118638/91186382205.jpg",
+        "mall": "DERMALINE",
+        "link": "https://smartstore.naver.com/main/products/13641871496"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8718103/87181035533.jpg",
+        "mall": "원라이브:브랜드",
+        "link": "https://smartstore.naver.com/main/products/9636533264"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101793/91017931096.jpg",
+        "mall": "디씨스토어49",
+        "link": "https://smartstore.naver.com/main/products/13473420744"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117757/91177577823.jpg",
+        "mall": "비온드샵",
+        "link": "https://smartstore.naver.com/main/products/13633067159"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
