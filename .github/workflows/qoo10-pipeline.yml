@@ -849,6 +849,13 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
+      - name: Test hwahae brand lookup
+        working-directory: src
+        run: |
+          python hwahae_brand_lookup.py ../data/test_brands_temp.json /tmp/test_brands_output.json
+          echo "=== 결과 ==="
+          cat /tmp/test_brands_output.json
+
 
   build_excel:
     if: github.event_name == 'push'
