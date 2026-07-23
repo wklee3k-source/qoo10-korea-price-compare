@@ -39372,5 +39372,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195242230",
+    "translated_kr": "이리윤 세라마이드 아토로션 무향료 508ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208323570",
+    "translated_kr": "SKIN1004 마다가스카르 센텔라 히알루시카 워터핏 선 세럼 자외선 차단 SPF50+ PA++++ 100ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
