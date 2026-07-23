@@ -226,6 +226,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
     runs-on: ubuntu-latest
     timeout-minutes: 300
+    permissions:
+      contents: write
+      actions: write
     concurrency:
       group: discover-parallel-branch-${{ matrix.branch }}
       cancel-in-progress: false
@@ -308,26 +311,25 @@ jobs:
       # (실시간). 4개가 전부 끝날 때까지 안 기다려도 지금까지 몇 개나
       # 처리됐는지 discovery-live에서 바로 확인 가능하다.
       #
-      # [1,2단계 통합] 예전엔 발굴(1단계)과 번역(2단계)이 서로 다른
-      # 브랜치(discovery-live/translate-live)에서 따로 돌면서, 번역완료된
-      # 걸 브랜치 간에 옮기는 "아카이빙" 조율이 필요했다. 이 조율(git
-      # worktree 기반)이 낡은 브랜치 상태를 참조하는 등 여러 번 버그를
-      # 일으켰다. 이제 각 워커가 상점을 발굴하는 그 즉시, 같은 파일 안에서
-      # 바로 translated_kr까지 채워 넣는다 — 브랜치 간 조율 자체가
-      # 필요없어진다. discovery_state_<B>.json 하나만 보면 "번역완료
-      # 여부"까지 전부 알 수 있다.
-      - name: Run discovery + translate in small increments (own file only)
+      # [이벤트 기반 자동연계] 1단계(발굴)는 순수 발굴만 한다. 번역은 더
+      # 이상 여기서 안 하고 1.5단계(병합)로 옮겼다 — 한 곳에서만 번역
+      # API를 호출해야 배치를 크게 모을 수 있고, 병합본(2단계가 실제로
+      # 보는 파일)과 번역상태가 항상 일치한다. 대신 이 워커가 신규상품을
+      # 5개 이상 쌓을 때마다, 병합job을 자동으로 트리거해서 사람이 매번
+      # 수동으로 안 눌러도 파이프라인이 스스로 이어지게 한다.
+      - name: Run discovery in small increments (own file only)
         working-directory: src
         env:
           TARGET: ${{ inputs.discovery_target_products || '999999' }}
           SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
           STEP=3
           ITER=0
+          LAST_MERGE_TRIGGER_COUNT=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['all_products']) if p.exists() else 0)")
           while true; do
             ITER=$((ITER + 1))
             # [중요] max_shops는 "이번 호출에서 몇 개 방문할지"가 아니라
@@ -347,7 +349,6 @@ jobs:
               "$CAP" \
               "$SHOPS_PER_KEYWORD" \
               "$B"
-            python translate_in_place.py "../output/discovery_state_${B}.json"
             echo "::endgroup::"
 
             # [경합/느려짐 방지] 4개 워커 전부 똑같이, 오직 자기 전용 파일만
@@ -392,17 +393,42 @@ jobs:
                 echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
               fi
             fi
+
+            # [자동연계] 신규상품이 5개 이상 쌓이면 병합job을 자동으로
+            # 트리거한다(사람이 매번 수동으로 안 눌러도 됨). 트리거 자체는
+            # 병합job의 concurrency 큐에 들어갈 뿐이라 여러 워커가 동시에
+            # 트리거해도 안전하다(중복 실행은 큐에서 순서대로 처리됨).
+            CURRENT_COUNT=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['all_products']) if p.exists() else 0)")
+            if [ $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT)) -ge 5 ]; then
+              echo "[자동트리거] 브랜치 $B 신규상품 $((CURRENT_COUNT - LAST_MERGE_TRIGGER_COUNT))개 누적 -> 병합job 트리거"
+              curl -s -X POST -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+                -d '{"ref":"main","inputs":{"run_merge_discovery":"true"}}' || true
+              LAST_MERGE_TRIGGER_COUNT=$CURRENT_COUNT
+            fi
           done
 
   merge_discovery_shards:
-    # [1.5단계] 4개 워커가 각자 쓴 discovery_state_<0~3>.json을 하나의
+    # [1.5단계] 8개 워커가 각자 쓴 discovery_state_<0~7>.json을 하나의
     # discovery_state.json으로 합친다. 순수 파일 I/O만 하므로(웹 스크래핑
     # 없음) 몇 초~몇십 초 안에 끝난다 — 수집 워커의 속도(상점당 몇십 초씩)에
-    # 전혀 영향받지 않는, 완전히 독립된 가벼운 단계. 필요할 때마다 수동으로
-    # 트리거하거나, 원하는 주기로 반복 트리거해서 쓴다.
+    # 전혀 영향받지 않는, 완전히 독립된 가벼운 단계. 각 워커가 신규상품
+    # 5개마다 자동으로 이 job을 트리거한다(사람이 수동으로 안 눌러도 됨).
+    #
+    # [번역도 여기서] 번역 API 호출은 8군데(워커)가 아니라 이 한 곳에서만
+    # 한다 — 그래야 배치를 크게(100개) 모을 수 있고, 2단계(검증)가 보는
+    # 파일(discovery_state.json)과 번역상태가 항상 일치한다. 병합 직후
+    # 미번역 상품이 100개 이상 쌓이면 번역하고, 다시 push한다.
+    #
+    # [자동연계] 번역이 실제로 일어났으면(=검증할 새 대상이 생겼으면)
+    # 2단계(hwahae_verify)를 자동으로 트리거해서 사람 개입 없이 이어지게
+    # 한다.
     if: github.event_name == 'workflow_dispatch' && inputs.run_merge_discovery
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: write
     concurrency:
       group: merge-discovery-shards-queue
       cancel-in-progress: false
@@ -422,7 +448,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Merge all 4 worker shards into discovery_state.json
+      - name: Merge all worker shards into discovery_state.json
         working-directory: src
         run: |
           for i in $(seq 1 15); do
@@ -438,6 +464,32 @@ jobs:
             echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/15)"
             sleep "$sleep_time"
           done
+
+      - name: Translate merged pool if 100+ pending (then push)
+        working-directory: src
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          for i in $(seq 1 15); do
+            git fetch origin discovery-live 2>/dev/null
+            git reset --hard origin/discovery-live -q
+            python translate_in_place.py ../output/discovery_state.json
+            git add ../output/discovery_state.json 2>/dev/null || true
+            git diff --cached --quiet && { echo "번역할 변경사항 없음"; break; }
+            git commit -m "Auto: translate merged pool (1.5단계, 100+ threshold)"
+            if git push origin discovery-live; then echo "번역 push 성공"; echo "TRANSLATED=1" >> "$GITHUB_ENV"; break; fi
+            sleep_time=$((RANDOM % 6 + 1))
+            echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/15)"
+            sleep "$sleep_time"
+          done
+
+      - name: Auto-trigger stage 2 (verification) if translation happened
+        if: env.TRANSLATED == '1'
+        run: |
+          echo "[자동트리거] 번역 발생 -> 2단계(검증) 트리거"
+          curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+            -d '{"ref":"main","inputs":{"run_hwahae_verify":"true"}}'
 
   auto_translate:
     # 1단계에서 발굴된 큐텐 상품 중 아직 번역 안 된 것들을 Claude Haiku API로
