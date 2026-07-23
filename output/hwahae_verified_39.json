@@ -27080,5 +27080,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1167101287",
+    "translated_kr": "풀피트 프로폴리스 라이트 앰플 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 라이트 앰플"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197608620",
+    "translated_kr": "【公式】リップスティック サイレントレッド ナチュラルに馴染む赤色 メンズ メンズリップ バーム [高保湿 血色感 ナチュラル 無香料 セミマット とろける使用感]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비누 [후레쉬릴리]"
+    },
+    "brand": "드봉 (DeBON)",
+    "name": "비누 [후레쉬릴리]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
