@@ -33610,5 +33610,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1060687901",
+    "translated_kr": "유리아주 바리어담 시카 크림 40ml [제조국 프랑스]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "유리아쥬 시카 데일리 리페어 젤 크림 40ML X 2개 + GIFT"
+    },
+    "brand": "유리아쥬",
+    "name": "유리아쥬 시카 데일리 리페어 젤 크림 40ML X 2개 + GIFT",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "49000",
+    "mall": "유리아쥬",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10663284718",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8820779/88207790632.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820779/88207790632.5.jpg",
+        "mall": "유리아쥬",
+        "link": "https://smartstore.naver.com/main/products/10663284718"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1059767256",
+    "translated_kr": "라운드랩 1025 독도 클렌저 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1025 독도 클렌저"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "1025 독도 클렌저",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
