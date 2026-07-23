@@ -39297,5 +39297,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1194643294",
+    "translated_kr": "닥터씨라보 (DR.CI:LABO) New VC100 에센스로션EX V 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "솔리드 컬러 [VC100]"
+    },
+    "brand": "발라 (VALLA)",
+    "name": "솔리드 컬러 [VC100]",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201501881",
+    "translated_kr": "【3개세트】 나리스업 by365 파우더리UV크림 60g SPF50+/PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VB 톤업 선크림 시그니처 [SPF50+/PA++++]"
+    },
+    "brand": "나인위시스 (9wishes)",
+    "name": "VB 톤업 선크림 시그니처 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
