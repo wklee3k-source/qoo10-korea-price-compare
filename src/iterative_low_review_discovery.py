@@ -114,77 +114,13 @@ def _protect_and_translate(text: str, translator) -> str:
 
 SKIP_LOG_PATH = OUTPUT_DIR / "discovery_skip_log.json"
 SEED_LOG_PATH = OUTPUT_DIR / "discovery_seed_log.json"
-ARCHIVE_DIR = OUTPUT_DIR / "archive"
-ARCHIVE_THRESHOLD = 500  # all_products가 이 개수를 넘으면 아카이빙을 시도한다
-HARD_ARCHIVE_CEILING = 1500  # 번역이 안 따라와도 이 개수를 넘으면 강제로 오래된 것부터 정리(안전장치)
-KEEP_RECENT = 200  # 강제정리시 메인 상태파일에는 최근 이 개수만 남긴다
-
-
-def _fetch_translated_goods() -> set:
-    """2단계(번역) 전용 브랜치(translate-live)의 hwahae_input_39.json이
-    로컬에 이미 받아져 있으면(워크플로가 미리 checkout해준 경우) 그걸
-    읽어서 번역완료 goods_no 집합을 반환한다.
-
-    [중요] 여기서 git subprocess(fetch/show)를 직접 호출하지 않는다 —
-    이 함수는 discover 스크립트 실행 중(즉 상위 셸 스크립트가 동시에
-    git add/commit/push를 수행 중일 수 있는 상황)에 호출되므로, 서브
-    프로세스로 git 명령을 또 실행하면 .git/index.lock 경합으로 양쪽이
-    서로 멈춰버릴 위험이 있다(실측으로 확인된 장애 원인). 대신 로컬에
-    파일이 이미 있으면만 읽고, 없으면 빈 집합을 반환해서 안전하게
-    건너뛴다(그래도 HARD_ARCHIVE_CEILING 안전장치는 계속 동작한다)."""
-    candidate = OUTPUT_DIR.parent / "output" / "hwahae_input_39.json"
-    if not candidate.exists():
-        # translate-live 체크아웃본이 아직 로컬에 없음 — 안전하게 건너뜀
-        return set()
-    try:
-        translated = json.loads(candidate.read_text(encoding="utf-8"))
-        return {x["goods_no"] for x in translated}
-    except Exception as e:  # noqa: BLE001
-        print(f"[ARCHIVE] 로컬 번역파일 읽기 실패(아카이빙 건너뜀): {type(e).__name__}: {e}")
-        return set()
-
-
-def _archive_old_products(all_products: dict) -> dict:
-    """번역완료(2단계가 처리함)된 상품을 아카이브로 옮기고, 아직 번역 안 된
-    것만 메인 상태파일(활성 풀)에 남긴다. 이렇게 하면 2단계는 항상
-    discovery_state.json의 all_products만 보면 되고 아카이브를 뒤질
-    필요가 없어진다(그 안엔 이미 번역된 것만 있으므로).
-
-    번역이 한참 안 따라와서 all_products가 너무 커지면(HARD_ARCHIVE_CEILING
-    초과) 안전장치로 오래된 것부터 강제 아카이브한다(파일 크기 문제 방지)."""
-    if len(all_products) <= ARCHIVE_THRESHOLD:
-        return all_products
-
-    ARCHIVE_DIR.mkdir(exist_ok=True, parents=True)
-    translated_goods = _fetch_translated_goods()
-
-    items = list(all_products.items())
-    to_archive_translated = [(k, v) for k, v in items if k in translated_goods]
-    to_keep = {k: v for k, v in items if k not in translated_goods}
-
-    # 안전장치: 번역이 못 따라와서 활성 풀이 여전히 너무 크면, 오래된 것부터 추가로 강제 아카이브
-    to_archive_forced = []
-    if len(to_keep) > HARD_ARCHIVE_CEILING:
-        keep_items = list(to_keep.items())
-        n_force = len(keep_items) - KEEP_RECENT
-        to_archive_forced = keep_items[:n_force]
-        to_keep = dict(keep_items[n_force:])
-        print(f"[ARCHIVE][안전장치] 번역이 못 따라와 활성풀이 {HARD_ARCHIVE_CEILING}건 초과 -> {len(to_archive_forced)}건 강제 아카이브")
-
-    to_archive = to_archive_translated + to_archive_forced
-    if to_archive:
-        from datetime import datetime, timezone
-
-        stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-        archive_path = ARCHIVE_DIR / f"discovery_archive_{stamp}.json"
-        archive_path.write_text(
-            json.dumps([v for _, v in to_archive], ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        print(f"[ARCHIVE] {len(to_archive)}건을 {archive_path.name}(으)로 이동"
-              f"(번역완료 {len(to_archive_translated)}건 + 강제 {len(to_archive_forced)}건), "
-              f"활성풀엔 {len(to_keep)}건 유지")
-
-    return to_keep
+# [단순화] 아카이빙 로직은 이제 여기(1단계)에 없다 — 1단계는 순수하게
+# 발굴+병합만 한다. "번역완료된 것을 아카이브로 옮기는" 책임은 2단계
+# (auto_translate)로 옮겼다: 2단계가 번역을 마친 직후, discovery-live의
+# discovery_state.json에서 방금 번역한 것들을 archive/로 옮긴다. 이렇게
+# 하면 1단계가 다른 브랜치(translate-live)의 상태를 알 필요가 아예
+# 없어져서 훨씬 단순해지고, 지금까지 겪었던 여러 버그(subprocess git lock
+# 경합, 브랜치 기본값 불일치 등)의 근본 원인 자체가 사라진다.
 
 
 
@@ -356,7 +292,6 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
 
     def save():
         nonlocal all_products
-        all_products = _archive_old_products(all_products)
         _save_state(
             {
                 "visited_shops": list(visited_shops),

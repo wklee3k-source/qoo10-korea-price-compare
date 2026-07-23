@@ -498,6 +498,29 @@ jobs:
             git pull --rebase origin translate-live
           done
 
+      - name: Archive newly-translated items from discovery-live
+        # [단순화 구조] 1단계는 번역상태를 몰라도 되도록, "번역완료된 걸
+        # discovery-live의 활성풀에서 archive/로 옮기는" 책임을 여기(2단계)로
+        # 가져왔다. git worktree로 discovery-live를 별도 디렉토리에 깨끗하게
+        # 체크아웃해서 처리한다(현재 디렉토리는 translate-live 상태이므로).
+        working-directory: src
+        run: |
+          git worktree add /tmp/discovery-live-wt discovery-live 2>&1 || \
+            (git fetch origin discovery-live && git worktree add /tmp/discovery-live-wt origin/discovery-live)
+          for i in $(seq 1 15); do
+            git -C /tmp/discovery-live-wt fetch origin discovery-live 2>/dev/null
+            git -C /tmp/discovery-live-wt reset --hard origin/discovery-live -q
+            python archive_translated.py /tmp/discovery-live-wt/output ../output/hwahae_input_39.json
+            git -C /tmp/discovery-live-wt add output/discovery_state.json output/archive/
+            git -C /tmp/discovery-live-wt diff --cached --quiet && { echo "아카이브할 변경사항 없음"; break; }
+            git -C /tmp/discovery-live-wt -c user.name="github-actions[bot]" -c user.email="github-actions[bot]@users.noreply.github.com" commit -m "Auto: archive translated items (stage2 post-translate)"
+            if git -C /tmp/discovery-live-wt push origin discovery-live; then echo "아카이빙 push 성공"; break; fi
+            sleep_time=$((RANDOM % 6 + 1))
+            echo "아카이빙 push 실패, ${sleep_time}초 대기 후 재시도 ($i/15)"
+            sleep "$sleep_time"
+          done
+          git worktree remove /tmp/discovery-live-wt --force 2>/dev/null || true
+
   retranslate_all:
     # 기존에 이미 번역된 항목들도 전부 Claude Haiku로 다시 번역해서
     # 덮어쓴다(품질 일괄개선용) — 초반에 사람이 수작업으로 급하게
