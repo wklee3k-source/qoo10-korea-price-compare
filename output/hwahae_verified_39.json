@@ -30927,5 +30927,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209840170",
+    "translated_kr": "쿤달 프로틴 트리트먼트 일랑일랑 500ml 3개 (선물품 소진시 증정 종료)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106095129",
+    "translated_kr": "알로에 54.2 아쿠아 톤 업 UV 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "알로에 54.2 아쿠아 톤업 선스크린 [SPF50+/SPA++++]"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "알로에 54.2 아쿠아 톤업 선스크린 [SPF50+/SPA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 12800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
