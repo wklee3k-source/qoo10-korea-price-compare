@@ -38774,5 +38774,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212751653",
+    "translated_kr": "【2개 세트】리주얀 PDRN10000 크림 30ml + 주베클 PDLLA 10000+ 크림 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195873758",
+    "translated_kr": "【数量限定】NARCA ヘアミルク 洗い流さないトリートメント ストレートヘア ブラシアイロン付き",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]

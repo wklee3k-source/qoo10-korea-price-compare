@@ -1,11 +1,5 @@
 [
   {
-    "time_utc": "2026-07-23T04:20:10+00:00",
-    "shops": null,
-    "products": null,
-    "hwahae_done": 1358
-  },
-  {
     "time_utc": "2026-07-23T04:20:24+00:00",
     "shops": null,
     "products": null,
@@ -3203,5 +3197,12 @@
     "products": null,
     "translated": 1826,
     "hwahae_done": 1826
+  },
+  {
+    "time_utc": "2026-07-23T13:59:07+00:00",
+    "shops": null,
+    "products": null,
+    "translated": 1829,
+    "hwahae_done": 1828
   }
 ]
