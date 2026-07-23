@@ -35557,5 +35557,77 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1132024666",
+    "translated_kr": "[마르티나 게브하르트] 아보카도 아이 크림 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아보카도 아이크림",
+      "naver": "마티나 겝하르트 아보카도 아이크림 15ml"
+    },
+    "brand": "코스노리 (COSNORI)",
+    "name": "아보카도 아이크림",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18900",
+    "mall": "유럽화장품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4315536676",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8186005/81860058609.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8186005/81860058609.2.jpg",
+        "mall": "유럽화장품",
+        "link": "https://smartstore.naver.com/main/products/4315536676"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201575924",
+    "translated_kr": "[26SS/New]ピーチフェア ビーガン トーンアップ カプセルサンスクリーン 50ml #SPF50+ PA++++ #グルタチオン #ナイアシンアミド",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피치페어 비건 톤업 캡슐 선크림 [SPF50+/PA++++]",
+      "naver": "[혼합자차/선크림 7ml 증정] 휩드 피치페어 비건 톤업 캡슐 선크림 50ml"
+    },
+    "brand": "휩드 (WHIPPED)",
+    "name": "피치페어 비건 톤업 캡슐 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17400",
+    "mall": "Whipped.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13630515629",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117502/91175026293.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117502/91175026293.2.jpg",
+        "mall": "Whipped.",
+        "link": "https://smartstore.naver.com/main/products/13630515629"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119564/91195641468.jpg",
+        "mall": "파티즌",
+        "link": "https://smartstore.naver.com/main/products/13651130689"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119098/91190981877.jpg",
+        "mall": "글로리아 아뜰리에",
+        "link": "https://smartstore.naver.com/main/products/13646471098"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
