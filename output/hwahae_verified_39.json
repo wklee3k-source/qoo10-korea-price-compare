@@ -38420,5 +38420,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1074817764",
+    "translated_kr": "홍차 영양 두피 샴푸 450ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클래식 샴푸 [두피영양]"
+    },
+    "brand": "려 (Ryo)",
+    "name": "클래식 샴푸 [두피영양]",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 8900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201633330",
+    "translated_kr": "나노버블 버블 에센스 95ml NANO BUBBLES 거품 타입 미용액 버블 에센스 건조함 케어 REVI 기초화장품 페이셜 케어 홈 케어 홈 에스테",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
