@@ -30725,5 +30725,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212553298",
+    "translated_kr": "[정규품+선물 포함] 리들샷 콜라겐 크림 50ml + 스틱 파우치 3개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212350471",
+    "translated_kr": "[1+1] 메디올가 브라이트닝 크림 30ml 2개/기미제거 크림 피부 톤 업",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디올가 브라이트닝 크림 기미 잡티 미백 개선 크림 30ml, 2개"
+    },
+    "brand": "메디올가",
+    "name": "메디올가 브라이트닝 크림 기미 잡티 미백 개선 크림 30ml, 2개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24900",
+    "mall": "메디올가",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13360043128",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9090455/90904553460.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090455/90904553460.1.jpg",
+        "mall": "메디올가",
+        "link": "https://smartstore.naver.com/main/products/13360043128"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
