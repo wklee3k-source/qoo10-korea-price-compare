@@ -49314,5 +49314,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163428866",
+    "translated_kr": "キュスカゲル 10g ビタミンE 配合 ステロイド無添加 ケロイド 肥厚性瘢痕 ニキビ跡医療用シリコンゲル 手術・火傷・外傷 傷跡管理",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1159230400",
+    "translated_kr": "リアルマットメイクアップセッティングフィックスミスト75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리얼 매트 메이크업 세팅 픽서",
+      "naver": "쏘내추럴 리얼 매트 메이크업 세팅 픽서 75ml"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "리얼 매트 메이크업 세팅 픽서",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22800",
+    "mall": "스마일핫픽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13655661235",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120017/91200172020.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120017/91200172020.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13655661235"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
