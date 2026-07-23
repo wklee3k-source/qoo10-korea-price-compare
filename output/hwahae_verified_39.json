@@ -50459,5 +50459,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204085525",
+    "translated_kr": "[秘密の恋の香り] ザ・ボディ 女性用香水 50ml #シャワー直後の清潔感, 上品な色気 #石鹸の香り #ムスク #韓国香水 #愛され香水",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 페이셜 마스크",
+      "naver": "마리아갈랑 280 수분 페이셜 마스크 50ml"
+    },
+    "brand": "닷사이 (DASSAI)",
+    "name": "(해외) 페이셜 마스크",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "99200",
+    "mall": "해외조준",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12477726392",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg",
+        "mall": "해외조준",
+        "link": "https://smartstore.naver.com/main/products/12477726392"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208979026",
+    "translated_kr": "アミノモイストチャージ ミルク 100g （本体 / 詰替） / 薬用アクネケア ミルク 100g 本体（医薬部外品） 乾燥ケア 保潤アミノ酸",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
