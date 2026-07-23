@@ -30423,5 +30423,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1181822404",
+    "translated_kr": "컨센트레이트 앰플 30ml 클리닉라인",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리닉 컨센트레이트 앰플",
+      "naver": "리쥬란 컨센트레이트 30ml 클리닉라인 재생 탄력 앰플 세럼"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "클리닉 컨센트레이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "90000",
+    "mall": "쉬즈 몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5984313817",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8352881/83528813305.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8352881/83528813305.2.jpg",
+        "mall": "쉬즈 몰",
+        "link": "https://smartstore.naver.com/main/products/5984313817"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8938451/89384513284.5.jpg",
+        "mall": "밤티크",
+        "link": "https://smartstore.naver.com/main/products/11840002690"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160294053",
+    "translated_kr": "24Kゴールドショットアンプル, 100ml/2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
