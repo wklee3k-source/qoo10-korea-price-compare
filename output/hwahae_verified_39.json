@@ -37877,5 +37877,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191655869",
+    "translated_kr": "[新作]オールデイ ノーセバム トーンアップ サンクッション 2種 SPF45 PA++++ lilac fog vanilla lemon",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208323570",
+    "translated_kr": "SKIN1004 마다가스카르 센텔라 히알루-시카 워터핏 선세럼 자외선차단제 SPF50+ PA++++ 100ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]",
+      "naver": "스킨1004 마다가스카르 센텔라 히알루 시카 워터핏 선 세럼 50ml+ 백탁없는 저자극"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "12250",
+    "mall": "Top뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10656076404",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8820058/88200582302.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820058/88200582302.7.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/10656076404"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118069/91180691267.jpg",
+        "mall": "결랑",
+        "link": "https://smartstore.naver.com/main/products/13636180586"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121359/91213593967.1.jpg",
+        "mall": "파보르FAVOR",
+        "link": "https://smartstore.naver.com/main/products/13669083014"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
