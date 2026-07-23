@@ -41741,5 +41741,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212154617",
+    "translated_kr": "belif ビリーフ ザ・トゥルー クリーム モイスチャライジングバーム 50ml（保湿クリーム） (贈呈品なくなり次第贈呈終了)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 트루 디콕션 퍼밍 에센스",
+      "naver": "[아밤수분크림] 롯데대구 빌리프 더 트루 크림 아쿠아 밤60ml + 에센스70ml"
+    },
+    "brand": "빌리프 (belif)",
+    "name": "더 트루 디콕션 퍼밍 에센스",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "52800",
+    "mall": "빌리프/VDL",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13664883785",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120939/91209394693.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120939/91209394693.2.jpg",
+        "mall": "빌리프/VDL",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13664883785"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207926681",
+    "translated_kr": "トリデン バランスフル シカ 鎮静クリーム 80ml(贈呈品なくなり次第贈呈終了)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
