@@ -34896,5 +34896,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1156238215",
+    "translated_kr": "[정품/공식] 부시맨 워터프루프 프로 선블록 50g SPF50+ PA++++ 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+      "naver": "부쉬맨 워터프루프 프로 선크림 SPF50+ PA++++ 50ml, 2개"
+    },
+    "brand": "부쉬맨 (BUSHMAN)",
+    "name": "워터프루프 프로 선크림 [SPF50+/PA++++]",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "29900",
+    "mall": "부쉬맨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5747254358",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8329175/83291753605.14.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8329175/83291753605.14.jpg",
+        "mall": "부쉬맨",
+        "link": "https://smartstore.naver.com/main/products/5747254358"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203834476",
+    "translated_kr": "자작나무수분쿠션 15g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+      "naver": "라운드랩 자작나무 수분 선쿠션 15g 3개 (SPF 50+ PA++++)"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+    "volume": "15g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "36000",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13160478110",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070498/90704989210.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070498/90704989210.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/13160478110"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8367517/83675177152.11.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6130677664"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070498/90704989211.2.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13160478113"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8367517/83675177151.11.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/6130677663"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
