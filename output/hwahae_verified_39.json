@@ -37338,5 +37338,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198672888",
+    "translated_kr": "PDRN 부스터 젤 300mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이지알 PDRN 부스터 젤"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 PDRN 부스터 젤",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1174312286",
+    "translated_kr": "[1+1] [한국 화장품] [정품 취급점] [병원 전용] 라포라 필나톡스 50ml - 시미 개선 & 피부 톤업 기능성 크림!",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
