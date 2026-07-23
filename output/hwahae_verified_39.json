@@ -35519,5 +35519,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1179722209",
+    "translated_kr": "더 모이스처 배리어 D 리퀴드 토너, 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더모이스처 배리어.D 리퀴드 토너"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "더모이스처 배리어.D 리퀴드 토너",
+    "volume": "200mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1118867909",
+    "translated_kr": "글리콜산 7% 엑스폴리에이팅 토너 100ml 한국 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
