@@ -39814,5 +39814,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162421706",
+    "translated_kr": "클래식 웜코튼 EDP 30ml SP (향수)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192146158",
+    "translated_kr": "아나수이 EDT 30ml SP (향수)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1150000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
