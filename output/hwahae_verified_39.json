@@ -28953,5 +28953,82 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1201631207",
+    "translated_kr": "루트젠 탈모증상 전문 케어 두피 에센스 80ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "루트젠 탈모증상전문케어 두피에센스",
+      "naver": "려 [2입] 루트젠 탈모증상전문케어 두피 에센스"
+    },
+    "brand": "려 (Ryo)",
+    "name": "루트젠 탈모증상전문케어 두피에센스",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23800",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=66964&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=ryo",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5698788/56987888762.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5698788/56987888762.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=66964&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=ryo"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200324318",
+    "translated_kr": "히알루론산 2% + B5 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5",
+      "naver": "히알루로닉 애시드 2% + B5 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10248980563",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10248980563"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745261/87452613128.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908110855"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745255/87452559827.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908057554"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838536/88385360513.3.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/10840854500"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
