@@ -24527,5 +24527,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205132300",
+    "translated_kr": "[1개] 다크 스팟 세럼 30ml (나이아신아마이드 10%, 트라넥삼산 4%)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188405527",
+    "translated_kr": "ゆずグレープフルーツ ビーガン パッククレンザー 80g+毛穴ブラシ [毛穴ケア+洗顔+すっきり]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비누 [후레쉬릴리]"
+    },
+    "brand": "드봉 (DeBON)",
+    "name": "비누 [후레쉬릴리]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
