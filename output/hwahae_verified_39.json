@@ -8227,5 +8227,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1096929915",
+    "translated_kr": "뮤지너카밍앰플미스트100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1080682873",
+    "translated_kr": "더히알루로닉애씨드3세럼20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 히알루론산 3 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 히알루론산 3 세럼",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
