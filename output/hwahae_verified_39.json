@@ -46873,5 +46873,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1109482517",
+    "translated_kr": "ヴォルカニックポアトナー2X, 200ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164706635",
+    "translated_kr": "ビタCグリーンティーエンザイムブライトセラム, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타C 그린티 엔자임 잡티 토닝 패드",
+      "naver": "이니스프리 비타C 그린티 엔자임 잡티 토닝 세럼 30mL + 15mL + 패드 2p 세트 1개"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "비타C 그린티 엔자임 잡티 토닝 패드",
+    "volume": "170mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "42700",
+    "mall": "마이오쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13638020627",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118253/91182531336.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118253/91182531336.jpg",
+        "mall": "마이오쇼핑",
+        "link": "https://smartstore.naver.com/main/products/13638020627"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
