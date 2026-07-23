@@ -40544,5 +40544,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210874306",
+    "translated_kr": "M-mark 아미노산 각질층까지 수분 리필용",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "마츠야마 유지 M마크 아미노산 스킨 리필용 190ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "닌키",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13192841951",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9073735/90737353048.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073735/90737353048.jpg",
+        "mall": "닌키",
+        "link": "https://smartstore.naver.com/main/products/13192841951"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106622/91066220660.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/13521710308"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073734/90737342511.jpg",
+        "mall": "닌키",
+        "link": "https://smartstore.naver.com/main/products/13192831414"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749094/87490944771.jpg",
+        "mall": "에이치엠스.",
+        "link": "https://smartstore.naver.com/main/products/9946442498"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749069/87490690318.jpg",
+        "mall": "에이치엠스.",
+        "link": "https://smartstore.naver.com/main/products/9946188045"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210872337",
+    "translated_kr": "델락시오 앰플 사보타주 멀티오일 스프레이 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
