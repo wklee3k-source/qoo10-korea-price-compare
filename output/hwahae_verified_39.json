@@ -26919,5 +26919,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1159061701",
+    "translated_kr": "사무라이 우먼 유자 시트러스 40ML EDP SP",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1136895079",
+    "translated_kr": "아이 원트 유 르 파르팜 40ML SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레 유"
+    },
+    "brand": "비올로직호쉐쉬 (BIOLOGIQUERECHERCHE)",
+    "name": "레 유",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
