@@ -30230,5 +30230,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204243219",
+    "translated_kr": "원더 세라마이드 모찌 토너, 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "원더 비건라벨 세라마이드 모찌 진정 토너"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "원더 비건라벨 세라마이드 모찌 진정 토너",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212675700",
+    "translated_kr": "블랙헤드 멜팅 클리어 패드, 30장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랙헤드 멜팅 클리어 패드"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "블랙헤드 멜팅 클리어 패드",
+    "volume": "65g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
