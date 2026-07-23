@@ -12094,5 +12094,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1158310933",
+    "translated_kr": "맥스플러스패드55매입_모공케어&각질오프데일리닦아내는토너패드",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185790423",
+    "translated_kr": "LPT케라틴리페어노워시트리트먼트70ml/안씻어내는헤어팩/고농축단백질",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "LPT 케라틴 리페어 트리트먼트"
+    },
+    "brand": "달리프 (Daleaf)",
+    "name": "LPT 케라틴 리페어 트리트먼트",
+    "volume": "230ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
