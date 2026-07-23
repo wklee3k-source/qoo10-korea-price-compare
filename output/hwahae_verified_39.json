@@ -41122,5 +41122,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165513951",
+    "translated_kr": "마다가스카르 센텔라 퀵 카밍 패드 70장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드",
+      "naver": "스킨1004 마다가스카르 센텔라 퀵카밍 패드"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "27000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000167392",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5773622/57736221760.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5773622/57736221760.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000167392"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165361801",
+    "translated_kr": "[1+1] 콜츠풋 안티 비듬 샴푸 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜츠푸트 안티-댄드러프 샴푸"
+    },
+    "brand": "라우쉬 (RAUSCH)",
+    "name": "콜츠푸트 안티-댄드러프 샴푸",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
