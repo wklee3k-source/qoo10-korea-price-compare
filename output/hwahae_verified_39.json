@@ -28900,5 +28900,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1168956037",
+    "translated_kr": "다크 스팟 세럼(나이아신아마이드 10% 트라",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "naver": "아누아 나이아신아마이드 10% txa 다크스팟 코렉팅 세럼 리뉴얼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20900",
+    "mall": "skin pick",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11515285272",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8905979/89059795645.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8905979/89059795645.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/11515285272"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1168045367",
+    "translated_kr": "緑豆 弱酸性 クレンジングフォーム 80ml + 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "망곰 콜라보 녹두 약산성 클렌징폼"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "망곰 콜라보 녹두 약산성 클렌징폼",
+    "volume": "160ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
