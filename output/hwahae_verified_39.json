@@ -30515,5 +30515,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193570601",
+    "translated_kr": "【コスパアンプル+ローションセット】ドクダミ80アンプル30ml + ドクダミ70 デイリーローション 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 데일리 로션",
+      "naver": "아누아 어성초 70 데일리 로션 200ml"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 데일리 로션",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "17990",
+    "mall": "JnH Shop",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13071395347",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+        "mall": "JnH Shop",
+        "link": "https://smartstore.naver.com/main/products/13071395347"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121988/91219882025.jpg",
+        "mall": "담소뷰티",
+        "link": "https://smartstore.naver.com/main/products/13675371006"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120245/91202458128.jpg",
+        "mall": "아르떼마켓1",
+        "link": "https://smartstore.naver.com/main/products/13657947343"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1179238550",
+    "translated_kr": "【レッドコスパセット】レッドブレミッシュ セラム 80ml + クリーム 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 히알 시카 수딩 세럼"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 히알 시카 수딩 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
