@@ -33233,5 +33233,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1175560636",
+    "translated_kr": "헤어케어 멀티 펩타이드 세럼 포 헤어 덴시티 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티-펩타이드 세럼 포 헤어 덴시티",
+      "naver": "멀티-펩타이드 세럼 포 헤어 덴시티 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "멀티-펩타이드 세럼 포 헤어 덴시티",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36400",
+    "mall": "TheOrdinary",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7590146302",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8513464/85134646624.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8513464/85134646624.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7590146302"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8521655/85216555388.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7672055066"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1146350870",
+    "translated_kr": "【NEW】 오드 파르팜 08 러브 포션 25ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [08 러브포션]",
+      "naver": "애프터블로우 오 드 퍼퓸 08 러브 포션 25ml"
+    },
+    "brand": "애프터블로우 (Afterblow)",
+    "name": "오 드 퍼퓸 [08 러브포션]",
+    "volume": "25ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39900",
+    "mall": "Afterblow",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12429100333",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8997361/89973611080.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8997361/89973611080.jpg",
+        "mall": "Afterblow",
+        "link": "https://smartstore.naver.com/main/products/12429100333"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
