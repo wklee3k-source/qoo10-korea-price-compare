@@ -22740,5 +22740,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212617358",
+    "translated_kr": "글로우턴 엑소솜 스칼프브러시 앰플 100ml 두피미용액 한국 헤어케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206682479",
+    "translated_kr": "그린프로폴리스 두피 클렌징 샴푸+트리트먼트 [1000ml+1000ml] 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린프로폴리스 스칼프 클렌징 샴푸"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "그린프로폴리스 스칼프 클렌징 샴푸",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
