@@ -38867,5 +38867,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195231911",
+    "translated_kr": "사무라이 라이트 EDT SP 100ml 사무라이 라이트 향수 남성용 알랭 드롱",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1150000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1066844135",
+    "translated_kr": "오드모아젤 플로랄 EDT SP 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 오드모아젤 오 플로랄 오 드 뚜왈렛"
+    },
+    "brand": "지방시 (GIVENCHY)",
+    "name": "(해외) 오드모아젤 오 플로랄 오 드 뚜왈렛",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
