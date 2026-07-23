@@ -73,6 +73,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -109,6 +112,9 @@ jobs:
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
 
       - name: Switch to dedicated branch (avoids push contention with hwahae_verify)
         run: |
@@ -223,6 +229,9 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
 
       - name: Switch to dedicated branch (same as sequential discover)
         run: |
@@ -377,6 +386,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
+
       - name: Switch to dedicated branch
         run: |
           git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
@@ -417,6 +429,9 @@ jobs:
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
 
       - name: Switch to dedicated branch (fully separate from discovery-live and hwahae-live, avoids all contention)
         run: |
@@ -535,6 +550,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
+
       - name: Switch to dedicated branch
         run: |
           git fetch origin translate-live 2>/dev/null && git checkout translate-live || git checkout -b translate-live
@@ -618,6 +636,9 @@ jobs:
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
 
       - name: Switch to dedicated branch (avoids push contention with discover)
         run: |
@@ -708,6 +729,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -737,6 +761,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
 
       - uses: actions/setup-python@v5
         with:
