@@ -33731,5 +33731,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165983721",
+    "translated_kr": "【1+1】マダガスカル センテラ ヒアルー シカ シルキーフィット サンスティック 20g（SPF50+）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 하이드레이팅 마스크"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 하이드레이팅 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 6000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203960088",
+    "translated_kr": "345リリーフクリーム, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "345 릴리프 크림",
+      "naver": "닥터엘시아 345 릴리프 크림 미니 15ml"
+    },
+    "brand": "닥터엘시아 (Dr.Althea)",
+    "name": "345 릴리프 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11700",
+    "mall": "Dr.Althea",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13293157012",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9083766/90837667344.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9083766/90837667344.jpg",
+        "mall": "Dr.Althea",
+        "link": "https://smartstore.naver.com/main/products/13293157012"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8883860/88838605454.2.jpg",
+        "mall": "참좋은뷰티",
+        "link": "https://smartstore.naver.com/main/products/11294095123"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8882279/88822793467.3.jpg",
+        "mall": "블랙 올리브",
+        "link": "https://smartstore.naver.com/main/products/11278283136"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
