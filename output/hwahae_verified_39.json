@@ -33518,5 +33518,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1177153825",
+    "translated_kr": "멀티 블랙헤드 모공브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 블랙헤드 모공 브러쉬",
+      "naver": "메디큐브 멀티 포어 브러시 페이스 마스크 어플리케이터 블루"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "멀티 블랙헤드 모공 브러쉬",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24400",
+    "mall": "StreetMap",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13620653550",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116516/91165163967.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116516/91165163967.jpg",
+        "mall": "StreetMap",
+        "link": "https://smartstore.naver.com/main/products/13620653550"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9046098/90460982331.jpg",
+        "mall": "늘곁마켓",
+        "link": "https://smartstore.naver.com/main/products/12916471339"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203705320",
+    "translated_kr": "ビタCテカブレミッシュショット ゲルマスクパック（5枚入）（シカ＆リードル）/ シミ取りショットマスク/パックマスク/パック/フェイスパック",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
