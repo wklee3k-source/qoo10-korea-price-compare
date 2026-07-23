@@ -34998,5 +34998,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194502685",
+    "translated_kr": "[NEW/투명케어] 스킨앤랩 글루타치온토너 200ml 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "스킨앤랩 글루타치온 앰플 토너 200ml 1개"
+    },
+    "brand": "스킨앤랩",
+    "name": "스킨앤랩 글루타치온 앰플 토너 200ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "51990",
+    "mall": "엠유즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13640643922",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118515/91185154631.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118515/91185154631.jpg",
+        "mall": "엠유즈",
+        "link": "https://smartstore.naver.com/main/products/13640643922"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158942439",
+    "translated_kr": "마다가스카르 센텔라퀵카밍패드 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드",
+      "naver": "스킨1004 마다가스카르 센텔라 퀵 카밍 패드 70매(리필) 1개"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15090",
+    "mall": "라온봄마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13669441366",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121395/91213952319.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121395/91213952319.jpg",
+        "mall": "라온봄마켓",
+        "link": "https://smartstore.naver.com/main/products/13669441366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
