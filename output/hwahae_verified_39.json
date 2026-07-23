@@ -43343,5 +43343,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210644303",
+    "translated_kr": "【NEW】SW19 ヘアパフュームミスト 75ml 5pm 8am 2種から選べる1種 ヘアミスト ヘアフレグランス 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209318840",
+    "translated_kr": "ALLIE 크로노뷰티 젤UV EX SPF50 PA 【자외선 차단제】【얼굴용】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "크로노 뷰티 페이셜 젤 UV EX [SPF50+/PA++++]",
+      "naver": "ALLIE 얼리 크로노 뷰티 젤 UV EX 선크림 40g, 1개"
+    },
+    "brand": "알리 (ALLIE)",
+    "name": "크로노 뷰티 페이셜 젤 UV EX [SPF50+/PA++++]",
+    "volume": "60g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "바리바리숍",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13616368666",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116087/91160879083.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116087/91160879083.jpg",
+        "mall": "바리바리숍",
+        "link": "https://smartstore.naver.com/main/products/13616368666"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116087/91160879082.jpg",
+        "mall": "바리바리숍",
+        "link": "https://smartstore.naver.com/main/products/13616368665"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116087/91160879084.jpg",
+        "mall": "바리바리숍",
+        "link": "https://smartstore.naver.com/main/products/13616368667"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
