@@ -48288,5 +48288,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1151678620",
+    "translated_kr": "[男性スキンケア] ネオクラシック オム ブラック エッセンシャル 80 スペシャルセット（トナー130ml + エマルジョン110ml + トナー30ml + エマルジョン30ml）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "네오 클래식 옴므 블랙 에센셜 80 매너남 스킨 미스트"
+    },
+    "brand": "더페이스샵 (THEFACESHOP)",
+    "name": "네오 클래식 옴므 블랙 에센셜 80 매너남 스킨 미스트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1173823684",
+    "translated_kr": "子音水 EX 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자음수 EX",
+      "naver": "설화수 자음수 EX"
+    },
+    "brand": "설화수 (Sulwhasoo)",
+    "name": "자음수 EX",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "64800",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63912&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=sulwhasoo",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5305821/53058213590.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5305821/53058213590.1.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63912&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=sulwhasoo"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
