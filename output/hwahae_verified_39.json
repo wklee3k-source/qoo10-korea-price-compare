@@ -35171,5 +35171,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1185851789",
+    "translated_kr": "[1+1] 레드 락토 콜라겐 래핑 마스크팩 70ml *2 + 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 레드 락토 콜라겐 3000 샷 세럼 2 스텝 마스크"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "(해외) 레드 락토 콜라겐 3000 샷 세럼 2 스텝 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152724831",
+    "translated_kr": "6번 폭수 마스크팩 세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "6번 푹잠 마스크팩 세럼"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "6번 푹잠 마스크팩 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
