@@ -13551,5 +13551,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1137775134",
+    "translated_kr": "진정아줄렌앰플,30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "에쿠와 카밍 아줄렌 세럼 30ml"
+    },
+    "brand": "에쿠와",
+    "name": "에쿠와 카밍 아줄렌 세럼 30ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20800",
+    "mall": "에쿠와",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12954157679",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9049866/90498668689.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9049866/90498668689.1.jpg",
+        "mall": "에쿠와",
+        "link": "https://smartstore.naver.com/main/products/12954157679"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205512883",
+    "translated_kr": "(3종세트)20초루틴스피디버블마스크3종(95ml)(아쿠아/볼륨/글로우)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
