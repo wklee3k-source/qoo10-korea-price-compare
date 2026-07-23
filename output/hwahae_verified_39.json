@@ -31848,5 +31848,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180407701",
+    "translated_kr": "エンジョイ・ザ・サン UVプロテクションクリーム SPF50+ PA++++ 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199152838",
+    "translated_kr": "[強くおすすめ] オリーブヤング ウルトラ ホワイトニング パーフェクト アンプル 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시그니처 프레그런스 바디 스프레이 [올리브영]",
+      "naver": "바디판타지 오리지널 바디미스트 236ml"
+    },
+    "brand": "바디판타지 (BODYFANTASIES)",
+    "name": "시그니처 프레그런스 바디 스프레이 [올리브영]",
+    "volume": "94ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "12000",
+    "mall": "아로마샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/3326717520",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8084072/80840723891.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8084072/80840723891.4.jpg",
+        "mall": "아로마샵",
+        "link": "https://smartstore.naver.com/main/products/3326717520"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8455672/84556727837.jpg",
+        "mall": "투게더쇼핑몰",
+        "link": "https://smartstore.naver.com/main/products/7012227515"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
