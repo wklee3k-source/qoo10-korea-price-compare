@@ -38098,5 +38098,72 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1159643310",
+    "translated_kr": "ハッピー フォーメン EDC 50ml SP （香水）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베티버 EDC",
+      "naver": "베르두 1902 베티버 오드코롱 EDC 125ml"
+    },
+    "brand": "베르두1902 (BERDOUES1902)",
+    "name": "베티버 EDC",
+    "volume": "125ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19000",
+    "mall": "자퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5663667777",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8320816/83208165115.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8320816/83208165115.jpg",
+        "mall": "자퓸",
+        "link": "https://smartstore.naver.com/main/products/5663667777"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192146158",
+    "translated_kr": "애나 수이 EDT 30ml SP (향수)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림",
+      "naver": "안나수이 판타지아 오드 뚜왈렛 향수 EDT SP 75ml"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "66000",
+    "mall": "오승재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12663121366",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9020763/90207632272.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9020763/90207632272.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/12663121366"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890958/88909585135.jpg",
+        "mall": "도쿄픽",
+        "link": "https://smartstore.naver.com/main/products/11365074770"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
