@@ -33909,5 +33909,62 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1059767256",
+    "translated_kr": "ROUND LAB ラウンドラップ 1025 独島 クレンザー 150ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1186021425",
+    "translated_kr": "[메디타임] 보타리눔더마지움크림·56080",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "생그린 나이지움 링클케어 크림"
+    },
+    "brand": "생그린",
+    "name": "생그린 나이지움 링클케어 크림",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "180000",
+    "mall": "생그린",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8400293556",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8594479/85944793879.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8594479/85944793879.jpg",
+        "mall": "생그린",
+        "link": "https://smartstore.naver.com/main/products/8400293556"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063717/90637171593.jpg",
+        "mall": "레드지움",
+        "link": "https://smartstore.naver.com/main/products/13092660501"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063720/90637207189.jpg",
+        "mall": "레드지움",
+        "link": "https://smartstore.naver.com/main/products/13092696097"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
