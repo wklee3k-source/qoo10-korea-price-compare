@@ -38408,5 +38408,72 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1092991128",
+    "translated_kr": "【본사 직송】닥터 리제네스 크림 60g X 1개, NMN EGF 펩타이드 마데카소사이드 레이저 시술(점, 기미, 색소침착, 흉터 등) 후의 빠른 케어 Dr.Regenes",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "7무 EGF 트리트먼트 에센셜 크림"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "7무 EGF 트리트먼트 에센셜 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 68000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1182968699",
+    "translated_kr": "위저드 조선 누룩 밤 100ml 시미 크림 Nuruk Balm",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "누룩밤 수면팩 트라넥산삼 크림 트라넥삼산 약국 기미 크림 위자드조선"
+    },
+    "brand": "위자드조선",
+    "name": "누룩밤 수면팩 트라넥산삼 크림 트라넥삼산 약국 기미 크림 위자드조선",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "25900",
+    "mall": "위자드조선",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10914486599",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8845899/88458992634.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8845899/88458992634.4.jpg",
+        "mall": "위자드조선",
+        "link": "https://smartstore.naver.com/main/products/10914486599"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117906/91179068787.jpg",
+        "mall": "샤라락",
+        "link": "https://smartstore.naver.com/main/products/13634558106"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119557/91195576467.1.jpg",
+        "mall": "이쁨과건강",
+        "link": "https://smartstore.naver.com/main/products/13651065688"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117906/91179067474.jpg",
+        "mall": "유후",
+        "link": "https://smartstore.naver.com/main/products/13634556793"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
