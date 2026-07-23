@@ -40612,5 +40612,90 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210871481",
+    "translated_kr": "피부를 촉촉하게 하는 보습 스킨케어 피부를 촉촉하게 하는 보습 각질층까지 수분 모이스트 리치 리필용",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "마쯔야마 마츠야마 유지 피부를 촉촉하게 해주는 보습 화장수 모이스트 리치 110ml 리필용"
+    },
+    "brand": "마쯔야마",
+    "name": "마쯔야마 마츠야마 유지 피부를 촉촉하게 해주는 보습 화장수 모이스트 리치 110ml 리필용",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "18500",
+    "mall": "포스트패스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12870863778",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9041537/90415374770.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041537/90415374770.jpg",
+        "mall": "포스트패스",
+        "link": "https://smartstore.naver.com/main/products/12870863778"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8756558/87565584725.1.jpg",
+        "mall": "팡와네",
+        "link": "https://smartstore.naver.com/main/products/10021082314"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041534/90415341666.jpg",
+        "mall": "포스트패스",
+        "link": "https://smartstore.naver.com/main/products/12870830674"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158335117",
+    "translated_kr": "케어세라(CareCera) AP페이스&바디크림 70g (세라마이드플러스×7종의 천연형 세라마이드 배합)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "CareCera 케어세라 AP 페이스 &amp; 바디 크림 70ml 1개"
+    },
+    "brand": null,
+    "name": "CareCera 케어세라 AP 페이스 &amp; 바디 크림 70ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24280",
+    "mall": "동경픽크닉",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13035979678",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9058049/90580490770.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058049/90580490770.jpg",
+        "mall": "동경픽크닉",
+        "link": "https://smartstore.naver.com/main/products/13035979678"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101368/91013684197.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13469173846"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9004244/90042448160.jpg",
+        "mall": "Louicci",
+        "link": "https://smartstore.naver.com/main/products/12497937307"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8895123/88951239827.jpg",
+        "mall": "TokyoLife",
+        "link": "https://smartstore.naver.com/main/products/11406729462"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
