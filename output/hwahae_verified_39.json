@@ -50056,5 +50056,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1076893995",
+    "translated_kr": "パフューム石鹸&amp;ハンドクリームセット(CHAMO+VEIN)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1077228248",
+    "translated_kr": "フォーゲット ミナット ポータブル オードパフューム 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오드메모 오드퍼퓸",
+      "naver": "메모 MEMO 로즈 파리 로즈 ROSW PARIS ROSE 오드퍼퓸 75ML"
+    },
+    "brand": "메모파리 (MEMOPARIS)",
+    "name": "오드메모 오드퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "550000",
+    "mall": "럭셔리파리",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5813105204",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8335760/83357604618.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8335760/83357604618.jpg",
+        "mall": "럭셔리파리",
+        "link": "https://smartstore.naver.com/main/products/5813105204"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070516/90705164694.jpg",
+        "mall": "향수셀렉터",
+        "link": "https://smartstore.naver.com/main/products/13160653585"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9010840/90108407552.jpg",
+        "mall": "THEPERFUMES",
+        "link": "https://smartstore.naver.com/main/products/12563896699"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9010674/90106748327.jpg",
+        "mall": "THEPERFUMES",
+        "link": "https://smartstore.naver.com/main/products/12562237474"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9010822/90108228956.jpg",
+        "mall": "THEPERFUMES",
+        "link": "https://smartstore.naver.com/main/products/12563718103"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
