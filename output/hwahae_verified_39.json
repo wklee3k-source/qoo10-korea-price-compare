@@ -31892,5 +31892,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211103356",
+    "translated_kr": "동백 딥 콜라겐 탄력 앰플, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "동백 딥 콜라겐 탄력 앰플"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "동백 딥 콜라겐 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192583562",
+    "translated_kr": "동백 딥 콜라겐 탄력 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "동백 딥 콜라겐 탄력 크림",
+      "naver": "라운드랩 동백 딥 콜라겐 탄력 크림 50ml"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "동백 딥 콜라겐 탄력 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20500",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11057210593",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8860171/88601716804.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8860171/88601716804.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/11057210593"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5163545/51635452330.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000214288"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
