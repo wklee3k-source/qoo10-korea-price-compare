@@ -36558,5 +36558,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1081721110",
+    "translated_kr": "ボディ フィット 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디 핏 쿨 크림"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "바디 핏 쿨 크림",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 68000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209060310",
+    "translated_kr": "ウトワ UTOWA トランスグロウ ルミナイザー ピンクグロウ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
