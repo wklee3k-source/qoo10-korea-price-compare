@@ -43873,5 +43873,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209266440",
+    "translated_kr": "【PDRN配合/リピートアイテム】ペプタシカ セラムパッド ダブルセット（60枚＋60枚）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세럼패드"
+    },
+    "brand": "인터미션 (Intermission)",
+    "name": "세럼패드",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212658644",
+    "translated_kr": "[正規品] サーフィン・アウトドアに！ワータープルーフ プロ サンクリーム SPF50+PA++++ 50g 5重プルーフ 地続耐水性テスト済 珊瑚礁破壊成分不使用 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
