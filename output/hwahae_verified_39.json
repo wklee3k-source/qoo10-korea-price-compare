@@ -32997,5 +32997,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1165247523",
+    "translated_kr": "[정품] 올데이 메이크업 픽서 75ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올데이 타이트 메이크업 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188839770",
+    "translated_kr": "[보습 보수 영양 시트마스크 10장 5가지 타입 선택] 고보습 대량구매 야간용 데일리 스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
