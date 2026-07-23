@@ -29683,5 +29683,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210180500",
+    "translated_kr": "ユリイロ YURiiRO ジェントル ボディミスト オイルミスト ミスト メンズ スキンケア 男性 乾燥 インナードライ 混合肌 ニキビ肌 肌荒れ 加齢臭 全身 ケア 美容液 テカリ メンズ化粧品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210626598",
+    "translated_kr": "SENZ (오션 트리코 센즈) 스칼프 트리트먼트 330g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트",
+      "naver": "오션 트리코 센즈 OCEAN TRICO SENZ 스칼프 트리트먼트 리필 280g"
+    },
+    "brand": "아베다 (AVEDA)",
+    "name": "스칼프 솔루션 엑스폴리에이팅 스칼프 트리트먼트",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23270",
+    "mall": "우주인우츄진",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13190672755",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9073518/90735183852.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073518/90735183852.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13190672755"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073380/90733807142.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13189296045"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051162/90511623786.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/12967112776"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
