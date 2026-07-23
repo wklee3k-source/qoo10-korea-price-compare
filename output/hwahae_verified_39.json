@@ -44829,5 +44829,82 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1139846346",
+    "translated_kr": "シカユーストナー 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 유스 토너",
+      "naver": "2SOL 스킨 시카 유스 토너 300ml 1개"
+    },
+    "brand": "이솔 (2SOL)",
+    "name": "시카 유스 토너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28000",
+    "mall": "로컬스튜",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13661285631",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120579/91205796472.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120579/91205796472.jpg",
+        "mall": "로컬스튜",
+        "link": "https://smartstore.naver.com/main/products/13661285631"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178796694",
+    "translated_kr": "[最新リニューアル] セルメディックス エムジーエフ リターンクリーム 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리턴 크림",
+      "naver": "코리아나 리턴 크림 100ml (탄력 미백 보습)"
+    },
+    "brand": "코리아나 (Coréana)",
+    "name": "리턴 크림",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "7500",
+    "mall": "스킨플러스화장품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13640862256",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118537/91185372965.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118537/91185372965.jpg",
+        "mall": "스킨플러스화장품",
+        "link": "https://smartstore.naver.com/main/products/13640862256"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8399417/83994171931.jpg",
+        "mall": "진리마켓-JINRI",
+        "link": "https://smartstore.naver.com/main/products/6449671598"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8551402/85514029296.2.jpg",
+        "mall": "필미엄컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/7969528973"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8744090/87440905206.jpg",
+        "mall": "필미엄컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/9896402933"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
