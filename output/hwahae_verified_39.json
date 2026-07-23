@@ -31446,5 +31446,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163729695",
+    "translated_kr": "[정품]딥포어 클렌징 소다 폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 포어 클렌징 소다폼"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "딥 포어 클렌징 소다폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205580942",
+    "translated_kr": "3번 보들보들 모공결 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "3번 보들보들 모공결 세럼",
+      "naver": "[화잘먹] 넘버즈인 3번 보들보들 모공결 세럼 30ml 더블 기획"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "3번 보들보들 모공결 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26400",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250773",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6021735/60217358318.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6021735/60217358318.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250773"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6021736/60217360285.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000257096"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
