@@ -32972,5 +32972,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188026399",
+    "translated_kr": "Advanced Clinicals Retinol Anti-Wrinkle Serum 52ml（1.75液量オンス）",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "Advanced Clinicals 레티놀 세럼 안티 링클 52 ml (1.75 fl oz)"
+    },
+    "brand": null,
+    "name": "Advanced Clinicals 레티놀 세럼 안티 링클 52 ml (1.75 fl oz)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20700",
+    "mall": "티오티셀러",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9167969899",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8671247/86712470222.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8671247/86712470222.1.jpg",
+        "mall": "티오티셀러",
+        "link": "https://smartstore.naver.com/main/products/9167969899"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8871681/88716818312.jpg",
+        "mall": "크림원더풀",
+        "link": "https://smartstore.naver.com/main/products/11172307990"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091508/90915088223.jpg",
+        "mall": "베니케이",
+        "link": "https://smartstore.naver.com/main/products/13370577887"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191354082",
+    "translated_kr": "【60枚】ビタミンC ナイアシンアミド アイパッチ 目元パック 目の下パック トラネキサム酸 ヒアルロン酸 うるおい 保湿 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
