@@ -48690,5 +48690,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1077500334",
+    "translated_kr": "アハ/バハクラリファイングトリートメントトナー 150ml_複合性/角質/皮脂",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190777856",
+    "translated_kr": "【韓国正品】Folligen Thickening Shampoo 500ml+500ml (+100ml)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "리바이탈래쉬 헤어 Thickening Shampoo 헤어 샴푸"
+    },
+    "brand": "리바이탈래쉬",
+    "name": "리바이탈래쉬 헤어 Thickening Shampoo 헤어 샴푸",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "38000",
+    "mall": "리바이탈래쉬",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4706090690",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8225061/82250611641.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8225061/82250611641.2.jpg",
+        "mall": "리바이탈래쉬",
+        "link": "https://smartstore.naver.com/main/products/4706090690"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073494/90734946417.jpg",
+        "mall": "유로타이거",
+        "link": "https://smartstore.naver.com/main/products/13190435320"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8635669/86356691788.jpg",
+        "mall": "유럽마을",
+        "link": "https://smartstore.naver.com/main/products/8812191465"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8973093/89730936573.jpg",
+        "mall": "호주직구마켓",
+        "link": "https://smartstore.naver.com/main/products/12186425868"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937760/89377603175.jpg",
+        "mall": "Reborn Store",
+        "link": "https://smartstore.naver.com/main/products/11833092588"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
