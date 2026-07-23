@@ -29620,5 +29620,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1140265006",
+    "translated_kr": "【1+1】【韓国コスメ】【正規品扱い店】ドレスパフューム ファブリックフレグランス No.97 エイプリルコットン 160ml - 2個セットでお得！",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1133810636",
+    "translated_kr": "【한국 화장품】【정품 취급점】[ATO樂] 인텐시브 크림 120ml - 깊은 보습과 리페어 효과!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐시브 리페어 컨센트레이트 크림",
+      "naver": "닥터자르트 시카페어 인텐시브 수딩 리페어 크림, 50ml, 1개"
+    },
+    "brand": "뮤스템 (MUSTEM)",
+    "name": "인텐시브 리페어 컨센트레이트 크림",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "더라라스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13471135530",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9101564/91015645882.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101564/91015645882.jpg",
+        "mall": "더라라스토어",
+        "link": "https://smartstore.naver.com/main/products/13471135530"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8483089/84830898171.1.jpg",
+        "mall": "은가비에스테틱-홈뷰티",
+        "link": "https://smartstore.naver.com/main/products/7286397849"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101710/91017101327.1.jpg",
+        "mall": "다운언더 픽-시드니 직구",
+        "link": "https://smartstore.naver.com/main/products/13472590975"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8399445/83994450370.1.jpg",
+        "mall": "베니몰",
+        "link": "https://smartstore.naver.com/main/products/6449950037"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
