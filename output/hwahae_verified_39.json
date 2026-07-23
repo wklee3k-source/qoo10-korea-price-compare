@@ -43105,5 +43105,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188176132",
+    "translated_kr": "デイリーケアマスクパック5枚企画4種（+1枚追加贈呈）",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208012735",
+    "translated_kr": "【トーンアップ・UVケア】ディオプラス ブルーフェザー トーンアップ サンスクリーン 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블로썸 톤업 선스크린 [SPF50+/PA++++]",
+      "naver": "리블로셀 블로썸 톤업 선크림 30ml SPF50+ PA++++ 핑크톤업 미백기능성 보송 베이스"
+    },
+    "brand": "리블로셀 (reblocell)",
+    "name": "블로썸 톤업 선스크린 [SPF50+/PA++++]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "34200",
+    "mall": "리블로셀",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8951919188",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8649641/86496419511.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8649641/86496419511.6.jpg",
+        "mall": "리블로셀",
+        "link": "https://smartstore.naver.com/main/products/8951919188"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
