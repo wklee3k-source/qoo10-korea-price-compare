@@ -31083,5 +31083,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1146049607",
+    "translated_kr": "시카페어 인텐시브 수징 리페어 크림 50ml+15ml+15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 인텐시브 수딩 리페어 크림"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 인텐시브 수딩 리페어 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201944372",
+    "translated_kr": "라이스 브라이트닝 효소 세안 파우더 40g / 한국 인기 건성피부 민감피부 쌀겨 효소 세안 클렌징",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
