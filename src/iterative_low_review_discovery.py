@@ -19,7 +19,7 @@ iterative_low_review_discovery.py
 
 import json
 import re
-import signal
+import subprocess
 import sys
 from pathlib import Path
 
@@ -247,31 +247,41 @@ def _save_state(state: dict, suffix: str | None = None):
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-class _ShopTimeout(Exception):
-    pass
-
-
-def _shop_timeout_handler(signum, frame):  # noqa: ARG001
-    raise _ShopTimeout()
-
-
 def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> list[dict]:
-    """crawl_shop_best5에 상점 전체 처리 시간 상한을 씌운다. 개별 페이지
-    로딩엔 이미 20초 타임아웃이 있지만, 베스트5 상품 각각(최대 5개) +
-    랭킹조회까지 합치면 최악의 경우 몇 분씩 걸릴 수 있어서(실측으로 확인된
-    지연 원인), 상점 하나당 전체 처리시간에도 상한을 둔다. 초과하면 이
-    상점은 포기하고 다음 상점으로 넘어간다(데이터 유실 없음 — 그냥 이번엔
-    스킵될 뿐, 나중에 다시 만나면 재시도됨)."""
-    old_handler = signal.signal(signal.SIGALRM, _shop_timeout_handler)
-    signal.alarm(timeout_seconds)
+    """crawl_shop_best5를 별도 프로세스로 격리해서 실행하고, timeout_seconds를
+    넘기면 그 프로세스를 강제 종료(SIGKILL)한다.
+
+    [중요: signal.alarm에서 subprocess 격리 방식으로 교체함] 예전엔
+    같은 프로세스 안에서 signal.alarm(90)으로 시간제한을 걸었는데,
+    실측으로 이게 신뢰할 수 없다는 게 확인됐다 — Playwright의 페이지
+    로딩 예외처리 도중 signal이 전달되지 않고 워커 하나가 3시간 넘게
+    완전히 멈춰버린 사고가 있었다(원인: 자식 스레드/이벤트루프 안에서
+    발생한 예외 처리 중에는 파이썬 시그널 핸들러가 실행을 못 미룰 수
+    있음). subprocess.run(timeout=N)은 그 자식 프로세스 내부에서 무슨
+    일이 일어나든 운영체제 수준에서 확실하게 죽이므로 100% 신뢰할 수
+    있다."""
     try:
-        return crawl_shop_best5(shop_id)
-    except _ShopTimeout:
-        print(f"  [TIMEOUT] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 포기하고 다음으로 넘어감")
+        result = subprocess.run(
+            [sys.executable, "crawl_single_shop.py", shop_id],
+            capture_output=True,
+            text=True,
+            timeout=timeout_seconds,
+            cwd=str(Path(__file__).resolve().parent),
+        )
+    except subprocess.TimeoutExpired:
+        print(f"  [TIMEOUT] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 강제종료, 다음으로 넘어감")
         return []
-    finally:
-        signal.alarm(0)
-        signal.signal(signal.SIGALRM, old_handler)
+
+    if result.returncode != 0:
+        print(f"  [ERROR] 상점 {shop_id} 서브프로세스 비정상종료(code={result.returncode}): {result.stderr[-500:] if result.stderr else ''}")
+        return []
+
+    try:
+        return json.loads(result.stdout.strip() or "[]")
+    except json.JSONDecodeError:
+        print(f"  [ERROR] 상점 {shop_id} 결과 파싱 실패: {result.stdout[-500:]}")
+        return []
+
 
 
 def run(keyword_ja: str, target_products: int, max_shops: int | None = None, shops_per_keyword: int | None = None, seed_keywords: list[str] | None = None, state_suffix: str | None = None):
