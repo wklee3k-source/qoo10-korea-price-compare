@@ -37819,5 +37819,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1106939117",
+    "translated_kr": "【正規品】[ユーチューバー おすすめアイテム] ホワイトトリュフ ファーストスプレー ミストセラム 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 퍼스트 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 퍼스트 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191657535",
+    "translated_kr": "シカケア クリア アンプル 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카케어 클리어링 앰플",
+      "naver": "로벡틴 시카케어 클리어링 앰플 30mL"
+    },
+    "brand": "로벡틴 (ROVECTIN)",
+    "name": "시카케어 클리어링 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20200",
+    "mall": "레인보우USA",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13490033400",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103454/91034543752.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103454/91034543752.jpg",
+        "mall": "레인보우USA",
+        "link": "https://smartstore.naver.com/main/products/13490033400"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026286/90262869773.jpg",
+        "mall": "랜덤플레이 주식회사",
+        "link": "https://smartstore.naver.com/main/products/12718358849"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
