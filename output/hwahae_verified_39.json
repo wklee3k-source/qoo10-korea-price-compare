@@ -31659,5 +31659,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188026399",
+    "translated_kr": "Advanced Clinicals 레티놀 안티-주름 세럼 52ml(1.75액량온스)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "No.43 레티놀 안티 링클 세럼"
+    },
+    "brand": "스킨이치 (SKINEACH)",
+    "name": "No.43 레티놀 안티 링클 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206008325",
+    "translated_kr": "펩타이드샷2X 탄력 앰플 30ml(탄력감 케어/보습/탄력 서포트 미용액)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드 허니골드 앰플 2X",
+      "naver": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력"
+    },
+    "brand": "비코스 (BEICOS)",
+    "name": "펩타이드 허니골드 앰플 2X",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13900",
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5062113585",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5062113585"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
