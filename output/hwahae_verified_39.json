@@ -32919,5 +32919,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1163729695",
+    "translated_kr": "【정품】딥 포어 클렌징 소다 폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 포어 클렌징 소다폼",
+      "naver": "마녀공장 딥 포어 클렌징 소다폼 150ml / 딥클렌징 피부진정 녹차클렌징"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "딥 포어 클렌징 소다폼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12000",
+    "mall": "발라바라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10157070955",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8770157/87701574217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8770157/87701574217.jpg",
+        "mall": "발라바라",
+        "link": "https://smartstore.naver.com/main/products/10157070955"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8666503/86665032998.1.jpg",
+        "mall": "수앤서마켓2",
+        "link": "https://smartstore.naver.com/main/products/9120532675"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158907027",
+    "translated_kr": "【ハリ＆リフティングケア】ナンバーズイン 9番 NMN BIO リフティング フルフェイスパック 4枚入り＋引き締めシート付き",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
