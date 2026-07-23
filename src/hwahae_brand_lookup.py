@@ -73,8 +73,14 @@ def cross_reference_qoo10(kr_to_eng: dict, qoo10_csv_path: str) -> dict:
 
 
 if __name__ == "__main__":
-    kr_list = json.load(open(sys.argv[1], encoding="utf-8"))
+    pending_path = sys.argv[1]
     out_path = sys.argv[2]
+    chunk_size = int(sys.argv[3]) if len(sys.argv) > 3 else 400
+
+    all_pending = json.load(open(pending_path, encoding="utf-8"))
+    kr_list = all_pending[:chunk_size]
+    remaining = all_pending[chunk_size:]
+    print(f"이번 실행: {len(kr_list)}개 처리, {len(remaining)}개는 다음으로 이월")
 
     kr_to_eng = lookup_brands(kr_list)
     print(f"\n총 {len(kr_to_eng)}개 화해 매칭 성공")
@@ -83,3 +89,7 @@ if __name__ == "__main__":
     print(f"큐텐 브랜드리스트 대조 후 최종 {len(new_mappings)}개 매핑 확보")
 
     json.dump(new_mappings, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    # 이번에 시도한 것들은 성공/실패 여부와 무관하게 pending에서 제거(중복시도 방지).
+    # 실패한 건(화해에 없거나 매칭 안 된 것)은 애초에 화해에 없는 브랜드일
+    # 가능성이 높으므로 다시 시도해도 결과가 같을 것이다.
+    json.dump(remaining, open(pending_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
