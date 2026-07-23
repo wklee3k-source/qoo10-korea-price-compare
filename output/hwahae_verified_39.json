@@ -29164,5 +29164,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1178760167",
+    "translated_kr": "오드 파르팜 스노우 사이 30ML Snow Sai",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [스노우 사이]"
+    },
+    "brand": "리베르 (LIBER)",
+    "name": "오 드 퍼퓸 [스노우 사이]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 59000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197569542",
+    "translated_kr": "세이프미 릴리프 모이스처 클렌징 폼 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세이프 미 릴리프 모이스처 클렌징폼"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "세이프 미 릴리프 모이스처 클렌징폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
