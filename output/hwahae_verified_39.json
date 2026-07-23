@@ -32793,5 +32793,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205550323",
+    "translated_kr": "리주란 더마 힐러 포어 타이트닝 토너 패드 220mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마 힐러 포어 타이트닝 토너 패드",
+      "naver": "리쥬란 더마 힐러 포어 타이트닝 토너 패드 60매+리필 60매+6매"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "더마 힐러 포어 타이트닝 토너 패드",
+    "volume": "220mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30800",
+    "mall": "나누리상회",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13621925098",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116643/91166435515.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116643/91166435515.jpg",
+        "mall": "나누리상회",
+        "link": "https://smartstore.naver.com/main/products/13621925098"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8975385/89753854586.1.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12209343881"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177829431",
+    "translated_kr": "마이퍼스트세럼 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
