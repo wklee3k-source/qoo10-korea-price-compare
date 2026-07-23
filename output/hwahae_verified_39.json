@@ -6777,5 +6777,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1200863342",
+    "translated_kr": "AHC 마스터즈 아이시젤리 선스틱 14g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "마스터즈 아이시 젤리 선스틱 [SPF44/PA+++]",
+    "volume": "14g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1196939883",
+    "translated_kr": "아비브 레티날아이세럼 리프팅롤러 15ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
