@@ -41214,5 +41214,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211212429",
+    "translated_kr": "셀 업 마이크로 폼 클렌저 120ml 2개+클렌징 밀크 20ml 한국 세안 폼 세안료 모공 오염 케어 보습 세안",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183178551",
+    "translated_kr": "TN トラネキサミン5%＋ナイアシンアミド5% ブライトニング セラム60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TN 트라넥사믹 5% 나이아신아마이드 5% 세럼",
+      "naver": "코스드바하 TN 트라넥사믹애씨드 5% 나이아신아마이드 5% 트라넥삼산 미백 세럼"
+    },
+    "brand": "코스드바하 (CosDeBAHA)",
+    "name": "TN 트라넥사믹 5% 나이아신아마이드 5% 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17300",
+    "mall": "원라이브:쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9464512505",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8700901/87009012825.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8700901/87009012825.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9464512505"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
