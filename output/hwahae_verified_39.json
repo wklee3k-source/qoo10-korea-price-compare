@@ -31504,5 +31504,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1203332451",
+    "translated_kr": "줌 바이 메이크업 픽서 50ml 1+1",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "메이크업 픽서",
+      "naver": "다이소 줌 바이 정샘물 메이크업 픽서 50 ml X10개 1박스 B202604016219"
+    },
+    "brand": "줌 바이 정샘물 (ZOOM BY JUNG SAEMMOOL)",
+    "name": "메이크업 픽서",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "50000",
+    "mall": "다이소몰",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=B202604016219&infl_path=naver_ep",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5949701/59497017568.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5949701/59497017568.jpg",
+        "mall": "다이소몰",
+        "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=B202604016219&infl_path=naver_ep"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158907027",
+    "translated_kr": "[탄력&리프팅 케어]넘버즈인 9번 NMN BIO 리프팅 풀페이스팩 4매입+탄력강화시트 부착",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "9번 NMN BIO 리프팅 풀페이스팩"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "9번 NMN BIO 리프팅 풀페이스팩",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
