@@ -48496,5 +48496,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199804439",
+    "translated_kr": "アトバリア 365 クリーム 80ml+30ml*3(90ml) うるおいケアのベストコンビ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190831666",
+    "translated_kr": "(PDRNピンクコラーゲン,ディープビタC,TXA) カプセルクリーム 55g ミルクラッピングマスク 75ml,ピンクバブルセラム 95ml,PDRN コラーゲングロウ ジェリーセラム30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 카페인 랩핑 마스크",
+      "naver": "PDRN 핑크 카페인 랩핑 마스크"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 카페인 랩핑 마스크",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30200",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2452&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5584600/55846009337.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5584600/55846009337.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2452&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8996007/89960078505.jpg",
+        "mall": "아리아트네",
+        "link": "https://smartstore.naver.com/main/products/12415567780"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
