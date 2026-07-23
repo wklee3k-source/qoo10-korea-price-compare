@@ -49261,5 +49261,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1197070599",
+    "translated_kr": "【SPECIAL GIFT/1+1限定版/Stray Kids Felix PICK】パフュームハンドクリームミニデュオセット15ml*2ea/felix香水/人気モウパフュームハンドクリーム",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203952993",
+    "translated_kr": "ルベル ザ・モイ バーム アンビエントデュウ (ボディ・ヘアトリートメントバーム) 37g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크 선세럼 [SPF50+/PA++++]",
+      "naver": "루벨 실크 선 세럼 선크림 선케어 자외선nad 수분 화잘먹 촉촉"
+    },
+    "brand": "루벨 (LUBELLE)",
+    "name": "실크 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15900",
+    "mall": "루벨 lubelle",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13172619151",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg",
+        "mall": "루벨 lubelle",
+        "link": "https://smartstore.naver.com/main/products/13172619151"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8431551/84315515029.1.jpg",
+        "mall": "얀센코스메틱코리아",
+        "link": "https://smartstore.naver.com/main/products/6771014707"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
