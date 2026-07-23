@@ -120,6 +120,12 @@ jobs:
         run: |
           git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
           git merge origin/main --no-edit -X theirs 2>/dev/null || true
+          # [안전장치] merge가 조용히 실패해서 코드 파일이 낡은 채로 남는
+          # 사고가 실측으로 확인됐다(translate_in_place.py 없어서 8워커
+          # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
+          # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -237,6 +243,12 @@ jobs:
         run: |
           git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
           git merge origin/main --no-edit -X theirs 2>/dev/null || true
+          # [안전장치] merge가 조용히 실패해서 코드 파일이 낡은 채로 남는
+          # 사고가 실측으로 확인됐다(translate_in_place.py 없어서 8워커
+          # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
+          # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -448,6 +460,12 @@ jobs:
         run: |
           git fetch origin translate-live 2>/dev/null && git checkout translate-live || git checkout -b translate-live
           git merge origin/main --no-edit -X theirs 2>/dev/null || true
+          # [안전장치] merge가 조용히 실패해서 코드 파일이 낡은 채로 남는
+          # 사고가 실측으로 확인됐다(translate_in_place.py 없어서 8워커
+          # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
+          # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -568,6 +586,12 @@ jobs:
         run: |
           git fetch origin translate-live 2>/dev/null && git checkout translate-live || git checkout -b translate-live
           git merge origin/main --no-edit -X theirs 2>/dev/null || true
+          # [안전장치] merge가 조용히 실패해서 코드 파일이 낡은 채로 남는
+          # 사고가 실측으로 확인됐다(translate_in_place.py 없어서 8워커
+          # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
+          # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -655,6 +679,12 @@ jobs:
         run: |
           git fetch origin hwahae-live 2>/dev/null && git checkout hwahae-live || git checkout -b hwahae-live
           git merge origin/main --no-edit -X theirs 2>/dev/null || true
+          # [안전장치] merge가 조용히 실패해서 코드 파일이 낡은 채로 남는
+          # 사고가 실측으로 확인됐다(translate_in_place.py 없어서 8워커
+          # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
+          # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
