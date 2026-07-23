@@ -1,11 +1,14 @@
 {
   "visited_shops": [
-    "changmidang",
-    "unicornmall",
+    "frombeauty",
+    "COCOJI",
     "hottem",
+    "unicornmall",
     "woorinin",
-    "peopleji",
-    "frombeauty"
+    "changmidang",
+    "angelskinmall",
+    "vip_s",
+    "peopleji"
   ],
   "all_products": [
     {
@@ -82,6 +85,96 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1209641531",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/178/593/8378593178.g_300-w-st_g.jpg",
+      "title": "[1+]NEWサイトカインブースタープロ 70ml＋70ml",
+      "brand": "Refilled",
+      "price_jpy": 5039,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209641531",
+      "shop_id": "angelskinmall",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1209148971",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/467/240/8386240467.g_300-w-st_g.jpg",
+      "title": "【韓国正規品/NEW】Gureum o de perfume EDP 50ml",
+      "brand": "BiBiANG",
+      "price_jpy": 11419,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209148971",
+      "shop_id": "angelskinmall",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1206526891",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/160/593/8378593160.g_300-w-st_g.jpg",
+      "title": "[NEW]エアロクーリングシャンプー 400ml＋70ml / -5.2度急速冷却",
+      "brand": "Dr.FORHAIR",
+      "price_jpy": 3859,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206526891",
+      "shop_id": "angelskinmall",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1207207330",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/085/329/8295329085.g_300-w-st_g.jpg",
+      "title": "【保湿・輝き・弾力】 PDR&amp;N エッセンス 100 30ml ダブル企画",
+      "brand": "VTコスメティックス",
+      "price_jpy": 5794,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1207207330",
+      "shop_id": "COCOJI",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1139814745",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/237/069/6760069237.g_300-w-st_g.jpg",
+      "title": "ティルティールオフザサンエアムース/ 40ml/ 1個",
+      "brand": "ティルティル",
+      "price_jpy": 2247,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1139814745",
+      "shop_id": "vip_s",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1151569871",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/308/757/7024757308.g_300-w-st_g.jpg",
+      "title": "デイリー アンチヘアロス タンパク質 トリートメント 500ml",
+      "brand": "ダシュ",
+      "price_jpy": 3048,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1151569871",
+      "shop_id": "vip_s",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -90,12 +183,12 @@
     "https://m.qoo10.jp/shop/unicornmall",
     "https://m.qoo10.jp/shop/hottem",
     "https://m.qoo10.jp/shop/changmidang",
-    "https://m.qoo10.jp/shop/peopleji"
+    "https://m.qoo10.jp/shop/peopleji",
+    "https://m.qoo10.jp/shop/angelskinmall",
+    "https://m.qoo10.jp/shop/COCOJI",
+    "https://m.qoo10.jp/shop/vip_s"
   ],
   "pending_keywords": [
-    "オールデイカバー ブラッククッション#5色 BEST クッショングラス ナチュラル #5色 本品 + 詰め替え",
-    "新作 グリッツストーンハイライター #12色 ハイライト",
-    "BEST インクグラスティングリップグロス",
     "在庫入庫 クッショングラス ナチュラル リフィル + クッション エッグフィット カバー リフィル",
     "インスパイア スキニーブロウマスカラ 3.",
     "水分バリアPANGヒアルロン酸パンテノールアンプル",
@@ -107,10 +200,25 @@
     "ラベルローズプランピングリップティント 23 Dawn Rose ドーンローズ ティント",
     "パーフェクトツインリップ #903 Nude Odd 4. +4. リップ",
     "ラストオートジェルアイライナー #13 PEANUT BEIGE 0. ペンシルコンシーラー",
-    "パーフェクトヌード透明サンパッチ 分 UVA&amp;UVB強力遮断"
+    "パーフェクトヌード透明サンパッチ 分 UVA&amp;UVB強力遮断",
+    "ブラックピール オフリップ タトゥーティント 5colors",
+    "サイトカインブースタープロ ＋",
+    "Gureum o de perfume EDP",
+    "エアロクーリングシャンプー ＋",
+    "アバウトトンブラーパウダーファクト",
+    "ボールド リップ ブラー ティント 3.",
+    "Pü リップ&amp;チーク ブラーリー プディングポット 単品",
+    "メルティング リップスウィート 11種",
+    "PDR&amp;N エッセンス 100 ダブル企画",
+    "ティルティールオフザサンエアムース",
+    "デイリー アンチヘアロス タンパク質 トリートメント",
+    "オールデイカバー ブラッククッション#5色 BEST クッショングラス ナチュラル #5色 本品 + 詰め替え"
   ],
   "seen_keywords": [
-    "スキン 1004 マダガスカル センテラ アンプル",
-    "メディヒール エッセンシャルマスクパック"
+    "BEST インクグラスティングリップグロス",
+    "メディヒール エッセンシャルマスクパック",
+    "オールデイカバー ブラッククッション#5色 BEST クッショングラス ナチュラル #5色 本品 + 詰め替え",
+    "新作 グリッツストーンハイライター #12色 ハイライト",
+    "スキン 1004 マダガスカル センテラ アンプル"
   ]
 }
