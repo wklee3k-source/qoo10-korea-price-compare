@@ -33313,5 +33313,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201611272",
+    "translated_kr": "【공식】리페어 앰플 프로그램 미용액(2세트) 시카 엑소솜 PDRN 탄력 모공 건조 에이징 한국 코스메 스킨케어 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 앰플 [리페어]"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 앰플 [리페어]",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194573796",
+    "translated_kr": "레드 블레미시 클리어 수딩 크림, 70ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 수딩 크림"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 수딩 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
