@@ -38911,5 +38911,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1118545938",
+    "translated_kr": "센텔라 라이트 클렌징 오일 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 라이트 클렌징오일"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 라이트 클렌징오일",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194458592",
+    "translated_kr": "시세이도 서블리믹 원더실드 h 리필 110mL 리필용 헹굼 없이 사용하는 트리트먼트 헤어 프로텍터 윤기 케어 뷰티 살롱 전문 제품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
