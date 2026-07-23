@@ -16239,5 +16239,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207321955",
+    "translated_kr": "판테놀배리어크림50ml보습크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선크림 [SPF50+/PA++++] [판테놀베리어]"
+    },
+    "brand": "코스노리 (COSNORI)",
+    "name": "선크림 [SPF50+/PA++++] [판테놀베리어]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203369166",
+    "translated_kr": "1+1수퍼아쿠아맥스콤비네이션빅워터리크림120ml×2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
