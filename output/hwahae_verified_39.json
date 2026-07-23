@@ -9200,5 +9200,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177099755",
+    "translated_kr": "오드퍼퓸타입선택1",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1147973479",
+    "translated_kr": "[정품]다이브인저분자히알루론산세럼50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
