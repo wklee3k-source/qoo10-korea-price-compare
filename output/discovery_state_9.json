@@ -1,7 +1,10 @@
 {
   "visited_shops": [
-    "woorinin",
+    "changmidang",
     "unicornmall",
+    "hottem",
+    "woorinin",
+    "peopleji",
     "frombeauty"
   ],
   "all_products": [
@@ -64,15 +67,32 @@
       "review_count": 3,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1203285017",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/039/440/8211440039.g_300-w-st_g.jpg",
+      "title": "[Ultra Xecond Ski] パーフェクトヌード透明サンパッチ（ゴルフサンパッチ）10回分（計20枚）UVA&amp;UVB強力遮断/日焼け止めパッチ/ゴルフパッチ/テニス/屋外スポーツ/紫外線",
+      "brand": "Ultra Xecond Skin",
+      "price_jpy": 3930,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203285017",
+      "shop_id": "changmidang",
+      "category_gdlc_cd": "120000017",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/woorinin",
     "https://m.qoo10.jp/shop/frombeauty",
-    "https://m.qoo10.jp/shop/unicornmall"
+    "https://m.qoo10.jp/shop/unicornmall",
+    "https://m.qoo10.jp/shop/hottem",
+    "https://m.qoo10.jp/shop/changmidang",
+    "https://m.qoo10.jp/shop/peopleji"
   ],
   "pending_keywords": [
-    "スキン 1004 マダガスカル センテラ アンプル",
     "オールデイカバー ブラッククッション#5色 BEST クッショングラス ナチュラル #5色 本品 + 詰め替え",
     "新作 グリッツストーンハイライター #12色 ハイライト",
     "BEST インクグラスティングリップグロス",
@@ -82,9 +102,15 @@
     "スキン レイヤー フィット チーク",
     "サロン10アンプルヘアミスト",
     "デューイフィット パレット 12.",
-    "バイオコラーゲンリアルディープマスク"
+    "バイオコラーゲンリアルディープマスク",
+    "Zero Sugar ヘルシーブレスキャンディ ット 01)ユーカリ 02）クーリングピーチ 口臭ケア",
+    "ラベルローズプランピングリップティント 23 Dawn Rose ドーンローズ ティント",
+    "パーフェクトツインリップ #903 Nude Odd 4. +4. リップ",
+    "ラストオートジェルアイライナー #13 PEANUT BEIGE 0. ペンシルコンシーラー",
+    "パーフェクトヌード透明サンパッチ 分 UVA&amp;UVB強力遮断"
   ],
   "seen_keywords": [
+    "スキン 1004 マダガスカル センテラ アンプル",
     "メディヒール エッセンシャルマスクパック"
   ]
 }
