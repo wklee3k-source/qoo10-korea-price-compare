@@ -30693,5 +30693,97 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1065580984",
+    "translated_kr": "글로우 바이 제이로우 EDT SP 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그클리닉 콜라보 수딩 글로우 크림",
+      "naver": "이세이 미야케 플리츠 플리즈 오드뚜왈렛 로우 EDT SP 50ml 향수"
+    },
+    "brand": "블루 씨피알 (Blue CPR)",
+    "name": "에그클리닉 콜라보 수딩 글로우 크림",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "96600",
+    "mall": "WonderBig 원더빅",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10414027011",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8795853/87958531987.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8795853/87958531987.jpg",
+        "mall": "WonderBig 원더빅",
+        "link": "https://smartstore.naver.com/main/products/10414027011"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8246661/82466618430.jpg",
+        "mall": "TOKYOBAY",
+        "link": "https://smartstore.naver.com/main/products/4922094516"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8209409/82094091223.jpg",
+        "mall": "TOKYOBAY",
+        "link": "https://smartstore.naver.com/main/products/4549571223"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8980949/89809499980.jpg",
+        "mall": "라꾸라꾸재팬",
+        "link": "https://smartstore.naver.com/main/products/12264989264"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1141019983",
+    "translated_kr": "ロエベ 001 ウーマン EDP SP 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "우먼 EDP",
+      "naver": "여성 버버리 향수 클래식 런던 우먼 오드퍼퓸 EDP 프루티, 100ml, 1개"
+    },
+    "brand": "버버리 (BURBERRY)",
+    "name": "우먼 EDP",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "54800",
+    "mall": "PerfumeFit",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13430290590",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9097480/90974800926.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097480/90974800926.jpg",
+        "mall": "PerfumeFit",
+        "link": "https://smartstore.naver.com/main/products/13430290590"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8053974/80539741508.4.jpg",
+        "mall": "향기랜드",
+        "link": "https://smartstore.naver.com/main/products/3041997402"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8383923/83839233971.jpg",
+        "mall": "향기랜드",
+        "link": "https://smartstore.naver.com/main/products/6294731482"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8222980/82229804411.1.jpg",
+        "mall": "푸르내음",
+        "link": "https://smartstore.naver.com/main/products/4685283693"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
