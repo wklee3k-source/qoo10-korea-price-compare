@@ -10236,5 +10236,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1183123216",
+    "translated_kr": "너리싱바디로션레몬민트1L",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디로션 [레몬민트향]"
+    },
+    "brand": "나드 (NARD)",
+    "name": "바디로션 [레몬민트향]",
+    "volume": "000ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210850141",
+    "translated_kr": "리얼카로틴IPMP블레미쉬세럼팩패드,80매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "캐로틴 IPMP 바디로션"
+    },
+    "brand": "에이프릴스킨 (APRILSKIN)",
+    "name": "캐로틴 IPMP 바디로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 31000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
