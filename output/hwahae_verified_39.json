@@ -33662,5 +33662,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1193784439",
+    "translated_kr": "그로우턴 엑소좀 브러시 앰플 100ml + 리필 100ml 두피 케어 스칼프 미용액 탈모·볼륨감 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1186021425",
+    "translated_kr": "메디타임 보타리넘 더마지움 크림·56080",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "네오 보탈리늄 더마지움 크림"
+    },
+    "brand": "메디타임 (meditime)",
+    "name": "네오 보탈리늄 더마지움 크림",
+    "volume": "40g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
