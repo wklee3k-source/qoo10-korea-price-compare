@@ -50721,5 +50721,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188182768",
+    "translated_kr": "ホワイトホリッククリーム 50ml, 2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179932682",
+    "translated_kr": "キュリペア サンドラッピング 35ml(SPF50+ PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "큐리페어 멜라크림",
+      "naver": "[광채/기미] 코페르 큐리페어 멜라크림 21ml 기획(+4ml)"
+    },
+    "brand": "코페르 (KOPHER)",
+    "name": "큐리페어 멜라크림",
+    "volume": "3mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28800",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000246297",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6096280/60962800574.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6096280/60962800574.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000246297"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096361/90963611213.jpg",
+        "mall": "별별올리브",
+        "link": "https://smartstore.naver.com/main/products/13419100877"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118496/91184960065.jpg",
+        "mall": "제이스케어",
+        "link": "https://smartstore.naver.com/main/products/13640449356"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
