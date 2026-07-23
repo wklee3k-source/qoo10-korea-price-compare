@@ -821,6 +821,12 @@ jobs:
     # 네트워크 정책으로 차단되어 있어서, GitHub Actions 러너에서 대신 실행한다.
     if: github.event_name == 'workflow_dispatch' && inputs.naver_test_query != ''
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    concurrency:
+      group: hwahae-brand-lookup-queue
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
 
@@ -849,17 +855,17 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
-      - name: Full hwahae brand lookup (308 brands, background)
+      - name: Full hwahae brand lookup (chunked, background, self-retriggers)
         working-directory: src
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          python hwahae_brand_lookup.py ../data/test_brands_temp.json /tmp/hwahae_new_mappings.json
+          python hwahae_brand_lookup.py ../data/oliveyoung_pending_brands.json /tmp/hwahae_new_mappings.json 400
           echo "=== 결과 ==="
           cat /tmp/hwahae_new_mappings.json
           python3 -c "import json; existing = json.load(open('../data/brand_translations_learned.json')); new = json.load(open('/tmp/hwahae_new_mappings.json')); before = len(existing); existing.update(new); json.dump(existing, open('../data/brand_translations_learned.json', 'w'), ensure_ascii=False, indent=2); print(f'사전 {before}개 -> {len(existing)}개 ({len(existing)-before}개 신규 추가)')"
-          git add ../data/brand_translations_learned.json
-          git diff --cached --quiet || git commit -m "Auto: hwahae brand lookup added new brand mappings"
+          git add ../data/brand_translations_learned.json ../data/oliveyoung_pending_brands.json
+          git diff --cached --quiet || git commit -m "Auto: hwahae brand lookup batch (chunk of up to 400)"
           for i in $(seq 1 10); do
             if git push origin main; then echo "push 성공"; break; fi
             sleep_time=$((RANDOM % 6 + 1))
@@ -867,6 +873,13 @@ jobs:
             sleep "$sleep_time"
             git pull --rebase origin main -q
           done
+          REMAINING=$(python3 -c "import json; print(len(json.load(open('../data/oliveyoung_pending_brands.json'))))")
+          if [ "$REMAINING" -gt 0 ]; then
+            echo "[자동트리거] 남은 브랜드 ${REMAINING}개 -> 다음 배치 트리거"
+            curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+              -d '{"ref":"main","inputs":{"naver_test_query":"hwahae_brand_next_batch"}}'
+          fi
 
 
   build_excel:
