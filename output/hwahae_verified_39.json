@@ -21196,5 +21196,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205746320",
+    "translated_kr": "リッチサロン モロッコアルガンオイルセラム 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리치살롱 모로코 아르간 오일세럼"
+    },
+    "brand": "사라나라 (saranara)",
+    "name": "리치살롱 모로코 아르간 오일세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1091551262",
+    "translated_kr": "ハートリーフクエルセチノールポアディープクレンジングフォーム 150ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
