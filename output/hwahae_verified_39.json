@@ -53747,5 +53747,67 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208892070",
+    "translated_kr": "moumou(ムームー)オードパルファン(香水)リネン(透き通るような爽やかな香り)10ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1158335117",
+    "translated_kr": "케어세라(CareCera) AP페이스&바디크림 70g (세라마이드플러스×7종의 천연형 세라마이드 배합)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "CareCera 케어세라 AP 페이스 &amp; 바디 크림 70ml 1개"
+    },
+    "brand": "마몽드 (Mamonde)",
+    "name": "CareCera 케어세라 AP 페이스 &amp; 바디 크림 70ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "24280",
+    "mall": "동경픽크닉",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13035979678",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9058049/90580490770.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058049/90580490770.jpg",
+        "mall": "동경픽크닉",
+        "link": "https://smartstore.naver.com/main/products/13035979678"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101368/91013684197.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13469173846"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9004244/90042448160.jpg",
+        "mall": "Louicci",
+        "link": "https://smartstore.naver.com/main/products/12497937307"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8895123/88951239827.jpg",
+        "mall": "TokyoLife",
+        "link": "https://smartstore.naver.com/main/products/11406729462"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
