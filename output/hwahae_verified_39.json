@@ -50889,5 +50889,78 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169843790",
+    "translated_kr": "シカプラストバームB5+ / CicaPlast Baume B5+ (40ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카플라스트 밤 B5+",
+      "naver": "라로슈포제 시카플라스트 B5 수딩 리페어 밤 40ml LA ROCHEPOSAY"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "시카플라스트 밤 B5+",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25900",
+    "mall": "호주직구마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8821238346",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8636573/86365738669.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8636573/86365738669.jpg",
+        "mall": "호주직구마켓",
+        "link": "https://smartstore.naver.com/main/products/8821238346"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8763225/87632258890.jpg",
+        "mall": "투데이헬씨몰",
+        "link": "https://smartstore.naver.com/main/products/10087756232"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8763218/87632184292.jpg",
+        "mall": "투데이헬씨몰",
+        "link": "https://smartstore.naver.com/main/products/10087681634"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078830/90788302619.jpg",
+        "mall": "티오티셀러",
+        "link": "https://smartstore.naver.com/main/products/13243792287"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8661604/86616043344.1.jpg",
+        "mall": "유로타이거",
+        "link": "https://smartstore.naver.com/main/products/9071543022"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1167498546",
+    "translated_kr": "ヒアル B5 セラム 30ml &amp; 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루 B5 세럼"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "히알루 B5 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 55000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
