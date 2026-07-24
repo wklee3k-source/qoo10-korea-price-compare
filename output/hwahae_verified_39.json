@@ -36355,5 +36355,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162421706",
+    "translated_kr": "クラシック ウォームコットン EDP 30ml SP （香水）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "웜 코튼 EDP",
+      "naver": "클린 향수 EDP 웜 코튼, 60ml, 1개"
+    },
+    "brand": "클린 (CLEAN)",
+    "name": "웜 코튼 EDP",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38850",
+    "mall": "씨이오보떼",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11209553038",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8875406/88754063369.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8875406/88754063369.4.jpg",
+        "mall": "씨이오보떼",
+        "link": "https://smartstore.naver.com/main/products/11209553038"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8167912/81679124411.11.jpg",
+        "mall": "로맨틱퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/4134603357"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117524/91175245944.jpg",
+        "mall": "퍼퓸하우스S",
+        "link": "https://smartstore.naver.com/main/products/13630735280"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8250016/82500167441.2.jpg",
+        "mall": "향기랜드",
+        "link": "https://smartstore.naver.com/main/products/4955647233"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1138374893",
+    "translated_kr": "香栄化学 エルカラ20 400ml レフィル 詰替用",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
