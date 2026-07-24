@@ -53881,5 +53881,54 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1048468592",
+    "translated_kr": "【국내정품】유스 파워 에센스 로션 / 80mL 검은누룩발효파워에센스로션",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179699936",
+    "translated_kr": "[輪郭アンプル] コアタイムアンプル 15ml (+7ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코어타임 앰플",
+      "naver": "뉴라덤 더마크림 100ml, 1개"
+    },
+    "brand": "뉴라덤 (NEURADERM)",
+    "name": "코어타임 앰플",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26900",
+    "mall": "뉴라덤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10939269001",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8848377/88483775036.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8848377/88483775036.4.jpg",
+        "mall": "뉴라덤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10939269001"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
