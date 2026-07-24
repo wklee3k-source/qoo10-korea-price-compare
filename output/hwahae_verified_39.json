@@ -51956,5 +51956,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1186527438",
+    "translated_kr": "[100% 正規品] グリーントマトクリーム 90ml / 毛穴 乾燥肌 保湿 敏感肌 潤い スキンケア 角質 老廃物 ヴィーガン 大容量",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1075016731",
+    "translated_kr": "韓国コスメ 肌の保湿The Niacinamide 15 Serum 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 나이아신아마이드 15 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 나이아신아마이드 15 세럼",
+    "volume": "20mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
