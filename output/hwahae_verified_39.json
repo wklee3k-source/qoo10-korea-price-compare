@@ -53246,5 +53246,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1192452345",
+    "translated_kr": "ヒアルロン1% セラム 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루론 1% 세럼",
+      "naver": "더마팩토리 히알루론 1% 세럼 30ml"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "히알루론 1% 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "20000",
+    "mall": "주식회사제이씨",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11351614589",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8889612/88896124931.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889612/88896124931.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11351614589"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8859145/88591452037.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/11046945826"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889612/88896124906.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11351614564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8859145/88591452467.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/11046946256"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213319005",
+    "translated_kr": "マデカクリーム ハイドラカーミング 50ml*1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
