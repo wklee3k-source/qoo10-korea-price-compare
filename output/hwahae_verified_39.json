@@ -46047,5 +46047,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193967734",
+    "translated_kr": "PDRN リジュビネイティング クリーム 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프리미엄 PDRN 리페어 크림"
+    },
+    "brand": "닥터리쥬피디 (Dr. REJUPD)",
+    "name": "프리미엄 PDRN 리페어 크림",
+    "volume": "20g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 70000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158163831",
+    "translated_kr": "[1+1] 化粧映えする日焼け止め/プロバイオダームコラーゲンエッセンスサンクリーム50ml/BOH/BIO HEAL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
