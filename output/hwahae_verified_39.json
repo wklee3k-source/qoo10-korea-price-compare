@@ -34716,5 +34716,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195196973",
+    "translated_kr": "1秒 ダメージケア マーブル ヘアパック 300g LPP プロテイン トリートメント",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Everyone 3 in 1 Citrus & Mint Lotion (에브리원로션시트러스민트)"
+    },
+    "brand": "EO (이오프로덕트)",
+    "name": "(해외) Everyone 3 in 1 Citrus & Mint Lotion (에브리원로션시트러스민트)",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211134600",
+    "translated_kr": "【NEW】 シェイキングミスト",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "쉐이킹 시너지 미스트 [슬러시 쿨링]",
+      "naver": "퓌 쉐이킹 시너지 미스트 쿨링물광 슬러쉬 쿨링"
+    },
+    "brand": "퓌 (fwee)",
+    "name": "쉐이킹 시너지 미스트 [슬러시 쿨링]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26900",
+    "mall": "블링버스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13655052738",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119956/91199563523.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119956/91199563523.jpg",
+        "mall": "블링버스",
+        "link": "https://smartstore.naver.com/main/products/13655052738"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
