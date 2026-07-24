@@ -53641,5 +53641,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1185513461",
+    "translated_kr": "エーキュア ピュリファイング スポット クリーム 2X 30ml 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183988943",
+    "translated_kr": "헤어 트리트먼트 1000ml (대용량) LPP 프로테인 집중 케어 / 극손상 보수 (베이베리 오차드 향) 1L × 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver": "딥레이어 H 트리트먼트 40g 헤어케어 집중보수 40g 1개"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "27500",
+    "mall": "라온클럽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13332333601",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9087684/90876843935.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087684/90876843935.jpg",
+        "mall": "라온클럽",
+        "link": "https://smartstore.naver.com/main/products/13332333601"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
