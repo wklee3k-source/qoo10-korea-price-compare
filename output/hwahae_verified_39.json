@@ -53689,5 +53689,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1164572296",
+    "translated_kr": "샌달우드 SANDALWOOD 신의 백단 오드트왈렛 30mL 백단향 향수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "샌달우드",
+      "naver": "루치아노 소프라니 피코페스카 EDT 50ml"
+    },
+    "brand": "피네쌍스 (FINESSENCE)",
+    "name": "샌달우드",
+    "volume": "2ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39000",
+    "mall": "리니퍼퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4810921698",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8235544/82355444364.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8235544/82355444364.1.jpg",
+        "mall": "리니퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/4810921698"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113749/91137496128.jpg",
+        "mall": "육칠코퍼레이션",
+        "link": "https://smartstore.naver.com/main/products/13592985697"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102931/91029315790.jpg",
+        "mall": "신우공칠",
+        "link": "https://smartstore.naver.com/main/products/13484805438"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191434560",
+    "translated_kr": "ハイプライム コラーゲン フィルムマスクパック 5枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
