@@ -37166,5 +37166,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1147314397",
+    "translated_kr": "씨본 브라이트베일 UV 프로텍터 40g 국내정품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208715918",
+    "translated_kr": "セインムー ボーテロンド シェルル バスト ハリ デコルテ ボディケア美容液 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
