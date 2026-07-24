@@ -54878,5 +54878,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1170033513",
+    "translated_kr": "ライブルリング クレンズ 15ml×10袋入り 6種から3つ選択[レモンリンゴブドウグレープフルーツ梅グリーンアップル味]/食べ過ぎチート/ビネガー/1日2包/ジュース代わりに/健康飲料/韓",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1141576440",
+    "translated_kr": "Fix-on Primer Hydro 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "픽스온 프라이머 [하이드로]",
+      "naver": "[모공지우개] 코드글로컬러 픽스온 프라이머 인 스틱 5g SPF 30  PA ++++"
+    },
+    "brand": "코드글로컬러 (codeglokolor)",
+    "name": "픽스온 프라이머 [하이드로]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "8000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000228452",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5906569/59065698273.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5906569/59065698273.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000228452"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8958913/89589137339.jpg",
+        "mall": "다미한",
+        "link": "https://smartstore.naver.com/main/products/12044626640"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
