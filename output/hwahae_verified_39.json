@@ -53209,5 +53209,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212001233",
+    "translated_kr": "아쿠아 에센치알레 블루 EDT SP 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림",
+      "naver": "살바토레 페라가모 아쿠아 에센치알레 블루 오드 뚜왈렛 1.7온스"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "144600",
+    "mall": "CONL",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13615417341",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9115992/91159927753.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9115992/91159927753.jpg",
+        "mall": "CONL",
+        "link": "https://smartstore.naver.com/main/products/13615417341"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8964704/89647046413.jpg",
+        "mall": "NY FLow",
+        "link": "https://smartstore.naver.com/main/products/12102535708"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1155003250",
+    "translated_kr": "つや米 トーンアップ 水分 サンクリーム 日焼け止め 化粧下地 UVカット SPF50+ PA++++ 韓国コスメ [ロイヤルショップ] 100mL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
