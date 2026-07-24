@@ -38392,5 +38392,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1181384570",
+    "translated_kr": "[ギャラリア] MADET LEN レッドムスク オードパルファム RED MUSC",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "디퍼런트 네일 에나멜 포 센서티브 스킨 [RED RED RED]"
+    },
+    "brand": "크리니크 (CLINIQUE)",
+    "name": "디퍼런트 네일 에나멜 포 센서티브 스킨 [RED RED RED]",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1181192539",
+    "translated_kr": "[TONYMOLY 토니모리] 원더 세라마이드 모찌 토너 / Wonder Ceramide Mochi Toner - 500ml / 에이징 케어 / 저자극 / 쫀득함#에이징",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세라마이드 모찌 토너"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "세라마이드 모찌 토너",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
