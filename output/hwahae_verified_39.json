@@ -54931,5 +54931,54 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1160787843",
+    "translated_kr": "[あたしンちエディション] プロポリストリートメントアンプルエッセンス, 300ml/2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "785035076",
+    "translated_kr": "[ROUND LAB] 1025 Dokdo Cleanser 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1025 독도 클렌저",
+      "musinsa": "[무신사 단독] 1025 독도 토너 500ml(+독도 클렌저 40ml + 워터겔 마스크 1매 증정)",
+      "naver": "라운드랩 1025 독도 클렌저 150ml"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "1025 독도 클렌저",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "11000",
+    "mall": "떳다웰빙",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5273740246",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8281825/82818252761.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8281825/82818252761.jpg",
+        "mall": "떳다웰빙",
+        "link": "https://smartstore.naver.com/main/products/5273740246"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
