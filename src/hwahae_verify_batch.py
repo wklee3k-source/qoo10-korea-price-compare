@@ -126,6 +126,37 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
         return None
 
 
+def _search_musinsa(keyword: str, known_volume: str, known_brand: str) -> dict | None:
+    """후보4: 무신사 검색(격리된 서브프로세스) — 화해와 같은 역할(브랜드/
+    상품명 확인)을 하면서, 자체적으로 구매 가능한 쇼핑몰이라 실제 구매링크도
+    바로 제공한다(goods_no로 상품페이지 URL 구성)."""
+    try:
+        proc = subprocess.run(
+            [sys.executable, str(SCRIPT_DIR / "musinsa_name_corrector.py"), keyword, known_volume, known_brand],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        r = json.loads(proc.stdout)
+        if not r.get("corrected"):
+            return None
+        top = (r.get("all_candidates") or [{}])[0]
+        goods_no = top.get("goods_no")
+        return {
+            "source": "musinsa",
+            "name": r.get("corrected"),
+            "brand": r.get("brand"),
+            "volume": None,
+            "price": top.get("price"),
+            "product_url": f"https://www.musinsa.com/products/{goods_no}" if goods_no else None,
+            "image": None,
+            "mallName": "무신사",
+        }
+    except Exception as e:  # noqa: BLE001
+        print(f"    [무신사오류] {type(e).__name__}: {e}")
+        return None
+
+
 def _extract_quantity(text: str) -> int:
     """제목/상품명에서 실제 구매수량(묶음개수)을 추출한다.
     - "1+1", "2+1" 같은 증정/묶음 표기 → 앞뒤 숫자 합
@@ -245,22 +276,27 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         print(f"[상품] {item['goods_no']}: {kw_raw}")
 
-        # 2차: 3곳에 각각 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
+        # 2차: 4곳에 각각 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
         cand_exa = _search_exa(kw_raw)
         cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
+        cand_musinsa = _search_musinsa(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
 
-        # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해가
-        # 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로 네이버를
-        # 한 번 더 검색한다. 초벌번역이 부정확해서 네이버에서 못 찾는
-        # 케이스가 상당수 있었다(실측: 화해만 찾고 네이버 구매링크 없는
-        # 실패가 528건).
-        if not cand_naver and cand_hwahae and cand_hwahae.get("name"):
-            hwahae_query = f"{cand_hwahae.get('brand') or ''} {cand_hwahae['name']}".strip()
-            print(f"    [화해이름 재검색] '{kw_cleaned}' 실패 -> 화해확인명 '{hwahae_query}'로 재검색")
-            cand_naver_retry = _search_naver(hwahae_query, known_brand)
-            if cand_naver_retry:
-                cand_naver = cand_naver_retry
+        # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해 또는
+        # 무신사가 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로
+        # 네이버를 한 번 더 검색한다(구매링크는 네이버쪽이 더 신뢰판매처
+        # 등급판정을 정교하게 하므로 우선한다). 초벌번역이 부정확해서
+        # 네이버에서 못 찾는 케이스가 상당수 있었다(실측: 화해만 찾고
+        # 네이버 구매링크 없는 실패가 528건).
+        if not cand_naver:
+            for helper in (cand_hwahae, cand_musinsa):
+                if helper and helper.get("name"):
+                    retry_query = f"{helper.get('brand') or ''} {helper['name']}".strip()
+                    print(f"    [{helper['source']}이름 재검색] '{kw_cleaned}' 실패 -> 확인명 '{retry_query}'로 재검색")
+                    cand_naver_retry = _search_naver(retry_query, known_brand)
+                    if cand_naver_retry:
+                        cand_naver = cand_naver_retry
+                        break
 
         # 수량(묶음개수) 일치 확인: 큐텐 원본과 네이버 결과의 수량이 다르면
         # "1개" 기준으로 다시 찾는다(추가 검색 1회, 수량 불일치일 때만 발생).
@@ -280,10 +316,10 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                     print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
                     cand_naver = None
 
-        candidates = [c for c in [cand_exa, cand_hwahae, cand_naver] if c]
+        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver] if c]
 
         if not candidates:
-            print("    [전체실패] 3곳 다 못 찾음")
+            print("    [전체실패] 4곳 다 못 찾음")
             entry = {
                 "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
                 "brand": None, "name": None, "volume": "", "source": None, "obsolete": None,
@@ -314,6 +350,8 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         hwahae_data = cand_hwahae or {}
         naver_data = cand_naver or {}
 
+        musinsa_data = cand_musinsa or {}
+
         entry = {
             "goods_no": item["goods_no"],
             "translated_kr": kw_raw,
@@ -325,10 +363,12 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
             "obsolete": hwahae_data.get("obsolete"),
             "sale": hwahae_data.get("sale"),
-            "price": naver_data.get("price") or hwahae_data.get("price"),
-            "mall": naver_data.get("mall"),
-            "seller_trust": naver_data.get("seller_trust"),
-            "product_url": naver_data.get("product_url"),  # 화해는 정보앱이지 판매처가 아니므로 폴백 안 함
+            "price": naver_data.get("price") or hwahae_data.get("price") or musinsa_data.get("price"),
+            "mall": naver_data.get("mall") or ("무신사" if winner["source"] == "musinsa" else None),
+            "seller_trust": naver_data.get("seller_trust") or ("신뢰채널" if winner["source"] == "musinsa" else None),
+            # 화해는 정보앱이지 판매처가 아니라 폴백 안 하지만, 무신사는 실제
+            # 구매 가능한 쇼핑몰이므로 winner가 무신사면 그 구매링크를 쓴다.
+            "product_url": naver_data.get("product_url") or (musinsa_data.get("product_url") if winner["source"] == "musinsa" else None),
             "image_url": naver_data.get("image_url"),  # 사진도 마찬가지로 네이버 것만 사용
             "image_candidates": naver_data.get("image_candidates") or [],
         }
