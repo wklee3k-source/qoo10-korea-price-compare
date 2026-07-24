@@ -37001,5 +37001,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212751653",
+    "translated_kr": "【2개 세트】리주얀 PDRN10000 크림 30ml + 주베클 PDLLA 10000+ 크림 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212750581",
+    "translated_kr": "리주얀 PDRN10000 크림 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "뉴셀릭 마이크로 PDRN 10000 TT크림 30ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "59000",
+    "mall": "순수를더하다",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13485768786",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103027/91030279138.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103027/91030279138.jpg",
+        "mall": "순수를더하다",
+        "link": "https://smartstore.naver.com/main/products/13485768786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119355/91193556812.jpg",
+        "mall": "에띠어리",
+        "link": "https://smartstore.naver.com/main/products/13649046033"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054403/90544031753.jpg",
+        "mall": "종로약방",
+        "link": "https://smartstore.naver.com/main/products/12999520661"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
