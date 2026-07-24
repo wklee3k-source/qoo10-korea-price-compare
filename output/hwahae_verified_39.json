@@ -51735,5 +51735,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1159446808",
+    "translated_kr": "サンシビオ エイチツーオー 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "센시비오 젤 무쌍",
+      "naver": "바이오더마 센시비오 젤 무쌍 200ml"
+    },
+    "brand": "바이오더마 (BIODERMA)",
+    "name": "센시비오 젤 무쌍",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23400",
+    "mall": "바이오더마코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/685953873",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1120502/11205024274.26.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1120502/11205024274.26.jpg",
+        "mall": "바이오더마코리아",
+        "link": "https://smartstore.naver.com/main/products/685953873"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1171444773",
+    "translated_kr": "【正規品 / 140ml】赤あずき クレイパック / あずきパック 毛穴 黒ずみ 角質 くすみ 洗い流す 韓国コスメ 韓国伝統成分×毛穴集中ケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
