@@ -31150,5 +31150,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194273240",
+    "translated_kr": "プレミアムペプチド ナイター 1500ショット ネックパッチ1.0_1セット(4枚） /1か月集中管理/ 体系的管理/一日一枚の習慣で荒れていたネックラインを滑らかに~",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193753404",
+    "translated_kr": "プレミアムペプチド ナイテ 1000 ショート ネックスティック20g+Collagen Naite Thread Neck Cream1.5ml*2ea",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프리미엄 펩타이드 나이테 1000샷 넥스틱 2.0",
+      "naver": "메디필 프리미엄 펩타이드 나이테 1000샷 넥스틱 2.0 20g 목주름"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "프리미엄 펩타이드 나이테 1000샷 넥스틱 2.0",
+    "volume": "20g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "21500",
+    "mall": "메디필 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9531925372",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8707642/87076427642.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707642/87076427642.2.jpg",
+        "mall": "메디필 스토어",
+        "link": "https://smartstore.naver.com/main/products/9531925372"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
