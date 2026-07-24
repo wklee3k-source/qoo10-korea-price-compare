@@ -37527,5 +37527,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1163059967",
+    "translated_kr": "시카페어 인센티브 수징 리페어 크림, 50ml, 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194643294",
+    "translated_kr": "닥터씨라보 (DR.CI:LABO) New VC100 에센스로션EX V 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "솔리드 컬러 [VC100]",
+      "naver": "발라젤 발라 솔리드 컬러 VC100"
+    },
+    "brand": "발라 (VALLA)",
+    "name": "솔리드 컬러 [VC100]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15000",
+    "mall": "아몬드영",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12381047968",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8992555/89925558683.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8992555/89925558683.jpg",
+        "mall": "아몬드영",
+        "link": "https://smartstore.naver.com/main/products/12381047968"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118753/91187537346.jpg",
+        "mall": "뷰티재료 네일아트",
+        "link": "https://smartstore.naver.com/main/products/13643026634"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118467/91184678276.jpg",
+        "mall": "네일재료펙토리",
+        "link": "https://smartstore.naver.com/main/products/13640167567"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118156/91181565333.1.jpg",
+        "mall": "네일재료쇼핑몰네일아이",
+        "link": "https://smartstore.naver.com/main/products/13637054626"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
