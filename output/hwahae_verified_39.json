@@ -34561,5 +34561,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1018025526",
+    "translated_kr": "델리케이트워시 라 팜 150ml LAFEMME 데리케이트존 솝 케어 바디워시 식물 에센스 보습 결 라벤더 소취 PH 페미닌 냄새 검은 자국",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올기빙 밤나무 아하 바디워시",
+      "naver": "과일나라 올기빙 밤나무 아하 바디워시 500ml"
+    },
+    "brand": "과일나라 (KWAILNARA)",
+    "name": "올기빙 밤나무 아하 바디워시",
+    "volume": "500ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "8900",
+    "mall": "마켓 파랑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11483359923",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8902787/89027870288.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8902787/89027870288.jpg",
+        "mall": "마켓 파랑",
+        "link": "https://smartstore.naver.com/main/products/11483359923"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8918918/89189184253.jpg",
+        "mall": "마켓 파랑",
+        "link": "https://smartstore.naver.com/main/products/11644673787"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204813717",
+    "translated_kr": "大容量トナー ツボクサ グリーンダーマ マイルド シカ ビッグトナー 500ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
