@@ -32320,5 +32320,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213378280",
+    "translated_kr": "ザ・ビタA レチナールショット タイトニングブースター 15ml/더 비타 A 레티날 샷 타이트닝 부스터 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티날 투스텝 겔 마스크",
+      "naver": "셀리맥스 더 비타A 레티날 샷 타이트닝 투스텝 겔마스크 4매 / 모공 주름 탄력"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "레티날 투스텝 겔 마스크",
+    "volume": "1.5ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "셀리맥스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13678011791",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122252/91222522810.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122252/91222522810.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/13678011791"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9053934/90539343298.1.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12994832206"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120626/91206262576.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13661751735"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202066299",
+    "translated_kr": "グリコリックアシッド7%トーニングソリューション, 240ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
