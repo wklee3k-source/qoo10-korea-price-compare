@@ -838,10 +838,6 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
-      - name: Investigate Olive Young Global brand page
-        working-directory: src
-        run: |
-          python _investigate_oy_global.py
 
       - name: Full hwahae brand lookup (chunked, background, self-retriggers)
         working-directory: src
