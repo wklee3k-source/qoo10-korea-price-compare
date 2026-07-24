@@ -54490,5 +54490,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1071406274",
+    "translated_kr": "フェルナンダ FERNANDA フレグランス ヘアオイル マリアリゲル 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프래그런스 오데코롱 [마리아리갈]",
+      "naver": "페르난다 마리아리갈 리치 오드코롱 향수 30ml"
+    },
+    "brand": "페르난다 (FERNANDA)",
+    "name": "프래그런스 오데코롱 [마리아리갈]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "19700",
+    "mall": "도쿄락",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4537470220",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8208199/82081993528.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8208199/82081993528.3.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/4537470220"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8615079/86150792703.jpg",
+        "mall": "더 하마 샵",
+        "link": "https://smartstore.naver.com/main/products/8606292380"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089208/90892085565.jpg",
+        "mall": "일본화장품스토어",
+        "link": "https://smartstore.naver.com/main/products/13347575233"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8930412/89304129290.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/11759618703"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8957092/89570921288.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/12026410596"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200755583",
+    "translated_kr": "【新商品】【人気】EGFxケア オイントジェル 15ml 企画 ＋ クリーム 7ml ゆらぎがちな肌をやさしくケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
