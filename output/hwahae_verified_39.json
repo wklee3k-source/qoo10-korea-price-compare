@@ -37765,5 +37765,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1040290899",
+    "translated_kr": "[GRANHAND]【1+1】 핸드 크림 60g 3종 SUSIE SALMON",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 퍼퓸 (SUSIE SALMON)"
+    },
+    "brand": "그랑핸드 (GRANHAND)",
+    "name": "멀티 퍼퓸 (SUSIE SALMON)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1131598884",
+    "translated_kr": "シカペアスリーペアインテンシブスージングリペアマスク, 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 슬리페어 인텐시브 수딩 리페어 마스크"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 슬리페어 인텐시브 수딩 리페어 마스크",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
