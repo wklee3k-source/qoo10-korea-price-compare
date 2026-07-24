@@ -54626,5 +54626,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1149960305",
+    "translated_kr": "アトバリア365ハイドロスージングクリーム, 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 하이드로 수딩크림",
+      "naver": "NEW [싱글] 에스트라 아토베리어365 하이드로수딩크림 80ml x 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 하이드로 수딩크림",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "28050",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13558055174",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110256/91102565541.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110256/91102565541.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/13558055174"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117935/91179358846.5.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/13634848165"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172147508",
+    "translated_kr": "【SEVENTEEN ウォヌPICK】 タンジェリン ビタC トナーパッド 90枚 ＋&nbsp; セラム 35ml 2種セット",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
