@@ -28169,5 +28169,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207227328",
+    "translated_kr": "アクアグロウリングサンスクリーン 45ml グリーンティーフレッシュサンスクリーン 45ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선 스크린 [SPF50+/PA+++] [그린티프레쉬]",
+      "naver": "닥터엘시아 그린티 프레쉬 선 스크린"
+    },
+    "brand": "닥터엘시아 (Dr.Althea)",
+    "name": "선 스크린 [SPF50+/PA+++] [그린티프레쉬]",
+    "volume": "45ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23500",
+    "mall": "Dr.Althea",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11838610192",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8938312/89383120786.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8938312/89383120786.4.jpg",
+        "mall": "Dr.Althea",
+        "link": "https://smartstore.naver.com/main/products/11838610192"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203705320",
+    "translated_kr": "ビタCテカブレミッシュショット ゲルマスクパック（5枚入）（シカ＆リードル）/ シミ取りショットマスク/パックマスク/パック/フェイスパック",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
