@@ -27203,5 +27203,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203201187",
+    "translated_kr": "ライス70 グロウ ミルキートナー 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "라이스 70 글로우 밀키 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "라이스 70 글로우 밀키 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205914428",
+    "translated_kr": "グルタチオングロウトナー 140ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
