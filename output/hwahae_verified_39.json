@@ -57030,5 +57030,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204156842",
+    "translated_kr": "[1+1] トン＆スポット コレクターアンプル 30ml +30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "톤앤스팟 코렉터 앰플",
+      "naver": "1+1 리덴스 톤앤스팟 코렉터 앰플"
+    },
+    "brand": "리덴스 (Re:dence)",
+    "name": "톤앤스팟 코렉터 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24000",
+    "mall": "이옷이옷",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13659039720",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120355/91203550505.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120355/91203550505.jpg",
+        "mall": "이옷이옷",
+        "link": "https://smartstore.naver.com/main/products/13659039720"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119078/91190788787.jpg",
+        "mall": "1thek",
+        "link": "https://smartstore.naver.com/main/products/13646278008"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075303/90753038583.jpg",
+        "mall": "마리공주뷰티",
+        "link": "https://smartstore.naver.com/main/products/13208527486"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164736837",
+    "translated_kr": "Torriden トリデン ダイブイン モイスチャー 水分 サンスティック 19g SPF50+PA++++ 日焼け止め スティック UVスティック 韓国コスメ DIVE IN Soothing Su",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]

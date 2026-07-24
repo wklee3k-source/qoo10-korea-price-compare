@@ -72,6 +72,13 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
     kr_brand_lower = (kr_brand_text or "").lower()
+    if not kr_brand_lower:
+        # [수정] 구매처쪽 브랜드정보 자체가 없으면(예: 승자가 exa인데 exa는
+        # 애초에 brand를 안 줌) "불일치"가 아니라 "판단불가"다 — 실측으로
+        # 확인된 버그: 이전엔 원본이 가타카나일 때만 unknown 처리했는데,
+        # 영문/한글 원본 브랜드도 똑같이 정보부족을 mismatch로 잘못
+        # 표시하고 있었다.
+        return "unknown"
     expected = brand_dict.get(orig_brand, "")
     if expected:
         candidates = [expected] + BRAND_ALIASES.get(expected, [])
@@ -94,11 +101,16 @@ def build_pairs():
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
 
-    translations = {}
+    # [구조변경 대응] 1,2단계 통합 이후엔 별도 hwahae_input_39.json이 없다.
+    # discovery_state.json의 translated_kr을 보조로 쓰되, 최우선은 검증
+    # 시점에 실제로 사용된 값(hwahae_verified_39.json 각 항목 자체의
+    # translated_kr) — 이게 정확히 그 상품을 검증할 때 쓴 번역문이고,
+    # discovery_state.json 쪽은 이후 상태가 달라졌을 수 있어 신뢰도가 낮다.
+    translations = {gn: p.get("translated_kr", "") for gn, p in qoo10_by_goods.items() if p.get("translated_kr")}
     input_path = OUTPUT / "hwahae_input_39.json"
     if input_path.exists():
         for x in json.loads(input_path.read_text(encoding="utf-8")):
-            translations[x["goods_no"]] = x.get("translated_kr", "")
+            translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "ok": 0}
@@ -130,6 +142,28 @@ def build_pairs():
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
 
+        # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
+        # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
+        # 용량으로 맞춰서 고쳐준다. 세트상품(예: "50g+20g")은 첫 번째
+        # 숫자(주 용량)만 바꾸고 나머지는 그대로 둔다.
+        qoo10_title_display = q["title"]
+        qoo10_title_highlighted = ""  # 바뀐 부분을 <mark>로 감싼 미리보기용(읽기전용)
+        vol_auto_corrected = False
+        if not vol_match and qoo10_vol is not None and kr_vol is not None:
+            kr_vol_int = int(kr_vol) if kr_vol == int(kr_vol) else kr_vol
+            qoo10_title_display = re.sub(
+                r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
+                lambda m: f"{kr_vol_int}{m.group(1)}",
+                q["title"], count=1,
+            )
+            escaped_title = re.sub(
+                r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
+                lambda m: f'<mark class="vol-fix">{kr_vol_int}{m.group(1)}</mark>',
+                q["title"], count=1,
+            )
+            qoo10_title_highlighted = escaped_title
+            vol_auto_corrected = True
+
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
 
@@ -145,9 +179,10 @@ def build_pairs():
             or re.search(r"\d+종\s*(세트|SET)", kr_name_display, re.I)
         )
         pairs.append({
-            "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
+            "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
+            "vol_auto_corrected": vol_auto_corrected, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
-            "qoo10_name_kr": translations.get(x["goods_no"], ""),
+            "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
             "kr_qty": kr_qty, "is_set": is_set,
@@ -208,7 +243,10 @@ def build_html(pairs: list[dict]):
 
         brand_label = {"match": "일치", "mismatch": "불일치", "unknown": "판단불가"}[p["brand_status"]]
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
-        vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
+        if p.get("vol_auto_corrected"):
+            vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        else:
+            vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
@@ -232,17 +270,17 @@ def build_html(pairs: list[dict]):
         cards_html.append(f'''
 <div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
   <div class="side">
-    <h3>큐텐 원본</h3>
+    <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    {'<div class="vol-fix-preview">🔴 용량 자동수정: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    {'<div class="qoo10-brand">큐텐 브랜드: ' + esc(p['qoo10_brand']) + '</div>' if p.get('qoo10_brand') else ''}
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
     <div class="goods_no">goods_no: {goods_no}</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
+    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
