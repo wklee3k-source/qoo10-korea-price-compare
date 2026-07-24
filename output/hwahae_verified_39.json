@@ -53822,5 +53822,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1156289452",
+    "translated_kr": "パンテノールクリーム 80ml（リニューアル）1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1117569383",
+    "translated_kr": "センテラエアフィットサンクリームプラス 50ml (SPF50+ PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++]",
+      "naver": "[스킨1004] 마다가스카르 센텔라 에어핏 선크림 플러스 50ml KRSKS007"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/1983802?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5574403/55744038122.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5574403/55744038122.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/1983802?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8842714/88427149396.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/10882643378"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028942/90289426605.jpg",
+        "mall": "루미-하우스",
+        "link": "https://smartstore.naver.com/main/products/12744915664"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
