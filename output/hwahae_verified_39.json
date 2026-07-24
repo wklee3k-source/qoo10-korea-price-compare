@@ -24700,5 +24700,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1189442216",
+    "translated_kr": "アブソルート セレクティブ クリーム 1個 50ml フェイス＆ネック用 高保湿 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1169838206",
+    "translated_kr": "アブソルート セレクティブ アイコンプレックス 40ml／透明感ケア・ハリケア 高保湿アイクリーム 韓国コスメ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
