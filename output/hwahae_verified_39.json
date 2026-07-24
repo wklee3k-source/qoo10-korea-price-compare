@@ -56941,5 +56941,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211988913",
+    "translated_kr": "フィアンセ ボディミスト ホワイトフローラル 50ml 透明感のあるホワイトフローラルの香り",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1147146391",
+    "translated_kr": "フェンテフォルテ トーニングセラム 125ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "휀테 포르테 두피 트리트먼트"
+    },
+    "brand": "시세이도프로페셔널 (SHISEIDOPROFESSIONAL)",
+    "name": "휀테 포르테 두피 트리트먼트",
+    "volume": "130g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
