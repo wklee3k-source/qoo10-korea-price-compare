@@ -40520,5 +40520,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203826917",
+    "translated_kr": "ヒアルロン酸水分カプセルクリーム 55g/インナードライ・保湿・ツヤ肌 / 低刺激・水分補給",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212499809",
+    "translated_kr": "ビタ kダーククリアアイクリーム15ml リフィル",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타K 다크 클리어 아이크림",
+      "naver": "[리필] 비타K 다크 클리어 아이크림"
+    },
+    "brand": "셀라딕스 (Celladix)",
+    "name": "비타K 다크 클리어 아이크림",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19800",
+    "mall": "셀라딕스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://celladix.co.kr/product/detail.html?product_no=89&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4956386/49563863455.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4956386/49563863455.2.jpg",
+        "mall": "셀라딕스",
+        "link": "https://celladix.co.kr/product/detail.html?product_no=89&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
