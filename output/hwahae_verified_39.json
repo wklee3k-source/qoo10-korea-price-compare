@@ -53142,5 +53142,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1158739035",
+    "translated_kr": "드림 글로우 마스크 RR (6장 입+1개 구매 증정) 시트 마스크 보습 윤기 피부 브라이트닝 민감성 피부 한국 화장품 정품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨부스터 이데베논 세럼 시트 마스크",
+      "naver": "게스통 스킨부스터 이데베논 세럼 시트 마스크 7종 히알루론산 함유 집중수분 피부보습 마스크팩"
+    },
+    "brand": "게스통 (GASTON)",
+    "name": "스킨부스터 이데베논 세럼 시트 마스크",
+    "volume": "25g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "3000",
+    "mall": "gaston",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13341625538",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9088613/90886135870.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088613/90886135870.jpg",
+        "mall": "gaston",
+        "link": "https://smartstore.naver.com/main/products/13341625538"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "817605715",
+    "translated_kr": "구찌 대나무 75ml EDP SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림",
+      "naver": "노에비아 스페치알레 SP 크림50미리"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "1092500",
+    "mall": "수플러스주식회사",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5262773147",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg",
+        "mall": "수플러스주식회사",
+        "link": "https://smartstore.naver.com/main/products/5262773147"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091124/90911240424.jpg",
+        "mall": "핫태몰",
+        "link": "https://smartstore.naver.com/main/products/13366730088"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
