@@ -28550,5 +28550,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1145729526",
+    "translated_kr": "[大容量] ドクダミ 77 スージングトナー 350ml+詰め替え350ml / 韓国 人気 低刺激 鎮静 化粧水",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1177829431",
+    "translated_kr": "マイファーストセラム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초"
+    },
+    "brand": "디마프 (De:maf)",
+    "name": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
