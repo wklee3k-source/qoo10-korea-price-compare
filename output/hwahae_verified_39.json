@@ -52232,5 +52232,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208056964",
+    "translated_kr": "美白美容液 トラネキサム酸 くすみケア ツバキTXAチムトクセラム 30ml シミケア ニキビ跡ケア トーンアップ ビタミンC 乾燥肌 スピキュール 敏感肌",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1187354085",
+    "translated_kr": "エラズレン ペプタブルー クリーム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "저분자 히알루론산 2X 올인원 로션",
+      "naver": "크림밀크 저분자 히알루론산 2X 올인원 로션, 100ml, 1개"
+    },
+    "brand": "크림밀크 (KreamMilk)",
+    "name": "저분자 히알루론산 2X 올인원 로션",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11340",
+    "mall": "강산 마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11870587040",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8941509/89415097634.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941509/89415097634.jpg",
+        "mall": "강산 마켓",
+        "link": "https://smartstore.naver.com/main/products/11870587040"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041223/90412230518.jpg",
+        "mall": "바오shop",
+        "link": "https://smartstore.naver.com/main/products/12867719526"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110427/91104275833.jpg",
+        "mall": "봄봄프리마켓",
+        "link": "https://smartstore.naver.com/main/products/13559765456"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
