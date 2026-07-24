@@ -34075,5 +34075,62 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1208171928",
+    "translated_kr": "[2026BEST] 자마트로지 2종 세트-광채/탄력(부스터 130ml+세럼 45ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199006617",
+    "translated_kr": "アゼライン酸16BBカーミングセラム, 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디큐브 16BB 디큐브 아젤라인산 커밍 세럼 오일 수분 밸런스"
+    },
+    "brand": "메디큐브",
+    "name": "메디큐브 16BB 디큐브 아젤라인산 커밍 세럼 오일 수분 밸런스",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "40700",
+    "mall": "마고월드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13588342796",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113285/91132853208.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113285/91132853208.jpg",
+        "mall": "마고월드",
+        "link": "https://smartstore.naver.com/main/products/13588342796"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107512/91075125343.jpg",
+        "mall": "엘로잇",
+        "link": "https://smartstore.naver.com/main/products/13530614990"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096112/90961128029.jpg",
+        "mall": "애니바이마켓",
+        "link": "https://smartstore.naver.com/main/products/13416617693"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
