@@ -23948,5 +23948,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194379266",
+    "translated_kr": "[한국헤어케어] 라보-H 두피강화탈모샴푸 700ml 빠진머리케어샴푸 비오틴약산성 두피케어&볼륨업",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "H",
+      "naver": "아브아르네 맥주효모 비오틴 카페인 탈모완화 샴푸 1통x500ml"
+    },
+    "brand": "트레믹스 (tremix)",
+    "name": "H",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19800",
+    "mall": "삼대오백 스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/7033453181",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8457795/84577953503.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8457795/84577953503.4.jpg",
+        "mall": "삼대오백 스토어",
+        "link": "https://smartstore.naver.com/main/products/7033453181"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8443570/84435701528.1.jpg",
+        "mall": "킹찰스",
+        "link": "https://smartstore.naver.com/main/products/6891201206"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8883479/88834796437.2.jpg",
+        "mall": "글로벌엠앤케이",
+        "link": "https://smartstore.naver.com/main/products/11290286106"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194402150",
+    "translated_kr": "동국제약 센텔리안 마데카 스타톡세럼 50ml*2 + 15ml*2",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
