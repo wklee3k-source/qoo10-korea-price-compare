@@ -52095,5 +52095,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1207556247",
+    "translated_kr": "シカカーミングサンセラム 50ml SPF50+ PA++++ / 日焼け止め",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1102761265",
+    "translated_kr": "スキンプロテクションエリシアエッセンス 50ml / 肌バリア保護 / 韓国エステ専用",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에프터글로우 립 밤 [미스 에듀케이션]",
+      "naver": "나스 에프터글로우 립 밤 미스에듀케이션 3g"
+    },
+    "brand": "나스 (NARS)",
+    "name": "에프터글로우 립 밤 [미스 에듀케이션]",
+    "volume": "3g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "57300",
+    "mall": "버진뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13509702865",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+        "mall": "버진뷰티",
+        "link": "https://smartstore.naver.com/main/products/13509702865"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069658/90696588057.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/13152076966"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
