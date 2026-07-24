@@ -50836,5 +50836,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1196205568",
+    "translated_kr": "【正規品】パーフェクト修正メイクパッド（1か月分）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 수정 화장 패드",
+      "naver": "에이프릴스킨 퍼펙트 수정화장패드 30매 1개"
+    },
+    "brand": "에이프릴스킨 (APRILSKIN)",
+    "name": "퍼펙트 수정 화장 패드",
+    "volume": "55g",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "7300",
+    "mall": "떳다웰빙",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13658801715",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120331/91203312500.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120331/91203312500.jpg",
+        "mall": "떳다웰빙",
+        "link": "https://smartstore.naver.com/main/products/13658801715"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102838/91028381311.jpg",
+        "mall": "솜과롬",
+        "link": "https://smartstore.naver.com/main/products/13483870959"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205932676",
+    "translated_kr": "【1+1】 ヨモギ カミングEX モデリングパック ツーフォーム クレンザー 120mlx2個 韓国コスメ メイク落とし",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
