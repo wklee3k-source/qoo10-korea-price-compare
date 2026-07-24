@@ -52475,5 +52475,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1141508529",
+    "translated_kr": "【好きなようにセット】シャンプー / トリートメント / ノーウォッシュトリートメント / ヘアエッセンス / ウォーターエッセンスミスト / カーリングエッセンス",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터 에센스 미스트"
+    },
+    "brand": "어노브 (UNOVE)",
+    "name": "워터 에센스 미스트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209829032",
+    "translated_kr": "【公式】【NEW】MECHAI ヒアルロン酸スフレボディクリームダブルセット (2個入)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
