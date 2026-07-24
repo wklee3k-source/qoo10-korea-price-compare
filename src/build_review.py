@@ -135,6 +135,21 @@ def build_pairs():
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
 
+        # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
+        # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
+        # 용량으로 맞춰서 고쳐준다. 세트상품(예: "50g+20g")은 첫 번째
+        # 숫자(주 용량)만 바꾸고 나머지는 그대로 둔다.
+        qoo10_title_display = q["title"]
+        vol_auto_corrected = False
+        if not vol_match and qoo10_vol is not None and kr_vol is not None:
+            kr_vol_int = int(kr_vol) if kr_vol == int(kr_vol) else kr_vol
+            qoo10_title_display = re.sub(
+                r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
+                lambda m: f"{kr_vol_int}{m.group(1)}",
+                q["title"], count=1,
+            )
+            vol_auto_corrected = True
+
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
 
@@ -150,7 +165,8 @@ def build_pairs():
             or re.search(r"\d+종\s*(세트|SET)", kr_name_display, re.I)
         )
         pairs.append({
-            "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
+            "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
+            "vol_auto_corrected": vol_auto_corrected, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -213,7 +229,10 @@ def build_html(pairs: list[dict]):
 
         brand_label = {"match": "일치", "mismatch": "불일치", "unknown": "판단불가"}[p["brand_status"]]
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
-        vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
+        if p.get("vol_auto_corrected"):
+            vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        else:
+            vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
