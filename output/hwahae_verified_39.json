@@ -51496,5 +51496,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199152838",
+    "translated_kr": "[強くおすすめ] オリーブヤング ウルトラ ホワイトニング パーフェクト アンプル 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시그니처 프레그런스 바디 스프레이 [올리브영]",
+      "naver": "바디판타지 오리지널 바디미스트 236ml"
+    },
+    "brand": "바디판타지 (BODYFANTASIES)",
+    "name": "시그니처 프레그런스 바디 스프레이 [올리브영]",
+    "volume": "94ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "12000",
+    "mall": "아로마샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/3326717520",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8084072/80840723891.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8084072/80840723891.4.jpg",
+        "mall": "아로마샵",
+        "link": "https://smartstore.naver.com/main/products/3326717520"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8455672/84556727837.jpg",
+        "mall": "투게더쇼핑몰",
+        "link": "https://smartstore.naver.com/main/products/7012227515"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208145877",
+    "translated_kr": "【限定イベント】[JINSIM]スージング ハイドレーション セラム＋クリーム",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펄리글로우 하이드레이션 세럼",
+      "naver": "비웨트 펄리글로우 속광 플럼핑 세럼 40ml"
+    },
+    "brand": "비웨트 (BEWET)",
+    "name": "펄리글로우 하이드레이션 세럼",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26300",
+    "mall": "BEWET 비웨트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13635964854",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118047/91180475535.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118047/91180475535.2.jpg",
+        "mall": "BEWET 비웨트",
+        "link": "https://smartstore.naver.com/main/products/13635964854"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
