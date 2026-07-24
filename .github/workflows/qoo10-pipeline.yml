@@ -234,7 +234,7 @@ jobs:
       cancel-in-progress: false
     strategy:
       matrix:
-        branch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        branch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
@@ -297,7 +297,7 @@ jobs:
               main_path = pathlib.Path('../output/discovery_state.json')
               main_state = json.loads(main_path.read_text()) if main_path.exists() else {'pending_keywords': None}
               all_seeds = main_state.get('pending_keywords') or ['メディヒール エッセンシャルマスクパック']
-              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 10 == int(suffix)]
+              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 12 == int(suffix)]
               if not my_seeds:
                   my_seeds = [all_seeds[int(suffix) % len(all_seeds)]]
               branch_path.write_text(json.dumps({
