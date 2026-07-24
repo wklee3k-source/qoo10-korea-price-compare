@@ -54072,5 +54072,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204561275",
+    "translated_kr": "ゴールドコラーゲン エキスパートトナー 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프라임 엑스퍼트 토너",
+      "naver": "AHC 프라임 엑스퍼트 EX 토너 스킨 로션 기초 2종"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "프라임 엑스퍼트 토너",
+    "volume": "130ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "21900",
+    "mall": "SWdmc",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8063579690",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8560808/85608080013.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8560808/85608080013.1.jpg",
+        "mall": "SWdmc",
+        "link": "https://smartstore.naver.com/main/products/8063579690"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204628544",
+    "translated_kr": "ハウス・オブ・ビ・グルタチオン・フェイスフィルム（3+1）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 화이트 필름"
+    },
+    "brand": "비비랩 (BBLAB)",
+    "name": "글루타치온 화이트 필름",
+    "volume": "9.087g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
