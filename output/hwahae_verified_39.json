@@ -28547,5 +28547,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1172781112",
+    "translated_kr": "[3点セット/企画構成/復活草マスクパック1枚贈呈]復活草 パハトナー200ml+復活草 ビフィダ セラム ファーミング ドロップ 50ml+復活草 クリーム ニュートリション チューブ 75ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1155298751",
+    "translated_kr": "【リニューアル】ゼロ毛穴 ワンデーセラム 30ml 1本 毛穴ケア 肌のキメ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 모공 원데이 세럼",
+      "naver": "제로 모공 원데이 펩타이드 세럼"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로 모공 원데이 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30200",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=742&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_2773417/27734175196.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2773417/27734175196.8.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=742&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8932023/89320237785.2.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/11775727198"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9093806/90938067819.jpg",
+        "mall": "오늘출발뷰티샵",
+        "link": "https://smartstore.naver.com/main/products/13393557483"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754103/87541031379.3.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/9996529106"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
