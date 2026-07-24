@@ -37147,5 +37147,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192655535",
+    "translated_kr": "デンスオイル サクラ 90mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사크라"
+    },
+    "brand": "올리바넘 (Olbanum.)",
+    "name": "사크라",
+    "volume": "12ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164282563",
+    "translated_kr": "プロテクション マイルド サンミルク 50ml (2個)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마일드"
+    },
+    "brand": "드라마 (DeRAMA)",
+    "name": "마일드",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 550000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
