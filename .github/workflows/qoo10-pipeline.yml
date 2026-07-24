@@ -838,6 +838,11 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
+      - name: Investigate OY Global brand page for Korean name
+        working-directory: src
+        run: |
+          python _investigate_oy_brand_page.py
+
 
       - name: Full hwahae brand lookup (chunked, background, self-retriggers)
         working-directory: src
