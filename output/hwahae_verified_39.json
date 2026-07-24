@@ -42230,5 +42230,73 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1067966717",
+    "translated_kr": "[80枚/たっぷり310g] トナー 韓国コスメ 弱酸性 デイリー トナーパッド 角質ケア マスクシート 毛穴引き締め ハリ 弾力 肌キメ 水分 スキンケア トナー ピーリング ツヤ肌 コスメ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172740048",
+    "translated_kr": "Lactic Acid 5% + Hyaluronic Acid 2% Exfoliating Serum 30 ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5",
+      "naver": "히알루로닉 애시드 2% + B5 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10248980563",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10248980563"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745261/87452613128.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908110855"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745255/87452559827.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908057554"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838536/88385360513.3.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/10840854500"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
