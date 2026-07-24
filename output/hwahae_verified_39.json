@@ -19987,5 +19987,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1126662855",
+    "translated_kr": "パンテカミングサンクリームSPF50 PA ++++ 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "판테카밍 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "판테카밍 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1123888012",
+    "translated_kr": "リードルショット1000 エッセンス 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리들샷 1000",
+      "naver": "[브이티코스메틱] VT 리들샷 1000 VTPD40136"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "리들샷 1000",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "37490",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5305531/53055312061.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5305531/53055312061.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
