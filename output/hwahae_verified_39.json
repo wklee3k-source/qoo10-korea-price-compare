@@ -40636,5 +40636,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169535745",
+    "translated_kr": "[올리브영PICK!!][정품][아기발크림]EGF스케일링모이스처풋크림 130g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212943200",
+    "translated_kr": "Glycolic Acid 7% Exfoliating Toner 240ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글리코릭 애시드 7% 엑스폴리에이팅 토너",
+      "naver": "The Ordinary Glycolic Acid 7% Toning Solution 디오디너리 글리코릭 애시드 토닝 솔루션 240ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "글리코릭 애시드 7% 엑스폴리에이팅 토너",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "46640",
+    "mall": "구르",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5392104392",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8293659/82936597783.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8293659/82936597783.jpg",
+        "mall": "구르",
+        "link": "https://smartstore.naver.com/main/products/5392104392"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8245351/82453514909.jpg",
+        "mall": "SellinNY",
+        "link": "https://smartstore.naver.com/main/products/4908991215"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
