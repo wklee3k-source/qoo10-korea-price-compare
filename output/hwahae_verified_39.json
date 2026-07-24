@@ -54631,5 +54631,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1151302581",
+    "translated_kr": "【正規品】頭皮強化クリニック 脱毛症状緩和 弱酸性低刺激 シャンプー 400ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비누 [후레쉬릴리]"
+    },
+    "brand": "드봉 (DeBON)",
+    "name": "비누 [후레쉬릴리]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209905066",
+    "translated_kr": "ポケモンエディションクリアボディミスト 200ml 企画 (ミニチュア 30ml + イーブイ防水パック)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에프터글로우 립 밤 [미스 에듀케이션]",
+      "naver": "나스 에프터글로우 립 밤 미스에듀케이션 3g"
+    },
+    "brand": "나스 (NARS)",
+    "name": "에프터글로우 립 밤 [미스 에듀케이션]",
+    "volume": "3g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "57300",
+    "mall": "버진뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13509702865",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+        "mall": "버진뷰티",
+        "link": "https://smartstore.naver.com/main/products/13509702865"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069658/90696588057.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/13152076966"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
