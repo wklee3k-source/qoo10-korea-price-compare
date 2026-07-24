@@ -53262,5 +53262,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209148971",
+    "translated_kr": "【韓国正規品/NEW】Gureum o de perfume EDP 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "PARLE MOI DE PARFUM 웨이크업 World EDP 오드퍼퓸 향수 50ml"
+    },
+    "brand": null,
+    "name": "PARLE MOI DE PARFUM 웨이크업 World EDP 오드퍼퓸 향수 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "192000",
+    "mall": "권스텝",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10233033218",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8777753/87777536785.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8777753/87777536785.jpg",
+        "mall": "권스텝",
+        "link": "https://smartstore.naver.com/main/products/10233033218"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8345241/83452418377.jpg",
+        "mall": "럭셔리파리",
+        "link": "https://smartstore.naver.com/main/products/5907918889"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101710/91017103331.1.jpg",
+        "mall": "EDIT LAB",
+        "link": "https://smartstore.naver.com/main/products/13472592979"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8344751/83447514334.jpg",
+        "mall": "럭셔리파리",
+        "link": "https://smartstore.naver.com/main/products/5903014846"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890066/88900669671.jpg",
+        "mall": "모찌팜",
+        "link": "https://smartstore.naver.com/main/products/11356159320"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1197915395",
+    "translated_kr": "바디워시 보습 민감성 건성피부용 532ml×2본 대용량 펌프식 데일리모이스처라이징",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
