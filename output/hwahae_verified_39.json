@@ -36486,5 +36486,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1192657055",
+    "translated_kr": "코직산 비타젤리 세럼미스트, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코직애씨드 터메릭 비타 미스트 세럼",
+      "naver": "Medicube 메디큐브 코지산 비타 젤리 세럼 미스트 2층식 보습 에센스"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "코직애씨드 터메릭 비타 미스트 세럼",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39870",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13555852415",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110036/91100362781.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110036/91100362781.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/13555852415"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121300/91213007879.jpg",
+        "mall": "tytrader823",
+        "link": "https://smartstore.naver.com/main/products/13668496971"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172777299",
+    "translated_kr": "パフューム ヘアミスト サンセットフォグ 100ml 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
