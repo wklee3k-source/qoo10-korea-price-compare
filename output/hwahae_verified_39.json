@@ -35404,5 +35404,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "724850594",
+    "translated_kr": "폴로 블랙 125ml EDT SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴로 블랙 EDT",
+      "naver": "랄프로렌 향수 폴로 블랙 오드뚜왈렛 EDT 폴로블랙향수, 125ml, 1개"
+    },
+    "brand": "랄프로렌 (RALPHLAUREN)",
+    "name": "폴로 블랙 EDT",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "62000",
+    "mall": "퍼퓸하우스S",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5011619179",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+        "mall": "퍼퓸하우스S",
+        "link": "https://smartstore.naver.com/main/products/5011619179"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121910/91219100115.jpg",
+        "mall": "박가분",
+        "link": "https://smartstore.naver.com/main/products/13674589096"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8969804/89698041400.1.jpg",
+        "mall": "박가분",
+        "link": "https://smartstore.naver.com/main/products/12153530695"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212001587",
+    "translated_kr": "레플리카 온 어 데이트 EDT BT 7ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
