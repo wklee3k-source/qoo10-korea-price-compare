@@ -36049,5 +36049,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195971817",
+    "translated_kr": "[저자극 밀크 클렌징] 클렌즈 미 소프틀리 밀크 클렌저 시그니처 200ml 낮은 pH 고보습/더블 세안 불필요/약산성/건성피부",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "미나리 진정 클렌저"
+    },
+    "brand": "라타플랑 (rataplan)",
+    "name": "미나리 진정 클렌저",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164170834",
+    "translated_kr": "[SKIN1004] (jL) Madagascar Centella Poremizing Light Gel Cream 75ml / マダガスカル センテラ ポアミゼーション ライトジェルクリー",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 포어마이징 라이트 젤 크림"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 포어마이징 라이트 젤 크림",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
