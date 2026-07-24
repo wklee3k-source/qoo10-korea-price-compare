@@ -53038,5 +53038,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1161958799",
+    "translated_kr": "ヒアテノールハイドラトナー150ml+150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히아테놀 하이드라 토너",
+      "naver": "네이처리퍼블릭 히아테놀 하이드라 토너 150ml"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "히아테놀 하이드라 토너",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19300",
+    "mall": "RumiDrop",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13678389160",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122290/91222900251.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122290/91222900251.jpg",
+        "mall": "RumiDrop",
+        "link": "https://smartstore.naver.com/main/products/13678389160"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674636/86746367429.jpg",
+        "mall": "원라이브:팩토리",
+        "link": "https://smartstore.naver.com/main/products/9201867113"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8782135/87821358398.jpg",
+        "mall": "잇츠백",
+        "link": "https://smartstore.naver.com/main/products/10276854577"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1084409242",
+    "translated_kr": "YURI PIBUグランテクレンジングラインセット（オイル+フォーム） (300ml+160ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
