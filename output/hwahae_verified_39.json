@@ -30382,5 +30382,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1182791384",
+    "translated_kr": "マリンオーキッドマルチパフューム",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마린아스타잔틴 마스크팩"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "마린아스타잔틴 마스크팩",
+    "volume": "23g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1177840431",
+    "translated_kr": "ポリゲンシークニングセラム50ml+スケーラー60g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스케일러"
+    },
+    "brand": "미녹솔에스 (MINOXOLS)",
+    "name": "스케일러",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
