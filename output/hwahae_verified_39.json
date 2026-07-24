@@ -35853,5 +35853,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1166295513",
+    "translated_kr": "【1+1】 ボリューマイジングラディアンスエッセンス all in one / シテノール(R)A 50ml オールインワン美容液 ヒアルロン酸 グルタチオン ペプチド　韓国発送",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178755053",
+    "translated_kr": "ポリゼン シークニングセラム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인바티 브로우™ 씨크닝 세럼",
+      "naver": "AVEDA 아베다 인바티 어드밴스드 씨크닝 폼 150ml"
+    },
+    "brand": "아베다 (AVEDA)",
+    "name": "인바티 브로우™ 씨크닝 세럼",
+    "volume": "5ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "69500",
+    "mall": "DOUBLEMODE",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8488563430",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8603306/86033063753.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8603306/86033063753.jpg",
+        "mall": "DOUBLEMODE",
+        "link": "https://smartstore.naver.com/main/products/8488563430"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8603306/86033069047.jpg",
+        "mall": "DOUBLEMODE",
+        "link": "https://smartstore.naver.com/main/products/8488568724"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116057/91160575266.jpg",
+        "mall": "YUSOMA",
+        "link": "https://smartstore.naver.com/main/products/13616064849"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058577/90585778387.jpg",
+        "mall": "유미네직구팀",
+        "link": "https://smartstore.naver.com/main/products/13041267295"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
