@@ -55061,5 +55061,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1153945340",
+    "translated_kr": "アクアシールド日焼け止めローション50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185378034",
+    "translated_kr": "[1+1] オリジンリペアヘアパック 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오리진 리페어 헤어팩"
+    },
+    "brand": "달리프 (Daleaf)",
+    "name": "오리진 리페어 헤어팩",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
