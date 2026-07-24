@@ -33174,5 +33174,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1163081544",
+    "translated_kr": "ラ・カスタ アロマエステ ヘアローション スムース リフィル(詰め替え用) *髪用ローション*",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Radical Recovery After Sun Lotion (이알플러스레디컬리커버리애프터선로션)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Radical Recovery After Sun Lotion (이알플러스레디컬리커버리애프터선로션)",
+    "volume": "180ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 59000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188763613",
+    "translated_kr": "ジルリーン 涙袋ペンシル (031 クリームベージュ) ライトカラー 涙袋 コンシーラー アイライン",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 오일 인 모이스처라이징 로션"
+    },
+    "brand": "닷사이 (DASSAI)",
+    "name": "(해외) 오일 인 모이스처라이징 로션",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
