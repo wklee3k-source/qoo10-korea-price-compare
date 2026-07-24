@@ -24684,5 +24684,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207613050",
+    "translated_kr": "ライティング トーンアップ サンクッションSPF50+PA+++000 / ミスティーバーブル",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폼폼푸린 콜라보 톤업 선쿠션 [SPF50+/PA++++] [미스티퍼플]"
+    },
+    "brand": "아떼 (athe)",
+    "name": "폼폼푸린 콜라보 톤업 선쿠션 [SPF50+/PA++++] [미스티퍼플]",
+    "volume": "12g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1179238550",
+    "translated_kr": "【レッドコスパセット】レッドブレミッシュ セラム 80ml + クリーム 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 히알 시카 수딩 세럼"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 히알 시카 수딩 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
