@@ -55014,5 +55014,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "821080322",
+    "translated_kr": "[THE SAEM] Cell Renew Bio Micro Peel Intense Gel",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더샘 셀리뉴 바이오 마이크로필 인텐스젤 160ml"
+    },
+    "brand": "더샘",
+    "name": "더샘 셀리뉴 바이오 마이크로필 인텐스젤 160ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29800",
+    "mall": "원라이브:팩토리",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9480120554",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8702462/87024620875.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8702462/87024620875.jpg",
+        "mall": "원라이브:팩토리",
+        "link": "https://smartstore.naver.com/main/products/9480120554"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1175315828",
+    "translated_kr": "リンクルバウンスコラーゲン保湿ミスト 120ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
