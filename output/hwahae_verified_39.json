@@ -52025,5 +52025,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210140814",
+    "translated_kr": "【ポムポムプリン限定 &amp;パーツ＆パフプレゼント】 ライティング トーンアップ サンクッション SPF50+ PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마루는 강쥐 에디션 비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]"
+    },
+    "brand": "아떼 (athe)",
+    "name": "마루는 강쥐 에디션 비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]",
+    "volume": "12g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1199466558",
+    "translated_kr": "シークルーノ　スノーアイススプレー　ソレスカーラ72【トロピカルパインの香り】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아줄렌 컴플렉스 앰플 72",
+      "naver": ".히스토랩 아줄렌 컴플렉스 앰플 72% 150ml / 지성피부 강추 트러블 완화 앰플"
+    },
+    "brand": "히스토랩 (HISTOLAB)",
+    "name": "아줄렌 컴플렉스 앰플 72",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "65840",
+    "mall": "dermure",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12022076135",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8956658/89566586827.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956658/89566586827.2.jpg",
+        "mall": "dermure",
+        "link": "https://smartstore.naver.com/main/products/12022076135"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8173460/81734607767.4.jpg",
+        "mall": "아토스킨",
+        "link": "https://smartstore.naver.com/main/products/4190086340"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956658/89566589967.jpg",
+        "mall": "dermure",
+        "link": "https://smartstore.naver.com/main/products/12022079275"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
