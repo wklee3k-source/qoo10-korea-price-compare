@@ -51679,5 +51679,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212350471",
+    "translated_kr": "[1+1]メディオルガブライトニングクリーム30ml 2個/しみ取りクリーム お肌のトーンアップ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1146049607",
+    "translated_kr": "シカペア インテンシブ スージング リペアクリーム 50ml+15ml+15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리페어 크림 [인텐시브]",
+      "naver": "제노셀 스킨메소드 인텐시브 리페어크림 50ml 230ml 리뉴얼 모이스처크림"
+    },
+    "brand": "제노셀 (GENOCELL)",
+    "name": "리페어 크림 [인텐시브]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "84000",
+    "mall": "은가비에스테틱-홈뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7286397849",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8483089/84830898171.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8483089/84830898171.1.jpg",
+        "mall": "은가비에스테틱-홈뷰티",
+        "link": "https://smartstore.naver.com/main/products/7286397849"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8877777/88777776381.jpg",
+        "mall": "은가비에스테틱-홈뷰티",
+        "link": "https://smartstore.naver.com/main/products/11233266050"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8399445/83994450370.1.jpg",
+        "mall": "베니몰",
+        "link": "https://smartstore.naver.com/main/products/6449950037"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8365263/83652630571.jpg",
+        "mall": "단미의파우치",
+        "link": "https://smartstore.naver.com/main/products/6108131083"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8588670/85886701148.1.jpg",
+        "mall": "스킨테라피몰",
+        "link": "https://smartstore.naver.com/main/products/8342200825"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
