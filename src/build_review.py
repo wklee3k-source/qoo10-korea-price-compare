@@ -94,11 +94,16 @@ def build_pairs():
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
 
-    translations = {}
+    # [구조변경 대응] 1,2단계 통합 이후엔 별도 hwahae_input_39.json이 없다.
+    # discovery_state.json의 translated_kr을 보조로 쓰되, 최우선은 검증
+    # 시점에 실제로 사용된 값(hwahae_verified_39.json 각 항목 자체의
+    # translated_kr) — 이게 정확히 그 상품을 검증할 때 쓴 번역문이고,
+    # discovery_state.json 쪽은 이후 상태가 달라졌을 수 있어 신뢰도가 낮다.
+    translations = {gn: p.get("translated_kr", "") for gn, p in qoo10_by_goods.items() if p.get("translated_kr")}
     input_path = OUTPUT / "hwahae_input_39.json"
     if input_path.exists():
         for x in json.loads(input_path.read_text(encoding="utf-8")):
-            translations[x["goods_no"]] = x.get("translated_kr", "")
+            translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "ok": 0}
@@ -147,7 +152,7 @@ def build_pairs():
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": q["title"], "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
-            "qoo10_name_kr": translations.get(x["goods_no"], ""),
+            "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
             "kr_qty": kr_qty, "is_set": is_set,
