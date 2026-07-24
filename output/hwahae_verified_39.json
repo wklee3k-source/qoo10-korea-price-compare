@@ -52433,5 +52433,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199432149",
+    "translated_kr": "【10秒プロテイン集中ケアセット】サロン10 シャンプー ダメージヘア用 500ml + トリートメント ダメージヘア用 250ml ケラチン ヘアクリーム 韓国　シャンプー さらさら ヘアパック",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1174027129",
+    "translated_kr": "【2023 Olive Young ベスト】【鎮静/保湿】シカ 弱酸性ボディミスト150ml/ボディケア/背中ニキビ/毛穴開き/角質ケア/低刺激/敏感肌/さっぱり/老廃物ケア/ヒアルロン酸/乾燥肌",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에프터글로우 립 밤 [미스 에듀케이션]",
+      "naver": "나스 에프터글로우 립 밤 미스에듀케이션 3g"
+    },
+    "brand": "나스 (NARS)",
+    "name": "에프터글로우 립 밤 [미스 에듀케이션]",
+    "volume": "3g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "57300",
+    "mall": "버진뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13509702865",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg",
+        "mall": "버진뷰티",
+        "link": "https://smartstore.naver.com/main/products/13509702865"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069658/90696588057.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/13152076966"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
