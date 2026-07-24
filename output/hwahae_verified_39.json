@@ -21677,5 +21677,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193439407",
+    "translated_kr": "1.05 アスタキサンチン0.05％ NAD1％ 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 이펙트 세럼 1.05 펌프"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "레드 이펙트 세럼 1.05 펌프",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1142533414",
+    "translated_kr": "모이스트풀 콜라겐 미용액(에센스) 80ml :: 보습미용액/건성피부/슈퍼콜라겐/바오밥 열매 추출물",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
