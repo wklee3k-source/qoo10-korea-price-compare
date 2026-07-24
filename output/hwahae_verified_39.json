@@ -50125,5 +50125,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1030137154",
+    "translated_kr": "PRETTYSKIN 24K GOLD COLLAGEN AMPOULE 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "프리티스킨 앰플 24K 골드 콜라겐 50ml"
+    },
+    "brand": "프리티스킨",
+    "name": "프리티스킨 앰플 24K 골드 콜라겐 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "28000",
+    "mall": "프리티스킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8536641900",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8608114/86081142222.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8608114/86081142222.jpg",
+        "mall": "프리티스킨",
+        "link": "https://smartstore.naver.com/main/products/8536641900"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707569/87075696437.jpg",
+        "mall": "라멜린",
+        "link": "https://smartstore.naver.com/main/products/9531194167"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212247067",
+    "translated_kr": "【パヒュームエレガンスアンバー シャンプ600ml 1本+リンス600ml 1本】엘레강스 엠버향/ケラシス パフューム/合わせて2本セット/ELEGANCE AMBER/Kerasys",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
