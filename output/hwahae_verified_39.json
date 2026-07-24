@@ -53343,5 +53343,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207892717",
+    "translated_kr": "[正規品]ホワイトフローラルヘアミスト 200mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 플로럴 헤어 미스트",
+      "naver": "[질스튜어트뷰티] 화이트 플로럴 트리트먼트 헤어 미스트 200mL"
+    },
+    "brand": "질스튜어트 뷰티 (JILLSTUART Beauty)",
+    "name": "화이트 플로럴 헤어 미스트",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "33300",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12728510360",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9027302/90273021301.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9027302/90273021301.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12728510360"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207342608",
+    "translated_kr": "【百貨店正規品】 ディスカバリーセット 1.2ml*6 ミステリアス",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
