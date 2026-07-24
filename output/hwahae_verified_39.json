@@ -50522,5 +50522,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1169403360",
+    "translated_kr": "エイシカ365 水分鎮静トナー, [25ml*10] 250ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1169403395",
+    "translated_kr": "エイシカ365スージングリペアクリーム, [10ml*6] 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이시카365 리페어 크림 pH4.5",
+      "naver": "[싱글] 에스트라 에이시카365 리페어 크림 pH4.5 60ml x 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 리페어 크림 pH4.5",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25500",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8157719651",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8570221/85702219974.39.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8570221/85702219974.39.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/8157719651"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8315506/83155061603.40.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/5610565102"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8570221/85702219973.37.jpg",
+        "mall": "에스트라",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8157719650"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
