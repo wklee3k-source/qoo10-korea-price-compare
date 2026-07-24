@@ -38654,5 +38654,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210771223",
+    "translated_kr": "マデカクリーム イン バブルセラム 100ml+100ml（+マデカパウダー ビタグルシ 6g）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 마데카 크림"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "더 마데카 크림",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1154233546",
+    "translated_kr": "다크스팟세럼 (나이아신아마이드10%, 트라넥삼산 4%) 30ml/한국코스메/앰플",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
