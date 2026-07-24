@@ -49943,5 +49943,70 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1075911810",
+    "translated_kr": "ROSEE Mazarin Marine Collagen Sun Block 100ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "로제 마자린 마린 콜라겐 선블럭 100ml/자외선차단"
+    },
+    "brand": "마자린",
+    "name": "로제 마자린 마린 콜라겐 선블럭 100ml/자외선차단",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "6400",
+    "mall": "뉴페이스몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5698304272",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8324280/83242802310.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8324280/83242802310.jpg",
+        "mall": "뉴페이스몰",
+        "link": "https://smartstore.naver.com/main/products/5698304272"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208145396",
+    "translated_kr": "holitual micro balancing essence 150ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "홀리추얼 마이크로 밸런싱 에센스 150ml"
+    },
+    "brand": "홀리추얼",
+    "name": "홀리추얼 마이크로 밸런싱 에센스 150ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "52000",
+    "mall": "홀리추얼",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5221516633",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8276603/82766038642.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8276603/82766038642.2.jpg",
+        "mall": "홀리추얼",
+        "link": "https://smartstore.naver.com/main/products/5221516633"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9034558/90345587232.1.jpg",
+        "mall": "래디언스몰",
+        "link": "https://smartstore.naver.com/main/products/12801076283"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
