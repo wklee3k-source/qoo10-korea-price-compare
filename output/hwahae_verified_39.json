@@ -52540,5 +52540,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198208356",
+    "translated_kr": "アヌカチンシャンプー, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아누카틴 샴푸"
+    },
+    "brand": "모에브 (moev)",
+    "name": "아누카틴 샴푸",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1199679733",
+    "translated_kr": "【韓国限定】ハンドバーム 35ml ナチュラル 高保湿 しっとりケア 韓国トレンド",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Underarm Deodorant Cream (언더암데오드란트크림)",
+      "naver": "라비린 언더암 데오드란트 크림 12.5g Underarm Deodorant Cream"
+    },
+    "brand": "라비린 (Lavilin)",
+    "name": "(해외) Underarm Deodorant Cream (언더암데오드란트크림)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37710",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10455298324",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10455298324"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg",
+        "mall": "드림원스토어",
+        "link": "https://smartstore.naver.com/main/products/5803192786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg",
+        "mall": "jj-pro store",
+        "link": "https://smartstore.naver.com/main/products/8554276575"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
