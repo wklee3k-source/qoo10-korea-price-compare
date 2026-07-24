@@ -50580,5 +50580,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1203603284",
+    "translated_kr": "[AXIS Y]10ml Vegan Collagen Eye Serumヴ ィーガンコラーゲンアイセ ラム",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 콜라겐 아이 세럼",
+      "naver": "AXIS Y 비건 콜라겐 아이 세럼 10ml"
+    },
+    "brand": "엑시스와이 (AXIS-Y)",
+    "name": "비건 콜라겐 아이 세럼",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "27300",
+    "mall": "원라이브:쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12756366747",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9030087/90300877696.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9030087/90300877696.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/12756366747"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8803541/88035413405.1.jpg",
+        "mall": "볼빨간오빠",
+        "link": "https://smartstore.naver.com/main/products/10490908104"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180340406",
+    "translated_kr": "＆　be　薬用ホワイトニングUVスプレー SPF50+ PA++++ 60g 正規品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
