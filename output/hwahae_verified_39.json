@@ -27451,5 +27451,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1173839756",
+    "translated_kr": "P-TIOX リンクルストレートニングセラム 30ml(+mini 4ml x2)+2マスク",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피티옥스"
+    },
+    "brand": "스킨수티컬즈 (SKINCEUTICALS)",
+    "name": "피티옥스",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1174748969",
+    "translated_kr": "[NEW] [新商品] ドクダミポアディープクレンジングフォーム 150ml (2個)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 더블 수딩 마스크"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 더블 수딩 마스크",
+    "volume": "330mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
