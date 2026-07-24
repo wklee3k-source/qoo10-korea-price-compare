@@ -50047,5 +50047,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1184552949",
+    "translated_kr": "肌をうるおす保湿美容液（詰替用）：25mL 松山油脂 肌をうるおす セラミド ナイアシンアミド ペプチド 乾燥小ジワ 敏感肌.",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오버젤 [OV004 유얼마일드코코아]"
+    },
+    "brand": "다이아미 (DIAMI)",
+    "name": "오버젤 [OV004 유얼마일드코코아]",
+    "volume": "10ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 56000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1184552955",
+    "translated_kr": "肌をうるおす保湿クレンジング：145g×【3個】 松山油脂 セラミド ジェルクレンジング 敏感肌 低刺激 摩擦レス 毛穴汚れ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Calming Skin Therapy Hydrating Mask (카밍스킨테라피하이드레이팅마스크)"
+    },
+    "brand": "오브리오가닉스 (AUBREYORGANICS)",
+    "name": "(해외) Calming Skin Therapy Hydrating Mask (카밍스킨테라피하이드레이팅마스크)",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
