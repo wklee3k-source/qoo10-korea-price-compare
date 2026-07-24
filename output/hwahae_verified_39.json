@@ -38656,5 +38656,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1123317400",
+    "translated_kr": "[1+1]レッド センテラカ マスク 10枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160698268",
+    "translated_kr": "ドルコ PACE7II FRESH カミソリ メンズ 12個",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PACE7II FRESH 면도기"
+    },
+    "brand": "도루코 (DORCO)",
+    "name": "PACE7II FRESH 면도기",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 24900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
