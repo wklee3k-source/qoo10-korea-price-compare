@@ -25268,5 +25268,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1025092193",
+    "translated_kr": "若よもぎ 水分鎮静 フルイド 125ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어린쑥 수분진정 크림"
+    },
+    "brand": "한율 (HANYUL)",
+    "name": "어린쑥 수분진정 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1167205791",
+    "translated_kr": "【리필세트】 민트벨 마린블루 샴푸 1900ml 스파컨디셔너 700ml 쿨샴푸 민트샴푸 리필용 두피케어 살롱전매 미용실 여름",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
