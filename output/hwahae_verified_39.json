@@ -50699,5 +50699,77 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1096495928",
+    "translated_kr": "시크루노 UV 스무스 크림 비탈리프시 0101 [화이트 릴리 향]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "시크루노 SE:CRUNO 스무스 핸드크림 비탈리프시 0101 8035547 일본 출고"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12800",
+    "mall": "직구잇템",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11805337149",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8934984/89349847736.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8934984/89349847736.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11805337149"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082575/90825759439.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/13281249107"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8936492/89364920421.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11820409834"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210202611",
+    "translated_kr": "リバイブ セラピー NF アンプル / 30ml / PDRN アンプルデクスパンテノールビタミンB5",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "판테놀 비타민 B5 앰플",
+      "naver": "텐제로 판테놀 비타민 B5 앰플 30ml"
+    },
+    "brand": "텐제로 (tenzero)",
+    "name": "판테놀 비타민 B5 앰플",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "9570",
+    "mall": "비아버드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13647101237",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119161/91191612016.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119161/91191612016.jpg",
+        "mall": "비아버드",
+        "link": "https://smartstore.naver.com/main/products/13647101237"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
