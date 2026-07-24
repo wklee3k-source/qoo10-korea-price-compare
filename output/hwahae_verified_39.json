@@ -34383,5 +34383,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213367912",
+    "translated_kr": "루벨 이오 크림 멜트 리페어 헤어 트리트먼트 200g 빨강 684",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "루벨 이오 크림 멜트리페어 헤어 트리트먼트 200g 레드"
+    },
+    "brand": "EO",
+    "name": "루벨 이오 크림 멜트리페어 헤어 트리트먼트 200g 레드",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23090",
+    "mall": "리베티움",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13370314926",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9091482/90914825262.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091482/90914825262.jpg",
+        "mall": "리베티움",
+        "link": "https://smartstore.naver.com/main/products/13370314926"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073454/90734548565.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13190037468"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073443/90734435679.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13189924582"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1184548435",
+    "translated_kr": "dalba ウォーターフル トーンアップ 日焼け止め グリーン 50ml 少女時代のテヨンガールズデイ ヘリ 日焼け止め",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
