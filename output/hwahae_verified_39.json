@@ -21901,5 +21901,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1159061701",
+    "translated_kr": "サムライウーマン ユズシトラス 40ML EDP SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "우먼 EDP",
+      "naver": "지미추 플로랄 향수 EDP SP 40ml"
+    },
+    "brand": "버버리 (BURBERRY)",
+    "name": "우먼 EDP",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "71220",
+    "mall": "해밤직구",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13069047721",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061355/90613558813.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061355/90613558813.jpg",
+        "mall": "해밤직구",
+        "link": "https://smartstore.naver.com/main/products/13069047721"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8909803/89098039922.jpg",
+        "mall": "니코리재팬",
+        "link": "https://smartstore.naver.com/main/products/11553529516"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1136895079",
+    "translated_kr": "アイ・ウォント・チュウ ル パルファム 40ML SP",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
