@@ -53572,5 +53572,74 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1094137657",
+    "translated_kr": "【FEG 공식】퍼펙트 세럼 아젤라산 5% 함유 시카 함유 PERFECT SERUM 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "[셀리맥스] [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml 76008"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "BFT 진정 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "19900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095814/90958149698.1.jpg",
+        "mall": "아비트라3호점",
+        "link": "https://smartstore.naver.com/main/products/13413639362"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8816120/88161209894.jpg",
+        "mall": "케이더스토리",
+        "link": "https://smartstore.naver.com/main/products/10616704245"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091654/90916548592.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13372038256"
+      }
+    ],
+    "real_page_title": "셀리맥스(CELIMAX) [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1093734916",
+    "translated_kr": "【1+1】スピキュールセラム(ニードルアクション100) 30ml/ 塗る毛穴セラム針 / ニードルショット / ブースティングセラム / 肌のキメ改善 / 韓国コスメ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
