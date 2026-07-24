@@ -25245,5 +25245,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210182731",
+    "translated_kr": "ナチュラル オールインワン カバー ローション 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "파워 올인원 로션"
+    },
+    "brand": "스틸맨 (STEELMAN)",
+    "name": "파워 올인원 로션",
+    "volume": "150ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193372038",
+    "translated_kr": "【1+1】【韓国コスメ】ショッキングビタミン ミルクトーンアップ デイクリーム, 55g 2個 /(保湿/弾力/輝き/鎮静/トーンアップクリーム)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
