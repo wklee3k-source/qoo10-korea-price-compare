@@ -55100,5 +55100,68 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1180606979",
+    "translated_kr": "【NEW】エイシカ365 リペアクリーム pH4.5 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이시카365 수분토너 pH4.5",
+      "naver": "에스트라 에이시카 365 수분토너pH4.5"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 수분토너 pH4.5",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23800",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63997&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5318962/53189623283.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5318962/53189623283.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63997&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8560844/85608445174.50.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/8063944851"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8672160/86721605296.16.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/9177104973"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5624409/56244094592.3.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3124226?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182954746",
+    "translated_kr": "【NEW/2種追加贈呈】オリーブヤング フォレストフォーメンオールインワンエッセンス 100ml 企画",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
