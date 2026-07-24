@@ -26338,5 +26338,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177829431",
+    "translated_kr": "マイファーストセラム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초"
+    },
+    "brand": "디마프 (De:maf)",
+    "name": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193369860",
+    "translated_kr": "新作 ティーツリーオイルロールオン 5ml ニキビ 鎮静",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 오일 인 모이스처라이징 로션"
+    },
+    "brand": "닷사이 (DASSAI)",
+    "name": "(해외) 오일 인 모이스처라이징 로션",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
