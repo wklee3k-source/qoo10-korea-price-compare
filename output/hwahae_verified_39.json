@@ -20482,5 +20482,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194137709",
+    "translated_kr": "アブソリュート エッセンス サン UVプロテクター 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "UV 썬 프로텍터 [SPF50+/PA+++]"
+    },
+    "brand": "엠큐어 (M-CURE)",
+    "name": "UV 썬 프로텍터 [SPF50+/PA+++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194137533",
+    "translated_kr": "ルティナー マルチバーム 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티밤",
+      "naver": "도미나스 멀티밤 ~18%"
+    },
+    "brand": "도미나스 (DOMINAS)",
+    "name": "멀티밤",
+    "volume": "7g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "31500",
+    "mall": "도미나스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://dominas.co.kr/product/detail.html?product_no=11&cate_no=42&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5341675/53416753205.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5341675/53416753205.2.jpg",
+        "mall": "도미나스",
+        "link": "https://dominas.co.kr/product/detail.html?product_no=11&cate_no=42&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075848/90758480082.jpg",
+        "mall": "인별프리",
+        "link": "https://smartstore.naver.com/main/products/13213969760"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8363491/83634913367.1.jpg",
+        "mall": "주식회사 아나이스",
+        "link": "https://smartstore.naver.com/main/products/6090413879"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023677/90236772880.jpg",
+        "mall": "모노잇템",
+        "link": "https://smartstore.naver.com/main/products/12692261956"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
