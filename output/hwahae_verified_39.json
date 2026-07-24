@@ -55876,5 +55876,77 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206618126",
+    "translated_kr": "セルアップ ジェル トゥ ウォーター クレンザー 170ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "젤 투 워터 클렌저",
+      "naver": "라곰 수분 클렌징 듀오 (마이크로 폼 클렌저150mL + 젤 투 워터 클렌저220mL)"
+    },
+    "brand": "라곰 (LAGOM)",
+    "name": "젤 투 워터 클렌저",
+    "volume": "220mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "29600",
+    "mall": "라곰",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/7831210669",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8537571/85375710991.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8537571/85375710991.3.jpg",
+        "mall": "라곰",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7831210669"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8940301/89403013194.3.jpg",
+        "mall": "LAGOM: 본사직영몰",
+        "link": "https://smartstore.naver.com/main/products/11858502600"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8592333/85923330889.5.jpg",
+        "mall": "LAGOM: 본사직영몰",
+        "link": "https://smartstore.naver.com/main/products/8378830566"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1119242122",
+    "translated_kr": "リードルショット1300 8ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리들샷 1300",
+      "naver": "[브이티코스메틱] VT 리들샷 1300 -"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "리들샷 1300",
+    "volume": "8ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "40460",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4347435?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5532369/55323697797.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5532369/55323697797.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4347435?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
