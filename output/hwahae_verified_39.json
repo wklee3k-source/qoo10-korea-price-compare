@@ -47239,5 +47239,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172932594",
+    "translated_kr": "セーフミー リリーフモイスチャー クレンジングミルクリフィル 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세이프 미 릴리프 모이스처 크림 12"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "세이프 미 릴리프 모이스처 크림 12",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202731546",
+    "translated_kr": "PDRN ヒアルロン酸カプセル100 セラム 30ml + リフィル 30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
