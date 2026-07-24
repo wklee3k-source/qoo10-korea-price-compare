@@ -34474,5 +34474,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204254720",
+    "translated_kr": "[ウォーターミストプランピング][正規品] マダガスカル センテラ ヒアル-テカ プランピング アンプル 50ml／スキンブースティング／ヒアルプラム",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-테카 글래스 스킨 밀크",
+      "naver": "스킨1004 마다가스카르 센텔라 히알루-테카 글래스 스킨 밀크 210ml 4083254"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-테카 글래스 스킨 밀크",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "36460",
+    "mall": "선진tm01",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13678597652",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122310/91223108743.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122310/91223108743.jpg",
+        "mall": "선진tm01",
+        "link": "https://smartstore.naver.com/main/products/13678597652"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199087370",
+    "translated_kr": "[和解1位/脱毛シャンプー] パープルブースター [正規品]玉ねぎシャンプー/紫の抗酸化ブースター",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
