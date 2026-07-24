@@ -56844,5 +56844,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "490748002",
+    "translated_kr": "アナスイ オードトワレ 30ML EDT SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세피아 [SP-30 페이드스카이]",
+      "naver": "안나수이 시크릿 위시 오드뚜왈렛 ANNA SUI EDT SP 30ml, 1개"
+    },
+    "brand": "모어젤 (MORE)",
+    "name": "세피아 [SP-30 페이드스카이]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "52100",
+    "mall": "인핸쓰토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13440451568",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9098496/90984961920.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098496/90984961920.jpg",
+        "mall": "인핸쓰토어",
+        "link": "https://smartstore.naver.com/main/products/13440451568"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8476709/84767094512.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/7222594190"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9099188/90991881814.jpg",
+        "mall": "어니스트불",
+        "link": "https://smartstore.naver.com/main/products/13447371462"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089957/90899578780.jpg",
+        "mall": "딜위드",
+        "link": "https://smartstore.naver.com/main/products/13355068448"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190166247",
+    "translated_kr": "アンチ W フェイスオイル 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
