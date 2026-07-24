@@ -838,10 +838,25 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
-      - name: Investigate OY Global brand page for Korean name
+      - name: Collect OY Global brands, romanize-match remaining Korean brands, merge confirmed results
         working-directory: src
         run: |
-          python _investigate_oy_brand_page.py
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          python collect_oy_global_brands.py
+          python match_oy_global_brands.py ../data/still_unmatched_korean_brands.json ../data/oliveyoung_global_brands.json /tmp/oy_global_matches.json 85
+          echo "=== 결과 ==="
+          cat /tmp/oy_global_matches.json
+          python3 -c "import json; existing = json.load(open('../data/brand_translations_learned.json')); new = json.load(open('/tmp/oy_global_matches.json')); before = len(existing); existing.update(new); json.dump(existing, open('../data/brand_translations_learned.json', 'w'), ensure_ascii=False, indent=2); print(f'사전 {before}개 -> {len(existing)}개 ({len(existing)-before}개 신규 추가)')"
+          git add ../data/brand_translations_learned.json ../data/oliveyoung_global_brands.json
+          git diff --cached --quiet || git commit -m "Auto: OY Global romanization-match brand additions"
+          for i in $(seq 1 10); do
+            if git push origin main; then echo "push 성공"; break; fi
+            sleep_time=$((RANDOM % 6 + 1))
+            echo "push 실패, ${sleep_time}초 대기 후 재시도 ($i/10)"
+            sleep "$sleep_time"
+            git pull --rebase origin main -q
+          done
 
 
       - name: Full hwahae brand lookup (chunked, background, self-retriggers)

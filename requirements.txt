@@ -2,3 +2,5 @@ playwright>=1.50
 Pillow>=10.0
 openpyxl>=3.1
 pandas>=2.0
+hangul-romanize>=0.1.0
+rapidfuzz>=3.0
