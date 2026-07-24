@@ -53783,5 +53783,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1153736512",
+    "translated_kr": "[はりんPICK] セラバリア モイスチャー アクティブトナー 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세라베리어 딥 모이스처 인텐시브 바디워시"
+    },
+    "brand": "홀리카홀리카 (HOLIKAHOLIKA)",
+    "name": "세라베리어 딥 모이스처 인텐시브 바디워시",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1159441896",
+    "translated_kr": "ビタトーニングカプセルクリーム チューブタイプ 55g×2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
