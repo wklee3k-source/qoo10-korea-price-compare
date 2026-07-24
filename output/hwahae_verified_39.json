@@ -51890,5 +51890,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1164666036",
+    "translated_kr": "【クレヨンしんちゃんコラボ】 全6種 毛穴・角栓ケア / セバムソフナー / 毛穴弾力アンプル / ノーズパック / ピーリングスワブ / ブラックヘッドリムーバー 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1149795556",
+    "translated_kr": "[急速クーリング] ポスト アルファ クーリング スキン ブースター セラム 150ml + 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "태닝 마이멜로디 에디션 포스트 알파 쿨링 스킨 부스터 세럼",
+      "naver": "큐어31 알로에 인텐시브 카밍 캡슐앰플 30ml 진정 수분 보습 쿨링"
+    },
+    "brand": "셀퓨전씨 (CellFusionC)",
+    "name": "태닝 마이멜로디 에디션 포스트 알파 쿨링 스킨 부스터 세럼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "12000",
+    "mall": "CURE31",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11034201761",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8857870/88578707968.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8857870/88578707968.5.jpg",
+        "mall": "CURE31",
+        "link": "https://smartstore.naver.com/main/products/11034201761"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
