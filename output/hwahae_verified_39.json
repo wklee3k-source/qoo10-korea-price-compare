@@ -56288,5 +56288,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191597930",
+    "translated_kr": "マダガスカル センテラ プロバイオシカ エッセンス トナー 210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 프로바이오시카 에센스 토너",
+      "naver": "[스킨1004] 마다가스카르 센텔라 프로바이오시카 에센스 토너 210ml KRSKT011"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 프로바이오시카 에센스 토너",
+    "volume": "210ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22500",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3039689?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4714082/47140821085.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4714082/47140821085.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3039689?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8868377/88683773067.jpg",
+        "mall": "LV뷰티",
+        "link": "https://smartstore.naver.com/main/products/11139262745"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1189664659",
+    "translated_kr": "ビザ トラブル トナー＆ローション セット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비자 트러블 로션"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "비자 트러블 로션",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
