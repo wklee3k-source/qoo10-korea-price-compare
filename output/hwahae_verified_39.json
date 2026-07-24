@@ -56253,5 +56253,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1204359324",
+    "translated_kr": "【1+1 / SNS話題】ツヤ肌バブルエッセンストナー 95ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210837026",
+    "translated_kr": "セラムフィット UVプロテクター 01 クリア 50ml（SPF50+/PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+      "naver": "바이유어 세럼핏 UV프로텍터 01 클리어 50ml(SPF50+/PA++++)"
+    },
+    "brand": "바이유어 (BYUR)",
+    "name": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "바이유어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13408774828",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+        "mall": "바이유어",
+        "link": "https://smartstore.naver.com/main/products/13408774828"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5974696/59746969506.jpg",
+        "mall": "바이유어닷컴",
+        "link": "https://byur.com/product/detail.html?product_no=144&cate_no=69&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
