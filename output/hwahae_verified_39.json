@@ -29480,5 +29480,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190305789",
+    "translated_kr": "RX ザナイアシンアミド15セラム, 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 나이아신아마이드 15 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 나이아신아마이드 15 세럼",
+    "volume": "20mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205563457",
+    "translated_kr": "ガラクトミー エンザイム ピーリングジェル, 75ml, 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
