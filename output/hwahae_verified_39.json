@@ -52347,5 +52347,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1203766483",
+    "translated_kr": "ウォータープルーフ サーフィン サンスティック 20g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터프루프 선 스틱 [SPF50+/PA++++]"
+    },
+    "brand": "식물나라 (SHINGMULNARA)",
+    "name": "워터프루프 선 스틱 [SPF50+/PA++++]",
+    "volume": "30g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1096782550",
+    "translated_kr": "アクア ヒアルロニック エッセンス 大容量, 250ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
