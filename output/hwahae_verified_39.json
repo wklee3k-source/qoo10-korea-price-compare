@@ -52245,5 +52245,107 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194584634",
+    "translated_kr": "엘릭시르 브라이트닝 로션 ca 산뜻한 타입 (리필용) 화장수【의약부외품】150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레몬 바이틱스 브라이트닝 세럼",
+      "naver": "엘릭시르 브라이트닝 로션 WT 1 산뜻한 타입 170ml 미백 탄력 에이징케어 화장수 토너"
+    },
+    "brand": "듀댑 (dewdap)",
+    "name": "레몬 바이틱스 브라이트닝 세럼",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "54000",
+    "mall": "애니바이마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13568172199",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9111268/91112682596.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111268/91112682596.jpg",
+        "mall": "애니바이마켓",
+        "link": "https://smartstore.naver.com/main/products/13568172199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116742/91167422283.jpg",
+        "mall": "지금하루상점",
+        "link": "https://smartstore.naver.com/main/products/13622911866"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074315/90743157470.jpg",
+        "mall": "JAYDWHY",
+        "link": "https://smartstore.naver.com/main/products/13198646373"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069140/90691409127.jpg",
+        "mall": "TOKYOBAY",
+        "link": "https://smartstore.naver.com/main/products/13146898035"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074314/90743147533.jpg",
+        "mall": "JAYDWHY",
+        "link": "https://smartstore.naver.com/main/products/13198636436"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194584287",
+    "translated_kr": "엘릭시르 브라이트닝 로션 ca 산뜻한 타입 화장수【의약부외품】170ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레몬 바이틱스 브라이트닝 세럼",
+      "naver": "엘릭시르 브라이트닝 로션 WT 1 산뜻한 타입 170ml 미백 탄력 에이징케어 화장수 토너"
+    },
+    "brand": "듀댑 (dewdap)",
+    "name": "레몬 바이틱스 브라이트닝 세럼",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "54000",
+    "mall": "애니바이마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13568172199",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9111268/91112682596.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111268/91112682596.jpg",
+        "mall": "애니바이마켓",
+        "link": "https://smartstore.naver.com/main/products/13568172199"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116742/91167422283.jpg",
+        "mall": "지금하루상점",
+        "link": "https://smartstore.naver.com/main/products/13622911866"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074315/90743157470.jpg",
+        "mall": "JAYDWHY",
+        "link": "https://smartstore.naver.com/main/products/13198646373"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069140/90691409127.jpg",
+        "mall": "TOKYOBAY",
+        "link": "https://smartstore.naver.com/main/products/13146898035"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074314/90743147533.jpg",
+        "mall": "JAYDWHY",
+        "link": "https://smartstore.naver.com/main/products/13198636436"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
