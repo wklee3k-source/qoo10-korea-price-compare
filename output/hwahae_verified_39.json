@@ -24409,5 +24409,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191317049",
+    "translated_kr": "マデカクリーム シーズン6, 50ml, 3個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178470153",
+    "translated_kr": "レッドブレミッシュクリアスージングトナー, 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 수딩 토너",
+      "naver": "닥터지 레드 블레미쉬 클리어 수딩 토너 300mL 수분 진정 닦토"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 수딩 토너",
+    "volume": "200mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22000",
+    "mall": "닥터지",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4726873120",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8227139/82271394345.16.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8227139/82271394345.16.jpg",
+        "mall": "닥터지",
+        "link": "https://smartstore.naver.com/main/products/4726873120"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8408614/84086148505.9.jpg",
+        "mall": "닥터지",
+        "link": "https://smartstore.naver.com/main/products/6541648172"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
