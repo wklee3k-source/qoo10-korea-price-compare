@@ -52402,5 +52402,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "964974023",
+    "translated_kr": "[皮膚科専門コスメ]ヒアルロン酸アンプル 100ml 肌の奥からエネルギーを引き上げる 機能性",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Calm Glow Eye Gel (이알플러스캄글로우아이젤)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Calm Glow Eye Gel (이알플러스캄글로우아이젤)",
+    "volume": "14ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 98000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1199943809",
+    "translated_kr": "【正規品】 RXザ・アルファアルブチンハイドロゲルパック(3枚入り)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
