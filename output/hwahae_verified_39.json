@@ -28077,5 +28077,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1161381618",
+    "translated_kr": "サンマデカクリーム 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선 마데카 크림 [SPF35/PA++]",
+      "naver": "센텔리안24 선 마데카크림 SPF35 PA++, 50ml 순한 데일리 선크림 무자극 (유통기한 2027.05.26)"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "선 마데카 크림 [SPF35/PA++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "8000",
+    "mall": "헤븐 스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13472661949",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9101717/91017172301.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101717/91017172301.jpg",
+        "mall": "헤븐 스토어",
+        "link": "https://smartstore.naver.com/main/products/13472661949"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080291/90802915130.jpg",
+        "mall": "이노시스",
+        "link": "https://smartstore.naver.com/main/products/13258404798"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058796/90587963720.jpg",
+        "mall": "몽글레마켓",
+        "link": "https://smartstore.naver.com/main/products/13043452628"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210771889",
+    "translated_kr": "BOY NEXT DOOR PICK ニッチパフューム ハンドクリーム ロストウッド",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
