@@ -32927,5 +32927,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204964045",
+    "translated_kr": "【GIFT/リニューアル】 トリプルコラーゲントナー 4.0 / 化粧水 ハリ ツヤ インナードライハリ スキンケア 韓国コスメ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205868858",
+    "translated_kr": "パーフェクトuv サンスクリーン スキンケアジェル spf50 90g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 UV 선스크린 스킨케어 젤 [SPF50+/PA++++]",
+      "naver": "아넷사 퍼펙트 UV 선스크린 스킨케어 젤 NB 90G"
+    },
+    "brand": "아넷사 (ANESSA)",
+    "name": "퍼펙트 UV 선스크린 스킨케어 젤 [SPF50+/PA++++]",
+    "volume": "90g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25500",
+    "mall": "아넷사",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13036756320",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9058126/90581267412.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058126/90581267412.15.jpg",
+        "mall": "아넷사",
+        "link": "https://smartstore.naver.com/main/products/13036756320"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8760739/87607399231.2.jpg",
+        "mall": "킹찰스",
+        "link": "https://smartstore.naver.com/main/products/10062896606"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
