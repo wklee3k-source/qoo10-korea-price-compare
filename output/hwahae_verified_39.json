@@ -50735,5 +50735,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1172104695",
+    "translated_kr": "ニュースキン 180度 スキン ミスト 100ml 霧噴射 ミスト",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168194628",
+    "translated_kr": "[足用爪切り]777 ルイボン 高級 爪切り, シルバー, 1個 足用爪切り",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고급손톱깎이",
+      "naver": "쓰리쎄븐 고급손톱깎이"
+    },
+    "brand": "쓰리쎄븐 (THREE SEVEN)",
+    "name": "고급손톱깎이",
+    "volume": "22.3g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "4200",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000145233",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5923266/59232666373.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5923266/59232666373.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000145233"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
