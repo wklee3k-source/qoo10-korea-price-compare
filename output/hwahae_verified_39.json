@@ -52363,5 +52363,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1136771232",
+    "translated_kr": "【PDRN】 サーモンアンプルトナー, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 연어 앰플토너"
+    },
+    "brand": "쿠피 (coopy)",
+    "name": "PDRN 연어 앰플토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205512883",
+    "translated_kr": "[ソンスジャパン イベント]（3種セット）20秒ルーティン スピーディーバブルマスク 3種（95ml ) (アクア/ボリューム/グロウ)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
