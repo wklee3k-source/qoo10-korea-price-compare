@@ -43941,5 +43941,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1189809546",
+    "translated_kr": "レッドフィルティンググルセラム 35ml + レッドピルホワイトセラム 35ML",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 필 팅글 세럼"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "레드 필 팅글 세럼",
+    "volume": "35ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1080682873",
+    "translated_kr": "ザ ヒアルロニック アシード 3 セラム 20ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
