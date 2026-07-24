@@ -24627,5 +24627,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1213005678",
+    "translated_kr": "페이스마스크 퓨어 에브리즈9FB 32장입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212081346",
+    "translated_kr": "ホワイト ジェリー アクアリスタ 60g レフィル 詰め替え用 美容液 保湿 肌のハリ 弾力",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
