@@ -37103,5 +37103,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208543148",
+    "translated_kr": "ミント シャンプー フローズンリフレッシュ 275mL + マスク マイルドリフレッシュ 230g セット【2026限定】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 새틴에디션 [플로우민트]"
+    },
+    "brand": "더파보리 (THEFVORI)",
+    "name": "더 새틴에디션 [플로우민트]",
+    "volume": "6ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192655532",
+    "translated_kr": "デンスオイル ラ・フランス 90mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "르빠 라 프랑스 피르"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "르빠 라 프랑스 피르",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
