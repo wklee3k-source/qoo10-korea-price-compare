@@ -47633,5 +47633,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206243209",
+    "translated_kr": "ビューティラボ 美容液【詰め替え×２個＋おまけ】【もっととてもしっとり】ヘアミルク 洗い流さないトリートメント ホーユー",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에클레라르"
+    },
+    "brand": "디아디아 (DIAADIA)",
+    "name": "에클레라르",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1119604476",
+    "translated_kr": "[正規品/K-Beauty] [1+1] ホワイト フラワー スノー トーンアップ クリーム 150ml + 150ml / フェイス·ボディ用",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
