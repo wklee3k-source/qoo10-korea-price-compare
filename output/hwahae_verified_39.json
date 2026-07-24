@@ -56612,5 +56612,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1198332621",
+    "translated_kr": "シルク ペプチド 糸リフト アンプル 60ml + ゴールド クリーム 50ml セット (ハリ・弾力) 韓国コスメ 正規品",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)"
+    },
+    "brand": "쿨라 (COOLA)",
+    "name": "ER+ Clear Recovery Foam Wash (이알플러스클리어리커버리폼워시)",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 48000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1186741863",
+    "translated_kr": "スタンダードアフターシャワー EDP 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "애프터 샤워 EDP",
+      "naver": "[무신사 스탠다드 뷰티] 무신사 스탠다드 애프터 샤워 EDP 50ml MCDOF001-AS"
+    },
+    "brand": "무신사 스탠다드 뷰티 (musinsa standard BEAUTY)",
+    "name": "애프터 샤워 EDP",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4388016?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5700034/57000345079.21.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5700034/57000345079.21.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4388016?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5048359/50483595197.55.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4388017?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
