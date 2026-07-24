@@ -227,10 +227,16 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 
     if known_brand:
         kb = known_brand.lower()
-        if kb in cand_brand:
+        if kb in cand_brand or kb in cand_name:
             score += 3.0
-        elif kb in cand_name:
-            score += 1.5  # 브랜드 필드는 없지만 이름에 브랜드가 포함된 경우
+        elif cand_brand:
+            # [중요] 예전엔 known_brand가 있어도 불일치시 그냥 가산점만
+            # 못 받았지 페널티가 없었다 — 그래서 후보가 이거 하나뿐이면
+            # (다른 소스가 다 실패) 브랜드가 완전히 달라도 무조건 채택되는
+            # 구조적 결함이 있었다(실측: "디오프러스" 원본이 "아이스트"라는
+            # 완전히 다른 브랜드의 대형세트상품과 매칭된 사고). 후보 자체의
+            # brand가 확인됐는데 known_brand와 다르면 강한 페널티를 준다.
+            score -= 5.0
 
     if known_volume:
         known_ml = _normalize_volume_ml(known_volume)
@@ -251,6 +257,9 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
         score += 0.5
 
     return score
+
+
+REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
 
 
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
@@ -353,6 +362,20 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         scored.sort(key=lambda x: -x[0])
         best_score, winner = scored[0]
         print(f"    [투표결과] " + " / ".join(f"{c['source']}={s:.1f}" for s, c in scored) + f" -> 승자: {winner['source']}")
+
+        if best_score < REJECT_SCORE_THRESHOLD:
+            print(f"    [거부] 최고점수({best_score:.1f})가 임계값({REJECT_SCORE_THRESHOLD}) 미만 — 틀린 매칭을 억지로 채택하지 않고 실패 처리")
+            entry = {
+                "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
+                "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "brand": None, "name": None, "volume": "", "source": None,
+                "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
+                "product_url": None, "image_url": None, "image_candidates": [],
+            }
+            results.append(entry)
+            out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            processed_this_call += 1
+            continue
 
         winner_name = winner.get("name") or ""
         winner_brand = winner.get("brand") or ""
