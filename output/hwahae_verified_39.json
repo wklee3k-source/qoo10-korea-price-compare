@@ -22791,5 +22791,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162866991",
+    "translated_kr": "マジックプレス ペディ チューブゼア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106744312",
+    "translated_kr": "ニュートロジーナ レインバス 1182ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐스 리페어 시카 에멀젼 [무향]",
+      "naver": "뉴트로지나 인텐스 리페어 시카 에멀젼 310ml(건성)"
+    },
+    "brand": "뉴트로지나 (Neutrogena)",
+    "name": "인텐스 리페어 시카 에멀젼 [무향]",
+    "volume": "310ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13000",
+    "mall": "gh스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7926416135",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8547091/85470916458.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8547091/85470916458.1.jpg",
+        "mall": "gh스토어",
+        "link": "https://smartstore.naver.com/main/products/7926416135"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
