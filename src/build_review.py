@@ -131,12 +131,15 @@ def build_pairs():
 
         stats["ok"] += 1
 
-        # 표시용 한글 상품명: 구매처(네이버) 원본 상품명을 최우선으로 쓴다.
-        # 승자가 화해/Exa일 때는 그쪽 name/volume 필드가 부실한 경우가 많고
-        # (개수·용량 누락), 실제 구매링크의 원본 제목엔 정확한 정보가 이미
-        # 들어있는 경우가 대부분이라, 그걸 그대로 보여주는 게 가장 정확하다.
+        # 표시용 한글 상품명: 우선순위는
+        # 1) 실제 구매링크 페이지에서 직접 가져온 진짜 상품명(real_page_title,
+        #    가장 정확 — 실측으로 확인된 문제: 네이버 API의 title은 실제
+        #    판매페이지와 다를 수 있었음, 예: "에스트라 NEW 아토베리어365
+        #    캡슐 토너" vs 실제페이지 "NEW 아토베리어365 캡슐 토너 300ml")
+        # 2) 네이버 API의 title(위 스크래핑이 실패한 사이트의 경우 폴백)
+        # 3) 승자(화해/Exa 등)의 name
         naver_original_name = (x.get("candidates_summary") or {}).get("naver")
-        kr_name_display = naver_original_name or x.get("name") or ""
+        kr_name_display = x.get("real_page_title") or naver_original_name or x.get("name") or ""
 
         qoo10_vol = extract_volume_ml(q["title"])
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")

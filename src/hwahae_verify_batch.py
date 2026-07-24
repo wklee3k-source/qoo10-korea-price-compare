@@ -425,6 +425,25 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "image_candidates": naver_data.get("image_candidates") or [],
         }
 
+        # [정확도개선] "한글 상품명"은 네이버 검색API가 준 title(요약형이라
+        # 실제 판매페이지와 다를 수 있음)이 아니라, 진짜 구매링크 페이지의
+        # 정확한 상품명을 보여주는 게 최선이다. 실제 페이지를 열어서
+        # og:title/title을 가져와본다 — subprocess로 격리해서 특정
+        # 사이트가 막혀있거나(차단/JS필요) 응답이 느려도 전체 배치가
+        # 멈추지 않고, 실패하면 조용히 기존 방식(네이버 title)으로
+        # 돌아간다("가능하면 정확하게, 안 되면 원래대로").
+        if entry.get("product_url"):
+            try:
+                page_title_proc = subprocess.run(
+                    [sys.executable, "fetch_page_title.py", entry["product_url"]],
+                    capture_output=True, text=True, timeout=12,
+                )
+                real_title = page_title_proc.stdout.strip()
+                if real_title and len(real_title) >= 5:
+                    entry["real_page_title"] = real_title
+            except Exception as e:  # noqa: BLE001
+                print(f"    [페이지제목가져오기 실패, 기존방식 유지] {type(e).__name__}: {e}")
+
         # 4차: 확정된 구매링크가 실제로 품절인지 확인한다(재사용 목적:
         # 큐텐 등록 이후에도 주기적으로 이 링크가 여전히 살아있는지 재확인하는
         # 용도로 stock_checker.py를 계속 쓸 수 있다). "숨겨진 품절배지"로 인한
