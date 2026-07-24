@@ -52492,5 +52492,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1186300374",
+    "translated_kr": "オードパルファム50ml（3種類から1点選択）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [패츌리가든]",
+      "naver": "dreaming (26년2월) FAIRY TAIL 100YEARS QUEST　オードパルファム260203026"
+    },
+    "brand": "아닐로 (ANILLO)",
+    "name": "오 드 퍼퓸 [패츌리가든]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "76600",
+    "mall": "HEYs",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13062373182",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9060688/90606884274.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060688/90606884274.jpg",
+        "mall": "HEYs",
+        "link": "https://smartstore.naver.com/main/products/13062373182"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212133884",
+    "translated_kr": "【公式】【クレンジング1位・W洗顔不要】スクアレンリセットポアディープクレンジングオイル, 200ml (メイク落とし /毛穴汚れ/スクワラン/LHA/高保/ブラックヘッド/敏感肌/低刺激)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
