@@ -50819,5 +50819,67 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199549438",
+    "translated_kr": "クライオ ソルベ アイシー フェイシャル マスク (4個入) / クーリング 冷却 パック むくみケア",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 페이셜 마스크",
+      "naver": "마리아갈랑 280 수분 페이셜 마스크 50ml"
+    },
+    "brand": "닷사이 (DASSAI)",
+    "name": "(해외) 페이셜 마스크",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "99200",
+    "mall": "해외조준",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12477726392",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg",
+        "mall": "해외조준",
+        "link": "https://smartstore.naver.com/main/products/12477726392"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151671051",
+    "translated_kr": "【国内百貨店】ルラボベルガモット22オードパルファム15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베르가못 22 오드퍼퓸",
+      "naver": "로제르 베르가못 22 오드퍼퓸 30ml"
+    },
+    "brand": "로제르 (ROSEUR)",
+    "name": "베르가못 22 오드퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29900",
+    "mall": "로제르",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4665049286",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8220956/82209569920.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8220956/82209569920.3.jpg",
+        "mall": "로제르",
+        "link": "https://smartstore.naver.com/main/products/4665049286"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
