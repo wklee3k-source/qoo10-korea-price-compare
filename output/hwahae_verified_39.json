@@ -29640,5 +29640,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1165615884",
+    "translated_kr": "ゼロ毛穴パッド2.0 70枚1セット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로모공패드 2.0",
+      "naver": "제로 모공 패드 2.0 70매, 1개"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로모공패드 2.0",
+    "volume": "155g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "미인뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13069682596",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061419/90614193688.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061419/90614193688.jpg",
+        "mall": "미인뷰티",
+        "link": "https://smartstore.naver.com/main/products/13069682596"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8972542/89725424518.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12180913813"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165228864",
+    "translated_kr": "ザリアルノニエネルギーアンプル30ml 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
