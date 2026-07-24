@@ -22448,5 +22448,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1124448967",
+    "translated_kr": "リードルショット 1000 エッセンス 50ml 【弾力/保湿/栄養/しわ防止】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리들샷 1000",
+      "naver": "[브이티코스메틱] VT 리들샷 1000 VTPD40136"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "리들샷 1000",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "37490",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5305531/53055312061.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5305531/53055312061.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1148735293",
+    "translated_kr": "スタイリング アニメーター ウェット カールクリーム ボリュームヘア 男性 女性 150ml 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
