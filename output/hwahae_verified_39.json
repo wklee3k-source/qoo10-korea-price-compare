@@ -30815,5 +30815,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1097848142",
+    "translated_kr": "ローズペール ヘアケアセット シャンプー300ml+トリートメント300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "헤어케어 샴푸"
+    },
+    "brand": "(주)스펠라 (spela)",
+    "name": "헤어케어 샴푸",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208505277",
+    "translated_kr": "3種類から選べる ミルボン ニゼル ドレシア エアリー ミラー ストップ フィルター 180g ヘアスプレー",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
