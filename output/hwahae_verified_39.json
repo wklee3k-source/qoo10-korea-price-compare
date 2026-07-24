@@ -53590,5 +53590,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200925956",
+    "translated_kr": "ピンクトーンアップサンクリーム",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200931489",
+    "translated_kr": "リードルショット + PDRN カプセルクリーム セット / 100・300",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포켓몬 에디션 피디알엔 캡슐 크림 100",
+      "naver": "[포켓몬 에디션] VT 피디알엔 캡슐 크림 100 50ml 더블 기획 (+피카츄 파우치 키링)"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "포켓몬 에디션 피디알엔 캡슐 크림 100",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "48400",
+    "mall": "민꼬21",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13670052191",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121456/91214563144.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121456/91214563144.jpg",
+        "mall": "민꼬21",
+        "link": "https://smartstore.naver.com/main/products/13670052191"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120200/91202004470.jpg",
+        "mall": "이유온스토어",
+        "link": "https://smartstore.naver.com/main/products/13657493685"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
