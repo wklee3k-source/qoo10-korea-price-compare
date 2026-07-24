@@ -49870,5 +49870,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200867593",
+    "translated_kr": "ビタ10 ポアトーニング セラム 20ml + 20ml / ビタミンC",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194055247",
+    "translated_kr": "ポクスンポクスン フィギュアキーリング ジュース リトルアピーチ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "파우치 키링"
+    },
+    "brand": "발라 (VALLA)",
+    "name": "파우치 키링",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
