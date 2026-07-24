@@ -51972,5 +51972,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212029919",
+    "translated_kr": "3番 うるツヤ発酵トナーパッド 70枚 (透明感・キメ整肌・凸凹肌卒業・肌荒れ・ 赤み鎮静・ほてりケア 毛穴引き締め ゆらぎ肌対策 角質・皮脂オフ 朝の時短・部分パック 敏感肌も安心 韓国コスメ)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "3번 모공제로 화잘먹 패드",
+      "naver": "[리뉴얼] 넘버즈인 3번 토너패드 70매+70매 모공제로 화잘먹 패드"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "3번 모공제로 화잘먹 패드",
+    "volume": "190ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26990",
+    "mall": "블랙 올리브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9887411923",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8743191/87431914196.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8743191/87431914196.1.jpg",
+        "mall": "블랙 올리브",
+        "link": "https://smartstore.naver.com/main/products/9887411923"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117530/91175305665.jpg",
+        "mall": "셀잇뷰티",
+        "link": "https://smartstore.naver.com/main/products/13630795001"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188884197",
+    "translated_kr": "ティーツリー 89 クーリング パッド 70枚 (肌荒れ・ニキビ鎮静 赤み・ほてりケア 毛穴引き締め ゆらぎ肌対策 角質・皮脂オフ 朝の時短・洗顔代わり 部分パック 敏感肌も安心 弱酸性 韓国コスメ)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
