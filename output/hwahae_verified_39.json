@@ -41992,5 +41992,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208516387",
+    "translated_kr": "【夏向けサラサラ日焼け止め】3番 ノーファンデ陶器肌トーンアップUVクリームEX, 50ml／ベタつかない／さっぱり／日差し対策／紫外線対策／ベースメイク／化粧下地／",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210576443",
+    "translated_kr": "コウジ酸ビタゼリーセラムミスト, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코직애씨드 터메릭 비타 미스트 세럼",
+      "naver": "코직애씨드 터메릭 비타 미스트 세럼"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "코직애씨드 터메릭 비타 미스트 세럼",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30200",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2538&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5719643/57196433616.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5719643/57196433616.1.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2538&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5591733/55917330220.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2457&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119909/91199094765.jpg",
+        "mall": "미인뷰티",
+        "link": "https://smartstore.naver.com/main/products/13654583980"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981012/89810125772.jpg",
+        "mall": "세하미니스토어",
+        "link": "https://smartstore.naver.com/main/products/12265615056"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
