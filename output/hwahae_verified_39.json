@@ -39269,5 +39269,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165444330",
+    "translated_kr": "アヌカチン シャンプー 525ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아누카틴 샴푸"
+    },
+    "brand": "모에브 (moev)",
+    "name": "아누카틴 샴푸",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165596313",
+    "translated_kr": "[1+1] 黒雲 毛根強化アンドボリュームケアシャンプー 500ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
