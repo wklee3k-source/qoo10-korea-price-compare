@@ -31752,5 +31752,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1197892266",
+    "translated_kr": "【正規品】 グロウクリーミーボディスクラブ ヌバニラ 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 크리미 바디스크럽 누바닐라"
+    },
+    "brand": "어노브 (UNOVE)",
+    "name": "글로우 크리미 바디스크럽 누바닐라",
+    "volume": "300g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152030824",
+    "translated_kr": "[人気2種セット]ホワイトトリュフファーストスプレーセラム 100ml +ウォータフルトーンアップサンクリーム50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 퍼스트 스프레이 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 퍼스트 스프레이 세럼",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
