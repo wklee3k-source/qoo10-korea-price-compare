@@ -22071,5 +22071,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210321053",
+    "translated_kr": "【공식】메라티놀 클라우드크림 50g＋메라티놀앰플(2ml*7ea) /레티놀/멜라닌케어/시미케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209234684",
+    "translated_kr": "【공식】피엘트라 퍼밍밴드리프터 50ml/리프팅/피부 결 개선/코엔자임/얼굴·목의 처짐 케어 /탄력 /주름·처짐 개선 / 진정한 V라인 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "뷰티디바이스 디엘바이브 팔자주름 눈밑 얼굴 리프팅 기계 진동괄사 마사지기 골드뷰티바 홈케어 밴드스토어"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "49900",
+    "mall": "밴드스토어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11578773655",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8912328/89123284061.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8912328/89123284061.jpg",
+        "mall": "밴드스토어",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11578773655"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8581917/85819170728.17.jpg",
+        "mall": "디엘 DE-EL",
+        "link": "https://smartstore.naver.com/main/products/8274670405"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8595604/85956041836.7.jpg",
+        "mall": "디엘 DE-EL",
+        "link": "https://smartstore.naver.com/main/products/8411541513"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8358273/83582733187.6.jpg",
+        "mall": "디엘 DE-EL",
+        "link": "https://smartstore.naver.com/main/products/6038233699"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
