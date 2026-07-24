@@ -26003,5 +26003,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209059063",
+    "translated_kr": "アーバンエコ ハラケケ エマルジョン 130ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하라케케 피디알엔 딥 모이스처 크림",
+      "naver": "더샘 하라케케 피디알엔 딥 모이스처 크림"
+    },
+    "brand": "더샘 (theSAEM)",
+    "name": "하라케케 피디알엔 딥 모이스처 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17600",
+    "mall": "더샘",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13526431923",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9107094/91070942276.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107094/91070942276.jpg",
+        "mall": "더샘",
+        "link": "https://smartstore.naver.com/main/products/13526431923"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9108499/91084993706.jpg",
+        "mall": "NC 동수원점 더샘",
+        "link": "https://smartstore.naver.com/main/products/13540483353"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120435/91204356572.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13659845787"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1138225289",
+    "translated_kr": "シグネチャーパルファム, 50ml, 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
