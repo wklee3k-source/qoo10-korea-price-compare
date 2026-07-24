@@ -55948,5 +55948,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1120143925",
+    "translated_kr": "アドバンスド リペア アンプル シャンプー, トリートメント, ヘアパック 1L",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1121133303",
+    "translated_kr": "デビルズ パフューム シャンプー,リンス,ボディウォッシュ 1L",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "데빌스 퍼퓸 트리트먼트 [미드나잇판타지]",
+      "naver": "케라시스 데빌스 미드나잇 판타지 퍼퓸 손상케어 트리트먼트 1개 1L"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "데빌스 퍼퓸 트리트먼트 [미드나잇판타지]",
+    "volume": "1L",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18000",
+    "mall": "카린닷컴",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13532883499",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9107739/91077393852.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107739/91077393852.jpg",
+        "mall": "카린닷컴",
+        "link": "https://smartstore.naver.com/main/products/13532883499"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8897530/88975305778.jpg",
+        "mall": "현스헬시",
+        "link": "https://smartstore.naver.com/main/products/11430795413"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120578/91205781054.jpg",
+        "mall": "유니온스커머스",
+        "link": "https://smartstore.naver.com/main/products/13661270213"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
