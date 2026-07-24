@@ -55265,5 +55265,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203107079",
+    "translated_kr": "エイシカ365クーリングリリーフパッドpH4.5, 60枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1127473136",
+    "translated_kr": "[1+1]グリーン サルビア トリートメント トナー 200ml+200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린샐비아 카밍 앰플"
+    },
+    "brand": "메이드미 (MEiDEME)",
+    "name": "그린샐비아 카밍 앰플",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
