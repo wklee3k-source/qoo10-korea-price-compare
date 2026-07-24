@@ -55483,5 +55483,63 @@
     "stock_evidence": [
       "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://theforment.com/product/detail.html?product_no=149&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
     ]
+  },
+  {
+    "goods_no": "1055956359",
+    "translated_kr": "メラ B3 セラム 30ml 【美容液】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멜라B3 세럼",
+      "naver": "LA ROCHE POSAY 라로슈포제 멜라 B3 세럼, 50ml"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "멜라B3 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "183700",
+    "mall": "겟온뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13579476822",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112398/91123987228.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112398/91123987228.jpg",
+        "mall": "겟온뷰티",
+        "link": "https://smartstore.naver.com/main/products/13579476822"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112402/91124025363.jpg",
+        "mall": "겟온뷰티",
+        "link": "https://smartstore.naver.com/main/products/13579514953"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112402/91124025362.jpg",
+        "mall": "겟온뷰티",
+        "link": "https://smartstore.naver.com/main/products/13579514952"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1197485830",
+    "translated_kr": "2番 Wクレンジングホイップ泡洗顔料, 120ml, 2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
