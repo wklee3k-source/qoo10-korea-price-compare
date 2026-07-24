@@ -45201,5 +45201,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162204761",
+    "translated_kr": "[NEW] クライオアイスマスク 30枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192413711",
+    "translated_kr": "フルフィット プロポリス シナジー トナー 280ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 허니 오버나이트 마스크"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 허니 오버나이트 마스크",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
