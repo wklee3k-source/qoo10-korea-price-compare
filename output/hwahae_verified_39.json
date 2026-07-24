@@ -45697,5 +45697,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210345860",
+    "translated_kr": "ハートブラシ コンパクト ヘアブラシ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하트 브러시 포 스칼프 매트민트"
+    },
+    "brand": "리파 (ReFa)",
+    "name": "하트 브러시 포 스칼프 매트민트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 29800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1183523136",
+    "translated_kr": "韓国スキンケア 洗顔パウダー 酵素洗顔 毛穴ケア フェイスウォッシュ クレンジングパウダー 80g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
