@@ -53978,5 +53978,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204918041",
+    "translated_kr": "【正規販売店】イプシス OSD09 ヘアミルク 300mL",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1151142091",
+    "translated_kr": "【공식】골드실 펩타이드 콜라겐 주름 리프팅 앰플 30ml 탄력피부·안티에이징케어·한국코스메",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디테라피 슈마지 샷 골드실 리프팅 앰플 12ml (C)[35411496]"
+    },
+    "brand": "메디테라피",
+    "name": "메디테라피 슈마지 샷 골드실 리프팅 앰플 12ml (C)[35411496]",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "14500",
+    "mall": "NS홈쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12873662084",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9041817/90418173076.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041817/90418173076.jpg",
+        "mall": "NS홈쇼핑",
+        "link": "https://smartstore.naver.com/main/products/12873662084"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
