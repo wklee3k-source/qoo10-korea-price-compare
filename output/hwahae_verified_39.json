@@ -55420,5 +55420,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1106239607",
+    "translated_kr": "【正規品】ドクダミ77%スージングトナー, 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 수딩 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1200916719",
+    "translated_kr": "シグネチャーパフューム コットン メモリー 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시그니처 퍼퓸 [코튼메모리]",
+      "naver": "포맨트 시그니처 퍼퓸 코튼메모리,50ml"
+    },
+    "brand": "포맨트 (Forment)",
+    "name": "시그니처 퍼퓸 [코튼메모리]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "47000",
+    "mall": "포맨트",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://theforment.com/product/detail.html?product_no=149&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_2527714/25277144124.20.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2527714/25277144124.20.jpg",
+        "mall": "포맨트",
+        "link": "https://theforment.com/product/detail.html?product_no=149&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8962537/89625379469.1.jpg",
+        "mall": "건승통상",
+        "link": "https://smartstore.naver.com/main/products/12080868770"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8664159/86641597684.1.jpg",
+        "mall": "THE 담다",
+        "link": "https://smartstore.naver.com/main/products/9097097361"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://theforment.com/product/detail.html?product_no=149&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
   }
 ]
