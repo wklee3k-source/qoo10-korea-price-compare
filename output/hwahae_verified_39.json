@@ -29999,5 +29999,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210829738",
+    "translated_kr": "プレミアムもちソープ[グリーン], 120g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클렌저 떡솝 [그린아르티장]",
+      "naver": "아렌시아 그린 아르티장 스킨 부스팅 떡솝 클렌저 120g, 1개"
+    },
+    "brand": "아렌시아 (Arencia)",
+    "name": "클렌저 떡솝 [그린아르티장]",
+    "volume": "120g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "34400",
+    "mall": "Arencia 아렌시아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10865028854",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8840953/88409534866.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8840953/88409534866.4.jpg",
+        "mall": "Arencia 아렌시아",
+        "link": "https://smartstore.naver.com/main/products/10865028854"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8841108/88411086065.2.jpg",
+        "mall": "아렌시아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10866580052"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211081043",
+    "translated_kr": "PDRNアイパッチ",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
