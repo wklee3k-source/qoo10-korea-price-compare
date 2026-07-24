@@ -22168,5 +22168,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1131995829",
+    "translated_kr": "5번 화이트진주 글루타치온 100xTXA10 집중 토닝 미용액 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "3번 참은만큼 보들보들 결세럼팩"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "3번 참은만큼 보들보들 결세럼팩",
+    "volume": "135g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1131788387",
+    "translated_kr": "코지산 비타 나이아신아마이드 세럼 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "코직애씨드 터메릭 비타 세럼"
+    },
+    "brand": "메디큐브",
+    "name": "코직애씨드 터메릭 비타 세럼",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "31400",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2457&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5591733/55917330220.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5591733/55917330220.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2457&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
