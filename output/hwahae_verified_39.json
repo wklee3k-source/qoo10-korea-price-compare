@@ -54379,5 +54379,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1024540170",
+    "translated_kr": "プロポリス アンプル 35ml+インビジブルピーリングブースター 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161269723",
+    "translated_kr": "[単独企画] ナチュラルカバーローション 50g + ミニチュア10ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "내추럴 커버 로션 [SPF50+/PA++++]",
+      "naver": "오브제 내추럴 커버 로션 50g SPF50+ PA++++"
+    },
+    "brand": "오브제 (OBgE)",
+    "name": "내추럴 커버 로션 [SPF50+/PA++++]",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28900",
+    "mall": "OBgE 오브제",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10310142352",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8785464/87854646458.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8785464/87854646458.6.jpg",
+        "mall": "OBgE 오브제",
+        "link": "https://smartstore.naver.com/main/products/10310142352"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8435002/84350027767.9.jpg",
+        "mall": "OBgE 오브제",
+        "link": "https://smartstore.naver.com/main/products/6805527445"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8785469/87854694887.5.jpg",
+        "mall": "OBgE 오브제",
+        "link": "https://smartstore.naver.com/main/products/10310190781"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
