@@ -53198,5 +53198,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1183121413",
+    "translated_kr": "頭皮ラップ コアペプチド ボリュームトリートメント 300g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196576304",
+    "translated_kr": "初摘み緑茶 モイスト クレンジングフォーム 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피부가 마시는 첫물녹차 모이스트 클렌징 폼",
+      "naver": "과일나라 피부가 마시는 첫물녹차 모이스트 클렌징 폼"
+    },
+    "brand": "과일나라 (KWAILNARA)",
+    "name": "피부가 마시는 첫물녹차 모이스트 클렌징 폼",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "7920",
+    "mall": "그린코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5049792285",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8259431/82594313369.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8259431/82594313369.jpg",
+        "mall": "그린코스",
+        "link": "https://smartstore.naver.com/main/products/5049792285"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
