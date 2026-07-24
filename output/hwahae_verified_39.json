@@ -38247,5 +38247,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1164356074",
+    "translated_kr": "アドベンスドスネイル92オールインワンチューブ型クリーム100g 1個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191102778",
+    "translated_kr": "インテカスージングクリーム, 31ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인테카 수딩 크림",
+      "naver": "메이크프렘 인테카 수딩크림 70ml+31ml+31ml(+NMN 앰플 7ml)"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 수딩 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "21890",
+    "mall": "파니브리즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9951771984",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8749627/87496274257.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749627/87496274257.7.jpg",
+        "mall": "파니브리즈",
+        "link": "https://smartstore.naver.com/main/products/9951771984"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
