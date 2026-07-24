@@ -51040,5 +51040,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1180624495",
+    "translated_kr": "オーツインカーミングジェルクリーム 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "카밍 젤크림",
+      "naver": "앤닥터 여드름 트러블 진정 수분크림 카밍 젤크림 45ml"
+    },
+    "brand": "앤닥터 (NDOCTOR)",
+    "name": "카밍 젤크림",
+    "volume": "45ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "31500",
+    "mall": "앤닥터",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5349236146",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8289372/82893729086.17.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8289372/82893729086.17.jpg",
+        "mall": "앤닥터",
+        "link": "https://smartstore.naver.com/main/products/5349236146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8833667/88336676041.2.jpg",
+        "mall": "앤닥터",
+        "link": "https://smartstore.naver.com/main/products/10792170051"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1162284855",
+    "translated_kr": "【1+1 選べる香り】[パフュームハンドクリーム 50ml×2本] 韓国人気 保湿ケア 手元香水 ギフトにも",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베이비 로션",
+      "naver": "[1+1] BOSCP 보습 로션 250ml 2개"
+    },
+    "brand": "보습 (BOSCP)",
+    "name": "베이비 로션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13900",
+    "mall": "LG생활건강키즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4226363741",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8177088/81770885230.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8177088/81770885230.7.jpg",
+        "mall": "LG생활건강키즈",
+        "link": "https://smartstore.naver.com/main/products/4226363741"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
