@@ -282,6 +282,19 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         cand_musinsa = _search_musinsa(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
 
+        # [근본수정] Exa는 상품명은 정확히 찾아줘도 브랜드정보를 절대 안 준다
+        # (구조적 한계). 화해 초벌검색(kw_cleaned)이 실패해서 cand_hwahae가
+        # 없는데 Exa는 성공했다면, Exa가 찾은 정확한 이름으로 화해를 한 번 더
+        # 검색한다 — 그래야 Exa가 이겨도 브랜드정보를 확보할 기회가 생긴다.
+        # 실측: 같은 상품인데 검색어가 조금만 달라도 화해 1차검색이 실패하는
+        # 경우가 있었고, 그때 브랜드정보가 통째로 빠지면서 정상 매칭도
+        # "브랜드판단불가/불일치"로 잘못 보이는 문제가 있었다.
+        if not cand_hwahae and cand_exa and cand_exa.get("name"):
+            print(f"    [Exa이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> Exa확인명 '{cand_exa['name']}'로 재검색")
+            cand_hwahae_retry = _search_hwahae(cand_exa["name"], known_volume, known_brand)
+            if cand_hwahae_retry:
+                cand_hwahae = cand_hwahae_retry
+
         # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해 또는
         # 무신사가 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로
         # 네이버를 한 번 더 검색한다(구매링크는 네이버쪽이 더 신뢰판매처
