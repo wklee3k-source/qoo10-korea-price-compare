@@ -52273,5 +52273,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208270769",
+    "translated_kr": "PPT美容液スプレー 120g 洗い流さないトリートメント",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208267053",
+    "translated_kr": "スタイリングキープグラスヘアオイルＲＦ 100ml ヘアスタイリングオイル",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스타일링 헤어 스프레이"
+    },
+    "brand": "노브랜드 (NoBrand)",
+    "name": "스타일링 헤어 스프레이",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 4580,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
