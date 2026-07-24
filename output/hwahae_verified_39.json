@@ -53501,5 +53501,76 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1208268460",
+    "translated_kr": "퍼펙신 GF크림 40ml + 1ml × 3개 GF크림 선물",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "리페론 퍼펙신 지에프 리페어 크림 회복 장벽 진정 수분 광채 40ml, 3개"
+    },
+    "brand": "리페론",
+    "name": "리페론 퍼펙신 지에프 리페어 크림 회복 장벽 진정 수분 광채 40ml, 3개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "196000",
+    "mall": "스킨원",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13412697842",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9095720/90957208178.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095720/90957208178.jpg",
+        "mall": "스킨원",
+        "link": "https://smartstore.naver.com/main/products/13412697842"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212750581",
+    "translated_kr": "리주얀 PDRN10000 크림 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "뉴셀릭 마이크로 PDRN 10000 TT크림 30ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "59000",
+    "mall": "순수를더하다",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13485768786",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103027/91030279138.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103027/91030279138.jpg",
+        "mall": "순수를더하다",
+        "link": "https://smartstore.naver.com/main/products/13485768786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119355/91193556812.jpg",
+        "mall": "에띠어리",
+        "link": "https://smartstore.naver.com/main/products/13649046033"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054403/90544031753.jpg",
+        "mall": "종로약방",
+        "link": "https://smartstore.naver.com/main/products/12999520661"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
