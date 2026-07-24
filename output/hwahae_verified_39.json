@@ -24801,5 +24801,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1180441965",
+    "translated_kr": "マデカ リリーフ トナー＋ローション セット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마데카 릴리프 토너"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "마데카 릴리프 토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1167101287",
+    "translated_kr": "フルフィット プロポリスライトアンプル 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 라이트 앰플"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 23500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
