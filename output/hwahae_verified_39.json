@@ -52941,5 +52941,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1171711918",
+    "translated_kr": "パンテッセルリペアシカクリームミスト120ml 2個",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172012952",
+    "translated_kr": "ミルクスキン150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밀크 스킨",
+      "naver": "티르티르 밀크 스킨 토너 150ml + 밀크 팩 클렌저 50ml"
+    },
+    "brand": "티르티르 (TIRTIR)",
+    "name": "밀크 스킨",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "16800",
+    "mall": "티르티르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13646191092",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119070/91190701871.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119070/91190701871.jpg",
+        "mall": "티르티르",
+        "link": "https://smartstore.naver.com/main/products/13646191092"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986551/89865519852.jpg",
+        "mall": "티르티르",
+        "link": "https://smartstore.naver.com/main/products/12321009135"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961532/89615325049.1.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12070814350"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
