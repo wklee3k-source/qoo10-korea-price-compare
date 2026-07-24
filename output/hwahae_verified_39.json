@@ -23512,5 +23512,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194137709",
+    "translated_kr": "アブソリュート エッセンス サン UVプロテクター 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "UV 썬 프로텍터 [SPF50+/PA+++]"
+    },
+    "brand": "엠큐어 (M-CURE)",
+    "name": "UV 썬 프로텍터 [SPF50+/PA+++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 42000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190215992",
+    "translated_kr": "ピュアオイルパフューム 10ml / 10種 1択",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
