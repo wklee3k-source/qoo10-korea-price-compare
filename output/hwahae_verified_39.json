@@ -51112,5 +51112,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1131627367",
+    "translated_kr": "【ヒカロニック】 超低分子 ヒアルロン酸 トナー 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "초저분자 히아루론산 토너",
+      "naver": "이즈앤트리 초저분자 히아루론산 토너 300ml, 1개"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "초저분자 히아루론산 토너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12750",
+    "mall": "바름인터내셔널",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13585955908",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113046/91130466320.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113046/91130466320.jpg",
+        "mall": "바름인터내셔널",
+        "link": "https://smartstore.naver.com/main/products/13585955908"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206857219",
+    "translated_kr": "【リアルマット仕上げ・長時間キープ】メイクキープミスト 75ml／韓国メイクアップフィクサー／正規品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
