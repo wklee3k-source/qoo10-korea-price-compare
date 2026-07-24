@@ -21041,5 +21041,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204898209",
+    "translated_kr": "[オリーブヤング企画] リアルヒアルロニック ブルー サンクリーム 2本セット",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192376870",
+    "translated_kr": "[限定企画セット] センシビオH2O 250ml おまけ付き (+100ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "센시비오 H2O",
+      "naver": "바이오더마 시카비오 크림 플러스 40ml + 센시비오 H2O 100ml 1개입, 1개"
+    },
+    "brand": "바이오더마 (BIODERMA)",
+    "name": "센시비오 H2O",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "16980",
+    "mall": "무무셀렉트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13313951344",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9085846/90858461676.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085846/90858461676.jpg",
+        "mall": "무무셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13313951344"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
