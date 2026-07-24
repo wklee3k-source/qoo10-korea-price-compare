@@ -26649,5 +26649,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1161204302",
+    "translated_kr": "[正規品]ドリクロ 20ml/脇汗デオドラント/デオドラント/脇汗/制汗剤/脇汗 韓国",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "치크 온 [B02 성숙ON]"
+    },
+    "brand": "블랙루즈 (BLACKROUGE)",
+    "name": "치크 온 [B02 성숙ON]",
+    "volume": "3g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 14900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1175756083",
+    "translated_kr": "セレブ愛用 オートイン カーミング クリーム 100ml しっとり鎮静ジェル 保湿 敏感肌 韓国コスメ",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "고체 입욕제 배쓰밤 [바다왕자상구]"
+    },
+    "brand": "아토오겔 (ATOOGEL)",
+    "name": "고체 입욕제 배쓰밤 [바다왕자상구]",
+    "volume": "120g",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
