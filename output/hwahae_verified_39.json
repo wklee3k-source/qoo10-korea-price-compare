@@ -33707,5 +33707,49 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1085260269",
+    "translated_kr": "アーモンドミルク ボディモイスチャライザー 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아몬드 모이스처라이저"
+    },
+    "brand": "닐스야드레머디스 (NEAL'SYARDREMEDIES)",
+    "name": "아몬드 모이스처라이저",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 43800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1081721110",
+    "translated_kr": "ボディ フィット 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디 핏 쿨 크림"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "바디 핏 쿨 크림",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 68000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
