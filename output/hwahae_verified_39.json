@@ -52000,5 +52000,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1103882936",
+    "translated_kr": "アドバンスド 10X モイスチャー ヘア アンプル セラム 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "케라틴본드 모이스춰 세럼",
+      "naver": "[애경] 케라시스 어드밴스드 케라틴 본드 실키모이스처 세럼 80ml x1개"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "케라틴본드 모이스춰 세럼",
+    "volume": "80mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6500",
+    "mall": "세상담기-네오홀릭",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9795256572",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8733975/87339758845.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733975/87339758845.2.jpg",
+        "mall": "세상담기-네오홀릭",
+        "link": "https://smartstore.naver.com/main/products/9795256572"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078691/90786911043.jpg",
+        "mall": "애경본사직영몰",
+        "link": "https://smartstore.naver.com/main/products/13242400711"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1096929915",
+    "translated_kr": "MUGENER ミュージェネ カーミング アンプル ミスト 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
