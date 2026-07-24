@@ -54437,5 +54437,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210270319",
+    "translated_kr": "【1+1企画】【韓国人気UV】 マスターズ アクアリッチ サンクリーム 50ml×2本セット (+ポケモンエディション)SPF50+",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1174256171",
+    "translated_kr": "ドラマティカリー ディファレント モイスチャライザー 125ml (ジェル/ローション)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "드라마티컬리 디퍼런트 립스틱 쉐이핑 립 컬러 [서프라이즈]",
+      "naver": "클리니크 서프라이즈 드라마티컬리 디프런트 립스틱 쉐이핑 립 컬러 립스틱 레드"
+    },
+    "brand": "크리니크 (CLINIQUE)",
+    "name": "드라마티컬리 디퍼런트 립스틱 쉐이핑 립 컬러 [서프라이즈]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "107250",
+    "mall": "섬셋 SomeSet",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11948437614",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8949294/89492948302.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8949294/89492948302.jpg",
+        "mall": "섬셋 SomeSet",
+        "link": "https://smartstore.naver.com/main/products/11948437614"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8590698/85906980918.jpg",
+        "mall": "SS shop",
+        "link": "https://smartstore.naver.com/main/products/8362480595"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
