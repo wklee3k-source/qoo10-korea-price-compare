@@ -43299,5 +43299,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209905054",
+    "translated_kr": "ホワイトアプリコット ソリッドパフューム 塗る固体香水 フレグランス 携帯用 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비누 [후레쉬릴리]"
+    },
+    "brand": "드봉 (DeBON)",
+    "name": "비누 [후레쉬릴리]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 1000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1132391030",
+    "translated_kr": "アトバリア 365 クリーム 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
