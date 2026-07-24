@@ -51869,5 +51869,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211932228",
+    "translated_kr": "MAISON MARGIELA　レプリカ オードトワレ バブル バス 30ml (配送区分:C1)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204379789",
+    "translated_kr": "SA スムージングクレンザー 473ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) SA 스무딩 클렌저",
+      "naver": "세라비 SA 스무딩 클렌저 (랜덤패키지) 236ml 순한 각질케어"
+    },
+    "brand": "세라비 (CeraVe)",
+    "name": "(해외) SA 스무딩 클렌저",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "21500",
+    "mall": "BLUE CHERRY",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11001968845",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8854647/88546474941.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8854647/88546474941.1.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/11001968845"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8769480/87694804393.1.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/10150301139"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
