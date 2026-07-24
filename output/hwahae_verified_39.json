@@ -48319,5 +48319,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "960305004",
+    "translated_kr": "ダフトアンドドフト パフュームド ボディローション エンジェルコットン 2個 300ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1141955710",
+    "translated_kr": "PDRN ピンクコラーゲン エキゾウムショット アンプル 30ml / 2000",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 콜라겐 볼륨 멀티밤"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 콜라겐 볼륨 멀티밤",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
