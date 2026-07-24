@@ -51863,5 +51863,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209630615",
+    "translated_kr": "【ニキビ】センテラオイントクリーム 30g (CICA, ナイアシンアミド, パンテノール)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "센텔라 오인트 크림",
+      "naver": "마일드랩 트러블 진정 센텔라 오인트 크림 30g, 1개"
+    },
+    "brand": "마일드랩 (mildlab)",
+    "name": "센텔라 오인트 크림",
+    "volume": "30g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28000",
+    "mall": "마일드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12913517626",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045802/90458028618.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045802/90458028618.jpg",
+        "mall": "마일드랩",
+        "link": "https://smartstore.naver.com/main/products/12913517626"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5964404/59644041101.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6178918?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202451334",
+    "translated_kr": "ルフリージア オードパルファム 10ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오 드 퍼퓸 [패츌리가든]",
+      "naver": "아닐로 패츌리가든 오 드 퍼퓸 10ml/50ml 단독 기획"
+    },
+    "brand": "아닐로 (ANILLO)",
+    "name": "오 드 퍼퓸 [패츌리가든]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000236444",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5779942/57799427176.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5779942/57799427176.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000236444"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038759/90387591411.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/12843080419"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038773/90387731183.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/12843220191"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
