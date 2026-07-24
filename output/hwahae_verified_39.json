@@ -34919,5 +34919,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188959099",
+    "translated_kr": "アシディック パーフェクティング コンセントレート リーブイン 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "애시딕 그린 센서리 오일"
+    },
+    "brand": "센텐스 (SCENTENCE)",
+    "name": "애시딕 그린 센서리 오일",
+    "volume": "8ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 9800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1085260269",
+    "translated_kr": "アーモンドミルク ボディモイスチャライザー 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아몬드 모이스처라이저"
+    },
+    "brand": "닐스야드레머디스 (NEAL'SYARDREMEDIES)",
+    "name": "아몬드 모이스처라이저",
+    "volume": "50g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 43800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
