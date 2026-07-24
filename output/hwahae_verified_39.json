@@ -39144,5 +39144,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190875712",
+    "translated_kr": "[26SS/New]セビウム セラム 30ml（+センシビオ H2O 5ml×2）",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세비엄 로션"
+    },
+    "brand": "바이오더마 (BIODERMA)",
+    "name": "세비엄 로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190240492",
+    "translated_kr": "アップルタチオン トニング トナー パッド 60枚 #独自特許原料アップルタチオン #リンゴエキス+アロエ+高純度グルタチオン #鎮静",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
