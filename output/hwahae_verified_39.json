@@ -52008,5 +52008,92 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1172804214",
+    "translated_kr": "海ぶどう レチノール 毛穴弾力クリーム 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Underarm Deodorant Cream (언더암데오드란트크림)",
+      "naver": "라비린 언더암 데오드란트 크림 12.5g Underarm Deodorant Cream"
+    },
+    "brand": "라비린 (Lavilin)",
+    "name": "(해외) Underarm Deodorant Cream (언더암데오드란트크림)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "37710",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10455298324",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10455298324"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg",
+        "mall": "드림원스토어",
+        "link": "https://smartstore.naver.com/main/products/5803192786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg",
+        "mall": "jj-pro store",
+        "link": "https://smartstore.naver.com/main/products/8554276575"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178756887",
+    "translated_kr": "パワーネイル マグネット",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자석 탑젤",
+      "naver": "발라 마그넷탑젤 10ml 고운화이트입자 논와이프 퍼펙트 자석탑 후루츄 후루츠"
+    },
+    "brand": "발라 (VALLA)",
+    "name": "자석 탑젤",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13000",
+    "mall": "네일창고",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13555125365",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9109963/91099635732.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109963/91099635732.jpg",
+        "mall": "네일창고",
+        "link": "https://smartstore.naver.com/main/products/13555125365"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095300/90953007119.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/13408496783"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8803767/88037672423.1.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/10493167122"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674331/86743313536.2.jpg",
+        "mall": "네일보그",
+        "link": "https://smartstore.naver.com/main/products/9198813213"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
