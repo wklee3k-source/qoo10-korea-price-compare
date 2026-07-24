@@ -50771,5 +50771,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1130217198",
+    "translated_kr": "ナイアシンアミド 10%トラネキサム酸５%セラム 50ML",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202040262",
+    "translated_kr": "ジョソンアビューティ ワンダーバス レモンシロップ パッククレンザー 200ml (+50ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바이틱스 레몬 커스터드 팩 클렌저",
+      "naver": "듀댑 바이틱스 레몬 커스터드 팩 클렌저 150ml"
+    },
+    "brand": "듀댑 (dewdap)",
+    "name": "바이틱스 레몬 커스터드 팩 클렌저",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17600",
+    "mall": "스킨클럽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13142264353",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9068677/90686775445.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068677/90686775445.jpg",
+        "mall": "스킨클럽",
+        "link": "https://smartstore.naver.com/main/products/13142264353"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
