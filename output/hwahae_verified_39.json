@@ -24293,5 +24293,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210946100",
+    "translated_kr": "オリーブヤング プレステージ ローション トゥエックス ジンセン デスカルゴ 140ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프레스티지 로씨옹 투엑스 진생 데스까르고",
+      "naver": "잇츠스킨 프레스티지 로씨옹 2X 진생 데스까르고 로션"
+    },
+    "brand": "잇츠스킨 (IT'SSKIN)",
+    "name": "프레스티지 로씨옹 투엑스 진생 데스까르고",
+    "volume": "140ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24910",
+    "mall": "뿌니샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6938184414",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8448268/84482684736.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8448268/84482684736.jpg",
+        "mall": "뿌니샵",
+        "link": "https://smartstore.naver.com/main/products/6938184414"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201556358",
+    "translated_kr": "Linoia トーンアップボディクリーム(SPF35 PA++) 200 ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
