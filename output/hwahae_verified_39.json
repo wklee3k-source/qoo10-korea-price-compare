@@ -52766,5 +52766,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198987607",
+    "translated_kr": "ドクダミ70%インテンスカーミングクリーム, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 데일리 로션",
+      "naver": "아누아 어성초 70 데일리 로션 200ml"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 데일리 로션",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "17990",
+    "mall": "JnH Shop",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13071395347",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+        "mall": "JnH Shop",
+        "link": "https://smartstore.naver.com/main/products/13071395347"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120245/91202458128.jpg",
+        "mall": "아르떼마켓1",
+        "link": "https://smartstore.naver.com/main/products/13657947343"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119018/91190183449.jpg",
+        "mall": "피지컬몬스터",
+        "link": "https://smartstore.naver.com/main/products/13645672670"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1186712850",
+    "translated_kr": "ファストシカペプチドポアタイトニングアンプル200ml+ファストシカペプチドスージンクリーム70mlセット/しっとり/肌鎮静/肌荒れケア/水分保湿ケア/肌キメケア/引き締め/毛穴ケア/エイジングケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
