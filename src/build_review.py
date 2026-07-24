@@ -142,14 +142,22 @@ def build_pairs():
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
 
+        orig_brand = q.get("brand", "")
+        brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
+
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
         # 용량으로 맞춰서 고쳐준다. 세트상품(예: "50g+20g")은 첫 번째
         # 숫자(주 용량)만 바꾸고 나머지는 그대로 둔다.
+        # [안전장치] 브랜드 자체가 확실히 불일치(mismatch)면 애초에 매칭이
+        # 틀렸을 가능성이 높으므로 용량자동수정을 하지 않는다 — 틀린 매칭
+        # 위에 그럴듯한 수정을 얹으면 오히려 더 진짜처럼 보여서 위험하다
+        # (실측: 브랜드가 완전히 다른 상품에 용량자동수정까지 적용되어
+        # 혼란을 키운 사고가 있었다).
         qoo10_title_display = q["title"]
         qoo10_title_highlighted = ""  # 바뀐 부분을 <mark>로 감싼 미리보기용(읽기전용)
         vol_auto_corrected = False
-        if not vol_match and qoo10_vol is not None and kr_vol is not None:
+        if not vol_match and qoo10_vol is not None and kr_vol is not None and brand_status != "mismatch":
             kr_vol_int = int(kr_vol) if kr_vol == int(kr_vol) else kr_vol
             qoo10_title_display = re.sub(
                 r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
@@ -163,9 +171,6 @@ def build_pairs():
             )
             qoo10_title_highlighted = escaped_title
             vol_auto_corrected = True
-
-        orig_brand = q.get("brand", "")
-        brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
 
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
