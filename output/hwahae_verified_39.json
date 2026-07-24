@@ -33955,5 +33955,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198755469",
+    "translated_kr": "ビーガンジェジュ 蓮マイルド角質ケアトナーパッド",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아로마비누 [어성초]"
+    },
+    "brand": "네츄럴팁스 (NATURALTIPS)",
+    "name": "아로마비누 [어성초]",
+    "volume": "100g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 4500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1178111873",
+    "translated_kr": "클린노트 파우더리 코튼 샴푸 1L + 트리트먼트 1L 세트 두피케어·피지제거·약산성·상큼한 향의 스칼프 샴푸",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
