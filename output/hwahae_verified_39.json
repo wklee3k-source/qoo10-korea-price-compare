@@ -41019,5 +41019,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1117285372",
+    "translated_kr": "Mung Bean pH-balanced Cleansing Foam 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "녹두 약산성 클렌징폼"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 약산성 클렌징폼",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210829091",
+    "translated_kr": "オリーブヤング ドクターセイバス セラムマスク PDRN 10枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
