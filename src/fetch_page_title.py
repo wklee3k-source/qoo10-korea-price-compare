@@ -35,16 +35,26 @@ def fetch_title(url: str, timeout: int = 10) -> str:
     if not m:
         m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:title["\']', html, re.I)
     if m and m.group(1).strip():
-        return m.group(1).strip()
+        return _strip_site_suffix(m.group(1).strip())
 
     # 2순위: <title> 태그(사이트명이 붙어있는 경우가 많아 뒤쪽 " - 몰이름" 등을 잘라냄)
     m = re.search(r"<title[^>]*>([^<]+)</title>", html, re.I)
     if m:
-        title = m.group(1).strip()
-        title = re.sub(r"\s*[-|:]\s*[^-|:]{1,20}$", "", title)  # 끝에 붙은 " - 사이트명" 류 제거(짧은 것만)
-        return title.strip()
+        return _strip_site_suffix(m.group(1).strip())
 
     return ""
+
+
+def _strip_site_suffix(title: str) -> str:
+    """제목 끝에 붙은 사이트/몰 이름 부분을 제거한다. " | 몰이름", " - 몰이름",
+    "- 후기 | 몰이름"처럼 구분자가 여러 개 겹쳐도, 마지막 구분자(| 우선,
+    없으면 -) 뒤가 15자 이내로 짧으면 사이트명일 가능성이 높다고 보고 잘라낸다."""
+    for sep in ("|", "-", ":"):
+        if sep in title:
+            *rest, last = title.rsplit(sep, 1)
+            if last.strip() and len(last.strip()) <= 15:
+                title = sep.join(rest).strip()
+    return title.strip()
 
 
 if __name__ == "__main__":
