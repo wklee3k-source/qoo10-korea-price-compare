@@ -54125,5 +54125,82 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1212496315",
+    "translated_kr": "ビタミンクリーム E 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "Re,DNA V10 비타민크림 E",
+      "naver": "시슬리 올데이 올이어 안티 에이징 에센셜 프로텍션 50ml (All Day All Year)"
+    },
+    "brand": "데이셀 (DAYCELL)",
+    "name": "Re,DNA V10 비타민크림 E",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "487500",
+    "mall": "독일시민",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8855417812",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8639991/86399918135.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8639991/86399918135.jpg",
+        "mall": "독일시민",
+        "link": "https://smartstore.naver.com/main/products/8855417812"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8639986/86399869875.jpg",
+        "mall": "코울슬로스토리즈",
+        "link": "https://smartstore.naver.com/main/products/8855369552"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8639990/86399908175.jpg",
+        "mall": "마르크유로",
+        "link": "https://smartstore.naver.com/main/products/8855407853"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9008822/90088226747.jpg",
+        "mall": "독일유기농하우스",
+        "link": "https://smartstore.naver.com/main/products/12543715894"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208012735",
+    "translated_kr": "【トーンアップ・UVケア】ディオプラス ブルーフェザー トーンアップ サンスクリーン 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블루 페더 톤 업 선 스크린 [SPF50+/PA++++]",
+      "naver": "디오프러스 블루 페더 톤 업 선 스크린 SPF50+ PA++++ 40ml"
+    },
+    "brand": "디오프러스 (DEOPROCE)",
+    "name": "블루 페더 톤 업 선 스크린 [SPF50+/PA++++]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18000",
+    "mall": "디오프러스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13197768158",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074227/90742279255.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074227/90742279255.5.jpg",
+        "mall": "디오프러스",
+        "link": "https://smartstore.naver.com/main/products/13197768158"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
