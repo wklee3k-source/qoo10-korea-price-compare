@@ -33655,5 +33655,57 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188959099",
+    "translated_kr": "アシディック パーフェクティング コンセントレート リーブイン 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "애시딕 그린 센서리 오일"
+    },
+    "brand": "센텐스 (SCENTENCE)",
+    "name": "애시딕 그린 센서리 오일",
+    "volume": "8ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 9800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1180137613",
+    "translated_kr": "signature conditioner 200ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "엘라스틴 실크리페어 샤이닝 컨디셔너 시그니처 550ml"
+    },
+    "brand": "엘라스틴",
+    "name": "엘라스틴 실크리페어 샤이닝 컨디셔너 시그니처 550ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "5690",
+    "mall": "L스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9276667674",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8682116/86821167997.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8682116/86821167997.jpg",
+        "mall": "L스토어",
+        "link": "https://smartstore.naver.com/main/products/9276667674"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
