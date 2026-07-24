@@ -55035,5 +55035,82 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1153052364",
+    "translated_kr": "グルタチオン トーニング ソリューション アンプル 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랑쉬 글루타치온 토닝 앰플",
+      "naver": "마지스레네 블랑쉬 글루타치온 토닝 앰플 50ml + 50ml"
+    },
+    "brand": "마지스레네 (MAGISLENE)",
+    "name": "블랑쉬 글루타치온 토닝 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "70000",
+    "mall": "마지스레네",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13203917775",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg",
+        "mall": "마지스레네",
+        "link": "https://smartstore.naver.com/main/products/13203917775"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8945025/89450255204.2.jpg",
+        "mall": "COSMATIC",
+        "link": "https://smartstore.naver.com/main/products/11905744595"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943611/89436113145.1.jpg",
+        "mall": "에스몰 코스메틱",
+        "link": "https://smartstore.naver.com/main/products/11891602535"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203952993",
+    "translated_kr": "ルベル ザ・モイ バーム アンビエントデュウ (ボディ・ヘアトリートメントバーム) 37g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크 선세럼 [SPF50+/PA++++]",
+      "naver": "루벨 실크 선 세럼 선크림 선케어 자외선nad 수분 화잘먹 촉촉"
+    },
+    "brand": "루벨 (LUBELLE)",
+    "name": "실크 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15900",
+    "mall": "루벨 lubelle",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13172619151",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg",
+        "mall": "루벨 lubelle",
+        "link": "https://smartstore.naver.com/main/products/13172619151"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8431551/84315515029.1.jpg",
+        "mall": "얀센코스메틱코리아",
+        "link": "https://smartstore.naver.com/main/products/6771014707"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
