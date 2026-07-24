@@ -38925,5 +38925,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1165596313",
+    "translated_kr": "[1+1] 黒雲 毛根強化アンドボリュームケアシャンプー 500ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1165361801",
+    "translated_kr": "[1+1] 콜츠풋 안티 비듬 샴푸 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜츠푸트 안티-댄드러프 샴푸"
+    },
+    "brand": "라우쉬 (RAUSCH)",
+    "name": "콜츠푸트 안티-댄드러프 샴푸",
+    "volume": "200ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
