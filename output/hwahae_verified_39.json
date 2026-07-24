@@ -55735,5 +55735,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1142999423",
+    "translated_kr": "ヒアルロン スペシャル ヘアケア セット[シャンプー 500ml +トリートメント 500ml]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213612689",
+    "translated_kr": "サーモンケアリングセンテラクリーム, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "살몬 케어링 센텔라 크림"
+    },
+    "brand": "헤브블루 (HEVEBLUE)",
+    "name": "살몬 케어링 센텔라 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 39900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
