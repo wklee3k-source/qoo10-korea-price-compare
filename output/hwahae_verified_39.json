@@ -19739,5 +19739,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1162866991",
+    "translated_kr": "マジックプレス ペディ チューブゼア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106744312",
+    "translated_kr": "ニュートロジーナ レインバス 1182ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐스 리페어 시카 에멀젼 [무향]"
+    },
+    "brand": "뉴트로지나 (Neutrogena)",
+    "name": "인텐스 리페어 시카 에멀젼 [무향]",
+    "volume": "310ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
