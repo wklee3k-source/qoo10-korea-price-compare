@@ -6,8 +6,8 @@ from playwright.sync_api import sync_playwright
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
     page = browser.new_page()
-    page.goto("https://global.oliveyoung.com/display/page/brand", timeout=30000, wait_until="networkidle")
-    page.wait_for_timeout(3000)
+    page.goto("https://global.oliveyoung.com/display/page/brand", timeout=45000, wait_until="domcontentloaded")
+    page.wait_for_timeout(6000)
     html = page.content()
     print("=== HTML 길이:", len(html), "===")
     # 브랜드로 추정되는 링크나 텍스트 패턴 찾기
