@@ -52714,5 +52714,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1111308183",
+    "translated_kr": "8番 韓方エキスセラム, 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209638394",
+    "translated_kr": "KINUJO (キヌージョ) 絹女 ストレートアイロン LM225",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "KINUJO 키누조 LM225 스트레이트 고데기"
+    },
+    "brand": null,
+    "name": "KINUJO 키누조 LM225 스트레이트 고데기",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "214600",
+    "mall": "어니스트불",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13512679918",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105719/91057190270.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105719/91057190270.jpg",
+        "mall": "어니스트불",
+        "link": "https://smartstore.naver.com/main/products/13512679918"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
