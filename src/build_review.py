@@ -72,6 +72,13 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
     kr_brand_lower = (kr_brand_text or "").lower()
+    if not kr_brand_lower:
+        # [수정] 구매처쪽 브랜드정보 자체가 없으면(예: 승자가 exa인데 exa는
+        # 애초에 brand를 안 줌) "불일치"가 아니라 "판단불가"다 — 실측으로
+        # 확인된 버그: 이전엔 원본이 가타카나일 때만 unknown 처리했는데,
+        # 영문/한글 원본 브랜드도 똑같이 정보부족을 mismatch로 잘못
+        # 표시하고 있었다.
+        return "unknown"
     expected = brand_dict.get(orig_brand, "")
     if expected:
         candidates = [expected] + BRAND_ALIASES.get(expected, [])

@@ -357,7 +357,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "translated_kr": kw_raw,
             "winner_source": winner["source"],
             "candidates_summary": {c["source"]: c.get("name") for c in candidates},
-            "brand": winner_brand or hwahae_data.get("brand"),
+            "brand": winner_brand or hwahae_data.get("brand") or naver_data.get("brand") or musinsa_data.get("brand"),
             "name": winner_name or hwahae_data.get("name"),
             "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
