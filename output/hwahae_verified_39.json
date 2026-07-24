@@ -39625,5 +39625,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1031905687",
+    "translated_kr": "데미 리페어 에멀전 75g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "컴포지오 CMC 리페어 샴푸"
+    },
+    "brand": "데미 (DEMI)",
+    "name": "컴포지오 CMC 리페어 샴푸",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1043988185",
+    "translated_kr": "ゼロ ベルベットティント 5.5g,16 バニーヌード",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 벨벳 틴트 [16 버니누드]"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "제로 벨벳 틴트 [16 버니누드]",
+    "volume": "5.5g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 13000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
