@@ -140,6 +140,7 @@ def build_pairs():
         # 용량으로 맞춰서 고쳐준다. 세트상품(예: "50g+20g")은 첫 번째
         # 숫자(주 용량)만 바꾸고 나머지는 그대로 둔다.
         qoo10_title_display = q["title"]
+        qoo10_title_highlighted = ""  # 바뀐 부분을 <mark>로 감싼 미리보기용(읽기전용)
         vol_auto_corrected = False
         if not vol_match and qoo10_vol is not None and kr_vol is not None:
             kr_vol_int = int(kr_vol) if kr_vol == int(kr_vol) else kr_vol
@@ -148,6 +149,12 @@ def build_pairs():
                 lambda m: f"{kr_vol_int}{m.group(1)}",
                 q["title"], count=1,
             )
+            escaped_title = re.sub(
+                r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
+                lambda m: f'<mark class="vol-fix">{kr_vol_int}{m.group(1)}</mark>',
+                q["title"], count=1,
+            )
+            qoo10_title_highlighted = escaped_title
             vol_auto_corrected = True
 
         orig_brand = q.get("brand", "")
@@ -166,7 +173,7 @@ def build_pairs():
         )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
-            "vol_auto_corrected": vol_auto_corrected, "qoo10_brand": orig_brand,
+            "vol_auto_corrected": vol_auto_corrected, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -259,6 +266,7 @@ def build_html(pairs: list[dict]):
     <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    {'<div class="vol-fix-preview">🔴 용량 자동수정: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
