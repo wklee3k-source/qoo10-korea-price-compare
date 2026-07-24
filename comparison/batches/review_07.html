@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상품 매칭 검수</title>
+<style>
+  body { font-family: 'Malgun Gothic', sans-serif; background:#f4f4f4; margin:0; padding:24px; }
+  h1 { font-size:18px; }
+  .toolbar { position:sticky; top:0; background:#fff; padding:12px 16px; margin-bottom:16px;
+              border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); z-index:10; }
+  .toolbar button { background:#2a7d46; color:#fff; border:none; padding:10px 18px;
+                      border-radius:6px; font-size:14px; cursor:pointer; }
+  .toolbar button:hover { background:#1e5c33; }
+  .toolbar .status { margin-left:12px; font-size:13px; color:#555; }
+  .card { display:flex; gap:16px; background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
+           box-shadow:0 1px 3px rgba(0,0,0,0.15); }
+  .card.excluded { opacity:0.4; }
+  .side { flex:1; min-width:0; }
+  .side h3 { margin:0 0 8px; font-size:14px; color:#555; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  .badges { display:inline-flex; gap:4px; flex-wrap:wrap; }
+  .badge { font-size:10px; padding:2px 6px; border-radius:4px; font-weight:600; white-space:nowrap; }
+  .badge.match { background:#e3f5ea; color:#2a7d46; }
+  .badge.mismatch { background:#fdeaea; color:#c0392b; }
+  .badge.unknown { background:#fdf3e3; color:#a67a1f; }
+  .mainrow { display:flex; gap:6px; flex-wrap:wrap; }
+  .mainimg { width:62px; height:62px; cursor:pointer; border:3px solid transparent; border-radius:6px; }
+  .mainimg.selected { border-color:#2a7d46; }
+  .mainimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
+  .name-label { font-size:11px; color:#888; margin-top:8px; }
+  .vol-fix-preview { font-size:12px; background:#fff3f3; border:1px solid #f5b5b5; border-radius:4px;
+                      padding:6px 8px; margin-top:6px; color:#333; }
+  mark.vol-fix { background:#ffd6d6; color:#c0392b; font-weight:700; padding:0 2px; border-radius:2px; }
+  .name-edit, .kr-name-edit { width:100%; box-sizing:border-box; font-size:12px; padding:6px; border:1px solid #ccc;
+                border-radius:4px; font-family:inherit; resize:vertical; margin-top:2px; }
+  .name-edit:focus, .kr-name-edit:focus { border-color:#2a7d46; outline:none; }
+  .name { font-size:12px; margin:8px 0 2px; line-height:1.4; }
+  .name-kr-readonly { font-size:11px; color:#2a5fa0; margin:6px 0 4px; line-height:1.4; }
+  .name-kr-readonly .dim { color:#aaa; }
+  .qoo10-brand { font-size:11px; color:#555; margin-top:4px; }
+  .price { font-weight:bold; color:#d0392a; font-size:13px; margin-top:6px; }
+  .site { font-size:11px; color:#888; word-break:break-all; }
+  .site a { color:#2a5fa0; }
+  .goods_no { font-size:11px; color:#999; }
+  .noimg { width:62px; height:62px; display:flex; align-items:center; justify-content:center;
+            background:#f0f0f0; border-radius:6px; font-size:10px; color:#999; }
+  .checklist { flex:0 0 120px; border-left:1px dashed #ccc; padding-left:16px;
+                display:flex; align-items:center; justify-content:center; }
+  .exclude-btn { background:#c0392b; color:#fff; border:none; padding:14px 8px;
+                   border-radius:8px; font-size:13px; cursor:pointer; width:100%; line-height:1.4; }
+  .exclude-btn.active { background:#7f8c8d; }
+  .pagination { display:flex; justify-content:center; align-items:center; gap:6px; margin:20px 0; flex-wrap:wrap; }
+  .pagination button { padding:6px 12px; border:1px solid #ccc; border-radius:4px; background:#fff; cursor:pointer; font-size:13px; }
+  .pagination button.active { background:#2a7d46; color:#fff; border-color:#2a7d46; font-weight:bold; }
+  .pagination button:disabled { opacity:0.4; cursor:not-allowed; }
+  .pagination .page-info { font-size:12px; color:#666; margin:0 8px; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="saveDecisions()">💾 결정 파일 저장 (decisions.json 다운로드)</button>
+  <button onclick="clearAutoSave()" style="background:#888;">🗑️ 임시저장 지우기</button>
+  <span class="status" id="status"></span>
+  <span class="status" id="autosave-status" style="color:#2a7d46;"></span>
+</div>
+
+<h1>큐텐 ↔ 한국 실구매처 매칭 검수 (8건, 배치 7/7)</h1>
+<p>큐텐 상품명은 <b>직접 수정 가능</b>합니다 — 이 내용이 업로드용 확정명으로 저장됩니다.
+한국쪽 사진은 여러 판매자의 실제 리스팅 사진이니 클릭해서 원하는 걸 고르세요.
+쓸 사진을 클릭하면 그 사진으로 자동 채택되고, 못 쓰는 상품은 "제외" 버튼을 누르세요.</p>
+
+<div id="pagination-top" class="pagination"></div>
+
+
+<div class="card" data-goods="1192793148" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 수플러스주식회사">
+  <div class="side">
+    <h3>큐텐 원본 — MAYBELLINE NEW YORK</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1192793148','qoo10','https://gd.image-qoo10.jp/li/573/148/7996148573.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/573/148/7996148573.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="1192793148" rows="2">メイベリン SP ステイ ダブルフィクサー スプレー</textarea>
+    <div class="name-kr-readonly">참고 한글번역: メイベリン SP ステイ ダブルフィクサー スプレー</div>
+    <div class="price">1650 円</div>
+    <div class="goods_no">goods_no: 1192793148</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 노에비아 (NOEVIR) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1192793148','kr','https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg',this)" title="수플러스주식회사"><img src="https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1192793148','kr','https://shopping-phinf.pstatic.net/main_9091124/90911240424.jpg',this)" title="핫태몰"><img src="https://shopping-phinf.pstatic.net/main_9091124/90911240424.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1192793148" rows="2">노에비아 스페치알레 SP 크림50미리</textarea>
+    <div class="price">1092500 원</div>
+    <div class="site">hwahae · 수플러스주식회사 — <a href="https://smartstore.naver.com/main/products/5262773147" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1194335884" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 다미한">
+  <div class="side">
+    <h3>큐텐 원본 — ヘイミッシュ</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1194335884','qoo10','https://gd.image-qoo10.jp/li/374/796/8099796374.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/374/796/8099796374.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="1194335884" rows="2">ハイミッシュ マリンケア アイクリーム 30ml (e)</textarea>
+    <div class="name-kr-readonly">참고 한글번역: ハイミッシュ マリンケア アイクリーム 30ml (e)</div>
+    <div class="price">2196 円</div>
+    <div class="goods_no">goods_no: 1194335884</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 헤이미쉬 (heimish) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1194335884','kr','https://shopping-phinf.pstatic.net/main_8945419/89454196172.jpg',this)" title="다미한"><img src="https://shopping-phinf.pstatic.net/main_8945419/89454196172.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1194335884" rows="2">헤이미쉬 마린케어 아이크림 30ml 1개</textarea>
+    <div class="price">41580 원</div>
+    <div class="site">hwahae · 다미한 — <a href="https://smartstore.naver.com/main/products/11909685565" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1070022062" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 로하스힐링">
+  <div class="side">
+    <h3>큐텐 원본 — COSRX</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1070022062','qoo10','https://gd.image-qoo10.jp/li/121/928/5322928121.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/121/928/5322928121.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="1070022062" rows="2">スキンケアOne Step Original Clear Pad 70枚</textarea>
+    <div class="name-kr-readonly">참고 한글번역: スキンケアOne Step Original Clear Pad 70枚</div>
+    <div class="price">2615 円</div>
+    <div class="goods_no">goods_no: 1070022062</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 코스알엑스 (COSRX) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1070022062','kr','https://shopping-phinf.pstatic.net/main_8399019/83990199568.1.jpg',this)" title="로하스힐링"><img src="https://shopping-phinf.pstatic.net/main_8399019/83990199568.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1070022062','kr','https://shopping-phinf.pstatic.net/main_8951629/89516292242.1.jpg',this)" title="로하스힐링"><img src="https://shopping-phinf.pstatic.net/main_8951629/89516292242.1.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1070022062" rows="2">코스알엑스 원스텝 오리지널 클리어 패드 90매</textarea>
+    <div class="price">39700 원</div>
+    <div class="site">hwahae · 로하스힐링 — <a href="https://smartstore.naver.com/main/products/6445699235" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1186741863" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
+  <div class="side">
+    <h3>큐텐 원본 — Musinsa Standard</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1186741863','qoo10','https://gd.image-qoo10.jp/li/156/029/8071029156.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/156/029/8071029156.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="1186741863" rows="2">スタンダードアフターシャワー EDP 50ml</textarea>
+    <div class="name-kr-readonly">참고 한글번역: スタンダードアフターシャワー EDP 50ml</div>
+    <div class="price">6090 円</div>
+    <div class="goods_no">goods_no: 1186741863</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 무신사 스탠다드 뷰티 (musinsa standard BEAUTY) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1186741863','kr','https://shopping-phinf.pstatic.net/main_5700034/57000345079.21.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_5700034/57000345079.21.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1186741863','kr','https://shopping-phinf.pstatic.net/main_5048359/50483595197.55.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_5048359/50483595197.55.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1186741863" rows="2">[무신사 스탠다드 뷰티] 무신사 스탠다드 애프터 샤워 EDP 50ml MCDOF001-AS</textarea>
+    <div class="price">39900 원</div>
+    <div class="site">hwahae · 무신사 — <a href="https://link.musinsa.com/app/goods/4388016?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1195231376" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 딥티크">
+  <div class="side">
+    <h3>큐텐 원본 — ディプティック</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1195231376','qoo10','https://gd.image-qoo10.jp/li/197/310/8358310197.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/197/310/8358310197.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <div class="vol-fix-preview">🔴 용량 자동수정: オルフェオン EDP SP <mark class="vol-fix">3ml</mark>【ミニ香水 ミニボトル】【香水 メンズ レディース】</div>
+    <textarea class="name-edit" data-goods="1195231376" rows="2">オルフェオン EDP SP 3ml【ミニ香水 ミニボトル】【香水 メンズ レディース】</textarea>
+    <div class="name-kr-readonly">참고 한글번역: オルフェオン EDP SP 7.5ml【ミニ香水 ミニボトル】【香水 メンズ レディース】</div>
+    <div class="price">6950 円</div>
+    <div class="goods_no">goods_no: 1195231376</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 딥티크 (diptyque) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1195231376','kr','https://shopping-phinf.pstatic.net/main_9080824/90808247772.1.jpg',this)" title="딥티크"><img src="https://shopping-phinf.pstatic.net/main_9080824/90808247772.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1195231376','kr','https://shopping-phinf.pstatic.net/main_8508242/85082421999.3.jpg',this)" title="빈앤코"><img src="https://shopping-phinf.pstatic.net/main_8508242/85082421999.3.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1195231376" rows="2">[공식] 딥티크 솔리드퍼퓸 오르페옹 3g</textarea>
+    <div class="price">102600 원</div>
+    <div class="site">hwahae · 딥티크 — <a href="https://smartstore.naver.com/main/products/13263737440" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1199599598" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
+  <div class="side">
+    <h3>큐텐 원본 — クリーン</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199599598','qoo10','https://gd.image-qoo10.jp/li/604/587/8344587604.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/604/587/8344587604.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="1199599598" rows="2">クラシック シャワーフレッシュ EDP SP 30ml【NEWパッケージ】【香水 メンズ レディース】</textarea>
+    <div class="name-kr-readonly">참고 한글번역: クラシック シャワーフレッシュ EDP SP 30ml【NEWパッケージ】【香水 メンズ レディース】</div>
+    <div class="price">3482 円</div>
+    <div class="goods_no">goods_no: 1199599598</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 클린 (CLEAN) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199599598','kr','https://shopping-phinf.pstatic.net/main_5550526/55505266393.10.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_5550526/55505266393.10.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199599598','kr','https://shopping-phinf.pstatic.net/main_5755829/57558294700.12.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_5755829/57558294700.12.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199599598','kr','https://shopping-phinf.pstatic.net/main_8907435/89074350145.1.jpg',this)" title="씨이오보떼"><img src="https://shopping-phinf.pstatic.net/main_8907435/89074350145.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199599598','kr','https://shopping-phinf.pstatic.net/main_8907434/89074349926.1.jpg',this)" title="씨이오보떼"><img src="https://shopping-phinf.pstatic.net/main_8907434/89074349926.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199599598','kr','https://shopping-phinf.pstatic.net/main_9118159/91181599192.jpg',this)" title="봄의하루"><img src="https://shopping-phinf.pstatic.net/main_9118159/91181599192.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="1199599598" rows="2">[클린] 클래식 레인 EDP 30ML 1058824</textarea>
+    <div class="price">34130 원</div>
+    <div class="site">hwahae · 무신사 — <a href="https://link.musinsa.com/app/goods/1937359?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=328076" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="490748664" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 미소미일사">
+  <div class="side">
+    <h3>큐텐 원본 — VERSACE</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('490748664','qoo10','https://gd.image-qoo10.jp/li/117/599/8204599117.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/117/599/8204599117.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="490748664" rows="2">エロス フェム 30ML EDP SP</textarea>
+    <div class="name-kr-readonly">참고 한글번역: エロス フェム 30ML EDP SP</div>
+    <div class="price">4400 円</div>
+    <div class="goods_no">goods_no: 490748664</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 베르사체 (VERSACE) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('490748664','kr','https://shopping-phinf.pstatic.net/main_8964872/89648726451.jpg',this)" title="미소미일사"><img src="https://shopping-phinf.pstatic.net/main_8964872/89648726451.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('490748664','kr','https://shopping-phinf.pstatic.net/main_8964792/89647929872.jpg',this)" title="미소미일사"><img src="https://shopping-phinf.pstatic.net/main_8964792/89647929872.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="490748664" rows="2">Versace 베르사체 에로스 뿌르 펨므, 여성용 3.4온스 EDP 스프레이</textarea>
+    <div class="price">136040 원</div>
+    <div class="site">hwahae · 미소미일사 — <a href="https://smartstore.naver.com/main/products/12104215746" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="490748002" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 인핸쓰토어">
+  <div class="side">
+    <h3>큐텐 원본 — アナスイ</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('490748002','qoo10','https://gd.image-qoo10.jp/li/253/599/8204599253.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/253/599/8204599253.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    
+    <textarea class="name-edit" data-goods="490748002" rows="2">アナスイ オードトワレ 30ML EDT SP</textarea>
+    <div class="name-kr-readonly">참고 한글번역: アナスイ オードトワレ 30ML EDT SP</div>
+    <div class="price">3080 円</div>
+    <div class="goods_no">goods_no: 490748002</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 — 모어젤 (MORE) <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('490748002','kr','https://shopping-phinf.pstatic.net/main_9098496/90984961920.jpg',this)" title="인핸쓰토어"><img src="https://shopping-phinf.pstatic.net/main_9098496/90984961920.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('490748002','kr','https://shopping-phinf.pstatic.net/main_8476709/84767094512.jpg',this)" title="도쿄락"><img src="https://shopping-phinf.pstatic.net/main_8476709/84767094512.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('490748002','kr','https://shopping-phinf.pstatic.net/main_9099188/90991881814.jpg',this)" title="어니스트불"><img src="https://shopping-phinf.pstatic.net/main_9099188/90991881814.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('490748002','kr','https://shopping-phinf.pstatic.net/main_9089957/90899578780.jpg',this)" title="딜위드"><img src="https://shopping-phinf.pstatic.net/main_9089957/90899578780.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <textarea class="kr-name-edit" data-goods="490748002" rows="2">안나수이 시크릿 위시 오드뚜왈렛 ANNA SUI EDT SP 30ml, 1개</textarea>
+    <div class="price">52100 원</div>
+    <div class="site">hwahae · 인핸쓰토어 — <a href="https://smartstore.naver.com/main/products/13440451568" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+<div id="pagination-bottom" class="pagination"></div>
+<script>
+function selectImage(goodsNo, side, url, el) {
+  var card = el.closest('.card');
+  card.querySelectorAll('.mainimg').forEach(function(n) { n.classList.remove('selected'); });
+  el.classList.add('selected');
+  card.dataset.selectedSource = side;
+  card.dataset.selectedUrl = url;
+  setExcluded(card, false);
+}
+
+function toggleExclude(btn) {
+  var card = btn.closest('.card');
+  var nowExcluded = !card.classList.contains('excluded');
+  setExcluded(card, nowExcluded);
+}
+
+function setExcluded(card, excluded) {
+  var btn = card.querySelector('.exclude-btn');
+  if (excluded) {
+    card.classList.add('excluded');
+    btn.classList.add('active');
+    btn.textContent = '제외됨\n(클릭해서 취소)';
+  } else {
+    card.classList.remove('excluded');
+    btn.classList.remove('active');
+    btn.textContent = '❌ 이 상품 제외';
+  }
+}
+
+document.querySelectorAll('.card').forEach(function(card) {
+  var sel = card.querySelector('.mainimg.selected img');
+  if (sel) {
+    var mainimg = sel.closest('.mainimg');
+    card.dataset.selectedSource = mainimg.dataset.side;
+    card.dataset.selectedUrl = sel.src;
+  }
+});
+
+function collectResults() {
+  var cards = document.querySelectorAll('.card');
+  var results = [];
+  cards.forEach(function(card) {
+    var goodsNo = card.dataset.goods;
+    var excluded = card.classList.contains('excluded');
+    var hasSelection = !!card.dataset.selectedUrl;
+    var included = !excluded && hasSelection;
+    var nameEditEl = card.querySelector('.name-edit');
+    var finalQoo10Name = nameEditEl ? nameEditEl.value : card.dataset.qoo10Name;
+    var krNameEditEl = card.querySelector('.kr-name-edit');
+    var finalKrName = krNameEditEl ? krNameEditEl.value : card.dataset.krName;
+    results.push({
+      goods_no: goodsNo,
+      qoo10_name_final: finalQoo10Name,
+      kr_name: finalKrName,
+      kr_site: card.dataset.krSite,
+      match_confirmed: included,
+      image_usable: included,
+      image_source: included ? card.dataset.selectedSource : null,
+      final_image: included ? card.dataset.selectedUrl : null,
+      excluded: excluded
+    });
+  });
+  return results;
+}
+
+// [중간저장] localStorage에 자동저장 — 파일(경로)별로 구분된 키를 쓰므로
+// 새로고침/브라우저를 껐다 켜도 마지막 작업상태가 그대로 복원된다.
+var AUTOSAVE_KEY = 'qoo10_review_autosave_' + location.pathname;
+
+function autoSaveToLocalStorage() {
+  try {
+    localStorage.setItem(AUTOSAVE_KEY, JSON.stringify({
+      savedAt: new Date().toISOString(),
+      results: collectResults()
+    }));
+    var el = document.getElementById('autosave-status');
+    if (el) el.textContent = '임시저장됨 ' + new Date().toLocaleTimeString();
+  } catch (e) {
+    console.error('임시저장 실패:', e);
+  }
+}
+
+function restoreFromLocalStorage() {
+  var raw;
+  try {
+    raw = localStorage.getItem(AUTOSAVE_KEY);
+  } catch (e) {
+    return;
+  }
+  if (!raw) return;
+  var saved;
+  try {
+    saved = JSON.parse(raw);
+  } catch (e) {
+    return;
+  }
+  var byGoods = {};
+  (saved.results || []).forEach(function(r) { byGoods[r.goods_no] = r; });
+
+  document.querySelectorAll('.card').forEach(function(card) {
+    var r = byGoods[card.dataset.goods];
+    if (!r) return;
+    var nameEditEl = card.querySelector('.name-edit');
+    if (nameEditEl && r.qoo10_name_final != null) nameEditEl.value = r.qoo10_name_final;
+    var krNameEditEl = card.querySelector('.kr-name-edit');
+    if (krNameEditEl && r.kr_name != null) krNameEditEl.value = r.kr_name;
+    if (r.excluded) {
+      card.classList.add('excluded');
+      var btn = card.querySelector('.exclude-btn');
+      if (btn) { btn.classList.add('active'); btn.textContent = '✅ 제외 취소'; }
+    }
+    if (r.final_image) {
+      var img = card.querySelector('.mainimg[data-side="' + r.image_source + '"] img[src="' + r.final_image + '"]');
+      if (img) {
+        var mainimg = img.closest('.mainimg');
+        card.querySelectorAll('.mainimg').forEach(function(m) { m.classList.remove('selected'); });
+        mainimg.classList.add('selected');
+        card.dataset.selectedSource = r.image_source;
+        card.dataset.selectedUrl = r.final_image;
+      }
+    }
+  });
+  var el = document.getElementById('autosave-status');
+  if (el) el.textContent = '이전 작업 복원됨 (' + new Date(saved.savedAt).toLocaleString() + ' 저장분)';
+}
+
+function clearAutoSave() {
+  if (!confirm('임시저장된 내용을 지우고 새로 시작할까요? (다운로드한 decisions.json 파일은 그대로 남습니다)')) return;
+  localStorage.removeItem(AUTOSAVE_KEY);
+  location.reload();
+}
+
+// 입력할 때마다(디바운스) 자동 임시저장
+var _autoSaveTimer = null;
+function scheduleAutoSave() {
+  clearTimeout(_autoSaveTimer);
+  _autoSaveTimer = setTimeout(autoSaveToLocalStorage, 800);
+}
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('name-edit') || e.target.classList.contains('kr-name-edit')) {
+    scheduleAutoSave();
+  }
+});
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('exclude-btn') || e.target.closest('.mainimg')) {
+    scheduleAutoSave();
+  }
+});
+
+function saveDecisions() {
+  var results = collectResults();
+  var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "decisions.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  document.getElementById('status').textContent =
+    "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인";
+}
+
+restoreFromLocalStorage();
+
+// 페이지네이션: 20개씩 보여준다
+(function() {
+  var PAGE_SIZE = 20;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var totalPages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
+  var currentPage = 1;
+
+  function renderPage(page) {
+    currentPage = Math.min(Math.max(1, page), totalPages);
+    cards.forEach(function(card, i) {
+      var cardPage = Math.floor(i / PAGE_SIZE) + 1;
+      card.style.display = (cardPage === currentPage) ? '' : 'none';
+    });
+    renderControls();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  function renderControls() {
+    var html = '';
+    html += '<button ' + (currentPage === 1 ? 'disabled' : '') + ' onclick="__goPage(' + (currentPage - 1) + ')">‹ 이전</button>';
+    var start = Math.max(1, currentPage - 3);
+    var end = Math.min(totalPages, start + 6);
+    if (start > 1) html += '<button onclick="__goPage(1)">1</button><span class="page-info">…</span>';
+    for (var p = start; p <= end; p++) {
+      html += '<button class="' + (p === currentPage ? 'active' : '') + '" onclick="__goPage(' + p + ')">' + p + '</button>';
+    }
+    if (end < totalPages) html += '<span class="page-info">…</span><button onclick="__goPage(' + totalPages + ')">' + totalPages + '</button>';
+    html += '<button ' + (currentPage === totalPages ? 'disabled' : '') + ' onclick="__goPage(' + (currentPage + 1) + ')">다음 ›</button>';
+    html += '<span class="page-info">' + cards.length + '건 중 ' + ((currentPage - 1) * PAGE_SIZE + 1) + '-' + Math.min(currentPage * PAGE_SIZE, cards.length) + '번째 (총 ' + totalPages + '페이지)</span>';
+    document.getElementById('pagination-top').innerHTML = html;
+    document.getElementById('pagination-bottom').innerHTML = html;
+  }
+
+  window.__goPage = function(p) { renderPage(p); };
+  renderPage(1);
+})();
+</script>
+</body>
+</html>
