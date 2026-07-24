@@ -40353,5 +40353,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200291012",
+    "translated_kr": "[국내정규품] 메종오르키데 케어오일002 100ml Maison Orchidee 머릿결에 감싸는 향수 SNS화제 HAIR OIL 비타민C유도체 레불린산 스파이시플로럴",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200290980",
+    "translated_kr": "[국내정규품] 소이스 H+샴푸 1000ml(리필) SOIUS 수소 거품 머릿결 마음 리셋 밤 마이너스미용습관 미네랄 소환원수 정제수 약100배 침투력 유지 고농도",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "brand": "닥터포포 (Dr.PAWPAW)",
+    "name": "모카 밤",
+    "volume": "25ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
