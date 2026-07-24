@@ -52718,5 +52718,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208334354",
+    "translated_kr": "スムースマット ロックミスト　70ml フィックスミスト スキンケア",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "래디언스 픽싱 미스트",
+      "naver": "라피네 수 래디언스 픽싱 미스트"
+    },
+    "brand": "라피네수 (Raffine;SU)",
+    "name": "래디언스 픽싱 미스트",
+    "volume": "90ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "40000",
+    "mall": "헬스앤뷰티스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11325370905",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8886988/88869881236.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8886988/88869881236.jpg",
+        "mall": "헬스앤뷰티스토어",
+        "link": "https://smartstore.naver.com/main/products/11325370905"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205210902",
+    "translated_kr": "Qurap キュラップ ヘアオイル ラッピングモイスト 洗い流さないトリートメント ヘアケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
