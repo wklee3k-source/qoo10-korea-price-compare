@@ -842,6 +842,11 @@ jobs:
         run: |
           python product_gallery.py "https://smartstore.naver.com/main/products/10035737872"
 
+      - name: Test page title fetcher across multiple domains
+        working-directory: src
+        run: |
+          python _test_page_title.py
+
       - name: Collect OY Global brands, romanize-match remaining Korean brands, merge confirmed results
         working-directory: src
         run: |
