@@ -51322,5 +51322,78 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1161659129",
+    "translated_kr": "【300ml 3個】 ケラシスアドバンスド10xリペアアンプルヘアパック",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드밴스드 10X 리페어 앰플 헤어팩"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 10X 리페어 앰플 헤어팩",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1164187236",
+    "translated_kr": "ミニマルカバーローション [ 01 ライトベージュ / 02 ナチュラルベージュ ]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "미니멀 커버 로션 [SPF50+/PA+++] [01 라이트베이지]",
+      "naver": "[미닉] 미니멀 커버 로션 40ml(01호  라이트베이지) SG01001002"
+    },
+    "brand": "미닉 (MINIC)",
+    "name": "미니멀 커버 로션 [SPF50+/PA+++] [01 라이트베이지]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23500",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/5480979?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5678909/56789094940.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5678909/56789094940.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5480979?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5968807/59688072183.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5481090?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5691242/56912426631.2.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5481194?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054496/90544964792.jpg",
+        "mall": "파티즌",
+        "link": "https://smartstore.naver.com/main/products/13000453700"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119696/91196963205.jpg",
+        "mall": "핸디홈즈",
+        "link": "https://smartstore.naver.com/main/products/13652452425"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
