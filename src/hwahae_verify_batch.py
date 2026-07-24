@@ -365,12 +365,28 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         musinsa_data = cand_musinsa or {}
 
+        entry_brand = winner_brand or hwahae_data.get("brand") or naver_data.get("brand") or musinsa_data.get("brand")
+
+        # [일반화] 승자가 누구든(exa, naver, musinsa 등) 최종 브랜드정보가
+        # 여전히 비어있으면, 승자가 확인해준 정확한 이름으로 화해를 마지막
+        # 으로 한 번 더 검색해본다. 화해가 정말 그 상품을 모르면 그래도
+        # 실패하지만, 초벌검색(kw_cleaned)만으로는 화해가 못 찾았어도
+        # 승자의 정확한 이름으로는 찾아지는 경우가 실측으로 다수 확인됐다
+        # (winner=exa 15건 + winner=naver 12건, 전체 662건 성공 중 27건이
+        # 이 문제로 브랜드정보 없이 나가고 있었다).
+        if not entry_brand and winner_name and winner["source"] != "hwahae":
+            print(f"    [승자이름으로 화해 최종재검색] 브랜드정보 없음 -> '{winner_name}'로 화해 재검색")
+            hwahae_final_retry = _search_hwahae(winner_name, known_volume, known_brand)
+            if hwahae_final_retry and hwahae_final_retry.get("brand"):
+                entry_brand = hwahae_final_retry["brand"]
+                hwahae_data = hwahae_final_retry
+
         entry = {
             "goods_no": item["goods_no"],
             "translated_kr": kw_raw,
             "winner_source": winner["source"],
             "candidates_summary": {c["source"]: c.get("name") for c in candidates},
-            "brand": winner_brand or hwahae_data.get("brand") or naver_data.get("brand") or musinsa_data.get("brand"),
+            "brand": entry_brand,
             "name": winner_name or hwahae_data.get("name"),
             "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),

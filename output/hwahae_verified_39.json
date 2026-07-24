@@ -56083,5 +56083,95 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1065570029",
+    "translated_kr": "시크루노 바디 크림 센트로팔레스 410 [배와 머스크 향]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "시크루노 SE:CRUNO 스무스 핸드 크림 센트로파레스 410 8035546 일본 출고 핸드크림"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "시크루노 SE:CRUNO 스무스 핸드 크림 센트로파레스 410 8035546 일본 출고 핸드크림",
+    "volume": "",
+    "source": "naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12800",
+    "mall": "직구잇템",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11805281155",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8934979/89349791742.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8934979/89349791742.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11805281155"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8858727/88587270316.jpg",
+        "mall": "아치코지",
+        "link": "https://smartstore.naver.com/main/products/11042764109"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8858788/88587884669.jpg",
+        "mall": "아소보",
+        "link": "https://smartstore.naver.com/main/products/11043378462"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9032555/90325554678.jpg",
+        "mall": "메모쇼핑",
+        "link": "https://smartstore.naver.com/main/products/12781043729"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199126524",
+    "translated_kr": "트리팩스 샴푸 500ml 리필",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "산콜 트리팩스 샴푸 1000ml 리필"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "산콜 트리팩스 샴푸 1000ml 리필",
+    "volume": "",
+    "source": "naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "62450",
+    "mall": "우주인우츄진",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13169334909",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9071384/90713846006.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071384/90713846006.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13169334909"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9076009/90760099198.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13215588876"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073348/90733489784.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13188978687"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120044/91200448704.jpg",
+        "mall": "재팬 도코도코",
+        "link": "https://smartstore.naver.com/main/products/13655937919"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
