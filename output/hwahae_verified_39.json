@@ -47677,5 +47677,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1189599621",
+    "translated_kr": "コラーゲン マッサージクリーム 1000ml 大容量",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에클레라르"
+    },
+    "brand": "디아디아 (DIAADIA)",
+    "name": "에클레라르",
+    "volume": "20ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195252368",
+    "translated_kr": "Three-Days Three-Layer Ampoule (55ml) ビタミンコラーゲンエッセンス 韓国化粧品",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
