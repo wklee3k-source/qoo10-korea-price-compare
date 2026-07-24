@@ -23609,5 +23609,62 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1166880899",
+    "translated_kr": "에어리 밀착 시트 마스크 티트리 1개입 20개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "미샤 에어리 밀착 시트마스크 티트리 1개입 20개"
+    },
+    "brand": null,
+    "name": "미샤 에어리 밀착 시트마스크 티트리 1개입 20개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20930",
+    "mall": "뭉구9",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13243751985",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9078826/90788262317.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078826/90788262317.jpg",
+        "mall": "뭉구9",
+        "link": "https://smartstore.naver.com/main/products/13243751985"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924584/89245842733.jpg",
+        "mall": "플러스울트라 쇼핑몰",
+        "link": "https://smartstore.naver.com/main/products/11701332266"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8641097/86410974180.jpg",
+        "mall": "88점빵",
+        "link": "https://smartstore.naver.com/main/products/8866473862"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199581764",
+    "translated_kr": "鎮静保湿セット 人気 ドクダミ77トナー＋セラミド美容液 ニキビ 毛穴 敏感肌 韓国スキンケア",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
