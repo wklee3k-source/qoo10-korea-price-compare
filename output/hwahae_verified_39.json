@@ -32005,5 +32005,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190295644",
+    "translated_kr": "ダーマヒーラー 毛穴引き締めアンプル 30ml【陶器肌／毛穴キュッとPDRN】",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160562706",
+    "translated_kr": "アトバリア365クリームミスト 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어 365 크림 미스트",
+      "naver": "에스트라 아스트라 아토베리어 365 크림 미스트"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어 365 크림 미스트",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14900",
+    "mall": "오감공감",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10031936289",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8757643/87576438793.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8757643/87576438793.jpg",
+        "mall": "오감공감",
+        "link": "https://smartstore.naver.com/main/products/10031936289"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8757646/87576469442.2.jpg",
+        "mall": "오감공감",
+        "link": "https://smartstore.naver.com/main/products/10031966938"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080798/90807980463.4.jpg",
+        "mall": "이셀러커머스",
+        "link": "https://smartstore.naver.com/main/products/13263470131"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
