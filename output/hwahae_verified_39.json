@@ -52148,5 +52148,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1188510609",
+    "translated_kr": "スーパージェクションクリーム, 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼젝션 크림",
+      "naver": "슈퍼젝션 홈 키트 색소침착 잡티 기미 크림 팔자 주름 PDRN 크림 엑소좀 MTS 홈케어"
+    },
+    "brand": "코나피딜 (CONAPIDIL)",
+    "name": "슈퍼젝션 크림",
+    "volume": "20ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "196500",
+    "mall": "구미당 스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12743154205",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9028766/90287665146.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028766/90287665146.8.jpg",
+        "mall": "구미당 스토어",
+        "link": "https://smartstore.naver.com/main/products/12743154205"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8993128/89931287538.1.jpg",
+        "mall": "구미당 스토어",
+        "link": "https://smartstore.naver.com/main/products/12386776813"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098173/90981736849.2.jpg",
+        "mall": "홈케어 뷰티 4U",
+        "link": "https://smartstore.naver.com/main/products/13437226497"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9033077/90330771767.1.jpg",
+        "mall": "탑어드벤처",
+        "link": "https://smartstore.naver.com/main/products/12786260818"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1060687901",
+    "translated_kr": "Uriage ユリアージュ バリアダム シカクリーム 40ml [製造国 フランス]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
