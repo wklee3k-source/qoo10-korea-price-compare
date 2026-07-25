@@ -391,14 +391,14 @@ def build_html(pairs: list[dict]):
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
     {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
     <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
   </div>
   <div class="side">
     <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
-    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
+    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): {dim_minor_text(p['qoo10_name_kr'])}</div>
+    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
     <div class="price">{p['kr_price'] or '-'} 원</div>
     <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
