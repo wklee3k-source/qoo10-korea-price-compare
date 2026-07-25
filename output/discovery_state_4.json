@@ -1,21 +1,24 @@
 {
   "visited_shops": [
-    "DearMoments",
-    "HEROINEBueaty",
-    "Qmart",
-    "naturia_jp",
-    "kundal_official",
-    "Seoullys",
-    "Holy_Market",
-    "everythingeverywhere",
-    "k-seoul",
     "tbas",
-    "tiaramall",
-    "hangooksangin",
-    "kyo_market",
+    "Qmart",
+    "Lumiere_Seoul",
+    "belledare",
+    "kundal_official",
     "itfu-cosmetic",
+    "lunarosa",
+    "chuu_vely",
+    "everythingeverywhere",
+    "tiaramall",
+    "k-seoul",
+    "Holy_Market",
     "HDSelectShop",
-    "lunarosa"
+    "HEROINEBueaty",
+    "hangooksangin",
+    "DearMoments",
+    "Seoullys",
+    "kyo_market",
+    "naturia_jp"
   ],
   "all_products": [],
   "shop_urls": [
@@ -44,7 +47,20 @@
     "https://m.qoo10.jp/shop/Cozy_Korea",
     "https://m.qoo10.jp/shop/KBEAT",
     "https://m.qoo10.jp/shop/otonari",
-    "https://m.qoo10.jp/shop/lunarosa"
+    "https://m.qoo10.jp/shop/lunarosa",
+    "https://m.qoo10.jp/shop/belledare",
+    "https://m.qoo10.jp/shop/museshop",
+    "https://m.qoo10.jp/shop/mood_k",
+    "https://m.qoo10.jp/shop/mokos_kshop",
+    "https://m.qoo10.jp/shop/Cozy_Korea",
+    "https://m.qoo10.jp/shop/KBEAT",
+    "https://m.qoo10.jp/shop/otonari",
+    "https://m.qoo10.jp/shop/jeppastore",
+    "https://m.qoo10.jp/shop/chuu_vely",
+    "https://m.qoo10.jp/shop/puerueme",
+    "https://m.qoo10.jp/shop/JJappyshop",
+    "https://m.qoo10.jp/shop/merrymarket",
+    "https://m.qoo10.jp/shop/Lumiere_Seoul"
   ],
   "pending_keywords": [
     "ペプチドショット2X 弾力アンプル",
@@ -99,22 +115,26 @@
   ],
   "seen_keywords": [
     "エキゾウム シカ 鎮静 パッド X",
-    "皮脂毛穴 ダブルクレンジング X",
-    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
-    "PDRN ヒアルロン酸カプセル ラム X",
     "インテカ スージング パッド Trouble",
-    "韓国 シャンプー"
+    "皮脂毛穴 ダブルクレンジング X",
+    "PDRN ヒアルロン酸カプセル ラム X",
+    "韓国 シャンプー",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット"
   ],
   "failed_shops": {
     "seoulselectstore": 1,
     "KVIVE": 1,
     "djshopping": 1,
     "CallaBoutique": 1,
-    "museshop": 1,
-    "mood_k": 1,
-    "mokos_kshop": 1,
-    "Cozy_Korea": 1,
-    "KBEAT": 1,
-    "otonari": 1
+    "museshop": 2,
+    "mood_k": 2,
+    "mokos_kshop": 2,
+    "Cozy_Korea": 2,
+    "KBEAT": 2,
+    "otonari": 2,
+    "jeppastore": 1,
+    "puerueme": 1,
+    "JJappyshop": 1,
+    "merrymarket": 1
   }
 }
