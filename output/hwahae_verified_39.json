@@ -899,5 +899,64 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1156388754",
+    "translated_kr": "헤트라스 【호텔우드 세트】 바디크림 1013ml +바디워시 1013ml /바디밀크 대용량 바디소프",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1119242122",
+    "translated_kr": "VT 리들샷1300 8ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리들샷 1300",
+      "naver": "[브이티코스메틱] VT 리들샷 1300 -"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "리들샷 1300",
+    "volume": "8ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "40460",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4347435?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=328584",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5532369/55323697797.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5532369/55323697797.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4347435?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=328584"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8781499/87814993011.jpg",
+        "mall": "Frey-ja",
+        "link": "https://smartstore.naver.com/main/products/10270489187"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8765807/87658073233.jpg",
+        "mall": "양광",
+        "link": "https://smartstore.naver.com/main/products/10113570413"
+      }
+    ],
+    "real_page_title": "브이티코스메틱(VT COSMETICS) VT 리들샷 1300",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
