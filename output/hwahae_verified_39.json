@@ -13327,5 +13327,94 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202057017",
+    "translated_kr": "【NEW】코스알엑스 더 블루 펩타이드 세럼, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+      "musinsa": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼 50ml",
+      "naver": "코스알엑스 더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22400",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70187&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6035690/60356906307.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6035690/60356906307.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70187&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=cosrx"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6060326/60603263757.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258879"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120011/91200111396.jpg",
+        "mall": "아담무역",
+        "link": "https://smartstore.naver.com/main/products/13655600611"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119227/91192274354.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13647763575"
+      }
+    ],
+    "real_page_title": "[코스알엑스]더 블루 펩타이드 바쿠치올 플럼프 글로우 세럼",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178518780",
+    "translated_kr": "【리뉴얼/여드름흔적】마직 시카 크림, 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "병풀 PDRN 시카 엔드 수딩 크림",
+      "naver": "EGF 시카 재생크림 120ml(g) 피부과 레이저 점뺀후 병풀 수분 보습 진정"
+    },
+    "brand": "싸이닉 (SCINIC)",
+    "name": "병풀 PDRN 시카 엔드 수딩 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "26000",
+    "mall": "아르시코",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/3773271197",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8131778/81317789219.39.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8131778/81317789219.39.jpg",
+        "mall": "아르시코",
+        "link": "https://smartstore.naver.com/main/products/3773271197"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8711879/87118798850.21.jpg",
+        "mall": "허요케",
+        "link": "https://smartstore.naver.com/main/products/9574296580"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9007886/90078866376.1.jpg",
+        "mall": "더마스퀘어",
+        "link": "https://smartstore.naver.com/main/products/12534355523"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
