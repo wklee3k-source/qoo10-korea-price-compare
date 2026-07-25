@@ -12250,5 +12250,44 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1157601678",
+    "translated_kr": "[SET] 컨달 프로테인 다메이지 케어 샴푸 500ml + 트리트먼트 250ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1152724831",
+    "translated_kr": "넘버즈인 6번 폭수 마스크팩 세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "6번 푹잠 마스크팩 세럼"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "6번 푹잠 마스크팩 세럼",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
