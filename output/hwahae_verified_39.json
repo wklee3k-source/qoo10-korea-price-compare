@@ -1511,5 +1511,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202645848",
+    "translated_kr": "케라스타즈 퐁당 리인포스 200ml ・헤어 트리트먼트 ・탈모 케어 ・갈라짐 방지 ・살롱 전매품 ・자신에게의 선물 ・SNS 화제",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160024511",
+    "translated_kr": "스킨푸드 포테토 마데카소사이드 수징 패드 기획 (60매+60매) 수분팩/피부 진정팩/저자극",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[스킨푸드] 포테이토 마데카소사이드 수딩 흔적 패드 60매_250g"
+    },
+    "brand": "스킨푸드",
+    "name": "[스킨푸드] 포테이토 마데카소사이드 수딩 흔적 패드 60매_250g",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "12000",
+    "mall": "스킨푸드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10063491801",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8760799/87607994459.35.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8760799/87607994459.35.jpg",
+        "mall": "스킨푸드",
+        "link": "https://smartstore.naver.com/main/products/10063491801"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054509/90545097634.1.jpg",
+        "mall": "파티즌",
+        "link": "https://smartstore.naver.com/main/products/13000586542"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091703/90917034935.1.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13372524599"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
