@@ -12970,5 +12970,72 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1195653697",
+    "translated_kr": "미쟝센 퍼펙트 크림 세럼 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 세럼 [오리지널]",
+      "naver": "미쟝센 퍼펙트 크림 세럼 80ml 최신제조상품"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "퍼펙트 세럼 [오리지널]",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "9900",
+    "mall": "빨간여우몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12512028791",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9005653/90056539644.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9005653/90056539644.jpg",
+        "mall": "빨간여우몰",
+        "link": "https://smartstore.naver.com/main/products/12512028791"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8616687/86166872606.1.jpg",
+        "mall": "빨간여우몰",
+        "link": "https://smartstore.naver.com/main/products/8622372283"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1189368618",
+    "translated_kr": "화이트셔츠 EDT 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트셔츠 EDT",
+      "naver": "로에 화이트셔츠 EDT 50ml / 깨끗한 비누향, 살결향, 린넨향"
+    },
+    "brand": "로에 (LOE)",
+    "name": "화이트셔츠 EDT",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "46000",
+    "mall": "로에 LOE",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5172439792",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8271696/82716960936.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8271696/82716960936.7.jpg",
+        "mall": "로에 LOE",
+        "link": "https://smartstore.naver.com/main/products/5172439792"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
