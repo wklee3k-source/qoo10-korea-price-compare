@@ -11481,5 +11481,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1206600283",
+    "translated_kr": "아누아 PDRN 히알루론산 하이드레이팅 미스트, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "naver": "아누아 PDRN 콜라겐 글로우 페이셜 세럼 하이드레이팅 페이스 미스트 히알루론산 이슬이 1 01 Fl Oz (Pa of 1)"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "60300",
+    "mall": "토닥토닥키즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13635117165",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+        "mall": "토닥토닥키즈",
+        "link": "https://smartstore.naver.com/main/products/13635117165"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205881900",
+    "translated_kr": "아누아 PDRN 히알루론산 캡슐100 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
