@@ -13753,5 +13753,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1157440909",
+    "translated_kr": "스킨앤랩 TX 나이아신아마이드 에센스 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 리커버리 세럼",
+      "naver": "스킨앤랩 티엑스 나이아신 에센스 토너 200ml"
+    },
+    "brand": "스킨앤랩 (SKIN&LAB)",
+    "name": "나이아신아마이드 리커버리 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "21250",
+    "mall": "스킨앤랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11644551136",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8918906/89189061602.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8918906/89189061602.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://smartstore.naver.com/main/products/11644551136"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8918906/89189061603.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11644551137"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158739035",
+    "translated_kr": "파뮤 드림 글로우 마스크 RR (6장입+1장 구매 증정) 시트 마스크 보습 광채 피부 브라이트닝 민감성 피부 한국화장품 정품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
