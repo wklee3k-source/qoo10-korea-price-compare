@@ -380,6 +380,9 @@ jobs:
                 cp "../output/discovery_result_${B}.xlsx" "/tmp/dresult_${B}_backup.xlsx" 2>/dev/null || true
                 git fetch origin discovery-live 2>/dev/null
                 git reset --hard origin/discovery-live -q 2>/dev/null || true
+                # reset이 최신코드까지 되돌리므로 다시 맞춘다(안 하면 다음
+                # 반복부터 낡은 스크립트로 발굴하게 된다).
+                git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
                 cp "/tmp/dstate_${B}_backup.json" "../output/discovery_state_${B}.json" 2>/dev/null || true
                 cp "/tmp/dresult_${B}_backup.xlsx" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
                 git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
@@ -426,6 +429,13 @@ jobs:
           git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # [필수] 이 스텝이 빠져 있어서 번역이 v1.4.17 낡은 코드로 돌았다.
+          # 브랜드사전 힌트(v1.4.54)도 생략금지 규칙(v1.4.58)도 안 걸린 채
+          # 수천 건을 한 통에 보내다 응답이 잘렸고, 2,035건(80.8%)이
+          # 일본어인 채로 굳었다. 다른 job과 동일하게 항상 main 최신코드로
+          # 맞춘다(브랜치 고유의 output/ 데이터는 안 건드림).
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -437,6 +447,8 @@ jobs:
           for i in $(seq 1 15); do
             git fetch origin discovery-live 2>/dev/null
             git reset --hard origin/discovery-live -q
+            # reset --hard가 위에서 맞춰둔 최신코드까지 되돌려버리므로 매번 다시 맞춘다.
+            git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
             python merge_discovery_states.py ../output
             python append_progress_history.py ../output
             git add ../output/discovery_state.json ../output/progress_history.json ../output/archive/ 2>/dev/null || true
@@ -456,6 +468,8 @@ jobs:
           for i in $(seq 1 15); do
             git fetch origin discovery-live 2>/dev/null
             git reset --hard origin/discovery-live -q
+            # reset --hard가 위에서 맞춰둔 최신코드까지 되돌려버리므로 매번 다시 맞춘다.
+            git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
             python translate_in_place.py ../output/discovery_state.json
             git add ../output/discovery_state.json 2>/dev/null || true
             git diff --cached --quiet && { echo "번역할 변경사항 없음"; break; }

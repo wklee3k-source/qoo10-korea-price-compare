@@ -48,7 +48,11 @@ COSMETIC_ALLOWED_CATEGORIES = {
     "120000022",  # 향수
     "120000023",  # 맨즈뷰티
 }
-REVIEW_THRESHOLD = 6  # "5개 이하"까지 통과시키려면 6 미만(<6, 즉 0~5). 발굴량 확대를 위해 4->6으로 완화(기존 0~3 -> 0~5)
+# [10으로 완화] 이 값은 두 군데에 쓰인다: (1) 검색결과에서 탐색대상 샵을
+# 고를 때 (2) 크롤한 상품을 채택할 때. 상품 쪽 효과는 작지만(실측 +107건),
+# 샵 쪽 효과가 크다 — 리뷰 6~9인 샵을 여태 통째로 무시하고 있었고, 그게
+# 키워드 큐 고갈의 직접 원인이었다.
+REVIEW_THRESHOLD = 10  # 10 미만(0~9). 4 -> 6 -> 10 순으로 완화
 MIN_PRICE_JPY = 1500  # 이 가격 이하(너무 저가) 상품은 제외
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
@@ -234,6 +238,28 @@ def _state_path(suffix: str | None = None) -> "Path":
     return STATE_PATH
 
 
+def load_peer_visited(my_suffix: str | None) -> set:
+    """다른 워커들의 discovery_state_*.json에서 visited_shops만 읽어온다.
+
+    [설계원칙: 파일 소유자 1명] 각 워커는 자기 파일에만 쓰고, 남의 파일은
+    읽기만 한다. 그래서 공유 파일에 여러 명이 쓰다 깨지는 사고(과거 실패
+    #2 index.lock 경합, #4 push 실패로 상점 128개 유실)가 구조적으로
+    일어날 수 없다.
+
+    이게 없으면 워커마다 자기 방문기록만 봐서 남이 이미 판 샵을 또 판다 —
+    실측 중복률 샵 84.3%, 키워드 76.8%였다.
+    """
+    peers = set()
+    for p in sorted(OUTPUT_DIR.glob("discovery_state_*.json")):
+        if my_suffix is not None and p.name == f"discovery_state_{my_suffix}.json":
+            continue
+        try:
+            peers |= set(json.loads(p.read_text(encoding="utf-8")).get("visited_shops", []))
+        except Exception:  # noqa: BLE001
+            continue  # 남이 쓰는 중이라 깨져 보일 수 있다 — 그냥 건너뛴다
+    return peers
+
+
 def _load_state(suffix: str | None = None) -> dict:
     path = _state_path(suffix)
     if path.exists():
@@ -325,13 +351,25 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             continue
 
         print(f"\n[검색] {kw}")
-        shops = find_low_review_shops(kw, visited_shops)
+        # 내 방문기록 + 다른 워커 방문기록을 합쳐서 제외한다(중복 크롤 방지).
+        peer_visited = load_peer_visited(state_suffix)
+        shops = find_low_review_shops(kw, visited_shops | peer_visited)
+        if peer_visited:
+            print(f"  (다른 워커 방문분 {len(peer_visited)}곳 제외)")
         if shops_per_keyword:
             shops = shops[:shops_per_keyword]
         print(f"  -> 신규 저리뷰 상점 {len(shops)}개 (이 검색어에서 처리할 상점)")
 
+        # [중대버그 수정] 예전엔 캡(STEP=3)에 걸려 중단돼도 아래에서 이 검색어를
+        # "다 봤다"고 표시하고 버렸다. 검색어 하나가 샵 30곳을 물어와도 3곳만
+        # 받고 27곳을 영구 폐기한 셈이라, 검색어 재생산율이 1 밑으로 떨어져
+        # 큐가 지수적으로 말라붙었다(실측 재생산율 0.58). 이제 캡 때문에
+        # 끊겼으면 검색어를 큐에 그대로 남겨 다음 호출에서 이어받는다.
+        # 이미 방문한 샵은 find_low_review_shops가 걸러주므로 중복도 없다.
+        interrupted_by_cap = False
         for shop in shops:
             if max_shops and len(visited_shops) >= max_shops:
+                interrupted_by_cap = True
                 break
             if len(all_products) >= target_products:
                 break
@@ -362,6 +400,11 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             if seed_entries:
                 _append_seed_log(seed_entries)
             save()  # 매 상점마다 저장 (타임아웃 걸려도 이어서 진행 가능)
+
+        if interrupted_by_cap:
+            print(f"  [보류] 캡 도달로 중단 — 검색어를 큐에 남겨둠(다음 호출에서 이어서): {kw[:40]}")
+            save()
+            break
 
         seen_keywords.add(kw)
         pending_keywords.pop(0)
@@ -424,8 +467,25 @@ def main():
     shops_per_keyword = int(sys.argv[5]) if len(sys.argv) > 5 and sys.argv[5].strip() else None
     state_suffix = sys.argv[6] if len(sys.argv) > 6 and sys.argv[6].strip() else None
 
+    before = 0
+    state_file = _state_path(state_suffix)
+    if state_file.exists():
+        try:
+            before = len(json.loads(state_file.read_text(encoding="utf-8")).get("all_products", []))
+        except Exception:  # noqa: BLE001
+            before = 0
+
     products, shop_urls = run(keyword_ja, target, max_shops, shops_per_keyword, state_suffix=state_suffix)
-    export_excel(products, out_path)
+
+    # [커밋폭탄 차단] 엑셀은 ZIP 컨테이너라 내용이 같아도 생성시각이 박혀
+    # 매번 다른 파일이 된다. 예전엔 수확이 0건이어도 무조건 다시 써서,
+    # 워크플로의 "변경 있을 때만 커밋" 방어가 무력화됐다 — 워커 12개가
+    # 2초에 한 번씩 빈 커밋을 찍어 브랜치가 86,269커밋까지 불어났다.
+    # 이제 새로 얻은 게 없으면 엑셀을 건드리지 않는다.
+    if len(products) > before or not Path(out_path).exists():
+        export_excel(products, out_path)
+    else:
+        print(f"[SKIP] 신규 수확 0건 — 엑셀 재생성 생략(불필요한 커밋 방지, 누적 {len(products)}건)")
     print(f"\n방문한 상점: 누적 {len(shop_urls)}개 (최근 5개: {shop_urls[-5:]})")
 
 

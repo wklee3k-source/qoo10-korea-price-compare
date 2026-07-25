@@ -83,7 +83,7 @@ if __name__ == "__main__":
     for i in range(0, len(targets), batch_size):
         chunk = targets[i:i + batch_size]
         names = [x.get("name") or x.get("translated_kr") or "" for x in chunk]
-        translated = translate_batch(names, batch_size=len(chunk))
+        translated = translate_batch(names, batch_size=batch_size)
         for x, t in zip(chunk, translated):
             results[x["goods_no"]] = t
         json.dump(results, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
