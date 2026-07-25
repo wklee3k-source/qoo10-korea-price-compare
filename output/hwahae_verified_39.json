@@ -17629,5 +17629,52 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1089749665",
+    "translated_kr": "스텐락 사각형 밀폐용기 정사각형 9호 800ml 한국산 보관용기 스테인리스 제 터퍼 밀폐용기",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195385469",
+    "translated_kr": "닥터지 스킨부스트 PDRN 선스세럼 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[닥터지] 스킨부스트 PDRN 선 세럼 50ml"
+    },
+    "brand": "닥터지",
+    "name": "[닥터지] 스킨부스트 PDRN 선 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "17800",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13626140143",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117065/91170650752.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117065/91170650752.1.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/13626140143"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
