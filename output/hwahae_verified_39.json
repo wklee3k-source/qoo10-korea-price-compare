@@ -20037,5 +20037,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208332251",
+    "translated_kr": "【정품】 조선미녀 라이스 아쿠아 프레시 선 크림 50ml SPF50+ PA++++ 자외선차단제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "맑은쌀선크림 아쿠아프레쉬 [SPF50+/PA++++]",
+      "naver": "조선미녀 맑은쌀 선크림 아쿠아프레쉬 10ml SPF50+ PA++++"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "맑은쌀선크림 아쿠아프레쉬 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "3500",
+    "mall": "뷰티오브조선 : 조선미녀",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13487023467",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103153/91031533818.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103153/91031533818.jpg",
+        "mall": "뷰티오브조선 : 조선미녀",
+        "link": "https://smartstore.naver.com/main/products/13487023467"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5573580/55735806881.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000216895"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208994497",
+    "translated_kr": "【정규품】백화수 미네랄 선크림 SPF50+ PA++++ 50ml 라운드랩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선크림 [SPF50+/PA++++]",
+      "naver": "라운드랩 1025 독도 선크림 50ml (SPF 50+ PA++++)"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15000",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8934509037",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8647900/86479009360.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8647900/86479009360.5.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8934509037"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
