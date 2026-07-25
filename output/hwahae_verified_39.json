@@ -13527,5 +13527,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209814389",
+    "translated_kr": "쏘내추럴 메이크업 세팅 픽스 미스트 75ml (4종 선택 1)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터 글로우 세팅 픽서 [캔미스트]",
+      "naver": "쏘내추럴 올데이 타이트 메이크업 세팅 픽서 고정 미스트 75ml 1개"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "워터 글로우 세팅 픽서 [캔미스트]",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "20100",
+    "mall": "스마트이음",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8703040606",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8624754/86247540926.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8624754/86247540926.jpg",
+        "mall": "스마트이음",
+        "link": "https://smartstore.naver.com/main/products/8703040606"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026080/90260807318.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/12716296395"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913511/89135115116.jpg",
+        "mall": "RED BAND",
+        "link": "https://smartstore.naver.com/main/products/11590604709"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209383972",
+    "translated_kr": "라이트온 인샤워 바디톤업 290ml 바디크림 로션 바디케어 한국화장품 데리케이트존 검은자국 칙칙함 피부톤 교정 화이트닝",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
