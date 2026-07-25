@@ -434,6 +434,32 @@ jobs:
       group: merge-discovery-shards-queue
       cancel-in-progress: false
     steps:
+      - name: Pause discovery workers (avoid merge push contention)
+        run: |
+          # [신규] 발굴 워커 12개가 discovery-live에 초 단위로 계속 커밋하는
+          # 동안 병합/번역이 같이 돌면, 병합의 push가 계속 경합에 밀려
+          # 재시도만 반복하다 20분 타임아웃으로 통째로 취소된다(실측 확인:
+          # 상품 1,332건까지 쌓였는데 번역 0건인 채 취소됨). 병합 시작 전에
+          # 발굴 워커가 포함된 다른 실행을 먼저 세운다 — 이 job이 끝나면
+          # 마지막 스텝에서 다시 켠다(아래 참고).
+          echo "[일시정지] 발굴 워커가 돌고 있으면 병합 전에 세운다"
+          RUNS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?status=in_progress&per_page=20")
+          IDS=$(echo "$RUNS_JSON" | jq -r --argjson me "${{ github.run_id }}" \
+            '.workflow_runs[] | select(.id != $me) | select(.name=="Qoo10 Pipeline") | .id')
+          for RID in $IDS; do
+            JOBS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/jobs?per_page=30")
+            HAS_DISCOVER=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status=="in_progress") | select(.name | contains("discover_low_review_shops"))] | length')
+            if [ "$HAS_DISCOVER" != "0" ]; then
+              echo "[취소] run $RID (발굴 워커 포함, 병합 push 경합 방지)"
+              curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/cancel"
+            fi
+          done
+          echo "[대기] 취소된 워커가 실제로 멈출 시간을 준다"
+          sleep 30
+
       - uses: actions/checkout@v4
 
       - name: Show pipeline code version
@@ -509,6 +535,17 @@ jobs:
           curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
             -d '{"ref":"main","inputs":{"run_hwahae_verify":"true"}}'
+
+      - name: Resume discovery workers after merge+translate
+        if: always()
+        run: |
+          # [신규] 맨 처음 스텝에서 세운 발굴 워커를 여기서 다시 켠다.
+          # if: always()라서 병합/번역이 타임아웃/실패해도 반드시 재기동한다
+          # — 안 그러면 발굴이 영영 멈춘 채로 방치된다.
+          echo "[재기동] 발굴 워커를 다시 켠다"
+          curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+            -d '{"ref":"main","inputs":{"run_discovery":"true","discovery_parallel":"true"}}'
 
   auto_translate:
     # 1단계에서 발굴된 큐텐 상품 중 아직 번역 안 된 것들을 Claude Haiku API로

@@ -216,6 +216,22 @@ def t18_no_optional_path_mixed_in_git_add():
     check("18 git add 경로 혼합 금지(archive/ 등)", not bad, f"{bad}")
 
 
+# --------------------- #19 병합 전후 발굴 일시정지/재기동 (push경합 방지)
+#  실측사고: 발굴 워커 12개가 discovery-live에 계속 커밋하는 동안 병합
+#  job이 같이 돌면 push 경합만 반복하다 20분 timeout에 통째로 취소된다
+#  (상품 1,332건까지 쌓였는데 번역 0건인 채 취소된 사례 실측 확인).
+def t19_pause_resume_discovery_around_merge():
+    wf = WF.read_text(encoding="utf-8")
+    block = wf.split("  merge_discovery_shards:")[1].split("\n  auto_translate:")[0]
+    has_pause = "Pause discovery workers" in block and 'cancel"' in block.replace("'","\"") or "/cancel" in block
+    has_resume = "Resume discovery workers after merge" in block
+    resume_always = bool(re.search(r"Resume discovery workers after merge[^\n]*\n\s*if:\s*always\(\)", block))
+    resume_dispatches_discovery = bool(re.search(r'Resume discovery[\s\S]{0,700}?run_discovery.{0,5}true', block))
+    ok = has_pause and has_resume and resume_always and resume_dispatches_discovery
+    check("19 병합 전후 발굴 일시정지/재기동", ok,
+          f"정지스텝{has_pause} 재기동스텝{has_resume} always(){resume_always} 재기동내용{resume_dispatches_discovery}")
+
+
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
 def t16_crawl_failure_vs_empty():
     disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
