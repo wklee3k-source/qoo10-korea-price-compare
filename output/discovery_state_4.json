@@ -1,24 +1,27 @@
 {
   "visited_shops": [
-    "tbas",
-    "Qmart",
+    "DearMoments",
+    "tiaramall",
+    "naturia_jp",
+    "Seoullys",
+    "chuu_vely",
+    "kyo_market",
+    "itfu-cosmetic",
+    "museshop",
+    "kundal_official",
+    "lunarosa",
+    "HEROINEBueaty",
+    "mokos_kshop",
+    "Holy_Market",
     "Lumiere_Seoul",
     "belledare",
-    "kundal_official",
-    "itfu-cosmetic",
-    "lunarosa",
-    "chuu_vely",
-    "everythingeverywhere",
-    "tiaramall",
     "k-seoul",
-    "Holy_Market",
+    "everythingeverywhere",
+    "mood_k",
+    "tbas",
+    "Qmart",
     "HDSelectShop",
-    "HEROINEBueaty",
-    "hangooksangin",
-    "DearMoments",
-    "Seoullys",
-    "kyo_market",
-    "naturia_jp"
+    "hangooksangin"
   ],
   "all_products": [],
   "shop_urls": [
@@ -60,7 +63,10 @@
     "https://m.qoo10.jp/shop/puerueme",
     "https://m.qoo10.jp/shop/JJappyshop",
     "https://m.qoo10.jp/shop/merrymarket",
-    "https://m.qoo10.jp/shop/Lumiere_Seoul"
+    "https://m.qoo10.jp/shop/Lumiere_Seoul",
+    "https://m.qoo10.jp/shop/museshop",
+    "https://m.qoo10.jp/shop/mood_k",
+    "https://m.qoo10.jp/shop/mokos_kshop"
   ],
   "pending_keywords": [
     "ペプチドショット2X 弾力アンプル",
@@ -114,21 +120,21 @@
     "スキンケアOne Step Original Clear Pad"
   ],
   "seen_keywords": [
+    "韓国 シャンプー",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
     "エキゾウム シカ 鎮静 パッド X",
-    "インテカ スージング パッド Trouble",
     "皮脂毛穴 ダブルクレンジング X",
     "PDRN ヒアルロン酸カプセル ラム X",
-    "韓国 シャンプー",
-    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット"
+    "インテカ スージング パッド Trouble"
   ],
   "failed_shops": {
     "seoulselectstore": 1,
     "KVIVE": 1,
     "djshopping": 1,
     "CallaBoutique": 1,
-    "museshop": 2,
-    "mood_k": 2,
-    "mokos_kshop": 2,
+    "museshop": 3,
+    "mood_k": 3,
+    "mokos_kshop": 3,
     "Cozy_Korea": 2,
     "KBEAT": 2,
     "otonari": 2,
