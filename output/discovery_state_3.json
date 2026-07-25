@@ -1,28 +1,31 @@
 {
   "visited_shops": [
-    "LMJ",
-    "BEAUTY_LOOK",
-    "sensepicklshop",
-    "globalyoung",
-    "20240208",
-    "onnicosme",
-    "HELLOJ",
     "zozoro0213",
-    "HDSelectShop",
-    "cafebespoke",
     "wish",
-    "KBeautyCenter",
-    "BeautyPalette",
-    "Qoo10JapanDaae",
-    "primeland567",
     "steadyseller",
+    "AreumStore",
+    "20240208",
+    "primeland567",
     "eloisestore",
-    "calluna",
-    "mrm",
-    "mujigaesoul",
-    "Lykkemo",
+    "BEAUTY_LOOK",
+    "NUNUSEOUL",
     "COCOLIZ",
-    "PeonyAgit"
+    "cafebespoke",
+    "globalyoung",
+    "onnicosme",
+    "Lykkemo",
+    "LMJ",
+    "mujigaesoul",
+    "sizuccu",
+    "Qoo10JapanDaae",
+    "sensepicklshop",
+    "HELLOJ",
+    "HDSelectShop",
+    "BeautyPalette",
+    "PeonyAgit",
+    "KBeautyCenter",
+    "calluna",
+    "mrm"
   ],
   "all_products": [
     {
@@ -549,6 +552,51 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1158942439",
+      "rank": 1,
+      "image_url": "https://gd.image-qoo10.jp/li/640/947/7393947640.g_300-w-st_g.jpg",
+      "title": "マダガスカル センテラクイックカミングパッド1個",
+      "brand": "SKIN1004",
+      "price_jpy": 4800,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1158942439",
+      "shop_id": "sizuccu",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1194502685",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/759/292/8044292759.g_300-w-st_g.jpg",
+      "title": "[NEW/透明ケア] スキン＆ラボ グルタチオントナー 200ml 1個",
+      "brand": "スキンアンドラブ",
+      "price_jpy": 5100,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194502685",
+      "shop_id": "sizuccu",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1156741239",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/022/291/8375291022.g_300-w-st_g.jpg",
+      "title": "ドクダミヒアルロンスージング アンプル50ml",
+      "brand": "グーダル",
+      "price_jpy": 4460,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1156741239",
+      "shop_id": "sizuccu",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -574,7 +622,10 @@
     "https://m.qoo10.jp/shop/eloisestore",
     "https://m.qoo10.jp/shop/Lykkemo",
     "https://m.qoo10.jp/shop/Qoo10JapanDaae",
-    "https://m.qoo10.jp/shop/COCOLIZ"
+    "https://m.qoo10.jp/shop/COCOLIZ",
+    "https://m.qoo10.jp/shop/NUNUSEOUL",
+    "https://m.qoo10.jp/shop/sizuccu",
+    "https://m.qoo10.jp/shop/AreumStore"
   ],
   "pending_keywords": [
     "8 ヒアルロン酸 カテキン カミングパッド",
@@ -701,12 +752,15 @@
     "エッセンシャル マスクパック 大容量 韓国正規品 保湿 鎮静 毛穴 弾力ケア 韓国コスメ",
     "タイムレボリューション ザ ファースト エッセンス パッド 入",
     "リップ メデックス リップバーム",
-    "モイスチャー バランシング 無シリコン シャンプー"
+    "モイスチャー バランシング 無シリコン シャンプー",
+    "マダガスカル センテラクイックカミングパッド",
+    "スキン＆ラボ グルタチオントナー",
+    "ドクダミヒアルロンスージング アンプル"
   ],
   "seen_keywords": [
     "ルートボリュームフィクサー X",
-    "韓国 美容液",
-    "ディラン パープル ファム EDP SP"
+    "ディラン パープル ファム EDP SP",
+    "韓国 美容液"
   ],
   "failed_shops": {}
 }
