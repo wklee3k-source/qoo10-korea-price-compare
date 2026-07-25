@@ -28,6 +28,17 @@ BRAND_ALIASES = {
 }
 
 
+def to_pc_url(mobile_url: str) -> str:
+    """모바일 큐텐 URL(m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?...)을
+    PC버전(www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?...)으로 바꾼다."""
+    if not mobile_url:
+        return mobile_url
+    m = re.search(r"goodscode=(\d+)", mobile_url)
+    if m:
+        return f"https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode={m.group(1)}"
+    return mobile_url.replace("m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx", "www.qoo10.jp/gmkt.inc/Goods/Goods.aspx")
+
+
 def load_qoo10_products():
     products = json.loads((OUTPUT / "discovery_state.json").read_text(encoding="utf-8"))["all_products"]
     archive_dir = OUTPUT / "archive"
@@ -112,6 +123,18 @@ def build_pairs():
     brand_dict = json.loads((DATA / "brand_translations_learned.json").read_text(encoding="utf-8"))
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
+
+    # [일본어 역번역] 한글 상품명(구매처 원본) 아래에 참고용 일본어 번역을
+    # 보여주기 위한 배치번역 결과(translate_kr_to_jp.py가 생성). 없으면
+    # 빈 딕셔너리로 폴백 — 이 파일이 없다고 페이지 생성 자체가 실패하면
+    # 안 된다.
+    kr_to_jp = {}
+    kr_to_jp_path = OUTPUT / "kr_to_jp_translations.json"
+    if kr_to_jp_path.exists():
+        try:
+            kr_to_jp = json.loads(kr_to_jp_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            pass
 
     # [구조변경 대응] 1,2단계 통합 이후엔 별도 hwahae_input_39.json이 없다.
     # discovery_state.json의 translated_kr을 보조로 쓰되, 최우선은 검증
@@ -283,6 +306,21 @@ def build_pairs():
                         lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', q["title"], count=1)
                 qty_auto_corrected = True
 
+        # [제외] "国内当日発送"류 일본 국내발송 문구는 실제로는 한국에서
+        # 발송하므로 사실과 다르다 — 지워서 오해를 방지한다. 지워졌다는
+        # 걸 취소선으로 표시한다(사용자 지시: "나는 한국에서 보낼꺼니까").
+        shipping_removal_pattern = re.compile(
+            r"[\[［【(]?\s*国内\s*(当日|即日)?\s*発送\s*[\]］】)]?|あす楽(対応)?|\s*即日出荷"
+        )
+        m2 = shipping_removal_pattern.search(qoo10_title_display)
+        if m2:
+            removed_text = m2.group(0).strip()
+            qoo10_title_display = shipping_removal_pattern.sub("", qoo10_title_display, count=1).strip()
+            base_for_highlight = qoo10_title_highlighted or q["title"]
+            qoo10_title_highlighted = shipping_removal_pattern.sub(
+                lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', base_for_highlight, count=1)
+            qty_auto_corrected = True
+
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
@@ -290,11 +328,11 @@ def build_pairs():
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
             "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
-            "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
+            "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": to_pc_url(q.get("item_url")),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
-            "kr_qty": kr_qty, "is_set": is_set,
+            "kr_qty": kr_qty, "is_set": is_set, "kr_name_jp": kr_to_jp.get(x["goods_no"], ""),
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
@@ -385,30 +423,61 @@ def build_html(pairs: list[dict]):
 
         cards_html.append(f'''
 <div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
-  <div class="side">
-    <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
-    <div class="mainrow">{qoo10_img_html}</div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
-    <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
-    <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
-    <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
-    <div class="mainrow">{kr_img_html}</div>
-    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
-    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
-    <div class="price">{p['kr_price'] or '-'} 원</div>
-    <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
+  <div class="card-header">
+    <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+  <div class="card-body">
+  <div class="photo-row">
+    <div class="photo-group qoo10">
+      <div class="photo-group-label qoo10">큐텐 원본</div>
+      {qoo10_img_html}
+    </div>
+    <div class="photo-group kr">
+      <div class="photo-group-label kr">한국 구매처</div>
+      <div class="photo-thumbs">{kr_img_html}</div>
+    </div>
+  </div>
+  <table class="info-table">
+    <tr>
+      <td class="label">브랜드</td>
+      <td>{esc(p.get('qoo10_brand') or '-')} <span style="color:#bbb;">/</span> <strong>{esc(p.get('kr_brand') or '-')}</strong></td>
+    </tr>
+    <tr>
+      <td class="label">상품명</td>
+      <td>
+        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
+        <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
+        <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
+        {'<div class="name-kr-readonly" style="color:#a05fa0;">JP: ' + esc(p['kr_name_jp']) + '</div>' if p.get('kr_name_jp') else ''}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">금액</td>
+      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
+    </tr>
+    <tr>
+      <td class="label label-with-border">링크</td>
+      <td class="label-with-border">
+        {'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본</a>' if p.get('qoo10_url') else '-'}
+        <span style="color:#bbb;">/</span>
+        <a href="{p['kr_url']}" target="_blank">한국 구매처</a>
+        <span class="site">({esc(kr_site_text)})</span>
+        <span class="goods_no">goods_no: {goods_no}</span>
+      </td>
+    </tr>
+  </table>
   </div>
 </div>''')
 
     cards_str = "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
+    # [중요] 템플릿(review.html)과 출력파일을 반드시 분리한다 — 예전엔 같은
+    # 경로에 읽고 쓰기를 해서, 이 스크립트를 한 번이라도 직접 실행하면
+    # 템플릿 자체가 카드데이터로 영구 오염되는 사고가 있었다(실측 확인:
+    # 템플릿이 3854줄까지 부풀어서, build_review_batches.py가 그 오염된
+    # 템플릿을 읽어 배치를 만들면서 페이지네이션/undo버튼이 깨지는 원인이
+    # 됐다). 템플릿은 항상 읽기전용으로만 다루고, 결과는 별도 파일에 쓴다.
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     new_html = re.sub(
         r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
@@ -417,8 +486,8 @@ def build_html(pairs: list[dict]):
         flags=re.S,
     )
     new_html = re.sub(r"\(\d+건.*?\)", f"({len(pairs)}건)", new_html, count=1)
-    (COMPARISON / "review.html").write_text(new_html, encoding="utf-8")
-    print(f"[완료] review.html 갱신 ({len(pairs)}건)")
+    (COMPARISON / "review_full.html").write_text(new_html, encoding="utf-8")
+    print(f"[완료] review_full.html 생성 ({len(pairs)}건) — 템플릿(review.html)은 건드리지 않음")
 
 
 if __name__ == "__main__":

@@ -20,7 +20,7 @@ from build_review import build_pairs, esc, dim_minor_text  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 COMPARISON = BASE / "comparison"
-BATCH_DIR = COMPARISON / "batches"
+BATCH_DIR = BASE / "docs"
 BATCH_SIZE = 100
 
 
@@ -74,26 +74,51 @@ def render_cards(pairs: list[dict]) -> str:
 
         cards_html.append(f'''
 <div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
-  <div class="side">
-    <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
-    <div class="mainrow">{qoo10_img_html}</div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
-    <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
-    <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
-    <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
-    <div class="mainrow">{kr_img_html}</div>
-    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
-    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
-    <div class="price">{p['kr_price'] or '-'} 원</div>
-    <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
+  <div class="card-header">
+    <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+  <div class="card-body">
+  <div class="photo-row">
+    <div class="photo-group qoo10">
+      <div class="photo-group-label qoo10">큐텐 원본</div>
+      {qoo10_img_html}
+    </div>
+    <div class="photo-group kr">
+      <div class="photo-group-label kr">한국 구매처</div>
+      <div class="photo-thumbs">{kr_img_html}</div>
+    </div>
+  </div>
+  <table class="info-table">
+    <tr>
+      <td class="label">브랜드</td>
+      <td>{esc(p.get('qoo10_brand') or '-')} <span style="color:#bbb;">/</span> <strong>{esc(p.get('kr_brand') or '-')}</strong></td>
+    </tr>
+    <tr>
+      <td class="label">상품명</td>
+      <td>
+        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
+        <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
+        <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
+        {'<div class="name-kr-readonly" style="color:#a05fa0;">JP: ' + esc(p['kr_name_jp']) + '</div>' if p.get('kr_name_jp') else ''}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">금액</td>
+      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
+    </tr>
+    <tr>
+      <td class="label label-with-border">링크</td>
+      <td class="label-with-border">
+        {'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본</a>' if p.get('qoo10_url') else '-'}
+        <span style="color:#bbb;">/</span>
+        <a href="{p['kr_url']}" target="_blank">한국 구매처</a>
+        <span class="site">({esc(kr_site_text)})</span>
+        <span class="goods_no">goods_no: {goods_no}</span>
+      </td>
+    </tr>
+  </table>
   </div>
 </div>''')
     return "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
@@ -107,8 +132,10 @@ def build_batches():
     BATCH_DIR.mkdir(exist_ok=True, parents=True)
 
     n_batches = (len(all_pairs) + BATCH_SIZE - 1) // BATCH_SIZE
+    batch_meta = []  # 허브페이지용: 각 배치의 id/건수
     for i in range(n_batches):
         batch = all_pairs[i * BATCH_SIZE:(i + 1) * BATCH_SIZE]
+        batch_id = f"review_{i+1:02d}"
         cards_str = render_cards(batch)
         new_html = re.sub(
             r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
@@ -117,12 +144,164 @@ def build_batches():
             flags=re.S,
         )
         new_html = re.sub(r"\(\d+건.*?\)", f"({len(batch)}건, 배치 {i+1}/{n_batches})", new_html, count=1)
-        out_path = BATCH_DIR / f"review_{i+1:02d}.html"
+        new_html = new_html.replace("__BATCH_ID__", batch_id)
+        out_path = BATCH_DIR / f"{batch_id}.html"
         out_path.write_text(new_html, encoding="utf-8")
+        batch_meta.append({"id": batch_id, "count": len(batch)})
         print(f"  배치 {i+1:02d}: {len(batch)}건 -> {out_path.name}")
 
-    print(f"[완료] 총 {n_batches}개 배치파일 생성 ({BATCH_DIR})")
+    build_hub(batch_meta, len(all_pairs))
+    print(f"[완료] 총 {n_batches}개 배치파일 + 허브페이지 생성 ({BATCH_DIR})")
+
+
+def build_hub(batch_meta: list[dict], total: int):
+    """모든 배치를 한 곳에서 관리하는 허브(인덱스) 페이지. 각 배치파일이
+    localStorage에 자동저장해둔 진행상황(qoo10_review_autosave_<batch_id>)을
+    그대로 읽어서, 배치별로 몇 건 처리했는지 보여주고 바로 이동할 수 있게
+    한다. GitHub Pages(같은 출처)로 서빙되므로, 이 허브 페이지에서 각
+    배치의 저장내역을 직접 읽을 수 있다."""
+    cards_html = "\n".join(
+        f'''<a class="batch-card" data-batch-id="{b["id"]}" data-total="{b["count"]}" href="{b["id"]}.html" target="_blank" rel="noopener">
+  <div class="batch-card-top">
+    <span class="batch-name">{b["id"]}</span>
+    <span class="batch-total">{b["count"]}건</span>
+  </div>
+  <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%"></div></div>
+  <div class="batch-card-bottom">
+    <span class="progress-text">-</span>
+    <span class="excluded-text">-</span>
+  </div>
+  <div class="updated-text">-</div>
+</a>'''
+        for b in batch_meta
+    )
+    html = f'''<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>검수 배치 관리 허브</title>
+<style>
+  * {{ box-sizing: border-box; }}
+  body {{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+    background: linear-gradient(160deg, #14161a 0%, #1c1f26 100%);
+    color: #e8e8ea; padding: 32px 20px; margin: 0; min-height: 100vh;
+  }}
+  .wrap {{ max-width: 1000px; margin: 0 auto; }}
+  h1 {{ font-size: 24px; margin: 0 0 6px; display:flex; align-items:center; gap:10px; }}
+  .sub {{ color: #9a9ba3; font-size: 14px; margin: 0 0 28px; line-height:1.6; }}
+  .overall {{
+    background: linear-gradient(135deg, #2a3f5f 0%, #1f2a3d 100%);
+    border: 1px solid #3a4a63; border-radius: 14px; padding: 20px 24px;
+    margin-bottom: 28px; display: flex; gap: 32px; flex-wrap: wrap;
+  }}
+  .overall .stat {{ display:flex; flex-direction:column; gap:4px; }}
+  .overall .stat .num {{ font-size: 28px; font-weight: 800; }}
+  .overall .stat .lbl {{ font-size: 12px; color: #a9b4c7; }}
+  .overall .stat.confirmed .num {{ color: #4ade80; }}
+  .overall .stat.excluded .num {{ color: #f87171; }}
+  .overall .stat.remaining .num {{ color: #facc15; }}
+  .grid {{
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }}
+  .batch-card {{
+    display: block; background: #22252c; border: 1px solid #35383f; border-radius: 12px;
+    padding: 16px 18px; text-decoration: none; color: inherit; transition: all 0.15s ease;
+  }}
+  .batch-card:hover {{ border-color: #6ab0ff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }}
+  .batch-card-top {{ display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }}
+  .batch-name {{ font-size: 16px; font-weight: 700; color: #fff; }}
+  .batch-total {{ font-size: 12px; color: #8b8d95; }}
+  .progress-bar-track {{ height: 8px; background: #35383f; border-radius: 4px; overflow: hidden; margin-bottom: 10px; }}
+  .progress-bar-fill {{ height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e); border-radius: 4px; transition: width 0.3s ease; }}
+  .batch-card-bottom {{ display: flex; justify-content: space-between; font-size: 13px; }}
+  .progress-text {{ color: #c7c9d1; font-weight: 600; }}
+  .excluded-text {{ color: #f87171; }}
+  .updated-text {{ font-size: 11px; color: #6b6d75; margin-top: 8px; }}
+  .none-badge {{ color: #6b6d75; }}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>📋 검수 배치 관리 허브</h1>
+<p class="sub">전체 {total}건 · {len(batch_meta)}개 배치로 나뉨. 배치 카드를 클릭하면 새 탭에서 열립니다.<br>진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(이 브라우저에서 작업한 기록 + GitHub에 저장한 기록).</p>
+
+<div class="overall" id="overall-stats">
+  <div class="stat confirmed"><span class="num" id="stat-confirmed">-</span><span class="lbl">선택완료</span></div>
+  <div class="stat excluded"><span class="num" id="stat-excluded">-</span><span class="lbl">제외처리</span></div>
+  <div class="stat remaining"><span class="num" id="stat-remaining">-</span><span class="lbl">미처리</span></div>
+</div>
+
+<div class="grid">
+{cards_html}
+</div>
+</div>
+
+<script>
+async function refreshProgress() {{
+  var cards = document.querySelectorAll('.batch-card');
+  var totalDone = 0, totalExcluded = 0, totalAll = 0;
+  var ghToken = localStorage.getItem('qoo10_gh_save_token');
+
+  for (var i = 0; i < cards.length; i++) {{
+    var card = cards[i];
+    var batchId = card.dataset.batchId;
+    var total = parseInt(card.dataset.total, 10);
+    totalAll += total;
+    var key = 'qoo10_review_autosave_' + batchId;
+    var raw = null;
+    try {{ raw = localStorage.getItem(key); }} catch (e) {{}}
+
+    if (ghToken) {{
+      try {{
+        var apiUrl = 'https://api.github.com/repos/wklee3k-source/qoo10-korea-price-compare/contents/comparison/decisions/' + batchId + '.json';
+        var res = await fetch(apiUrl, {{headers: {{Authorization: 'token ' + ghToken}}}});
+        if (res.ok) {{
+          var data = await res.json();
+          var content = decodeURIComponent(escape(atob(data.content)));
+          raw = JSON.stringify({{savedAt: new Date().toISOString(), results: JSON.parse(content)}});
+        }}
+      }} catch (e) {{}}
+    }}
+
+    var fill = card.querySelector('.progress-bar-fill');
+    var progressText = card.querySelector('.progress-text');
+    var excludedText = card.querySelector('.excluded-text');
+    var updatedText = card.querySelector('.updated-text');
+
+    if (!raw) {{
+      progressText.innerHTML = '<span class="none-badge">아직 안 열어봄</span>';
+      excludedText.textContent = '';
+      updatedText.textContent = '';
+      fill.style.width = '0%';
+      continue;
+    }}
+    var saved;
+    try {{ saved = JSON.parse(raw); }} catch (e) {{ continue; }}
+    var results = saved.results || [];
+    var confirmed = results.filter(function(r) {{ return r.match_confirmed; }}).length;
+    var excluded = results.filter(function(r) {{ return r.excluded; }}).length;
+    totalDone += confirmed;
+    totalExcluded += excluded;
+    fill.style.width = Math.round((confirmed / total) * 100) + '%';
+    progressText.textContent = confirmed + ' / ' + total;
+    excludedText.textContent = excluded > 0 ? '제외 ' + excluded : '';
+    updatedText.textContent = saved.savedAt ? '마지막 저장: ' + new Date(saved.savedAt).toLocaleString() : '';
+  }}
+
+  document.getElementById('stat-confirmed').textContent = totalDone;
+  document.getElementById('stat-excluded').textContent = totalExcluded;
+  document.getElementById('stat-remaining').textContent = totalAll - totalDone - totalExcluded;
+}}
+refreshProgress();
+</script>
+</body>
+</html>'''
+    (BATCH_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 if __name__ == "__main__":
     build_batches()
+
