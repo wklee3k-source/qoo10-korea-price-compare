@@ -4449,5 +4449,103 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1075323842",
+    "translated_kr": "THE ORDINARY Alpha Arbutin 2% + HA [KOR] - 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "알파 알부틴 2% + HA",
+      "naver": "[리뉴얼] 알파 알부틴 2% + HA 30ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "알파 알부틴 2% + HA",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17500",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11872605668",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8941711/89417116262.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941711/89417116262.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11872605668"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941719/89417198105.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11872687511"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941719/89417198104.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/11872687510"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941711/89417116261.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/11872605667"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1075016731",
+    "translated_kr": "한국화장품 피부보습 코스알엑스 The Niacinamide 15 Serum 20ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "더 나이아신아마이드 15 세럼",
+      "naver": "코스알엑스 더 비타민 C 23 세럼 20g The Vitamin Serum"
+    },
+    "brand": "코스알엑스",
+    "name": "코스알엑스 더 비타민 C 23 세럼 20g The Vitamin Serum",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "43560",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10844902071",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8838940/88389408084.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838940/88389408084.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10844902071"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838942/88389425121.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10844919108"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8802216/88022166571.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10477661270"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8802216/88022162313.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10477657012"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9029243/90292437374.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/12747926425"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
