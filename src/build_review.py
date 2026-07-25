@@ -28,6 +28,17 @@ BRAND_ALIASES = {
 }
 
 
+def to_pc_url(mobile_url: str) -> str:
+    """모바일 큐텐 URL(m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?...)을
+    PC버전(www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?...)으로 바꾼다."""
+    if not mobile_url:
+        return mobile_url
+    m = re.search(r"goodscode=(\d+)", mobile_url)
+    if m:
+        return f"https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode={m.group(1)}"
+    return mobile_url.replace("m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx", "www.qoo10.jp/gmkt.inc/Goods/Goods.aspx")
+
+
 def load_qoo10_products():
     products = json.loads((OUTPUT / "discovery_state.json").read_text(encoding="utf-8"))["all_products"]
     archive_dir = OUTPUT / "archive"
@@ -305,7 +316,7 @@ def build_pairs():
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
             "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
-            "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
+            "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": to_pc_url(q.get("item_url")),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),

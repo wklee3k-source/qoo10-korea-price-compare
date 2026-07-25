@@ -29,9 +29,11 @@
   .photo-group-label.qoo10 { color:#378ADD; }
   .photo-group-label.kr { color:#2a7d46; }
   .photo-thumbs { display:flex; gap:6px; }
-  .mainimg { width:150px; height:150px; cursor:pointer; border:3px solid transparent; border-radius:8px; flex-shrink:0; }
+  .mainimg { width:150px; height:150px; cursor:pointer; border:3px solid transparent; border-radius:8px; flex-shrink:0; position:relative; }
   .mainimg.selected { border-color:#2a7d46; border-width:3px; }
   .mainimg img { width:100%; height:100%; object-fit:contain; background:#fff; display:block; border-radius:5px; }
+  .img-size-badge { position:absolute; bottom:4px; right:4px; background:rgba(0,0,0,0.65); color:#fff;
+                     font-size:10px; padding:2px 5px; border-radius:4px; pointer-events:none; }
   .info-table { width:100%; border-collapse:collapse; font-size:14px; }
   .info-table td { padding:9px 0; border-top:1px solid #eee; vertical-align:top; }
   .info-table tr:first-child td { border-top:none; }
@@ -118,7 +120,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203681851" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1203681851" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12445574073" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 뎅스마켓)</span>
@@ -164,7 +166,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203603379" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1203603379" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12569062041" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · AXIS-Y)</span>
@@ -210,7 +212,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1159230400" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1159230400" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13655661235" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 스마일핫픽)</span>
@@ -256,7 +258,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1190935815" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1190935815" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13327380253" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 동아 수성점 토니모리)</span>
@@ -302,7 +304,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191236161" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1191236161" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://shopping.naver.com/outlink/itemdetail/10829312055" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 더마팩토리)</span>
@@ -348,7 +350,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1077228248" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1077228248" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/5813105204" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 럭셔리파리)</span>
@@ -394,7 +396,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1141035004" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1141035004" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/3840088676" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 코리아나화장품)</span>
@@ -440,7 +442,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1008962509" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1008962509" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/8478297884" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 바이 앤 인조이)</span>
@@ -486,7 +488,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=990775487" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=990775487" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13566087767" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 공방수은당)</span>
@@ -532,7 +534,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1179932682" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1179932682" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000246297" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 올리브영)</span>
@@ -578,7 +580,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1130875429" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1130875429" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9893276274" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 바로이샵)</span>
@@ -624,7 +626,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1118484826" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1118484826" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9893265521" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 바로이샵)</span>
@@ -670,7 +672,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1164187236" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1164187236" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://link.musinsa.com/app/goods/5480979?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무신사)</span>
@@ -716,7 +718,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1159446808" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1159446808" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/685953873" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 바이오더마코리아)</span>
@@ -762,7 +764,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1149795556" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1149795556" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11034201761" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · CURE31)</span>
@@ -808,7 +810,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212029919" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1212029919" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9887411923" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 블랙 올리브)</span>
@@ -854,7 +856,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1202069443" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1202069443" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/8928483711" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 88점빵)</span>
@@ -900,7 +902,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169515987" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1169515987" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13331416086" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 닥터멜락신)</span>
@@ -946,7 +948,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161958799" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1161958799" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13678389160" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · RumiDrop)</span>
@@ -992,7 +994,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1091577701" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1091577701" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/6663775541" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 대구백화점)</span>
@@ -1038,7 +1040,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1123888012" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1123888012" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무신사)</span>
@@ -1084,7 +1086,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1192376870" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1192376870" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13313951344" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무무셀렉트)</span>
@@ -1130,7 +1132,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206727074" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1206727074" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10455298324" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 월드세븐)</span>
@@ -1176,7 +1178,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208658337" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1208658337" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13425164973" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · tamburins)</span>
@@ -1222,7 +1224,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1159061701" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1159061701" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13069047721" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 해밤직구)</span>
@@ -1268,7 +1270,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1131788387" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1131788387" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://themedicube.co.kr/product/detail.html?product_no=2457&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">한국 구매처</a>
         <span class="site">(naver · 메디큐브)</span>
@@ -1314,7 +1316,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1122868138" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1122868138" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://themedicube.co.kr/product/detail.html?product_no=1849&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디큐브)</span>
@@ -1360,7 +1362,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1124448967" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1124448967" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://link.musinsa.com/app/goods/4278948?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327887" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무신사)</span>
@@ -1406,7 +1408,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1138349945" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1138349945" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12673056009" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디큐브 공식몰)</span>
@@ -1452,7 +1454,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186550040" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1186550040" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13511637856" target="_blank">한국 구매처</a>
         <span class="site">(naver · 재팬럭키셀렉트)</span>
@@ -1498,7 +1500,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1186550010" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1186550010" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13511640567" target="_blank">한국 구매처</a>
         <span class="site">(naver · 재팬럭키셀렉트)</span>
@@ -1544,7 +1546,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194379266" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1194379266" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/7033453181" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 삼대오백 스토어)</span>
@@ -1590,7 +1592,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210946100" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1210946100" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/6938184414" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 뿌니샵)</span>
@@ -1636,7 +1638,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1178470153" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1178470153" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/4726873120" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 닥터지)</span>
@@ -1682,7 +1684,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213462651" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1213462651" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10455298324" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 월드세븐)</span>
@@ -1728,7 +1730,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180589025" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1180589025" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/6873221070" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 아누아)</span>
@@ -1774,7 +1776,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209059063" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1209059063" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13526431923" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 더샘)</span>
@@ -1820,7 +1822,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1178361387" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1178361387" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/5624608495" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · C1SHOP)</span>
@@ -1866,7 +1868,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1171498084" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1171498084" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12673056009" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디큐브 공식몰)</span>
@@ -1912,7 +1914,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1161381618" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1161381618" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13472661949" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 헤븐 스토어)</span>
@@ -1958,7 +1960,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1207227328" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1207227328" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11838610192" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · Dr.Althea)</span>
@@ -2004,7 +2006,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1155298751" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1155298751" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://themedicube.co.kr/product/detail.html?product_no=742&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디큐브)</span>
@@ -2050,7 +2052,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1165615884" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1165615884" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13069682596" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 미인뷰티)</span>
@@ -2096,7 +2098,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191147845" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1191147845" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13678011791" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 셀리맥스)</span>
@@ -2142,7 +2144,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210829738" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1210829738" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10865028854" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · Arencia 아렌시아)</span>
@@ -2188,7 +2190,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193753404" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1193753404" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9531925372" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디필 스토어)</span>
@@ -2234,7 +2236,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208555932" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1208555932" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10455298324" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 월드세븐)</span>
@@ -2280,7 +2282,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1160562706" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1160562706" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10031936289" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 오감공감)</span>
@@ -2326,7 +2328,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210391803" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1210391803" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13577556495" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 미라클 뷰)</span>
@@ -2372,7 +2374,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213378280" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1213378280" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13678011791" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 셀리맥스)</span>
@@ -2418,7 +2420,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1205868858" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1205868858" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13036756320" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 아넷사)</span>
@@ -2464,7 +2466,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193643194" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1193643194" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13594246770" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · CYOU)</span>
@@ -2510,7 +2512,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180137613" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1180137613" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9276667674" target="_blank">한국 구매처</a>
         <span class="site">(naver · L스토어)</span>
@@ -2556,7 +2558,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201652765" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1201652765" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/5409401294" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 시드니면세점)</span>
@@ -2602,7 +2604,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199006617" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1199006617" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13588342796" target="_blank">한국 구매처</a>
         <span class="site">(naver · 마고월드)</span>
@@ -2648,7 +2650,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1193433355" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1193433355" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13478616306" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 올굿뷰티)</span>
@@ -2694,7 +2696,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213367912" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1213367912" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13370314926" target="_blank">한국 구매처</a>
         <span class="site">(naver · 리베티움)</span>
@@ -2740,7 +2742,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204254720" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1204254720" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13678597652" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 선진tm01)</span>
@@ -2786,7 +2788,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1211134600" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1211134600" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13655052738" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 블링버스)</span>
@@ -2832,7 +2834,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1134796920" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1134796920" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/4799691723" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 옴니코스)</span>
@@ -2878,7 +2880,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1211663273" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1211663273" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11260816885" target="_blank">한국 구매처</a>
         <span class="site">(naver · 영점팔프로언니)</span>
@@ -2924,7 +2926,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=724850594" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=724850594" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/5011619179" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 퍼퓸하우스S)</span>
@@ -2970,7 +2972,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1189371186" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1189371186" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13655052738" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 블링버스)</span>
@@ -3016,7 +3018,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1162421706" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1162421706" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11209553038" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 씨이오보떼)</span>
@@ -3062,7 +3064,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1192657055" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1192657055" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13555852415" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 공방수은당)</span>
@@ -3108,7 +3110,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194643294" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1194643294" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12381047968" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 아몬드영)</span>
@@ -3154,7 +3156,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191102778" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1191102778" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9951771984" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 파니브리즈)</span>
@@ -3200,7 +3202,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1138105738" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1138105738" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12494293627" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 참좋은뷰티)</span>
@@ -3246,7 +3248,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1118245002" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1118245002" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/10956880488" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 마켓디에이알)</span>
@@ -3292,7 +3294,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212499809" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1212499809" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://celladix.co.kr/product/detail.html?product_no=89&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 셀라딕스)</span>
@@ -3338,7 +3340,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1212943200" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1212943200" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/5392104392" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 구르)</span>
@@ -3384,7 +3386,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1210576443" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1210576443" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://themedicube.co.kr/product/detail.html?product_no=2538&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 메디큐브)</span>
@@ -3430,7 +3432,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1180095461" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1180095461" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11876718680" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 더블유엠에스테틱)</span>
@@ -3476,7 +3478,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1172740048" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1172740048" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://shopping.naver.com/outlink/itemdetail/10248980563" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 디오디너리)</span>
@@ -3522,7 +3524,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1170454907" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1170454907" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12581661867" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 일동상사)</span>
@@ -3568,7 +3570,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1106744312" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1106744312" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/7926416135" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · gh스토어)</span>
@@ -3614,7 +3616,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1043988185" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1043988185" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13680084008" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 와우마트369)</span>
@@ -3660,7 +3662,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1030137154" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1030137154" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/8536641900" target="_blank">한국 구매처</a>
         <span class="site">(naver · 프리티스킨)</span>
@@ -3706,7 +3708,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169403361" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1169403361" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://link.musinsa.com/app/goods/3316501?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무신사)</span>
@@ -3752,7 +3754,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169403395" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1169403395" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/8157719651" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 에스트라)</span>
@@ -3798,7 +3800,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203603284" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1203603284" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12756366747" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 원라이브:쇼핑)</span>
@@ -3844,7 +3846,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1168194628" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1168194628" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000145233" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 올리브영)</span>
@@ -3890,7 +3892,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1109029493" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1109029493" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13585955908" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 바름인터내셔널)</span>
@@ -3936,7 +3938,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1169843790" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1169843790" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/8821238346" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 호주직구마켓)</span>
@@ -3982,7 +3984,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1137723549" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1137723549" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250199" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 올리브영)</span>
@@ -4028,7 +4030,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1175710049" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1175710049" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11876718680" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 더블유엠에스테틱)</span>
@@ -4074,7 +4076,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1150197861" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1150197861" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13655661235" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 스마일핫픽)</span>
@@ -4120,7 +4122,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1103882936" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1103882936" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9795256572" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 세상담기-네오홀릭)</span>
@@ -4166,7 +4168,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209391485" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1209391485" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12569062041" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · AXIS-Y)</span>
@@ -4212,7 +4214,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209978694" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1209978694" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13672660950" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 플라워결스토어)</span>
@@ -4258,7 +4260,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208334354" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1208334354" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/11325370905" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 헬스앤뷰티스토어)</span>
@@ -4304,7 +4306,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204657613" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1204657613" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13680201815" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 구삼마켓스토어)</span>
@@ -4350,7 +4352,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1201973573" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1201973573" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/9927173252" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 벤튼)</span>
@@ -4396,7 +4398,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213266252" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1213266252" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13307879077" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 필오넷)</span>
@@ -4442,7 +4444,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1207892717" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1207892717" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/12728510360" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 컬리N마트)</span>
@@ -4488,7 +4490,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1192426133" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1192426133" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13638020627" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 마이오쇼핑)</span>
@@ -4534,7 +4536,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1200931489" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1200931489" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/13670052191" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 민꼬21)</span>
@@ -4580,7 +4582,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1191463910" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1191463910" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250199" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 올리브영)</span>
@@ -4626,7 +4628,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1176692585" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1176692585" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://smartstore.naver.com/main/products/4512396903" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · SKIN1004 공식몰)</span>
@@ -4672,7 +4674,7 @@
     <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
-        <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1117569383" target="_blank">큐텐 원본</a>
+        <a href="https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1117569383" target="_blank">큐텐 원본</a>
         <span style="color:#bbb;">/</span>
         <a href="https://link.musinsa.com/app/goods/1983802?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}" target="_blank">한국 구매처</a>
         <span class="site">(hwahae · 무신사)</span>
@@ -4685,7 +4687,13 @@
 <script>
 function selectImage(goodsNo, side, url, el) {
   var card = el.closest('.card');
+  var alreadySelected = el.classList.contains('selected');
   card.querySelectorAll('.mainimg').forEach(function(n) { n.classList.remove('selected'); });
+  if (alreadySelected) {
+    delete card.dataset.selectedSource;
+    delete card.dataset.selectedUrl;
+    return;
+  }
   el.classList.add('selected');
   card.dataset.selectedSource = side;
   card.dataset.selectedUrl = url;
@@ -5010,6 +5018,30 @@ async function loadFromGithub() {
   pushUndoSnapshot();
   updateUndoRedoButtons();
 })();
+
+// [사진 원본크기 표시] 각 사진의 실제(원본) 픽셀 크기를 우측하단에 작게
+// 표시한다. 화면에 보이는 썸네일은 150x150으로 축소돼서 나오지만,
+// naturalWidth/naturalHeight는 브라우저가 실제로 받아온 원본 이미지의
+// 진짜 픽셀 크기를 알려준다(빌드 시점에 서버에서 미리 다운받을 필요 없이,
+// 사용자가 페이지를 열 때 브라우저가 이미지를 받으면서 자동으로 알게 됨).
+function addImageSizeBadges() {
+  document.querySelectorAll('.mainimg img').forEach(function(img) {
+    if (img.dataset.sizeBadgeAdded) return;
+    function showSize() {
+      if (!img.naturalWidth) return;
+      var badge = document.createElement('div');
+      badge.className = 'img-size-badge';
+      badge.textContent = img.naturalWidth + '×' + img.naturalHeight;
+      img.closest('.mainimg').appendChild(badge);
+      img.dataset.sizeBadgeAdded = '1';
+    }
+    if (img.complete) showSize(); else img.addEventListener('load', showSize);
+  });
+}
+addImageSizeBadges();
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.mainimg')) setTimeout(addImageSizeBadges, 50);
+});
 
 
 // 페이지네이션: 20개씩 보여준다

@@ -87,7 +87,13 @@
 <script>
 function selectImage(goodsNo, side, url, el) {
   var card = el.closest('.card');
+  var alreadySelected = el.classList.contains('selected');
   card.querySelectorAll('.mainimg').forEach(function(n) { n.classList.remove('selected'); });
+  if (alreadySelected) {
+    delete card.dataset.selectedSource;
+    delete card.dataset.selectedUrl;
+    return;
+  }
   el.classList.add('selected');
   card.dataset.selectedSource = side;
   card.dataset.selectedUrl = url;
