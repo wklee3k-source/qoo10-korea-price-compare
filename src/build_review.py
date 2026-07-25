@@ -47,6 +47,18 @@ def extract_volume_ml(text: str) -> float | None:
     return num * 1000 if unit == "l" else num
 
 
+def extract_sheet_count(text: str) -> int | None:
+    """시트마스크/패치류는 mL이 아니라 "장수"(枚/매)로 스펙을 표시하는 게
+    일반적이다. mL 정보가 없어도 이 장수끼리는 정확히 비교 가능하다
+    (실측 확인된 사례: 큐텐원본 "10枚", 구매처 "21ml 10매"는 실제로
+    같은 상품인데, mL만 비교하면 큐텐쪽에 mL 자체가 없어서 비교가
+    안 됐었음 — 枚/매 개수를 대신 비교하면 정확히 일치를 판정할 수 있다)."""
+    if not text:
+        return None
+    m = re.search(r"(\d+)\s*(枚|매)\b", text)
+    return int(m.group(1)) if m else None
+
+
 def extract_quantity(text: str) -> int:
     """제목/상품명에서 실제 수량(묶음개수)을 추출한다(한글 상품명에 개수를
     명시적으로 표시하기 위함).
@@ -144,12 +156,21 @@ def build_pairs():
         qoo10_vol = extract_volume_ml(q["title"])
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
-        # [수정] 큐텐원본에 mL/g/L 표기 자체가 없는 경우(예: "10枚"처럼
-        # 장수만 있는 시트마스크류)엔 비교할 정보 자체가 없는 것이지
-        # "불일치"가 아니다 — 실측 확인된 오탐(원본 "10枚", 구매처
-        # "21ml 10매"인데 "용량불일치"로 잘못 표시됨). 브랜드체크에서
-        # 이미 적용한 것과 같은 원칙: 정보부족은 "판단불가"로 표시한다.
         vol_status = "match" if vol_match else ("unknown" if qoo10_vol is None or kr_vol is None else "mismatch")
+
+        # [개선] mL로 비교가 안 되면(둘 중 하나라도 mL정보 없음) 그냥
+        # "판단불가"로 남기지 않고, 시트/장수(枚/매) 개수로 대신 비교해서
+        # 진짜 일치/불일치를 가려낸다 — 시트마스크류는 mL이 아니라 장수로
+        # 스펙을 표시하는 게 일반적이라, 장수가 정확히 맞으면 실제로는
+        # 같은 상품인 경우가 많다(실측 사례: 큐텐 "10枚" vs 구매처
+        # "21ml 10매" → mL은 큐텐에 없지만 枚/매 개수 10=10으로 정확히
+        # 일치 판정 가능).
+        if vol_status == "unknown":
+            qoo10_sheets = extract_sheet_count(q["title"])
+            kr_sheets = extract_sheet_count(kr_name_display) or extract_sheet_count(x.get("volume") or "")
+            if qoo10_sheets is not None and kr_sheets is not None:
+                vol_status = "match" if qoo10_sheets == kr_sheets else "mismatch"
+                vol_match = vol_status == "match"
 
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
