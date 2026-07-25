@@ -16705,5 +16705,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1186606112",
+    "translated_kr": "[1+1+1] 셀리맥스 포어 브라이트닝 시미 케어 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "브라이트닝 모공잡티 세럼",
+      "naver": "[셀리맥스] 브라이트닝 모공잡티세럼 30mL+10mL 기획세트"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "브라이트닝 모공잡티 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15600",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12274595270",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8981910/89819105986.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981910/89819105986.1.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274595270"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9015652/90156528106.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/12612017250"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116622/91166221306.jpg",
+        "mall": "쇼핑의 한 수",
+        "link": "https://smartstore.naver.com/main/products/13621710889"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "995566639",
+    "translated_kr": "세이프온 마일드 선 쿠션 본품 25g + 리필 25g x 2 / AHC",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
