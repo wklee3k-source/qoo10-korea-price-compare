@@ -14772,5 +14772,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1155564880",
+    "translated_kr": "빌리프 슈퍼나이츠 멀티비타민 마스크 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼 나이츠 마스크 [멀티 비타민]",
+      "naver": "빌리프 슈퍼 나이츠 멀티 비타민 마스크 75ml"
+    },
+    "brand": "빌리프 (belif)",
+    "name": "슈퍼 나이츠 마스크 [멀티 비타민]",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "21150",
+    "mall": "Top뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10205697729",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8775020/87750201237.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8775020/87750201237.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/10205697729"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1132994252",
+    "translated_kr": "메디큐브 PDRN 핑크 앰플 라이트 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "울트라 라이트 PDRN 핑크 펩타이드 앰플"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "울트라 라이트 PDRN 핑크 펩타이드 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 31400,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
