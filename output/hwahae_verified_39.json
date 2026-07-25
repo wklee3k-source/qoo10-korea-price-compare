@@ -2772,5 +2772,77 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1116658196",
+    "translated_kr": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 세럼 30ml+리필30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼",
+      "naver": "아누아 PDRN 피디알엔 히알루론산 캡슐 100 연어 눈물세럼 앰플 30ml+30ml 리필+미니거울"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "26900",
+    "mall": "시손느파세",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13657487355",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120199/91201998140.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120199/91201998140.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/13657487355"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924593/89245933634.5.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/11701423167"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1104859818",
+    "translated_kr": "[비타 3종 세트] 달바 비타미스트 세럼 8% 70ml + 비타 토닝 캡슐 세럼 100ml + 비타 토닝 세럼 로션 100ml / 캡슐 크림 55g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타 토닝 캡슐 세럼",
+      "naver": "[달바] 비타 토닝 캡슐 세럼 나이아신아마이드5% 100ml 1+1 세트"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "비타 토닝 캡슐 세럼",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "69900",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13667461395",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121197/91211972303.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121197/91211972303.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/13667461395"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121197/91211975049.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/13667464141"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
