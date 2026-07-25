@@ -15494,5 +15494,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204446765",
+    "translated_kr": "닥터아토 쿨링 선 스프레이 SPF50+ PA+++ 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "저자극 쿨링 뿌리는 선 스프레이 [SPF50+/PA+++]",
+      "naver": "닥터아토 쿨링 선 스프레이 SPF50+ PA+++, 150ml, 1개"
+    },
+    "brand": "닥터아토 (Dr.ato)",
+    "name": "저자극 쿨링 뿌리는 선 스프레이 [SPF50+/PA+++]",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18180",
+    "mall": "직구웨이브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13682360366",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122687/91226871609.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122687/91226871609.jpg",
+        "mall": "직구웨이브",
+        "link": "https://smartstore.naver.com/main/products/13682360366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211855765",
+    "translated_kr": "아누아 비타C 포스트릭스 토닝 세럼 마스크 22ml 10장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
