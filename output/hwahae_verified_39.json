@@ -18592,5 +18592,57 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193642948",
+    "translated_kr": "GIVENCHY 【정품】 프리즘 리브르 미니 파우더 No0/No1/No2/No3/No4 지방시 프리즘 리브르 PRISME LIBRE 루스 파우더 탐버린즈",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200177135",
+    "translated_kr": "우툭한 진한 돈코츠 라면 115g×12개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "에이스쿡 볼륨만점 슈퍼컵맥스 진한 돈코츠라멘 12개 1BOX"
+    },
+    "brand": null,
+    "name": "에이스쿡 볼륨만점 슈퍼컵맥스 진한 돈코츠라멘 12개 1BOX",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "41500",
+    "mall": "ULTRAMARKET",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5410101073",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8295459/82954594786.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8295459/82954594786.1.jpg",
+        "mall": "ULTRAMARKET",
+        "link": "https://smartstore.naver.com/main/products/5410101073"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028353/90283531536.jpg",
+        "mall": "벤디타마켓",
+        "link": "https://smartstore.naver.com/main/products/12739020595"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
