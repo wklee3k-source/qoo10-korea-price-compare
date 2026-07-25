@@ -13853,5 +13853,47 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212659125",
+    "translated_kr": "미쟝센 살롱10 프로틴 헤어 트리트먼트 극손상모용 250ml 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "미쟝센 살롱10 실키프로틴 에센스팩 트레이더스 손상 모발용 990g, 1개"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1088197835",
+    "translated_kr": "스킨푸드 캐럿 카로틴 수딩 토너 300ml + 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "캐롯 카로틴 수딩 토너"
+    },
+    "brand": "스킨푸드 (SKINFOOD)",
+    "name": "캐롯 카로틴 수딩 토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
