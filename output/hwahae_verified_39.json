@@ -6645,5 +6645,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1031350344",
+    "translated_kr": "[박스 없음] [5가지 종류에서 선택 가능] 뷰티클리어 파우더워시 0.4g×32개 효소세안파우더 모공 피지 [선물 래핑 대응] 수이사이",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1136468573",
+    "translated_kr": "NA 에센스N 50mL 미용액 나이아신아마이드 침투 건조 모공 촉촉함 스킨케어 [선물 래핑 대응]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver": "코스워커 나이아신아마이드앰플 미백세럼 미백 에센스 히알루론산 속건조 기미 세럼 80ml"
+    },
+    "brand": "피토버플러스 (PHYTOVER)",
+    "name": "매끈 모공 에센스",
+    "volume": "235ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28000",
+    "mall": "코스워커",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9832922081",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8737742/87377424354.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8737742/87377424354.3.jpg",
+        "mall": "코스워커",
+        "link": "https://smartstore.naver.com/main/products/9832922081"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8990724/89907248645.jpg",
+        "mall": "바도닉 BADONIK",
+        "link": "https://smartstore.naver.com/main/products/12362737928"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8885399/88853997330.5.jpg",
+        "mall": "코리아 뷰티플러스",
+        "link": "https://smartstore.naver.com/main/products/11309486999"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065947/90659476793.jpg",
+        "mall": "동경픽크닉",
+        "link": "https://smartstore.naver.com/main/products/13114965701"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065946/90659467281.jpg",
+        "mall": "동경픽크닉",
+        "link": "https://smartstore.naver.com/main/products/13114956189"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
