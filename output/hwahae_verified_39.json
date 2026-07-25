@@ -17019,5 +17019,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1207103587",
+    "translated_kr": "앰플엔 펩타이드샷 앰플 2X 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드샷 앰플 투엑스",
+      "naver": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력"
+    },
+    "brand": "앰플엔 (AMPLE:N)",
+    "name": "펩타이드샷 앰플 투엑스",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "13900",
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5062113585",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5062113585"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260667/82606671756.70.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/5062150297"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635045.5.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/5062113586"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210849711",
+    "translated_kr": "레티나롤 레티놀 2000+ NAD 세럼 30ml 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "[셀리맥스] [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml 76008"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
