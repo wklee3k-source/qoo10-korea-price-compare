@@ -398,7 +398,7 @@ def build_html(pairs: list[dict]):
     <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): {dim_minor_text(p['qoo10_name_kr'])}</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
+    
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
     <div class="price">{p['kr_price'] or '-'} 원</div>
     <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
@@ -409,6 +409,12 @@ def build_html(pairs: list[dict]):
 </div>''')
 
     cards_str = "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
+    # [중요] 템플릿(review.html)과 출력파일을 반드시 분리한다 — 예전엔 같은
+    # 경로에 읽고 쓰기를 해서, 이 스크립트를 한 번이라도 직접 실행하면
+    # 템플릿 자체가 카드데이터로 영구 오염되는 사고가 있었다(실측 확인:
+    # 템플릿이 3854줄까지 부풀어서, build_review_batches.py가 그 오염된
+    # 템플릿을 읽어 배치를 만들면서 페이지네이션/undo버튼이 깨지는 원인이
+    # 됐다). 템플릿은 항상 읽기전용으로만 다루고, 결과는 별도 파일에 쓴다.
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     new_html = re.sub(
         r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
@@ -417,8 +423,8 @@ def build_html(pairs: list[dict]):
         flags=re.S,
     )
     new_html = re.sub(r"\(\d+건.*?\)", f"({len(pairs)}건)", new_html, count=1)
-    (COMPARISON / "review.html").write_text(new_html, encoding="utf-8")
-    print(f"[완료] review.html 갱신 ({len(pairs)}건)")
+    (COMPARISON / "review_full.html").write_text(new_html, encoding="utf-8")
+    print(f"[완료] review_full.html 생성 ({len(pairs)}건) — 템플릿(review.html)은 건드리지 않음")
 
 
 if __name__ == "__main__":
