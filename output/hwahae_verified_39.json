@@ -5616,5 +5616,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211980957",
+    "translated_kr": "【NEW】오우즈너리 비타3 오로라 미스트 60ml 메이크 키프 윤기 미스트 보습 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178226810",
+    "translated_kr": "[NEW]PDRN 핑크 콜라겐 볼륨 멀티 밤 10g/PDRN Pink Collagen Volume Multi Balm 메디큐브",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 콜라겐 볼륨 멀티밤"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 콜라겐 볼륨 멀티밤",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
