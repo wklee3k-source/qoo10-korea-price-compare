@@ -18439,5 +18439,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208145226",
+    "translated_kr": "푸코이단 새틴 에센스 토너 200ml 스킨케어 화장수 보습 윤기 피부 트러블 케어 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "닥랩 피알루로닉 겔 508ml 속겉물광겔 PDRN연어에센스 수분 진정 재건"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192069908",
+    "translated_kr": "[ANOTHER 13] 아나더13 Type 50ml 본품 / meofme / 플로랄한 향이 은은한 중립적이고 매력적인 향 / 한국 인기 향수 향수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제주 향수 [No.7 바람]",
+      "naver": "안나수이 스카이 향수 오드뚜왈렛 EDT SP 5ml 미니 보틀 휴대용 플로럴 프루티"
+    },
+    "brand": "공후하 (GONGHUHA)",
+    "name": "제주 향수 [No.7 바람]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "16900",
+    "mall": "딜위드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13354901057",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9089941/90899411389.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089941/90899411389.jpg",
+        "mall": "딜위드",
+        "link": "https://smartstore.naver.com/main/products/13354901057"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837277/88372779577.jpg",
+        "mall": "Navigo571",
+        "link": "https://smartstore.naver.com/main/products/10828273564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9020763/90207634010.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/12663123104"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
