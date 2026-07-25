@@ -8832,5 +8832,70 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205149988",
+    "translated_kr": "[칼리나 픽] 피그 레이어 오드 파르팜 10ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "(한정판)레오나드 오파블루즈 오드뚜왈렛 30ml"
+    },
+    "brand": "레오나드",
+    "name": "(한정판)레오나드 오파블루즈 오드뚜왈렛 30ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "59000",
+    "mall": "코코퍼퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10855472846",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8839997/88399978859.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8839997/88399978859.jpg",
+        "mall": "코코퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/10855472846"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023702/90237026236.jpg",
+        "mall": "OHME",
+        "link": "https://smartstore.naver.com/main/products/12692515312"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8856611/88566117929.jpg",
+        "mall": "그랑드",
+        "link": "https://smartstore.naver.com/main/products/11021611722"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943376/89433765837.jpg",
+        "mall": "아베크리치",
+        "link": "https://smartstore.naver.com/main/products/11889255228"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205875092",
+    "translated_kr": "VT 글루타치온 톤온 세럼 30ml / 항산화·미백 / 칙칙함 케어 / 톤업",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 세럼"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
