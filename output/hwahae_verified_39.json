@@ -1951,5 +1951,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1185999641",
+    "translated_kr": "리쥬란 트리플 래디언스 앰플 50ml 한국화장품 고농축 보습 미용액",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "PDRN브라이트닝/수량한정 리쥬란 힐러 트리플 래디언스 앰플 10ml 더블 기획 +5ml+1ml 3"
+    },
+    "brand": "리쥬란",
+    "name": "PDRN브라이트닝/수량한정 리쥬란 힐러 트리플 래디언스 앰플 10ml 더블 기획 +5ml+1ml 3",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "50630",
+    "mall": "비온드샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13632006711",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117651/91176517375.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117651/91176517375.jpg",
+        "mall": "비온드샵",
+        "link": "https://smartstore.naver.com/main/products/13632006711"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185547383",
+    "translated_kr": "메디큐브 Zero 블랙헤드 머드마스크 100g 검은점·각질 케어 진흙팩 모공 깔끔 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
