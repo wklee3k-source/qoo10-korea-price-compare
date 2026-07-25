@@ -11163,5 +11163,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211944402",
+    "translated_kr": "【NEW!】블랙 TECA 오버나이트 겔 마스크 4매입 병풀 / 숙면팩 / 민감성 피부 / 고밀착 / 진정 / 여드름 / 배리어 / 피지 / 시카 / 센텔라 / 테카",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "소나무 진정 시카 코팩",
+      "naver": "라운드랩 소나무 진정 시카 코팩 바이오셀룰로오스 5매입"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "소나무 진정 시카 코팩",
+    "volume": "4ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16600",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9317814150",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8686231/86862314473.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8686231/86862314473.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/9317814150"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8686231/86862314472.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9317814149"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5725163/57251639753.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000191649"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8896381/88963813092.jpg",
+        "mall": "로하스힐링",
+        "link": "https://smartstore.naver.com/main/products/11419302727"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211961379",
+    "translated_kr": "셀 메이징 콜라겐 포어 앰플 30ml 토리든",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "셀메이징 저분자 콜라겐 모공 탄력 앰플"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 모공 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
