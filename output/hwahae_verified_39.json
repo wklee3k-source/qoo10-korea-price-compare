@@ -3040,5 +3040,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191704788",
+    "translated_kr": "셀리맥스 [CELIMAX] (boL) 모공+검은 점 브라이트닝 세럼 30ml / 모공+검은 점 브라이트닝 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "브라이트닝 모공잡티 세럼"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "브라이트닝 모공잡티 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1183517841",
+    "translated_kr": "스킨1004 [SKIN1004] (bo) 마다가스카르 센텔라 톤 브라이트닝 캡슐 크림 75ml / 톤 브라이트닝 캡슐 크림 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 톤 브라이트닝 캡슐 크림",
+      "musinsa": "마다가스카르 센텔라 톤 브라이트닝 캡슐 크림 75ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 톤 브라이트닝 캡슐 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 40000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
