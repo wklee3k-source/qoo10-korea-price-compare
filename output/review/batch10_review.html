@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상품 매칭 검수</title>
+<style>
+  body { font-family: 'Malgun Gothic', sans-serif; background:#f4f4f4; margin:0; padding:24px; }
+  h1 { font-size:18px; }
+  .toolbar { position:sticky; top:0; background:#fff; padding:12px 16px; margin-bottom:16px;
+              border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); z-index:10; }
+  .toolbar button { background:#2a7d46; color:#fff; border:none; padding:10px 18px;
+                      border-radius:6px; font-size:14px; cursor:pointer; }
+  .toolbar button:hover { background:#1e5c33; }
+  .toolbar .status { margin-left:12px; font-size:13px; color:#555; }
+  .skipped { background:#fff8e6; border:1px solid #f0d98c; border-radius:8px; padding:10px 16px;
+              margin-bottom:16px; font-size:13px; color:#7a5c00; }
+  .card { display:flex; gap:16px; background:#fff; border-radius:8px; padding:16px; margin-bottom:16px;
+           box-shadow:0 1px 3px rgba(0,0,0,0.15); }
+  .card.excluded { opacity:0.4; }
+  .side { flex:1; }
+  .side h3 { margin:0 0 8px; font-size:14px; color:#555; }
+  .mainrow { display:flex; gap:6px; }
+  .mainimg { flex:0 0 200px; max-width:200px; aspect-ratio:1; cursor:pointer; border:3px solid transparent;
+              border-radius:6px; }
+  .mainimg.selected { border-color:#2a7d46; }
+  .mainimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
+  .altrow { margin-top:6px; display:flex; gap:5px; flex-wrap:wrap; }
+  .altimg { width:38px; height:38px; cursor:pointer; border:2px solid transparent; border-radius:4px; }
+  .altimg.selected { border-color:#2a7d46; }
+  .altimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
+  .name { font-size:13px; margin:8px 0 2px; }
+  .name-kr { font-size:12px; color:#2a5fa0; margin:0 0 4px; }
+  .price { font-weight:bold; color:#d0392a; }
+  .site { font-size:12px; color:#888; }
+  .goods_no { font-size:12px; color:#999; }
+  .checklist { flex:0 0 140px; border-left:1px dashed #ccc; padding-left:16px;
+                display:flex; align-items:center; justify-content:center; }
+  .exclude-btn { background:#c0392b; color:#fff; border:none; padding:16px 10px;
+                   border-radius:8px; font-size:14px; cursor:pointer; width:100%; line-height:1.4; }
+  .exclude-btn.active { background:#7f8c8d; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="saveDecisions()">💾 결정 파일 저장 (decisions.json 다운로드)</button>
+  <span class="status" id="status"></span>
+</div>
+
+<h1>큐텐 ↔ 한국 상품 매칭 검수 (10건, 메인사진 2장)</h1>
+<p>쓸 사진을 클릭하면 그 상품은 그 사진으로 자동 채택됩니다. 아예 못 쓰는
+상품이면 오른쪽 "제외" 버튼을 누르세요.</p>
+
+
+<div class="card" data-goods="1209829232" data-qoo10-name="ハートピンクトーンアップUVクリーム SPF50+ PA++++ 40ml 日焼け止め 韓国コスメ" data-kr-name="하트핑크 톤업 선크림 40ml" data-kr-site="공식판매처(jolse.com, 원출처 celimax.co.kr)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1209829232','qoo10','https://gd.image-qoo10.jp/li/748/306/8351306748.jpg',this)"><img src="https://gd.image-qoo10.jp/li/748/306/8351306748.jpg" alt="qoo10-main"></div></div>
+    <div class="name">ハートピンクトーンアップUVクリーム SPF50+ PA++++ 40ml 日焼け止め 韓国コスメ</div>
+    <div class="name-kr">→ 하트핑크 톤업 UV크림 SPF50+ PA++++ 40ml 자외선차단제 한국화장품</div>
+    <div class="price">1754 円</div>
+    <div class="goods_no">goods_no: 1209829232</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1209829232','kr','https://cafe24img.poxo.com/jolsejolse/web/product/big/202604/4b0e38c6c0bf5d4cf07b23c79c99da4d.jpg',this)"><img src="https://cafe24img.poxo.com/jolsejolse/web/product/big/202604/4b0e38c6c0bf5d4cf07b23c79c99da4d.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209829232','kr','https://cafe24img.poxo.com/jolsejolse/web/product/small/202604/459b142523b3a846f09c99f2431d66d0.jpg',this)"><img src="https://cafe24img.poxo.com/jolsejolse/web/product/small/202604/459b142523b3a846f09c99f2431d66d0.jpg" alt="kr-main"></div></div>
+    <div class="name">하트핑크 톤업 선크림 40ml</div>
+    <div class="price">17600 원</div>
+    <div class="site">공식판매처(jolse.com, 원출처 celimax.co.kr)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1082667647" data-qoo10-name="グリーントマト ディープポア クリーン エンザイム パウダーウォッシュ 50g / 韓国化粧品" data-kr-name="그린토마토 딥포어 클린 엔자임 파우더워시" data-kr-site="공식몰(sungboon.com)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1082667647','qoo10','https://gd.image-qoo10.jp/li/451/962/5477962451.jpg',this)"><img src="https://gd.image-qoo10.jp/li/451/962/5477962451.jpg" alt="qoo10-main"></div></div>
+    <div class="name">グリーントマト ディープポア クリーン エンザイム パウダーウォッシュ 50g / 韓国化粧品</div>
+    <div class="name-kr">→ 그린토마토 딥포어 클린 엔자임 파우더워시 50g / 한국화장품</div>
+    <div class="price">4306 円</div>
+    <div class="goods_no">goods_no: 1082667647</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1082667647','kr','https://sungboon.com/web/product/medium/202506/38f7494394a7eaa14bd0e29820f149ec.jpg',this)"><img src="https://sungboon.com/web/product/medium/202506/38f7494394a7eaa14bd0e29820f149ec.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1082667647','kr','https://sungboon.com/web/product/small/202506/982ebe13fc4c1c07796bd96d332c285c.jpg',this)"><img src="https://sungboon.com/web/product/small/202506/982ebe13fc4c1c07796bd96d332c285c.jpg" alt="kr-main"></div></div>
+    <div class="name">그린토마토 딥포어 클린 엔자임 파우더워시</div>
+    <div class="price">12900 원</div>
+    <div class="site">공식몰(sungboon.com)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="989681320" data-qoo10-name="【オリヤン１位】ダメージセラピーノーウォッシュトリートメントEX 250ml 2種 / ヘアミスト / 洗い流さないトリートメント / キラキラミスト / 毛髪水分 / ヘアスプレー / ヘアケア" data-kr-name="데미지 테라피 노워시 트리트먼트 EX(Due Rose)" data-kr-site="공식몰(growus.kr)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('989681320','qoo10','https://gd.image-qoo10.jp/li/370/476/8333476370.jpg',this)"><img src="https://gd.image-qoo10.jp/li/370/476/8333476370.jpg" alt="qoo10-main"></div></div>
+    <div class="name">【オリヤン１位】ダメージセラピーノーウォッシュトリートメントEX 250ml 2種 / ヘアミスト / 洗い流さないトリートメント / キラキラミスト / 毛髪水分 / ヘアスプレー / ヘアケア</div>
+    <div class="name-kr">→ 【올리앙1위】데미지 테라피 노워시 트리트먼트EX 250ml 2종 / 헤어미스트 / 안씻어내는 트리트먼트 / 반짝이 미스트 / 모발수분 / 헤어스프레이 / 헤어케어</div>
+    <div class="price">2180 円</div>
+    <div class="goods_no">goods_no: 989681320</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('989681320','kr','https://shopby-images.cdn-nhncommerce.com/Mall-No-rEpM/20240318/183058.882544000/GROWUS_썸네일_1000x1000_01.jpg',this)"><img src="https://shopby-images.cdn-nhncommerce.com/Mall-No-rEpM/20240318/183058.882544000/GROWUS_썸네일_1000x1000_01.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('989681320','kr','https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_01.jpg',this)"><img src="https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_01.jpg" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('989681320','kr','https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_02.jpg',this)"><img src="https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_02.jpg" alt="kr-sub"></div><div class="altimg" data-side="kr" onclick="selectImage('989681320','kr','https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_03.jpg',this)"><img src="https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_03.jpg" alt="kr-sub"></div><div class="altimg" data-side="kr" onclick="selectImage('989681320','kr','https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_04.jpg',this)"><img src="https://d2awjssdq42p8p.cloudfront.net/growus/shopby/detail/108131871/detail_04.jpg" alt="kr-sub"></div></div>
+    <div class="name">데미지 테라피 노워시 트리트먼트 EX(Due Rose)</div>
+    <div class="price">20800 원</div>
+    <div class="site">공식몰(growus.kr)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1192421888" data-qoo10-name="【18~20日限定SALE】【Qoo10限定】 2個セットページ オルタ リップ ＆ チーク ブラッシング ペンダント 可愛い 韓国リップ リップチーク 韓国コスメ クリームチーク 口紅" data-kr-name="블러싱 펜던트 립 앤 치크 (26 colors)" data-kr-site="공식몰(alternativestereo.com)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1192421888','qoo10','https://gd.image-qoo10.jp/li/619/129/8390129619.jpg',this)"><img src="https://gd.image-qoo10.jp/li/619/129/8390129619.jpg" alt="qoo10-main"></div></div>
+    <div class="name">【18~20日限定SALE】【Qoo10限定】 2個セットページ オルタ リップ ＆ チーク ブラッシング ペンダント 可愛い 韓国リップ リップチーク 韓国コスメ クリームチーク 口紅</div>
+    <div class="name-kr">→ 【18~20일 한정SALE】【Qoo10한정】 2개세트 얼터 립&치크 브러싱 펜던트 귀여운 한국립 립치크 한국화장품 크림치크 립스틱</div>
+    <div class="price">4190 円</div>
+    <div class="goods_no">goods_no: 1192421888</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1192421888','kr','https://alternativestereo.com/web/product/big/202512/a329e12ca86cce67c2681460ba48ca82.jpg',this)"><img src="https://alternativestereo.com/web/product/big/202512/a329e12ca86cce67c2681460ba48ca82.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1192421888','kr','https://alternativestereo.com/web/product/extra/big/202506/190bc73a5a6a74fbb124f4f5bb8f6826.png',this)"><img src="https://alternativestereo.com/web/product/extra/big/202506/190bc73a5a6a74fbb124f4f5bb8f6826.png" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('1192421888','kr','https://alternativestereo.com/web/product/extra/big/202506/6a40980ec18309a420d8f2b319a597c3.png',this)"><img src="https://alternativestereo.com/web/product/extra/big/202506/6a40980ec18309a420d8f2b319a597c3.png" alt="kr-sub"></div></div>
+    <div class="name">블러싱 펜던트 립 앤 치크 (26 colors)</div>
+    <div class="price">6500 원</div>
+    <div class="site">공식몰(alternativestereo.com)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1149010104" data-qoo10-name="グリーンティー ヒアルロン酸 ミスト150ml1本" data-kr-name="그린티 히알루론산 미스트 150mL" data-kr-site="공식몰(innisfree.com)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1149010104','qoo10','https://gd.image-qoo10.jp/li/891/893/6980893891.jpg',this)"><img src="https://gd.image-qoo10.jp/li/891/893/6980893891.jpg" alt="qoo10-main"></div></div>
+    <div class="name">グリーンティー ヒアルロン酸 ミスト150ml1本</div>
+    <div class="name-kr">→ 그린티 히알루론산 미스트 150ml 1개</div>
+    <div class="price">1749 円</div>
+    <div class="goods_no">goods_no: 1149010104</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1149010104','kr','https://inm-cdn.innisfree.com/origin-image/product/product/00/00/03/48/61/a57fe815-c4e9-452f-8c0c-a984bc2268ae.webp',this)"><img src="https://inm-cdn.innisfree.com/origin-image/product/product/00/00/03/48/61/a57fe815-c4e9-452f-8c0c-a984bc2268ae.webp" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1149010104','kr','https://inm-cdn.innisfree.com/image/product/product/00/00/03/48/61/3a50a8d9-2587-492b-9f94-1e0686d82c9b_750x874.webp',this)"><img src="https://inm-cdn.innisfree.com/image/product/product/00/00/03/48/61/3a50a8d9-2587-492b-9f94-1e0686d82c9b_750x874.webp" alt="kr-main"></div></div>
+    <div class="name">그린티 히알루론산 미스트 150mL</div>
+    <div class="price">11900 원</div>
+    <div class="site">공식몰(innisfree.com)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1208958517" data-qoo10-name="プロテインボンド アンプル ヘアエッセンス 145ml 洗い流さないトリートメント 韓国ヘアケア" data-kr-name="단백질 본드 모이스트 앰플 에센스 145ml" data-kr-site="공식몰(hairplus.co.kr, 다나와 최저가 기준)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1208958517','qoo10','https://gd.image-qoo10.jp/li/900/260/8340260900.jpg',this)"><img src="https://gd.image-qoo10.jp/li/900/260/8340260900.jpg" alt="qoo10-main"></div></div>
+    <div class="name">プロテインボンド アンプル ヘアエッセンス 145ml 洗い流さないトリートメント 韓国ヘアケア</div>
+    <div class="name-kr">→ 프로틴본드 앰플 헤어에센스 145ml 안씻어내는 트리트먼트 한국헤어케어</div>
+    <div class="price">2270 円</div>
+    <div class="goods_no">goods_no: 1208958517</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1208958517','kr','https://img.danuri.io/catalog-image/628/511/010/71d73fb7495d40e18150561ebc1155c2.jpg',this)"><img src="https://img.danuri.io/catalog-image/628/511/010/71d73fb7495d40e18150561ebc1155c2.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1208958517','kr','https://img.danuri.io/catalog-image/628/511/010/f690d21ab5e94beaada7557548e730b3.jpg',this)"><img src="https://img.danuri.io/catalog-image/628/511/010/f690d21ab5e94beaada7557548e730b3.jpg" alt="kr-main"></div></div>
+    <div class="name">단백질 본드 모이스트 앰플 에센스 145ml</div>
+    <div class="price">12110 원</div>
+    <div class="site">공식몰(hairplus.co.kr, 다나와 최저가 기준)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1191660330" data-qoo10-name="[25SS/新作](25年2月発売)シャドウパレット 2color #ピンクブロッサムコレクション #Cherry #Love" data-kr-name="[핑크블라썸] 섀도우 팔레트" data-kr-site="공식몰(dasique.co.kr)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1191660330','qoo10','https://gd.image-qoo10.jp/li/094/235/8377235094.jpg',this)"><img src="https://gd.image-qoo10.jp/li/094/235/8377235094.jpg" alt="qoo10-main"></div></div>
+    <div class="name">[25SS/新作](25年2月発売)シャドウパレット 2color #ピンクブロッサムコレクション #Cherry #Love</div>
+    <div class="name-kr">→ [25SS/신작](25년2월발매) 섀도우팔레트 2color #핑크블로썸컬렉션 #Cherry #Love</div>
+    <div class="price">3758 円</div>
+    <div class="goods_no">goods_no: 1191660330</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1191660330','kr','https://cafe24img.poxo.com/dasique/web/product/big/202604/62960e0a7174c0542b1c4fdb4a6643da.jpg',this)"><img src="https://cafe24img.poxo.com/dasique/web/product/big/202604/62960e0a7174c0542b1c4fdb4a6643da.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1191660330','kr','https://cafe24img.poxo.com/dasique/web/product/medium/202502/67005326204c99554b057fc17edb6b25.jpg',this)"><img src="https://cafe24img.poxo.com/dasique/web/product/medium/202502/67005326204c99554b057fc17edb6b25.jpg" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('1191660330','kr','https://cafe24img.poxo.com/dasique/web/product/small/202502/051842cfa17d12f1ccc91ce7d17cdf03.jpg',this)"><img src="https://cafe24img.poxo.com/dasique/web/product/small/202502/051842cfa17d12f1ccc91ce7d17cdf03.jpg" alt="kr-sub"></div></div>
+    <div class="name">[핑크블라썸] 섀도우 팔레트</div>
+    <div class="price">29900 원</div>
+    <div class="site">공식몰(dasique.co.kr)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1028492253" data-qoo10-name="マスクフィットメイクアップフィクサー80ml 5種 [ ウォータープルーフ / オールデー / UV / レッド / クール]" data-kr-name="마스크 핏 메이크업 쿨 픽서" data-kr-site="공식몰(tirtir.co.kr)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1028492253','qoo10','https://gd.image-qoo10.jp/li/511/894/8377894511.jpg',this)"><img src="https://gd.image-qoo10.jp/li/511/894/8377894511.jpg" alt="qoo10-main"></div></div>
+    <div class="name">マスクフィットメイクアップフィクサー80ml 5種 [ ウォータープルーフ / オールデー / UV / レッド / クール]</div>
+    <div class="name-kr">→ 마스크핏 메이크업픽서 80ml 5종 [워터프루프/올데이/UV/레드/쿨]</div>
+    <div class="price">1122 円</div>
+    <div class="goods_no">goods_no: 1028492253</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1028492253','kr','https://cafe24img.poxo.com/tirtir1/web/product/big/shop1_02472d17fe502041fac57848e89a2306.png',this)"><img src="https://cafe24img.poxo.com/tirtir1/web/product/big/shop1_02472d17fe502041fac57848e89a2306.png" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1028492253','kr','https://cafe24img.poxo.com/tirtir1/web/product/extra/big/shop1_6aecae06b74a523778fb44a08df9d11f.png',this)"><img src="https://cafe24img.poxo.com/tirtir1/web/product/extra/big/shop1_6aecae06b74a523778fb44a08df9d11f.png" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('1028492253','kr','https://cafe24img.poxo.com/tirtir1/web/product/small/202506/a26a7b350ee5f1379ed576f66afa2831.png',this)"><img src="https://cafe24img.poxo.com/tirtir1/web/product/small/202506/a26a7b350ee5f1379ed576f66afa2831.png" alt="kr-sub"></div><div class="altimg" data-side="kr" onclick="selectImage('1028492253','kr','https://cafe24img.poxo.com/tirtir1/web/product/small/202506/bb638ab8a8b47fdab6d74c76612ee206.png',this)"><img src="https://cafe24img.poxo.com/tirtir1/web/product/small/202506/bb638ab8a8b47fdab6d74c76612ee206.png" alt="kr-sub"></div></div>
+    <div class="name">마스크 핏 메이크업 쿨 픽서</div>
+    <div class="price">15000 원</div>
+    <div class="site">공식몰(tirtir.co.kr)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1164004559" data-qoo10-name="ドクターマスク シカ 5枚" data-kr-name="[트러블/진정] 닥터 마스크 시카 5매입" data-kr-site="공식몰(rovectin.co.kr)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1164004559','qoo10','https://gd.image-qoo10.jp/li/481/857/7326857481.jpg',this)"><img src="https://gd.image-qoo10.jp/li/481/857/7326857481.jpg" alt="qoo10-main"></div></div>
+    <div class="name">ドクターマスク シカ 5枚</div>
+    <div class="name-kr">→ 닥터마스크 시카 5매</div>
+    <div class="price">1995 円</div>
+    <div class="goods_no">goods_no: 1164004559</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1164004559','kr','https://rovectin.co.kr/web/product/big/202508/3cee1f535f9bff21541f3825c6d840a7.png',this)"><img src="https://rovectin.co.kr/web/product/big/202508/3cee1f535f9bff21541f3825c6d840a7.png" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1164004559','kr','https://rovectin.co.kr/web/product/extra/big/202309/5c0f8732b2fd3487099d5286a0a41579.jpg',this)"><img src="https://rovectin.co.kr/web/product/extra/big/202309/5c0f8732b2fd3487099d5286a0a41579.jpg" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('1164004559','kr','https://rovectin.co.kr/web/product/extra/big/202309/fe52ef8c3846c6d19c77abb6d418ea78.jpg',this)"><img src="https://rovectin.co.kr/web/product/extra/big/202309/fe52ef8c3846c6d19c77abb6d418ea78.jpg" alt="kr-sub"></div></div>
+    <div class="name">[트러블/진정] 닥터 마스크 시카 5매입</div>
+    <div class="price">13000 원</div>
+    <div class="site">공식몰(rovectin.co.kr)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1156076459" data-qoo10-name="マルチバームおかわりキット 9g x 2個" data-kr-name="가히 멀티밤 리필키트 (9g) 2개" data-kr-site="공식몰(kahi.shop)">
+  <div class="side">
+    <h3>큐텐 원본</h3><div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1156076459','qoo10','https://gd.image-qoo10.jp/li/829/617/7116617829.jpg',this)"><img src="https://gd.image-qoo10.jp/li/829/617/7116617829.jpg" alt="qoo10-main"></div></div>
+    <div class="name">マルチバームおかわりキット 9g x 2個</div>
+    <div class="name-kr">→ 멀티밤 리필키트 9g x 2개</div>
+    <div class="price">5320 円</div>
+    <div class="goods_no">goods_no: 1156076459</div>
+  </div>
+  <div class="side">
+    <h3>한국 매칭 후보</h3><div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1156076459','kr','https://cafe24img.poxo.com/koreatech0/web/product/big/202511/81477f52a89f8be8e8d255b85d1f60be.jpg',this)"><img src="https://cafe24img.poxo.com/koreatech0/web/product/big/202511/81477f52a89f8be8e8d255b85d1f60be.jpg" alt="kr-main"></div><div class="mainimg" data-side="kr" onclick="selectImage('1156076459','kr','https://cafe24img.poxo.com/koreatech0/web/product/small/202511/83fbbdd90bb5c4f4ad34ff62798bbada.jpg',this)"><img src="https://cafe24img.poxo.com/koreatech0/web/product/small/202511/83fbbdd90bb5c4f4ad34ff62798bbada.jpg" alt="kr-main"></div></div><div class="altrow"><div class="altimg" data-side="kr" onclick="selectImage('1156076459','kr','https://cafe24img.poxo.com/koreatech0/web/product/tiny/202511/dfe360e965cc3446e795f3ea8972a77e.jpg',this)"><img src="https://cafe24img.poxo.com/koreatech0/web/product/tiny/202511/dfe360e965cc3446e795f3ea8972a77e.jpg" alt="kr-sub"></div></div>
+    <div class="name">가히 멀티밤 리필키트 (9g) 2개</div>
+    <div class="price">29000 원</div>
+    <div class="site">공식몰(kahi.shop)</div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<script>
+function selectImage(goodsNo, side, url, el) {
+  var card = el.closest('.card');
+  card.querySelectorAll('.mainimg, .altimg').forEach(function(n) { n.classList.remove('selected'); });
+  el.classList.add('selected');
+  card.dataset.selectedSource = side;
+  card.dataset.selectedUrl = url;
+  setExcluded(card, false);
+}
+
+function toggleExclude(btn) {
+  var card = btn.closest('.card');
+  var nowExcluded = !card.classList.contains('excluded');
+  setExcluded(card, nowExcluded);
+}
+
+function setExcluded(card, excluded) {
+  var btn = card.querySelector('.exclude-btn');
+  if (excluded) {
+    card.classList.add('excluded');
+    btn.classList.add('active');
+    btn.textContent = '제외됨\n(클릭해서 취소)';
+  } else {
+    card.classList.remove('excluded');
+    btn.classList.remove('active');
+    btn.textContent = '❌ 이 상품 제외';
+  }
+}
+
+function saveDecisions() {
+  var cards = document.querySelectorAll('.card');
+  var results = [];
+  cards.forEach(function(card) {
+    var goodsNo = card.dataset.goods;
+    var excluded = card.classList.contains('excluded');
+    var hasSelection = !!card.dataset.selectedUrl;
+    var included = !excluded && hasSelection;
+    results.push({
+      goods_no: goodsNo,
+      qoo10_name: card.dataset.qoo10Name,
+      kr_name: card.dataset.krName,
+      kr_site: card.dataset.krSite,
+      match_confirmed: included,
+      image_usable: included,
+      image_source: included ? card.dataset.selectedSource : null,
+      final_image: included ? card.dataset.selectedUrl : null
+    });
+  });
+  var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "decisions.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  document.getElementById('status').textContent =
+    "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인";
+}
+</script>
+</body>
+</html>

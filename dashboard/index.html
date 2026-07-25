@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qoo10 파이프라인 모니터</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0a0e14;
+    --panel: #10151d;
+    --panel-border: #1e2733;
+    --text: #e6edf3;
+    --text-dim: #7d8998;
+    --accent-1: #4fd1a5;   /* stage 1 — 크롤링 */
+    --accent-3: #d9a15b;   /* stage 3 — 화해검증 */
+    --up: #4fd1a5;
+    --flat: #52606d;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: var(--text-dim);
+    font-size: 13px;
+    font-family: var(--mono);
+  }
+  .refresh-btn {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.15s ease;
+  }
+  .refresh-btn:hover { border-color: #3a4656; }
+  .refresh-btn:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
+  .refresh-btn svg { width: 14px; height: 14px; }
+  .refresh-btn.loading svg { animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .stages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 640px) {
+    .stages { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--stage-color);
+  }
+  .card.stage1 { --stage-color: var(--accent-1); }
+  .card.stage3 { --stage-color: var(--accent-3); }
+
+  .card-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stage-color);
+    margin-bottom: 2px;
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-top: 1px solid var(--panel-border);
+  }
+  .metric-row:first-of-type { border-top: none; }
+  .metric-name { font-size: 13px; color: var(--text-dim); }
+  .metric-value-group { display: flex; align-items: baseline; gap: 10px; }
+  .metric-value {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric-delta {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(79, 209, 165, 0.12);
+    color: var(--up);
+  }
+  .metric-delta.flat {
+    background: rgba(82, 96, 109, 0.15);
+    color: var(--flat);
+  }
+
+  .progress-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--panel-border);
+  }
+
+  .status-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 24px;
+  }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--flat);
+  }
+  .dot.ok { background: var(--up); box-shadow: 0 0 8px var(--up); }
+  .dot.err { background: #e5534b; }
+
+  .countdown-sep { color: var(--panel-border); }
+
+  .error-box {
+    background: rgba(229, 83, 75, 0.08);
+    border: 1px solid rgba(229, 83, 75, 0.3);
+    color: #e5534b;
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+
+  .log-section {
+    margin-top: 32px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .log-title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .log-clear {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  .log-clear:hover { color: var(--text); }
+  .log-table-wrap {
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  table.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  table.log-table th {
+    position: sticky;
+    top: 0;
+    background: var(--panel);
+    text-align: right;
+    color: var(--text-dim);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  table.log-table th:first-child { text-align: left; }
+  table.log-table td {
+    text-align: right;
+    padding: 7px 20px;
+    border-bottom: 1px solid var(--panel-border);
+    font-variant-numeric: tabular-nums;
+  }
+  table.log-table td:first-child { text-align: left; color: var(--text-dim); }
+  table.log-table tr:last-child td { border-bottom: none; }
+  table.log-table tr:first-child td { background: rgba(79, 209, 165, 0.06); }
+  .log-empty {
+    padding: 24px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .log-delta-pos { color: var(--up); }
+
+  footer {
+    margin-top: 32px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Qoo10 파이프라인 모니터</h1>
+      <div class="sub">wklee3k-source/qoo10-korea-price-compare</div>
+    </div>
+    <button class="refresh-btn" id="refreshBtn" onclick="loadAll()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+      새로고침
+    </button>
+  </header>
+
+  <div class="stages">
+    <div class="card stage1">
+      <div class="card-label">STAGE 1</div>
+      <div class="card-title">저리뷰 상점 크롤링</div>
+      <div class="metric-row">
+        <div class="metric-name">방문 상점</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s1-shops">—</div>
+          <div class="metric-delta" id="s1-shops-delta"></div>
+        </div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-name">확보 상품</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s1-products">—</div>
+          <div class="metric-delta" id="s1-products-delta"></div>
+        </div>
+      </div>
+      <div class="progress-note" id="s1-note">불러오는 중…</div>
+    </div>
+
+    <div class="card stage3">
+      <div class="card-label">STAGE 3</div>
+      <div class="card-title">화해 명칭 검증</div>
+      <div class="metric-row">
+        <div class="metric-name">검증 완료</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s3-done">—</div>
+          <div class="metric-delta" id="s3-done-delta"></div>
+        </div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-name">진행률</div>
+        <div class="metric-value-group">
+          <div class="metric-value" id="s3-pct">—</div>
+        </div>
+      </div>
+      <div class="progress-note" id="s3-note">불러오는 중…</div>
+    </div>
+  </div>
+
+  <div class="status-line">
+    <span class="dot" id="statusDot"></span>
+    <span id="statusText">확인 중…</span>
+    <span class="countdown-sep">·</span>
+    <span id="countdown">60초 후 자동 새로고침</span>
+  </div>
+
+  <div id="errorBox"></div>
+
+  <div class="log-section">
+    <div class="log-header">
+      <div class="log-title">조회 기록</div>
+    </div>
+    <div class="log-table-wrap">
+      <table class="log-table">
+        <thead>
+          <tr>
+            <th>시각</th>
+            <th>방문 상점</th>
+            <th>확보 상품</th>
+            <th>화해 검증</th>
+          </tr>
+        </thead>
+        <tbody id="logBody">
+          <tr><td colspan="4" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>output/discovery_state.json · output/hwahae_verified_39.json — GitHub raw에서 직접 조회</footer>
+</div>
+
+<script>
+const REPO = "wklee3k-source/qoo10-korea-price-compare";
+const RAW = (path, branch = "main") => `https://raw.githubusercontent.com/${REPO}/${branch}/${path}?t=${Date.now()}`;
+
+function fmtDelta(delta) {
+  if (delta > 0) return `<span class="log-delta-pos">+${delta}</span>`;
+  return '';
+}
+
+function renderLog(log) {
+  const body = document.getElementById('logBody');
+  if (!log.length) {
+    body.innerHTML = '<tr><td colspan="4" class="log-empty">기록 없음 — 새로고침하면 여기 쌓입니다</td></tr>';
+    return;
+  }
+  body.innerHTML = log.map((row, i) => {
+    const next = log[i + 1]; // 더 오래된 행(바로 아래) 대비 증가분
+    const shopsDelta = next ? row.shops - next.shops : 0;
+    const productsDelta = next ? row.products - next.products : 0;
+    const hwahaeDelta = next ? row.hwahae_done - next.hwahae_done : 0;
+    return `<tr>
+      <td>${row.time}</td>
+      <td>${row.shops ?? '—'} ${fmtDelta(shopsDelta)}</td>
+      <td>${row.products ?? '—'} ${fmtDelta(productsDelta)}</td>
+      <td>${row.hwahae_done ?? '—'} ${fmtDelta(hwahaeDelta)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function setDelta(el, delta) {
+  if (delta > 0) {
+    el.textContent = `+${delta}`;
+    el.classList.remove('flat');
+  } else {
+    el.textContent = '±0';
+    el.classList.add('flat');
+  }
+}
+
+async function loadAll() {
+  const btn = document.getElementById('refreshBtn');
+  const dot = document.getElementById('statusDot');
+  const statusText = document.getElementById('statusText');
+  const errorBox = document.getElementById('errorBox');
+  btn.classList.add('loading');
+  errorBox.innerHTML = '';
+
+  let prev = null;
+  try {
+    const stored = localStorage.getItem('qoo10_last_snapshot');
+    prev = stored ? JSON.parse(stored) : null;
+  } catch (e) {
+    prev = null;
+  }
+
+  const current = { shops: null, products: null, hwahae_done: null };
+  let hadError = false;
+
+  // Stage 1
+  try {
+    const res = await fetch(RAW('output/discovery_state.json', 'discovery-live'));
+    if (!res.ok) throw new Error(`상태코드 ${res.status}`);
+    const data = await res.json();
+    const shops = (data.visited_shops || []).length;
+    const products = (data.all_products || []).length;
+    current.shops = shops;
+    current.products = products;
+
+    document.getElementById('s1-shops').textContent = shops.toLocaleString();
+    document.getElementById('s1-products').textContent = products.toLocaleString();
+
+    if (prev && prev.shops != null) {
+      setDelta(document.getElementById('s1-shops-delta'), shops - prev.shops);
+      setDelta(document.getElementById('s1-products-delta'), products - prev.products);
+    } else {
+      document.getElementById('s1-shops-delta').textContent = '첫 조회';
+      document.getElementById('s1-products-delta').textContent = '첫 조회';
+    }
+    document.getElementById('s1-note').textContent = `남은 시드: ${(data.pending_keywords || []).length}개`;
+  } catch (e) {
+    hadError = true;
+    document.getElementById('s1-note').textContent = '불러오기 실패';
+    errorBox.innerHTML += `<div class="error-box">STAGE 1: ${e.message}</div>`;
+  }
+
+  // Stage 3
+  try {
+    const res = await fetch(RAW('output/hwahae_verified_39.json', 'hwahae-live'));
+    if (!res.ok) throw new Error(`상태코드 ${res.status}`);
+    const data = await res.json();
+    const done = data.length;
+    current.hwahae_done = done;
+
+    let total = done;
+    try {
+      const inputRes = await fetch(RAW('output/hwahae_input_39.json', 'hwahae-live'));
+      if (inputRes.ok) {
+        const inputData = await inputRes.json();
+        total = inputData.length;
+      }
+    } catch (e) { /* 입력파일 못 가져와도 완료건수는 이미 있음 */ }
+
+    document.getElementById('s3-done').textContent = done.toLocaleString();
+    document.getElementById('s3-pct').textContent = total ? `${Math.round(done/total*100)}%` : '—';
+
+    if (prev && prev.hwahae_done != null) {
+      setDelta(document.getElementById('s3-done-delta'), done - prev.hwahae_done);
+    } else {
+      document.getElementById('s3-done-delta').textContent = '첫 조회';
+    }
+    document.getElementById('s3-note').textContent = `전체 ${total}건 중 ${done}건`;
+  } catch (e) {
+    hadError = true;
+    document.getElementById('s3-note').textContent = '불러오기 실패';
+    errorBox.innerHTML += `<div class="error-box">STAGE 3: ${e.message}</div>`;
+  }
+
+  try {
+    localStorage.setItem('qoo10_last_snapshot', JSON.stringify(current));
+  } catch (e) { /* 저장 실패해도 화면 표시는 계속 진행 */ }
+
+  // 조회기록은 서버(GitHub Actions)가 매 배치마다 직접 쌓아둔
+  // progress_history.json을 그대로 읽어서 보여준다. 이제 1단계(discovery-live)와
+  // 3단계(hwahae-live)가 서로 다른 브랜치에 각자 기록하므로, 둘 다 가져와서
+  // 시간순으로 합쳐서 보여준다.
+  try {
+    const [res1, res3] = await Promise.all([
+      fetch(RAW('output/progress_history.json', 'discovery-live')).catch(() => null),
+      fetch(RAW('output/progress_history.json', 'hwahae-live')).catch(() => null),
+    ]);
+    let combined = [];
+    if (res1 && res1.ok) combined = combined.concat(await res1.json());
+    if (res3 && res3.ok) combined = combined.concat(await res3.json());
+    combined.sort((a, b) => new Date(b.time_utc) - new Date(a.time_utc));
+    const log = combined.map((row) => ({
+      time: new Date(row.time_utc).toLocaleString('ko-KR'),
+      shops: row.shops,
+      products: row.products,
+      hwahae_done: row.hwahae_done,
+    }));
+    renderLog(log);
+  } catch (e) { /* 서버 기록이 아직 없으면(구버전 저장소 등) 조용히 넘어감 */ }
+
+  dot.className = 'dot ' + (hadError ? 'err' : 'ok');
+  statusText.textContent = hadError
+    ? '일부 데이터를 불러오지 못했습니다'
+    : `마지막 갱신 ${new Date().toLocaleTimeString('ko-KR')}`;
+
+  btn.classList.remove('loading');
+}
+
+loadAll();
+
+let secondsLeft = 60;
+const countdownEl = document.getElementById('countdown');
+
+function tickCountdown() {
+  secondsLeft -= 1;
+  if (secondsLeft <= 0) {
+    secondsLeft = 60;
+    loadAll();
+  }
+  if (countdownEl) countdownEl.textContent = `${secondsLeft}초 후 자동 새로고침`;
+}
+setInterval(tickCountdown, 1000);
+
+// 브라우저는 백그라운드 탭의 setInterval을 강제로 느리게 만드는 경우가
+// 있어서(60초 타이머가 실제론 훨씬 뜸하게 실행됨), 탭에 다시 포커스가
+//돌아올 때 즉시 한 번 새로고침해서 이 문제를 보완한다.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    loadAll();
+    secondsLeft = 60;
+  }
+});
+</script>
+</body>
+</html>

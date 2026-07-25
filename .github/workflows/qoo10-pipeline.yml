@@ -1,0 +1,438 @@
+name: Qoo10 Pipeline
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: "검색할 상품명(핵심 문구) — scrape 작업용"
+        required: false
+        type: string
+      discovery_keyword_ja:
+        description: "저리뷰 상점 발굴 시작 검색어(일본어) — 비워두면 스케줄 실행과 동일한 기본값 사용"
+        required: false
+        type: string
+      discovery_max_shops:
+        description: "이번 실행에서 추가로 더 방문할 상점 수(누적 아님, 이번 실행분만)"
+        required: false
+        type: string
+        default: "100"
+      discovery_target_products:
+        description: "목표 상품 수(이번 실행 기준 상한)"
+        required: false
+        type: string
+        default: "500"
+      discovery_shops_per_keyword:
+        description: "검색어 1개당 최대 몇 개 상점까지 처리할지(비워두면 제한없음)"
+        required: false
+        type: string
+      discovery_parallel:
+        description: "병렬(matrix 4개 브랜치)로 돌릴지 — 각자 다른 시드를 처리하고 끝나면 자동 병합됨"
+        required: false
+        type: boolean
+        default: false
+      run_hwahae_verify:
+        description: "output/hwahae_input_39.json을 화해로 검증할지"
+        required: false
+        type: boolean
+        default: false
+      run_discovery:
+        description: "1단계(저리뷰 상점 크롤링)를 돌릴지 — 이걸 꺼두면 다른 job(화해검증 등)만 단독 실행 가능"
+        required: false
+        type: boolean
+        default: false
+      naver_test_query:
+        description: "네이버쇼핑 API 테스트용 검색어 (비워두면 이 job 안 돎)"
+        required: false
+        type: string
+  push:
+    paths:
+      - "output/*_korea_side.json"
+
+jobs:
+  scrape:
+    if: github.event_name == 'workflow_dispatch' && inputs.keyword != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run pipeline
+        working-directory: src
+        run: python pipeline.py "${{ inputs.keyword }}"
+
+      - name: Commit output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git diff --cached --quiet || git commit -m "Auto: pipeline run for '${{ inputs.keyword }}'"
+          git push
+
+  discover_low_review_shops:
+    # 저리뷰 상점/상품 자동발굴(순차 버전) — discovery_parallel=false일 때만 돈다.
+    # 진짜 백그라운드 실행(사람이 세션을 안 열고 있어도 GitHub 서버에서 계속 돎).
+    # 상태는 output/discovery_state.json에 저장되므로 타임아웃 걸려도 다시
+    # 실행하면 이어서 진행된다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_discovery && !inputs.discovery_parallel
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Switch to dedicated branch (avoids push contention with hwahae_verify)
+        run: |
+          git fetch origin discovery-live 2>/dev/null && git checkout discovery-live || git checkout -b discovery-live
+          git merge origin/main --no-edit -X theirs 2>/dev/null || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      # 매일 "+100개 상점"이 되도록, 지금까지 누적 방문한 상점 수를 읽어서
+      # 오늘의 목표 상점수(cap) = 기존 누적 + 이번 실행분(기본 100)으로 계산한다.
+      # workflow_dispatch로 수동 실행할 때 값을 직접 넣으면 그 값을 우선한다.
+      - name: Compute today's shop cap
+        id: cap
+        working-directory: src
+        run: |
+          python3 -c "
+          import json, pathlib
+          p = pathlib.Path('../output/discovery_state.json')
+          visited = len(json.loads(p.read_text())['visited_shops']) if p.exists() else 0
+          increment = int('${{ inputs.discovery_max_shops }}' or '100')
+          print(f'start={visited}')
+          print(f'cap={visited + increment}')
+          " >> "$GITHUB_OUTPUT"
+
+      # 상점 2개 단위로 나눠서 반복 실행하고, 매 단위가 끝날 때마다 즉시
+      # 커밋+푸시한다 — 이러면 실행이 다 끝나기 전에도 GitHub에서 지금까지
+      # 몇 개나 처리됐는지 중간에 확인할 수 있다(전에는 끝까지 기다려야만
+      # 결과가 보였다).
+      - name: Run discovery in small increments (checkable mid-run)
+        working-directory: src
+        env:
+          KEYWORD: ${{ inputs.discovery_keyword_ja || 'メディヒール エッセンシャルマスクパック' }}
+          TARGET: ${{ inputs.discovery_target_products || '500' }}
+          START: ${{ steps.cap.outputs.start }}
+          FINAL_CAP: ${{ steps.cap.outputs.cap }}
+          SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          STEP=2
+          current=$START
+          while [ "$current" -lt "$FINAL_CAP" ]; do
+            next=$((current + STEP))
+            if [ "$next" -gt "$FINAL_CAP" ]; then next=$FINAL_CAP; fi
+            echo "::group::상점 목표 $current -> $next"
+            python iterative_low_review_discovery.py \
+              "$KEYWORD" \
+              "$TARGET" \
+              ../output/discovery_result.xlsx \
+              "$next" \
+              "$SHOPS_PER_KEYWORD"
+            echo "::endgroup::"
+
+            python append_progress_history.py ../output
+            git add ../output/discovery_state.json ../output/discovery_result.xlsx ../output/discovery_skip_log.json ../output/discovery_seed_log.json ../output/progress_history.json ../output/archive/ 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto: discovery progress (상점 목표 $next)"
+              for i in 1 2 3; do
+                if git push origin discovery-live; then break; fi
+                echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+                git pull --rebase origin discovery-live
+              done
+            fi
+            current=$next
+          done
+
+  discover_low_review_shops_parallel:
+    # 병렬 버전 — 4개 브랜치(matrix)가 동시에 각자 다른 시드를 처리한다.
+    # 각자 discovery_state_<branch>.json(별도 파일)에 저장하므로 git 충돌이
+    # 안 난다. 전부 끝나면 merge job이 하나로 합친다.
+    if: github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      matrix:
+        branch: [0, 1, 2, 3]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      # 메인 discovery_state.json의 시드를 4등분해서 이 브랜치(matrix.branch)
+      # 몫만 이 브랜치 전용 상태파일(discovery_state_<branch>.json)에 저장한다.
+      # 이미 이 브랜치 전용 파일이 있으면(재실행) 그대로 이어서 쓴다.
+      - name: Prepare this branch's seed keywords
+        working-directory: src
+        run: |
+          python3 -c "
+          import json, pathlib
+          suffix = '${{ matrix.branch }}'
+          branch_path = pathlib.Path(f'../output/discovery_state_{suffix}.json')
+          if branch_path.exists():
+              print('이미 이 브랜치 상태파일이 있어서 이어서 진행')
+          else:
+              main_path = pathlib.Path('../output/discovery_state.json')
+              main_state = json.loads(main_path.read_text()) if main_path.exists() else {'pending_keywords': None}
+              all_seeds = main_state.get('pending_keywords') or ['メディヒール エッセンシャルマスクパック']
+              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 4 == int(suffix)]
+              if not my_seeds:
+                  my_seeds = [all_seeds[int(suffix) % len(all_seeds)]]
+              branch_path.write_text(json.dumps({
+                  'visited_shops': [], 'all_products': [], 'shop_urls': [],
+                  'pending_keywords': my_seeds, 'seen_keywords': []
+              }, ensure_ascii=False, indent=2))
+              print(f'브랜치 {suffix} 시드 {len(my_seeds)}개:', my_seeds)
+          "
+
+      - name: Run discovery (this branch only, own state file)
+        working-directory: src
+        env:
+          TARGET: ${{ inputs.discovery_target_products || '500' }}
+          SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
+        run: |
+          python iterative_low_review_discovery.py \
+            "" \
+            "$TARGET" \
+            "../output/discovery_result_${{ matrix.branch }}.xlsx" \
+            999 \
+            "$SHOPS_PER_KEYWORD" \
+            "${{ matrix.branch }}"
+
+      - name: Upload this branch's state as artifact (병합 job이 받아감)
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-state-branch-${{ matrix.branch }}
+          path: output/discovery_state_${{ matrix.branch }}.json
+
+  merge_parallel_results:
+    needs: discover_low_review_shops_parallel
+    if: always() && github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Download all branch states
+        uses: actions/download-artifact@v4
+        with:
+          pattern: discovery-state-branch-*
+          path: output/
+          merge-multiple: true
+
+      - name: Merge branch states into main discovery_state.json
+        working-directory: src
+        run: python merge_discovery_states.py ../output
+
+      - name: Commit merged results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -f output/discovery_state_*.json
+          git add output/discovery_state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto: merge parallel discovery results (4 branches)"
+          for i in $(seq 1 15); do
+            if git push; then break; fi
+            sleep_time=$((RANDOM % 8 + 2))
+            sleep "$sleep_time"
+            git pull --rebase
+          done
+
+  hwahae_verify:
+    # 클로드가 미리 번역해둔 한글 핵심어 목록(output/hwahae_input_39.json)을
+    # 화해에서 검증해서 정식 브랜드+상품명+용량을 가져온다. 매 건마다 즉시
+    # 저장하므로 타임아웃 걸려도 재실행하면 이어서 진행된다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_hwahae_verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Switch to dedicated branch (avoids push contention with discover)
+        run: |
+          git fetch origin hwahae-live 2>/dev/null && git checkout hwahae-live || git checkout -b hwahae-live
+          git merge origin/main --no-edit -X theirs 2>/dev/null || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers (캐시 miss일 때만)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (캐시 hit여도 필요)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: playwright install-deps chromium
+
+      - name: Run hwahae verification in chunks (checkable mid-run)
+        working-directory: src
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          TOTAL=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_input_39.json'))))")
+          CHUNK=5
+          while true; do
+            DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_39.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
+            if [ "$DONE_BEFORE" -ge "$TOTAL" ]; then
+              echo "전부 완료됨 ($DONE_BEFORE/$TOTAL)"
+              break
+            fi
+            echo "::group::처리 $DONE_BEFORE/$TOTAL 부터 최대 $CHUNK건"
+            python hwahae_verify_batch.py ../output/hwahae_input_39.json ../output/hwahae_verified_39.json "$CHUNK"
+            echo "::endgroup::"
+
+            python append_progress_history.py ../output
+            git add ../output/hwahae_verified_39.json ../output/progress_history.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto: hwahae verification progress"
+              for i in 1 2 3; do
+                if git push origin hwahae-live; then break; fi
+                echo "push 실패, pull --rebase 후 재시도 ($i/3)"
+                git pull --rebase origin hwahae-live
+              done
+            fi
+
+            DONE_AFTER=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_verified_39.json'))))")
+            if [ "$DONE_AFTER" -eq "$DONE_BEFORE" ]; then
+              echo "진행 없음 — 중단"
+              break
+            fi
+          done
+
+  naver_api_test:
+    # 네이버쇼핑 검색 API 테스트 — 이 샌드박스에선 openapi.naver.com이
+    # 네트워크 정책으로 차단되어 있어서, GitHub Actions 러너에서 대신 실행한다.
+    if: github.event_name == 'workflow_dispatch' && inputs.naver_test_query != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test Naver Shopping Search API
+        working-directory: src
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: |
+          python naver_shop_search.py \
+            "케라스타즈 디스인탱글 샴푸" \
+            "Verish 실리콘 데미누브라"
+
+  build_excel:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build excel for each updated korea_side.json
+        working-directory: src
+        run: |
+          for f in ../output/*_korea_side.json; do
+            base=$(basename "$f" _korea_side.json)
+            python excel_builder.py "$f" "../output/${base}_비교.xlsx"
+          done
+
+      - name: Commit excel output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/*.xlsx
+          git diff --cached --quiet || git commit -m "Auto: build comparison excel"
+          git push
