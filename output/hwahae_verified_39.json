@@ -19602,5 +19602,76 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190423964",
+    "translated_kr": "셀리맥스 포어+다크스팟 브라이트닝 크림 35ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "브라이트닝 모공잡티 크림",
+      "naver": "셀리맥스 트라넥삼산 브라이트닝 크림 35ml / 나이아신아마이드 TXA 나비존크림"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "브라이트닝 모공잡티 크림",
+    "volume": "35ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "25100",
+    "mall": "셀리맥스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10909205888",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8845371/88453711923.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8845371/88453711923.4.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/10909205888"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8845371/88453711924.4.jpg",
+        "mall": "셀리맥스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10909205889"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119162/91191625843.jpg",
+        "mall": "뷰티119",
+        "link": "https://smartstore.naver.com/main/products/13647115064"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1094393233",
+    "translated_kr": "셀리맥스 더 비타A 레티놀샷 타이트닝 부스터 15ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[단독기획/모공탄력] 셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터 15ml 기획(+3ml)"
+    },
+    "brand": "셀리맥스",
+    "name": "[단독기획/모공탄력] 셀리맥스 더 비타 A 레티날 샷 타이트닝 부스터 15ml 기획(+3ml)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "23100",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250199",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6096280/60962802447.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6096280/60962802447.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000250199"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
