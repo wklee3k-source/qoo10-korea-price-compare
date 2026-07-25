@@ -5965,5 +5965,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1136214702",
+    "translated_kr": "[시미/화이트닝세트] 메디큐브 글루타치온 글로우 앰플 30ml + 딥 비타C 캡슐 크림 55ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 비타C 캡슐 세럼"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "딥 비타C 캡슐 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 47000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190200956",
+    "translated_kr": "크림슨 스카이(폴리시) 8ml #샹파뉴스파클 #이브닝파티",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
