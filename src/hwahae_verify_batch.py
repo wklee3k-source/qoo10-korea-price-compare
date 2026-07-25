@@ -22,6 +22,7 @@ GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 �
     python hwahae_verify_batch.py <input.json> <output.json> [max_new]
 """
 
+import difflib
 import json
 import re
 import subprocess
@@ -219,7 +220,46 @@ def _search_naver(keyword: str, known_brand: str) -> dict | None:
         return None
 
 
-def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: list[dict]) -> float:
+# 브랜드/카테고리성 흔한 화장품 용어 — 이런 단어들은 원본과 후보 둘 다에
+# 당연히 나타나므로, "겹치는지"로 진짜 제품 식별에 못 쓴다. 이 목록에
+# 없는 토큰이 원본에는 있는데 후보엔 전혀 없으면, 그건 다른 제품라인일
+# 가능성이 높다(실측 사례: "레티젝션"(원본에만 있음) vs "슈퍼바운스"로
+# 매칭됨 — 둘 다 "아이오페 레티놀 세럼"이라 브랜드체크로는 못 걸러짐).
+_COMMON_COSMETICS_WORDS = {
+    "레티놀", "세럼", "크림", "로션", "토너", "앰플", "마스크", "클렌징", "선크림",
+    "에센스", "미스트", "오일", "젤", "패치", "패드", "폼", "밤", "스킨", "썬크림",
+    "아이크림", "립밤", "선스틱", "샴푸", "트리트먼트", "정품", "공식", "단독",
+    "기획", "세트", "리필", "본품", "증정", "사은품",
+}
+
+# [카테고리체크] 서로 명백히 다른 제품유형(예: 로션 vs 마스크팩)이면, 같은
+# 제품라인명을 공유해도 다른 상품이다(실측 사례: "블루빈 B5-PDRN 마일드
+# 로션"(원본) vs 후보명에 "마스크"가 섞여있어 혼란을 준 경우). 그룹 안의
+# 단어는 서로 호환(같은 카테고리)으로 보고, 그룹이 다르면 별개 제품으로
+# 취급한다.
+_PRODUCT_CATEGORY_GROUPS = [
+    {"로션", "에멀전", "유액"},
+    {"마스크", "마스크팩", "시트마스크"},
+    {"크림"},
+    {"세럼", "앰플", "에센스"},
+    {"토너", "스킨"},
+    {"클렌징", "클렌저", "클렌징폼", "폼클렌징"},
+    {"선크림", "썬크림", "선쿠션", "선스틱", "선세럼"},
+    {"패치", "패드"},
+    {"샴푸"},
+    {"트리트먼트", "헤어팩"},
+]
+
+
+def _detect_categories(text: str) -> set[str]:
+    found = set()
+    for group in _PRODUCT_CATEGORY_GROUPS:
+        if any(word in text for word in group):
+            found.add(frozenset(group))
+    return found
+
+
+def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: list[dict], original_query: str = "") -> float:
     """known_brand/known_volume 일치도 + 다른 소스와의 합의(consensus)로 점수를 매긴다."""
     score = 0.0
     cand_brand = (cand.get("brand") or "").lower()
@@ -227,10 +267,16 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 
     if known_brand:
         kb = known_brand.lower()
-        if kb in cand_brand:
+        if kb in cand_brand or kb in cand_name:
             score += 3.0
-        elif kb in cand_name:
-            score += 1.5  # 브랜드 필드는 없지만 이름에 브랜드가 포함된 경우
+        elif cand_brand:
+            # [중요] 예전엔 known_brand가 있어도 불일치시 그냥 가산점만
+            # 못 받았지 페널티가 없었다 — 그래서 후보가 이거 하나뿐이면
+            # (다른 소스가 다 실패) 브랜드가 완전히 달라도 무조건 채택되는
+            # 구조적 결함이 있었다(실측: "디오프러스" 원본이 "아이스트"라는
+            # 완전히 다른 브랜드의 대형세트상품과 매칭된 사고). 후보 자체의
+            # brand가 확인됐는데 known_brand와 다르면 강한 페널티를 준다.
+            score -= 5.0
 
     if known_volume:
         known_ml = _normalize_volume_ml(known_volume)
@@ -246,11 +292,51 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
         if overlap >= 2:
             score += 1.0
 
+    # [중요] 브랜드는 맞아도 구체적 제품라인이 다른 경우를 걸러낸다. 원본
+    # 검색어에서 흔한 화장품 용어(레티놀/세럼/크림 등)를 뺀 "특이 토큰"이
+    # 후보 이름에 전혀 없으면, 같은 브랜드의 다른 제품일 가능성이 높다
+    # (실측 사례: 원본 "레티놀 레티젝션 세럼"인데 후보가 "레티놀 슈퍼
+    # 바운스 세럼"으로 매칭됨 — 둘 다 아이오페 레티놀세럼이라 브랜드체크
+    # 만으로는 못 걸러졌었다).
+    if original_query:
+        orig_tokens = set(re.findall(r"[가-힣a-zA-Z0-9]{2,}", original_query.lower()))
+        distinctive_orig = orig_tokens - _COMMON_COSMETICS_WORDS - {known_brand.lower()} if known_brand else orig_tokens - _COMMON_COSMETICS_WORDS
+        # 숫자+단위(30ml, 1개 등)도 특이토큰 판정에서 제외
+        distinctive_orig = {t for t in distinctive_orig if not re.match(r"^\d+", t)}
+        # [주의] 완전히 똑같은 문자열만 "겹침"으로 치면, 번역표기 차이
+        # 수준의 미세한 오차(예: "레티젝션" vs "레티제션", 한 글자만 다름)
+        # 도 서로 다른 제품으로 오판해서, 정상적으로 맞는 매칭에까지 잘못
+        # 페널티를 줄 위험이 있다(실측으로 확인됨). 편집거리 기반 유사도로
+        # 완화해서, 꽤 비슷한 단어면 "겹침"으로 인정한다.
+        def _similar_to_any(token, candidates):
+            for c in candidates:
+                if token in c or c in token:
+                    return True
+                if difflib.SequenceMatcher(None, token, c).ratio() >= 0.75:
+                    return True
+            return False
+
+        truly_missing = {t for t in distinctive_orig if not _similar_to_any(t, cand_tokens)}
+        if distinctive_orig and truly_missing == distinctive_orig:
+            score -= 6.0
+
+        # [카테고리체크] 원본과 후보 둘 다 카테고리가 명확히 판별되는데
+        # 서로 다르면(예: 원본=로션, 후보=마스크) 강한 페널티. 카테고리가
+        # 판별 안 되는 쪽이 있으면(애매하면) 그냥 넘어간다 — 확실할 때만
+        # 걸러야 오탐이 없다.
+        orig_categories = _detect_categories(original_query.lower())
+        cand_categories = _detect_categories(cand_name)
+        if orig_categories and cand_categories and not (orig_categories & cand_categories):
+            score -= 6.0
+
     # 화해 출처는 단종여부까지 알려주는 부가정보가 있어 약간의 기본 가중치를 준다
     if cand.get("source") == "hwahae":
         score += 0.5
 
     return score
+
+
+REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
 
 
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
@@ -281,6 +367,19 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
         cand_musinsa = _search_musinsa(kw_cleaned, known_volume, known_brand)
         cand_naver = _search_naver(kw_cleaned, known_brand)
+
+        # [근본수정] Exa는 상품명은 정확히 찾아줘도 브랜드정보를 절대 안 준다
+        # (구조적 한계). 화해 초벌검색(kw_cleaned)이 실패해서 cand_hwahae가
+        # 없는데 Exa는 성공했다면, Exa가 찾은 정확한 이름으로 화해를 한 번 더
+        # 검색한다 — 그래야 Exa가 이겨도 브랜드정보를 확보할 기회가 생긴다.
+        # 실측: 같은 상품인데 검색어가 조금만 달라도 화해 1차검색이 실패하는
+        # 경우가 있었고, 그때 브랜드정보가 통째로 빠지면서 정상 매칭도
+        # "브랜드판단불가/불일치"로 잘못 보이는 문제가 있었다.
+        if not cand_hwahae and cand_exa and cand_exa.get("name"):
+            print(f"    [Exa이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> Exa확인명 '{cand_exa['name']}'로 재검색")
+            cand_hwahae_retry = _search_hwahae(cand_exa["name"], known_volume, known_brand)
+            if cand_hwahae_retry:
+                cand_hwahae = cand_hwahae_retry
 
         # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해 또는
         # 무신사가 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로
@@ -335,11 +434,25 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         scored = []
         for c in candidates:
             others = [o for o in candidates if o is not c]
-            s = _score_candidate(c, known_brand, known_volume, others)
+            s = _score_candidate(c, known_brand, known_volume, others, kw_cleaned)
             scored.append((s, c))
         scored.sort(key=lambda x: -x[0])
         best_score, winner = scored[0]
         print(f"    [투표결과] " + " / ".join(f"{c['source']}={s:.1f}" for s, c in scored) + f" -> 승자: {winner['source']}")
+
+        if best_score < REJECT_SCORE_THRESHOLD:
+            print(f"    [거부] 최고점수({best_score:.1f})가 임계값({REJECT_SCORE_THRESHOLD}) 미만 — 틀린 매칭을 억지로 채택하지 않고 실패 처리")
+            entry = {
+                "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
+                "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "brand": None, "name": None, "volume": "", "source": None,
+                "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
+                "product_url": None, "image_url": None, "image_candidates": [],
+            }
+            results.append(entry)
+            out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            processed_this_call += 1
+            continue
 
         winner_name = winner.get("name") or ""
         winner_brand = winner.get("brand") or ""
@@ -352,12 +465,28 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         musinsa_data = cand_musinsa or {}
 
+        entry_brand = winner_brand or hwahae_data.get("brand") or naver_data.get("brand") or musinsa_data.get("brand")
+
+        # [일반화] 승자가 누구든(exa, naver, musinsa 등) 최종 브랜드정보가
+        # 여전히 비어있으면, 승자가 확인해준 정확한 이름으로 화해를 마지막
+        # 으로 한 번 더 검색해본다. 화해가 정말 그 상품을 모르면 그래도
+        # 실패하지만, 초벌검색(kw_cleaned)만으로는 화해가 못 찾았어도
+        # 승자의 정확한 이름으로는 찾아지는 경우가 실측으로 다수 확인됐다
+        # (winner=exa 15건 + winner=naver 12건, 전체 662건 성공 중 27건이
+        # 이 문제로 브랜드정보 없이 나가고 있었다).
+        if not entry_brand and winner_name and winner["source"] != "hwahae":
+            print(f"    [승자이름으로 화해 최종재검색] 브랜드정보 없음 -> '{winner_name}'로 화해 재검색")
+            hwahae_final_retry = _search_hwahae(winner_name, known_volume, known_brand)
+            if hwahae_final_retry and hwahae_final_retry.get("brand"):
+                entry_brand = hwahae_final_retry["brand"]
+                hwahae_data = hwahae_final_retry
+
         entry = {
             "goods_no": item["goods_no"],
             "translated_kr": kw_raw,
             "winner_source": winner["source"],
             "candidates_summary": {c["source"]: c.get("name") for c in candidates},
-            "brand": winner_brand or hwahae_data.get("brand"),
+            "brand": entry_brand,
             "name": winner_name or hwahae_data.get("name"),
             "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
@@ -372,6 +501,25 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "image_url": naver_data.get("image_url"),  # 사진도 마찬가지로 네이버 것만 사용
             "image_candidates": naver_data.get("image_candidates") or [],
         }
+
+        # [정확도개선] "한글 상품명"은 네이버 검색API가 준 title(요약형이라
+        # 실제 판매페이지와 다를 수 있음)이 아니라, 진짜 구매링크 페이지의
+        # 정확한 상품명을 보여주는 게 최선이다. 실제 페이지를 열어서
+        # og:title/title을 가져와본다 — subprocess로 격리해서 특정
+        # 사이트가 막혀있거나(차단/JS필요) 응답이 느려도 전체 배치가
+        # 멈추지 않고, 실패하면 조용히 기존 방식(네이버 title)으로
+        # 돌아간다("가능하면 정확하게, 안 되면 원래대로").
+        if entry.get("product_url"):
+            try:
+                page_title_proc = subprocess.run(
+                    [sys.executable, "fetch_page_title.py", entry["product_url"]],
+                    capture_output=True, text=True, timeout=12,
+                )
+                real_title = page_title_proc.stdout.strip()
+                if real_title and len(real_title) >= 5:
+                    entry["real_page_title"] = real_title
+            except Exception as e:  # noqa: BLE001
+                print(f"    [페이지제목가져오기 실패, 기존방식 유지] {type(e).__name__}: {e}")
 
         # 4차: 확정된 구매링크가 실제로 품절인지 확인한다(재사용 목적:
         # 큐텐 등록 이후에도 주기적으로 이 링크가 여전히 살아있는지 재확인하는

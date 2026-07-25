@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from auto_translate import translate_batch  # noqa: E402
+from auto_translate import translate_batch, validate_translation  # noqa: E402
 
 
 def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 100):
@@ -30,7 +30,17 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     state = json.loads(path.read_text(encoding="utf-8"))
     products = state.get("all_products", [])
 
-    to_translate = [p for p in products if not p.get("translated_kr")]
+    # 빈칸뿐 아니라 "채워져 있지만 검증에 떨어지는 것"(일본어 잔존/길이부족)도
+    # 재번역 대상에 넣는다 — 과거 오염분이 남아 있어도 스스로 회복된다.
+    to_translate = []
+    for p in products:
+        cur = p.get("translated_kr")
+        if not cur:
+            to_translate.append(p)
+            continue
+        ok, _ = validate_translation(p["title"], cur)
+        if not ok:
+            to_translate.append(p)
     if not to_translate:
         print("[INFO] 새로 번역할 상품 없음")
         return
@@ -51,15 +61,25 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     except Exception:  # noqa: BLE001
         brand_dict = {}
 
-    titles = [p["title"] for p in to_translate]
-    translated = translate_batch(titles, batch_size=len(titles))
+    # [중대버그 수정] 예전엔 batch_size=len(items)로 전량을 한 통에 담아
+    # 보냈다. 응답은 약 80건 분량에서 잘렸고, 잘린 뒤쪽은 '일본어 원문'으로
+    # 채워진 뒤 "번역완료"로 취급돼 영영 재시도되지 않았다(실측 80.8% 오염).
+    # 이제 auto_translate가 배치를 스스로 잘게 쪼개고, 검증 탈락분은 None을
+    # 돌려준다. None은 필드를 건드리지 않고 비워둬서 다음 사이클에 재시도된다.
+    items = [{"title": p["title"], "brand": p.get("brand", "")} for p in to_translate]
+    translated = translate_batch(items)
 
+    done = 0
     for p, t in zip(to_translate, translated):
+        if t is None:
+            p.pop("translated_kr", None)  # 반드시 빈칸으로 남긴다
+            continue
         p["translated_kr"] = t
         p["known_brand"] = brand_dict.get(p.get("brand", ""), "")
+        done += 1
 
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[DONE] {len(to_translate)}건 번역 완료 -> {path}")
+    print(f"[DONE] {done}건 번역 완료 / {len(to_translate)-done}건 재시도 대기 -> {path}")
 
 
 if __name__ == "__main__":
