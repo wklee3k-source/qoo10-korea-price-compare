@@ -180,6 +180,30 @@ def t14_review_threshold():
     check("14 리뷰 임계값 10", val == 10, f"현재 {val}")
 
 
+# --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
+def t16_crawl_failure_vs_empty():
+    disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    rank = (SRC / "qoo10_ranking_scraper.py").read_text(encoding="utf-8")
+    single = (SRC / "crawl_single_shop.py").read_text(encoding="utf-8")
+
+    has_exc = "class ShopCrawlFailed" in rank and "raise ShopCrawlFailed" in rank
+    crawl_returns_tuple = re.search(r"def crawl_shop_best5\([^)]*\)\s*->\s*tuple\[list\[dict\],\s*bool\]", disco)
+    timeout_returns_tuple = re.search(r"def crawl_shop_best5_with_timeout\([^)]*\)\s*->\s*tuple\[list\[dict\],\s*bool\]", disco)
+    subprocess_json_object = '"items"' in single and '"failed"' in single
+    # 방문표시가 크롤 성공 이후로 미뤄졌는지: 실패분기의 continue 다음에만
+    # visited_shops.add가 있어야 하고, 크롤 호출 이전엔 없어야 한다.
+    pre_crawl = disco.split("crawl_shop_best5_with_timeout(shop_id)")[0].split("shop_id = shop[")[-1]
+    no_premature_visit = "visited_shops.add(shop_id)" not in pre_crawl
+    has_retry_cap = "MAX_CRAWL_RETRIES" in disco and "failed_shops" in disco
+
+    ok = all([has_exc, crawl_returns_tuple, timeout_returns_tuple, subprocess_json_object,
+              no_premature_visit, has_retry_cap])
+    check("16 크롤실패/무상품 구분(9번)", ok,
+          f"예외정의{has_exc} 튜플반환{bool(crawl_returns_tuple)} "
+          f"타임아웃튜플{bool(timeout_returns_tuple)} JSON객체{subprocess_json_object} "
+          f"방문지연{no_premature_visit} 재시도상한{has_retry_cap}")
+
+
 # ----------------------------- #15 크론 body에 run_discovery 금지 (문서)
 def t15_cron_body_documented():
     readme = (ROOT / "README.md").read_text(encoding="utf-8") if (ROOT / "README.md").exists() else ""

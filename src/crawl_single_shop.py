@@ -15,7 +15,9 @@ JSON으로 stdout에 출력한다.
 
 사용법:
     python crawl_single_shop.py <shop_id>
-    -> stdout에 JSON 배열(상품 리스트) 출력, 실패시 빈 배열 "[]"
+    -> stdout에 JSON 객체 {"items": [...], "failed": bool} 출력.
+       failed=True면 크롤 자체가 실패한 것(재시도 대상), False면 items가
+       비어있어도 '진짜로 상품이 없는 상점'이라는 뜻이다(9번 수정).
 """
 
 import json
@@ -28,8 +30,8 @@ from iterative_low_review_discovery import crawl_shop_best5  # noqa: E402
 if __name__ == "__main__":
     shop_id = sys.argv[1]
     try:
-        products = crawl_shop_best5(shop_id)
+        products, failed = crawl_shop_best5(shop_id)
     except Exception as e:  # noqa: BLE001
         print(f"[ERROR] {shop_id}: {type(e).__name__}: {e}", file=sys.stderr)
-        products = []
-    print(json.dumps(products, ensure_ascii=False))
+        products, failed = [], True
+    print(json.dumps({"items": products, "failed": failed}, ensure_ascii=False))

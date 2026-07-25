@@ -38,6 +38,12 @@ RANKING_ITEM_RE = re.compile(
 )
 
 
+class ShopCrawlFailed(Exception):
+    """상점 페이지 자체를 못 불러온 경우(네트워크/타임아웃 등)에만 발생시킨다.
+    '페이지는 열렸는데 랭킹 위젯이 없는 경우'(=진짜로 상품이 없는 상점)와는
+    반드시 구분해야 한다 — 전자는 재시도 대상, 후자는 정상 종결 대상이다."""
+
+
 def fetch_shop_ranking(shop_id: str, wait_seconds: int = 6) -> list[dict]:
     """m.qoo10.jp/shop/<shop_id> 를 렌더링해서 랭킹 TOP5를 반환한다."""
     url = f"https://m.qoo10.jp/shop/{shop_id}"
@@ -54,8 +60,14 @@ def fetch_shop_ranking(shop_id: str, wait_seconds: int = 6) -> list[dict]:
         # 속도 개선: 텍스트 데이터만 필요하므로 이미지/폰트/CSS/미디어는 아예 안 받는다
         try:
             page.goto(url, timeout=20000, wait_until="load")
-        except Exception as e:  # noqa: BLE001 - best effort, content may still be usable
-            print(f"[WARN] goto issue for {shop_id}: {e}", file=sys.stderr)
+        except Exception as e:  # noqa: BLE001
+            # [수정] 예전엔 여기서 경고만 찍고 넘어가서, 페이지 로드 실패와
+            # "상점에 상품이 없음"이 똑같이 빈 리스트로 뭉개졌다. 실측으로
+            # 이게 큐 고갈의 한 경로였다(크롤 실패한 상점도 '방문완료'로
+            # 박제되어 다시는 재시도되지 않고, 시드도 안 생김). 이제 로드
+            # 자체가 실패하면 명확히 실패로 전파한다.
+            browser.close()
+            raise ShopCrawlFailed(f"{shop_id} 페이지 로드 실패: {e}") from e
 
         time.sleep(wait_seconds)
         content = page.content()
@@ -63,6 +75,8 @@ def fetch_shop_ranking(shop_id: str, wait_seconds: int = 6) -> list[dict]:
 
     idx = content.find('id="ul_minishop_ranking"')
     if idx == -1:
+        # 페이지는 정상적으로 열렸는데 랭킹 위젯이 없다 — 이건 실패가 아니라
+        # "이 상점은 진짜로 진열된 상품이 없다"는 정상적인 빈 결과다.
         print(f"[WARN] ranking widget not found for shop '{shop_id}'", file=sys.stderr)
         return []
 
