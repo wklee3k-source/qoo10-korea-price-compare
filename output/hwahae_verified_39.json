@@ -21250,5 +21250,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210644303",
+    "translated_kr": "【NEW】SW19 헤어 퍼퓸 미스트 75ml 5pm 8am 2종에서 선택 1종 헤어미스트 헤어프래그런스 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트",
+      "naver": "큐옴바이오 1조 유산균 앰플 미스트 100ml 피부진정 보습 속건조개선"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "55120",
+    "mall": "에코메로우",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13498501518",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+        "mall": "에코메로우",
+        "link": "https://smartstore.naver.com/main/products/13498501518"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8946071/89460714295.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/11916203686"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956224/89562244586.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/12017733894"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210988490",
+    "translated_kr": "[정품] SET VQM Phytocin VIBANQM 로션 30ml + 피니시 로션 20ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
