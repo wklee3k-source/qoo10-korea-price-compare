@@ -9478,5 +9478,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1160857912",
+    "translated_kr": "엘라스틴 바이오틴 클리닉 10000 샴푸 컨디셔너 1000ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로틴클리닉 10000 샴푸"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "프로틴클리닉 10000 샴푸",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165634740",
+    "translated_kr": "유리카 헤어실드(헤어픽서/스프레이 분사형)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "헤어실드",
+      "naver": "유리카 헤어 실드 80ml + 여행용미니치약구성"
+    },
+    "brand": "유리카 (YURICA)",
+    "name": "헤어실드",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11050",
+    "mall": "Nuvianne",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13646962775",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+        "mall": "Nuvianne",
+        "link": "https://smartstore.naver.com/main/products/13646962775"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889435/88894351673.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11349841331"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889435/88894351701.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11349841359"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121188/91211889696.jpg",
+        "mall": "리점",
+        "link": "https://smartstore.naver.com/main/products/13667378788"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
