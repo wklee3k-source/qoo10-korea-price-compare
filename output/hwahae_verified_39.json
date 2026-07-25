@@ -16074,5 +16074,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1154643575",
+    "translated_kr": "아이오페 UV실드 톤업 선 SPF50+ PA++++ 50ml(+증정 25ml), 1개 / 한국 인기 주근깨 기미 주름 에이징 케어 톤업 자외선차단제 크림",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205368128",
+    "translated_kr": "아누아 어성초 포어 딥 클렌징 폼 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+      "naver": "아누아 어성초 쿼세티놀 피지 모공 클렌징폼 150ml, 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 쿼세티놀™ 모공 딥 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8084627378",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8562912/85629127701.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562912/85629127701.5.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/8084627378"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562912/85629127702.5.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8084627379"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
