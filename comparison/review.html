@@ -459,6 +459,7 @@ document.addEventListener('click', function(e) {
     });
     renderControls();
     window.scrollTo({ top: 0, behavior: 'instant' });
+    if (typeof addImageSizeBadges === 'function') setTimeout(addImageSizeBadges, 100);
   }
 
   function renderControls() {
