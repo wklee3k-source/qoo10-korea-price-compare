@@ -9013,5 +9013,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202123342",
+    "translated_kr": "아비브 어성초 스팟 패드 카밍 터치, 80장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 스팟 패드 카밍터치",
+      "naver": "아비브 어성초 스팟 패드 카밍터치 80매 진정패드"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "어성초 스팟 패드 카밍터치",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "22500",
+    "mall": "블랙 올리브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9605581627",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8715008/87150083897.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8715008/87150083897.1.jpg",
+        "mall": "블랙 올리브",
+        "link": "https://smartstore.naver.com/main/products/9605581627"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202111238",
+    "translated_kr": "아누아 어성초 80 수분 진정 앰플, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 80 수분 진정 앰플",
+      "naver": "아누아 어성초 80 수분 진정 앰플 30ml"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 80 수분 진정 앰플",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "9980",
+    "mall": "JnH Shop",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13071444602",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061595/90615955694.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061595/90615955694.jpg",
+        "mall": "JnH Shop",
+        "link": "https://smartstore.naver.com/main/products/13071444602"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8877782/88777821449.jpg",
+        "mall": "심이오빠",
+        "link": "https://smartstore.naver.com/main/products/11233311118"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
