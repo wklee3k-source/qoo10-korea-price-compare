@@ -3296,5 +3296,88 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1192413711",
+    "translated_kr": "코스알엑스 풀핏 프로폴리스 시너지 토너 280ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 시너지 토너",
+      "musinsa": "풀핏 프로폴리스 시너지 토너 280ml 듀오세트",
+      "naver": "코스알엑스 풀핏 프로폴리스 시너지 토너 280ml"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 시너지 토너",
+    "volume": "280ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18480",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4670190786",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8221471/82214711420.20.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8221471/82214711420.20.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/4670190786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8221471/82214711419.18.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4670190785"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8270903/82709036764.20.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/5164515666"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3893161/38931617437.5.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/1155502?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=325868"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165725748",
+    "translated_kr": "[정규품/K-뷰티] 아이돌 화이트 태닝 스프레이 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아이돌 화이트태닝 스프레이",
+      "naver": "[50ml] 도도레이블 아이돌 화이트 태닝 스프레이"
+    },
+    "brand": "도도레이블 (DODOLABEL)",
+    "name": "아이돌 화이트태닝 스프레이",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "17000",
+    "mall": "도도레이블",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13341286963",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9088579/90885797295.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088579/90885797295.1.jpg",
+        "mall": "도도레이블",
+        "link": "https://smartstore.naver.com/main/products/13341286963"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095764/90957647789.jpg",
+        "mall": "도도레이블",
+        "link": "https://smartstore.naver.com/main/products/13413137453"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
