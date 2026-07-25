@@ -331,6 +331,7 @@ def build_html(pairs: list[dict]):
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
+    <div class="site">{'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
     <div class="goods_no">goods_no: {goods_no}</div>
   </div>
   <div class="side">
