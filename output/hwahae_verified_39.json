@@ -14132,5 +14132,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1131054419",
+    "translated_kr": "라도르 데미지 프로텍터 에이씨드 산성 샴푸 900ml + 컨디셔너 900ml 세트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1153497615",
+    "translated_kr": "디오디너리 AHA 30% + BHA 2% 필링 솔루션 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 아하 30% + 바하 2% 필링 솔루션"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "(해외) 아하 30% + 바하 2% 필링 솔루션",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
