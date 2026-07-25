@@ -20,7 +20,7 @@ from build_review import build_pairs, esc, dim_minor_text  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 COMPARISON = BASE / "comparison"
-BATCH_DIR = COMPARISON / "batches"
+BATCH_DIR = BASE / "docs"
 BATCH_SIZE = 100
 
 
@@ -138,7 +138,7 @@ def build_hub(batch_meta: list[dict], total: int):
     직접 읽을 수 있다."""
     rows_html = "\n".join(
         f'<tr data-batch-id="{b["id"]}" data-total="{b["count"]}">'
-        f'<td><a href="{b["id"]}.html">{b["id"]}</a></td>'
+        f'<td><a href="{b["id"]}.html" target="_blank" rel="noopener">{b["id"]}</a></td>'
         f'<td>{b["count"]}건</td>'
         f'<td class="progress-cell">-</td>'
         f'<td class="excluded-cell">-</td>'

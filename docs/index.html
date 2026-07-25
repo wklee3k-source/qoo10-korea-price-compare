@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>검수 배치 관리 허브</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background:#1e1e1e; color:#eee; padding:24px; }
+  h1 { font-size:20px; }
+  table { border-collapse: collapse; width:100%; max-width:900px; margin-top:16px; }
+  th, td { border:1px solid #444; padding:10px 14px; text-align:left; }
+  th { background:#2a2a2a; }
+  tr:hover { background:#2a2a2a; }
+  a { color:#6ab0ff; text-decoration:none; font-weight:600; }
+  a:hover { text-decoration:underline; }
+  .summary { margin-top:20px; font-size:14px; color:#aaa; }
+  .done { color:#2ecc71; font-weight:700; }
+  .partial { color:#f39c12; }
+  .none { color:#777; }
+</style>
+</head>
+<body>
+<h1>📋 검수 배치 관리 허브 (전체 535건, 6개 배치)</h1>
+<p>배치를 클릭해서 검수를 이어가세요. 각 배치의 진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(같은 브라우저에서 연 기록만 보임).</p>
+<table>
+  <thead><tr><th>배치</th><th>총 건수</th><th>진행상황(선택완료/전체)</th><th>제외처리</th><th>마지막 저장</th></tr></thead>
+  <tbody>
+<tr data-batch-id="review_01" data-total="100"><td><a href="review_01.html" target="_blank" rel="noopener">review_01</a></td><td>100건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+<tr data-batch-id="review_02" data-total="100"><td><a href="review_02.html" target="_blank" rel="noopener">review_02</a></td><td>100건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+<tr data-batch-id="review_03" data-total="100"><td><a href="review_03.html" target="_blank" rel="noopener">review_03</a></td><td>100건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+<tr data-batch-id="review_04" data-total="100"><td><a href="review_04.html" target="_blank" rel="noopener">review_04</a></td><td>100건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+<tr data-batch-id="review_05" data-total="100"><td><a href="review_05.html" target="_blank" rel="noopener">review_05</a></td><td>100건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+<tr data-batch-id="review_06" data-total="35"><td><a href="review_06.html" target="_blank" rel="noopener">review_06</a></td><td>35건</td><td class="progress-cell">-</td><td class="excluded-cell">-</td><td class="updated-cell">-</td></tr>
+  </tbody>
+</table>
+<div class="summary" id="overall-summary"></div>
+
+<script>
+function refreshProgress() {
+  var rows = document.querySelectorAll('tr[data-batch-id]');
+  var totalDone = 0, totalExcluded = 0, totalAll = 0;
+  rows.forEach(function(row) {
+    var batchId = row.dataset.batchId;
+    var total = parseInt(row.dataset.total, 10);
+    totalAll += total;
+    var key = 'qoo10_review_autosave_' + batchId;
+    var raw;
+    try { raw = localStorage.getItem(key); } catch (e) { raw = null; }
+    var progressCell = row.querySelector('.progress-cell');
+    var excludedCell = row.querySelector('.excluded-cell');
+    var updatedCell = row.querySelector('.updated-cell');
+    if (!raw) {
+      progressCell.innerHTML = '<span class="none">아직 안 열어봄</span>';
+      excludedCell.textContent = '-';
+      updatedCell.textContent = '-';
+      return;
+    }
+    var saved;
+    try { saved = JSON.parse(raw); } catch (e) { return; }
+    var results = saved.results || [];
+    var confirmed = results.filter(function(r) { return r.match_confirmed; }).length;
+    var excluded = results.filter(function(r) { return r.excluded; }).length;
+    totalDone += confirmed;
+    totalExcluded += excluded;
+    var cls = confirmed >= total ? 'done' : (confirmed > 0 || excluded > 0 ? 'partial' : 'none');
+    progressCell.innerHTML = '<span class="' + cls + '">' + confirmed + ' / ' + total + '</span>';
+    excludedCell.textContent = excluded + '건';
+    updatedCell.textContent = saved.savedAt ? new Date(saved.savedAt).toLocaleString() : '-';
+  });
+  document.getElementById('overall-summary').textContent =
+    '전체 진행: 선택완료 ' + totalDone + '건 / 제외 ' + totalExcluded + '건 / 전체 ' + totalAll + '건';
+}
+refreshProgress();
+</script>
+</body>
+</html>
