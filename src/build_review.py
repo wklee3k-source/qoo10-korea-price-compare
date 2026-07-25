@@ -125,7 +125,7 @@ def build_pairs():
             translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
-    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "select_type": 0, "ok": 0}
+    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "select_type": 0, "collab": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -148,6 +148,12 @@ def build_pairs():
         translated_kr = x.get("translated_kr") or ""
         if re.search(r"\d+종\b", q["title"]) or re.search(r"\d+종\b", translated_kr):
             stats["select_type"] += 1
+            continue
+        # [제외] "콜라보"(협업/한정판) 상품도 사용자 지시로 전부 제외한다
+        # — 이런 상품은 패키지/구성이 일반판과 달라서(예: "야구단
+        # 콜라보/2회분" 골라담기류) 정확한 매칭 신뢰도가 낮다.
+        if re.search(r"콜라보|コラボ", q["title"]) or re.search(r"콜라보|コラボ", translated_kr):
+            stats["collab"] += 1
             continue
 
         stats["ok"] += 1
@@ -296,7 +302,7 @@ def build_pairs():
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
-          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 최종={stats['ok']}건")
+          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} 최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
 
