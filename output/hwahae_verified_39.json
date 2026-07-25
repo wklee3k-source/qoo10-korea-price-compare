@@ -14536,5 +14536,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1134904271",
+    "translated_kr": "【1+1】바이오힐보 프로바이오담 콜라겐 톤 업 썬크림 50ml + 50ml (SPF50+ PA++++)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1132106045",
+    "translated_kr": "코스알엑스 어드밴스드 스네일 92 올인원 크림 100g_달팽이 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스네일 92 올인원 크림",
+      "naver": "코스알엑스 어드밴스드 스네일 92 올인원 크림 100g Advanced Snail"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "스네일 92 올인원 크림",
+    "volume": "100g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "34290",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8711278653",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8625577/86255778976.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8625577/86255778976.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/8711278653"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082909/90829094232.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13284583900"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121129/91211292581.jpg",
+        "mall": "라아이",
+        "link": "https://smartstore.naver.com/main/products/13666781673"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
