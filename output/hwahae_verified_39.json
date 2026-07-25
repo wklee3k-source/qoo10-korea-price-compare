@@ -15426,5 +15426,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1133513990",
+    "translated_kr": "ZARA 향수 HYPNOTIC VANILLA BLOOM 오드 퍼퓨 30mL [EDP]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오드 퍼퓸 [힙나틱 바닐라 블룸]",
+      "naver": "ZARA 자라 가르데니아 블룸컬렉션 오드퍼퓸 30ml, 매혹적인 꽃향기의 유혹"
+    },
+    "brand": "자라 (ZARA)",
+    "name": "오드 퍼퓸 [힙나틱 바닐라 블룸]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29900",
+    "mall": "온마음 온테이블",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13655451936",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119996/91199962721.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119996/91199962721.jpg",
+        "mall": "온마음 온테이블",
+        "link": "https://smartstore.naver.com/main/products/13655451936"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8992476/89924768895.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/12380258178"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8850250/88502500257.jpg",
+        "mall": "타임인헤븐",
+        "link": "https://smartstore.naver.com/main/products/10957994223"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9066092/90660929437.jpg",
+        "mall": "온마음 온테이블",
+        "link": "https://smartstore.naver.com/main/products/13116418345"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9093762/90937625612.2.jpg",
+        "mall": "구대동육",
+        "link": "https://smartstore.naver.com/main/products/13393115276"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1155411612",
+    "translated_kr": "메디큐브 레드 시카 바디 미스트 200mL / 진정 케어 · 모공 케어 · 쿨링 · 산뜻한 보습 · 트러블 예방",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
