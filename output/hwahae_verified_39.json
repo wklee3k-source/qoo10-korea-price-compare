@@ -8497,5 +8497,67 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1158942439",
+    "translated_kr": "스킨1004 마다가스카르 센텔라 퀵 카밍 패드 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 퀵 카밍 패드",
+      "naver": "스킨1004 마다가스카르 센텔라 퀵 카밍 패드 70매(리필) 1개"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 퀵 카밍 패드",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15090",
+    "mall": "라온봄마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13669441366",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121395/91213952319.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121395/91213952319.jpg",
+        "mall": "라온봄마켓",
+        "link": "https://smartstore.naver.com/main/products/13669441366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194502685",
+    "translated_kr": "[신상/투명케어] 스킨앤랩 글루타치온 토너 200ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 앰플 토너",
+      "naver": "[패키지 훼손] 스킨앤랩 글루타치온 앰플 토너 200ml 1개"
+    },
+    "brand": "스킨앤랩 (SKIN&LAB)",
+    "name": "글루타치온 앰플 토너",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "가디MALL",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12639727301",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9018423/90184238207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9018423/90184238207.jpg",
+        "mall": "가디MALL",
+        "link": "https://smartstore.naver.com/main/products/12639727301"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
