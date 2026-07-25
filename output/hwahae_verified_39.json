@@ -4620,5 +4620,71 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209979406",
+    "translated_kr": "한율 정규품 어린 쑥 피지흡착 쑥떡팩 폼 120ml, 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개"
+    },
+    "brand": "한율",
+    "name": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21000",
+    "mall": "한율",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10433900724",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+        "mall": "한율",
+        "link": "https://smartstore.naver.com/main/products/10433900724"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986573/89865737761.1.jpg",
+        "mall": "아레스유통",
+        "link": "https://smartstore.naver.com/main/products/12321227044"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204386062",
+    "translated_kr": "조선미녀 정규품 인삼 아이크림 30ml (비타민A 레티날 리포솜)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인삼 아이크림",
+      "naver": "조선미녀 인삼 아이크림 30ml Revive EyeSerum Ginseng Retinal"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "인삼 아이크림",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30510",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10684132183",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8822863/88228638105.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822863/88228638105.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10684132183"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
