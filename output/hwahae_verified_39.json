@@ -20468,5 +20468,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204359324",
+    "translated_kr": "【1+1 / SNS 화제】윤기 피부 버블 에센스 토너 95ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1120129564",
+    "translated_kr": "헤어롤 브러시(빅, 58mm) 헤어 스타일링",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레인보우 맥스 볼륨 스타일링 헤어브러쉬",
+      "naver": "포뷰트 쉐도우 헤어브러쉬 펌 볼륨 웨이브 스타일링"
+    },
+    "brand": "아이캔디 (EYECANDY™)",
+    "name": "레인보우 맥스 볼륨 스타일링 헤어브러쉬",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19900",
+    "mall": "포:뷰트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10003024365",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8754752/87547526638.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754752/87547526638.jpg",
+        "mall": "포:뷰트",
+        "link": "https://smartstore.naver.com/main/products/10003024365"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111483/91114838621.jpg",
+        "mall": "헤어디자인후",
+        "link": "https://smartstore.naver.com/main/products/13570328210"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116360/91163607711.jpg",
+        "mall": "해피니스잡화점",
+        "link": "https://smartstore.naver.com/main/products/13619097294"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098359/90983595416.jpg",
+        "mall": "가성비메이트",
+        "link": "https://smartstore.naver.com/main/products/13439085064"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097360/90973606405.jpg",
+        "mall": "온지니엘 추천샵",
+        "link": "https://smartstore.naver.com/main/products/13429096069"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
