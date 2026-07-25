@@ -16837,5 +16837,87 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199471528",
+    "translated_kr": "디오디너리 알파 알부틴 2% + HA 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "알파 알부틴 2% + HA",
+      "musinsa": "[리뉴얼] 알파 알부틴 2％ + HA 60ml",
+      "naver": "[리뉴얼] 알파 알부틴 2% + HA 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "알파 알부틴 2% + HA",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30800",
+    "mall": "TheOrdinary",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11872687510",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8941719/89417198104.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941719/89417198104.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/11872687510"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191431689",
+    "translated_kr": "[당일발송] BOYNEXTDOOR 펜라이트 OFFICIAL LIGHT STICK",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[정품] 방탄소년단 BTS OFFICIAL LIGHT STICK PEN 라이트 스틱 펜"
+    },
+    "brand": null,
+    "name": "[정품] 방탄소년단 BTS OFFICIAL LIGHT STICK PEN 라이트 스틱 펜",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "18000",
+    "mall": "케이팝피버",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6597630460",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8414213/84142130782.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8414213/84142130782.jpg",
+        "mall": "케이팝피버",
+        "link": "https://smartstore.naver.com/main/products/6597630460"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122215/91222154189.jpg",
+        "mall": "메루카리SAZO",
+        "link": "https://smartstore.naver.com/main/products/13677643170"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122166/91221665329.jpg",
+        "mall": "메루카리SAZO",
+        "link": "https://smartstore.naver.com/main/products/13677154310"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122131/91221316981.jpg",
+        "mall": "메루카리SAZO",
+        "link": "https://smartstore.naver.com/main/products/13676805962"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121986/91219867675.jpg",
+        "mall": "메루카리SAZO",
+        "link": "https://smartstore.naver.com/main/products/13675356656"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
