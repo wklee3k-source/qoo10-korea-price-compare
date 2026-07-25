@@ -17867,5 +17867,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1182785103",
+    "translated_kr": "라네즈 시카 슬리핑 마스크 60ml / 급속 진정 시카 수면팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 슬리핑 마스크"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "시카 슬리핑 마스크",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1193149194",
+    "translated_kr": "스킨수티컬즈 A.G.E. 인터럽터 울트라 탄력 리프팅 세럼 세트(+4ml+4ml+4ml) + 슈퍼 콜라겐 마스크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "A.G.E. 인터럽터"
+    },
+    "brand": "스킨수티컬즈 (SKINCEUTICALS)",
+    "name": "A.G.E. 인터럽터",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
