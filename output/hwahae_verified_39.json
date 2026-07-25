@@ -2399,5 +2399,59 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202880062",
+    "translated_kr": "메디큐브 레드 센텔라 마스크 10매 / 민감성 피부 케어! 시카로 촉촉 진정 마스크",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1111284282",
+    "translated_kr": "【1+1】토리든 밸런스풀 시카 진정 크림 80ml*2",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런스풀 시카 진정 크림",
+      "musinsa": "[SET] 밸런스풀 시카 컨트롤 세럼 50ml  기획세트 (시카 컨트롤 세럼 10ml X 2개+시카마스크 1매)+ 밸런스풀 크림 80ml  (+다이브인 세럼 20ml)",
+      "naver": "토리든 밸런스풀 시카 진정 크림 80ml, 2개"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "밸런스풀 시카 진정 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "35000",
+    "mall": "토리든",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10474477302",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8801898/88018982588.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8801898/88018982588.7.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/10474477302"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733818/87338184147.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/9793681874"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
