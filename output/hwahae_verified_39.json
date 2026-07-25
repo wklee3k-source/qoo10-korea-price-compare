@@ -19311,5 +19311,79 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1202103644",
+    "translated_kr": "BonBonChic 플라잉 오드파르팜 향수 미니향수 아토마이저 3ml 유니섹스 시트러스계 mar23",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제주 향수 [No.7 바람]"
+    },
+    "brand": "공후하 (GONGHUHA)",
+    "name": "제주 향수 [No.7 바람]",
+    "volume": "40ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 52000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202103615",
+    "translated_kr": "BonBonChic 언더 더 레몬 트리 오드트와렛 향수 미니향수 아토마이저 10ml 유니섹스 시트러스계 mar12",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 님",
+      "naver": "[건성/수부지] 식물성 오일 71% 촉촉 안심 올인원 비누"
+    },
+    "brand": "어글리솝 (UGLYSOAP)",
+    "name": "더 님",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "어글리솝",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8666324543",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8621082/86210824863.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8621082/86210824863.9.jpg",
+        "mall": "어글리솝",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8666324543"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8668593/86685933777.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/9141433454"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8608672/86086722363.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/8542222040"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1314087/13140877279.54.jpg",
+        "mall": "프롬더랜드",
+        "link": "https://smartstore.naver.com/main/products/2399270243"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1196817/11968173887.16.jpg",
+        "mall": "프롬더랜드",
+        "link": "https://smartstore.naver.com/main/products/2092943403"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
