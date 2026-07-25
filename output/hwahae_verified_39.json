@@ -8333,5 +8333,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209890558",
+    "translated_kr": "셀리맥스 듀얼 배리어 퓨리파잉 클렌징 밤",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "듀얼배리어 퓨리파잉 클렌징 밤",
+      "musinsa": "[+지우개패드2매 증정][본품+리필]듀얼배리어 퓨리파잉 클렌징 밤",
+      "naver": "셀리맥스 듀얼배리어 퓨리파잉 클렌징 밤 본품+리필 / 갈아쓰는 클렌징밤"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "듀얼배리어 퓨리파잉 클렌징 밤",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24000",
+    "mall": "셀리맥스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12549449938",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9009396/90093960791.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009396/90093960791.1.jpg",
+        "mall": "셀리맥스",
+        "link": "https://smartstore.naver.com/main/products/12549449938"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5834936/58349360207.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=158000790&shop_id=27055&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1080883557",
+    "translated_kr": "닥터 펩타이드 볼륨 리프팅 프로 에센스 100ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드 볼륨 리프팅 프로 에센스",
+      "naver": "닥터펩티 펩타이드 볼륨 리프팅 프로 에센스 100ml x2개 + (증정) 리프팅 2매 버블 제형 거품에센스"
+    },
+    "brand": "닥터펩티 (DR.PEPTI)",
+    "name": "펩타이드 볼륨 리프팅 프로 에센스",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "68900",
+    "mall": "닥터펩티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8253871314",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8579837/85798371637.21.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8579837/85798371637.21.jpg",
+        "mall": "닥터펩티",
+        "link": "https://smartstore.naver.com/main/products/8253871314"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
