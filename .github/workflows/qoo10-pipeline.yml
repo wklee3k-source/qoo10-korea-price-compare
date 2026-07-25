@@ -125,7 +125,7 @@ jobs:
           # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
           # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
           git fetch origin main 2>/dev/null
-          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -251,7 +251,7 @@ jobs:
           # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
           # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
           git fetch origin main 2>/dev/null
-          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -500,7 +500,7 @@ jobs:
           # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
           # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
           git fetch origin main 2>/dev/null
-          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -626,7 +626,7 @@ jobs:
           # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
           # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
           git fetch origin main 2>/dev/null
-          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -719,7 +719,7 @@ jobs:
           # 전부 크래시). merge 성공여부와 무관하게 항상 최신 코드로
           # 강제 동기화한다(각 브랜치 고유의 output/ 데이터는 안 건드림).
           git fetch origin main 2>/dev/null
-          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+          git checkout origin/main -- src/ data/ comparison/ VERSION requirements.txt 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
