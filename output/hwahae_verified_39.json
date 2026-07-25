@@ -12327,5 +12327,78 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1127039327",
+    "translated_kr": "【배송료 200엔】 【리필】 이니스프리 그린티 씨드 히알루론산 세럼 80ml :: 세럼 / 에센스 / 예쁨 - 보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린티 씨드 히알루론산 세럼",
+      "naver": "이니스프리 그린티 씨드 히알루론산 세럼 50ml 1개 에센스"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "그린티 씨드 히알루론산 세럼",
+    "volume": "80mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23100",
+    "mall": "반애반",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11789971640",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8933448/89334482227.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933448/89334482227.jpg",
+        "mall": "반애반",
+        "link": "https://smartstore.naver.com/main/products/11789971640"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933448/89334489826.jpg",
+        "mall": "반애반",
+        "link": "https://smartstore.naver.com/main/products/11789979239"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933448/89334484920.jpg",
+        "mall": "반애반",
+        "link": "https://smartstore.naver.com/main/products/11789974333"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933448/89334487365.jpg",
+        "mall": "반애반",
+        "link": "https://smartstore.naver.com/main/products/11789976778"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121037/91210373013.1.jpg",
+        "mall": "숲속장터",
+        "link": "https://smartstore.naver.com/main/products/13665862105"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201075580",
+    "translated_kr": "아누아 어성초 77 B3 징크 트러블 세럼 미용액 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 B3징크 트러블 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 B3징크 트러블 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
