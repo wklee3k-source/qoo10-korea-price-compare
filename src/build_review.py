@@ -175,6 +175,18 @@ def build_pairs():
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
         kr_qty = extract_quantity(kr_name_display)
+        # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
+        # 있거나, 구매처 원본명에 "세트/SET"가 있는 경우(예: "선물세트",
+        # "기획세트"도 포함 — "N종"이 꼭 붙어야만 세트인 게 아니다).
+        # [중요] extract_quantity()는 "세트"라는 단어만 있어도 수량=2로
+        # 간주하는데, 이건 "같은 상품 2개"와 "서로 다른 상품이 묶인 세트"를
+        # 구분 못 한다(실측 사례: "펩타이드 크림+앰플+파우치+쇼핑백"을
+        # 묶은 "기미케어 선물세트"에 큐텐원본 크림을 "X 2個"로 잘못
+        # 표시함). is_set이면 아래 수량자동수정 자체를 건너뛴다.
+        is_set = bool(
+            re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
+            or re.search(r"세트|SET", kr_name_display, re.I)
+        )
 
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
@@ -211,7 +223,7 @@ def build_pairs():
         # (중복표기 방지). 브랜드불일치일 때는 용량수정과 동일하게 건너뛴다.
         qty_auto_corrected = False
         qoo10_qty = extract_quantity(q["title"])
-        if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1:
+        if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1 and not is_set:
             qty_suffix_jp = f" X {kr_qty}個"
             qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
             if qoo10_title_highlighted:
@@ -225,7 +237,7 @@ def build_pairs():
         # ("50ml" 단품)였음. 표기를 안 지우면 "2개 준다"고 오해할 수 있어
         # 위험하다.
         qty_removed_original = None
-        if kr_qty <= 1 and qoo10_qty > 1 and brand_status != "mismatch":
+        if kr_qty <= 1 and qoo10_qty > 1 and brand_status != "mismatch" and not is_set:
             qty_removal_pattern = re.compile(r"\s*[Xx×]?\s*\d+\s*(個|개|입|병|本)\b")
             m = qty_removal_pattern.search(qoo10_title_display)
             if m:
@@ -243,12 +255,6 @@ def build_pairs():
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
-        # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
-        # 있거나, 구매처 원본명에 "N종세트"가 있는 경우
-        is_set = bool(
-            re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
-            or re.search(r"\d+종\s*(세트|SET)", kr_name_display, re.I)
-        )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
             "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
