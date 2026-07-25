@@ -20156,5 +20156,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1133988984",
+    "translated_kr": "센테드 핸드크림 40ml/한국화장품/퍼퓸핸드크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 핸드크림 [슬로우에프터글로우]"
+    },
+    "brand": "트리셀 (Treecell)",
+    "name": "퍼퓸 핸드크림 [슬로우에프터글로우]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211674770",
+    "translated_kr": "딥 대미지 리페어 샴푸 500ml + 리필 400ml 대용량 세트 스위트브리즈 향",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
