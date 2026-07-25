@@ -799,6 +799,47 @@ jobs:
             fi
           done
 
+      - name: Auto-build and publish review pages (docs/) after verification
+        working-directory: src
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 병합본(discovery-live)의 최신 discovery_state.json을 가져온다.
+          git fetch https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git discovery-live
+          git show FETCH_HEAD:output/discovery_state.json > ../output/discovery_state.json || true
+          python build_review_batches.py || echo "[경고] 리뷰페이지 생성 실패(데이터 부족 등) — 다음 검증때 재시도됨"
+
+      - name: Push generated docs/ to main (GitHub Pages source)
+        run: |
+          # docs/는 GitHub Pages 소스라 main 브랜치에 있어야 한다. 지금 이
+          # job의 워킹디렉토리는 hwahae-live라서, main만 별도 폴더에
+          # 클론해서 거기에 docs/를 복사해넣고 그쪽에서 커밋+push한다
+          # (현재 브랜치 전환 없이 안전하게 처리).
+          if [ ! -d docs ] || [ -z "$(ls -A docs 2>/dev/null)" ]; then
+            echo "[스킵] docs/ 없음(리뷰페이지 생성 자체가 안 됨)"
+            exit 0
+          fi
+          rm -rf /tmp/main_for_docs
+          git clone --depth 1 --branch main https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git /tmp/main_for_docs
+          rm -rf /tmp/main_for_docs/docs
+          cp -r docs /tmp/main_for_docs/docs
+          cd /tmp/main_for_docs
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "[정보] docs/ 변경사항 없음"
+          else
+            git commit -m "Auto: publish updated review pages after stage-2 verification"
+            for i in $(seq 1 10); do
+              if git push origin main; then echo "push 성공"; break; fi
+              sleep_time=$((RANDOM % 6 + 1))
+              echo "push 실패, ${sleep_time}초 대기 후 재시도 ($i/10)"
+              sleep "$sleep_time"
+              git pull --rebase origin main -q
+            done
+          fi
+
   naver_api_test:
     # 네이버쇼핑 검색 API 테스트 — 이 샌드박스에선 openapi.naver.com이
     # 네트워크 정책으로 차단되어 있어서, GitHub Actions 러너에서 대신 실행한다.

@@ -133,84 +133,142 @@ def build_hub(batch_meta: list[dict], total: int):
     """모든 배치를 한 곳에서 관리하는 허브(인덱스) 페이지. 각 배치파일이
     localStorage에 자동저장해둔 진행상황(qoo10_review_autosave_<batch_id>)을
     그대로 읽어서, 배치별로 몇 건 처리했는지 보여주고 바로 이동할 수 있게
-    한다. file:// 로 로컬에서 열면 브라우저가 파일들끼리 localStorage를
-    공유하므로(같은 출처로 취급), 이 허브 페이지에서 각 배치의 저장내역을
-    직접 읽을 수 있다."""
-    rows_html = "\n".join(
-        f'<tr data-batch-id="{b["id"]}" data-total="{b["count"]}">'
-        f'<td><a href="{b["id"]}.html" target="_blank" rel="noopener">{b["id"]}</a></td>'
-        f'<td>{b["count"]}건</td>'
-        f'<td class="progress-cell">-</td>'
-        f'<td class="excluded-cell">-</td>'
-        f'<td class="updated-cell">-</td>'
-        f"</tr>"
+    한다. GitHub Pages(같은 출처)로 서빙되므로, 이 허브 페이지에서 각
+    배치의 저장내역을 직접 읽을 수 있다."""
+    cards_html = "\n".join(
+        f'''<a class="batch-card" data-batch-id="{b["id"]}" data-total="{b["count"]}" href="{b["id"]}.html" target="_blank" rel="noopener">
+  <div class="batch-card-top">
+    <span class="batch-name">{b["id"]}</span>
+    <span class="batch-total">{b["count"]}건</span>
+  </div>
+  <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%"></div></div>
+  <div class="batch-card-bottom">
+    <span class="progress-text">-</span>
+    <span class="excluded-text">-</span>
+  </div>
+  <div class="updated-text">-</div>
+</a>'''
         for b in batch_meta
     )
     html = f'''<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>검수 배치 관리 허브</title>
 <style>
-  body {{ font-family: -apple-system, sans-serif; background:#1e1e1e; color:#eee; padding:24px; }}
-  h1 {{ font-size:20px; }}
-  table {{ border-collapse: collapse; width:100%; max-width:900px; margin-top:16px; }}
-  th, td {{ border:1px solid #444; padding:10px 14px; text-align:left; }}
-  th {{ background:#2a2a2a; }}
-  tr:hover {{ background:#2a2a2a; }}
-  a {{ color:#6ab0ff; text-decoration:none; font-weight:600; }}
-  a:hover {{ text-decoration:underline; }}
-  .summary {{ margin-top:20px; font-size:14px; color:#aaa; }}
-  .done {{ color:#2ecc71; font-weight:700; }}
-  .partial {{ color:#f39c12; }}
-  .none {{ color:#777; }}
+  * {{ box-sizing: border-box; }}
+  body {{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+    background: linear-gradient(160deg, #14161a 0%, #1c1f26 100%);
+    color: #e8e8ea; padding: 32px 20px; margin: 0; min-height: 100vh;
+  }}
+  .wrap {{ max-width: 1000px; margin: 0 auto; }}
+  h1 {{ font-size: 24px; margin: 0 0 6px; display:flex; align-items:center; gap:10px; }}
+  .sub {{ color: #9a9ba3; font-size: 14px; margin: 0 0 28px; line-height:1.6; }}
+  .overall {{
+    background: linear-gradient(135deg, #2a3f5f 0%, #1f2a3d 100%);
+    border: 1px solid #3a4a63; border-radius: 14px; padding: 20px 24px;
+    margin-bottom: 28px; display: flex; gap: 32px; flex-wrap: wrap;
+  }}
+  .overall .stat {{ display:flex; flex-direction:column; gap:4px; }}
+  .overall .stat .num {{ font-size: 28px; font-weight: 800; }}
+  .overall .stat .lbl {{ font-size: 12px; color: #a9b4c7; }}
+  .overall .stat.confirmed .num {{ color: #4ade80; }}
+  .overall .stat.excluded .num {{ color: #f87171; }}
+  .overall .stat.remaining .num {{ color: #facc15; }}
+  .grid {{
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }}
+  .batch-card {{
+    display: block; background: #22252c; border: 1px solid #35383f; border-radius: 12px;
+    padding: 16px 18px; text-decoration: none; color: inherit; transition: all 0.15s ease;
+  }}
+  .batch-card:hover {{ border-color: #6ab0ff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }}
+  .batch-card-top {{ display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }}
+  .batch-name {{ font-size: 16px; font-weight: 700; color: #fff; }}
+  .batch-total {{ font-size: 12px; color: #8b8d95; }}
+  .progress-bar-track {{ height: 8px; background: #35383f; border-radius: 4px; overflow: hidden; margin-bottom: 10px; }}
+  .progress-bar-fill {{ height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e); border-radius: 4px; transition: width 0.3s ease; }}
+  .batch-card-bottom {{ display: flex; justify-content: space-between; font-size: 13px; }}
+  .progress-text {{ color: #c7c9d1; font-weight: 600; }}
+  .excluded-text {{ color: #f87171; }}
+  .updated-text {{ font-size: 11px; color: #6b6d75; margin-top: 8px; }}
+  .none-badge {{ color: #6b6d75; }}
 </style>
 </head>
 <body>
-<h1>📋 검수 배치 관리 허브 (전체 {total}건, {len(batch_meta)}개 배치)</h1>
-<p>배치를 클릭해서 검수를 이어가세요. 각 배치의 진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(같은 브라우저에서 연 기록만 보임).</p>
-<table>
-  <thead><tr><th>배치</th><th>총 건수</th><th>진행상황(선택완료/전체)</th><th>제외처리</th><th>마지막 저장</th></tr></thead>
-  <tbody>
-{rows_html}
-  </tbody>
-</table>
-<div class="summary" id="overall-summary"></div>
+<div class="wrap">
+<h1>📋 검수 배치 관리 허브</h1>
+<p class="sub">전체 {total}건 · {len(batch_meta)}개 배치로 나뉨. 배치 카드를 클릭하면 새 탭에서 열립니다.<br>진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(이 브라우저에서 작업한 기록 + GitHub에 저장한 기록).</p>
+
+<div class="overall" id="overall-stats">
+  <div class="stat confirmed"><span class="num" id="stat-confirmed">-</span><span class="lbl">선택완료</span></div>
+  <div class="stat excluded"><span class="num" id="stat-excluded">-</span><span class="lbl">제외처리</span></div>
+  <div class="stat remaining"><span class="num" id="stat-remaining">-</span><span class="lbl">미처리</span></div>
+</div>
+
+<div class="grid">
+{cards_html}
+</div>
+</div>
 
 <script>
-function refreshProgress() {{
-  var rows = document.querySelectorAll('tr[data-batch-id]');
+async function refreshProgress() {{
+  var cards = document.querySelectorAll('.batch-card');
   var totalDone = 0, totalExcluded = 0, totalAll = 0;
-  rows.forEach(function(row) {{
-    var batchId = row.dataset.batchId;
-    var total = parseInt(row.dataset.total, 10);
+  var ghToken = localStorage.getItem('qoo10_gh_save_token');
+
+  for (var i = 0; i < cards.length; i++) {{
+    var card = cards[i];
+    var batchId = card.dataset.batchId;
+    var total = parseInt(card.dataset.total, 10);
     totalAll += total;
     var key = 'qoo10_review_autosave_' + batchId;
-    var raw;
-    try {{ raw = localStorage.getItem(key); }} catch (e) {{ raw = null; }}
-    var progressCell = row.querySelector('.progress-cell');
-    var excludedCell = row.querySelector('.excluded-cell');
-    var updatedCell = row.querySelector('.updated-cell');
+    var raw = null;
+    try {{ raw = localStorage.getItem(key); }} catch (e) {{}}
+
+    if (ghToken) {{
+      try {{
+        var apiUrl = 'https://api.github.com/repos/wklee3k-source/qoo10-korea-price-compare/contents/comparison/decisions/' + batchId + '.json';
+        var res = await fetch(apiUrl, {{headers: {{Authorization: 'token ' + ghToken}}}});
+        if (res.ok) {{
+          var data = await res.json();
+          var content = decodeURIComponent(escape(atob(data.content)));
+          raw = JSON.stringify({{savedAt: new Date().toISOString(), results: JSON.parse(content)}});
+        }}
+      }} catch (e) {{}}
+    }}
+
+    var fill = card.querySelector('.progress-bar-fill');
+    var progressText = card.querySelector('.progress-text');
+    var excludedText = card.querySelector('.excluded-text');
+    var updatedText = card.querySelector('.updated-text');
+
     if (!raw) {{
-      progressCell.innerHTML = '<span class="none">아직 안 열어봄</span>';
-      excludedCell.textContent = '-';
-      updatedCell.textContent = '-';
-      return;
+      progressText.innerHTML = '<span class="none-badge">아직 안 열어봄</span>';
+      excludedText.textContent = '';
+      updatedText.textContent = '';
+      fill.style.width = '0%';
+      continue;
     }}
     var saved;
-    try {{ saved = JSON.parse(raw); }} catch (e) {{ return; }}
+    try {{ saved = JSON.parse(raw); }} catch (e) {{ continue; }}
     var results = saved.results || [];
     var confirmed = results.filter(function(r) {{ return r.match_confirmed; }}).length;
     var excluded = results.filter(function(r) {{ return r.excluded; }}).length;
     totalDone += confirmed;
     totalExcluded += excluded;
-    var cls = confirmed >= total ? 'done' : (confirmed > 0 || excluded > 0 ? 'partial' : 'none');
-    progressCell.innerHTML = '<span class="' + cls + '">' + confirmed + ' / ' + total + '</span>';
-    excludedCell.textContent = excluded + '건';
-    updatedCell.textContent = saved.savedAt ? new Date(saved.savedAt).toLocaleString() : '-';
-  }});
-  document.getElementById('overall-summary').textContent =
-    '전체 진행: 선택완료 ' + totalDone + '건 / 제외 ' + totalExcluded + '건 / 전체 ' + totalAll + '건';
+    fill.style.width = Math.round((confirmed / total) * 100) + '%';
+    progressText.textContent = confirmed + ' / ' + total;
+    excludedText.textContent = excluded > 0 ? '제외 ' + excluded : '';
+    updatedText.textContent = saved.savedAt ? '마지막 저장: ' + new Date(saved.savedAt).toLocaleString() : '';
+  }}
+
+  document.getElementById('stat-confirmed').textContent = totalDone;
+  document.getElementById('stat-excluded').textContent = totalExcluded;
+  document.getElementById('stat-remaining').textContent = totalAll - totalDone - totalExcluded;
 }}
 refreshProgress();
 </script>
@@ -221,3 +279,4 @@ refreshProgress();
 
 if __name__ == "__main__":
     build_batches()
+
