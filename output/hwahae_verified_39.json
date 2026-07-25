@@ -17495,5 +17495,62 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1168717728",
+    "translated_kr": "[신상품] 스킨푸드 캐롯 카로틴 모이스트 에펙터 55ml 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "스킨푸드 캐롯 카로틴 모이스트 이펙터 52ml 1개"
+    },
+    "brand": "스킨푸드",
+    "name": "스킨푸드 캐롯 카로틴 모이스트 이펙터 52ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "15900",
+    "mall": "둥카",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10319308960",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8786381/87863813086.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8786381/87863813086.jpg",
+        "mall": "둥카",
+        "link": "https://smartstore.naver.com/main/products/10319308960"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122694/91226948655.jpg",
+        "mall": "원라이브:브랜드",
+        "link": "https://smartstore.naver.com/main/products/13682437412"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120335/91203353015.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13658842230"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198804954",
+    "translated_kr": "메디큐브 제로모공패드 2.0 리필 70장+10장 / 10장x9",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
