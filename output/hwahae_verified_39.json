@@ -8435,5 +8435,67 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188963997",
+    "translated_kr": "미샤 타임레볼루션 더 퍼스트 에센스 패드 250ml 75매입 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "미샤 타임 레볼루션 더 퍼스트 에센스 패드 250ml 75매입 1개"
+    },
+    "brand": "MISSHA",
+    "name": "미샤 타임 레볼루션 더 퍼스트 에센스 패드 250ml 75매입 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24670",
+    "mall": "또와서사",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12844160530",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9038867/90388671522.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038867/90388671522.jpg",
+        "mall": "또와서사",
+        "link": "https://smartstore.naver.com/main/products/12844160530"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9037488/90374884551.jpg",
+        "mall": "직구웨이브",
+        "link": "https://smartstore.naver.com/main/products/12830373559"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9057012/90570128053.jpg",
+        "mall": "DAZZLE대즐",
+        "link": "https://smartstore.naver.com/main/products/13025616961"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1175139603",
+    "translated_kr": "아도르 모이스처 밸런싱 무실리콘 샴푸 530ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스춰 밸런싱 무실리콘 샴푸"
+    },
+    "brand": "아도르 (Lador)",
+    "name": "모이스춰 밸런싱 무실리콘 샴푸",
+    "volume": "530ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
