@@ -11231,5 +11231,66 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1211960584",
+    "translated_kr": "다이브 인 글로우 미스트 120ml 토리든",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 글로우 미스트",
+      "naver": "[라운지전용] 토리든 다이브인 글로우 미스트 50ml +(다이브인 세럼 10ml 증정)"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 글로우 미스트",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "13000",
+    "mall": "토리든",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13075712807",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9062022/90620223899.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9062022/90620223899.2.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/13075712807"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103819/91038192465.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/13493682113"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102451/91024517900.jpg",
+        "mall": "cosmlife",
+        "link": "https://smartstore.naver.com/main/products/13480007548"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199705476",
+    "translated_kr": "비타민 C 아스타잔틴 마스크 30매 VT",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 스페셜 캡슐 마스크 [피부진정]"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
