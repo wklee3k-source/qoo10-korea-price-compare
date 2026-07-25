@@ -21033,5 +21033,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1179913892",
+    "translated_kr": "마미케어 비비 립 LED 립 글로우 립 마스크 1개 케이스 립 밤 2종 건전지",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180095461",
+    "translated_kr": "이론 앰플 50ml 센시엔드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "앰플 [센시엔드]",
+      "naver": "리퓨어리 올레놀샷 엔앰엔NMN 앰플 15ml"
+    },
+    "brand": "더일론 (THEiLLON)",
+    "name": "앰플 [센시엔드]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25300",
+    "mall": "가을컴퍼니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13155751269",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070026/90700262366.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070026/90700262366.jpg",
+        "mall": "가을컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13155751269"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070620/90706207287.jpg",
+        "mall": "YGGlobal story",
+        "link": "https://smartstore.naver.com/main/products/13161696191"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8960407/89604078503.2.jpg",
+        "mall": "COSMATIC",
+        "link": "https://smartstore.naver.com/main/products/12059567804"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
