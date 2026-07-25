@@ -18936,5 +18936,56 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1106584604",
+    "translated_kr": "[댕기머리] 허벌 헤어케어 샴푸 1000ml / 트리트먼트 1000ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "허벌 헤어 케어 샴푸",
+      "naver": "댕기머리 프로페셔널 허벌 헤어 케어 샴푸 트리트먼트 1000ml ON"
+    },
+    "brand": "댕기머리 (DAENGGIMEORI)",
+    "name": "허벌 헤어 케어 샴푸",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "25000",
+    "mall": "YEPPEN SKIN",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4575798883",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8212031/82120319037.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8212031/82120319037.6.jpg",
+        "mall": "YEPPEN SKIN",
+        "link": "https://smartstore.naver.com/main/products/4575798883"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1106581236",
+    "translated_kr": "댕기머리 징기 바이탈라이징 샴푸 / 트리트먼트 500ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "댕기머리 프로페셔널 허벌 헤어 케어 샴푸 트리트먼트 1000ml ON"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
