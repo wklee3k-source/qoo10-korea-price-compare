@@ -5259,5 +5259,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203101387",
+    "translated_kr": "달바 화이트 트러플 엑소 인텐시브 세럼 160ml 미용액 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 로얄 인텐시브 세럼"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 로얄 인텐시브 세럼",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203100590",
+    "translated_kr": "달바 화이트 트러플 아쿠아마린 에너지 세럼 160ml 블루 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 리프레쉬 아쿠아 세럼",
+      "naver": "달바 화이트 트러플 아쿠아 마린 에너지 세럼 160ml 1개"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 리프레쉬 아쿠아 세럼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "19290",
+    "mall": "코스앤블루",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13544078780",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9108858/91088589133.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9108858/91088589133.1.jpg",
+        "mall": "코스앤블루",
+        "link": "https://smartstore.naver.com/main/products/13544078780"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
