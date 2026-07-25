@@ -17822,5 +17822,50 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202568510",
+    "translated_kr": "엘라스틴 프로틴클리닉 10000 단백질 1L (샴푸/트리트먼트)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로틴 클리닉 10000 단백질 고영양 트리트먼트",
+      "musinsa": "프로틴 클리닉 10000 모로코 아르간 오일 단백질 고영양 샴푸 피치블로썸향 1000ml  x 2개"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "프로틴 클리닉 10000 단백질 고영양 트리트먼트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191542494",
+    "translated_kr": "브링그린 모델링팩 슈퍼레몬 글루타치온 10개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모델링 팩 [슈퍼레몬글루타치온]"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "모델링 팩 [슈퍼레몬글루타치온]",
+    "volume": "28g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 4800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
