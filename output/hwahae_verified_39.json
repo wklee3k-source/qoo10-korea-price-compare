@@ -3869,5 +3869,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1141816688",
+    "translated_kr": "바이아우어 톤업 화이트 마드 마스크 3개입 x 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1141816327",
+    "translated_kr": "와사비 수딩 마스크 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "와사비 수딩 마스크팩",
+      "naver": "미스드래곤 와사비 수딩 마스크팩 10매입"
+    },
+    "brand": "미스드래곤 (MissDragon)",
+    "name": "와사비 수딩 마스크팩",
+    "volume": "30g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "40120",
+    "mall": "가성비 가심비 대용량",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13393317437",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9093782/90937827774.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9093782/90937827774.jpg",
+        "mall": "가성비 가심비 대용량",
+        "link": "https://smartstore.naver.com/main/products/13393317437"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
