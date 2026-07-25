@@ -46,6 +46,8 @@ def render_cards(pairs: list[dict]) -> str:
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        elif p.get("vol_status") == "unknown":
+            vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""

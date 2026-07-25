@@ -144,6 +144,12 @@ def build_pairs():
         qoo10_vol = extract_volume_ml(q["title"])
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
+        # [수정] 큐텐원본에 mL/g/L 표기 자체가 없는 경우(예: "10枚"처럼
+        # 장수만 있는 시트마스크류)엔 비교할 정보 자체가 없는 것이지
+        # "불일치"가 아니다 — 실측 확인된 오탐(원본 "10枚", 구매처
+        # "21ml 10매"인데 "용량불일치"로 잘못 표시됨). 브랜드체크에서
+        # 이미 적용한 것과 같은 원칙: 정보부족은 "판단불가"로 표시한다.
+        vol_status = "match" if vol_match else ("unknown" if qoo10_vol is None or kr_vol is None else "mismatch")
 
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
@@ -188,7 +194,7 @@ def build_pairs():
         )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
-            "vol_auto_corrected": vol_auto_corrected, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
+            "vol_auto_corrected": vol_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -253,6 +259,8 @@ def build_html(pairs: list[dict]):
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        elif p.get("vol_status") == "unknown":
+            vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
