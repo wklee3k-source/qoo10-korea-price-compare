@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 from qoo10_low_review_shop_finder import search_qoo10, parse_results
-from qoo10_ranking_scraper import fetch_shop_ranking
+from qoo10_ranking_scraper import fetch_shop_ranking, ShopCrawlFailed
 from qoo10_item_detail_scraper import fetch_item_detail
 from google_translate import GoogleTranslateSession
 from hwahae_name_corrector import correct_name
@@ -149,11 +149,20 @@ def _append_seed_log(entries: list[dict]):
     SEED_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def crawl_shop_best5(shop_id: str) -> list[dict]:
-    """상점 베스트5를 전부 크롤링해서 반환한다(필터 통과여부와 무관하게
-    5개 다 반환 — 사용자 지적사항 반영: 필터는 "최종 결과물에 넣을지"만
-    결정해야지 "다음 검색 시드로 쓸지"까지 막으면 안 된다. 색조/옵션이라도
-    다음 라운드 검색어로는 계속 써야 상점 발굴이 5개씩 계속 뻗어나간다).
+def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
+    """상점 베스트5를 전부 크롤링해서 (상품목록, 실패여부)를 반환한다.
+
+    [9번 수정: 크롤실패 vs 무상품 구분] 예전엔 랭킹 조회가 실패해도, 상점에
+    진짜 상품이 없어도 똑같이 빈 리스트를 돌려줬다. 그러면 호출하는 쪽이
+    실패한 상점도 '방문완료(=상품없음)'로 영구 박제해버려서, 재시도할
+    기회가 없어지고 시드도 안 생겨 큐 고갈로 이어졌다. 이제 실패
+    (failed=True)와 진짜 무상품(failed=False, items=[])을 구분해서
+    돌려주고, 호출하는 쪽(run())이 실패한 상점만 재시도하게 한다.
+
+    필터 통과여부와 무관하게 5개 다 반환한다 — 사용자 지적사항 반영: 필터는
+    "최종 결과물에 넣을지"만 결정해야지 "다음 검색 시드로 쓸지"까지 막으면
+    안 된다. 색조/옵션이라도 다음 라운드 검색어로는 계속 써야 상점 발굴이
+    5개씩 계속 뻗어나간다.
 
     각 item에 passes_filter(bool)와 skip_reason을 달아서 반환하고, 최종
     상품목록에 넣을지는 호출하는 쪽(run())이 passes_filter를 보고 결정한다.
@@ -164,10 +173,14 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
     (앞서 multi_source_finder.py에서도 같은 문제를 겪었다)."""
     try:
         ranking = fetch_shop_ranking(shop_id)
-    except Exception:  # noqa: BLE001
-        return []
+    except ShopCrawlFailed as e:
+        print(f"  [크롤실패-재시도대상] {shop_id}: {e}")
+        return [], True
+    except Exception as e:  # noqa: BLE001 - 예상 못한 오류도 안전하게 실패로 본다
+        print(f"  [크롤실패-예상외오류-재시도대상] {shop_id}: {type(e).__name__}: {e}")
+        return [], True
     if not ranking:
-        return []
+        return [], False  # 페이지는 열렸는데 진짜로 상품이 없음(정상 종결)
 
     all_items = []
     skip_entries = []
@@ -218,7 +231,7 @@ def crawl_shop_best5(shop_id: str) -> list[dict]:
     if skip_entries:
         _append_skip_log(skip_entries)
 
-    return all_items
+    return all_items, False
 
 
 def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
@@ -263,8 +276,10 @@ def load_peer_visited(my_suffix: str | None) -> set:
 def _load_state(suffix: str | None = None) -> dict:
     path = _state_path(suffix)
     if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
-    return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": []}
+        state = json.loads(path.read_text(encoding="utf-8"))
+        state.setdefault("failed_shops", {})  # 하위호환: 예전 상태파일엔 없음
+        return state
+    return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": [], "failed_shops": {}}
 
 
 def _save_state(state: dict, suffix: str | None = None):
@@ -273,7 +288,7 @@ def _save_state(state: dict, suffix: str | None = None):
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> list[dict]:
+def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> tuple[list[dict], bool]:
     """crawl_shop_best5를 별도 프로세스로 격리해서 실행하고, timeout_seconds를
     넘기면 그 프로세스를 강제 종료(SIGKILL)한다.
 
@@ -285,7 +300,11 @@ def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> li
     발생한 예외 처리 중에는 파이썬 시그널 핸들러가 실행을 못 미룰 수
     있음). subprocess.run(timeout=N)은 그 자식 프로세스 내부에서 무슨
     일이 일어나든 운영체제 수준에서 확실하게 죽이므로 100% 신뢰할 수
-    있다."""
+    있다.
+
+    [9번 수정] 타임아웃/비정상종료/파싱실패도 전부 '크롤실패'로 본다 —
+    (items=[], failed=True)를 돌려주면 run()이 이 상점을 방문완료로
+    박제하지 않고 다음 사이클에 다시 시도한다."""
     try:
         result = subprocess.run(
             [sys.executable, "crawl_single_shop.py", shop_id],
@@ -295,18 +314,20 @@ def crawl_shop_best5_with_timeout(shop_id: str, timeout_seconds: int = 90) -> li
             cwd=str(Path(__file__).resolve().parent),
         )
     except subprocess.TimeoutExpired:
-        print(f"  [TIMEOUT] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 강제종료, 다음으로 넘어감")
-        return []
+        print(f"  [TIMEOUT-재시도대상] 상점 {shop_id} 처리가 {timeout_seconds}초를 넘어 강제종료, 다음으로 넘어감")
+        return [], True
 
     if result.returncode != 0:
-        print(f"  [ERROR] 상점 {shop_id} 서브프로세스 비정상종료(code={result.returncode}): {result.stderr[-500:] if result.stderr else ''}")
-        return []
+        print(f"  [ERROR-재시도대상] 상점 {shop_id} 서브프로세스 비정상종료(code={result.returncode}): {result.stderr[-500:] if result.stderr else ''}")
+        return [], True
 
     try:
-        return json.loads(result.stdout.strip() or "[]")
+        payload = json.loads(result.stdout.strip() or '{"items": [], "failed": true}')
     except json.JSONDecodeError:
-        print(f"  [ERROR] 상점 {shop_id} 결과 파싱 실패: {result.stdout[-500:]}")
-        return []
+        print(f"  [ERROR-재시도대상] 상점 {shop_id} 결과 파싱 실패: {result.stdout[-500:]}")
+        return [], True
+
+    return payload.get("items", []), bool(payload.get("failed", False))
 
 
 
@@ -322,6 +343,8 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
     else:
         pending_keywords = [keyword_ja]
     seen_keywords = set(state["seen_keywords"])
+    failed_shops = dict(state.get("failed_shops", {}))  # {shop_id: 실패누적횟수}
+    MAX_CRAWL_RETRIES = 3  # 이만큼 실패하면 포기하고 방문완료로 넘긴다(영구루프 방지)
 
     if state["visited_shops"]:
         print(f"[RESUME] 상점 {len(visited_shops)}개, 상품 {len(all_products)}건부터 이어서 진행")
@@ -335,6 +358,7 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
                 "shop_urls": shop_urls,
                 "pending_keywords": pending_keywords,
                 "seen_keywords": list(seen_keywords),
+                "failed_shops": failed_shops,
             },
             state_suffix,
         )
@@ -374,11 +398,30 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             if len(all_products) >= target_products:
                 break
             shop_id = shop["shop_id"]
-            visited_shops.add(shop_id)
             shop_urls.append(f"https://m.qoo10.jp/shop/{shop_id}")
-            print(f"\n  [상점진입] {shop_id} (review={shop['review_count']})")
+            print(f"\n  [상점진입] {shop_id} (review={shop['review_count']}, 실패이력={failed_shops.get(shop_id, 0)}회)")
 
-            crawled_items = crawl_shop_best5_with_timeout(shop_id)
+            crawled_items, crawl_failed = crawl_shop_best5_with_timeout(shop_id)
+
+            if crawl_failed:
+                # [9번 수정] 크롤 자체가 실패한 상점은 '방문완료'로 박제하지
+                # 않는다 — 예전엔 실패든 진짜 무상품이든 똑같이 방문완료로
+                # 표시해버려서, 실패한 상점에서 나왔어야 할 시드가 영원히
+                # 안 생기고 조용히 큐가 말라붙었다. 실패 횟수를 세어
+                # MAX_CRAWL_RETRIES(3회)까지는 재시도 대상으로 남기고,
+                # 그 이상 계속 실패하면(진짜 고장난 상점일 수 있음) 그때
+                # 포기하고 방문완료 처리해 무한루프를 막는다.
+                failed_shops[shop_id] = failed_shops.get(shop_id, 0) + 1
+                if failed_shops[shop_id] >= MAX_CRAWL_RETRIES:
+                    print(f"  [포기] {shop_id} {MAX_CRAWL_RETRIES}회 연속 크롤실패 — 방문완료 처리하고 넘어감")
+                    visited_shops.add(shop_id)
+                else:
+                    print(f"  [재시도예정] {shop_id} 크롤실패({failed_shops[shop_id]}/{MAX_CRAWL_RETRIES}회) — 방문완료 처리 안 함")
+                save()
+                continue
+
+            visited_shops.add(shop_id)
+            failed_shops.pop(shop_id, None)  # 이번엔 성공했으니 실패 이력 초기화
             seed_entries = []
             for item in crawled_items:
                 # 시드는 필터 통과여부와 무관하게 전부 생성(사용자 지적사항 반영)
