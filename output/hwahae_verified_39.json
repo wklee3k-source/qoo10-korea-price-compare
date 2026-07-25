@@ -431,5 +431,79 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1205747342",
+    "translated_kr": "【1+1】비플레인 선뮤즈 톤업&코렉팅 선크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++]",
+      "musinsa": "선뮤즈 톤업 \\u0026 코렉팅 선크림 50ml(SPF50+/PA++++)",
+      "naver": "[1+1/보라톤업] 비플레인 선뮤즈 톤업&amp;코렉팅 선크림 (SPF50+/PA++++) 50ml, 2개"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "선뮤즈 톤업&코렉팅 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30800",
+    "mall": "비플레인 beplain",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8246668808",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8579116/85791169131.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8579116/85791169131.8.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/8246668808"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205747267",
+    "translated_kr": "아이소이 아크니 닥터퍼스트 블랙 딥 클렌징 폼 75ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아크니 닥터 1st 블랙 딥 클렌징 폼",
+      "musinsa": "아크니 닥터 퍼스트 블랙 딥 클렌징 폼 75ml",
+      "naver": "[아이소이] 아크니 닥터 퍼스트 블랙 딥 클렌징 폼 75ml (아크니 피지폼)"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "아크니 닥터 1st 블랙 딥 클렌징 폼",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23520",
+    "mall": "아이소이 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/7869143127",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8541364/85413643450.16.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8541364/85413643450.16.jpg",
+        "mall": "아이소이 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/7869143127"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8541364/85413643451.15.jpg",
+        "mall": "아이소이",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7869143128"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626126/86261263771.jpg",
+        "mall": "아띠랑주",
+        "link": "https://smartstore.naver.com/main/products/8716763448"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
