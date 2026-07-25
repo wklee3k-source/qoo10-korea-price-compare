@@ -15891,5 +15891,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1107252885",
+    "translated_kr": "비타 디페어 크림 50ml+50ml (진정/탄력/보습/영양/활력/광채/주름 방지)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타 디페어 크림"
+    },
+    "brand": "제이엠솔루션 (JMsolution)",
+    "name": "비타 디페어 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1131288363",
+    "translated_kr": "스킨푸드 블랙슈가 퍼펙트 버블 폼 클렌저 200ml x2/ x3 / 택일 / 블랙슈가 / 딥 클렌징 / 약 알칼리성",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
