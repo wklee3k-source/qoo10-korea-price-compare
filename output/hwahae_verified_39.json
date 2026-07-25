@@ -1820,5 +1820,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208959759",
+    "translated_kr": "폴리젠 시크닝 샴푸 500ml / 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1163473629",
+    "translated_kr": "플라센 스킨실드 리뉴얼 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플라센 스킨 쉴드 리뉴얼 크림",
+      "naver": "르네셀 플라센 스킨쉴드 리뉴얼크림"
+    },
+    "brand": "르네셀 (Rene-Cell)",
+    "name": "플라센 스킨 쉴드 리뉴얼 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "14600",
+    "mall": "올래뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5933849587",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8347834/83478349075.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8347834/83478349075.1.jpg",
+        "mall": "올래뷰티",
+        "link": "https://smartstore.naver.com/main/products/5933849587"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8564979/85649798654.1.jpg",
+        "mall": "소라페이스",
+        "link": "https://smartstore.naver.com/main/products/8105298331"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8844149/88441490477.3.jpg",
+        "mall": "비설",
+        "link": "https://smartstore.naver.com/main/products/10896984442"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
