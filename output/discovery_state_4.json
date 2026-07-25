@@ -1,18 +1,21 @@
 {
   "visited_shops": [
-    "hangooksangin",
-    "kyo_market",
-    "tiaramall",
-    "itfu-cosmetic",
-    "Qmart",
     "DearMoments",
     "HEROINEBueaty",
-    "k-seoul",
+    "Qmart",
     "naturia_jp",
-    "tbas",
-    "HDSelectShop",
     "kundal_official",
-    "Seoullys"
+    "Seoullys",
+    "Holy_Market",
+    "everythingeverywhere",
+    "k-seoul",
+    "tbas",
+    "tiaramall",
+    "hangooksangin",
+    "kyo_market",
+    "itfu-cosmetic",
+    "HDSelectShop",
+    "lunarosa"
   ],
   "all_products": [],
   "shop_urls": [
@@ -28,14 +31,22 @@
     "https://m.qoo10.jp/shop/kundal_official",
     "https://m.qoo10.jp/shop/naturia_jp",
     "https://m.qoo10.jp/shop/itfu-cosmetic",
-    "https://m.qoo10.jp/shop/Qmart"
+    "https://m.qoo10.jp/shop/Qmart",
+    "https://m.qoo10.jp/shop/seoulselectstore",
+    "https://m.qoo10.jp/shop/KVIVE",
+    "https://m.qoo10.jp/shop/djshopping",
+    "https://m.qoo10.jp/shop/CallaBoutique",
+    "https://m.qoo10.jp/shop/museshop",
+    "https://m.qoo10.jp/shop/mood_k",
+    "https://m.qoo10.jp/shop/mokos_kshop",
+    "https://m.qoo10.jp/shop/Holy_Market",
+    "https://m.qoo10.jp/shop/everythingeverywhere",
+    "https://m.qoo10.jp/shop/Cozy_Korea",
+    "https://m.qoo10.jp/shop/KBEAT",
+    "https://m.qoo10.jp/shop/otonari",
+    "https://m.qoo10.jp/shop/lunarosa"
   ],
   "pending_keywords": [
-    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
-    "皮脂毛穴 ダブルクレンジング X",
-    "エキゾウム シカ 鎮静 パッド X",
-    "インテカ スージング パッド Trouble",
-    "PDRN ヒアルロン酸カプセル ラム X",
     "ペプチドショット2X 弾力アンプル",
     "ハイエッセンシャル リジュ コントロール メルティングマスク",
     "シカサルブクリーム",
@@ -87,6 +98,23 @@
     "スキンケアOne Step Original Clear Pad"
   ],
   "seen_keywords": [
+    "エキゾウム シカ 鎮静 パッド X",
+    "皮脂毛穴 ダブルクレンジング X",
+    "ロレアルプロフェッショナル メタルDX ディスカバリー2種キット",
+    "PDRN ヒアルロン酸カプセル ラム X",
+    "インテカ スージング パッド Trouble",
     "韓国 シャンプー"
-  ]
+  ],
+  "failed_shops": {
+    "seoulselectstore": 1,
+    "KVIVE": 1,
+    "djshopping": 1,
+    "CallaBoutique": 1,
+    "museshop": 1,
+    "mood_k": 1,
+    "mokos_kshop": 1,
+    "Cozy_Korea": 1,
+    "KBEAT": 1,
+    "otonari": 1
+  }
 }
