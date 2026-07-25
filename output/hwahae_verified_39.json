@@ -7840,5 +7840,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1190706746",
+    "translated_kr": "아누아 PDRN 히알루론산 하이드레이팅 미스트 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "naver": "아누아 PDRN 콜라겐 글로우 페이셜 세럼 하이드레이팅 페이스 미스트 히알루론산 이슬이 1 01 Fl Oz (Pa of 1)"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "60300",
+    "mall": "토닥토닥키즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13635117165",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+        "mall": "토닥토닥키즈",
+        "link": "https://smartstore.naver.com/main/products/13635117165"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1168044536",
+    "translated_kr": "셀퓨전씨 [클렌징 티슈 증정] 선스크린 100 스틱 SPF50+ PA++++ 19g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아쿠아티카 스틱 썬스크린 [SPF50+/PA++++]",
+      "naver": "셀퓨전씨 스틱 선스크린 100 19g(SPF50+)"
+    },
+    "brand": "셀퓨전씨 (CellFusionC)",
+    "name": "아쿠아티카 스틱 썬스크린 [SPF50+/PA++++]",
+    "volume": "19g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "13400",
+    "mall": "꿀디샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7912183437",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8545668/85456683760.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8545668/85456683760.jpg",
+        "mall": "꿀디샵",
+        "link": "https://smartstore.naver.com/main/products/7912183437"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121985/91219853104.jpg",
+        "mall": "담소뷰티",
+        "link": "https://smartstore.naver.com/main/products/13675342085"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
