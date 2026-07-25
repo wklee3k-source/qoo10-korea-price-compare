@@ -4314,5 +4314,79 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210847470",
+    "translated_kr": "id PLACOSMETICS 리얼 애프터 케어 미스트 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리얼 애프터 케어 미스트",
+      "musinsa": "리얼 애프터 케어 미스트 120ml",
+      "naver": "ID PLACOSMETICS 리얼 애프터 케어 미스트 120ml 4108472"
+    },
+    "brand": "아이디플라코스메틱 (ID PLACOSMETICS)",
+    "name": "리얼 애프터 케어 미스트",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35020",
+    "mall": "지원HOK06",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13659749101",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120425/91204259886.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120425/91204259886.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13659749101"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9035580/90355803139.jpg",
+        "mall": "스콜피오s",
+        "link": "https://smartstore.naver.com/main/products/12811292190"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9050538/90505384919.jpg",
+        "mall": "오늘의초록a",
+        "link": "https://smartstore.naver.com/main/products/12960873909"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194335721",
+    "translated_kr": "미샤 타임 레볼루션 프라임 스템 100 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타임 레볼루션 프라임스템100 크림",
+      "musinsa": "타임 레볼루션 프라임스템100 크림 50ml",
+      "naver": "[미샤] 타임 레볼루션 프라임스템100 크림50 50ml, 1개"
+    },
+    "brand": "미샤 (MISSHA)",
+    "name": "타임 레볼루션 프라임스템100 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38500",
+    "mall": "미샤공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5854009928",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8339850/83398509342.6.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8339850/83398509342.6.jpg",
+        "mall": "미샤공식스토어",
+        "link": "https://smartstore.naver.com/main/products/5854009928"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
