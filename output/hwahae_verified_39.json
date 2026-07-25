@@ -3379,5 +3379,69 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1213625529",
+    "translated_kr": "블리블리 비타민 톤업 선 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타민 기미 톤업 선세럼 [SPF50+/PA++++]",
+      "musinsa": "비타민 기미 톤업 선세럼 30ml"
+    },
+    "brand": "블리블리 (VELYVELY)",
+    "name": "비타민 기미 톤업 선세럼 [SPF50+/PA++++]",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1143652756",
+    "translated_kr": "순행(순헨) 클렌징 폼 200ml",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "순행클렌징폼 200ML",
+      "naver": "설화수 순행 클렌징폼 (100ml/200ml/400ml)"
+    },
+    "brand": "설화수",
+    "name": "순행클렌징폼 200ML",
+    "volume": "",
+    "source": "musinsa",
+    "obsolete": null,
+    "sale": null,
+    "price": "25200",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000204632",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5557950/55579501228.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5557950/55579501228.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000204632"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8661301/86613012303.2.jpg",
+        "mall": "JS메틱",
+        "link": "https://smartstore.naver.com/main/products/9068511980"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8224321/82243214903.37.jpg",
+        "mall": "레드밤",
+        "link": "https://smartstore.naver.com/main/products/4698694069"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
