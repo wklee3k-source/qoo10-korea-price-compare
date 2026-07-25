@@ -18195,5 +18195,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210173783",
+    "translated_kr": "【공식】【합리적인 세트】스킨 리부트 스피큘 세럼 & 앰플 40ml(4종 중 1개 선택)/미용액/병풀 유래 줄기세포 추출물 배합/촉촉함",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203536791",
+    "translated_kr": "【공식】비타플렉스91 앰플 35ml/미용액/복합 비타민/비타민B/비타민C/병풀 에키스/미백/톤업/칙칙함/기미",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타민C 91 인텐시브 세럼",
+      "naver": "[닥터에르덤] 비타민C 91 인텐시브 세럼 30ml"
+    },
+    "brand": "닥터에르덤 (Dr.EREDERM)",
+    "name": "비타민C 91 인텐시브 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "77000",
+    "mall": "브로우스킨뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5791740586",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8333624/83336240000.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8333624/83336240000.2.jpg",
+        "mall": "브로우스킨뷰티",
+        "link": "https://smartstore.naver.com/main/products/5791740586"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941743/89417437650.jpg",
+        "mall": "피부보약",
+        "link": "https://smartstore.naver.com/main/products/11872927056"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
