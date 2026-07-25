@@ -12776,5 +12776,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210345860",
+    "translated_kr": "리파 하트 브러시 컴팩트 헤어 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하트 브러시 매트 블랙",
+      "naver": "리파 하트 브러쉬 ReFa HEART BRUSH 컴팩트 정돈 선물"
+    },
+    "brand": "리파 (ReFa)",
+    "name": "하트 브러시 매트 블랙",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "49900",
+    "mall": "사쿠라쿠텐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12650744139",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9019525/90195255045.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019525/90195255045.jpg",
+        "mall": "사쿠라쿠텐",
+        "link": "https://smartstore.naver.com/main/products/12650744139"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081842/90818422696.jpg",
+        "mall": "바보이 브랜드 스토어",
+        "link": "https://smartstore.naver.com/main/products/13273912364"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038805/90388058190.jpg",
+        "mall": "닌자 루키",
+        "link": "https://smartstore.naver.com/main/products/12843547198"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119997/91199971831.jpg",
+        "mall": "셀렉트 월드",
+        "link": "https://smartstore.naver.com/main/products/13655461046"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196942000",
+    "translated_kr": "인셀덤 더마톨로지 퍼스트 패키지 【부스터 130ml + 세럼 45ml】",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
