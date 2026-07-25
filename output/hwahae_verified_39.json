@@ -4720,5 +4720,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204254720",
+    "translated_kr": "[워터미스트 플럼핑][정품] 마다가스카르 센텔라 히알루론산-테카 플럼핑 앰플 50ml / 스킨부스팅 / 히알플럼 스킨1004",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-테카 플럼핑 앰플",
+      "naver": "[물광플럼핑]스킨1004 마다가스카르 센텔라 히알루-테카 플럼핑 앰플 50ml"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-테카 플럼핑 앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24650",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000255439",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5994613/59946130034.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5994613/59946130034.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000255439"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120128/91201285764.jpg",
+        "mall": "맑음결스토어",
+        "link": "https://smartstore.naver.com/main/products/13656774979"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199087370",
+    "translated_kr": "[한글 1위/탈모 샴푸] 퍼플부스터 [정품] 양파 샴푸 / 보라색 항산화 부스터",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
