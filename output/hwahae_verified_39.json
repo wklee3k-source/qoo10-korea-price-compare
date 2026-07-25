@@ -18855,5 +18855,86 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1150322959",
+    "translated_kr": "스템셀 코코넛 밤 100ml + 앰플 에센스 150ml 2종",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "로나스 스템셀 코코넛 앰플 에센스 150ml+로나스팩 3장"
+    },
+    "brand": "로나스",
+    "name": "로나스 스템셀 코코넛 앰플 에센스 150ml+로나스팩 3장",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "59000",
+    "mall": "스킨셀러",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9303999544",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8684849/86848499867.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8684849/86848499867.jpg",
+        "mall": "스킨셀러",
+        "link": "https://smartstore.naver.com/main/products/9303999544"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8844425/88444255318.jpg",
+        "mall": "에스테일리",
+        "link": "https://smartstore.naver.com/main/products/10899749283"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933268/89332680051.jpg",
+        "mall": "캐치스킨",
+        "link": "https://smartstore.naver.com/main/products/11788169464"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1093307398",
+    "translated_kr": "글루타티온 나이아신아마이드 바디로션 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 나이아신아마이드 바디로션",
+      "naver": "글루타티온 화이트닝 바디로션 나이아신아마이드 바디 톤업 크림 울트라 화이트닝"
+    },
+    "brand": "APLB (에이피엘비)",
+    "name": "글루타치온 나이아신아마이드 바디로션",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "12910",
+    "mall": "Glamour Ground",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13393412087",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9093792/90937922423.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9093792/90937922423.jpg",
+        "mall": "Glamour Ground",
+        "link": "https://smartstore.naver.com/main/products/13393412087"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082073/90820730403.jpg",
+        "mall": "사모에컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13276220071"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082155/90821557222.jpg",
+        "mall": "사모에컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13277046890"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
