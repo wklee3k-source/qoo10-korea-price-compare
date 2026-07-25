@@ -5211,5 +5211,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1131417905",
+    "translated_kr": "아이소이 블레미시 케어 토닉 에센스 130ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블레미쉬 케어 업 세럼",
+      "naver": "아이소이 BR 블레미쉬 케어 토닉 에센스 90ml"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "블레미쉬 케어 업 세럼",
+    "volume": "35ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36860",
+    "mall": "ALL-KPOP MAG",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13366787008",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9091129/90911297344.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091129/90911297344.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/13366787008"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207189650",
+    "translated_kr": "스킨푸드 라이스 브라이트닝 패드 60장(60pcs) 쌀",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
