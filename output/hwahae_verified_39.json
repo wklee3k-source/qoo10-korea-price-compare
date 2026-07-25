@@ -17371,5 +17371,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201560856",
+    "translated_kr": "[NEW] PDRN 카페인 1000 오버나이트 래핑 마스크 50ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 카페인 1000 오버나이트 랩핑 마스크",
+      "naver": "[피부볼륨, 치밀도개선] 피캄 PDRN 카페인 1000 오버나이트 랩핑 마스크 50ml"
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "PDRN 카페인 1000 오버나이트 랩핑 마스크",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "13650",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248750",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5931541/59315416705.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5931541/59315416705.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000248750"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9077269/90772690275.jpg",
+        "mall": "뭉구9",
+        "link": "https://smartstore.naver.com/main/products/13228179944"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9027689/90276896809.jpg",
+        "mall": "매일의행복",
+        "link": "https://smartstore.naver.com/main/products/12732385868"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208992240",
+    "translated_kr": "[NEW] 코스노리 마일드 비건 톤업 선블로 50ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
