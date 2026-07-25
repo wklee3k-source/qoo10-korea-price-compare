@@ -17552,5 +17552,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195095866",
+    "translated_kr": "메디큐브 딥비타C패드 70장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 비타C 패드",
+      "naver": "메디큐브 딥 비타 C 패드 70매 7일의기적"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "딥 비타C 패드",
+    "volume": "150g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "14450",
+    "mall": "예뻐지는뷰티공간",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8720473303",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8626497/86264973626.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626497/86264973626.5.jpg",
+        "mall": "예뻐지는뷰티공간",
+        "link": "https://smartstore.naver.com/main/products/8720473303"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8743662/87436620816.jpg",
+        "mall": "아리아트네",
+        "link": "https://smartstore.naver.com/main/products/9892118543"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9007764/90077643266.jpg",
+        "mall": "GLAM ME UP",
+        "link": "https://smartstore.naver.com/main/products/12533132413"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8743662/87436629408.jpg",
+        "mall": "아리아트네",
+        "link": "https://smartstore.naver.com/main/products/9892127135"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190560191",
+    "translated_kr": "메디큐브 비타C캡슐세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 비타C 캡슐 세럼",
+      "naver": "딥 비타C 캡슐 세럼"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "딥 비타C 캡슐 세럼",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35700",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2541&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5719643/57196433244.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5719643/57196433244.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2541&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
