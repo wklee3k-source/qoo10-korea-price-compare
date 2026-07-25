@@ -6415,5 +6415,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1146297098",
+    "translated_kr": "POLA 포라 화이트샷 세럼 UV WS세럼UV 45g SPF50+ PA++++ 자외선 차단제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트샷 세럼 유브이 [SPF50+/PA++++]",
+      "naver": "POLA 폴라 화이트 샷 세럼 UV"
+    },
+    "brand": "폴라 (POLA)",
+    "name": "화이트샷 세럼 유브이 [SPF50+/PA++++]",
+    "volume": "45g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "90000",
+    "mall": "바리바리숍",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12482676588",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002718/90027187413.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002718/90027187413.jpg",
+        "mall": "바리바리숍",
+        "link": "https://smartstore.naver.com/main/products/12482676588"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087243/90872437407.jpg",
+        "mall": "도쿄루아",
+        "link": "https://smartstore.naver.com/main/products/13327927075"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9094327/90943274036.jpg",
+        "mall": "마이트문 가심비 가성비 몰",
+        "link": "https://smartstore.naver.com/main/products/13398763700"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1138399165",
+    "translated_kr": "McCoy 맥코이 ENEW 액티브번 460mg×180립 서플리먼트 ACTIVE BURN 영양기능식품 L카르니틴 알파리포산",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ACTIVE L-아르기닌 1000"
+    },
+    "brand": "칼로바이 (Calobye)",
+    "name": "ACTIVE L-아르기닌 1000",
+    "volume": "144g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
