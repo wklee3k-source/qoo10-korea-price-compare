@@ -16295,5 +16295,81 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165442274",
+    "translated_kr": "더페이스샵 소울 시크릿 블로썸 향수 오드 퍼팜, 30ml, 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더페이스샵 소울 시크릿 블라썸 향수 은은한 데일리 오드퍼퓸 여성 향수 30ml, 1개"
+    },
+    "brand": "더페이스샵",
+    "name": "더페이스샵 소울 시크릿 블라썸 향수 은은한 데일리 오드퍼퓸 여성 향수 30ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "17490",
+    "mall": "무무셀렉트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13302215672",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9084672/90846726004.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084672/90846726004.jpg",
+        "mall": "무무셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13302215672"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1116944837",
+    "translated_kr": "9가지 중에서 선택 1 / 골드 코어 맥스 키즈 간 케어 식물성 설탕 케어 슬림 50대 한국 제조 한국 유산균 유산균 키즈 프로바이오틱스 밀크시슬 가르시니아 비타민D 생 유산균",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1조 유산균 앰플 미스트",
+      "naver": "큐옴바이오 1조 유산균 앰플 미스트 100ml 피부진정 보습 속건조개선"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "1조 유산균 앰플 미스트",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "55120",
+    "mall": "에코메로우",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13498501518",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+        "mall": "에코메로우",
+        "link": "https://smartstore.naver.com/main/products/13498501518"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8946071/89460714295.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/11916203686"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956224/89562244586.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/12017733894"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122121/91221214429.jpg",
+        "mall": "주식회사 퍼시픽 파마",
+        "link": "https://smartstore.naver.com/main/products/13676703410"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
