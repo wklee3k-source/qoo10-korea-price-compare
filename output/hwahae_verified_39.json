@@ -3195,5 +3195,72 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1159224305",
+    "translated_kr": "비플레인 시카 풀 앰플 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카풀 앰플",
+      "naver": "[수분 진정케어] 비플레인 시카풀 앰플 1세대 30ml, 1개"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "시카풀 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "15400",
+    "mall": "비플레인 beplain",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9928543965",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8747304/87473046238.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8747304/87473046238.5.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/9928543965"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8788825/87888250532.jpg",
+        "mall": "가지고마켓",
+        "link": "https://smartstore.naver.com/main/products/10343746112"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200324318",
+    "translated_kr": "디오디너리 히알루론산 2% + B5 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5",
+      "naver": "디오디너리 히알루론산 2% + B5 수분 세럼 60ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "55300",
+    "mall": "글로벌 핸즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11594852693",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8913936/89139363099.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913936/89139363099.jpg",
+        "mall": "글로벌 핸즈",
+        "link": "https://smartstore.naver.com/main/products/11594852693"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
