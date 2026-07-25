@@ -12704,5 +12704,77 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1152543330",
+    "translated_kr": "【정품】[melable] 멜라블 유 세라블 리프팅 900샷 아이 크림 15ml [눈 아래 지방/눈썹 리프팅]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "유쎄라블 리프팅 900샷 아이크림",
+      "naver": "유세라블 유쎄라 유쎄라블 900샷 메라블 리프팅 아이크림"
+    },
+    "brand": "메라블 (melable)",
+    "name": "유쎄라블 리프팅 900샷 아이크림",
+    "volume": "15ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35900",
+    "mall": "오리무중 잡화점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12551525561",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9009603/90096036414.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009603/90096036414.jpg",
+        "mall": "오리무중 잡화점",
+        "link": "https://smartstore.naver.com/main/products/12551525561"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009602/90096029213.1.jpg",
+        "mall": "엄마의 선물 추천",
+        "link": "https://smartstore.naver.com/main/products/12551518360"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009602/90096027609.1.jpg",
+        "mall": "엄마의 선물 추천",
+        "link": "https://smartstore.naver.com/main/products/12551516756"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1118793119",
+    "translated_kr": "【정품】티르티르 콜라겐 코어 리프팅 마스크 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 코어 리프팅 마스크",
+      "naver": "티르티르 콜라겐 코어 리프팅 마스크 80ml"
+    },
+    "brand": "티르티르 (TIRTIR)",
+    "name": "콜라겐 코어 리프팅 마스크",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "45000",
+    "mall": "지피 MARKET",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13544556002",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9108906/91089066355.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9108906/91089066355.jpg",
+        "mall": "지피 MARKET",
+        "link": "https://smartstore.naver.com/main/products/13544556002"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
