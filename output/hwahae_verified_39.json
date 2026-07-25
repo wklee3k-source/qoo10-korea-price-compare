@@ -15145,5 +15145,64 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190206306",
+    "translated_kr": "메디큐브 코우지산 비타 나이아신아마이드 토너 250ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1201899328",
+    "translated_kr": "워터 글로우 배리어 TX 샷 5000 뷰티 에센스 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "발효미 에센스 글로우 토너 패드",
+      "naver": "루솜 발효미 에센스 글로우 토너 패드 80매 + 80매"
+    },
+    "brand": "루솜 (LUSOM)",
+    "name": "발효미 에센스 글로우 토너 패드",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26000",
+    "mall": "루솜",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13629268637",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117377/91173779246.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117377/91173779246.1.jpg",
+        "mall": "루솜",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13629268637"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071972/90719723944.2.jpg",
+        "mall": "루솜",
+        "link": "https://smartstore.naver.com/main/products/13175212847"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5981413/59814133417.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=169694691&shop_id=51855&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
