@@ -10004,5 +10004,86 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1166619741",
+    "translated_kr": "【정품】판테놀 대나무 마이티 대나무 판테놀 라인 크림 대용량100mL 보습 크림 수분 공급 약산성 저자극【한국화장품】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "로자그라프 하이드라탄티 수분크림 250ml [Rosagraf blue line Hydratante Creme]"
+    },
+    "brand": "로자그라프",
+    "name": "로자그라프 하이드라탄티 수분크림 250ml [Rosagraf blue line Hydratante Creme]",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "119000",
+    "mall": "유럽에사는언니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5004765051",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8254928/82549285718.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8254928/82549285718.5.jpg",
+        "mall": "유럽에사는언니",
+        "link": "https://smartstore.naver.com/main/products/5004765051"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8780005/87800053532.1.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10255549830"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8755693/87556933173.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10012430799"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8663600/86636004635.1.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/9091504312"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060025/90600253213.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/13055742121"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212658644",
+    "translated_kr": "[정품] 서핑·아웃도어에! 워터프루프 프로 선 크림 SPF50+PA++++ 50g 5중 프루프 지속 내수성 테스트 완료 산호초 파괴 성분 미사용 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "73선에센스 [SPF50+/PA++++]",
+      "naver": "메이베나 73선에센스 50mlSPF50+ PA++++ 단백질 탄력 수분 선크림"
+    },
+    "brand": "UNKNOWN",
+    "name": "메이베나 73선에센스 50mlSPF50+ PA++++ 단백질 탄력 수분 선크림",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36800",
+    "mall": "오픈마켓스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13577645180",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112215/91122155591.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112215/91122155591.jpg",
+        "mall": "오픈마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13577645180"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
