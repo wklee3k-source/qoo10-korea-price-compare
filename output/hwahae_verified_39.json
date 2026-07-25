@@ -3602,5 +3602,74 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165210718",
+    "translated_kr": "디오디너리 레티놀 1% 스쿠알란 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 1% 인 스쿠알란",
+      "musinsa": "레티놀 0.2％ 인 스쿠알란 30ml",
+      "naver": "레티놀 1% 인 스쿠알란 30ml"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "레티놀 1% 인 스쿠알란",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15000",
+    "mall": "TheOrdinary",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7590214221",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8513471/85134714543.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8513471/85134714543.1.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/7590214221"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160205194",
+    "translated_kr": "제나벨 PDRN 비타 토닝 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 비타 토닝 앰플",
+      "musinsa": "[2개] PDRN 비타 토닝 앰플 30ml",
+      "naver": "제나벨 PDRN 비타 토닝 앰플 30ml"
+    },
+    "brand": "제나벨 (Genabelle)",
+    "name": "PDRN 비타 토닝 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000207028",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5213310/52133102077.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5213310/52133102077.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000207028"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961302/89613023652.jpg",
+        "mall": "모 두 모 아",
+        "link": "https://smartstore.naver.com/main/products/12068512953"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
