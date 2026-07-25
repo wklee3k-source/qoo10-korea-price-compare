@@ -226,10 +226,21 @@ def t19_pause_resume_discovery_around_merge():
     has_pause = "Pause discovery workers" in block and 'cancel"' in block.replace("'","\"") or "/cancel" in block
     has_resume = "Resume discovery workers after merge" in block
     resume_always = bool(re.search(r"Resume discovery workers after merge[^\n]*\n\s*if:\s*always\(\)", block))
-    resume_dispatches_discovery = bool(re.search(r'Resume discovery[\s\S]{0,700}?run_discovery.{0,5}true', block))
+    resume_section_probe = block[block.find("Resume discovery workers after merge"):]
+    resume_dispatches_discovery = bool(re.search(r'run_discovery.{0,5}true', resume_section_probe[:1500]))
+    # [실패시 대비] curl -s만으로는 dispatch 실패가 조용히 묻힌다. HTTP
+    # 상태코드 확인 + 재시도 + 실패시 가시적 에러(::error::/exit 1)가
+    # 반드시 있어야 한다.
+    resume_section = block[block.find("Resume discovery workers after merge"):]
+    resume_section = resume_section[:resume_section.find("\n  auto_translate:") if "\n  auto_translate:" in resume_section else len(resume_section)]
+    has_status_check = "http_code" in resume_section.lower()
+    has_retry = bool(re.search(r"for i in .*(1 2 3|1\.\.5|seq 1 5)", resume_section))
+    has_visible_failure = "::error::" in resume_section and "exit 1" in resume_section
     ok = has_pause and has_resume and resume_always and resume_dispatches_discovery
+    ok = ok and has_status_check and has_retry and has_visible_failure
     check("19 병합 전후 발굴 일시정지/재기동", ok,
-          f"정지스텝{has_pause} 재기동스텝{has_resume} always(){resume_always} 재기동내용{resume_dispatches_discovery}")
+          f"정지스텝{has_pause} 재기동스텝{has_resume} always(){resume_always} 재기동내용{resume_dispatches_discovery} "
+          f"상태확인{has_status_check} 재시도{has_retry} 가시적실패{has_visible_failure}")
 
 
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사

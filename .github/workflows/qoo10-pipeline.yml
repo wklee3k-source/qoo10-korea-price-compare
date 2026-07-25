@@ -542,10 +542,31 @@ jobs:
           # [신규] 맨 처음 스텝에서 세운 발굴 워커를 여기서 다시 켠다.
           # if: always()라서 병합/번역이 타임아웃/실패해도 반드시 재기동한다
           # — 안 그러면 발굴이 영영 멈춘 채로 방치된다.
+          #
+          # [실패시 대비] curl -s만 쓰면 dispatch가 실패해도(네트워크 문제,
+          # 토큰 권한 문제, API 순간장애 등) 아무 표시 없이 조용히 넘어가고
+          # 발굴은 다음 정각까지(혹은 그 이후로도 계속) 멈춘 채로 방치된다.
+          # 이제 HTTP 상태코드를 직접 확인해서 5회까지 재시도하고, 그래도
+          # 실패하면 ::error::로 워크플로 자체를 실패 처리해서 눈에 띄게 한다.
           echo "[재기동] 발굴 워커를 다시 켠다"
-          curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
-            -d '{"ref":"main","inputs":{"run_discovery":"true","discovery_parallel":"true"}}'
+          SUCCESS=0
+          for i in 1 2 3 4 5; do
+            HTTP_CODE=$(curl -s -o /tmp/resume_resp.json -w "%{http_code}" -X POST \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+              -d '{"ref":"main","inputs":{"run_discovery":"true","discovery_parallel":"true"}}')
+            if [ "$HTTP_CODE" = "204" ]; then
+              echo "[재기동 성공] ($i/5)"
+              SUCCESS=1
+              break
+            fi
+            echo "[재기동 실패] HTTP $HTTP_CODE ($i/5): $(cat /tmp/resume_resp.json)"
+            sleep $((i * 5))
+          done
+          if [ "$SUCCESS" != "1" ]; then
+            echo "::error::발굴 워커 재기동 5회 전부 실패 — 발굴이 멈춘 채로 남아있음. 수동으로 run_discovery+discovery_parallel을 트리거해야 함"
+            exit 1
+          fi
 
   auto_translate:
     # 1단계에서 발굴된 큐텐 상품 중 아직 번역 안 된 것들을 Claude Haiku API로
