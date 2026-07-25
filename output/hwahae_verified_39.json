@@ -3724,5 +3724,64 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1169659543",
+    "translated_kr": "코튼풋 발을 씻자 피치 풋 샴푸 385ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "코튼풋 발을 씻자 풋샴푸 [쿨링]"
+    },
+    "brand": "온더바디 (ON:THEBODY)",
+    "name": "코튼풋 발을 씻자 풋샴푸 [쿨링]",
+    "volume": "385mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169658959",
+    "translated_kr": "스킨푸드 캐롯 카로틴 수딩 토너, 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "캐롯 카로틴 수딩 토너",
+      "musinsa": "[기획세트] 캐롯 수딩 토너 300ml+150ml 미스트타입(+패드2매입*1개 증정)",
+      "naver": "SKINFOOD 캐롯 카로틴 수딩 토너 300ml +패드2매입1개 4107539"
+    },
+    "brand": "스킨푸드 (SKINFOOD)",
+    "name": "캐롯 카로틴 수딩 토너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20310",
+    "mall": "지원HOK06",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13658973346",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120348/91203484132.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120348/91203484132.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13658973346"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024299/90242992447.4.jpg",
+        "mall": "GUSEA",
+        "link": "https://smartstore.naver.com/main/products/12698481523"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
