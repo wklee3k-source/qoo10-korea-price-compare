@@ -2651,5 +2651,67 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1080486669",
+    "translated_kr": "에스네이처 아쿠아 스쿠알란 모이스처 크림 60ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아쿠아 스쿠알란 수분크림",
+      "naver": "1+1 에스네이처 아쿠아 스쿠알란 보습 수분크림 60ml 2개"
+    },
+    "brand": "에스네이처 (S.NATURE)",
+    "name": "아쿠아 스쿠알란 수분크림",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "19280",
+    "mall": "뷰티판도라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11895675383",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8944018/89440185992.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944018/89440185992.1.jpg",
+        "mall": "뷰티판도라",
+        "link": "https://smartstore.naver.com/main/products/11895675383"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1135547179",
+    "translated_kr": "코스알엑스 Low pH Good Morning Gel Cleanser 150ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "약산성 굿모닝 젤 클렌저",
+      "naver": "코스알엑스 약산성 로우 pH 굿모닝 젤 클렌저 150ml Low Good Morning"
+    },
+    "brand": "코스알엑스",
+    "name": "코스알엑스 약산성 로우 pH 굿모닝 젤 클렌저 150ml Low Good Morning",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23490",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9284272979",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8682877/86828773302.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8682877/86828773302.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/9284272979"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
