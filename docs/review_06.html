@@ -23,20 +23,15 @@
   .badge.mismatch { background:#fdeaea; color:#c0392b; }
   .badge.unknown { background:#fdf3e3; color:#a67a1f; }
   .mainrow { display:flex; gap:6px; flex-wrap:wrap; }
-  .mainimg { width:81px; height:81px; cursor:pointer; border:3px solid transparent; border-radius:6px; }
+  .mainimg { width:62px; height:62px; cursor:pointer; border:3px solid transparent; border-radius:6px; }
   .mainimg.selected { border-color:#2a7d46; }
   .mainimg img { width:100%; height:100%; object-fit:contain; border:1px solid #ddd; background:#fafafa; display:block; }
   .name-label { font-size:11px; color:#888; margin-top:8px; }
-  .vol-fix-preview { font-size:12px; background:#fff3f3; border:1px solid #f5b5b5; border-radius:4px;
-                      padding:6px 8px; margin-top:6px; color:#333; }
-  mark.vol-fix { background:#ffd6d6; color:#c0392b; font-weight:700; padding:0 2px; border-radius:2px; }
-  .name-edit, .kr-name-edit { width:100%; box-sizing:border-box; font-size:12px; padding:6px; border:1px solid #ccc;
+  .name-edit { width:100%; box-sizing:border-box; font-size:12px; padding:6px; border:1px solid #ccc;
                 border-radius:4px; font-family:inherit; resize:vertical; margin-top:2px; }
-  .name-edit:focus, .kr-name-edit:focus { border-color:#2a7d46; outline:none; }
+  .name-edit:focus { border-color:#2a7d46; outline:none; }
   .name { font-size:12px; margin:8px 0 2px; line-height:1.4; }
   .name-kr-readonly { font-size:11px; color:#2a5fa0; margin:6px 0 4px; line-height:1.4; }
-  .name-kr-readonly .dim { color:#aaa; }
-  .qoo10-brand { font-size:11px; color:#555; margin-top:4px; }
   .price { font-weight:bold; color:#d0392a; font-size:13px; margin-top:6px; }
   .site { font-size:11px; color:#888; word-break:break-all; }
   .site a { color:#2a5fa0; }
@@ -48,23 +43,13 @@
   .exclude-btn { background:#c0392b; color:#fff; border:none; padding:14px 8px;
                    border-radius:8px; font-size:13px; cursor:pointer; width:100%; line-height:1.4; }
   .exclude-btn.active { background:#7f8c8d; }
-  .pagination { display:flex; justify-content:center; align-items:center; gap:6px; margin:20px 0; flex-wrap:wrap; }
-  .pagination button { padding:6px 12px; border:1px solid #ccc; border-radius:4px; background:#fff; cursor:pointer; font-size:13px; }
-  .pagination button.active { background:#2a7d46; color:#fff; border-color:#2a7d46; font-weight:bold; }
-  .pagination button:disabled { opacity:0.4; cursor:not-allowed; }
-  .pagination .page-info { font-size:12px; color:#666; margin:0 8px; }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
   <button onclick="saveDecisions()">💾 결정 파일 저장 (decisions.json 다운로드)</button>
-  <button onclick="saveToGithub()">☁️ GitHub에 직접 저장</button>
-  <button id="undo-btn" onclick="doUndo()" title="Ctrl+Z">↩️ 되돌리기</button>
-  <button id="redo-btn" onclick="doRedo()" title="Ctrl+Shift+Z">↪️ 다시실행</button>
-  <button onclick="clearAutoSave()" style="background:#888;">🗑️ 임시저장 지우기</button>
   <span class="status" id="status"></span>
-  <span class="status" id="autosave-status" style="color:#2a7d46;"></span>
 </div>
 
 <h1>큐텐 ↔ 한국 실구매처 매칭 검수 (21건, 배치 6/6)</h1>
@@ -72,513 +57,270 @@
 한국쪽 사진은 여러 판매자의 실제 리스팅 사진이니 클릭해서 원하는 걸 고르세요.
 쓸 사진을 클릭하면 그 사진으로 자동 채택되고, 못 쓰는 상품은 "제외" 버튼을 누르세요.</p>
 
-<div id="pagination-top" class="pagination"></div>
 
-
-<div class="card" data-goods="1160698785" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 듀씨엘 공식 스토어">
+<div class="card" data-goods="1191395895" data-qoo10-name="" data-kr-name="스킨앤랩 엑토인 리커버리 선 플루이드 50ml" data-kr-site="naver · 스킨앤랩">
   <div class="side">
-    <h3>큐텐 원본 — I GENTLEMAN</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1160698785','qoo10','https://gd.image-qoo10.jp/li/815/970/7240970815.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/815/970/7240970815.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1191395895','qoo10','https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/803/264/8334264803.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1160698785" rows="2">ジェントルマンオードパルファム50ml（3種類の香り）</textarea>
-    <div class="price">5890 円</div>
-    <div class="goods_no">goods_no: 1160698785 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1160698785" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1191395895" rows="2">[26SS/New]エクトイン リカバリー サンフルイド 50ml #SPF50+ PA++++</textarea>
+    <div class="name-kr-readonly">참고 한글번역: [26SS/신상] 엑토인 리커버리 선플루이드 50ml #SPF50+ PA++++</div>
+    <div class="price">2790 円</div>
+    <div class="goods_no">goods_no: 1191395895</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 지방시 (GIVENCHY) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">공식몰</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1160698785','kr','https://shopping-phinf.pstatic.net/main_9070049/90700494601.jpg',this)" title="듀씨엘 공식 스토어"><img src="https://shopping-phinf.pstatic.net/main_9070049/90700494601.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1160698785','kr','https://shopping-phinf.pstatic.net/main_9070055/90700552184.jpg',this)" title="듀씨엘"><img src="https://shopping-phinf.pstatic.net/main_9070055/90700552184.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ジェントルマンオードパルファム50ml（3種類の香り）</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1160698785" rows="2">지방시 젠틀맨 소사이어티 스포츠 오드퍼퓸 60ml, 1개</textarea>
-    <div class="price">149000 원</div>
-    <div class="site">hwahae · 듀씨엘 공식 스토어 — <a href="https://smartstore.naver.com/main/products/13155983504" target="_blank">구매링크</a></div>
+    <h3>한국 구매처 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1191395895','kr','https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg',this)" title="스킨앤랩"><img src="https://shopping-phinf.pstatic.net/main_9080835/90808356572.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1191395895','kr','https://shopping-phinf.pstatic.net/main_6092292/60922923084.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_6092292/60922923084.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">스킨앤랩 스킨앤랩 엑토인 리커버리 선 플루이드 50ml (80ml)</div>
+    <div class="price">20000 원</div>
+    <div class="site">naver · 스킨앤랩 — <a href="https://smartstore.naver.com/main/products/13263846240" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1173823684" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 스킨벨">
+<div class="card" data-goods="1199735232" data-qoo10-name="" data-kr-name="PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000]" data-kr-site="hwahae · 메디큐브">
   <div class="side">
-    <h3>큐텐 원본 — 雪花秀</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1173823684','qoo10','https://gd.image-qoo10.jp/li/042/017/7540017042.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/042/017/7540017042.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199735232','qoo10','https://gd.image-qoo10.jp/li/770/749/8293749770.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/770/749/8293749770.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1173823684" rows="2">子音水 EX 150ml</textarea>
-    <div class="price">6650 円</div>
-    <div class="goods_no">goods_no: 1173823684 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1173823684" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1199735232" rows="2">PDRNピンクエクソソームショット2000, 30ml</textarea>
+    <div class="name-kr-readonly">참고 한글번역: PDRN 핑크 엑소좀샷 2000, 30ml</div>
+    <div class="price">2300 円</div>
+    <div class="goods_no">goods_no: 1199735232</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 설화수 (Sulwhasoo) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1173823684','kr','https://shopping-phinf.pstatic.net/main_8753978/87539788827.4.jpg',this)" title="스킨벨"><img src="https://shopping-phinf.pstatic.net/main_8753978/87539788827.4.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 子音水 EX 150ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1173823684" rows="2">NEW 설화수 자음수 EX 150ml</textarea>
-    <div class="price">42000 원</div>
-    <div class="site">hwahae · 스킨벨 — <a href="https://smartstore.naver.com/main/products/9995286554" target="_blank">구매링크</a></div>
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199735232','kr','https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg',this)" title="메디큐브"><img src="https://shopping-phinf.pstatic.net/main_5467249/54672498922.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">메디큐브 (medicube) PDRN 핑크 콜라겐 엑소좀 샷 앰플 [2000] (30ml)</div>
+    <div class="price">33400 원</div>
+    <div class="site">hwahae · 메디큐브 — <a href="https://themedicube.co.kr/product/detail.html?product_no=2154&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1120129564" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 차미오">
+<div class="card" data-goods="1172085888" data-qoo10-name="" data-kr-name="풀핏 프로폴리스 라이트 앰플" data-kr-site="hwahae · 코스알엑스">
   <div class="side">
-    <h3>큐텐 원본 — HAUM</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1120129564','qoo10','https://gd.image-qoo10.jp/li/204/318/7123318204.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/204/318/7123318204.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1172085888','qoo10','https://gd.image-qoo10.jp/li/462/892/7482892462.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/462/892/7482892462.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1120129564" rows="2">ヘアロールブラシ(Big,58mm)ヘアスタイリング</textarea>
-    <div class="price">4475 円</div>
-    <div class="goods_no">goods_no: 1120129564 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1120129564" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1172085888" rows="2">フルフィットプロポリスライトアンプル, 30ml</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 풀핏 프로폴리스 라이트 앰플, 30ml</div>
+    <div class="price">2337 円</div>
+    <div class="goods_no">goods_no: 1172085888</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 차미오 (Chamio) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1120129564','kr','https://shopping-phinf.pstatic.net/main_8425197/84251976447.5.jpg',this)" title="차미오"><img src="https://shopping-phinf.pstatic.net/main_8425197/84251976447.5.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1120129564','kr','https://shopping-phinf.pstatic.net/main_8286435/82864356073.2.jpg',this)" title="가위달인"><img src="https://shopping-phinf.pstatic.net/main_8286435/82864356073.2.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ヘアロールブラシ(Big,58mm)ヘアスタイリング</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1120129564" rows="2">차미오 와인 TW 롤브러쉬 백돈모 드라이롤빗 헤어브러쉬 뿌리볼륨 앞머리 대왕롤 롤빗 2호</textarea>
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1172085888','kr','https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg',this)" title="코스알엑스"><img src="https://shopping-phinf.pstatic.net/main_8383015/83830159511.13.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1172085888','kr','https://shopping-phinf.pstatic.net/main_8383015/83830159512.13.jpg',this)" title="코스알엑스"><img src="https://shopping-phinf.pstatic.net/main_8383015/83830159512.13.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">코스알엑스 (COSRX) 풀핏 프로폴리스 라이트 앰플 (30ml)</div>
+    <div class="price">37600 원</div>
+    <div class="site">hwahae · 코스알엑스 — <a href="https://smartstore.naver.com/main/products/6285657022" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1161371182" data-qoo10-name="" data-kr-name="루트 볼륨 픽서" data-kr-site="hwahae · 제니하우스 브랜드스토어">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1161371182','qoo10','https://gd.image-qoo10.jp/li/124/344/7256344124.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/124/344/7256344124.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <textarea class="name-edit" data-goods="1161371182" rows="2">ルートボリュームフィクサー, 200ml</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 루트 볼륨 픽서, 200ml</div>
+    <div class="price">3154 円</div>
+    <div class="goods_no">goods_no: 1161371182</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1161371182','kr','https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg',this)" title="제니하우스 브랜드스토어"><img src="https://shopping-phinf.pstatic.net/main_8864523/88645230320.8.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1161371182','kr','https://shopping-phinf.pstatic.net/main_8707426/87074267541.7.jpg',this)" title="제니하우스"><img src="https://shopping-phinf.pstatic.net/main_8707426/87074267541.7.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">제니하우스 (jennyhouse) 루트 볼륨 픽서 (200ml)</div>
+    <div class="price">26900 원</div>
+    <div class="site">hwahae · 제니하우스 브랜드스토어 — <a href="https://smartstore.naver.com/main/products/11100719998" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1134579258" data-qoo10-name="" data-kr-name="실리콘 데미 누드브라" data-kr-site="naver · 베리시">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1134579258','qoo10','https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/415/856/8254856415.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <textarea class="name-edit" data-goods="1134579258" rows="2">ロレアルプロフェッショナル メタルDX ディスカバリー2種キット（シャンプー100mL＋マスク75mL）</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 로레알 프로페셔널 메탈DX 디스커버리 2종 키트 (샴푸 100mL + 마스크 75mL)</div>
+    <div class="price">5270 円</div>
+    <div class="goods_no">goods_no: 1134579258</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1134579258','kr','https://shopping-phinf.pstatic.net/main_6067943/60679436361.jpg',this)" title="베리시"><img src="https://shopping-phinf.pstatic.net/main_6067943/60679436361.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">베리시 실리콘 데미 누드브라 </div>
+    <div class="price">28400 원</div>
+    <div class="site">naver · 베리시 — <a href="https://verish.me/product/detail.html?product_no=1274&cate_no=61&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1196815742" data-qoo10-name="" data-kr-name="모델링 크림 마스크 [부활초스쿱]" data-kr-site="hwahae · 무신사">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1196815742','qoo10','https://gd.image-qoo10.jp/li/555/725/8096725555.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/555/725/8096725555.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <textarea class="name-edit" data-goods="1196815742" rows="2">モデリングクリームマスク 71g スパチュラ付き / ドクダミ 復活草 保湿パック 密着パック 韓国コスメ</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 모델링크림마스크 71g 스파츌라 포함 / 어성초 부활초 보습팩 밀착팩 한국화장품</div>
+    <div class="price">1799 円</div>
+    <div class="goods_no">goods_no: 1196815742</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1196815742','kr','https://shopping-phinf.pstatic.net/main_5337980/53379806108.1.jpg',this)" title="무신사"><img src="https://shopping-phinf.pstatic.net/main_5337980/53379806108.1.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">아비브 (Abib) 모델링 크림 마스크 [부활초스쿱] (71ml)</div>
+    <div class="price">11520 원</div>
+    <div class="site">hwahae · 무신사 — <a href="https://link.musinsa.com/app/goods/4861371?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=327302" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1164705875" data-qoo10-name="" data-kr-name="워터프루프 프로 선크림 [SPF50+/PA++++]" data-kr-site="hwahae · 부쉬맨">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1164705875','qoo10','https://gd.image-qoo10.jp/li/021/840/7339840021.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/021/840/7339840021.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <textarea class="name-edit" data-goods="1164705875" rows="2">ウォータープルーフプロ日焼け止め 50g+サンスティック 20g / アウトドア スポーツ対応UVクリーム 汗・水に強いスティックタイプ 手を汚さない</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 워터프루프 프로 선크림 50g+선스틱 20g / 아웃도어 스포츠용 UV크림 땀・물에 강한 스틱타입 손이 안 더러워짐</div>
+    <div class="price">5499 円</div>
+    <div class="goods_no">goods_no: 1164705875</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1164705875','kr','https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg',this)" title="부쉬맨"><img src="https://shopping-phinf.pstatic.net/main_8935874/89358748299.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">부쉬맨 (BUSHMAN) 워터프루프 프로 선크림 [SPF50+/PA++++] (50g)</div>
+    <div class="price">55300 원</div>
+    <div class="site">hwahae · 부쉬맨 — <a href="https://shopping.naver.com/outlink/itemdetail/11814237712" target="_blank">구매링크</a></div>
+  </div>
+  <div class="checklist">
+    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
+  </div>
+</div>
+
+<div class="card" data-goods="1209710276" data-qoo10-name="" data-kr-name="퍼퓸 헤어 샴푸 530ml" data-kr-site="naver · 아도르공식몰">
+  <div class="side">
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1209710276','qoo10','https://gd.image-qoo10.jp/li/811/353/8377353811.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/811/353/8377353811.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
+    <textarea class="name-edit" data-goods="1209710276" rows="2">[26SS/New]パフュームヘアシャンプー 530ml（+100ml） #Angel muguet発売</textarea>
+    <div class="name-kr-readonly">참고 한글번역: [26SS/신상]퍼퓸헤어샴푸 530ml(+100ml) #엔젤뮤게 발매</div>
+    <div class="price">4344 円</div>
+    <div class="goods_no">goods_no: 1209710276</div>
+  </div>
+  <div class="side">
+    <h3>한국 구매처 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">공식몰</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1209710276','kr','https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg',this)" title="아도르공식몰"><img src="https://shopping-phinf.pstatic.net/main_5511257/55112571566.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209710276','kr','https://shopping-phinf.pstatic.net/main_8956085/89560854101.jpg',this)" title="아도르"><img src="https://shopping-phinf.pstatic.net/main_8956085/89560854101.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209710276','kr','https://shopping-phinf.pstatic.net/main_8956089/89560891334.jpg',this)" title="아도르"><img src="https://shopping-phinf.pstatic.net/main_8956089/89560891334.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209710276','kr','https://shopping-phinf.pstatic.net/main_9119133/91191336798.jpg',this)" title="아도르"><img src="https://shopping-phinf.pstatic.net/main_9119133/91191336798.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">아도르 퍼퓸 헤어 샴푸 530ml </div>
     <div class="price">29000 원</div>
-    <div class="site">hwahae · 차미오 — <a href="https://smartstore.naver.com/main/products/6707476125" target="_blank">구매링크</a></div>
+    <div class="site">naver · 아도르공식몰 — <a href="https://lador.co.kr/product/detail.html?product_no=390&cate_no=82&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1190777856" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 리바이탈래쉬">
+<div class="card" data-goods="1199084782" data-qoo10-name="" data-kr-name="비건 콤부차 티 에센스" data-kr-site="hwahae · 닥터슈라클">
   <div class="side">
-    <h3>큐텐 원본 — Dr.FORHAIR</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1190777856','qoo10','https://gd.image-qoo10.jp/li/331/592/7940592331.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/331/592/7940592331.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199084782','qoo10','https://gd.image-qoo10.jp/li/302/908/8128908302.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/302/908/8128908302.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1190777856" rows="2">【韓国正品】Folligen Thickening Shampoo 500ml+500ml (+100ml)</textarea>
-    <div class="price">4050 円</div>
-    <div class="goods_no">goods_no: 1190777856 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1190777856" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1199084782" rows="2">ヴィーガンコンブチャ ティー エッセンス 150ml 保湿 しっとり エッセンス 韓国コスメ</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 비건콤부차티에센스 150ml 보습 촉촉 에센스 한국화장품</div>
+    <div class="price">3380 円</div>
+    <div class="goods_no">goods_no: 1199084782</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 리바이탈래쉬 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1190777856','kr','https://shopping-phinf.pstatic.net/main_8225061/82250611641.2.jpg',this)" title="리바이탈래쉬"><img src="https://shopping-phinf.pstatic.net/main_8225061/82250611641.2.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1190777856','kr','https://shopping-phinf.pstatic.net/main_9073494/90734946417.jpg',this)" title="유로타이거"><img src="https://shopping-phinf.pstatic.net/main_9073494/90734946417.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1190777856','kr','https://shopping-phinf.pstatic.net/main_8973093/89730936573.jpg',this)" title="호주직구마켓"><img src="https://shopping-phinf.pstatic.net/main_8973093/89730936573.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1190777856','kr','https://shopping-phinf.pstatic.net/main_8635669/86356691788.jpg',this)" title="유럽마을"><img src="https://shopping-phinf.pstatic.net/main_8635669/86356691788.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1190777856','kr','https://shopping-phinf.pstatic.net/main_8937760/89377603175.jpg',this)" title="Reborn Store"><img src="https://shopping-phinf.pstatic.net/main_8937760/89377603175.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 【韓国正品】Folligen Thickening Shampoo 500ml+500ml (+100ml)</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1190777856" rows="2">리바이탈래쉬 헤어 Thickening Shampoo 헤어 샴푸</textarea>
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199084782','kr','https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg',this)" title="닥터슈라클"><img src="https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">닥터슈라클 (Dr.Ceuracle) 비건 콤부차 티 에센스 (150ml)</div>
     <div class="price">38000 원</div>
-    <div class="site">naver · 리바이탈래쉬 — <a href="https://smartstore.naver.com/main/products/4706090690" target="_blank">구매링크</a></div>
+    <div class="site">hwahae · 닥터슈라클 — <a href="https://smartstore.naver.com/main/products/5300270782" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1153052364" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 마지스레네">
+<div class="card" data-goods="1205776987" data-qoo10-name="" data-kr-name="에이지알 글루타치온 글로우 캡슐 크림" data-kr-site="hwahae · 메디큐브">
   <div class="side">
-    <h3>큐텐 원본 — dlexo</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1153052364','qoo10','https://gd.image-qoo10.jp/li/637/400/7055400637.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/637/400/7055400637.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1205776987','qoo10','https://gd.image-qoo10.jp/li/426/644/8267644426.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/426/644/8267644426.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1153052364" rows="2">グルタチオン トーニング ソリューション アンプル 35ml</textarea>
-    <div class="price">5000 円</div>
-    <div class="goods_no">goods_no: 1153052364 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1153052364" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1205776987" rows="2">AGE-R グルタチオン グロウ カプセル クリーム 50ml 保湿 スキンケア 並行輸入</textarea>
+    <div class="name-kr-readonly">참고 한글번역: AGE-R 글루타치온글로우캡슐크림 50ml 보습 스킨케어 병행수입</div>
+    <div class="price">3530 円</div>
+    <div class="goods_no">goods_no: 1205776987</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 마지스레네 (MAGISLENE) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1153052364','kr','https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg',this)" title="마지스레네"><img src="https://shopping-phinf.pstatic.net/main_9074842/90748428872.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1153052364','kr','https://shopping-phinf.pstatic.net/main_8945025/89450255204.2.jpg',this)" title="COSMATIC"><img src="https://shopping-phinf.pstatic.net/main_8945025/89450255204.2.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1153052364','kr','https://shopping-phinf.pstatic.net/main_8943611/89436113145.1.jpg',this)" title="에스몰 코스메틱"><img src="https://shopping-phinf.pstatic.net/main_8943611/89436113145.1.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): グルタチオン トーニング ソリューション アンプル 35ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1153052364" rows="2">마지스레네 블랑쉬 글루타치온 토닝 앰플 50ml + 50ml</textarea>
-    <div class="price">70000 원</div>
-    <div class="site">hwahae · 마지스레네 — <a href="https://smartstore.naver.com/main/products/13203917775" target="_blank">구매링크</a></div>
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1205776987','kr','https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg',this)" title="메디큐브"><img src="https://shopping-phinf.pstatic.net/main_4683850/46838504096.5.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">메디큐브 (medicube) 에이지알 글루타치온 글로우 캡슐 크림 (50ml)</div>
+    <div class="price">49000 원</div>
+    <div class="site">hwahae · 메디큐브 — <a href="https://themedicube.co.kr/product/detail.html?product_no=1610&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1203952993" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 루벨 lubelle">
+<div class="card" data-goods="1198940759" data-qoo10-name="" data-kr-name="[쿨링진정] 조선미녀 아쿠아프레쉬 선크림 50ml+20ml 증정 기획" data-kr-site="naver · 올리브영">
   <div class="side">
-    <h3>큐텐 원본 — Lebel</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1203952993','qoo10','https://gd.image-qoo10.jp/li/190/175/8376175190.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/190/175/8376175190.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1198940759','qoo10','https://gd.image-qoo10.jp/li/313/816/8125816313.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/313/816/8125816313.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1203952993" rows="2">ルベル ザ・モイ バーム アンビエントデュウ (ボディ・ヘアトリートメントバーム) 37g</textarea>
-    <div class="price">2904 円</div>
-    <div class="goods_no">goods_no: 1203952993 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1203952993" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1198940759" rows="2">Relief Sun Aqua-Fresh : Rice + B5 アクアフレッシュ UVクリーム 50ml 米 うるおい 日焼け止め</textarea>
+    <div class="name-kr-readonly">참고 한글번역: 릴리프선아쿠아프레시 : 쌀+B5 아쿠아프레시 UV크림 50ml 쌀 촉촉함 선크림</div>
+    <div class="price">2240 円</div>
+    <div class="goods_no">goods_no: 1198940759</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 루벨 (LUBELLE) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1203952993','kr','https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg',this)" title="루벨 lubelle"><img src="https://shopping-phinf.pstatic.net/main_9071713/90717130248.7.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1203952993','kr','https://shopping-phinf.pstatic.net/main_8431551/84315515029.1.jpg',this)" title="얀센코스메틱코리아"><img src="https://shopping-phinf.pstatic.net/main_8431551/84315515029.1.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ルベル ザ・モイ バーム アンビエントデュウ (ボディ・ヘアトリートメントバーム) 37g</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1203952993" rows="2">루벨 실크 선 세럼 선크림 선케어 자외선nad 수분 화잘먹 촉촉</textarea>
-    <div class="price">15900 원</div>
-    <div class="site">hwahae · 루벨 lubelle — <a href="https://smartstore.naver.com/main/products/13172619151" target="_blank">구매링크</a></div>
+    <h3>한국 구매처 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">신뢰채널</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1198940759','kr','https://shopping-phinf.pstatic.net/main_5437268/54372680578.1.jpg',this)" title="올리브영"><img src="https://shopping-phinf.pstatic.net/main_5437268/54372680578.1.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">조선미녀 [쿨링진정] 조선미녀 아쿠아프레쉬 선크림 50ml+20ml 증정 기획 </div>
+    <div class="price">15000 원</div>
+    <div class="site">naver · 올리브영 — <a href="https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000224658" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
 
-<div class="card" data-goods="1213654206" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 미카샵1">
+<div class="card" data-goods="1210464824" data-qoo10-name="" data-kr-name="콜라겐 코팅 헤어 A+ 머슬 샴푸" data-kr-site="hwahae · 엘리자베카">
   <div class="side">
-    <h3>큐텐 원본 — Repit</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1213654206','qoo10','https://gd.image-qoo10.jp/li/602/062/8398062602.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/602/062/8398062602.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
+    <h3>큐텐 원본</h3>
+    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1210464824','qoo10','https://gd.image-qoo10.jp/li/445/396/8358396445.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/445/396/8358396445.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1213654206" rows="2">ナチュラルピュアヘアトリートメント1000g</textarea>
-    <div class="price">5150 円</div>
-    <div class="goods_no">goods_no: 1213654206 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213654206" target="_blank">큐텐 원본 링크</a></div>
+    <textarea class="name-edit" data-goods="1210464824" rows="2">[SET]CER-100 コラーゲン コーティング ヘア A+ マッスルシャンプー 500ml +トメント リンス 500ml</textarea>
+    <div class="name-kr-readonly">참고 한글번역: [SET]CER-100 콜라겐코팅헤어A+ 머슬샴푸 500ml + 트리트먼트 린스 500ml</div>
+    <div class="price">3400 円</div>
+    <div class="goods_no">goods_no: 1210464824</div>
   </div>
   <div class="side">
-    <h3>한국 구매처 — 내추럴 (Natural) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1213654206','kr','https://shopping-phinf.pstatic.net/main_9061877/90618770506.jpg',this)" title="미카샵1"><img src="https://shopping-phinf.pstatic.net/main_9061877/90618770506.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1213654206','kr','https://shopping-phinf.pstatic.net/main_9061740/90617400280.jpg',this)" title="미카샵1"><img src="https://shopping-phinf.pstatic.net/main_9061740/90617400280.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ナチュラルピュアヘアトリートメント1000g</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1213654206" rows="2">알로에 베라 주스 500ml 99% 퓨어 내추럴</textarea>
-    <div class="price">44600 원</div>
-    <div class="site">hwahae · 미카샵1 — <a href="https://smartstore.naver.com/main/products/13074259414" target="_blank">구매링크</a></div>
+    <h3>한국 구매처 <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
+    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1210464824','kr','https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg',this)" title="엘리자베카"><img src="https://shopping-phinf.pstatic.net/main_2177844/21778440437.2.jpg" alt="kr" loading="lazy"></div></div>
+    <div class="name">엘리자베카 (Elizavecca) 콜라겐 코팅 헤어 A+ 머슬 샴푸 (500ml)</div>
+    <div class="price">25000 원</div>
+    <div class="site">hwahae · 엘리자베카 — <a href="https://elizavecca.com/goods/goods_view.php?goodsNo=986&inflow=naver" target="_blank">구매링크</a></div>
   </div>
   <div class="checklist">
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
 </div>
-
-<div class="card" data-goods="1204085525" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 해외조준">
-  <div class="side">
-    <h3>큐텐 원본 — AFRIMO</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1204085525','qoo10','https://gd.image-qoo10.jp/li/168/294/8238294168.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/168/294/8238294168.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1204085525" rows="2">[秘密の恋の香り] ザ・ボディ 女性用香水 50ml #シャワー直後の清潔感, 上品な色気 #石鹸の香り #ムスク #韓国香水 #愛され香水</textarea>
-    <div class="price">7990 円</div>
-    <div class="goods_no">goods_no: 1204085525 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204085525" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 닷사이 (DASSAI) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1204085525','kr','https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg',this)" title="해외조준"><img src="https://shopping-phinf.pstatic.net/main_9002223/90022237217.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): [秘密の恋の香り] ザ・ボディ 女性用香水 50ml <span class="dim">#シャワー直後の清潔感,</span> 上品な色気 <span class="dim">#石鹸の香り</span> <span class="dim">#ムスク</span> <span class="dim">#韓国香水</span> <span class="dim">#愛され香水</span></div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1204085525" rows="2">마리아갈랑 280 수분 페이셜 마스크 50ml</textarea>
-    <div class="price">99200 원</div>
-    <div class="site">hwahae · 해외조준 — <a href="https://smartstore.naver.com/main/products/12477726392" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1199466558" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · dermure">
-  <div class="side">
-    <h3>큐텐 원본 — SE:CRUNO</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1199466558','qoo10','https://gd.image-qoo10.jp/li/820/709/8143709820.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/820/709/8143709820.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1199466558" rows="2">シークルーノ　スノーアイススプレー　ソレスカーラ72【トロピカルパインの香り】</textarea>
-    <div class="price">1650 円</div>
-    <div class="goods_no">goods_no: 1199466558 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199466558" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 히스토랩 (HISTOLAB) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1199466558','kr','https://shopping-phinf.pstatic.net/main_8956658/89566586827.2.jpg',this)" title="dermure"><img src="https://shopping-phinf.pstatic.net/main_8956658/89566586827.2.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199466558','kr','https://shopping-phinf.pstatic.net/main_8173460/81734607767.4.jpg',this)" title="아토스킨"><img src="https://shopping-phinf.pstatic.net/main_8173460/81734607767.4.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1199466558','kr','https://shopping-phinf.pstatic.net/main_8956658/89566589967.jpg',this)" title="dermure"><img src="https://shopping-phinf.pstatic.net/main_8956658/89566589967.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): シークルーノ　スノーアイススプレー　ソレスカーラ72【トロピカルパインの香り】</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1199466558" rows="2">.히스토랩 아줄렌 컴플렉스 앰플 72% 150ml / 지성피부 강추 트러블 완화 앰플</textarea>
-    <div class="price">65840 원</div>
-    <div class="site">hwahae · dermure — <a href="https://smartstore.naver.com/main/products/12022076135" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1174027129" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 버진뷰티">
-  <div class="side">
-    <h3>큐텐 원본 — Parnell</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1174027129','qoo10','https://gd.image-qoo10.jp/li/737/482/7544482737.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/737/482/7544482737.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1174027129" rows="2">【2023 Olive Young ベスト】【鎮静/保湿】シカ 弱酸性ボディミスト150ml/ボディケア/背中ニキビ/毛穴開き/角質ケア/低刺激/敏感肌/さっぱり/老廃物ケア/ヒアルロン酸/乾燥肌</textarea>
-    <div class="price">3325 円</div>
-    <div class="goods_no">goods_no: 1174027129 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1174027129" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 나스 (NARS) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1174027129','kr','https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg',this)" title="버진뷰티"><img src="https://shopping-phinf.pstatic.net/main_9105421/91054213217.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1174027129','kr','https://shopping-phinf.pstatic.net/main_9069658/90696588057.jpg',this)" title="타임인헤븐"><img src="https://shopping-phinf.pstatic.net/main_9069658/90696588057.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 【2023 Olive Young ベスト】【鎮静/保湿】シカ 弱酸性ボディミスト150ml/ボディケア/背中ニキビ/毛穴開き/角質ケア/低刺激/敏感肌/さっぱり/老廃物ケア/ヒアルロン酸/乾燥肌</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1174027129" rows="2">나스 에프터글로우 립 밤 미스에듀케이션 3g</textarea>
-    <div class="price">57300 원</div>
-    <div class="site">hwahae · 버진뷰티 — <a href="https://smartstore.naver.com/main/products/13509702865" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1209638394" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 어니스트불">
-  <div class="side">
-    <h3>큐텐 원본 — KINUJO</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1209638394','qoo10','https://gd.image-qoo10.jp/li/928/210/8376210928.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/928/210/8376210928.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1209638394" rows="2">KINUJO (キヌージョ) 絹女 ストレートアイロン LM225</textarea>
-    <div class="price">17884 円</div>
-    <div class="goods_no">goods_no: 1209638394 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209638394" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1209638394','kr','https://shopping-phinf.pstatic.net/main_9105719/91057190270.jpg',this)" title="어니스트불"><img src="https://shopping-phinf.pstatic.net/main_9105719/91057190270.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): KINUJO (キヌージョ) 絹女 ストレートアイロン LM225</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1209638394" rows="2">KINUJO 키누조 LM225 스트레이트 고데기</textarea>
-    <div class="price">214600 원</div>
-    <div class="site">naver · 어니스트불 — <a href="https://smartstore.naver.com/main/products/13512679918" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1075911810" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 뉴페이스몰">
-  <div class="side">
-    <h3>큐텐 원본 — MAZARIN</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1075911810','qoo10','https://gd.image-qoo10.jp/li/289/196/5405196289.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/289/196/5405196289.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1075911810" rows="2">ROSEE Mazarin Marine Collagen Sun Block 100ml</textarea>
-    <div class="price">1830 円</div>
-    <div class="goods_no">goods_no: 1075911810 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1075911810" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 마자린 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1075911810','kr','https://shopping-phinf.pstatic.net/main_8324280/83242802310.jpg',this)" title="뉴페이스몰"><img src="https://shopping-phinf.pstatic.net/main_8324280/83242802310.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ROSEE Mazarin Marine Collagen Sun Block 100ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1075911810" rows="2">로제 마자린 마린 콜라겐 선블럭 100ml/자외선차단</textarea>
-    <div class="price">6400 원</div>
-    <div class="site">naver · 뉴페이스몰 — <a href="https://smartstore.naver.com/main/products/5698304272" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1208145396" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 홀리추얼">
-  <div class="side">
-    <h3>큐텐 원본 — HOLITUAL</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1208145396','qoo10','https://gd.image-qoo10.jp/li/416/559/8321559416.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/416/559/8321559416.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1208145396" rows="2">holitual micro balancing essence 150ml</textarea>
-    <div class="price">5730 円</div>
-    <div class="goods_no">goods_no: 1208145396 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1208145396" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 홀리추얼 <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1208145396','kr','https://shopping-phinf.pstatic.net/main_8276603/82766038642.2.jpg',this)" title="홀리추얼"><img src="https://shopping-phinf.pstatic.net/main_8276603/82766038642.2.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1208145396','kr','https://shopping-phinf.pstatic.net/main_9034558/90345587232.1.jpg',this)" title="래디언스몰"><img src="https://shopping-phinf.pstatic.net/main_9034558/90345587232.1.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): holitual micro balancing essence 150ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1208145396" rows="2">홀리추얼 마이크로 밸런싱 에센스 150ml</textarea>
-    <div class="price">52000 원</div>
-    <div class="site">naver · 홀리추얼 — <a href="https://smartstore.naver.com/main/products/5221516633" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1131627367" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 바름인터내셔널">
-  <div class="side">
-    <h3>큐텐 원본 — B＆HEAL</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1131627367','qoo10','https://gd.image-qoo10.jp/li/913/830/6932830913.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/913/830/6932830913.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1131627367" rows="2">【ヒカロニック】 超低分子 ヒアルロン酸 トナー 200ml</textarea>
-    <div class="price">2190 円</div>
-    <div class="goods_no">goods_no: 1131627367 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1131627367" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 이즈앤트리 (IsNtree) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1131627367','kr','https://shopping-phinf.pstatic.net/main_9113046/91130466320.jpg',this)" title="바름인터내셔널"><img src="https://shopping-phinf.pstatic.net/main_9113046/91130466320.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 【ヒカロニック】 超低分子 ヒアルロン酸 トナー 200ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1131627367" rows="2">이즈앤트리 초저분자 히아루론산 토너 300ml, 1개</textarea>
-    <div class="price">12750 원</div>
-    <div class="site">hwahae · 바름인터내셔널 — <a href="https://smartstore.naver.com/main/products/13585955908" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1194994405" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 월드세븐">
-  <div class="side">
-    <h3>큐텐 원본 — EELHOE</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1194994405','qoo10','https://gd.image-qoo10.jp/li/538/059/8063059538.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/538/059/8063059538.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1194994405" rows="2">コラーゲンハリ肌ボディクリーム全身に潤いを与え乾燥・ガサガサ肌を改善肌を柔らかく滑らかに整えハリと弾力のある肌へ導くボディケアクリームです</textarea>
-    <div class="price">2047 円</div>
-    <div class="goods_no">goods_no: 1194994405 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1194994405" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 라비린 (Lavilin) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1194994405','kr','https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg',this)" title="월드세븐"><img src="https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1194994405','kr','https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg',this)" title="드림원스토어"><img src="https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1194994405','kr','https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg',this)" title="jj-pro store"><img src="https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): コラーゲンハリ肌ボディクリーム全身に潤いを与え乾燥・ガサガサ肌を改善肌を柔らかく滑らかに整えハリと弾力のある肌へ導くボディケアクリームです</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1194994405" rows="2">라비린 언더암 데오드란트 크림 12.5g Underarm Deodorant Cream</textarea>
-    <div class="price">37710 원</div>
-    <div class="site">hwahae · 월드세븐 — <a href="https://smartstore.naver.com/main/products/10455298324" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1187354085" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 강산 마켓">
-  <div class="side">
-    <h3>큐텐 원본 — ahohwa</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1187354085','qoo10','https://gd.image-qoo10.jp/li/259/919/7864919259.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/259/919/7864919259.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1187354085" rows="2">エラズレン ペプタブルー クリーム 50ml</textarea>
-    <div class="price">4832 円</div>
-    <div class="goods_no">goods_no: 1187354085 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1187354085" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 크림밀크 (KreamMilk) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1187354085','kr','https://shopping-phinf.pstatic.net/main_8941509/89415097634.jpg',this)" title="강산 마켓"><img src="https://shopping-phinf.pstatic.net/main_8941509/89415097634.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1187354085','kr','https://shopping-phinf.pstatic.net/main_9041223/90412230518.jpg',this)" title="바오shop"><img src="https://shopping-phinf.pstatic.net/main_9041223/90412230518.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1187354085','kr','https://shopping-phinf.pstatic.net/main_9110427/91104275833.jpg',this)" title="봄봄프리마켓"><img src="https://shopping-phinf.pstatic.net/main_9110427/91104275833.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): エラズレン ペプタブルー クリーム 50ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1187354085" rows="2">크림밀크 저분자 히알루론산 2X 올인원 로션, 100ml, 1개</textarea>
-    <div class="price">11340 원</div>
-    <div class="site">hwahae · 강산 마켓 — <a href="https://smartstore.naver.com/main/products/11870587040" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1209413731" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 에브리스킨">
-  <div class="side">
-    <h3>큐텐 원본 — PROQUALITE</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1209413731','qoo10','https://gd.image-qoo10.jp/li/382/943/8345943382.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/382/943/8345943382.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1209413731" rows="2">プロカリテ ＥＸヘアマスク １８０Ｇ</textarea>
-    <div class="price">2706 円</div>
-    <div class="goods_no">goods_no: 1209413731 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1209413731" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 더쎄라 (THESERA) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1209413731','kr','https://shopping-phinf.pstatic.net/main_8782555/87825550548.1.jpg',this)" title="에브리스킨"><img src="https://shopping-phinf.pstatic.net/main_8782555/87825550548.1.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209413731','kr','https://shopping-phinf.pstatic.net/main_8970778/89707783170.2.jpg',this)" title="에끌라 에스테틱"><img src="https://shopping-phinf.pstatic.net/main_8970778/89707783170.2.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209413731','kr','https://shopping-phinf.pstatic.net/main_8885962/88859622760.jpg',this)" title="쏘울언니"><img src="https://shopping-phinf.pstatic.net/main_8885962/88859622760.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1209413731','kr','https://shopping-phinf.pstatic.net/main_8936438/89364386875.jpg',this)" title="이즈더뷰티"><img src="https://shopping-phinf.pstatic.net/main_8936438/89364386875.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): プロカリテ ＥＸヘアマスク １８０Ｇ</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1209413731" rows="2">더쎄라 루텐션 블랙EX 헤어 마스크 250ml</textarea>
-    <div class="price">480000 원</div>
-    <div class="site">hwahae · 에브리스킨 — <a href="https://smartstore.naver.com/main/products/10281046724" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1196576304" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 그린코스">
-  <div class="side">
-    <h3>큐텐 원본 — fruit of the earth</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1196576304','qoo10','https://gd.image-qoo10.jp/li/407/618/8092618407.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/407/618/8092618407.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1196576304" rows="2">初摘み緑茶 モイスト クレンジングフォーム 50g</textarea>
-    <div class="price">1645 円</div>
-    <div class="goods_no">goods_no: 1196576304 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1196576304" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 과일나라 (KWAILNARA) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1196576304','kr','https://shopping-phinf.pstatic.net/main_8259431/82594313369.jpg',this)" title="그린코스"><img src="https://shopping-phinf.pstatic.net/main_8259431/82594313369.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 初摘み緑茶 モイスト クレンジングフォーム 50g</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1196576304" rows="2">과일나라 피부가 마시는 첫물녹차 모이스트 클렌징 폼</textarea>
-    <div class="price">7920 원</div>
-    <div class="site">hwahae · 그린코스 — <a href="https://smartstore.naver.com/main/products/5049792285" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1183746235" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 월드세븐">
-  <div class="side">
-    <h3>큐텐 원본 — RERACINE</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1183746235','qoo10','https://gd.image-qoo10.jp/li/881/683/8351683881.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/881/683/8351683881.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1183746235" rows="2">【ペプチドでハリ弾力】シカリペアクリーム ××マイルド処方で肌を整える集中ケアクリーム 80g 肌荒れケア エッセンス 導入美容液 美容液 セラム アンプル セラミド ナイアシンアミド 保湿</textarea>
-    <div class="price">8600 円</div>
-    <div class="goods_no">goods_no: 1183746235 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1183746235" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 라비린 (Lavilin) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1183746235','kr','https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg',this)" title="월드세븐"><img src="https://shopping-phinf.pstatic.net/main_8799980/87999803501.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1183746235','kr','https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg',this)" title="드림원스토어"><img src="https://shopping-phinf.pstatic.net/main_8334769/83347692200.11.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1183746235','kr','https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg',this)" title="jj-pro store"><img src="https://shopping-phinf.pstatic.net/main_8609877/86098776898.2.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): 【ペプチドでハリ弾力】シカリペアクリーム ××マイルド処方で肌を整える集中ケアクリーム 80g 肌荒れケア エッセンス 導入美容液 美容液 セラム アンプル セラミド ナイアシンアミド 保湿</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1183746235" rows="2">라비린 언더암 데오드란트 크림 12.5g Underarm Deodorant Cream</textarea>
-    <div class="price">37710 원</div>
-    <div class="site">hwahae · 월드세븐 — <a href="https://smartstore.naver.com/main/products/10455298324" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1192793148" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 수플러스주식회사">
-  <div class="side">
-    <h3>큐텐 원본 — MAYBELLINE NEW YORK</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1192793148','qoo10','https://gd.image-qoo10.jp/li/573/148/7996148573.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/573/148/7996148573.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    
-    <textarea class="name-edit" data-goods="1192793148" rows="2">メイベリン SP ステイ ダブルフィクサー スプレー</textarea>
-    <div class="price">1650 円</div>
-    <div class="goods_no">goods_no: 1192793148 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1192793148" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 노에비아 (NOEVIR) <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1192793148','kr','https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg',this)" title="수플러스주식회사"><img src="https://shopping-phinf.pstatic.net/main_8280729/82807295709.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1192793148','kr','https://shopping-phinf.pstatic.net/main_9091124/90911240424.jpg',this)" title="핫태몰"><img src="https://shopping-phinf.pstatic.net/main_9091124/90911240424.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): メイベリン SP ステイ ダブルフィクサー スプレー</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1192793148" rows="2">노에비아 스페치알레 SP 크림50미리</textarea>
-    <div class="price">1092500 원</div>
-    <div class="site">hwahae · 수플러스주식회사 — <a href="https://smartstore.naver.com/main/products/5262773147" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-
-<div class="card" data-goods="1158680840" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 다비네스">
-  <div class="side">
-    <h3>큐텐 원본 — ダビネス</h3>
-    <div class="mainrow"><div class="mainimg" data-side="qoo10" onclick="selectImage('1158680840','qoo10','https://gd.image-qoo10.jp/li/579/063/7163063579.g_300-w-st_g.jpg',this)"><img src="https://gd.image-qoo10.jp/li/579/063/7163063579.g_300-w-st_g.jpg" alt="qoo10" loading="lazy"></div></div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    <div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ダヴィネス(Davines) オイ ミルク <mark class="vol-fix">1000ml</mark></div>
-    <textarea class="name-edit" data-goods="1158680840" rows="2">ダヴィネス(Davines) オイ ミルク 1000ml</textarea>
-    <div class="price">3600 円</div>
-    <div class="goods_no">goods_no: 1158680840 — <a href="https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1158680840" target="_blank">큐텐 원본 링크</a></div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처 — 다비네스 (davines) <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span></h3>
-    <div class="mainrow"><div class="mainimg" data-side="kr" onclick="selectImage('1158680840','kr','https://shopping-phinf.pstatic.net/main_8540138/85401381749.64.jpg',this)" title="다비네스"><img src="https://shopping-phinf.pstatic.net/main_8540138/85401381749.64.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1158680840','kr','https://shopping-phinf.pstatic.net/main_8651267/86512675229.56.jpg',this)" title="다비네스"><img src="https://shopping-phinf.pstatic.net/main_8651267/86512675229.56.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1158680840','kr','https://shopping-phinf.pstatic.net/main_8268441/82684413588.jpg',this)" title="프라하쇼핑"><img src="https://shopping-phinf.pstatic.net/main_8268441/82684413588.jpg" alt="kr" loading="lazy"></div><div class="mainimg" data-side="kr" onclick="selectImage('1158680840','kr','https://shopping-phinf.pstatic.net/main_8330233/83302330295.1.jpg',this)" title="유로타이거"><img src="https://shopping-phinf.pstatic.net/main_8330233/83302330295.1.jpg" alt="kr" loading="lazy"></div></div>
-    <div class="name-kr-readonly">📎 참고 한글번역(큐텐원문): ダヴィネス(Davines) オイ ミルク 135ml</div>
-    <div class="name-label">↓ 한글 상품명(구매처 원본, 수정가능) — 위 참고번역과 비교:</div>
-    <textarea class="kr-name-edit" data-goods="1158680840" rows="2">[다비네스] 에너자이징 샴푸 1L, 1개</textarea>
-    <div class="price">124450 원</div>
-    <div class="site">hwahae · 다비네스 — <a href="https://smartstore.naver.com/main/products/7856881426" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
-    <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
-  </div>
-</div>
-<div id="pagination-bottom" class="pagination"></div>
 <script>
 function selectImage(goodsNo, side, url, el) {
   var card = el.closest('.card');
@@ -617,7 +359,7 @@ document.querySelectorAll('.card').forEach(function(card) {
   }
 });
 
-function collectResults() {
+function saveDecisions() {
   var cards = document.querySelectorAll('.card');
   var results = [];
   cards.forEach(function(card) {
@@ -627,188 +369,17 @@ function collectResults() {
     var included = !excluded && hasSelection;
     var nameEditEl = card.querySelector('.name-edit');
     var finalQoo10Name = nameEditEl ? nameEditEl.value : card.dataset.qoo10Name;
-    var krNameEditEl = card.querySelector('.kr-name-edit');
-    var finalKrName = krNameEditEl ? krNameEditEl.value : card.dataset.krName;
     results.push({
       goods_no: goodsNo,
       qoo10_name_final: finalQoo10Name,
-      kr_name: finalKrName,
+      kr_name: card.dataset.krName,
       kr_site: card.dataset.krSite,
       match_confirmed: included,
       image_usable: included,
       image_source: included ? card.dataset.selectedSource : null,
-      final_image: included ? card.dataset.selectedUrl : null,
-      excluded: excluded
+      final_image: included ? card.dataset.selectedUrl : null
     });
   });
-  return results;
-}
-
-// [중간저장] localStorage에 자동저장 — 파일(경로)별로 구분된 키를 쓰므로
-// 새로고침/브라우저를 껐다 켜도 마지막 작업상태가 그대로 복원된다.
-var BATCH_ID = "review_06";  // build_review_batches.py가 실제 배치ID로 치환한다(원본 review.html을 직접 열면 이 문자열 그대로 남아 pathname을 쓴다)
-var AUTOSAVE_KEY = 'qoo10_review_autosave_' + (BATCH_ID.indexOf("BATCH_ID") === -1 ? BATCH_ID : location.pathname);
-
-function autoSaveToLocalStorage() {
-  try {
-    localStorage.setItem(AUTOSAVE_KEY, JSON.stringify({
-      savedAt: new Date().toISOString(),
-      results: collectResults()
-    }));
-    var el = document.getElementById('autosave-status');
-    if (el) el.textContent = '임시저장됨 ' + new Date().toLocaleTimeString();
-  } catch (e) {
-    console.error('임시저장 실패:', e);
-  }
-}
-
-function restoreFromLocalStorage() {
-  var raw;
-  try {
-    raw = localStorage.getItem(AUTOSAVE_KEY);
-  } catch (e) {
-    return;
-  }
-  if (!raw) return;
-  var saved;
-  try {
-    saved = JSON.parse(raw);
-  } catch (e) {
-    return;
-  }
-  var byGoods = {};
-  (saved.results || []).forEach(function(r) { byGoods[r.goods_no] = r; });
-
-  document.querySelectorAll('.card').forEach(function(card) {
-    var r = byGoods[card.dataset.goods];
-    if (!r) return;
-    var nameEditEl = card.querySelector('.name-edit');
-    if (nameEditEl && r.qoo10_name_final != null) nameEditEl.value = r.qoo10_name_final;
-    var krNameEditEl = card.querySelector('.kr-name-edit');
-    if (krNameEditEl && r.kr_name != null) krNameEditEl.value = r.kr_name;
-    if (r.excluded) {
-      card.classList.add('excluded');
-      var btn = card.querySelector('.exclude-btn');
-      if (btn) { btn.classList.add('active'); btn.textContent = '✅ 제외 취소'; }
-    }
-    if (r.final_image) {
-      var img = card.querySelector('.mainimg[data-side="' + r.image_source + '"] img[src="' + r.final_image + '"]');
-      if (img) {
-        var mainimg = img.closest('.mainimg');
-        card.querySelectorAll('.mainimg').forEach(function(m) { m.classList.remove('selected'); });
-        mainimg.classList.add('selected');
-        card.dataset.selectedSource = r.image_source;
-        card.dataset.selectedUrl = r.final_image;
-      }
-    }
-  });
-  var el = document.getElementById('autosave-status');
-  if (el) el.textContent = '이전 작업 복원됨 (' + new Date(saved.savedAt).toLocaleString() + ' 저장분)';
-}
-
-function clearAutoSave() {
-  if (!confirm('임시저장된 내용을 지우고 새로 시작할까요? (다운로드한 decisions.json 파일은 그대로 남습니다)')) return;
-  localStorage.removeItem(AUTOSAVE_KEY);
-  location.reload();
-}
-
-// [되돌리기/실행취소] 매 변경마다(디바운스 후) 전체 상태 스냅샷을 스택에
-// 쌓아서 Ctrl+Z(되돌리기)/Ctrl+Shift+Z(다시실행)로 이동할 수 있게 한다.
-var undoStack = [];
-var redoStack = [];
-var MAX_UNDO = 50;
-var _applyingHistory = false;  // history 적용 중엔 그 자체를 다시 undo스택에 안 쌓기 위한 플래그
-
-function snapshotState() {
-  return JSON.stringify(collectResults());
-}
-
-function pushUndoSnapshot() {
-  if (_applyingHistory) return;
-  var snap = snapshotState();
-  if (undoStack.length && undoStack[undoStack.length - 1] === snap) return;  // 변화없으면 중복저장 안함
-  undoStack.push(snap);
-  if (undoStack.length > MAX_UNDO) undoStack.shift();
-  redoStack = [];  // 새 변경이 생기면 redo 기록은 무효화
-  updateUndoRedoButtons();
-}
-
-function applySnapshot(snapJson) {
-  var saved;
-  try { saved = JSON.parse(snapJson); } catch (e) { return; }
-  var byGoods = {};
-  saved.forEach(function(r) { byGoods[r.goods_no] = r; });
-  _applyingHistory = true;
-  document.querySelectorAll('.card').forEach(function(card) {
-    var r = byGoods[card.dataset.goods];
-    if (!r) return;
-    var nameEditEl = card.querySelector('.name-edit');
-    if (nameEditEl && r.qoo10_name_final != null) nameEditEl.value = r.qoo10_name_final;
-    var krNameEditEl = card.querySelector('.kr-name-edit');
-    if (krNameEditEl && r.kr_name != null) krNameEditEl.value = r.kr_name;
-    card.classList.toggle('excluded', !!r.excluded);
-    var btn = card.querySelector('.exclude-btn');
-    if (btn) {
-      btn.classList.toggle('active', !!r.excluded);
-      btn.textContent = r.excluded ? '✅ 제외 취소' : '❌ 이 상품 제외';
-    }
-  });
-  _applyingHistory = false;
-}
-
-function doUndo() {
-  if (undoStack.length < 2) return;  // 현재상태 1개뿐이면 되돌릴 게 없음
-  redoStack.push(undoStack.pop());
-  applySnapshot(undoStack[undoStack.length - 1]);
-  autoSaveToLocalStorage();
-  updateUndoRedoButtons();
-}
-
-function doRedo() {
-  if (!redoStack.length) return;
-  var snap = redoStack.pop();
-  undoStack.push(snap);
-  applySnapshot(snap);
-  autoSaveToLocalStorage();
-  updateUndoRedoButtons();
-}
-
-function updateUndoRedoButtons() {
-  var undoBtn = document.getElementById('undo-btn');
-  var redoBtn = document.getElementById('redo-btn');
-  if (undoBtn) undoBtn.disabled = undoStack.length < 2;
-  if (redoBtn) redoBtn.disabled = redoStack.length === 0;
-}
-
-document.addEventListener('keydown', function(e) {
-  var ctrlOrCmd = e.ctrlKey || e.metaKey;
-  if (!ctrlOrCmd || e.key.toLowerCase() !== 'z') return;
-  e.preventDefault();
-  if (e.shiftKey) doRedo(); else doUndo();
-});
-
-// 입력할 때마다(디바운스) 자동 임시저장 + 되돌리기 스냅샷 기록
-var _autoSaveTimer = null;
-function scheduleAutoSave() {
-  clearTimeout(_autoSaveTimer);
-  _autoSaveTimer = setTimeout(function() {
-    autoSaveToLocalStorage();
-    pushUndoSnapshot();
-  }, 800);
-}
-document.addEventListener('input', function(e) {
-  if (e.target.classList.contains('name-edit') || e.target.classList.contains('kr-name-edit')) {
-    scheduleAutoSave();
-  }
-});
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('exclude-btn') || e.target.closest('.mainimg')) {
-    scheduleAutoSave();
-  }
-});
-
-function saveDecisions() {
-  var results = collectResults();
   var blob = new Blob([JSON.stringify(results, null, 2)], {type: "application/json"});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -819,132 +390,6 @@ function saveDecisions() {
   document.getElementById('status').textContent =
     "저장됨 (" + new Date().toLocaleTimeString() + ") — 다운로드 폴더의 decisions.json 확인";
 }
-
-// [GitHub에 직접 저장] decisions.json을 다운로드만 하지 않고, GitHub 저장소에
-// 바로 커밋한다(Contents API 사용). 토큰은 최초 1회만 물어보고 이 브라우저의
-// localStorage에 저장해둔다(대시보드와 동일한 방식).
-var GH_REPO = "wklee3k-source/qoo10-korea-price-compare";
-var GH_SAVE_PATH_PREFIX = "comparison/decisions/";
-
-function getGhSaveToken() {
-  var token = localStorage.getItem('qoo10_gh_save_token');
-  if (!token) {
-    token = prompt('GitHub 토큰을 입력하세요(저장소에 직접 저장용, 최초 1회만):');
-    if (token) localStorage.setItem('qoo10_gh_save_token', token.trim());
-  }
-  return token ? token.trim() : '';
-}
-
-async function saveToGithub() {
-  var token = getGhSaveToken();
-  if (!token) return;
-  var statusEl = document.getElementById('status');
-  statusEl.textContent = 'GitHub에 저장 중...';
-
-  var results = collectResults();
-  var fileName = (location.pathname.split('/').pop() || 'decisions') + '.json';
-  var path = GH_SAVE_PATH_PREFIX + fileName;
-  var apiUrl = 'https://api.github.com/repos/' + GH_REPO + '/contents/' + path;
-  var content = btoa(unescape(encodeURIComponent(JSON.stringify(results, null, 2))));
-
-  try {
-    // 기존 파일이 있으면 sha가 있어야 업데이트 가능 — 먼저 조회
-    var sha = null;
-    var getRes = await fetch(apiUrl, {headers: {Authorization: 'token ' + token}});
-    if (getRes.ok) {
-      var getData = await getRes.json();
-      sha = getData.sha;
-    }
-    var body = {
-      message: '검수 결정 저장: ' + fileName + ' (' + new Date().toLocaleString() + ')',
-      content: content,
-    };
-    if (sha) body.sha = sha;
-    var putRes = await fetch(apiUrl, {
-      method: 'PUT',
-      headers: {Authorization: 'token ' + token, 'Content-Type': 'application/json'},
-      body: JSON.stringify(body),
-    });
-    if (putRes.ok) {
-      statusEl.textContent = 'GitHub 저장 완료 (' + new Date().toLocaleTimeString() + ') — ' + path;
-    } else {
-      var errData = await putRes.json();
-      statusEl.textContent = 'GitHub 저장 실패: ' + (errData.message || putRes.status);
-    }
-  } catch (e) {
-    statusEl.textContent = 'GitHub 저장 실패: ' + e.message;
-  }
-}
-
-// [GitHub에서 불러오기] 페이지를 열 때, 이 배치에 대해 GitHub에 저장된
-// 결정파일이 있으면 그걸로 복원한다(localStorage보다 우선 — 다른
-// 브라우저/기기에서 저장한 것도 GitHub을 통하면 이어받을 수 있다).
-async function loadFromGithub() {
-  var token = localStorage.getItem('qoo10_gh_save_token');
-  if (!token) return false;  // 토큰이 없으면(한 번도 GitHub저장 안 해봤으면) 조용히 넘어감
-  var fileName = (BATCH_ID.indexOf("BATCH_ID") === -1 ? BATCH_ID : (location.pathname.split('/').pop() || 'decisions')) + '.json';
-  var path = GH_SAVE_PATH_PREFIX + fileName;
-  var apiUrl = 'https://api.github.com/repos/' + GH_REPO + '/contents/' + path;
-  try {
-    var res = await fetch(apiUrl, {headers: {Authorization: 'token ' + token}});
-    if (!res.ok) return false;
-    var data = await res.json();
-    var content = decodeURIComponent(escape(atob(data.content)));
-    var results = JSON.parse(content);
-    applySnapshot(JSON.stringify(results));
-    var el = document.getElementById('autosave-status');
-    if (el) el.textContent = 'GitHub 저장분 불러옴 (' + new Date().toLocaleTimeString() + ')';
-    return true;
-  } catch (e) {
-    console.error('GitHub 불러오기 실패:', e);
-    return false;
-  }
-}
-
-(async function initRestore() {
-  var loadedFromGithub = await loadFromGithub();
-  if (!loadedFromGithub) restoreFromLocalStorage();
-  pushUndoSnapshot();
-  updateUndoRedoButtons();
-})();
-
-
-// 페이지네이션: 20개씩 보여준다
-(function() {
-  var PAGE_SIZE = 20;
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
-  var totalPages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
-  var currentPage = 1;
-
-  function renderPage(page) {
-    currentPage = Math.min(Math.max(1, page), totalPages);
-    cards.forEach(function(card, i) {
-      var cardPage = Math.floor(i / PAGE_SIZE) + 1;
-      card.style.display = (cardPage === currentPage) ? '' : 'none';
-    });
-    renderControls();
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }
-
-  function renderControls() {
-    var html = '';
-    html += '<button ' + (currentPage === 1 ? 'disabled' : '') + ' onclick="__goPage(' + (currentPage - 1) + ')">‹ 이전</button>';
-    var start = Math.max(1, currentPage - 3);
-    var end = Math.min(totalPages, start + 6);
-    if (start > 1) html += '<button onclick="__goPage(1)">1</button><span class="page-info">…</span>';
-    for (var p = start; p <= end; p++) {
-      html += '<button class="' + (p === currentPage ? 'active' : '') + '" onclick="__goPage(' + p + ')">' + p + '</button>';
-    }
-    if (end < totalPages) html += '<span class="page-info">…</span><button onclick="__goPage(' + totalPages + ')">' + totalPages + '</button>';
-    html += '<button ' + (currentPage === totalPages ? 'disabled' : '') + ' onclick="__goPage(' + (currentPage + 1) + ')">다음 ›</button>';
-    html += '<span class="page-info">' + cards.length + '건 중 ' + ((currentPage - 1) * PAGE_SIZE + 1) + '-' + Math.min(currentPage * PAGE_SIZE, cards.length) + '번째 (총 ' + totalPages + '페이지)</span>';
-    document.getElementById('pagination-top').innerHTML = html;
-    document.getElementById('pagination-bottom').innerHTML = html;
-  }
-
-  window.__goPage = function(p) { renderPage(p); };
-  renderPage(1);
-})();
 </script>
 </body>
 </html>
