@@ -14363,5 +14363,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1137918631",
+    "translated_kr": "【정품】그라펜 볼륨업 휩토닉 100ml (2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "볼륨업 휘핑 토닉"
+    },
+    "brand": "그라펜 (GRAFEN)",
+    "name": "볼륨업 휘핑 토닉",
+    "volume": "250ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205554253",
+    "translated_kr": "【정품】메디테라피 트라넥삼산 스킨부스터 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트라넥삼산 흔적 크림",
+      "naver": "메디테라피 트라넥삼산 스킨 부스터 크림 100ml 1개"
+    },
+    "brand": "메디테라피 (MEDITHERAPY)",
+    "name": "트라넥삼산 흔적 크림",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "40400",
+    "mall": "브릿지마켓01",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13661309056",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120581/91205819897.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120581/91205819897.jpg",
+        "mall": "브릿지마켓01",
+        "link": "https://smartstore.naver.com/main/products/13661309056"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
