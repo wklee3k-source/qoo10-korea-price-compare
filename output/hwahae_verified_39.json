@@ -17740,5 +17740,87 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1125687253",
+    "translated_kr": "에스트라 아토배리어365 바디로션 400ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 바디로션",
+      "naver": "[더블] 에스트라 아토베리어365 바디로션 400ml x 2개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 바디로션",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "52800",
+    "mall": "에스트라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/7221143000",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8476564/84765643322.108.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8476564/84765643322.108.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/7221143000"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8476564/84765643323.99.jpg",
+        "mall": "에스트라",
+        "link": "https://shopping.naver.com/outlink/itemdetail/7221143001"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956129/89561293402.jpg",
+        "mall": "뷰티카운셀러 beautyc",
+        "link": "https://smartstore.naver.com/main/products/12016782710"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142664761",
+    "translated_kr": "에스쁘아 워터스플래시 선크림 프레시 시카 SPF50+ PA++++ 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터 스플래쉬 선크림 [SPF50+/PA++++] [프레쉬시카]",
+      "naver": "에스쁘아 워터 스플래쉬 선크림 프레쉬 시카 SPF50+ PA++++"
+    },
+    "brand": "에스쁘아 (espoir)",
+    "name": "워터 스플래쉬 선크림 [SPF50+/PA++++] [프레쉬시카]",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17600",
+    "mall": "잇츠백",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11940207140",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8948471/89484717826.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8948471/89484717826.jpg",
+        "mall": "잇츠백",
+        "link": "https://smartstore.naver.com/main/products/11940207140"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8630152/86301523388.jpg",
+        "mall": "아웃스토리",
+        "link": "https://smartstore.naver.com/main/products/8757023066"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9039000/90390001173.jpg",
+        "mall": "옐로옐로용",
+        "link": "https://smartstore.naver.com/main/products/12845490181"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
