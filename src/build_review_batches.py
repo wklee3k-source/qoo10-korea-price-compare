@@ -46,8 +46,11 @@ def render_cards(pairs: list[dict]) -> str:
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        elif p.get("vol_status") == "unknown":
+            vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
+        qty_badge = '<span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span>' if p.get("qty_auto_corrected") else ''
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
@@ -62,7 +65,11 @@ def render_cards(pairs: list[dict]) -> str:
 
         kr_name_val = p['kr_name'] or ''
         already_has_qty = bool(re.search(r"\d+\s*(개|매|セット|1\+1)", kr_name_val))
-        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty else ''
+        # [수정] 세트상품(is_set)은 extract_quantity가 "세트=최소2개"라는
+        # 기본값을 주는데, 이건 "같은 상품 2개"가 아니라 "서로 다른 상품이
+        # 묶인 것"이므로 "(2개)"를 붙이면 오해를 준다(실측 사례: "오일+폼"
+        # 세트에 "(2개)"가 붙어서 "같은 걸 2개 준다"처럼 보였음).
+        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty and not p.get('is_set') else ''
         kr_name_full = f"{kr_name_val}{qty_suffix}"
 
         cards_html.append(f'''
@@ -71,14 +78,14 @@ def render_cards(pairs: list[dict]) -> str:
     <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 용량 자동수정: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
-    <div class="goods_no">goods_no: {goods_no}</div>
+    <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
   </div>
   <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
+    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>

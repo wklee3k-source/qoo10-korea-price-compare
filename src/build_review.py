@@ -47,6 +47,18 @@ def extract_volume_ml(text: str) -> float | None:
     return num * 1000 if unit == "l" else num
 
 
+def extract_sheet_count(text: str) -> int | None:
+    """시트마스크/패치류는 mL이 아니라 "장수"(枚/매)로 스펙을 표시하는 게
+    일반적이다. mL 정보가 없어도 이 장수끼리는 정확히 비교 가능하다
+    (실측 확인된 사례: 큐텐원본 "10枚", 구매처 "21ml 10매"는 실제로
+    같은 상품인데, mL만 비교하면 큐텐쪽에 mL 자체가 없어서 비교가
+    안 됐었음 — 枚/매 개수를 대신 비교하면 정확히 일치를 판정할 수 있다)."""
+    if not text:
+        return None
+    m = re.search(r"(\d+)\s*(枚|매)\b", text)
+    return int(m.group(1)) if m else None
+
+
 def extract_quantity(text: str) -> int:
     """제목/상품명에서 실제 수량(묶음개수)을 추출한다(한글 상품명에 개수를
     명시적으로 표시하기 위함).
@@ -144,9 +156,37 @@ def build_pairs():
         qoo10_vol = extract_volume_ml(q["title"])
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
+        vol_status = "match" if vol_match else ("unknown" if qoo10_vol is None or kr_vol is None else "mismatch")
+
+        # [개선] mL로 비교가 안 되면(둘 중 하나라도 mL정보 없음) 그냥
+        # "판단불가"로 남기지 않고, 시트/장수(枚/매) 개수로 대신 비교해서
+        # 진짜 일치/불일치를 가려낸다 — 시트마스크류는 mL이 아니라 장수로
+        # 스펙을 표시하는 게 일반적이라, 장수가 정확히 맞으면 실제로는
+        # 같은 상품인 경우가 많다(실측 사례: 큐텐 "10枚" vs 구매처
+        # "21ml 10매" → mL은 큐텐에 없지만 枚/매 개수 10=10으로 정확히
+        # 일치 판정 가능).
+        if vol_status == "unknown":
+            qoo10_sheets = extract_sheet_count(q["title"])
+            kr_sheets = extract_sheet_count(kr_name_display) or extract_sheet_count(x.get("volume") or "")
+            if qoo10_sheets is not None and kr_sheets is not None:
+                vol_status = "match" if qoo10_sheets == kr_sheets else "mismatch"
+                vol_match = vol_status == "match"
 
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
+        kr_qty = extract_quantity(kr_name_display)
+        # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
+        # 있거나, 구매처 원본명에 "세트/SET"가 있는 경우(예: "선물세트",
+        # "기획세트"도 포함 — "N종"이 꼭 붙어야만 세트인 게 아니다).
+        # [중요] extract_quantity()는 "세트"라는 단어만 있어도 수량=2로
+        # 간주하는데, 이건 "같은 상품 2개"와 "서로 다른 상품이 묶인 세트"를
+        # 구분 못 한다(실측 사례: "펩타이드 크림+앰플+파우치+쇼핑백"을
+        # 묶은 "기미케어 선물세트"에 큐텐원본 크림을 "X 2個"로 잘못
+        # 표시함). is_set이면 아래 수량자동수정 자체를 건너뛴다.
+        is_set = bool(
+            re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
+            or re.search(r"세트|SET", kr_name_display, re.I)
+        )
 
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
@@ -175,20 +215,53 @@ def build_pairs():
             qoo10_title_highlighted = escaped_title
             vol_auto_corrected = True
 
+        # [자동수정: 수량] 한국쪽 실제 구매처 상품이 "X 2개"처럼 여러 개
+        # 묶음인데, 큐텐 원본 제목엔 그 수량 표시가 전혀 없으면(예: 원문이
+        # "PDRN 핑크 콜라겐 볼륨 멀티밤 10g"뿐인데 실제 구매처는 "X 2개"),
+        # 업로드용 제목 끝에 "X {N}個"를 붙여서 실제 소싱수량을 반영한다.
+        # 이미 원문 자체에 수량표기(個/個入 등)가 있으면 건드리지 않는다
+        # (중복표기 방지). 브랜드불일치일 때는 용량수정과 동일하게 건너뛴다.
+        qty_auto_corrected = False
+        qoo10_qty = extract_quantity(q["title"])
+        if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1 and not is_set:
+            qty_suffix_jp = f" X {kr_qty}個"
+            qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
+            if qoo10_title_highlighted:
+                qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            else:
+                qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            qty_auto_corrected = True
+        # [반대 케이스] 한국쪽은 실제로 1개만 사는데(kr_qty<=1), 큐텐
+        # 원본 제목에는 "2個"처럼 수량표기가 있으면 그 표기를 제거한다 —
+        # 실측 사례: 큐텐원문 "...50ml 2個"인데 실제 소싱처는 1개짜리
+        # ("50ml" 단품)였음. 표기를 안 지우면 "2개 준다"고 오해할 수 있어
+        # 위험하다.
+        qty_removed_original = None
+        if kr_qty <= 1 and qoo10_qty > 1 and brand_status != "mismatch" and not is_set:
+            # [1+1]처럼 대괄호로 감싼 "덤" 표기와, "2個"류 단위수량 표기를
+            # 둘 다 잡아서 제거한다(실측 사례: 큐텐원문 "[1+1]...100g"인데
+            # 실제 소싱은 1개뿐이었음 — "1+1"을 그대로 두면 "하나 더
+            # 준다"고 오해하게 됨).
+            qty_removal_pattern = re.compile(r"\s*[\(\[]?\d+\s*\+\s*\d+[\)\]]?|\s*[\(\[]?[Xx×]?\s*\d+\s*(個|개|입|병|本)[\)\]]?")
+            m = qty_removal_pattern.search(qoo10_title_display)
+            if m:
+                qty_removed_original = m.group(0).strip()
+                qoo10_title_display = qty_removal_pattern.sub("", qoo10_title_display, count=1).strip()
+                if qoo10_title_highlighted:
+                    qoo10_title_highlighted = qty_removal_pattern.sub(
+                        lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', qoo10_title_highlighted, count=1)
+                else:
+                    qoo10_title_highlighted = qty_removal_pattern.sub(
+                        lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', q["title"], count=1)
+                qty_auto_corrected = True
+
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
-        kr_qty = extract_quantity(kr_name_display)
-        # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
-        # 있거나, 구매처 원본명에 "N종세트"가 있는 경우
-        is_set = bool(
-            re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
-            or re.search(r"\d+종\s*(세트|SET)", kr_name_display, re.I)
-        )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
-            "vol_auto_corrected": vol_auto_corrected, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
+            "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -253,8 +326,11 @@ def build_html(pairs: list[dict]):
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
+        elif p.get("vol_status") == "unknown":
+            vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
+        qty_badge = '<span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span>' if p.get("qty_auto_corrected") else ''
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
@@ -272,7 +348,11 @@ def build_html(pairs: list[dict]):
         # 보충해서 붙인다. 원본에 이미 "2개"/"1+1" 등이 있으면 중복 방지로 안 붙임.
         kr_name_val = p['kr_name'] or ''
         already_has_qty = bool(re.search(r"\d+\s*(개|매|セット|1\+1)", kr_name_val))
-        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty else ''
+        # [수정] 세트상품(is_set)은 extract_quantity가 "세트=최소2개"라는
+        # 기본값을 주는데, 이건 "같은 상품 2개"가 아니라 "서로 다른 상품이
+        # 묶인 것"이므로 "(2개)"를 붙이면 오해를 준다(실측 사례: "오일+폼"
+        # 세트에 "(2개)"가 붙어서 "같은 걸 2개 준다"처럼 보였음).
+        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty and not p.get('is_set') else ''
         kr_name_full = f"{kr_name_val}{qty_suffix}"
 
         cards_html.append(f'''
@@ -281,14 +361,14 @@ def build_html(pairs: list[dict]):
     <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 용량 자동수정: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
-    <div class="goods_no">goods_no: {goods_no}</div>
+    <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
   </div>
   <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
+    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
