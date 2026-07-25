@@ -56,6 +56,13 @@ SYSTEM_PROMPT = """너는 큐텐재팬(일본 이커머스)의 한국 화장품 
 
 
 def _call_api(user_content: str, max_tokens: int = 4000) -> str:
+    """[중대버그 이력] max_tokens가 4000 고정이던 시절, translate_in_place가
+    batch_size=len(titles)로 수천 건을 한 통에 보내는 바람에 응답이 약 80건
+    분량에서 잘렸다. 잘린 뒤쪽은 아래 폴백 로직이 '일본어 원문 그대로'를
+    translated_kr에 채워넣었고, 그 칸이 채워졌다는 이유로 재번역 대상에서도
+    영구 제외됐다 — 실측 2,520건 중 2,035건(80.8%)이 일본어인 채로 굳었다.
+    이제 (1) 배치를 잘게 쪼개고 (2) 배치 크기에 비례해 토큰을 잡고
+    (3) 실패는 원문 폴백이 아니라 None으로 남겨 재시도되게 한다."""
     payload = json.dumps({
         "model": MODEL,
         "max_tokens": max_tokens,
@@ -69,6 +76,43 @@ def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     with urllib.request.urlopen(req, timeout=60) as res:
         data = json.loads(res.read().decode("utf-8"))
     return data["content"][0]["text"]
+
+
+KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
+HANGUL_RE = re.compile(r"[가-힣]")
+CJK_RE = re.compile(r"[一-龯]")
+MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
+MAX_BATCH_SIZE = 15     # 이보다 크게 보내면 응답이 잘린다(실측 80건 부근에서 절단)
+MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
+
+
+def validate_translation(original: str, translated: str | None) -> tuple[bool, str]:
+    """번역 결과 3중 검사. (통과여부, 사유)를 돌려준다.
+
+    [1] 개수검사 — 애초에 결과가 없으면(번호 파싱 실패/응답 잘림) 탈락.
+    [2] 글자검사 — 가나가 남아있거나 한글이 하나도 없으면 번역이 안 된 것.
+    [3] 길이검사 — 원문 대비 절반 미만이면 뒷부분이 생략된 것.
+
+    실패는 '원문 그대로 채우기'가 아니라 반드시 빈칸으로 남겨야 다음
+    사이클에 재시도된다(과거 실패 #13 재발방지).
+    """
+    if not translated or not translated.strip():
+        return False, "빈응답"
+
+    t = translated.strip()
+
+    if KANA_RE.search(t):
+        return False, "일본어(가나)잔존"
+
+    if not HANGUL_RE.search(t):
+        # 원문이 영문/숫자뿐이면 한글이 없는 게 정상이다.
+        if KANA_RE.search(original) or CJK_RE.search(original):
+            return False, "한글없음"
+
+    if len(t) < len(original.strip()) * MIN_LENGTH_RATIO:
+        return False, f"길이부족({len(t)}/{len(original.strip())})"
+
+    return True, "OK"
 
 
 def _load_brand_dict() -> dict:
@@ -94,31 +138,54 @@ def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
     엉뚱한 발음번역이 나옴). 이제 원본 brand 필드가 사전에 있으면, 그
     정확한 한글명을 프롬프트에 직접 알려줘서 Haiku가 추측 대신 그대로
     쓰게 한다."""
-    results = []
-    for i in range(0, len(items), batch_size):
-        chunk = items[i:i + batch_size]
-        lines = []
-        for j, item in enumerate(chunk):
-            brand = item.get("brand") or ""
-            known_kr_brand = BRAND_DICT.get(brand)
-            hint = f" [정확한 브랜드명: {known_kr_brand} — 반드시 이 표기 그대로 사용]" if known_kr_brand else ""
-            lines.append(f"{j+1}. {item['title']}{hint}")
-        numbered = "\n".join(lines)
-        prompt = f"다음 {len(chunk)}개 상품명을 번역하라:\n\n{numbered}"
-        try:
-            response = _call_api(prompt)
-            # "1. 번역\n2. 번역..." 형식 파싱
-            parsed = {}
-            for line in response.strip().split("\n"):
-                m = re.match(r"^\s*(\d+)\.\s*(.+)$", line)
-                if m:
-                    parsed[int(m.group(1))] = m.group(2).strip()
-            for j in range(len(chunk)):
-                results.append(parsed.get(j + 1, chunk[j]["title"]))  # 파싱 실패시 원문 그대로
-        except Exception as e:  # noqa: BLE001
-            print(f"    [배치번역 실패] {type(e).__name__}: {e}", file=sys.stderr)
-            results.extend(item["title"] for item in chunk)  # 실패시 원문 그대로 폴백
-        time.sleep(0.3)  # rate limit 여유
+    batch_size = max(1, min(batch_size, MAX_BATCH_SIZE))
+    results: list[str | None] = [None] * len(items)
+
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        todo = [i for i, r in enumerate(results) if r is None]
+        if not todo:
+            break
+        # 재시도는 배치를 더 잘게 쪼갠다(잘림이 원인이면 작게 보내면 살아난다).
+        size = max(1, batch_size // (2 ** (attempt - 1)))
+        print(f"  [번역 {attempt}차] 대상 {len(todo)}건, 배치 {size}건씩", file=sys.stderr)
+
+        for i in range(0, len(todo), size):
+            idxs = todo[i:i + size]
+            chunk = [items[k] for k in idxs]
+            lines = []
+            for j, item in enumerate(chunk):
+                brand = item.get("brand") or ""
+                known_kr_brand = BRAND_DICT.get(brand)
+                hint = f" [정확한 브랜드명: {known_kr_brand} — 반드시 이 표기 그대로 사용]" if known_kr_brand else ""
+                lines.append(f"{j+1}. {item['title']}{hint}")
+            prompt = f"다음 {len(chunk)}개 상품명을 번역하라:\n\n" + "\n".join(lines)
+
+            try:
+                # 응답 잘림 방지: 항목당 넉넉히 잡고 상한만 둔다.
+                budget = min(8000, 250 * len(chunk) + 500)
+                response = _call_api(prompt, max_tokens=budget)
+                parsed = {}
+                for line in response.strip().split("\n"):
+                    m = re.match(r"^\s*(\d+)\.\s*(.+)$", line)
+                    if m:
+                        parsed[int(m.group(1))] = m.group(2).strip()
+            except Exception as e:  # noqa: BLE001
+                print(f"    [배치번역 실패] {type(e).__name__}: {e}", file=sys.stderr)
+                parsed = {}
+
+            for j, k in enumerate(idxs):
+                cand = parsed.get(j + 1)
+                ok, reason = validate_translation(items[k]["title"], cand)
+                if ok:
+                    results[k] = cand
+                elif attempt == MAX_ATTEMPTS:
+                    # 끝까지 실패하면 원문으로 덮지 않고 None으로 남긴다.
+                    print(f"    [번역포기-{reason}] {items[k]['title'][:40]}", file=sys.stderr)
+            time.sleep(0.3)  # rate limit 여유
+
+    fail = sum(1 for r in results if r is None)
+    if fail:
+        print(f"  [번역결과] 성공 {len(results)-fail}건 / 실패 {fail}건(빈칸으로 남겨 다음에 재시도)", file=sys.stderr)
     return results
 
 
@@ -148,8 +215,12 @@ if __name__ == "__main__":
     for i in range(0, len(remaining), batch_size):
         chunk = remaining[i:i + batch_size]
         items = [{"title": p["title"], "brand": p.get("brand", "")} for p in chunk]
-        translated = translate_batch(items, batch_size=len(chunk))
+        translated = translate_batch(items, batch_size=batch_size)
         for p, t in zip(chunk, translated):
+            if t is None:
+                # 검증 탈락분은 아예 기록하지 않는다 — 기록해두면 done_goods에
+                # 잡혀서 영영 재시도되지 않는다(과거 실패 #13의 정확한 재발경로).
+                continue
             results.append({
                 "goods_no": p["goods_no"],
                 "translated_kr": t,
