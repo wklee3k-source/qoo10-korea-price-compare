@@ -7778,5 +7778,67 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212001389",
+    "translated_kr": "잉글리쉬 페어 앤 스윗피 콜론 EDC SP 9ml【이유 있는 상품·박스 없음·미사용품】【미니 향수 미니 보틀】【향수 남성 여성】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베티버 EDC",
+      "naver": "조말론 잉글리쉬 페어 앤 프리지아 EDC 9ml"
+    },
+    "brand": "베르두1902 (BERDOUES1902)",
+    "name": "베티버 EDC",
+    "volume": "125ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24500",
+    "mall": "비엘퍼퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13036030505",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9058054/90580541607.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058054/90580541607.jpg",
+        "mall": "비엘퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/13036030505"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195230797",
+    "translated_kr": "파르팜 드 말를리 PARFUMS DE MARLY 델리나 EDP SP 1.5ml 시험용【미니 향수 미니 보틀】【배송료 무료】DELINA ROYAL【향수 여성】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "델리나 EDP",
+      "naver": "퍼퓸드말리 델리나 EDP 오드퍼퓸 시향 시향지 향수"
+    },
+    "brand": "퍼퓸드말리 (PARFUMSdeMARLY)",
+    "name": "델리나 EDP",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "2400",
+    "mall": "씨에고 See-ego",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13680068159",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122457/91224579369.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122457/91224579369.jpg",
+        "mall": "씨에고 See-ego",
+        "link": "https://smartstore.naver.com/main/products/13680068159"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
