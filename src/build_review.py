@@ -385,27 +385,54 @@ def build_html(pairs: list[dict]):
 
         cards_html.append(f'''
 <div class="card" data-goods="{goods_no}" data-qoo10-name="" data-kr-name="" data-kr-site="{esc(kr_site_text)}">
-  <div class="side">
-    <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
-    <div class="mainrow">{qoo10_img_html}</div>
-    <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
-    <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
-    <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
-    <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
-    <div class="goods_no">goods_no: {goods_no}{' — <a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본 링크</a>' if p.get('qoo10_url') else ''}</div>
-  </div>
-  <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
-    <div class="mainrow">{kr_img_html}</div>
-    <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
-    <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
-    <div class="price">{p['kr_price'] or '-'} 원</div>
-    <div class="site">{kr_site_text} — <a href="{p['kr_url']}" target="_blank">구매링크</a></div>
-  </div>
-  <div class="checklist">
+  <div class="card-header">
+    <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="photo-row">
+    <div>
+      <div class="photo-group-label qoo10">큐텐 원본</div>
+      {qoo10_img_html}
+    </div>
+    <div>
+      <div class="photo-group-label kr">한국 구매처</div>
+      <div class="photo-thumbs">{kr_img_html}</div>
+    </div>
+  </div>
+  <table class="info-table">
+    <tr>
+      <td class="label">브랜드</td>
+      <td>{esc(p.get('qoo10_brand') or '-')} <span style="color:#bbb;">/</span> <strong>{esc(p.get('kr_brand') or '-')}</strong></td>
+    </tr>
+    <tr>
+      <td class="label">상품명</td>
+      <td>
+        <div class="name-label">일본어(수정가능 — 업로드용 확정명):</div>
+        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
+        <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
+        <div class="name-label">한글(구매처 원본, 수정가능):</div>
+        <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">금액</td>
+      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
+    </tr>
+    <tr>
+      <td class="label">판매처</td>
+      <td class="site">{kr_site_text}</td>
+    </tr>
+    <tr>
+      <td class="label label-with-border">링크</td>
+      <td class="label-with-border">
+        {'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본</a>' if p.get('qoo10_url') else '-'}
+        <span style="color:#bbb;">/</span>
+        <a href="{p['kr_url']}" target="_blank">한국 구매처</a>
+        <span class="goods_no">(goods_no: {goods_no})</span>
+      </td>
+    </tr>
+  </table>
 </div>''')
 
     cards_str = "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
