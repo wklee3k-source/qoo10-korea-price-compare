@@ -21991,5 +21991,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1096353729",
+    "translated_kr": "코스파 【공식/한국정품】민감한 부위 세정제/폼 170ml 2종 택일/가려움 냄새 케어/약산성/데리케이트존 케어/페미닌 워시/상큼함/한국화장품 아로마티카",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1123548274",
+    "translated_kr": "아누아 나이아신아마이드 10 TXA 4 다크스팟 코렉팅 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "naver": "아누아 나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼 30ml 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24490",
+    "mall": "케이샾.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12185154226",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8972966/89729664931.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8972966/89729664931.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12185154226"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120428/91204284211.jpg",
+        "mall": "써니네아이",
+        "link": "https://smartstore.naver.com/main/products/13659773426"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
