@@ -29,11 +29,9 @@
   .photo-group-label.qoo10 { color:#378ADD; }
   .photo-group-label.kr { color:#2a7d46; }
   .photo-thumbs { display:flex; gap:6px; }
-  .mainimg { width:150px; height:150px; cursor:pointer; border:3px solid transparent; border-radius:8px; flex-shrink:0; position:relative; }
+  .mainimg { width:150px; height:150px; cursor:pointer; border:3px solid transparent; border-radius:8px; flex-shrink:0; }
   .mainimg.selected { border-color:#2a7d46; border-width:3px; }
   .mainimg img { width:100%; height:100%; object-fit:contain; background:#fff; display:block; border-radius:5px; }
-  .img-size-badge { position:absolute; bottom:4px; right:4px; background:rgba(0,0,0,0.65); color:#fff;
-                     font-size:10px; padding:2px 5px; border-radius:4px; pointer-events:none; }
   .info-table { width:100%; border-collapse:collapse; font-size:14px; }
   .info-table td { padding:9px 0; border-top:1px solid #eee; vertical-align:top; }
   .info-table tr:first-child td { border-top:none; }
@@ -5012,30 +5010,6 @@ async function loadFromGithub() {
   pushUndoSnapshot();
   updateUndoRedoButtons();
 })();
-
-// [사진 원본크기 표시] 각 사진의 실제(원본) 픽셀 크기를 우측하단에 작게
-// 표시한다. 화면에 보이는 썸네일은 150x150으로 축소돼서 나오지만,
-// naturalWidth/naturalHeight는 브라우저가 실제로 받아온 원본 이미지의
-// 진짜 픽셀 크기를 알려준다(빌드 시점에 서버에서 미리 다운받을 필요 없이,
-// 사용자가 페이지를 열 때 브라우저가 이미지를 받으면서 자동으로 알게 됨).
-function addImageSizeBadges() {
-  document.querySelectorAll('.mainimg img').forEach(function(img) {
-    if (img.dataset.sizeBadgeAdded) return;
-    function showSize() {
-      if (!img.naturalWidth) return;
-      var badge = document.createElement('div');
-      badge.className = 'img-size-badge';
-      badge.textContent = img.naturalWidth + '×' + img.naturalHeight;
-      img.closest('.mainimg').appendChild(badge);
-      img.dataset.sizeBadgeAdded = '1';
-    }
-    if (img.complete) showSize(); else img.addEventListener('load', showSize);
-  });
-}
-addImageSizeBadges();
-document.addEventListener('click', function(e) {
-  if (e.target.closest('.mainimg')) setTimeout(addImageSizeBadges, 50);
-});
 
 
 // 페이지네이션: 20개씩 보여준다
