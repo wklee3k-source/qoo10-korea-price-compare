@@ -18500,5 +18500,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1127784672",
+    "translated_kr": "【정품】NEW COLOR [일본 미입고 색상] 아트클래스 스머징 언더라이너 10colors 투쿨포스쿨",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193643194",
+    "translated_kr": "【정품】【Qoo10 인기】레티놀 리페어 세럼 30ml 비건 리포솜 레티놀 3% 세럼 스킨앤랩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 리페어 세럼",
+      "naver": "스킨앤랩 레티놀 리페어 세럼 30ml"
+    },
+    "brand": "스킨앤랩 (SKIN&LAB)",
+    "name": "레티놀 리페어 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "16800",
+    "mall": "스킨앤랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9006239396",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8655073/86550739719.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8655073/86550739719.5.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://smartstore.naver.com/main/products/9006239396"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8655190/86551905121.4.jpg",
+        "mall": "스킨앤랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9007404798"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113875/91138757182.jpg",
+        "mall": "CYOU",
+        "link": "https://smartstore.naver.com/main/products/13594246770"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
