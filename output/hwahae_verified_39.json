@@ -12641,5 +12641,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1208402970",
+    "translated_kr": "[메디힐 마스크 1장 증정] 헤트라스 퍼퓸 핸드 솝 515ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 버블 핸드워시 [밤쉘]",
+      "naver": "헤트라스 퍼퓸 버블 대용량 거품비누 핸드워시 플라워파크 515ml 2개"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "퍼퓸 버블 핸드워시 [밤쉘]",
+    "volume": "515ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "로그인 딜라이트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11098470489",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8864298/88642980811.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8864298/88642980811.jpg",
+        "mall": "로그인 딜라이트",
+        "link": "https://smartstore.naver.com/main/products/11098470489"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1169199883",
+    "translated_kr": "【정품】정샘물 에센셜 물 마이크로 피팅 미스트 55ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에센셜 물 마이크로 피팅 미스트",
+      "musinsa": "에센셜 물 마이크로 피팅 미스트 120ml (앰플선 5ml 3개 증정)",
+      "naver": "정샘물 에센셜 물 마이크로 피팅 미스트 레드밤 기획 120ml+55ml 수분 보습"
+    },
+    "brand": "정샘물뷰티 (JUNGSAEMMOOL)",
+    "name": "에센셜 물 마이크로 피팅 미스트",
+    "volume": "55ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "레드밤",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13585184762",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112969/91129695174.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112969/91129695174.jpg",
+        "mall": "레드밤",
+        "link": "https://smartstore.naver.com/main/products/13585184762"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
