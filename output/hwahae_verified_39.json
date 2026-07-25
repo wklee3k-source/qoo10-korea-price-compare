@@ -20195,5 +20195,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203834476",
+    "translated_kr": "라운드랩 백화수 수분 선쿠션 15g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+      "naver": "라운드랩 자작나무 수분 선쿠션 15g×1개 끈적임없는"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선쿠션 [SPF50+/PA++++]",
+    "volume": "15g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23600",
+    "mall": "마인유통",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11889302341",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8943381/89433812950.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8943381/89433812950.jpg",
+        "mall": "마인유통",
+        "link": "https://smartstore.naver.com/main/products/11889302341"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206006286",
+    "translated_kr": "퓌 로즈 오브 세션 틴트 24종(글로우/매트)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "올리브영 퓌 로즈 옵세션 스테이핏 틴트 24종 (글로우/매트)"
+    },
+    "brand": "퓌",
+    "name": "올리브영 퓌 로즈 옵세션 스테이핏 틴트 24종 (글로우/매트)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "20700",
+    "mall": "미라클 뷰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13330460367",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9087497/90874970699.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087497/90874970699.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13330460367"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
