@@ -7635,5 +7635,86 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203990114",
+    "translated_kr": "[2개 세트] 실크 펩타이드 EGF 하트핏 볼륨 리프팅 앰플 40ml 탄력 하리 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크펩타이드 EGF 하트핏 볼륨 리프팅 앰플",
+      "naver": "1+1 성분에디터 실크펩타이드 EGF 하트핏 볼륨 리프팅 녹는실 앰플 40ml+40ml"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "실크펩타이드 EGF 하트핏 볼륨 리프팅 앰플",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "24900",
+    "mall": "더담다101",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13402253234",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9094676/90946763571.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9094676/90946763571.jpg",
+        "mall": "더담다101",
+        "link": "https://smartstore.naver.com/main/products/13402253234"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122617/91226178663.jpg",
+        "mall": "너나하나",
+        "link": "https://smartstore.naver.com/main/products/13681667420"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119237/91192374597.jpg",
+        "mall": "일상생활스토어",
+        "link": "https://smartstore.naver.com/main/products/13647863818"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195231376",
+    "translated_kr": "딥티크 오르페온 EDP SP 7.5ml【미니 향수 미니 보틀】【향수 남성 여성】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "딥티크 오르페온 75ml 오드 퍼퓸 향수 EDP 스프레이"
+    },
+    "brand": "딥티크 (diptyque)",
+    "name": "딥티크 오르페온 75ml 오드 퍼퓸 향수 EDP 스프레이",
+    "volume": "",
+    "source": "naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "523600",
+    "mall": "다크마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12600384831",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9014489/90144895687.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9014489/90144895687.jpg",
+        "mall": "다크마트",
+        "link": "https://smartstore.naver.com/main/products/12600384831"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023126/90231263321.jpg",
+        "mall": "로그인포판매점",
+        "link": "https://smartstore.naver.com/main/products/12686752397"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065530/90655307792.jpg",
+        "mall": "유미네직구팀",
+        "link": "https://smartstore.naver.com/main/products/13110796700"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
