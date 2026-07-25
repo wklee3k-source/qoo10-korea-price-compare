@@ -14951,5 +14951,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1125187021",
+    "translated_kr": "룸드레스 퍼퓨 No.97 에이프릴 코튼 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로틴 탈모완화 샴푸 No.97 에이프릴코튼",
+      "naver": "더블유드레스룸 프로틴 탈모완화 샴푸 No.97 에이프릴코튼 1000g"
+    },
+    "brand": "더블유드레스룸 (W.DRESSROOM)",
+    "name": "프로틴 탈모완화 샴푸 No.97 에이프릴코튼",
+    "volume": "1000g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15900",
+    "mall": "더블유 드레스룸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12232128261",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8977663/89776638977.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8977663/89776638977.1.jpg",
+        "mall": "더블유 드레스룸",
+        "link": "https://smartstore.naver.com/main/products/12232128261"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1125184763",
+    "translated_kr": "데일리 모이스처 퍼팜 바디 워시 아이리스 로즈 향 1.1L 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
