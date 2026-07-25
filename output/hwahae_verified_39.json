@@ -8617,5 +8617,75 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188184009",
+    "translated_kr": "아누아 라이스 70 인텐시브 모이스처라이징 밀크 150ml 유액 고보습 보습밀크 쌀겨 세라마이드 윤기 피부 촉촉함 윤기 배리어 인너드라이 스킨케어 저자극 건성피부 복합피부 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 라이스 70 인텐시브 모이스처라이징 밀크 150ml"
+    },
+    "brand": "아누아",
+    "name": "아누아 라이스 70 인텐시브 모이스처라이징 밀크 150ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "21600",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10812878984",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8835738/88357384974.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8835738/88357384974.1.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/10812878984"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8835738/88357384973.1.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10812878983"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118070/91180709288.jpg",
+        "mall": "iwillcosmetics",
+        "link": "https://smartstore.naver.com/main/products/13636198607"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188183806",
+    "translated_kr": "아누아 라이스 70 글로우 밀키 토너 250ml 화장수 쌀겨 세라마이드 윤기 피부 촉촉함 윤기 배리어 고침투 인너드라이 스킨케어 저자극 건성피부 복합피부 한국화장품 도입액",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 라이스 70 글로우 밀키 토너 유리 듀이 스킨 수분 공급 및 배리어 케어 워터 나이아신아마이드 세라마이드 모든 타입 무향 논코메도제닉 코리안 스킨케어 8 45 fl oz"
+    },
+    "brand": "아누아",
+    "name": "아누아 라이스 70 글로우 밀키 토너 유리 듀이 스킨 수분 공급 및 배리어 케어 워터 나이아신아마이드 세라마이드 모든 타입 무향 논코메도제닉 코리안 스킨케어 8 45 fl oz",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "73170",
+    "mall": "다드림샵 둘",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13266756046",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9081126/90811266378.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081126/90811266378.jpg",
+        "mall": "다드림샵 둘",
+        "link": "https://smartstore.naver.com/main/products/13266756046"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
