@@ -2046,5 +2046,87 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199084782",
+    "translated_kr": "닥터슈라클 비건 콤부차 티 에센스 150ml 보습 촉촉 에센스 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 콤부차 티 에센스",
+      "naver": "닥터슈라클 비건 콤부차 티 에센스 150ml"
+    },
+    "brand": "닥터슈라클 (Dr.Ceuracle)",
+    "name": "비건 콤부차 티 에센스",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38000",
+    "mall": "닥터슈라클",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5300270782",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8284476/82844763131.4.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://smartstore.naver.com/main/products/5300270782"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8284476/82844763132.3.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5300270783"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074849/90748499692.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://smartstore.naver.com/main/products/13203988595"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074848/90748484133.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://smartstore.naver.com/main/products/13203973036"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8972053/89720531116.jpg",
+        "mall": "닥터슈라클",
+        "link": "https://smartstore.naver.com/main/products/12176020411"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183901601",
+    "translated_kr": "스킨푸드 【정품】 당근 카로틴 카밍 워터 패드 기획 (본품 60장 × 2)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "머핀 앤 너츠 한정기획 캐롯 카로틴 카밍 워터 패드",
+      "naver": "스킨푸드 캐롯 카로틴 카밍 워터 패드 더블기획, 본품 2EA + 복숭아패드10매"
+    },
+    "brand": "스킨푸드 (SKINFOOD)",
+    "name": "머핀 앤 너츠 한정기획 캐롯 카로틴 카밍 워터 패드",
+    "volume": "250g",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "33000",
+    "mall": "윤쥬르",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12809049158",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9035356/90353560107.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9035356/90353560107.1.jpg",
+        "mall": "윤쥬르",
+        "link": "https://smartstore.naver.com/main/products/12809049158"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
