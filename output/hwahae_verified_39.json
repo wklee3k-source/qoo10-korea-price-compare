@@ -4245,5 +4245,74 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1207603847",
+    "translated_kr": "헤라 메이크업 픽서 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "메이크업 픽서",
+      "musinsa": "메이크업 픽서 80ML",
+      "naver": "헤라 메이크업 픽서 30ml"
+    },
+    "brand": "헤라 (HERA)",
+    "name": "메이크업 픽서",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "7200",
+    "mall": "새야스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13116430940",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9066094/90660942032.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9066094/90660942032.jpg",
+        "mall": "새야스토어",
+        "link": "https://smartstore.naver.com/main/products/13116430940"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8569547/85695471512.1.jpg",
+        "mall": "THE 자람",
+        "link": "https://smartstore.naver.com/main/products/8150971189"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194335884",
+    "translated_kr": "헤이미쉬 마린 케어 아이 크림 30ml (e)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마린케어 아이크림",
+      "musinsa": "마린케어 아이크림 30ml",
+      "naver": "헤이미쉬 마린케어 아이크림 30ml 1개"
+    },
+    "brand": "헤이미쉬 (heimish)",
+    "name": "마린케어 아이크림",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "41580",
+    "mall": "다미한",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11909685565",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8945419/89454196172.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8945419/89454196172.jpg",
+        "mall": "다미한",
+        "link": "https://smartstore.naver.com/main/products/11909685565"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
