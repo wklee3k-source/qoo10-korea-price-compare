@@ -4991,5 +4991,81 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191474301",
+    "translated_kr": "리쥬란 공식 리쥬란 PDRN (c-PDRN) 포어 타이트닝 토너 패드 60장 토너 패드 팩",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "모공PDRN 리쥬란 더마 힐러 포어 타이트닝 토너패드 60매 정+토너패드 2매5단품"
+    },
+    "brand": "리쥬란",
+    "name": "모공PDRN 리쥬란 더마 힐러 포어 타이트닝 토너패드 60매 정+토너패드 2매5단품",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "47520",
+    "mall": "에어비티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13110249022",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9065476/90654760114.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065476/90654760114.jpg",
+        "mall": "에어비티",
+        "link": "https://smartstore.naver.com/main/products/13110249022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065475/90654750672.jpg",
+        "mall": "에어비티",
+        "link": "https://smartstore.naver.com/main/products/13110239580"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052090/90520909177.jpg",
+        "mall": "오늘의초록a",
+        "link": "https://smartstore.naver.com/main/products/12976398167"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9050777/90507775275.jpg",
+        "mall": "오늘의초록a",
+        "link": "https://smartstore.naver.com/main/products/12963264265"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193841835",
+    "translated_kr": "셀리맥스 공식 셀리맥스 레티나올 타이트닝 부스터 15ml+15ml THE 비타민A 레티놀 샷 타이트닝 부스터",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 샷 타이트닝 세럼",
+      "naver": "셀리맥스, 레티놀 샷 타이트닝 세럼, 30ml(1.01fl oz) CLX-32080"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "레티놀 샷 타이트닝 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "24130",
+    "mall": "AZ플라자",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13284451737",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9082896/90828962068.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082896/90828962068.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13284451737"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
