@@ -79,11 +79,11 @@ def render_cards(pairs: list[dict]) -> str:
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="photo-row">
-    <div>
+    <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
       {qoo10_img_html}
     </div>
-    <div>
+    <div class="photo-group kr">
       <div class="photo-group-label kr">한국 구매처</div>
       <div class="photo-thumbs">{kr_img_html}</div>
     </div>
@@ -96,11 +96,9 @@ def render_cards(pairs: list[dict]) -> str:
     <tr>
       <td class="label">상품명</td>
       <td>
-        <div class="name-label">일본어(수정가능 — 업로드용 확정명):</div>
-        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
-        <div class="name-label">한글(구매처 원본, 수정가능):</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
       </td>
     </tr>
@@ -109,16 +107,13 @@ def render_cards(pairs: list[dict]) -> str:
       <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
     </tr>
     <tr>
-      <td class="label">판매처</td>
-      <td class="site">{kr_site_text}</td>
-    </tr>
-    <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
         {'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본</a>' if p.get('qoo10_url') else '-'}
         <span style="color:#bbb;">/</span>
         <a href="{p['kr_url']}" target="_blank">한국 구매처</a>
-        <span class="goods_no">(goods_no: {goods_no})</span>
+        <span class="site">({esc(kr_site_text)})</span>
+        <span class="goods_no">goods_no: {goods_no}</span>
       </td>
     </tr>
   </table>

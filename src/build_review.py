@@ -283,6 +283,21 @@ def build_pairs():
                         lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', q["title"], count=1)
                 qty_auto_corrected = True
 
+        # [제외] "国内当日発送"류 일본 국내발송 문구는 실제로는 한국에서
+        # 발송하므로 사실과 다르다 — 지워서 오해를 방지한다. 지워졌다는
+        # 걸 취소선으로 표시한다(사용자 지시: "나는 한국에서 보낼꺼니까").
+        shipping_removal_pattern = re.compile(
+            r"[\[［【(]?\s*国内\s*(当日|即日)?\s*発送\s*[\]］】)]?|あす楽(対応)?|\s*即日出荷"
+        )
+        m2 = shipping_removal_pattern.search(qoo10_title_display)
+        if m2:
+            removed_text = m2.group(0).strip()
+            qoo10_title_display = shipping_removal_pattern.sub("", qoo10_title_display, count=1).strip()
+            base_for_highlight = qoo10_title_highlighted or q["title"]
+            qoo10_title_highlighted = shipping_removal_pattern.sub(
+                lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', base_for_highlight, count=1)
+            qty_auto_corrected = True
+
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
@@ -390,11 +405,11 @@ def build_html(pairs: list[dict]):
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="photo-row">
-    <div>
+    <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
       {qoo10_img_html}
     </div>
-    <div>
+    <div class="photo-group kr">
       <div class="photo-group-label kr">한국 구매처</div>
       <div class="photo-thumbs">{kr_img_html}</div>
     </div>
@@ -407,11 +422,9 @@ def build_html(pairs: list[dict]):
     <tr>
       <td class="label">상품명</td>
       <td>
-        <div class="name-label">일본어(수정가능 — 업로드용 확정명):</div>
-        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
-        <div class="name-label">한글(구매처 원본, 수정가능):</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
       </td>
     </tr>
@@ -420,16 +433,13 @@ def build_html(pairs: list[dict]):
       <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
     </tr>
     <tr>
-      <td class="label">판매처</td>
-      <td class="site">{kr_site_text}</td>
-    </tr>
-    <tr>
       <td class="label label-with-border">링크</td>
       <td class="label-with-border">
         {'<a href="' + p['qoo10_url'] + '" target="_blank">큐텐 원본</a>' if p.get('qoo10_url') else '-'}
         <span style="color:#bbb;">/</span>
         <a href="{p['kr_url']}" target="_blank">한국 구매처</a>
-        <span class="goods_no">(goods_no: {goods_no})</span>
+        <span class="site">({esc(kr_site_text)})</span>
+        <span class="goods_no">goods_no: {goods_no}</span>
       </td>
     </tr>
   </table>
