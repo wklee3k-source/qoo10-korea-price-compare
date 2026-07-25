@@ -4104,5 +4104,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177838255",
+    "translated_kr": "컨달 허니 앤 마카다미아 네이처 샴푸 블랙베리 베이 500ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203234617",
+    "translated_kr": "바이오더마 포토더름 X-디펜스 울트라 플루이드 SPF50+ 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포토덤 엑스디펜스 울트라 플루이드 [SPF50+/PA++++]",
+      "naver": "바이오더마 포토덤 엑스디펜스 울트라플루이드 SPF50+ 40ml"
+    },
+    "brand": "바이오더마 (BIODERMA)",
+    "name": "포토덤 엑스디펜스 울트라 플루이드 [SPF50+/PA++++]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28000",
+    "mall": "바이오더마코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13159688153",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070419/90704199250.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070419/90704199250.8.jpg",
+        "mall": "바이오더마코리아",
+        "link": "https://smartstore.naver.com/main/products/13159688153"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070419/90704199251.2.jpg",
+        "mall": "바이오더마",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13159688154"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103881/91038810183.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/13494299831"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118655/91186559534.jpg",
+        "mall": "더마 코리아",
+        "link": "https://smartstore.naver.com/main/products/13642048825"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117652/91176523616.jpg",
+        "mall": "로하스힐링",
+        "link": "https://smartstore.naver.com/main/products/13632012952"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
