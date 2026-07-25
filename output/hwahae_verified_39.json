@@ -17136,5 +17136,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1132004375",
+    "translated_kr": "코스알엑스 풀필트 프로폴리스 라이트 앰플 40ml +40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "풀핏 프로폴리스 라이트 앰플",
+      "naver": "코스알엑스 풀핏 프로폴리스 라이트 앰플 30ml"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "풀핏 프로폴리스 라이트 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14800",
+    "mall": "데일리케어샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12320999331",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8986551/89865510048.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986551/89865510048.jpg",
+        "mall": "데일리케어샵",
+        "link": "https://smartstore.naver.com/main/products/12320999331"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1023263418",
+    "translated_kr": "[즉납][정규품][최신 제조일] 1개목 2개목 퍼스피렉스 오리지널 데오도란트 롤온 겨드랑이땀 와키가 제한제 20ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
