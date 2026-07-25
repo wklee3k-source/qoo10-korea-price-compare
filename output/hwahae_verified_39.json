@@ -10157,5 +10157,87 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1186300374",
+    "translated_kr": "오드 파르팡 50ml (3종류 중 1개 선택)",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "[향수] 80. 래터튜더널 오드 파르팡 100ml",
+      "naver": "SHIRO 시로 금목서 오드 파르팡 40mL"
+    },
+    "brand": "사랑해요",
+    "name": "[향수] 80. 래터튜더널 오드 파르팡 100ml",
+    "volume": "",
+    "source": "musinsa",
+    "obsolete": null,
+    "sale": null,
+    "price": "45900",
+    "mall": "제이퐁퐁0",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8011640063",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8555614/85556140386.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8555614/85556140386.jpg",
+        "mall": "제이퐁퐁0",
+        "link": "https://smartstore.naver.com/main/products/8011640063"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8555613/85556139518.jpg",
+        "mall": "제이퐁퐁0",
+        "link": "https://smartstore.naver.com/main/products/8011639195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8575074/85750744658.jpg",
+        "mall": "제이퐁퐁0",
+        "link": "https://smartstore.naver.com/main/products/8206244335"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8298516/82985167975.jpg",
+        "mall": "프레셔스 몰",
+        "link": "https://smartstore.naver.com/main/products/5440673841"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8965090/89650904208.jpg",
+        "mall": "이디홀릭",
+        "link": "https://smartstore.naver.com/main/products/12106393503"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182791384",
+    "translated_kr": "마린 오키드 멀티 퍼퓸",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티 퍼퓸 [마린오키드]",
+      "naver": "그랑핸드 마린 오키드 멀티퍼퓸 EDP 향수 시향지 시향"
+    },
+    "brand": "그랑핸드 (GRANHAND)",
+    "name": "멀티 퍼퓸 [마린오키드]",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "1500",
+    "mall": "씨에고 See-ego",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13666979589",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121149/91211490497.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121149/91211490497.jpg",
+        "mall": "씨에고 See-ego",
+        "link": "https://smartstore.naver.com/main/products/13666979589"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
