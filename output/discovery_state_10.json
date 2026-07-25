@@ -1,14 +1,16 @@
 {
   "visited_shops": [
-    "holibanum",
-    "leewoostore",
-    "bkyul",
-    "ktrendmall",
-    "duftndoft",
+    "K-Vibe_ichome",
+    "loginforest",
     "honeytwo",
     "shoplikable",
-    "K-Vibe_ichome",
-    "JUJUHONG"
+    "bkyul",
+    "duftndoft",
+    "leewoostore",
+    "holibanum",
+    "ktrendmall",
+    "JUJUHONG",
+    "liber"
   ],
   "all_products": [],
   "shop_urls": [
@@ -20,10 +22,12 @@
     "https://m.qoo10.jp/shop/honeytwo",
     "https://m.qoo10.jp/shop/duftndoft",
     "https://m.qoo10.jp/shop/bkyul",
-    "https://m.qoo10.jp/shop/holibanum"
+    "https://m.qoo10.jp/shop/holibanum",
+    "https://m.qoo10.jp/shop/liber",
+    "https://m.qoo10.jp/shop/loginforest"
   ],
-  "pending_keywords": [
+  "pending_keywords": [],
+  "seen_keywords": [
     "韓国 香水"
-  ],
-  "seen_keywords": []
+  ]
 }
