@@ -21500,5 +21500,55 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210090249",
+    "translated_kr": "아렌시아 비타민C 부스터 샷 1+1 세트 페이스&아이크림 칙칙함·색소침착 케어 글루타치온 배합 30ml×2본",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1198551506",
+    "translated_kr": "롬앤 무드 페블 하드너 (코팅밀크/피치가드/너티코어/베리바리어)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "무드 페블 하드너 [01 코팅밀크]",
+      "musinsa": "무드 페블 하드너",
+      "naver": "[롬앤] 무드 페블 하드너 PN"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "무드 페블 하드너 [01 코팅밀크]",
+    "volume": "7ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "6400",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4153130?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4915868/49158680364.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4915868/49158680364.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4153130?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "real_page_title": "롬앤(ROM&amp;ND) 무드 페블 하드너",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
