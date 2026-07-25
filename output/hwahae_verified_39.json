@@ -19468,5 +19468,91 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1197582691",
+    "translated_kr": "아누아 나이아신아마이드 10 트라넥삼산 4 다크스팟 커렉팅 세럼 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼 30ml 1개"
+    },
+    "brand": "아누아",
+    "name": "아누아 나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼 30ml 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24490",
+    "mall": "케이샾.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12185154226",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8972966/89729664931.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8972966/89729664931.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12185154226"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116531/91165314496.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/13620804079"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208272698",
+    "translated_kr": "메디큐브 레드이레이징크림 2.0 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 이레이징 크림 2.0",
+      "naver": "레드 이레이징 크림 2.0 (리뉴얼), 트러블 흔적 &amp; 피부장벽 강화"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "레드 이레이징 크림 2.0",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "27300",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=40&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1134112/11341126791.29.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1134112/11341126791.29.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=40&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8218495/82184959196.2.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/4640438721"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089686/90896866533.3.jpg",
+        "mall": "라이프 is세일",
+        "link": "https://smartstore.naver.com/main/products/13352356201"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8860701/88607011963.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/11062505752"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8753377/87533776217.jpg",
+        "mall": "아리아트네",
+        "link": "https://smartstore.naver.com/main/products/9989273944"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=40&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
   }
 ]
