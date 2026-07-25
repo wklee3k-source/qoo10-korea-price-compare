@@ -240,5 +240,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1178232680",
+    "translated_kr": "【1+1】B5 히아 모이스처라이징 크림 60ml x 2개 (11중 멀티 히알루론산 / 판테놀)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드",
+      "naver": "라로슈포제 하이알루 B5 모이스처라이징 크림 50ml x 2개"
+    },
+    "brand": "라로슈포제",
+    "name": "라로슈포제 하이알루 B5 모이스처라이징 크림 50ml x 2개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "161700",
+    "mall": "뚜르마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13142822239",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9068733/90687333331.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068733/90687333331.jpg",
+        "mall": "뚜르마켓",
+        "link": "https://smartstore.naver.com/main/products/13142822239"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084435/90844354689.jpg",
+        "mall": "대한 shop",
+        "link": "https://smartstore.naver.com/main/products/13299844357"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8288663/82886635847.2.jpg",
+        "mall": "아이앤트",
+        "link": "https://smartstore.naver.com/main/products/5342143012"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1149198551",
+    "translated_kr": "【1+1】VT 시카 슬리핑 마스크 4ml x 12개",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 스페셜 캡슐 마스크 [피부진정]"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
