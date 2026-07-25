@@ -15267,5 +15267,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1159752665",
+    "translated_kr": "쏘내추럴 파우더 폼 피치 데오 팩트 10g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "피치 데오 팩트",
+      "naver": "sonatura 쏘내추럴 파우더포룸 피치 데오 팩트 10g + 데오크림 10ml"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "피치 데오 팩트",
+    "volume": "10g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20700",
+    "mall": "그린다트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13640972581",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118548/91185483290.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118548/91185483290.jpg",
+        "mall": "그린다트",
+        "link": "https://smartstore.naver.com/main/products/13640972581"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1153393584",
+    "translated_kr": "메이크프렘 인테카 트러블 수징 패드 70장입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
