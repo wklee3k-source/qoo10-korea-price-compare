@@ -364,5 +364,72 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1192531864",
+    "translated_kr": "메디큐브 딥펩타이드 래디언스 마스크 10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "딥 펩타이드 래디언스 마스크",
+      "naver": "메디큐브 딥 펩타이드 래디언스 마스크 10매"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "딥 펩타이드 래디언스 마스크",
+    "volume": "27ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "19800",
+    "mall": "올윈코스메틱",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12037045837",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8958155/89581556529.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8958155/89581556529.jpg",
+        "mall": "올윈코스메틱",
+        "link": "https://smartstore.naver.com/main/products/12037045837"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205745910",
+    "translated_kr": "TT 트라넥삼산10% 미용액 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TT 트라넥삼산 10%나이아신 아마이드 앰플 세럼",
+      "naver": "코스드바하 TT 트라넥삼산 10% 나이아신 아마이드 글루타치온 미백 앰플 세럼 30ml"
+    },
+    "brand": "코스드바하 (CosDeBAHA)",
+    "name": "TT 트라넥삼산 10%나이아신 아마이드 앰플 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20400",
+    "mall": "코스드바하",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9946196797",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8749069/87490699070.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749069/87490699070.jpg",
+        "mall": "코스드바하",
+        "link": "https://smartstore.naver.com/main/products/9946196797"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118275/91182755763.jpg",
+        "mall": "마이오쇼핑",
+        "link": "https://smartstore.naver.com/main/products/13638245054"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
