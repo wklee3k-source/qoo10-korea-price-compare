@@ -5699,5 +5699,88 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206008325",
+    "translated_kr": "펩타이드 샷 2X 탄력 앰플 30ml(탄력감 케어/보습/탄력 서포트 미용액) 앰플엔",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드샷 앰플 2스텝 마스크",
+      "naver": "앰플엔 펩타이드샷 2X 모공탄력 앰플 30ml 저자극 안티에이징 모공 주름 피부탄력"
+    },
+    "brand": "앰플엔 (AMPLE:N)",
+    "name": "펩타이드샷 앰플 2스텝 마스크",
+    "volume": "24ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "13900",
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5062113585",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260663/82606635044.5.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5062113585"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260667/82606671756.70.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/5062150297"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8568004/85680047675.1.jpg",
+        "mall": "주식회사 나르샤",
+        "link": "https://smartstore.naver.com/main/products/8135547352"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206008294",
+    "translated_kr": "워터핏 리커버 BB크림 30ml #SPF40 PA+++ #보습 밀착 셀퓨전씨",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터핏 리커버 비비크림 [SPF40/PA+++] [라이트]",
+      "naver": "셀퓨전씨 워터핏 리커버 비비크림 30ml SPF 40 PA+++ / 수분 밀착 스킨케어 비비"
+    },
+    "brand": "셀퓨전씨 (CellFusionC)",
+    "name": "워터핏 리커버 비비크림 [SPF40/PA+++] [라이트]",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "셀퓨전씨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13471619925",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9101613/91016130277.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101613/91016130277.2.jpg",
+        "mall": "셀퓨전씨",
+        "link": "https://smartstore.naver.com/main/products/13471619925"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101613/91016130276.jpg",
+        "mall": "셀퓨전씨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13471619924"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101613/91016134857.4.jpg",
+        "mall": "셀퓨전씨",
+        "link": "https://smartstore.naver.com/main/products/13471624505"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
