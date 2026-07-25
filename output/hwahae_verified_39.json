@@ -12516,5 +12516,82 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205914428",
+    "translated_kr": "메디큐브 글루타치온 글로우 토너 140ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이지알 글루타치온 글로우 토너",
+      "naver": "메디큐브 에이지알 글루타치온 글로우 토너"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 글루타치온 글로우 토너",
+    "volume": "140ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "100000",
+    "mall": "electro Z",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10748381487",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8829288/88292887409.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8829288/88292887409.jpg",
+        "mall": "electro Z",
+        "link": "https://smartstore.naver.com/main/products/10748381487"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8966001/89660012355.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12115501650"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160418590",
+    "translated_kr": "[2종 세트] 브링그린 티트리 시카 수징 토너 250ml + 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리 시카 수딩 토너",
+      "naver": "브링그린 티트리 시카 수딩 토너 250ml + 크림 100ml 2종 기획 세트"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리 시카 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "22700",
+    "mall": "코쿤샵1",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13253783547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9079829/90798293879.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079829/90798293879.jpg",
+        "mall": "코쿤샵1",
+        "link": "https://smartstore.naver.com/main/products/13253783547"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103457/91034572530.jpg",
+        "mall": "레인보우USA",
+        "link": "https://smartstore.naver.com/main/products/13490062178"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026274/90262746606.jpg",
+        "mall": "랜덤플레이 주식회사",
+        "link": "https://smartstore.naver.com/main/products/12718235682"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
