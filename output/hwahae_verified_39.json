@@ -16199,5 +16199,67 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1170230232",
+    "translated_kr": "아누아 어성초 실키 모이스처 자외선차단제 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 실키 모이스처 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 실키 모이스처 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1177545076",
+    "translated_kr": "[!!초인기!!]더마힐러 포어 타이트닝 토너 패드 60장 리쥬란",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "리쥬란 더마 힐러 포어 타이트닝 토너 패드 60매+리필60매"
+    },
+    "brand": "리쥬란",
+    "name": "리쥬란 더마 힐러 포어 타이트닝 토너 패드 60매+리필60매",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "31390",
+    "mall": "케이샾.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12209343881",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8975385/89753854586.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8975385/89753854586.1.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12209343881"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116643/91166435515.jpg",
+        "mall": "나누리상회",
+        "link": "https://smartstore.naver.com/main/products/13621925098"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119193/91191937185.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13647426406"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
