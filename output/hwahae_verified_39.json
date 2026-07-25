@@ -11360,5 +11360,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188583926",
+    "translated_kr": "스킨1004 마다가스카르 센텔라 퀵 카밍 패드 70매 리필 파우치",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212341086",
+    "translated_kr": "【BLACKPINK 제니 PICK】【NEW】바세린 글루타 히알루론산 세럼 바디 로션 3종 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 글루타-히아 세럼 버스트 로션 듀이 래디언스",
+      "naver": "바셀린 프로 비타B3 세럼 버스트 로션이 하고 부드러운 수분 공급 피부 비타민 B3 히알루론산 및 펩타이드를 함유한 가벼운 10배 력 7.5 7.5 Fl Oz (Pack of 1)"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "(해외) 글루타-히아 세럼 버스트 로션 듀이 래디언스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "23100",
+    "mall": "스카이로드몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13610852746",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9115536/91155363158.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9115536/91155363158.jpg",
+        "mall": "스카이로드몰",
+        "link": "https://smartstore.naver.com/main/products/13610852746"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111485/91114859778.jpg",
+        "mall": "딜-플래닛",
+        "link": "https://smartstore.naver.com/main/products/13570349367"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064111/90641114288.jpg",
+        "mall": "하이퍼제이4",
+        "link": "https://smartstore.naver.com/main/products/13096603196"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
