@@ -11849,5 +11849,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209641531",
+    "translated_kr": "[1+]NEW 사이토카인 부스터 프로 70ml＋70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사이토카인 부스터 [프로]",
+      "naver": "(부스터 플러스 리뉴얼) 리필드 헤어 리커버리 사이토카인 부스터 프로 70ml"
+    },
+    "brand": "리필드 (Refilled)",
+    "name": "사이토카인 부스터 [프로]",
+    "volume": "70ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "31900",
+    "mall": "더디버트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12585214506",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9012972/90129725362.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9012972/90129725362.1.jpg",
+        "mall": "더디버트",
+        "link": "https://smartstore.naver.com/main/products/12585214506"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213317846",
+    "translated_kr": "[배송무료] 리쥬란 리쥬란 더마힐러 포어타이트닝 젤마스크 2/3/4/5장 모공케어 스킨케어 한국화장품 시트마스크 보습 탄력",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
