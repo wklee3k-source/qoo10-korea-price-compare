@@ -233,12 +233,25 @@ def build_pairs():
         qty_auto_corrected = False
         qoo10_qty = extract_quantity(q["title"])
         if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1 and not is_set:
-            qty_suffix_jp = f" X {kr_qty}個"
-            qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
-            if qoo10_title_highlighted:
-                qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            # [수정] 큐텐원문에 이미 "1個"처럼 수량이 명시되어 있으면, 뒤에
+            # "X N個"를 덧붙이지 않고 그 "1"이라는 숫자 자체를 실제 수량으로
+            # 바꾼다(실측 사례: "...1個 X 2個"처럼 중복표기가 되던 문제).
+            # 원문에 수량표기 자체가 아예 없을 때만 새로 추가한다.
+            explicit_one_pattern = re.compile(r"(?<!\d)1(\s*(?:個|개|입|병|本))\b")
+            explicit_match = explicit_one_pattern.search(qoo10_title_display)
+            if explicit_match:
+                qoo10_title_display = explicit_one_pattern.sub(
+                    lambda m: f"{kr_qty}{m.group(1)}", qoo10_title_display, count=1)
+                base_for_highlight = qoo10_title_highlighted or q["title"]
+                qoo10_title_highlighted = explicit_one_pattern.sub(
+                    lambda m: f'<mark class="vol-fix">{kr_qty}{m.group(1)}</mark>', base_for_highlight, count=1)
             else:
-                qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+                qty_suffix_jp = f" X {kr_qty}個"
+                qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
+                if qoo10_title_highlighted:
+                    qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+                else:
+                    qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
             qty_auto_corrected = True
         # [반대 케이스] 한국쪽은 실제로 1개만 사는데(kr_qty<=1), 큐텐
         # 원본 제목에는 "2個"처럼 수량표기가 있으면 그 표기를 제거한다 —
