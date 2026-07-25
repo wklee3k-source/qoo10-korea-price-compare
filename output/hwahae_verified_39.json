@@ -3671,5 +3671,58 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1159844126",
+    "translated_kr": "홀리 바질 탄산 버블 팩 90g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "홀리바질 버블 딥 마스크",
+      "naver": "[탄산버블/모공청소/화잘먹]  피캄 홀리바질 버블 딥 마스크 90g 기획 (+듀얼모공브러쉬)"
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "홀리바질 버블 딥 마스크",
+    "volume": "90g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000238198",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5762703/57627035514.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5762703/57627035514.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000238198"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172944906",
+    "translated_kr": "메디힐 NMF 아쿠아 링 앰플 마스크 EX, 10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엔엠에프 아쿠아링 앰플 마스크 EX"
+    },
+    "brand": "메디힐 (MEDIHEAL)",
+    "name": "엔엠에프 아쿠아링 앰플 마스크 EX",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
