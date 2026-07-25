@@ -195,6 +195,27 @@ def t17_crawl_subprocess_stdout_clean():
     check("17 크롤 서브프로세스 stdout 오염 금지", not bad, f"stderr 누락: {bad}")
 
 
+# --------------------- #18 git add에 존재 미보장 경로 혼합 금지(실측사고)
+#  실측사고: 'git add fileA fileB archive/'처럼 존재하지 않을 수 있는
+#  archive/ 가 다른 필수 파일과 같은 git add 호출에 섞여 있었다. git add는
+#  나열된 경로 중 하나라도 없으면 pathspec 오류로 전체를 통째로 실패시켜서
+#  (2>/dev/null || true가 이 실패를 조용히 삼킴), 실제로 존재하는 파일조차
+#  스테이징이 안 됐다. 그 결과 병합이 상품 458건을 정상 생성하고도
+#  'git diff --cached --quiet'가 "변경없음"으로 오판해 그대로 유실됐다
+#  (진실은 '비교할 게 없었다'였지 '차이가 없었다'가 아니었다).
+def t18_no_optional_path_mixed_in_git_add():
+    wf = WF.read_text(encoding="utf-8")
+    bad = []
+    for m in re.finditer(r"git add ([^\n]+)", wf):
+        # 셸 리다이렉션(2>/dev/null) 이전까지만 실제 인자로 본다.
+        args_str = re.split(r"\s+2>|\s+\|\||\s+&&", m.group(1))[0]
+        paths = args_str.split()
+        if "../output/archive/" in paths and len(paths) > 1:
+            # archive/ 가 다른 파일 경로와 같은 git add 호출에 섞여 있으면 위반
+            bad.append(args_str.strip()[:80])
+    check("18 git add 경로 혼합 금지(archive/ 등)", not bad, f"{bad}")
+
+
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
 def t16_crawl_failure_vs_empty():
     disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
