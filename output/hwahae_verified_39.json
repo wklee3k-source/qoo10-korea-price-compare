@@ -9154,5 +9154,64 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1212950756",
+    "translated_kr": "시카페어 인센티브 수징 리페어 크림, 50ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204443114",
+    "translated_kr": "도미나스 앳클리닉 볼피린 링클샷 앰플, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "앳클리닉 링클샷",
+      "naver": "도미나스 앳클리닉 링클샷 30ml ~ 11%"
+    },
+    "brand": "도미나스 (DOMINAS)",
+    "name": "앳클리닉 링클샷",
+    "volume": "35ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "39900",
+    "mall": "도미나스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://dominas.co.kr/product/detail.html?product_no=97&cate_no=42&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5609504/56095042531.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5609504/56095042531.2.jpg",
+        "mall": "도미나스",
+        "link": "https://dominas.co.kr/product/detail.html?product_no=97&cate_no=42&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5853940/58539400571.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000219713"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122001/91220016115.jpg",
+        "mall": "늘편한홈쇼핑",
+        "link": "https://smartstore.naver.com/main/products/13675505096"
+      }
+    ],
+    "real_page_title": "도미나스 앳클리닉 링클샷 30ml ~ 11%",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
