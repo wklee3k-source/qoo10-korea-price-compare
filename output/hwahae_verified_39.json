@@ -177,5 +177,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1123787663",
+    "translated_kr": "라로슈포제 UV 이데아 XL 프로텍션 톤업 로즈 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "유비데아 XL 데일리 유브이 프로텍션 이븐 컴플렉션 [SPF50/PA+++]",
+      "naver": "라로슈포제 UV이데아 XL 프로텍션 톤업 로즈＋ SPF50+ PA++++ 30mL"
+    },
+    "brand": "라로슈포제 (LAROCHE-POSAY)",
+    "name": "유비데아 XL 데일리 유브이 프로텍션 이븐 컴플렉션 [SPF50/PA+++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "55200",
+    "mall": "로맨틱비주얼",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11947572235",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8949208/89492082923.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8949208/89492082923.jpg",
+        "mall": "로맨틱비주얼",
+        "link": "https://smartstore.naver.com/main/products/11947572235"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096308/90963081485.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13418571149"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8963602/89636023168.jpg",
+        "mall": "G1JA",
+        "link": "https://smartstore.naver.com/main/products/12091512463"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097859/90978594449.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13434084115"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1146152293",
+    "translated_kr": "라도르 퍼퓸 헤어 트리트먼트 / 히노키 / 포근한 히노키 향 / Hinoki / 향수의 트리트먼트 / 머릿결 영양과 향을 한 번에 해결 / 모발 영양 개선 / 모발 끊김 개선 / 부드러움 개선",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
