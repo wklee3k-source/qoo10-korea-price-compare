@@ -8013,5 +8013,63 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1200867593",
+    "translated_kr": "아누아 비타10 포어 토닝 세럼 20ml + 20ml / 비타민C",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타 10 포어스트릭스 미백 토닝 세럼",
+      "naver": "아누아 비타 10 포어스트릭스 미백 토닝 세럼 20ml"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "비타 10 포어스트릭스 미백 토닝 세럼",
+    "volume": "20mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "27800",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12421287797",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8996579/89965798522.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8996579/89965798522.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12421287797"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048486/90484862374.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12940351365"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048486/90484862373.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12940351363"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200867577",
+    "translated_kr": "아누아 비타10 포어 토닝 세럼 20ml / 비타민C 주근깨 모공 케어 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
