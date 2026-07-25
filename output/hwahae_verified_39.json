@@ -20382,5 +20382,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204628544",
+    "translated_kr": "하우스 오브 비 글루타치온 페이스 필름 (3+1)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타티온 페이스 필름"
+    },
+    "brand": "하우스오브비 (HouseofB)",
+    "name": "글루타티온 페이스 필름",
+    "volume": "3g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203899937",
+    "translated_kr": "레드 사쿠세닉 애씨드 패드 / 니키비 흔적·각질 케어·모공 오염 / 저자극·닦아내는 화장수 [정확한 브랜드명: 메디큐브]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
