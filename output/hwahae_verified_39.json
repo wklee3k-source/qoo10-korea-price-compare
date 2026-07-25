@@ -14884,5 +14884,72 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213878180",
+    "translated_kr": "세메잘 라이트 크림 100ml 고보습 페이스케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디파마 올리브 오일 라이트 페이스 크림, 50ml /Olivenöl Leichte Gesichtscreme"
+    },
+    "brand": "메디파마코스메틱스",
+    "name": "메디파마 올리브 오일 라이트 페이스 크림, 50ml /Olivenöl Leichte Gesichtscreme",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "48400",
+    "mall": "구텐하임",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11758998211",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8930350/89303508798.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8930350/89303508798.jpg",
+        "mall": "구텐하임",
+        "link": "https://smartstore.naver.com/main/products/11758998211"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8930351/89303515231.jpg",
+        "mall": "구텐하임",
+        "link": "https://smartstore.naver.com/main/products/11759004644"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8769127/87691270428.jpg",
+        "mall": "D J H I",
+        "link": "https://smartstore.naver.com/main/products/10146767209"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8878035/88780358311.3.jpg",
+        "mall": "예삐상점",
+        "link": "https://smartstore.naver.com/main/products/11235847980"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207766788",
+    "translated_kr": "(여행용 2개 증정) 에르쯔틴 에어리 워터 선 크림 자외선 차단제 SPF50+ PA++++ 60ml A-실크 SUN 수트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에어리 워터 선크림 [SPF50+/PA++++]"
+    },
+    "brand": "에르쯔틴 (ARZTIN)",
+    "name": "에어리 워터 선크림 [SPF50+/PA++++]",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
