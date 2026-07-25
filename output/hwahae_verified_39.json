@@ -8721,5 +8721,62 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194183088",
+    "translated_kr": "글루타치온 시스테인&C 100粒",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "라이프익스텐션 글루타치온 시스테인 C 캡슐 100정"
+    },
+    "brand": "라이프익스텐션",
+    "name": "라이프익스텐션 글루타치온 시스테인 C 캡슐 100정",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "24140",
+    "mall": "아비트라몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13593756394",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113826/91138266806.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113826/91138266806.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13593756394"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8991295/89912957491.jpg",
+        "mall": "채이커머스",
+        "link": "https://smartstore.naver.com/main/products/12368446774"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8989222/89892220347.jpg",
+        "mall": "헬로플레이",
+        "link": "https://smartstore.naver.com/main/products/12347709630"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194501160",
+    "translated_kr": "Hydro Cera-Nol Real Deep Beauty Mask, 4 Sheets, 1.19 oz (34 g) Each",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
