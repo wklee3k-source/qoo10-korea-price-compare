@@ -3966,5 +3966,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1049588733",
+    "translated_kr": "이니스프리 슈퍼 볼카닉 포어 클레이 마스크 2X, 100mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "수퍼 화산송이 클레이 무스 마스크 2X"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "수퍼 화산송이 클레이 무스 마스크 2X",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 21000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204156842",
+    "translated_kr": "[1+1] 톤&스팟 컬렉터 앰플 30ml +30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "톤앤스팟 코렉터 앰플"
+    },
+    "brand": "리덴스 (Re:dence)",
+    "name": "톤앤스팟 코렉터 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 39900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
