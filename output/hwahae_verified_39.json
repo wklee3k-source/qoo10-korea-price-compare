@@ -18987,5 +18987,87 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209948963",
+    "translated_kr": "리쥬란 더마 힐러 포어 타이트닝 토너패드 60장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마 힐러 포어 타이트닝 토너 패드",
+      "naver": "리쥬란 더마 힐러 포어 타이트닝 토너 패드 60매+리필 60매+6매"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "더마 힐러 포어 타이트닝 토너 패드",
+    "volume": "220mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30800",
+    "mall": "나누리상회",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13621925098",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116643/91166435515.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116643/91166435515.jpg",
+        "mall": "나누리상회",
+        "link": "https://smartstore.naver.com/main/products/13621925098"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8975385/89753854586.1.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12209343881"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8990769/89907693279.jpg",
+        "mall": "FORURIUM",
+        "link": "https://smartstore.naver.com/main/products/12363182562"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203114526",
+    "translated_kr": "정샘물 에센셜 멀 마이크로피팅 미스트 55ml, 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에센셜 물 마이크로 피팅 미스트",
+      "naver": "정샘물 에센셜 물 마이크로 피팅 미스트_세팅 픽서 55ml 본품"
+    },
+    "brand": "정샘물뷰티 (JUNGSAEMMOOL)",
+    "name": "에센셜 물 마이크로 피팅 미스트",
+    "volume": "55ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18600",
+    "mall": "ALL-KPOP MAG",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12874006263",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9041851/90418517254.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041851/90418517254.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/12874006263"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041851/90418517255.jpg",
+        "mall": "ALL-KPOP MAG",
+        "link": "https://smartstore.naver.com/main/products/12874006264"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106033/91060333515.jpg",
+        "mall": "에코메로우",
+        "link": "https://smartstore.naver.com/main/products/13515823163"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
