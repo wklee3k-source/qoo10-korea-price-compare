@@ -51,8 +51,8 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     except Exception:  # noqa: BLE001
         brand_dict = {}
 
-    titles = [p["title"] for p in to_translate]
-    translated = translate_batch(titles, batch_size=len(titles))
+    items = [{"title": p["title"], "brand": p.get("brand", "")} for p in to_translate]
+    translated = translate_batch(items, batch_size=len(items))
 
     for p, t in zip(to_translate, translated):
         p["translated_kr"] = t
