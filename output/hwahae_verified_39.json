@@ -4050,5 +4050,59 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1138185679",
+    "translated_kr": "아비브 에어리 선스틱 스무딩 바 23g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에어리 선스틱 스무딩 바 [SPF50+/PA++++]",
+      "musinsa": "에어리 선스틱 스무딩 바 SPF50+ PA++++ 22g",
+      "naver": "아비브 에어리 선스틱 스무딩 바 23g, 1개"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "에어리 선스틱 스무딩 바 [SPF50+/PA++++]",
+    "volume": "23g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22400",
+    "mall": "아비브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9423714265",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8696821/86968214588.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8696821/86968214588.5.jpg",
+        "mall": "아비브",
+        "link": "https://smartstore.naver.com/main/products/9423714265"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8732504/87325044069.4.jpg",
+        "mall": "아비브",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9780541796"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1187136865",
+    "translated_kr": "블랑카우 리얼 밀크 클렌징 폼 피부 보습 탄력 피부의 결 수분 개선 150ml 1본",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
