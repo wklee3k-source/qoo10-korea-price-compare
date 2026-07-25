@@ -12211,5 +12211,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1191147953",
+    "translated_kr": "컨달 퓨어 바디미스트 베이비파우더향 128ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185851789",
+    "translated_kr": "메디필 [1+1] 레드 락토 콜라겐 래핑 마스크팩 70ml *2 + 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 락토 콜라겐 포어 리프팅 마스크"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "레드 락토 콜라겐 포어 리프팅 마스크",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
