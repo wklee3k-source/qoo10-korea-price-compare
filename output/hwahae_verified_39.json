@@ -11602,5 +11602,45 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207544119",
+    "translated_kr": "센텔리안24 엑스퍼트 마데카 크림 리뉴 PDRN, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엑스퍼트 마데카 크림 액티브 리뉴 PDRN",
+      "musinsa": "엑스퍼트 마데카크림 액티브 리뉴 PDRN 50ml"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "엑스퍼트 마데카 크림 액티브 리뉴 PDRN",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 46000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1133764204",
+    "translated_kr": "바이오댄스 바이오 콜라겐 리얼 딥 마스크, 4枚",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
