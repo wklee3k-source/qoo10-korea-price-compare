@@ -174,6 +174,7 @@ def build_pairs():
 
         orig_brand = q.get("brand", "")
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
+        kr_qty = extract_quantity(kr_name_display)
 
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
@@ -202,11 +203,26 @@ def build_pairs():
             qoo10_title_highlighted = escaped_title
             vol_auto_corrected = True
 
+        # [자동수정: 수량] 한국쪽 실제 구매처 상품이 "X 2개"처럼 여러 개
+        # 묶음인데, 큐텐 원본 제목엔 그 수량 표시가 전혀 없으면(예: 원문이
+        # "PDRN 핑크 콜라겐 볼륨 멀티밤 10g"뿐인데 실제 구매처는 "X 2개"),
+        # 업로드용 제목 끝에 "X {N}個"를 붙여서 실제 소싱수량을 반영한다.
+        # 이미 원문 자체에 수량표기(個/個入 등)가 있으면 건드리지 않는다
+        # (중복표기 방지). 브랜드불일치일 때는 용량수정과 동일하게 건너뛴다.
+        qty_auto_corrected = False
+        if kr_qty > 1 and brand_status != "mismatch" and extract_quantity(q["title"]) <= 1:
+            qty_suffix_jp = f" X {kr_qty}個"
+            qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
+            if qoo10_title_highlighted:
+                qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            else:
+                qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            qty_auto_corrected = True
+
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
 
-        kr_qty = extract_quantity(kr_name_display)
         # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
         # 있거나, 구매처 원본명에 "N종세트"가 있는 경우
         is_set = bool(
@@ -215,7 +231,7 @@ def build_pairs():
         )
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
-            "vol_auto_corrected": vol_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
+            "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": q.get("item_url"),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -284,6 +300,7 @@ def build_html(pairs: list[dict]):
             vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
+        qty_badge = '<span class="badge unknown">수량 자동수정됨(X N個 추가)</span>' if p.get("qty_auto_corrected") else ''
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
@@ -310,14 +327,14 @@ def build_html(pairs: list[dict]):
     <h3>큐텐 원본{' — ' + esc(p['qoo10_brand']) if p.get('qoo10_brand') else ''}</h3>
     <div class="mainrow">{qoo10_img_html}</div>
     <div class="name-label">상품명(수정가능 — 업로드용 확정명):</div>
-    {'<div class="vol-fix-preview">🔴 용량 자동수정: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+    {'<div class="vol-fix-preview">🔴 자동수정(용량/수량) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
     <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
     <div class="name-kr-readonly">참고 한글번역: {dim_minor_text(p['qoo10_name_kr'])}</div>
     <div class="price">{p['qoo10_price_jpy'] or '-'} 円</div>
     <div class="goods_no">goods_no: {goods_no}</div>
   </div>
   <div class="side">
-    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
+    <h3>한국 구매처{' — ' + esc(p['kr_brand']) if p.get('kr_brand') else ''} <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span></h3>
     <div class="mainrow">{kr_img_html}</div>
     <div class="name-label">한글 상품명(구매처 원본, 수정가능):</div>
     <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
