@@ -18092,5 +18092,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194955894",
+    "translated_kr": "비욘드 토탈 리커버리 크리미 바디 워시 300ml / 500ml / 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "토탈리커버리 크리미 바디워시",
+      "naver": "비욘드 토탈 리커버리 크리미 바디워시 1000ml / U"
+    },
+    "brand": "비욘드 (BEYOND)",
+    "name": "토탈리커버리 크리미 바디워시",
+    "volume": "300mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "28700",
+    "mall": "유네코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5705463362",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8324996/83249961522.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8324996/83249961522.4.jpg",
+        "mall": "유네코스",
+        "link": "https://smartstore.naver.com/main/products/5705463362"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8081719/80817190149.7.jpg",
+        "mall": "유네코스",
+        "link": "https://smartstore.naver.com/main/products/3318349874"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183255345",
+    "translated_kr": "홀리카홀리카 굿세라 슈퍼 세라마이드 토너 180ml+에멀젼 130ml / 2종 세트 화장수 기초 스킨케어 한국 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
