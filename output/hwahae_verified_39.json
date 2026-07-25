@@ -20604,5 +20604,49 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212154060",
+    "translated_kr": "【1+1+1】더마팩토리 트라넥삼산 6% 크림, 30ml x 3EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트라넥삼산 6%크림"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "트라넥삼산 6%크림",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 8000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212147421",
+    "translated_kr": "【1+1】더마팩토리 트라넥삼산 6% 크림, 30ml x 2EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트라넥삼산 6%크림"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "트라넥삼산 6%크림",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 8000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
