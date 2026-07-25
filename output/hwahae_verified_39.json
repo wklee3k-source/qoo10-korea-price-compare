@@ -1655,5 +1655,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210322268",
+    "translated_kr": "토리든 셀 메이징 저분자 콜라겐 모공 탄력 앰플 30ml / 모공・탄력・탄성을 동시 케어/ 촉촉함과 보습 앰플",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "셀메이징 저분자 콜라겐 모공 탄력 앰플"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "셀메이징 저분자 콜라겐 모공 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210181174",
+    "translated_kr": "아누아 정규품 PDRN 콜라겐 멜팅 넥 패치 4매 / 목 전용 집중 케어 / 탄력・탄성・보습을 동시 케어 / 피부에 밀착하는 넥 패치",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
