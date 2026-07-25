@@ -180,6 +180,21 @@ def t14_review_threshold():
     check("14 리뷰 임계값 10", val == 10, f"현재 {val}")
 
 
+# --------------------- #17 크롤 서브프로세스 stdout 오염 금지(실측사고)
+#  실측사고: crawl_shop_best5 내부의 [필터탈락]/[저장] 디버그 print가
+#  file=sys.stderr 없이 찍혀서 stdout으로 나갔다. crawl_single_shop.py는
+#  결과 JSON 한 줄만 stdout에 있을 거라 가정하는데, 디버그 줄까지 섞여서
+#  json.loads가 실패 → 정상 크롤(심지어 상품을 찾은 크롤)이 전부 '실패'로
+#  오분류되고 실제 데이터가 통째로 버려졌다(museshop/mood_k 등 실측확인).
+def t17_crawl_subprocess_stdout_clean():
+    disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    fn_src = disco.split("def crawl_shop_best5(shop_id")[1].split("\ndef ")[0]
+    # crawl_shop_best5 함수 본문 안의 모든 print(...) 호출은 file=sys.stderr를
+    # 동반해야 한다(마지막 return 직전 반환값 자체는 print가 아니므로 무관).
+    bad = [m.group(0) for m in re.finditer(r"print\([^\n]*\)", fn_src) if "file=sys.stderr" not in m.group(0)]
+    check("17 크롤 서브프로세스 stdout 오염 금지", not bad, f"stderr 누락: {bad}")
+
+
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
 def t16_crawl_failure_vs_empty():
     disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")

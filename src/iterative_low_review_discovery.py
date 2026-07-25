@@ -174,10 +174,10 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
     try:
         ranking = fetch_shop_ranking(shop_id)
     except ShopCrawlFailed as e:
-        print(f"  [크롤실패-재시도대상] {shop_id}: {e}")
+        print(f"  [크롤실패-재시도대상] {shop_id}: {e}", file=sys.stderr)
         return [], True
     except Exception as e:  # noqa: BLE001 - 예상 못한 오류도 안전하게 실패로 본다
-        print(f"  [크롤실패-예상외오류-재시도대상] {shop_id}: {type(e).__name__}: {e}")
+        print(f"  [크롤실패-예상외오류-재시도대상] {shop_id}: {type(e).__name__}: {e}", file=sys.stderr)
         return [], True
     if not ranking:
         return [], False  # 페이지는 열렸는데 진짜로 상품이 없음(정상 종결)
@@ -221,10 +221,10 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
         item["skip_reason"] = skip_reason
 
         if skip_reason:
-            print(f"    [필터탈락-{skip_reason}] {item['goods_no']} {item['title'][:30]} (그래도 다음 시드로는 사용)")
+            print(f"    [필터탈락-{skip_reason}] {item['goods_no']} {item['title'][:30]} (그래도 다음 시드로는 사용)", file=sys.stderr)
             skip_entries.append({"shop_id": shop_id, "goods_no": item["goods_no"], "title": item["title"], "reason": skip_reason, "category": category})
         else:
-            print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:30]}")
+            print(f"    [저장] {item['goods_no']} review={review_count} {item['title'][:30]}", file=sys.stderr)
 
         all_items.append(item)  # 필터 통과여부와 무관하게 항상 추가(시드 생성용)
 
