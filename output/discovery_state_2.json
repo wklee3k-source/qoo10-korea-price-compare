@@ -1,14 +1,14 @@
 {
   "visited_shops": [
-    "dal24",
-    "ASKIN",
-    "mijin-cosme",
     "dreem",
+    "mijin-cosme",
+    "ktrendmall",
+    "ASKIN",
     "wingkone",
     "dermadalia",
     "5sunnie",
-    "laglow",
-    "ktrendmall"
+    "dal24",
+    "laglow"
   ],
   "all_products": [],
   "shop_urls": [
@@ -22,8 +22,8 @@
     "https://m.qoo10.jp/shop/ASKIN",
     "https://m.qoo10.jp/shop/laglow"
   ],
-  "pending_keywords": [
+  "pending_keywords": [],
+  "seen_keywords": [
     "韓国 化粧水"
-  ],
-  "seen_keywords": []
+  ]
 }
