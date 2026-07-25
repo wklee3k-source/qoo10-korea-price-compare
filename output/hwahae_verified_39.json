@@ -8202,5 +8202,58 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188002169",
+    "translated_kr": "리프팅 크림 1618 글로우 래디언스 보습 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 리프팅 래디언스 크림",
+      "naver": "알펜무어1618 글로우 리프팅 래디언스 크림 50ml"
+    },
+    "brand": "알펜무어1618 (Alpen1618)",
+    "name": "글로우 리프팅 래디언스 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11090",
+    "mall": "건강엔H몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13198897238",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074340/90743408335.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074340/90743408335.jpg",
+        "mall": "건강엔H몰",
+        "link": "https://smartstore.naver.com/main/products/13198897238"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210242426",
+    "translated_kr": "아누아 PDRN 히알루론산 캡슐100 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
