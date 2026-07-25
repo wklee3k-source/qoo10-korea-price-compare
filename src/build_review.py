@@ -238,7 +238,11 @@ def build_pairs():
         # 위험하다.
         qty_removed_original = None
         if kr_qty <= 1 and qoo10_qty > 1 and brand_status != "mismatch" and not is_set:
-            qty_removal_pattern = re.compile(r"\s*[Xx×]?\s*\d+\s*(個|개|입|병|本)\b")
+            # [1+1]처럼 대괄호로 감싼 "덤" 표기와, "2個"류 단위수량 표기를
+            # 둘 다 잡아서 제거한다(실측 사례: 큐텐원문 "[1+1]...100g"인데
+            # 실제 소싱은 1개뿐이었음 — "1+1"을 그대로 두면 "하나 더
+            # 준다"고 오해하게 됨).
+            qty_removal_pattern = re.compile(r"\s*\[?\d+\s*\+\s*\d+\]?|\s*[Xx×]?\s*\d+\s*(個|개|입|병|本)\b")
             m = qty_removal_pattern.search(qoo10_title_display)
             if m:
                 qty_removed_original = m.group(0).strip()
@@ -344,7 +348,11 @@ def build_html(pairs: list[dict]):
         # 보충해서 붙인다. 원본에 이미 "2개"/"1+1" 등이 있으면 중복 방지로 안 붙임.
         kr_name_val = p['kr_name'] or ''
         already_has_qty = bool(re.search(r"\d+\s*(개|매|セット|1\+1)", kr_name_val))
-        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty else ''
+        # [수정] 세트상품(is_set)은 extract_quantity가 "세트=최소2개"라는
+        # 기본값을 주는데, 이건 "같은 상품 2개"가 아니라 "서로 다른 상품이
+        # 묶인 것"이므로 "(2개)"를 붙이면 오해를 준다(실측 사례: "오일+폼"
+        # 세트에 "(2개)"가 붙어서 "같은 걸 2개 준다"처럼 보였음).
+        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty and not p.get('is_set') else ''
         kr_name_full = f"{kr_name_val}{qty_suffix}"
 
         cards_html.append(f'''

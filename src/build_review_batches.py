@@ -65,7 +65,11 @@ def render_cards(pairs: list[dict]) -> str:
 
         kr_name_val = p['kr_name'] or ''
         already_has_qty = bool(re.search(r"\d+\s*(개|매|セット|1\+1)", kr_name_val))
-        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty else ''
+        # [수정] 세트상품(is_set)은 extract_quantity가 "세트=최소2개"라는
+        # 기본값을 주는데, 이건 "같은 상품 2개"가 아니라 "서로 다른 상품이
+        # 묶인 것"이므로 "(2개)"를 붙이면 오해를 준다(실측 사례: "오일+폼"
+        # 세트에 "(2개)"가 붙어서 "같은 걸 2개 준다"처럼 보였음).
+        qty_suffix = f" ({p['kr_qty']}개)" if p.get('kr_qty', 1) > 1 and not already_has_qty and not p.get('is_set') else ''
         kr_name_full = f"{kr_name_val}{qty_suffix}"
 
         cards_html.append(f'''
