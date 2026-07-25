@@ -10413,5 +10413,58 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209393044",
+    "translated_kr": "【공식】【NEW】MECHAI 히알루론산 스프레 바디 크림",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "[24시간 수분충전] 미차이 히알루론산 수플레 바디크림 200G"
+    },
+    "brand": "미차이",
+    "name": "[24시간 수분충전] 미차이 히알루론산 수플레 바디크림 200G",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "47500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000245621",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6051910/60519100450.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6051910/60519100450.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000245621"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107249/91072497037.2.jpg",
+        "mall": "실버벌마켓",
+        "link": "https://smartstore.naver.com/main/products/13527986684"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1084035101",
+    "translated_kr": "데오도란트 스틱 드라이 앤드 컴포트 50ml x 2개 [정확한 브랜드명: 니베아]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
