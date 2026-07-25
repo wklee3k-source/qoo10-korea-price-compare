@@ -125,7 +125,7 @@ def build_pairs():
             translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
-    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "ok": 0}
+    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "select_type": 0, "collab": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -139,6 +139,21 @@ def build_pairs():
         q = qoo10_by_goods.get(x["goods_no"])
         if not q:
             stats["no_qoo10_match"] += 1
+            continue
+        # [제외] "3종"처럼 숫자+종 표기는 "그중 하나를 선택"(옵션 3가지 중
+        # 1개)인지 "3개가 다 들어있는 세트"인지 텍스트만으로는 확실히
+        # 구분이 안 된다(예: "셰이킹 시너지 미스트 50ml 3종" — 3가지
+        # 향 중 하나를 고르는 건지, 3개가 다 오는 건지 애매함). 애매한 걸
+        # 억지로 판정하기보다, 사용자 지시대로 이런 상품은 전부 제외한다.
+        translated_kr = x.get("translated_kr") or ""
+        if re.search(r"\d+종\b", q["title"]) or re.search(r"\d+종\b", translated_kr):
+            stats["select_type"] += 1
+            continue
+        # [제외] "콜라보"(협업/한정판) 상품도 사용자 지시로 전부 제외한다
+        # — 이런 상품은 패키지/구성이 일반판과 달라서(예: "야구단
+        # 콜라보/2회분" 골라담기류) 정확한 매칭 신뢰도가 낮다.
+        if re.search(r"콜라보|コラボ", q["title"]) or re.search(r"콜라보|コラボ", translated_kr):
+            stats["collab"] += 1
             continue
 
         stats["ok"] += 1
@@ -224,12 +239,25 @@ def build_pairs():
         qty_auto_corrected = False
         qoo10_qty = extract_quantity(q["title"])
         if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1 and not is_set:
-            qty_suffix_jp = f" X {kr_qty}個"
-            qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
-            if qoo10_title_highlighted:
-                qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+            # [수정] 큐텐원문에 이미 "1個"처럼 수량이 명시되어 있으면, 뒤에
+            # "X N個"를 덧붙이지 않고 그 "1"이라는 숫자 자체를 실제 수량으로
+            # 바꾼다(실측 사례: "...1個 X 2個"처럼 중복표기가 되던 문제).
+            # 원문에 수량표기 자체가 아예 없을 때만 새로 추가한다.
+            explicit_one_pattern = re.compile(r"(?<!\d)1(\s*(?:個|개|입|병|本))\b")
+            explicit_match = explicit_one_pattern.search(qoo10_title_display)
+            if explicit_match:
+                qoo10_title_display = explicit_one_pattern.sub(
+                    lambda m: f"{kr_qty}{m.group(1)}", qoo10_title_display, count=1)
+                base_for_highlight = qoo10_title_highlighted or q["title"]
+                qoo10_title_highlighted = explicit_one_pattern.sub(
+                    lambda m: f'<mark class="vol-fix">{kr_qty}{m.group(1)}</mark>', base_for_highlight, count=1)
             else:
-                qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+                qty_suffix_jp = f" X {kr_qty}個"
+                qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
+                if qoo10_title_highlighted:
+                    qoo10_title_highlighted = qoo10_title_highlighted.rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
+                else:
+                    qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
             qty_auto_corrected = True
         # [반대 케이스] 한국쪽은 실제로 1개만 사는데(kr_qty<=1), 큐텐
         # 원본 제목에는 "2個"처럼 수량표기가 있으면 그 표기를 제거한다 —
@@ -274,7 +302,7 @@ def build_pairs():
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
-          f"큐텐매칭안됨={stats['no_qoo10_match']} 최종={stats['ok']}건")
+          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} 최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
 
