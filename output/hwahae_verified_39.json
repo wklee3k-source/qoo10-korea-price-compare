@@ -13806,5 +13806,52 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1196695553",
+    "translated_kr": "본 판테놀 필 토너 180ml / 닦아내는 화장수 각질 케어 판테놀 필링 도입 화장수 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212659970",
+    "translated_kr": "미쟝센 살롱10 프로틴 샴푸 손상모용 990ml 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "미쟝센 살롱10 손상모발 샴푸, 500ml, 1개"
+    },
+    "brand": "미쟝센",
+    "name": "미쟝센 살롱10 손상모발 샴푸, 500ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "9900",
+    "mall": "로샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12902108106",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9044661/90446619098.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9044661/90446619098.jpg",
+        "mall": "로샵",
+        "link": "https://smartstore.naver.com/main/products/12902108106"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
