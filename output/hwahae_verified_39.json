@@ -6478,5 +6478,67 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1110755534",
+    "translated_kr": "MT 메타트론 화장품 컨투어 에멀전 유액 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "칠자화 유액",
+      "naver": "MT Metatron MT 메타트론 콘투어 에멀전 50ml 보습 유액"
+    },
+    "brand": "황후지화 (Hwanghoozihwa)",
+    "name": "칠자화 유액",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "62990",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13555842175",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110035/91100352542.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110035/91100352542.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/13555842175"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1093334597",
+    "translated_kr": "CHRISTINA 크리스티나 언스트레스 토탈 세레니티 세럼 30mL 미용액 세럼 스킨케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "에스테틱 크리스티나 언스트레스 스텝5 토탈 세레니티 세럼 100ml"
+    },
+    "brand": "크리스티나",
+    "name": "에스테틱 크리스티나 언스트레스 스텝5 토탈 세레니티 세럼 100ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "148700",
+    "mall": "STEU",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9455578655",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8700007/87000078978.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8700007/87000078978.jpg",
+        "mall": "STEU",
+        "link": "https://smartstore.naver.com/main/products/9455578655"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
