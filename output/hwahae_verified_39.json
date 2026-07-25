@@ -10514,5 +10514,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1197470722",
+    "translated_kr": "컨달 네이처 샴푸 리필 4개세트 베이비파우더 향 400ml 리필 대용량 묶음구매 자연유래 가족용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191659376",
+    "translated_kr": "메디큐브 [25SS/New] PDRN 핑크 나이아신아마이드 휩 클렌저 120g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 나이아신아마이드 휩 클렌저",
+      "naver": "PDRN 핑크 나이아신아마이드 휩 클렌저"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 나이아신아마이드 휩 클렌저",
+    "volume": "120g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "21300",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2304&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5402487/54024875928.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5402487/54024875928.2.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2304&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024156/90241562495.1.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12697051571"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024156/90241569477.1.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12697058553"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
