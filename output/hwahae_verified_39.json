@@ -14999,5 +14999,70 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1139807140",
+    "translated_kr": "밀크바오밥 퍼팜 바디 워시 / 500ml / 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[N단독] 밀크바오밥 화이트머스크 바디워시 1.2L+로션200ml 2개+70ml"
+    },
+    "brand": "밀크바오밥",
+    "name": "[N단독] 밀크바오밥 화이트머스크 바디워시 1.2L+로션200ml 2개+70ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "18900",
+    "mall": "밀크바오밥",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11461856124",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8900636/89006366489.26.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8900636/89006366489.26.jpg",
+        "mall": "밀크바오밥",
+        "link": "https://smartstore.naver.com/main/products/11461856124"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1139805675",
+    "translated_kr": "오드 퍼팜 (07 슈가 플로랄) / 25ml / 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "여성 엘리자베스아덴 향수 그린티 EDT 오드뚜왈렛, 100ml, 1개"
+    },
+    "brand": "엘리자베스아덴",
+    "name": "여성 엘리자베스아덴 향수 그린티 EDT 오드뚜왈렛, 100ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "18300",
+    "mall": "PerfumeFit",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11831478161",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8937598/89375988748.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937598/89375988748.jpg",
+        "mall": "PerfumeFit",
+        "link": "https://smartstore.naver.com/main/products/11831478161"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117280/91172809025.jpg",
+        "mall": "PerfumeFit",
+        "link": "https://smartstore.naver.com/main/products/13628298416"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
