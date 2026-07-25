@@ -232,6 +232,32 @@ _COMMON_COSMETICS_WORDS = {
     "기획", "세트", "리필", "본품", "증정", "사은품",
 }
 
+# [카테고리체크] 서로 명백히 다른 제품유형(예: 로션 vs 마스크팩)이면, 같은
+# 제품라인명을 공유해도 다른 상품이다(실측 사례: "블루빈 B5-PDRN 마일드
+# 로션"(원본) vs 후보명에 "마스크"가 섞여있어 혼란을 준 경우). 그룹 안의
+# 단어는 서로 호환(같은 카테고리)으로 보고, 그룹이 다르면 별개 제품으로
+# 취급한다.
+_PRODUCT_CATEGORY_GROUPS = [
+    {"로션", "에멀전", "유액"},
+    {"마스크", "마스크팩", "시트마스크"},
+    {"크림"},
+    {"세럼", "앰플", "에센스"},
+    {"토너", "스킨"},
+    {"클렌징", "클렌저", "클렌징폼", "폼클렌징"},
+    {"선크림", "썬크림", "선쿠션", "선스틱", "선세럼"},
+    {"패치", "패드"},
+    {"샴푸"},
+    {"트리트먼트", "헤어팩"},
+]
+
+
+def _detect_categories(text: str) -> set[str]:
+    found = set()
+    for group in _PRODUCT_CATEGORY_GROUPS:
+        if any(word in text for word in group):
+            found.add(frozenset(group))
+    return found
+
 
 def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: list[dict], original_query: str = "") -> float:
     """known_brand/known_volume 일치도 + 다른 소스와의 합의(consensus)로 점수를 매긴다."""
@@ -294,6 +320,14 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
         if distinctive_orig and truly_missing == distinctive_orig:
             score -= 6.0
 
+        # [카테고리체크] 원본과 후보 둘 다 카테고리가 명확히 판별되는데
+        # 서로 다르면(예: 원본=로션, 후보=마스크) 강한 페널티. 카테고리가
+        # 판별 안 되는 쪽이 있으면(애매하면) 그냥 넘어간다 — 확실할 때만
+        # 걸러야 오탐이 없다.
+        orig_categories = _detect_categories(original_query.lower())
+        cand_categories = _detect_categories(cand_name)
+        if orig_categories and cand_categories and not (orig_categories & cand_categories):
+            score -= 6.0
 
     # 화해 출처는 단종여부까지 알려주는 부가정보가 있어 약간의 기본 가중치를 준다
     if cand.get("source") == "hwahae":
