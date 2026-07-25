@@ -14205,5 +14205,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1166654874",
+    "translated_kr": "[26SS/New](+언더블 한유진 포토프레임) 랑방 에클라 드 알페주 화이트티 EDP 30ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1189005367",
+    "translated_kr": "네이처리퍼블릭 콜라겐 드림 크림 50ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 드림 크림"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "콜라겐 드림 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
