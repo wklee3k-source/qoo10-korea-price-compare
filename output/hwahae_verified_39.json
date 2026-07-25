@@ -2453,5 +2453,77 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1100903075",
+    "translated_kr": "메디큐브 콜라겐 리프팅 마스크 10매 / 탄력UP! 당김 케어로 촉촉한 윤기 피부로 [정확한 브랜드명: 메디큐브]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디큐브 리뉴얼 콜라겐 나이트 랩핑 크림 마스크 75ml 대용량"
+    },
+    "brand": "메디큐브",
+    "name": "메디큐브 리뉴얼 콜라겐 나이트 랩핑 크림 마스크 75ml 대용량",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "26800",
+    "mall": "케이앤아이로컬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8515312927",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8605981/86059813250.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8605981/86059813250.jpg",
+        "mall": "케이앤아이로컬",
+        "link": "https://smartstore.naver.com/main/products/8515312927"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8544444/85444449249.1.jpg",
+        "mall": "케이앤아이로컬",
+        "link": "https://smartstore.naver.com/main/products/7899948926"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913891/89138911773.jpg",
+        "mall": "마이커프로7",
+        "link": "https://smartstore.naver.com/main/products/11594401367"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8892673/88926731154.jpg",
+        "mall": "마켓다담다",
+        "link": "https://smartstore.naver.com/main/products/11382220789"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8627590/86275904472.jpg",
+        "mall": "케이앤아이로컬",
+        "link": "https://smartstore.naver.com/main/products/8731404149"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1127615774",
+    "translated_kr": "네이처리퍼블릭 대용량 토너 병풀 그린더마 마일드 시카 빅 토너 500ml x 2ea",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린더마 마일드 시카 빅토너"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "그린더마 마일드 시카 빅토너",
+    "volume": "500ml",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": 39900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
