@@ -2713,5 +2713,64 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1135156427",
+    "translated_kr": "메디큐브 [블랙헤드 클렌징 세트] 제로포어 블랙헤드 딥 클렌징 오일 205ml + 제로 폼 클렌저 120g + 블랙헤드 모공 브러시 증정/zero pore",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193966544",
+    "translated_kr": "셀라딕스 트리플 레티놀 워시 필 30ml/Triple Retinol Wash Peel/3x",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트리플 레티놀 워시 필",
+      "naver": "트리플 레티놀 워시 필"
+    },
+    "brand": "셀라딕스 (Celladix)",
+    "name": "트리플 레티놀 워시 필",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "35800",
+    "mall": "셀라딕스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://celladix.co.kr/product/detail.html?product_no=90&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5392248/53922480719.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5392248/53922480719.4.jpg",
+        "mall": "셀라딕스",
+        "link": "https://celladix.co.kr/product/detail.html?product_no=90&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5781407/57814072620.1.jpg",
+        "mall": "셀라딕스",
+        "link": "https://celladix.co.kr/product/detail.html?product_no=105&cate_no=46&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8922877/89228771917.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11684261450"
+      }
+    ],
+    "real_page_title": "트리플 레티놀 워시 필",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
