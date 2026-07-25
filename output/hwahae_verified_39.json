@@ -20256,5 +20256,63 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1197650165",
+    "translated_kr": "EFG 세살 연고 5g / EGF 크림 (보습케어 / 민감피부 서포트)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "7무 EGF 트리트먼트 에센셜 크림",
+      "naver": "시카 재생 크림 피부과 레이저 점빼고 점뺀후 egf 이지에프 pdrn 약국입점 연고 튜브"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "7무 EGF 트리트먼트 에센셜 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "15900",
+    "mall": "바르시오화장품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2079955603",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1192777/11927773976.18.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1192777/11927773976.18.jpg",
+        "mall": "바르시오화장품",
+        "link": "https://smartstore.naver.com/main/products/2079955603"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100778/91007783994.jpg",
+        "mall": "에버로운",
+        "link": "https://smartstore.naver.com/main/products/13463273642"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8775824/87758240920.jpg",
+        "mall": "메디앤아트",
+        "link": "https://smartstore.naver.com/main/products/10213737393"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194294476",
+    "translated_kr": "데싱디바 마그네틱네일 매직프레스 글로우베리(아몬드) 네일팁 세트 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
