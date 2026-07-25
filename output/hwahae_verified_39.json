@@ -18770,5 +18770,90 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1152064671",
+    "translated_kr": "스템셀라인 스킨세럼크림 [중·건성피부용 3종]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정"
+    },
+    "brand": "아벤느",
+    "name": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "41600",
+    "mall": "아벤느코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11730664019",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+        "mall": "아벤느코리아",
+        "link": "https://smartstore.naver.com/main/products/11730664019"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174517.jpg",
+        "mall": "아벤느",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11730664018"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8954193/89541938684.1.jpg",
+        "mall": "재팬아롱다롱",
+        "link": "https://smartstore.naver.com/main/products/11997427996"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8870335/88703359132.jpg",
+        "mall": "LV뷰티",
+        "link": "https://smartstore.naver.com/main/products/11158848810"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120253/91202534454.jpg",
+        "mall": "멀티플렉스아울렛몰",
+        "link": "https://smartstore.naver.com/main/products/13658023669"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172038726",
+    "translated_kr": "정규품 비타-C 리턴 스킨 160ml + 세럼 50ml + 리턴 크림 100ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[얀센] 비타포스C 스킨 콤플렉스 세럼 50ml"
+    },
+    "brand": "얀센코스메틱",
+    "name": "[얀센] 비타포스C 스킨 콤플렉스 세럼 50ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "63400",
+    "mall": "코스메언니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/4662765871",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8220728/82207286420.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8220728/82207286420.jpg",
+        "mall": "코스메언니",
+        "link": "https://smartstore.naver.com/main/products/4662765871"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051155/90511551604.jpg",
+        "mall": "모든정리",
+        "link": "https://smartstore.naver.com/main/products/12967040594"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
