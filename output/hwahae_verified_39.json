@@ -14244,5 +14244,62 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1188994112",
+    "translated_kr": "네이처리퍼블릭 콜라겐 드림 올인원 래디언스 톤업 크림 50ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 드림 50 올인원 래디언스 톤 업 크림"
+    },
+    "brand": "네이처리퍼블릭 (NATUREREPUBLIC)",
+    "name": "콜라겐 드림 50 올인원 래디언스 톤 업 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1185447621",
+    "translated_kr": "아비브 어휘초 트라이얼 키트(스킨부스터 20ml+세럼 15ml+튜브 30ml+폼 30ml)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[라운지전용] 아비브 어성초 진정케어 트라이얼 키트"
+    },
+    "brand": "아비브",
+    "name": "[라운지전용] 아비브 어성초 진정케어 트라이얼 키트",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "10900",
+    "mall": "아비브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12774218078",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9031872/90318729028.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9031872/90318729028.jpg",
+        "mall": "아비브",
+        "link": "https://smartstore.naver.com/main/products/12774218078"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120416/91204168571.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13659657786"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
