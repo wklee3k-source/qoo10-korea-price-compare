@@ -242,7 +242,7 @@ def build_pairs():
             # 둘 다 잡아서 제거한다(실측 사례: 큐텐원문 "[1+1]...100g"인데
             # 실제 소싱은 1개뿐이었음 — "1+1"을 그대로 두면 "하나 더
             # 준다"고 오해하게 됨).
-            qty_removal_pattern = re.compile(r"\s*\[?\d+\s*\+\s*\d+\]?|\s*[Xx×]?\s*\d+\s*(個|개|입|병|本)\b")
+            qty_removal_pattern = re.compile(r"\s*[\(\[]?\d+\s*\+\s*\d+[\)\]]?|\s*[\(\[]?[Xx×]?\s*\d+\s*(個|개|입|병|本)[\)\]]?")
             m = qty_removal_pattern.search(qoo10_title_display)
             if m:
                 qty_removed_original = m.group(0).strip()
