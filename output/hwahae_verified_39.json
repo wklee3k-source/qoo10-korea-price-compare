@@ -8163,5 +8163,44 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203399559",
+    "translated_kr": "VT 포케몬 에디션 PDRN 그로우 앰플 미스트 100ml 더블 기획 (+포케몬 티 코스터)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202551527",
+    "translated_kr": "등 여드름 시카 케어 바디 미스트 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프라임 보타니컬 시카 여드름케어 바디워시 티트리포레스트"
+    },
+    "brand": "센토 (SENTO)",
+    "name": "프라임 보타니컬 시카 여드름케어 바디워시 티트리포레스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 19900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
