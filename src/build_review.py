@@ -210,7 +210,8 @@ def build_pairs():
         # 이미 원문 자체에 수량표기(個/個入 등)가 있으면 건드리지 않는다
         # (중복표기 방지). 브랜드불일치일 때는 용량수정과 동일하게 건너뛴다.
         qty_auto_corrected = False
-        if kr_qty > 1 and brand_status != "mismatch" and extract_quantity(q["title"]) <= 1:
+        qoo10_qty = extract_quantity(q["title"])
+        if kr_qty > 1 and brand_status != "mismatch" and qoo10_qty <= 1:
             qty_suffix_jp = f" X {kr_qty}個"
             qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
             if qoo10_title_highlighted:
@@ -218,6 +219,25 @@ def build_pairs():
             else:
                 qoo10_title_highlighted = q["title"].rstrip() + f' <mark class="vol-fix">{qty_suffix_jp.strip()}</mark>'
             qty_auto_corrected = True
+        # [반대 케이스] 한국쪽은 실제로 1개만 사는데(kr_qty<=1), 큐텐
+        # 원본 제목에는 "2個"처럼 수량표기가 있으면 그 표기를 제거한다 —
+        # 실측 사례: 큐텐원문 "...50ml 2個"인데 실제 소싱처는 1개짜리
+        # ("50ml" 단품)였음. 표기를 안 지우면 "2개 준다"고 오해할 수 있어
+        # 위험하다.
+        qty_removed_original = None
+        if kr_qty <= 1 and qoo10_qty > 1 and brand_status != "mismatch":
+            qty_removal_pattern = re.compile(r"\s*[Xx×]?\s*\d+\s*(個|개|입|병|本)\b")
+            m = qty_removal_pattern.search(qoo10_title_display)
+            if m:
+                qty_removed_original = m.group(0).strip()
+                qoo10_title_display = qty_removal_pattern.sub("", qoo10_title_display, count=1).strip()
+                if qoo10_title_highlighted:
+                    qoo10_title_highlighted = qty_removal_pattern.sub(
+                        lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', qoo10_title_highlighted, count=1)
+                else:
+                    qoo10_title_highlighted = qty_removal_pattern.sub(
+                        lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', q["title"], count=1)
+                qty_auto_corrected = True
 
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
@@ -300,7 +320,7 @@ def build_html(pairs: list[dict]):
             vol_badge = '<span class="badge unknown">용량판단불가</span>'
         else:
             vol_badge = f'<span class="badge {"match" if p["vol_match"] else "mismatch"}">용량{"일치" if p["vol_match"] else "불일치"}</span>'
-        qty_badge = '<span class="badge unknown">수량 자동수정됨(X N個 추가)</span>' if p.get("qty_auto_corrected") else ''
+        qty_badge = '<span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span>' if p.get("qty_auto_corrected") else ''
         obsolete_badge = '<span class="badge mismatch">단종</span>' if p.get("obsolete") else ""
         set_badge = '<span class="badge unknown">세트상품</span>' if p.get("is_set") else ""
         trust = p.get("kr_seller_trust")
