@@ -12400,5 +12400,62 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1198867352",
+    "translated_kr": "아누아 PDRN 히알루론산 캡슐 미스트 100ml 한국화장품 보습 미스트 수분 공급 건조 대책",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 PDRN 피디알엔 히알루론산 수분 캡슐 미스트 30ml"
+    },
+    "brand": "아누아",
+    "name": "아누아 PDRN 피디알엔 히알루론산 수분 캡슐 미스트 30ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "17000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12712578467",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9025708/90257089391.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025708/90257089391.2.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12712578467"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119036/91190362324.jpg",
+        "mall": "YouNice",
+        "link": "https://smartstore.naver.com/main/products/13645851545"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117811/91178114167.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13633603503"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1168706253",
+    "translated_kr": "【대용량 500ml】 아누아 어성초 77+ 수징 토너 / 보습·진정 케어 화장수 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
