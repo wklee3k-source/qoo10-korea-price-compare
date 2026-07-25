@@ -747,5 +747,65 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188406613",
+    "translated_kr": "일리윤 세라마이드 아토 로션 600ml [보습+배리어+민감성 피부]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세라마이드 아토 로션",
+      "musinsa": "세라마이드 아토 선로션 180ml",
+      "naver": "일리윤 바디로션 대용량 무향 세라마이드 아토 580ml+300ml"
+    },
+    "brand": "일리윤 (ILLIYOON)",
+    "name": "세라마이드 아토 로션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "27500",
+    "mall": "일리윤",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8173801358",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8571830/85718301681.55.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8571830/85718301681.55.jpg",
+        "mall": "일리윤",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8173801358"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8567484/85674849480.149.jpg",
+        "mall": "아모레퍼시픽몰 헤어바디",
+        "link": "https://smartstore.naver.com/main/products/8130349157"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626411/86264111197.23.jpg",
+        "mall": "아모레퍼시픽몰 헤어바디",
+        "link": "https://smartstore.naver.com/main/products/8719610874"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188406610",
+    "translated_kr": "네이처리퍼블릭 알로에 수징 젤 미스트 155ml×3 [진정+보습+시간단축]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
