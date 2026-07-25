@@ -5655,5 +5655,49 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1178226702",
+    "translated_kr": "[1+1]티트리 시카 모공 팩 5매 브링그린",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리 시카 포어 코팩"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리 시카 포어 코팩",
+    "volume": "5g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 11800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1178226617",
+    "translated_kr": "올데이 메이크업 픽서 75ml/쏘내추럴/FIXX/ALL DAY/MAKE UP SETTING",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올데이 타이트 메이크업 픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
