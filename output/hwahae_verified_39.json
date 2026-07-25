@@ -8931,5 +8931,87 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190934609",
+    "translated_kr": "토니모리 기미야 세럼 35ml / 멜라닌 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "기미야 미백 세럼",
+      "naver": "토니모리 기미야 미백 세럼 35ml 1개"
+    },
+    "brand": "토니모리 (TONYMOLY)",
+    "name": "기미야 미백 세럼",
+    "volume": "35ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17840",
+    "mall": "캘리스 마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13200700880",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074521/90745211977.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074521/90745211977.jpg",
+        "mall": "캘리스 마켓",
+        "link": "https://smartstore.naver.com/main/products/13200700880"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064504/90645045971.1.jpg",
+        "mall": "다보잡마켓",
+        "link": "https://smartstore.naver.com/main/products/13100534879"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064334/90643344638.jpg",
+        "mall": "믿고사는 스토어",
+        "link": "https://smartstore.naver.com/main/products/13098833546"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063841/90638418814.jpg",
+        "mall": "몽글레마켓",
+        "link": "https://smartstore.naver.com/main/products/13093907722"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213654206",
+    "translated_kr": "내추럴 퓨어 헤어 트리트먼트 1000g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퓨어피플 아티스틱 내추럴 오일 트리트먼트",
+      "naver": "레삐 아마존스토리 내추럴 퓨어 트리트먼트 1000g 손상모발 케어 영양 보습 자연유래 성분"
+    },
+    "brand": "아자미 (AZAMI)",
+    "name": "퓨어피플 아티스틱 내추럴 오일 트리트먼트",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36000",
+    "mall": "굿프라이스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13593441281",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113795/91137951693.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113795/91137951693.1.jpg",
+        "mall": "굿프라이스",
+        "link": "https://smartstore.naver.com/main/products/13593441281"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113793/91137934687.1.jpg",
+        "mall": "굿프라이스",
+        "link": "https://smartstore.naver.com/main/products/13593424276"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
