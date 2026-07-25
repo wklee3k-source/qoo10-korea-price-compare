@@ -799,6 +799,20 @@ jobs:
             fi
           done
 
+      - name: Translate Korean product names to Japanese (for review-page comparison)
+        working-directory: src
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python translate_kr_to_jp.py ../output/hwahae_verified_39.json ../output/kr_to_jp_translations.json || echo "[경고] 한→일 역번역 실패 — 다음 실행때 이어서 진행됨"
+          git add ../output/kr_to_jp_translations.json
+          git diff --cached --quiet || git commit -m "Auto: KR->JP translation cache update"
+          for i in $(seq 1 5); do
+            if git push origin hwahae-live; then echo "push 성공"; break; fi
+            sleep "$((RANDOM % 6 + 1))"
+            git pull --rebase origin hwahae-live -q
+          done
+
       - name: Auto-build and publish review pages (docs/) after verification
         working-directory: src
         run: |

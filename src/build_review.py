@@ -124,6 +124,18 @@ def build_pairs():
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
 
+    # [일본어 역번역] 한글 상품명(구매처 원본) 아래에 참고용 일본어 번역을
+    # 보여주기 위한 배치번역 결과(translate_kr_to_jp.py가 생성). 없으면
+    # 빈 딕셔너리로 폴백 — 이 파일이 없다고 페이지 생성 자체가 실패하면
+    # 안 된다.
+    kr_to_jp = {}
+    kr_to_jp_path = OUTPUT / "kr_to_jp_translations.json"
+    if kr_to_jp_path.exists():
+        try:
+            kr_to_jp = json.loads(kr_to_jp_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            pass
+
     # [구조변경 대응] 1,2단계 통합 이후엔 별도 hwahae_input_39.json이 없다.
     # discovery_state.json의 translated_kr을 보조로 쓰되, 최우선은 검증
     # 시점에 실제로 사용된 값(hwahae_verified_39.json 각 항목 자체의
@@ -320,7 +332,7 @@ def build_pairs():
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
-            "kr_qty": kr_qty, "is_set": is_set,
+            "kr_qty": kr_qty, "is_set": is_set, "kr_name_jp": kr_to_jp.get(x["goods_no"], ""),
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
@@ -415,6 +427,7 @@ def build_html(pairs: list[dict]):
     <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -437,6 +450,7 @@ def build_html(pairs: list[dict]):
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
+        {'<div class="name-kr-readonly" style="color:#a05fa0;">JP: ' + esc(p['kr_name_jp']) + '</div>' if p.get('kr_name_jp') else ''}
       </td>
     </tr>
     <tr>
@@ -454,6 +468,7 @@ def build_html(pairs: list[dict]):
       </td>
     </tr>
   </table>
+  </div>
 </div>''')
 
     cards_str = "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'

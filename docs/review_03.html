@@ -21,10 +21,11 @@
   .badge.match { background:#e3f5ea; color:#2a7d46; }
   .badge.mismatch { background:#fdeaea; color:#c0392b; }
   .badge.unknown { background:#fdf3e3; color:#a67a1f; }
-  .photo-row { display:flex; gap:32px; margin-bottom:16px; flex-wrap:wrap; }
+  .card-body { display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+  .photo-row { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
   .photo-group { padding:12px; border-radius:10px; }
-  .photo-group.qoo10 { background:#eaf2fc; }
-  .photo-group.kr { background:#eaf6ed; }
+  .photo-group.qoo10 { background:#eef0f2; }
+  .photo-group.kr { background:#f2f0ec; }
   .photo-group-label { font-size:11px; font-weight:600; margin-bottom:6px; }
   .photo-group-label.qoo10 { color:#378ADD; }
   .photo-group-label.kr { color:#2a7d46; }
@@ -34,7 +35,7 @@
   .mainimg img { width:100%; height:100%; object-fit:contain; background:#fff; display:block; border-radius:5px; }
   .img-size-badge { position:absolute; bottom:4px; right:4px; background:rgba(0,0,0,0.65); color:#fff;
                      font-size:10px; padding:2px 5px; border-radius:4px; pointer-events:none; }
-  .info-table { width:100%; border-collapse:collapse; font-size:14px; }
+  .info-table { flex:1; min-width:280px; border-collapse:collapse; font-size:14px; }
   .info-table td { padding:9px 0; border-top:1px solid #eee; vertical-align:top; }
   .info-table tr:first-child td { border-top:none; }
   .info-table td.label { width:70px; color:#888; white-space:nowrap; }
@@ -89,6 +90,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -128,6 +130,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1151012307" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아누아">
@@ -135,6 +138,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -174,6 +178,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1203960088" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Dr.Althea">
@@ -181,6 +186,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -220,6 +226,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1084250838" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 동아제약 파티온 공식몰">
@@ -227,6 +234,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -266,6 +274,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1186021425" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 생그린">
@@ -273,6 +282,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -312,6 +322,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1064912468" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아모레퍼시픽공식몰">
@@ -319,6 +330,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -358,6 +370,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1198883487" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 몬키혼테">
@@ -365,6 +378,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -404,6 +418,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1197720706" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 패션뷰티몰">
@@ -411,6 +426,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -450,6 +466,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1188188856" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Top뷰티">
@@ -457,6 +474,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -496,6 +514,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1207138612" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 제이엠솔루션">
@@ -503,6 +522,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -542,6 +562,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1213607022" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 쏘내추럴">
@@ -549,6 +570,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -588,6 +610,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1202043668" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 윤가원">
@@ -595,6 +618,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -634,6 +658,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1194502685" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 엠유즈">
@@ -641,6 +666,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -680,6 +706,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1158942439" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라온봄마켓">
@@ -687,6 +714,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -726,6 +754,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1138030129" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Dr.Althea">
@@ -733,6 +762,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -772,6 +802,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1201368379" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
@@ -779,6 +810,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -818,6 +850,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193601980" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디오디너리">
@@ -825,6 +858,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -864,6 +898,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1206909143" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디오디너리">
@@ -871,6 +906,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -910,6 +946,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1202095634" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디오디너리">
@@ -917,6 +954,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -956,6 +994,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1132024666" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 유럽화장품">
@@ -963,6 +1002,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1002,6 +1042,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1201575924" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Whipped.">
@@ -1009,6 +1050,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1048,6 +1090,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="958808136" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 대구백화점">
@@ -1055,6 +1098,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1094,6 +1138,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193834160" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 레드밤">
@@ -1101,6 +1146,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1140,6 +1186,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1167189215" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · iwillcosmetics">
@@ -1147,6 +1194,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1186,6 +1234,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1083286884" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 트리플비 마켓">
@@ -1193,6 +1242,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1232,6 +1282,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1165634740" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Nuvianne">
@@ -1239,6 +1290,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1278,6 +1330,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1212749218" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디오디너리">
@@ -1285,6 +1338,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1324,6 +1378,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1138450382" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · SKIN1004 공식몰">
@@ -1331,6 +1386,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1370,6 +1426,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1212749170" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 시우리스토어">
@@ -1377,6 +1434,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1416,6 +1474,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1188958801" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 파리앙쥬">
@@ -1423,6 +1482,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1462,6 +1522,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193433365" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 구미당 스토어">
@@ -1469,6 +1530,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1508,6 +1570,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193433359" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 마이트문 가심비 가성비 몰">
@@ -1515,6 +1578,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1554,6 +1618,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1122416561" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · originbe">
@@ -1561,6 +1626,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1600,6 +1666,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1168069878" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라운드랩">
@@ -1607,6 +1674,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1646,6 +1714,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1182602131" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 유에스샵">
@@ -1653,6 +1722,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1692,6 +1762,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1153292054" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 현대백화점">
@@ -1699,6 +1770,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1738,6 +1810,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1205625745" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아토팜 본사 스토어">
@@ -1745,6 +1818,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1784,6 +1858,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1066844135" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 일본홀세일">
@@ -1791,6 +1866,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1830,6 +1906,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1118545938" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 여우화장">
@@ -1837,6 +1914,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1876,6 +1954,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1191657535" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 레인보우USA">
@@ -1883,6 +1962,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1922,6 +2002,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1208323570" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Top뷰티">
@@ -1929,6 +2010,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -1968,6 +2050,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1197590797" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 네슈라 화장품">
@@ -1975,6 +2058,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2014,6 +2098,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1176564980" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 블랑네이처">
@@ -2021,6 +2106,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2060,6 +2146,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1208366563" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 로얄셀렉션">
@@ -2067,6 +2154,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2106,6 +2194,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1192146158" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 오승재팬">
@@ -2113,6 +2202,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2152,6 +2242,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1208735798" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 폴라초이스">
@@ -2159,6 +2250,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2198,6 +2290,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1204153918" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · CAC-LEOS">
@@ -2205,6 +2298,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2244,6 +2338,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1160337522" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 지엘코스">
@@ -2251,6 +2346,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2290,6 +2386,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1181470550" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 동국제약 센텔리안24">
@@ -2297,6 +2394,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2336,6 +2434,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1165210718" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
@@ -2343,6 +2442,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2382,6 +2482,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1208425109" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · TOOTOO샵">
@@ -2389,6 +2490,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2428,6 +2530,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1179706493" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디큐브">
@@ -2435,6 +2538,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2474,6 +2578,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1155304298" data-qoo10-name="" data-kr-name="" data-kr-site="naver · ZARA HOME 자라홈">
@@ -2481,6 +2586,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2520,6 +2626,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1213147250" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라온제나랑">
@@ -2527,6 +2634,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2566,6 +2674,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1213147004" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라온제나랑">
@@ -2573,6 +2682,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2612,6 +2722,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1184246186" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 도니수니몰">
@@ -2619,6 +2730,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2658,6 +2770,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193632664" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 바디키퍼 공식몰">
@@ -2665,6 +2778,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2704,6 +2818,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1210874306" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 닌키">
@@ -2711,6 +2826,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2750,6 +2866,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1210871481" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 포스트패스">
@@ -2757,6 +2874,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2796,6 +2914,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1203398878" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 올리브영">
@@ -2803,6 +2922,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2842,6 +2962,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1180349080" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더샘">
@@ -2849,6 +2970,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2888,6 +3010,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1165513951" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
@@ -2895,6 +3018,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2934,6 +3058,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1183178551" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 원라이브:쇼핑">
@@ -2941,6 +3066,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -2980,6 +3106,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1205776987" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 뷰티코스">
@@ -2987,6 +3114,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3026,6 +3154,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1202514041" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 원학이커머스47">
@@ -3033,6 +3162,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3072,6 +3202,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1213007507" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 고운매마켓">
@@ -3079,6 +3210,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3118,6 +3250,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1189199300" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 월드세븐">
@@ -3125,6 +3258,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3164,6 +3298,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1175793124" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 코너프샵">
@@ -3171,6 +3306,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3210,6 +3346,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1188402180" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 대웅제약이지듀공식몰">
@@ -3217,6 +3354,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3256,6 +3394,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1210384893" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아모레퍼시픽공식몰">
@@ -3263,6 +3402,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3302,6 +3442,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1115880952" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 동아제약 파티온 공식몰">
@@ -3309,6 +3450,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3348,6 +3490,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1191163551" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리쥬란 코스메틱">
@@ -3355,6 +3498,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3394,6 +3538,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1209318840" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 바리바리숍">
@@ -3401,6 +3546,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3440,6 +3586,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1204729766" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 수민플러스">
@@ -3447,6 +3594,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3486,6 +3634,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1152579895" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 레인보우USA">
@@ -3493,6 +3642,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3532,6 +3682,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1194254316" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아모레퍼시픽공식몰">
@@ -3539,6 +3690,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3578,6 +3730,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1193961247" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
@@ -3585,6 +3738,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3624,6 +3778,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1191488311" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 셀퓨전씨">
@@ -3631,6 +3786,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3670,6 +3826,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1195095866" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디큐브">
@@ -3677,6 +3834,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3716,6 +3874,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1139846346" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 로컬스튜">
@@ -3723,6 +3882,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3762,6 +3922,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1172686121" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · TheOrdinary">
@@ -3769,6 +3930,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3808,6 +3970,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1204736828" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 에어비티">
@@ -3815,6 +3978,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3854,6 +4018,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1125939784" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디픽미">
@@ -3861,6 +4026,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3900,6 +4066,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1198779632" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 토르홉 스토어">
@@ -3907,6 +4074,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3946,6 +4114,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1064609458" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 에스트라">
@@ -3953,6 +4122,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -3992,6 +4162,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1186953765" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 오감공감">
@@ -3999,6 +4170,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4038,6 +4210,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1144211126" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 와우멈머">
@@ -4045,6 +4218,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4084,6 +4258,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1197893156" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리젠바이오공식쇼핑몰">
@@ -4091,6 +4266,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4130,6 +4306,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1192569545" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리젠바이오공식쇼핑몰">
@@ -4137,6 +4314,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4176,6 +4354,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1204358320" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Top뷰티">
@@ -4183,6 +4362,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4222,6 +4402,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1181410808" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 유세린공식스토어">
@@ -4229,6 +4410,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4268,6 +4450,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1164706635" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 마이오쇼핑">
@@ -4275,6 +4458,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4314,6 +4498,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1102844886" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 이즈앤트리">
@@ -4321,6 +4506,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4360,6 +4546,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1202125379" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 벤튼">
@@ -4367,6 +4554,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4406,6 +4594,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1082804410" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리쥬란 코스메틱">
@@ -4413,6 +4602,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4452,6 +4642,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1191601522" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Top뷰티">
@@ -4459,6 +4650,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4498,6 +4690,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1094393233" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
@@ -4505,6 +4698,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4544,6 +4738,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1190831666" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디큐브">
@@ -4551,6 +4746,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4590,6 +4786,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1128279938" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
@@ -4597,6 +4794,7 @@
     <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4636,6 +4834,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 
 <div class="card" data-goods="1132510657" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 월드세븐">
@@ -4643,6 +4842,7 @@
     <span class="badges"><span class="badge unknown">브랜드판단불가</span><span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -4682,6 +4882,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 <div id="pagination-bottom" class="pagination"></div>
 <script>

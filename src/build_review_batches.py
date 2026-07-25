@@ -78,6 +78,7 @@ def render_cards(pairs: list[dict]) -> str:
     <span class="badges">{brand_badge}{vol_badge}{qty_badge}{obsolete_badge}{set_badge}{trust_badge}</span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
+  <div class="card-body">
   <div class="photo-row">
     <div class="photo-group qoo10">
       <div class="photo-group-label qoo10">큐텐 원본</div>
@@ -100,6 +101,7 @@ def render_cards(pairs: list[dict]) -> str:
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
+        {'<div class="name-kr-readonly" style="color:#a05fa0;">JP: ' + esc(p['kr_name_jp']) + '</div>' if p.get('kr_name_jp') else ''}
       </td>
     </tr>
     <tr>
@@ -117,6 +119,7 @@ def render_cards(pairs: list[dict]) -> str:
       </td>
     </tr>
   </table>
+  </div>
 </div>''')
     return "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
 
