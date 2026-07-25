@@ -107,8 +107,10 @@ def build_batches():
     BATCH_DIR.mkdir(exist_ok=True, parents=True)
 
     n_batches = (len(all_pairs) + BATCH_SIZE - 1) // BATCH_SIZE
+    batch_meta = []  # 허브페이지용: 각 배치의 id/건수
     for i in range(n_batches):
         batch = all_pairs[i * BATCH_SIZE:(i + 1) * BATCH_SIZE]
+        batch_id = f"review_{i+1:02d}"
         cards_str = render_cards(batch)
         new_html = re.sub(
             r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
@@ -117,11 +119,104 @@ def build_batches():
             flags=re.S,
         )
         new_html = re.sub(r"\(\d+건.*?\)", f"({len(batch)}건, 배치 {i+1}/{n_batches})", new_html, count=1)
-        out_path = BATCH_DIR / f"review_{i+1:02d}.html"
+        new_html = new_html.replace("__BATCH_ID__", batch_id)
+        out_path = BATCH_DIR / f"{batch_id}.html"
         out_path.write_text(new_html, encoding="utf-8")
+        batch_meta.append({"id": batch_id, "count": len(batch)})
         print(f"  배치 {i+1:02d}: {len(batch)}건 -> {out_path.name}")
 
-    print(f"[완료] 총 {n_batches}개 배치파일 생성 ({BATCH_DIR})")
+    build_hub(batch_meta, len(all_pairs))
+    print(f"[완료] 총 {n_batches}개 배치파일 + 허브페이지 생성 ({BATCH_DIR})")
+
+
+def build_hub(batch_meta: list[dict], total: int):
+    """모든 배치를 한 곳에서 관리하는 허브(인덱스) 페이지. 각 배치파일이
+    localStorage에 자동저장해둔 진행상황(qoo10_review_autosave_<batch_id>)을
+    그대로 읽어서, 배치별로 몇 건 처리했는지 보여주고 바로 이동할 수 있게
+    한다. file:// 로 로컬에서 열면 브라우저가 파일들끼리 localStorage를
+    공유하므로(같은 출처로 취급), 이 허브 페이지에서 각 배치의 저장내역을
+    직접 읽을 수 있다."""
+    rows_html = "\n".join(
+        f'<tr data-batch-id="{b["id"]}" data-total="{b["count"]}">'
+        f'<td><a href="{b["id"]}.html">{b["id"]}</a></td>'
+        f'<td>{b["count"]}건</td>'
+        f'<td class="progress-cell">-</td>'
+        f'<td class="excluded-cell">-</td>'
+        f'<td class="updated-cell">-</td>'
+        f"</tr>"
+        for b in batch_meta
+    )
+    html = f'''<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>검수 배치 관리 허브</title>
+<style>
+  body {{ font-family: -apple-system, sans-serif; background:#1e1e1e; color:#eee; padding:24px; }}
+  h1 {{ font-size:20px; }}
+  table {{ border-collapse: collapse; width:100%; max-width:900px; margin-top:16px; }}
+  th, td {{ border:1px solid #444; padding:10px 14px; text-align:left; }}
+  th {{ background:#2a2a2a; }}
+  tr:hover {{ background:#2a2a2a; }}
+  a {{ color:#6ab0ff; text-decoration:none; font-weight:600; }}
+  a:hover {{ text-decoration:underline; }}
+  .summary {{ margin-top:20px; font-size:14px; color:#aaa; }}
+  .done {{ color:#2ecc71; font-weight:700; }}
+  .partial {{ color:#f39c12; }}
+  .none {{ color:#777; }}
+</style>
+</head>
+<body>
+<h1>📋 검수 배치 관리 허브 (전체 {total}건, {len(batch_meta)}개 배치)</h1>
+<p>배치를 클릭해서 검수를 이어가세요. 각 배치의 진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(같은 브라우저에서 연 기록만 보임).</p>
+<table>
+  <thead><tr><th>배치</th><th>총 건수</th><th>진행상황(선택완료/전체)</th><th>제외처리</th><th>마지막 저장</th></tr></thead>
+  <tbody>
+{rows_html}
+  </tbody>
+</table>
+<div class="summary" id="overall-summary"></div>
+
+<script>
+function refreshProgress() {{
+  var rows = document.querySelectorAll('tr[data-batch-id]');
+  var totalDone = 0, totalExcluded = 0, totalAll = 0;
+  rows.forEach(function(row) {{
+    var batchId = row.dataset.batchId;
+    var total = parseInt(row.dataset.total, 10);
+    totalAll += total;
+    var key = 'qoo10_review_autosave_' + batchId;
+    var raw;
+    try {{ raw = localStorage.getItem(key); }} catch (e) {{ raw = null; }}
+    var progressCell = row.querySelector('.progress-cell');
+    var excludedCell = row.querySelector('.excluded-cell');
+    var updatedCell = row.querySelector('.updated-cell');
+    if (!raw) {{
+      progressCell.innerHTML = '<span class="none">아직 안 열어봄</span>';
+      excludedCell.textContent = '-';
+      updatedCell.textContent = '-';
+      return;
+    }}
+    var saved;
+    try {{ saved = JSON.parse(raw); }} catch (e) {{ return; }}
+    var results = saved.results || [];
+    var confirmed = results.filter(function(r) {{ return r.match_confirmed; }}).length;
+    var excluded = results.filter(function(r) {{ return r.excluded; }}).length;
+    totalDone += confirmed;
+    totalExcluded += excluded;
+    var cls = confirmed >= total ? 'done' : (confirmed > 0 || excluded > 0 ? 'partial' : 'none');
+    progressCell.innerHTML = '<span class="' + cls + '">' + confirmed + ' / ' + total + '</span>';
+    excludedCell.textContent = excluded + '건';
+    updatedCell.textContent = saved.savedAt ? new Date(saved.savedAt).toLocaleString() : '-';
+  }});
+  document.getElementById('overall-summary').textContent =
+    '전체 진행: 선택완료 ' + totalDone + '건 / 제외 ' + totalExcluded + '건 / 전체 ' + totalAll + '건';
+}}
+refreshProgress();
+</script>
+</body>
+</html>'''
+    (BATCH_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 if __name__ == "__main__":
