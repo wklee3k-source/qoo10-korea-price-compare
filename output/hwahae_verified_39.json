@@ -8255,5 +8255,83 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1210085885",
+    "translated_kr": "바이오힐보 프로바이오더름 3D 리프팅 아이&링클 크림 25ml 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "바이오 힐보 BOH 프로 바이오 댐 3D 리프팅 아이 링클 크림 25mL 2 개 눈매 케어 보습 탄력 탄력"
+    },
+    "brand": "바이오힐보",
+    "name": "바이오 힐보 BOH 프로 바이오 댐 3D 리프팅 아이 링클 크림 25mL 2 개 눈매 케어 보습 탄력 탄력",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "45400",
+    "mall": "재팬럭키셀렉트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13506961377",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105147/91051471729.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105147/91051471729.jpg",
+        "mall": "재팬럭키셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13506961377"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210078217",
+    "translated_kr": "PDRN 콜라겐 페이셜 샷 토너 300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 콜라겐 페이셜샷 토너",
+      "musinsa": "PDRN 콜라겐 페이셜샷 토너",
+      "naver": "몰바니 PDRN 콜라겐 페이셜샷 토너 300ml"
+    },
+    "brand": "몰바니 (molvany)",
+    "name": "PDRN 콜라겐 페이셜샷 토너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "몰바니",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://molvany.com/product/detail.html?product_no=370&cate_no=79&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6050481/60504816750.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6050481/60504816750.1.jpg",
+        "mall": "몰바니",
+        "link": "https://molvany.com/product/detail.html?product_no=370&cate_no=79&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5747609/57476094247.6.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5672226?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5396076/53960760603.1.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=158980288&shop_id=50052&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6040409/60404095134.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=168385924&shop_id=50052&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "몰바니 PDRN 콜라겐 페이셜샷 토너 300ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
