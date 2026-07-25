@@ -52,5 +52,79 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1203742916",
+    "translated_kr": "레티놀 콜라겐 저분자 300 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티노콜라겐 저분자 300 콜라겐 결 토너",
+      "musinsa": "레티노콜라겐 저분자 300 결 토너 80ml",
+      "naver": "씨케이디 레티노 콜라겐 저분자 300 토너 500ml"
+    },
+    "brand": "CKDGUARANTEED (씨케이디개런티드)",
+    "name": "레티노콜라겐 저분자 300 콜라겐 결 토너",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "20500",
+    "mall": "뷰티세이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13396966556",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9094147/90941476892.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9094147/90941476892.jpg",
+        "mall": "뷰티세이",
+        "link": "https://smartstore.naver.com/main/products/13396966556"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8999983/89999833284.jpg",
+        "mall": "원챌린지",
+        "link": "https://smartstore.naver.com/main/products/12455322537"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203742900",
+    "translated_kr": "그레이멜린 쑥 퓨어 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "쑥 퓨어 토너",
+      "naver": "쑥 퓨어 토너 [순한진정]"
+    },
+    "brand": "그레이멜린 (GRAYMELIN)",
+    "name": "쑥 퓨어 토너",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "그레이멜린",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://graymelin.com/product/detail.html?product_no=502&cate_no=4&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3929780/39297808829.10.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3929780/39297808829.10.jpg",
+        "mall": "그레이멜린",
+        "link": "https://graymelin.com/product/detail.html?product_no=502&cate_no=4&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8712278/87122784591.jpg",
+        "mall": "S Cosmetic",
+        "link": "https://smartstore.naver.com/main/products/9578282321"
+      }
+    ],
+    "real_page_title": "그레이멜린 공식몰",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
