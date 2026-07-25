@@ -15795,5 +15795,67 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211651395",
+    "translated_kr": "바이오힐보 [NEW]프로바이오 더름 콜라겐 리모델링 세럼 겔 미스트 100ml+100ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "바이오힐보 프로 바이오덤 콜라겐 리모델링 세럼 겔 결광 미스트 100ml"
+    },
+    "brand": "바이오힐보",
+    "name": "바이오힐보 프로 바이오덤 콜라겐 리모델링 세럼 겔 결광 미스트 100ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "17600",
+    "mall": "오레알 스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13634744549",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117925/91179255230.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117925/91179255230.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13634744549"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118846/91188467237.jpg",
+        "mall": "별별올리브",
+        "link": "https://smartstore.naver.com/main/products/13643956458"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117211/91172110979.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13627600370"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203426572",
+    "translated_kr": "미쟝센 [1+1]살롱10 펩타이드 리페어 헤어 마스크 300ml+300ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "살롱10 펩타이드 리페어 헤어마스크"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱10 펩타이드 리페어 헤어마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
