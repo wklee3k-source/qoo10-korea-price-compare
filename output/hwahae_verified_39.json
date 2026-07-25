@@ -11418,5 +11418,68 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1163331586",
+    "translated_kr": "【정품】헤트라스 더블샷 퍼품 바디미스트 바디스프레이 120ml(전5종 중 1점 선택)/바디미스트/향수/한국화장품 인기 한국스킨케어/헤트라스 바디미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더블샷 퍼퓸 바디미스트 [아티스트]"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "더블샷 퍼퓸 바디미스트 [아티스트]",
+    "volume": "120ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204898098",
+    "translated_kr": "아누아 PDRN 히알루론산 캡슐100 세럼, 30ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼",
+      "naver": "아누아 피디알엔 히알루론산 캡슐100 세럼 30ml PDRN x 2개 기획+마스크팩 1장"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "29800",
+    "mall": "skin pick",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11503640228",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8904815/89048150593.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8904815/89048150593.1.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/11503640228"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117634/91176348589.jpg",
+        "mall": "글로우컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13631837925"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913002/89130024061.1.jpg",
+        "mall": "일상생활스토어",
+        "link": "https://smartstore.naver.com/main/products/11585513655"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
