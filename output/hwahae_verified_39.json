@@ -958,5 +958,91 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1120143925",
+    "translated_kr": "케라시스 어드밴스드 리페어 앰플 샴푸, 트리트먼트, 헤어팩 1L",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드밴스드 앰플 리페어 트리트먼트",
+      "naver": "애경 케라시스 어드밴스드 케라틴 본드 딥 리페어 헤어마스크 극손상 모발용 300ml 1개"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 앰플 리페어 트리트먼트",
+    "volume": "600ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "5330",
+    "mall": "더진스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13636886146",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118139/91181396843.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118139/91181396843.jpg",
+        "mall": "더진스토어",
+        "link": "https://smartstore.naver.com/main/products/13636886146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107736/91077365326.jpg",
+        "mall": "카린닷컴",
+        "link": "https://smartstore.naver.com/main/products/13532854973"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8971692/89716928526.jpg",
+        "mall": "가심비 마켓 가성비 정품",
+        "link": "https://smartstore.naver.com/main/products/12172417821"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1121133303",
+    "translated_kr": "케라시스 데빌즈 퍼퓸 샴푸, 린스, 바디워시 1L",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "케라시스 샴푸 린스 바디워시 각180ml 샤워볼 선물포장 포함"
+    },
+    "brand": "케라시스",
+    "name": "케라시스 샴푸 린스 바디워시 각180ml 샤워볼 선물포장 포함",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "9350",
+    "mall": "SOLLYNE",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13373163063",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9091767/90917673399.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091767/90917673399.jpg",
+        "mall": "SOLLYNE",
+        "link": "https://smartstore.naver.com/main/products/13373163063"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107081/91070818354.jpg",
+        "mall": "아름마켓24",
+        "link": "https://smartstore.naver.com/main/products/13526308001"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8682002/86820029560.jpg",
+        "mall": "쇼핑범벅",
+        "link": "https://smartstore.naver.com/main/products/9275529237"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9003866/90038661398.jpg",
+        "mall": "모두연구소",
+        "link": "https://smartstore.naver.com/main/products/12494150545"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
