@@ -17429,5 +17429,71 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191141866",
+    "translated_kr": "[NEW] 슈퍼 콜라겐 버블 세럼 마스크 90g 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼 콜라겐 버블 세럼 마스크",
+      "naver": "[3초완성/화잘먹] 아로셀 슈퍼 콜라겐 버블 세럼 마스크 (90회분)"
+    },
+    "brand": "아로셀 (AROCELL)",
+    "name": "슈퍼 콜라겐 버블 세럼 마스크",
+    "volume": "0.4g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25600",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000246270",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6064132/60641321841.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6064132/60641321841.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000246270"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172113162",
+    "translated_kr": "[정품] 메디큐브 엑시움 시카 진정 패드 100장 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디큐브 엑소좀시카 패드 100매 1개 피부진정"
+    },
+    "brand": "메디큐브",
+    "name": "메디큐브 엑소좀시카 패드 100매 1개 피부진정",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "25700",
+    "mall": "바잉바잉샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12718510384",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9026302/90263021308.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026302/90263021308.jpg",
+        "mall": "바잉바잉샵",
+        "link": "https://smartstore.naver.com/main/products/12718510384"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056392/90563922757.jpg",
+        "mall": "캘리스 마켓",
+        "link": "https://smartstore.naver.com/main/products/13019411665"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
