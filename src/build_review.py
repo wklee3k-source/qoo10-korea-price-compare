@@ -125,7 +125,7 @@ def build_pairs():
             translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
-    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "ok": 0}
+    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "select_type": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -139,6 +139,15 @@ def build_pairs():
         q = qoo10_by_goods.get(x["goods_no"])
         if not q:
             stats["no_qoo10_match"] += 1
+            continue
+        # [제외] "3종"처럼 숫자+종 표기는 "그중 하나를 선택"(옵션 3가지 중
+        # 1개)인지 "3개가 다 들어있는 세트"인지 텍스트만으로는 확실히
+        # 구분이 안 된다(예: "셰이킹 시너지 미스트 50ml 3종" — 3가지
+        # 향 중 하나를 고르는 건지, 3개가 다 오는 건지 애매함). 애매한 걸
+        # 억지로 판정하기보다, 사용자 지시대로 이런 상품은 전부 제외한다.
+        translated_kr = x.get("translated_kr") or ""
+        if re.search(r"\d+종\b", q["title"]) or re.search(r"\d+종\b", translated_kr):
+            stats["select_type"] += 1
             continue
 
         stats["ok"] += 1
@@ -274,7 +283,7 @@ def build_pairs():
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
-          f"큐텐매칭안됨={stats['no_qoo10_match']} 최종={stats['ok']}건")
+          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
 
