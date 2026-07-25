@@ -9546,5 +9546,53 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1165169271",
+    "translated_kr": "바디판타지 [미니 퍼퓸/시나모롤 키링 증정] 퍼퓸 미스트 94ml 10종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시나모롤 에디션 퍼퓸 미스트 [웨딩데이판타지]",
+      "naver": "바디판타지 퍼퓸 미스트 94ml 10종 택 1 아일랜드 패션플라워"
+    },
+    "brand": "바디판타지 (BODYFANTASIES)",
+    "name": "시나모롤 에디션 퍼퓸 미스트 [웨딩데이판타지]",
+    "volume": "94ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "14300",
+    "mall": "플라워결스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13672674521",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121718/91217185474.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121718/91217185474.jpg",
+        "mall": "플라워결스토어",
+        "link": "https://smartstore.naver.com/main/products/13672674521"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202082347",
+    "translated_kr": "런드리유 【때밀이/각질케어】소프트바디 레드글러브 클린 1BOX(5매입) / 개별포장 / 바디클렌징 / 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
