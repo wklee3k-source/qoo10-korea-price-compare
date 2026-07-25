@@ -19961,5 +19961,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1210946100",
+    "translated_kr": "잇츠스킨 올리브영 프레스티지 로션 투엑스 진센 데스카르고 140ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210829091",
+    "translated_kr": "잇츠스킨 올리브영 닥터세이버스 세럼 마스크 PDRN 10장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "닥터세이버스 세럼 마스크 피디알엔 리바이탈"
+    },
+    "brand": "잇츠스킨 (IT'SSKIN)",
+    "name": "닥터세이버스 세럼 마스크 피디알엔 리바이탈",
+    "volume": "18ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
