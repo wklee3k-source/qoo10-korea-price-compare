@@ -1,14 +1,18 @@
 {
   "visited_shops": [
-    "HEROINEBueaty",
-    "tbas",
     "hangooksangin",
-    "Seoullys",
-    "k-seoul",
+    "kyo_market",
     "tiaramall",
-    "HDSelectShop",
+    "itfu-cosmetic",
+    "Qmart",
     "DearMoments",
-    "kyo_market"
+    "HEROINEBueaty",
+    "k-seoul",
+    "naturia_jp",
+    "tbas",
+    "HDSelectShop",
+    "kundal_official",
+    "Seoullys"
   ],
   "all_products": [],
   "shop_urls": [
@@ -20,10 +24,14 @@
     "https://m.qoo10.jp/shop/hangooksangin",
     "https://m.qoo10.jp/shop/HDSelectShop",
     "https://m.qoo10.jp/shop/tiaramall",
-    "https://m.qoo10.jp/shop/DearMoments"
+    "https://m.qoo10.jp/shop/DearMoments",
+    "https://m.qoo10.jp/shop/kundal_official",
+    "https://m.qoo10.jp/shop/naturia_jp",
+    "https://m.qoo10.jp/shop/itfu-cosmetic",
+    "https://m.qoo10.jp/shop/Qmart"
   ],
-  "pending_keywords": [
+  "pending_keywords": [],
+  "seen_keywords": [
     "韓国 シャンプー"
-  ],
-  "seen_keywords": []
+  ]
 }
