@@ -7387,5 +7387,68 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209892305",
+    "translated_kr": "티르티르 마스크 핏 크리스탈 메시 쿠션 15g SPF50+ PA++++ 윤기 피부 고밀착 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++"
+    },
+    "brand": "티르티르",
+    "name": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "14850",
+    "mall": "티르티르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10186169049",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+        "mall": "티르티르",
+        "link": "https://smartstore.naver.com/main/products/10186169049"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672459.13.jpg",
+        "mall": "티르티르",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10186169048"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118224/91182242075.jpg",
+        "mall": "굿스킨",
+        "link": "https://smartstore.naver.com/main/products/13637731366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1087617498",
+    "translated_kr": "오드 퍼퓸 50ml 3종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "No.3 블랙베리&베이 퍼퓸",
+      "musinsa": "[3종 중 택 2]오 드 퍼퓸 50ml (+아비브 에코백,쇼핑백)"
+    },
+    "brand": "구떼 (GOUTTER)",
+    "name": "No.3 블랙베리&베이 퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
