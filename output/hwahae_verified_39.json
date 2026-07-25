@@ -1568,5 +1568,44 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1158858031",
+    "translated_kr": "바이오더마 아토더름 샤워오일 1L 고보습 민감성 피부 건조 피부 바디워시 프랑스 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212491078",
+    "translated_kr": "Growturn 브러시 130ml+30ml 스칼프 케어 헤어 앰플 엑소솜 두피 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플랜트 엑소좀 스칼프 케어"
+    },
+    "brand": "엑솜 (EXOME)",
+    "name": "플랜트 엑소좀 스칼프 케어",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
