@@ -15349,5 +15349,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1185951937",
+    "translated_kr": "톤 & 스팟 컬렉터 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "톤앤스팟 코렉터 앰플",
+      "naver": "[7월 제조] 바이알레시피 순수 비타민 CE페룰릭 맑은 광채 기미앰플 잡티 검버섯 색소침착 흑자 미백 항산화 밝은 피부톤 비타민C앰플"
+    },
+    "brand": "리덴스 (Re:dence)",
+    "name": "톤앤스팟 코렉터 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "36800",
+    "mall": "바이알레시피",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10035737872",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8758024/87580240376.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8758024/87580240376.5.jpg",
+        "mall": "바이알레시피",
+        "link": "https://smartstore.naver.com/main/products/10035737872"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981015/89810154230.2.jpg",
+        "mall": "패션뷰티몰",
+        "link": "https://smartstore.naver.com/main/products/12265643514"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1170571023",
+    "translated_kr": "도미나스 도미나 크림 50g / 시즌 6 / DOMINA / 시미 / 주근깨 / 칙칙함 케어 / 멜라닌 / 시미 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "도미나스 크림 6세대 시즌6 XP 트라넥삼산 크림 엑스피 50g + 파우치1매"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "24800",
+    "mall": "DSmall",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11250941771",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8879545/88795452102.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8879545/88795452102.4.jpg",
+        "mall": "DSmall",
+        "link": "https://smartstore.naver.com/main/products/11250941771"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098044/90980445976.jpg",
+        "mall": "주식회사 아나이스",
+        "link": "https://smartstore.naver.com/main/products/13435935640"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8957819/89578193491.jpg",
+        "mall": "모노잇템",
+        "link": "https://smartstore.naver.com/main/products/12033682799"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
