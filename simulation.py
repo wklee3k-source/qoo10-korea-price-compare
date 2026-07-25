@@ -216,6 +216,25 @@ def t18_no_optional_path_mixed_in_git_add():
     check("18 git add 경로 혼합 금지(archive/ 등)", not bad, f"{bad}")
 
 
+# --------------------- #20 시간기반 안전망(ensure_discovery_alive) 존재
+#  merge job 내부의 재기동이 5회 재시도 다 실패해도, 매시 정각 크론이
+#  올 때마다 독립적으로 "발굴이 실제로 살아있는지" 재확인해서 죽어있으면
+#  다시 켜는 별도 job이 있어야 한다. 그래야 이번 시간 복구가 실패해도
+#  다음 정각에는 반드시 정상화된다.
+def t20_hourly_safety_net_exists():
+    wf = WF.read_text(encoding="utf-8")
+    ok_job_exists = "  ensure_discovery_alive:" in wf
+    block = wf.split("  ensure_discovery_alive:")[1].split("\n  auto_translate:")[0] if ok_job_exists else ""
+    needs_merge = bool(re.search(r"needs:\s*merge_discovery_shards", block))
+    always_regardless = bool(re.search(r"if:\s*always\(\)\s*&&", block))
+    checks_current_state = "status=in_progress" in block and "discover_low_review_shops" in block
+    revives_if_dead = "alive == '0'" in block or 'alive == "0"' in block
+    ok = ok_job_exists and needs_merge and always_regardless and checks_current_state and revives_if_dead
+    check("20 시간기반 안전망(ensure_discovery_alive)", ok,
+          f"job존재{ok_job_exists} merge후실행{needs_merge} always(){always_regardless} "
+          f"생존확인{checks_current_state} 복구조건{revives_if_dead}")
+
+
 # --------------------- #19 병합 전후 발굴 일시정지/재기동 (push경합 방지)
 #  실측사고: 발굴 워커 12개가 discovery-live에 계속 커밋하는 동안 병합
 #  job이 같이 돌면 push 경합만 반복하다 20분 timeout에 통째로 취소된다
