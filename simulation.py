@@ -281,6 +281,31 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #27 수확 통합(merge_fullcatalog_shards) 안전성
+def t27_merge_fullcatalog_safety():
+    wf = WF.read_text(encoding="utf-8")
+    job_exists = "  merge_fullcatalog_shards:" in wf
+    block = wf.split("  merge_fullcatalog_shards:")[1].split("\n  merge_discovery_shards:")[0] if job_exists else ""
+
+    has_pause = "Pause harvest workers" in block
+    has_resume = "Resume harvest workers after merge" in block
+    resume_always = bool(re.search(r"Resume harvest workers after merge\s*\n\s*if:\s*always\(\)", block))
+    saves_own_file = "fullcatalog_state.json" in block
+    never_writes_discovery = "push origin discovery-live" not in block
+    reads_discovery_readonly = "git show FETCH_HEAD:output/discovery_state.json" in block
+
+    script_exists = (SRC / "merge_fullcatalog_states.py").exists()
+    script_src = (SRC / "merge_fullcatalog_states.py").read_text(encoding="utf-8") if script_exists else ""
+    discovery_priority = "discovery_goods_no" in script_src and "continue" in script_src
+
+    ok = all([job_exists, has_pause, has_resume, resume_always, saves_own_file,
+              never_writes_discovery, reads_discovery_readonly, script_exists, discovery_priority])
+    check("27 수확 통합 안전성(일시정지/재기동/별도저장/발굴우선)", ok,
+          f"job존재{job_exists} 정지{has_pause} 재기동{has_resume} always(){resume_always} "
+          f"별도저장{saves_own_file} discovery미쓰기{never_writes_discovery} "
+          f"읽기전용{reads_discovery_readonly} 스크립트{script_exists} 발굴우선{discovery_priority}")
+
+
 # --------------------- #26 전체상품 수확(harvest_full_catalog) 안전성
 def t26_harvest_full_catalog_safety():
     wf = WF.read_text(encoding="utf-8")

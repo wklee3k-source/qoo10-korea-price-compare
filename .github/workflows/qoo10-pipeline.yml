@@ -48,6 +48,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_merge_harvest:
+        description: "12워커가 각자 쓴 fullcatalog_state_<N>.json을 fullcatalog_state.json 하나로 합칠지. 발굴본과 겹치는 상품은 발굴을 우선하고 수확본에서 제외한다"
+        required: false
+        type: boolean
+        default: false
       run_hwahae_verify:
         description: "output/hwahae_input_39.json을 화해로 검증할지"
         required: false
@@ -568,6 +573,108 @@ jobs:
               echo "::warning::브랜치 $B: push 40회 재시도 실패"
             fi
           done
+
+  merge_fullcatalog_shards:
+    # [수확 통합] 12워커가 각자 쓴 fullcatalog_state_<0~11>.json을
+    # fullcatalog_state.json 하나로 합친다. discovery_state.json(발굴
+    # 병합본)과는 완전히 별도 파일로 저장하되, 겹치는 상품(goods_no
+    # 동일)은 발굴 쪽을 우선시켜서 수확본에서 제외한다 — 사용자 지시.
+    #
+    # [경합 방지] merge_discovery_shards와 동일한 원칙 — 수확 워커
+    # 12개가 fullcatalog-live에 계속 커밋하는 동안 병합이 같이 돌면
+    # push 경합만 반복하다 타임아웃난다(실측 확인된 사고, discovery
+    # 쪽에서 동일 패턴 겪음). 병합 시작 전 수확 워커를 일시정지하고,
+    # 끝나면 재기동한다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_merge_harvest
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: write
+    concurrency:
+      group: merge-fullcatalog-shards-queue
+      cancel-in-progress: false
+    steps:
+      - name: Pause harvest workers (avoid merge push contention)
+        run: |
+          echo "[일시정지] 수확 워커가 돌고 있으면 병합 전에 세운다"
+          RUNS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?status=in_progress&per_page=20")
+          IDS=$(echo "$RUNS_JSON" | jq -r --argjson me "${{ github.run_id }}" \
+            '.workflow_runs[] | select(.id != $me) | select(.name=="Qoo10 Pipeline") | .id')
+          for RID in $IDS; do
+            JOBS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/jobs?per_page=30")
+            HAS_HARVEST=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status=="in_progress") | select(.name | contains("harvest_full_catalog"))] | length')
+            if [ "$HAS_HARVEST" != "0" ]; then
+              echo "[취소] run $RID (수확 워커 포함, 병합 push 경합 방지)"
+              curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/cancel"
+            fi
+          done
+          sleep 30
+
+      - uses: actions/checkout@v4
+
+      - name: Switch to dedicated branch
+        run: |
+          git fetch origin fullcatalog-live 2>/dev/null && git checkout fullcatalog-live || git checkout -b fullcatalog-live
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Merge fullcatalog shards (discovery 우선 중복제외)
+        working-directory: src
+        run: |
+          for i in $(seq 1 15); do
+            git fetch origin fullcatalog-live 2>/dev/null
+            git reset --hard origin/fullcatalog-live -q 2>/dev/null || true
+            git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
+
+            # 발굴본(discovery-live)은 읽기만 한다 — FETCH_HEAD 사용 이유는
+            # harvest_full_catalog_parallel job과 동일(얕은클론이라
+            # origin/discovery-live 참조가 안 만들어짐, 실측 확인됨).
+            git fetch origin discovery-live 2>/dev/null
+            git show FETCH_HEAD:output/discovery_state.json > ../output/discovery_state_readonly.json 2>/dev/null || echo '{"all_products":[]}' > ../output/discovery_state_readonly.json
+
+            python merge_fullcatalog_states.py ../output ../output/discovery_state_readonly.json
+
+            git add ../output/fullcatalog_state.json 2>/dev/null || true
+            git diff --cached --quiet && { echo "합칠 변경사항 없음"; break; }
+            git commit -m "Auto: merge fullcatalog shards (발굴우선 중복제외)"
+            if git push origin fullcatalog-live; then echo "수확 병합 push 성공"; break; fi
+            sleep_time=$((RANDOM % 6 + 1))
+            echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/15)"
+            sleep "$sleep_time"
+          done
+
+      - name: Resume harvest workers after merge
+        if: always()
+        run: |
+          echo "[재기동] 수확 워커를 다시 켠다"
+          SUCCESS=0
+          for i in 1 2 3 4 5; do
+            HTTP_CODE=$(curl -s -o /tmp/resume_harvest_resp.json -w "%{http_code}" -X POST \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+              -d '{"ref":"main","inputs":{"run_harvest_catalog":"true"}}')
+            if [ "$HTTP_CODE" = "204" ]; then
+              echo "[재기동 성공] ($i/5)"
+              SUCCESS=1
+              break
+            fi
+            echo "[재기동 실패] HTTP $HTTP_CODE ($i/5): $(cat /tmp/resume_harvest_resp.json)"
+            sleep $((i * 5))
+          done
+          if [ "$SUCCESS" != "1" ]; then
+            echo "::error::수확 워커 재기동 5회 전부 실패 — 수동으로 run_harvest_catalog을 트리거해야 함"
+            exit 1
+          fi
 
   merge_discovery_shards:
     # [1.5단계] 12개 워커가 각자 쓴 discovery_state_<0~11>.json을 하나의
