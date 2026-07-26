@@ -286,13 +286,17 @@ def t21_merge_preserves_translation():
 #  옵션있음 조건은 그대로 유지돼야 한다(색조 봉인은 #13에서 별도 검사).
 def t24_review_price_filter_removed():
     src = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
-    block = src.split("skip_reason = None")[1].split("item[\"passes_filter\"]")[0]
-    review_gone = "review_count >= REVIEW_THRESHOLD" not in block
+    block = src.split("skip_reason = None")[1].split('item["passes_filter"]')[0]
+    # 리뷰수는 20 임계값으로 재도입, 가격은 계속 해지 상태여야 한다.
+    review_reintroduced_at_20 = "review_count >= PRODUCT_SAVE_REVIEW_THRESHOLD" in block
+    threshold_is_20 = bool(re.search(r"PRODUCT_SAVE_REVIEW_THRESHOLD\s*=\s*20", src))
     price_gone = "price_jpy <= MIN_PRICE_JPY" not in block
     color_kept = 'skip_reason = "색조카테고리"' in block
     category_kept = 'skip_reason = "화장품카테고리아님"' in block
-    check("24 상품저장 필터 리뷰수/가격 해지", review_gone and price_gone and color_kept and category_kept,
-          f"리뷰조건제거{review_gone} 가격조건제거{price_gone} 색조유지{color_kept} 카테고리유지{category_kept}")
+    ok = review_reintroduced_at_20 and threshold_is_20 and price_gone and color_kept and category_kept
+    check("24 상품저장 필터(리뷰20 재도입/가격 계속해지)", ok,
+          f"리뷰20재도입{review_reintroduced_at_20} 임계값20{threshold_is_20} "
+          f"가격해지{price_gone} 색조유지{color_kept} 카테고리유지{category_kept}")
 
 
 # --------------------- #22 검색 스크래퍼 무한스크롤 적용(1순위)

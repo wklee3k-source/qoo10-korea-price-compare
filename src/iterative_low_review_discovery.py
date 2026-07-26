@@ -52,8 +52,9 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 고를 때 (2) 크롤한 상품을 채택할 때. 상품 쪽 효과는 작지만(실측 +107건),
 # 샵 쪽 효과가 크다 — 리뷰 6~9인 샵을 여태 통째로 무시하고 있었고, 그게
 # 키워드 큐 고갈의 직접 원인이었다.
-REVIEW_THRESHOLD = 10  # [v1.9.0부터 미사용] 상점선별/상품저장 두 필터 모두 해지됨. 과거 기록용으로만 남김
+REVIEW_THRESHOLD = 10  # [v1.9.1부터 미사용] 상점선별 필터 해지됨. 과거 기록용으로만 남김
 MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
+PRODUCT_SAVE_REVIEW_THRESHOLD = 20  # 20 미만(0~19)만 최종 상품목록에 저장. 상점선별 단계와는 별개(그쪽은 리뷰수 무관하게 전부 방문)
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 
@@ -212,12 +213,15 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
             skip_reason = "화장품카테고리아님"
         elif has_options:
             skip_reason = "옵션있음"
-        # [해지] 리뷰수 필터와 가격(1500엔 이하) 필터를 제거했다. 실측
-        # 결과, 상점 5,676개(중복포함)를 방문해 랭크5까지 크롤했지만
-        # 이 두 조건 때문에 88.4%가 걸러지고 11.6%만 저장되고 있었다
-        # (워커0 기준: 방문상점512×5=2,560개 후보 중 297개만 저장).
-        # 이제 색조/카테고리불일치/옵션있음만 걸러내고, 리뷰수·가격은
-        # 그대로 전부 저장한다.
+        elif review_count >= PRODUCT_SAVE_REVIEW_THRESHOLD:
+            skip_reason = f"리뷰수{review_count}(20개이상)"
+        # [v1.9.0에서 완전해지 -> 방금 재조정] 가격 필터(1500엔 이하)는
+        # 계속 해지 상태로 둔다. 리뷰수만 20개 미만으로 다시 걸어달라는
+        # 요청 반영 — PRODUCT_SAVE_REVIEW_THRESHOLD=20 (구
+        # REVIEW_THRESHOLD=10보다 완화된 값. 상점선별 단계는 여전히
+        # v1.9.1대로 리뷰수 무관하게 전부 방문후보로 삼는다 — 이건
+        # '어떤 상점에 들어갈지'가 아니라 '그 상점에서 크롤한 상품 중
+        # 뭘 최종목록에 저장할지'만 다시 제한하는 것이다.
 
         item["passes_filter"] = skip_reason is None
         item["skip_reason"] = skip_reason
