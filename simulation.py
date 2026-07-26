@@ -177,7 +177,12 @@ def t14_review_threshold():
     s = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
     m = re.search(r"^REVIEW_THRESHOLD\s*=\s*(\d+)", s, re.M)
     val = int(m.group(1)) if m else -1
-    check("14 리뷰 임계값 10", val == 10, f"현재 {val}")
+    # v1.9.0부터 상점선별 단계에서도 REVIEW_THRESHOLD를 안 써야 한다
+    # (find_low_review_shops 함수 본문 안에서 실제 필터링에 쓰이면 안 됨).
+    # 주석/docstring이 아니라 실제 필터링 코드 패턴이 남아있는지만 본다.
+    not_used_for_filtering = 'r["review_count"] < REVIEW_THRESHOLD' not in s
+    check("14 리뷰 임계값(상점선별) 완전 해지", val == 10 and not_used_for_filtering,
+          f"상수값{val} 상점선별단계미사용{not_used_for_filtering}")
 
 
 # --------------------- #17 크롤 서브프로세스 stdout 오염 금지(실측사고)

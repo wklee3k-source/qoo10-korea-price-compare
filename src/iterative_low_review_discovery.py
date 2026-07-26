@@ -52,8 +52,8 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 고를 때 (2) 크롤한 상품을 채택할 때. 상품 쪽 효과는 작지만(실측 +107건),
 # 샵 쪽 효과가 크다 — 리뷰 6~9인 샵을 여태 통째로 무시하고 있었고, 그게
 # 키워드 큐 고갈의 직접 원인이었다.
-REVIEW_THRESHOLD = 10  # 10 미만(0~9). 4 -> 6 -> 10 순으로 완화
-MIN_PRICE_JPY = 1500  # 이 가격 이하(너무 저가) 상품은 제외
+REVIEW_THRESHOLD = 10  # [v1.9.0부터 미사용] 상점선별/상품저장 두 필터 모두 해지됨. 과거 기록용으로만 남김
+MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 
@@ -237,11 +237,16 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
 
 
 def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
+    """[해지] 예전엔 검색결과 중 review_count<REVIEW_THRESHOLD인 것만
+    방문후보로 삼았다. 사용자 지시로 이 필터도 없앤다 — 이제 검색결과에
+    나온 모든 상점이 방문후보가 된다(이미 방문한 상점만 제외). 실측
+    확인(검증기록 2번): 리뷰필터 있으면 24개, 없으면 28개로 큰 차이가
+    아니었지만, 저장단계 필터 해지(v1.9.0)와 함께 상점 선별 단계까지
+    완전히 열어서 "리뷰수와 무관하게 전부 발굴"로 방향을 통일한다."""
     html = search_qoo10(keyword)
     results = parse_results(html)
-    low = [r for r in results if r["review_count"] < REVIEW_THRESHOLD]
     seen = {}
-    for r in low:
+    for r in results:
         if r["shop_id"] not in visited_shops:
             seen[r["shop_id"]] = r
     return list(seen.values())
