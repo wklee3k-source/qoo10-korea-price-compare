@@ -281,6 +281,26 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #34 재시도-보류도 CHUNK(max_new) 상한에 포함
+#  실측위험: 대량 기술적실패(예: Exa/네이버 동시장애) 상황에서
+#  '보류-재시도대상' continue가 processed_this_call을 안 늘리면,
+#  CHUNK(max_new) 상한이 무력화되어 한 호출 안에서 상품 목록 전체를
+#  다 훑어버릴 수 있었다(각 상품마다 실제 API 4회씩 소비하면서).
+def t34_retry_counts_toward_chunk_limit():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    # 재시도-보류 분기(보류-재시도대상 로그 직후)에서 processed_this_call
+    # 증가 -> continue 순서로 실제 코드가 이어지는지 직접 확인한다.
+    # (주석 안에 'continue'라는 단어가 언급돼 있어 단순 substring 검색은
+    # 오탐 위험이 있어, print문 다음 줄부터의 실제 코드만 본다)
+    marker = '[보류-재시도대상]'
+    idx = src.find(marker)
+    after = src[idx:idx + 700]
+    # 주석 블록(전부 '#'으로 시작하는 줄)을 건너뛰고 실제 코드 줄만 모은다
+    code_lines = [ln for ln in after.split("\n")[1:] if ln.strip() and not ln.strip().startswith("#")]
+    ok = len(code_lines) >= 2 and "processed_this_call += 1" in code_lines[0] and code_lines[1].strip() == "continue"
+    check("34 재시도-보류도 CHUNK상한 포함", ok, f"보류분기 카운트증가{ok}")
+
+
 # --------------------- #33 build_excel 글롭 매치없음 안전처리
 #  실측위험: output/*_korea_side.json, output/*.xlsx 둘 다 매칭되는
 #  파일이 없으면 bash 글롭이 리터럴 문자열로 넘어가 python/git add가
