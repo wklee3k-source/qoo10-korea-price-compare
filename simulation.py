@@ -281,6 +281,18 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #31 한->일 역번역 완전 비활성화 확인 (사용자지시)
+def t31_kr_to_jp_disabled():
+    wf = WF.read_text(encoding="utf-8")
+    step_disabled = "Translate Korean product names to Japanese (DISABLED)" in wf
+    no_api_call_in_step = True
+    if step_disabled:
+        block = wf.split("Translate Korean product names to Japanese (DISABLED)")[1].split("\n      - name:")[0]
+        no_api_call_in_step = "python translate_kr_to_jp.py" not in block and "ANTHROPIC_API_KEY" not in block
+    check("31 한->일 역번역 비활성화", step_disabled and no_api_call_in_step,
+          f"스텝비활성화{step_disabled} 스텝내API호출없음{no_api_call_in_step}")
+
+
 # --------------------- #30 검증(hwahae_verify) 기술적실패 vs 무결과 구분
 #  실측위험: Exa/화해/무신사/네이버 검색함수 4개가 전부 '기술적 실패'
 #  (타임아웃/네트워크오류/서브프로세스비정상종료/JSON파싱실패)와 '정상

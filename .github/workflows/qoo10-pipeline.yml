@@ -1239,19 +1239,16 @@ jobs:
             fi
           done
 
-      - name: Translate Korean product names to Japanese (for review-page comparison)
+      - name: Translate Korean product names to Japanese (DISABLED)
         working-directory: src
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          python translate_kr_to_jp.py ../output/hwahae_verified_39.json ../output/kr_to_jp_translations.json || echo "[경고] 한→일 역번역 실패 — 다음 실행때 이어서 진행됨"
-          git add ../output/kr_to_jp_translations.json
-          git diff --cached --quiet || git commit -m "Auto: KR->JP translation cache update"
-          for i in $(seq 1 5); do
-            if git push origin hwahae-live; then echo "push 성공"; break; fi
-            sleep "$((RANDOM % 6 + 1))"
-            git pull --rebase origin hwahae-live -q
-          done
+          # [사용자 지시로 완전 비활성화] 한->일 역번역(검수페이지 비교용
+          # 부가기능)을 API 비용 관리를 위해 막는다. translate_kr_to_jp.py
+          # 자체는 삭제하지 않고 그대로 남겨둔다(나중에 다시 켤 수 있게).
+          # build_review.py는 kr_to_jp_translations.json이 없으면 빈
+          # 딕셔너리로 폴백하도록 이미 설계돼 있어서(파일이 없어도 페이지
+          # 생성 자체는 실패하지 않음), 이 스텝을 완전히 건너뛰어도 안전함.
+          echo "[비활성화] 한->일 역번역은 사용자 지시로 막혀있음 — API 호출 없음"
 
       - name: Auto-build and publish review pages (docs/) after verification
         working-directory: src
