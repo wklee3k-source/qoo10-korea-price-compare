@@ -38,7 +38,18 @@ REVIEW_RE = re.compile(r'review_total_count">\(([\d,]+)\)')
 PRICE_RE = re.compile(r'<strong>([\d,]+)円</strong>')
 
 
-def search_qoo10(keyword: str, wait_seconds: int = 4) -> str:
+def search_qoo10(keyword: str, wait_seconds: int = 4, max_scrolls: int = 8) -> str:
+    """검색어로 큐텐재팬을 검색해서 결과 페이지 HTML을 반환한다.
+
+    [1순위 개선] 예전엔 페이지를 열고 wait_seconds만 기다린 뒤 그 상태
+    그대로 읽었다. 그런데 검색결과 테이블은 무한스크롤 방식이라, 첫
+    화면엔 딱 40개만 로드되고 나머지(표시된 전체상품 수 - 40개)는
+    스크롤을 실제로 내려야 추가로 로드된다. 실측 확인(PDRN 검색어:
+    72개 표시 중 40개만 파싱, 28개 상점만 회수 vs 스크롤 강제시 72개
+    전부/48개 상점; 스파그로우 검색어: 178개 표시 중 스크롤 없이는
+    35개 상점, 스크롤 강제시 127~139개 상점 — 최대 3.7배 차이).
+    이제 마우스 휠 스크롤을 max_scrolls번 반복해서 더 로드할 게 없을
+    때까지(또는 상한 횟수까지) 계속 끌어온다."""
     encoded = urllib.parse.quote(keyword)
     url = f"https://www.qoo10.jp/s/{encoded}?keyword={encoded}"
 
@@ -56,6 +67,23 @@ def search_qoo10(keyword: str, wait_seconds: int = 4) -> str:
         except Exception as e:  # noqa: BLE001
             print(f"[WARN] goto issue: {e}", file=sys.stderr)
         time.sleep(wait_seconds)
+
+        # 무한스크롤 유도: 더 이상 행(row)이 안 늘어나면 일찍 멈춘다.
+        prev_count = -1
+        for _ in range(max_scrolls):
+            try:
+                page.mouse.wheel(0, 3000)
+            except Exception:  # noqa: BLE001
+                break
+            time.sleep(1.5)
+            try:
+                cur_count = page.eval_on_selector_all('tr[id^="g_"]', "els => els.length")
+            except Exception:  # noqa: BLE001
+                cur_count = prev_count
+            if cur_count == prev_count:
+                break  # 더 늘어나지 않으면(끝까지 로드됨) 스크롤 그만
+            prev_count = cur_count
+
         content = page.content()
         browser.close()
     return content
