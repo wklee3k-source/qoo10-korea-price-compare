@@ -262,6 +262,20 @@ def t19_pause_resume_discovery_around_merge():
           f"상태확인{has_status_check} 재시도{has_retry} 가시적실패{has_visible_failure}")
 
 
+# --------------------- #21 병합시 번역 필드 보존 (실측 최악사고)
+#  실측사고: 워커 파일은 번역을 절대 안 가진다(번역은 중앙 병합본에서만
+#  일어남). 그런데 병합 루프가 워커파일 내용으로 무조건 덮어써서, 방금
+#  번역한 걸 매시간 병합 때마다 영원히 지웠다(16:57 1,630건 번역완료 ->
+#  17:02 다음 정각 병합에서 0건, 이후 6번 연속 0건 실측 확인).
+def t21_merge_preserves_translation():
+    src = (SRC / "merge_discovery_states.py").read_text(encoding="utf-8")
+    # 워커파일 루프 안에서 기존 translated_kr을 보존하는 분기가 있어야 한다.
+    has_guard = bool(re.search(r"existing\.get\(.translated_kr.\)", src))
+    unconditional_overwrite = bool(re.search(r"for p in data\.get\(.all_products.[^\n]*\n\s*products\[p\[.goods_no.\]\] = p\s*\n", src))
+    check("21 병합시 번역 필드 보존", has_guard and not unconditional_overwrite,
+          f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
+
+
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
 def t16_crawl_failure_vs_empty():
     disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")

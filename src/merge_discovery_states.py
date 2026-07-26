@@ -36,7 +36,20 @@ def merge(output_dir: str):
         data = json.loads(f.read_text(encoding="utf-8"))
         visited.update(data.get("visited_shops", []))
         for p in data.get("all_products", []):
-            products[p["goods_no"]] = p
+            gno = p["goods_no"]
+            existing = products.get(gno)
+            # [치명버그 수정] 워커 파일(discovery_state_<N>.json)은 번역을
+            # 절대 가지고 있지 않다 — 번역은 오직 이 중앙 병합본에서만
+            # 일어난다. 그런데 여기서 워커 파일 내용으로 무조건 덮어쓰면,
+            # 방금 번역해둔 translated_kr/known_brand가 지워진다. 워커
+            # 파일은 상품을 절대 안 지우므로, 이 상품이 존재하는 한 병합
+            # 때마다(매시간) 영원히 반복해서 지워지는 사고였다(실측 확인:
+            # 16:57에 1,630건 번역완료 -> 바로 다음 정각 병합에서 0건으로
+            # 초기화, 이후 6번의 병합에서도 계속 0건).
+            # 기존에 번역이 있고 워커파일엔 없으면, 번역 필드만 보존한다.
+            if existing and existing.get("translated_kr") and not p.get("translated_kr"):
+                p = {**p, "translated_kr": existing["translated_kr"], "known_brand": existing.get("known_brand", p.get("known_brand", ""))}
+            products[gno] = p
         urls.update(data.get("shop_urls", []))
         seen_kw.update(data.get("seen_keywords") or [])
 
