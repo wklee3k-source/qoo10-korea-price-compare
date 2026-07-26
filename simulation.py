@@ -276,6 +276,37 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #22 검색 스크래퍼 무한스크롤 적용(1순위)
+#  실측: 스크롤 없이는 첫 페이지(40개)만 로드돼 PDRN검색어 28상점,
+#  스파그로우검색어 35상점만 회수됐다. 스크롤 강제시 각각 48/127~139
+#  상점까지 회수됨(최대 3.7배).
+def t22_search_scroll_applied():
+    src = (SRC / "qoo10_low_review_shop_finder.py").read_text(encoding="utf-8")
+    fn_src = src.split("def search_qoo10(")[1].split("\ndef ")[0]
+    has_scroll = "mouse.wheel" in fn_src
+    has_early_stop = "cur_count" in fn_src and "prev_count" in fn_src
+    check("22 검색 스크래퍼 무한스크롤 적용", has_scroll and has_early_stop,
+          f"스크롤{has_scroll} 조기종료{has_early_stop}")
+
+
+# --------------------- #23 검색어당 상점처리 상한(STEP) 상향(2순위)
+#  실측: STEP=3이면 검색어 하나(상점139개)를 다 돌리려고 매번 동일
+#  키워드로 46번 재검색해야 했다(네트워크 왕복 낭비). STEP=30으로 올려
+#  재검색 횟수를 대폭 줄인다. 대신 push는 매회차로 당겨서(위험창 유지)
+#  STEP 상향으로 인한 데이터유실 위험 증가를 상쇄한다.
+def t23_step_raised_and_push_every_iter():
+    wf = WF.read_text(encoding="utf-8")
+    block = wf.split("discover_low_review_shops_parallel:")[1].split("\n  merge_discovery_shards:")[0]
+    step_val = re.search(r"^\s*STEP=(\d+)\s*$", block, re.M)
+    step_ok = bool(step_val) and int(step_val.group(1)) >= 10
+    # "3회차마다만 push"하던 조건(ITER % 3)이 완전히 사라졌어야 한다.
+    no_stale_push_gate = "ITER % 3" not in block
+    push_every_iter = "git push origin discovery-live" in block
+    ok = step_ok and no_stale_push_gate and push_every_iter
+    check("23 STEP상향+매회차push", ok,
+          f"STEP값{step_val.group(1) if step_val else '?'} 3회차게이트잔존{'ITER % 3' in block} push존재{push_every_iter}")
+
+
 # --------------------- #16 크롤실패와 무상품 구분(9번 수정) 회귀검사
 def t16_crawl_failure_vs_empty():
     disco = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")

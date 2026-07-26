@@ -186,7 +186,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          STEP=2
+          # [2순위 개선과 통일] 병렬버전(STEP=30)과 값을 맞춘다. 이 job은
+          # 현재 if:false로 비활성화돼 있지만, 나중에 다시 켜질 경우를 대비.
+          STEP=30
           current=$START
           while [ "$current" -lt "$FINAL_CAP" ]; do
             next=$((current + STEP))
@@ -330,7 +332,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
-          STEP=3
+          # [2순위 개선] 예전엔 STEP=3이라, 검색어 하나가 상점 48~139개를
+          # 물어와도 3개씩만 처리하고 다음 회차로 넘어갔다. 그런데 검색어를
+          # "다 소진할 때까지" 매 회차마다 똑같은 키워드로 큐텐을 다시
+          # 검색해야 했다(실측: 139개 상점을 STEP=3으로 다 돌려면 검색을
+          # 46번 반복해야 함 — 결과는 매번 똑같은데 network round-trip만
+          # 반복). 게다가 1순위(스크롤 추가)로 검색 자체가 더 오래 걸리게
+          # 됐으니, 중복 재검색의 비용이 더 커졌다. STEP을 30으로 올려서
+          # 검색어 하나를 훨씬 적은 재검색 횟수로 소진한다(139개 기준
+          # 46회 -> 5회).
+          STEP=30
           ITER=0
           while true; do
             ITER=$((ITER + 1))
@@ -372,31 +383,35 @@ jobs:
               git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER)"
             fi
 
-            if [ $((ITER % 3)) -eq 0 ]; then
-              PUSHED=0
-              for i in $(seq 1 40); do
-                if git push origin discovery-live; then PUSHED=1; break; fi
-                sleep_time=$((RANDOM % 5 + 1))
-                echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/40)"
-                sleep "$sleep_time"
-                # 내 전용 파일을 안전하게 백업해두고, origin 최신본으로
-                # 완전히 리셋한 뒤, 백업을 되살려 다시 커밋한다(rebase보다
-                # 확실함 — 내 파일은 나만 쓰니 항상 최신이 곧 정답).
-                cp "../output/discovery_state_${B}.json" "/tmp/dstate_${B}_backup.json" 2>/dev/null || true
-                cp "../output/discovery_result_${B}.xlsx" "/tmp/dresult_${B}_backup.xlsx" 2>/dev/null || true
-                git fetch origin discovery-live 2>/dev/null
-                git reset --hard origin/discovery-live -q 2>/dev/null || true
-                # reset이 최신코드까지 되돌리므로 다시 맞춘다(안 하면 다음
-                # 반복부터 낡은 스크립트로 발굴하게 된다).
-                git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
-                cp "/tmp/dstate_${B}_backup.json" "../output/discovery_state_${B}.json" 2>/dev/null || true
-                cp "/tmp/dresult_${B}_backup.xlsx" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
-                git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
-                git diff --cached --quiet || git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER, 재시도)"
-              done
-              if [ "$PUSHED" != "1" ]; then
-                echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
-              fi
+            # [2순위 개선에 맞춘 조정] STEP을 3->30으로 올렸으니, 예전처럼
+            # 3회차마다 push하면 한 번에 최대 90개 상점(STEP×3)이 push 전에
+            # 로컬(휘발성 VM)에만 있게 되어 유실 위험창이 3배로 커진다.
+            # 이제 매 회차마다 push해서 위험창을 STEP=30 수준(예전의 최대
+            # 9개보다는 크지만, 3배가 아니라 원래 취지에 맞게 억제)으로
+            # 되돌린다.
+            PUSHED=0
+            for i in $(seq 1 40); do
+              if git push origin discovery-live; then PUSHED=1; break; fi
+              sleep_time=$((RANDOM % 5 + 1))
+              echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/40)"
+              sleep "$sleep_time"
+              # 내 전용 파일을 안전하게 백업해두고, origin 최신본으로
+              # 완전히 리셋한 뒤, 백업을 되살려 다시 커밋한다(rebase보다
+              # 확실함 — 내 파일은 나만 쓰니 항상 최신이 곧 정답).
+              cp "../output/discovery_state_${B}.json" "/tmp/dstate_${B}_backup.json" 2>/dev/null || true
+              cp "../output/discovery_result_${B}.xlsx" "/tmp/dresult_${B}_backup.xlsx" 2>/dev/null || true
+              git fetch origin discovery-live 2>/dev/null
+              git reset --hard origin/discovery-live -q 2>/dev/null || true
+              # reset이 최신코드까지 되돌리므로 다시 맞춘다(안 하면 다음
+              # 반복부터 낡은 스크립트로 발굴하게 된다).
+              git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
+              cp "/tmp/dstate_${B}_backup.json" "../output/discovery_state_${B}.json" 2>/dev/null || true
+              cp "/tmp/dresult_${B}_backup.xlsx" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
+              git add "../output/discovery_state_${B}.json" "../output/discovery_result_${B}.xlsx" 2>/dev/null || true
+              git diff --cached --quiet || git commit -m "Auto: parallel discovery branch $B own-file progress (반복 $ITER, 재시도)"
+            done
+            if [ "$PUSHED" != "1" ]; then
+              echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
             fi
           done
 
