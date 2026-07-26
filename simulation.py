@@ -281,6 +281,26 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #35 수확 루프 무진전시 중단 가드
+#  실측위험: harvest_full_catalog_parallel의 while true는 TODO가 빌
+#  때만 break했다. 큐텐 광범위 장애/IP차단시 매 반복 BATCH(50)개
+#  상점을 실패로 소진하며 무한정 커밋을 이어갈 수 있었다(과거
+#  discovery-live 커밋폭탄 86,269건과 같은 위험). 화해검증 루프에는
+#  이미 있던 "진행 없음 -> 중단" 가드가 여기만 빠져 있었다.
+def t35_harvest_loop_no_progress_guard():
+    wf = WF.read_text(encoding="utf-8")
+    block = wf.split("  harvest_full_catalog_parallel:")[1].split("\n  merge_fullcatalog_shards:")[0]
+    has_after_check = "HARVESTED_AFTER" in block
+    has_break = bool(re.search(r'\[ "\$HARVESTED_AFTER" -eq "\$HARVESTED" \][\s\S]{0,300}?break', block))
+    # 커밋/푸시 뒤에 있어야 진행상황(실패카운트)이 유실되지 않는다
+    push_idx = block.find("push 40회 재시도 실패")
+    guard_idx = block.find("HARVESTED_AFTER=")
+    after_push = push_idx != -1 and guard_idx != -1 and guard_idx > push_idx
+    ok = has_after_check and has_break and after_push
+    check("35 수확 루프 무진전 중단 가드", ok,
+          f"AFTER확인{has_after_check} break존재{has_break} 커밋후배치{after_push}")
+
+
 # --------------------- #34 재시도-보류도 CHUNK(max_new) 상한에 포함
 #  실측위험: 대량 기술적실패(예: Exa/네이버 동시장애) 상황에서
 #  '보류-재시도대상' continue가 processed_this_call을 안 늘리면,

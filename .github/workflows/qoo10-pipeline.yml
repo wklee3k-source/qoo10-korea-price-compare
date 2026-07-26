@@ -576,6 +576,24 @@ jobs:
             if [ "$PUSHED" != "1" ]; then
               echo "::warning::브랜치 $B: push 40회 재시도 실패"
             fi
+
+            # [무한반복 방지 - 재확인중 발견] 화해검증 루프(hwahae_verify)에는
+            # 있는 "진행 없음 -> 중단" 가드가 여기엔 빠져 있었다. TODO가
+            # 비었을 때만 break하는데, 큐텐이 광범위 장애를 겪거나 IP가
+            # 막히면 매 반복 BATCH(50)개 상점을 실패로 소진하며 무한정
+            # 커밋을 이어간다(과거 discovery-live 커밋폭탄 86,269건과 같은
+            # 위험). 커밋/푸시가 끝난 뒤에 확인해서 진행상황(실패 카운트
+            # 포함)은 안전하게 저장한 상태로 중단한다 — 일시적 장애면
+            # 다음 트리거 때는 복구돼 있을 가능성이 높다.
+            HARVESTED_AFTER=$(python3 -c "
+          import json, pathlib
+          p = pathlib.Path('../output/fullcatalog_state_${B}.json')
+          print(len(json.loads(p.read_text())['harvested_shops']) if p.exists() else 0)
+          ")
+            if [ "$HARVESTED_AFTER" -eq "$HARVESTED" ]; then
+              echo "::warning::브랜치 $B: 수확 진행 없음(${HARVESTED}개 그대로) — 큐텐 장애 가능성, 이번 실행 중단"
+              break
+            fi
           done
 
   merge_fullcatalog_shards:
