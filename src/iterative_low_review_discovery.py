@@ -212,10 +212,12 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
             skip_reason = "화장품카테고리아님"
         elif has_options:
             skip_reason = "옵션있음"
-        elif review_count >= REVIEW_THRESHOLD:
-            skip_reason = f"리뷰수{review_count}(4개이상)"
-        elif price_jpy is not None and price_jpy <= MIN_PRICE_JPY:
-            skip_reason = f"가격{price_jpy}엔(1500엔이하)"
+        # [해지] 리뷰수 필터와 가격(1500엔 이하) 필터를 제거했다. 실측
+        # 결과, 상점 5,676개(중복포함)를 방문해 랭크5까지 크롤했지만
+        # 이 두 조건 때문에 88.4%가 걸러지고 11.6%만 저장되고 있었다
+        # (워커0 기준: 방문상점512×5=2,560개 후보 중 297개만 저장).
+        # 이제 색조/카테고리불일치/옵션있음만 걸러내고, 리뷰수·가격은
+        # 그대로 전부 저장한다.
 
         item["passes_filter"] = skip_reason is None
         item["skip_reason"] = skip_reason

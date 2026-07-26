@@ -276,6 +276,20 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #24 상품저장 필터에서 리뷰수/가격 조건 해지 확인
+#  사용자 지시로 리뷰수·가격 필터를 해지했다. 색조/카테고리불일치/
+#  옵션있음 조건은 그대로 유지돼야 한다(색조 봉인은 #13에서 별도 검사).
+def t24_review_price_filter_removed():
+    src = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    block = src.split("skip_reason = None")[1].split("item[\"passes_filter\"]")[0]
+    review_gone = "review_count >= REVIEW_THRESHOLD" not in block
+    price_gone = "price_jpy <= MIN_PRICE_JPY" not in block
+    color_kept = 'skip_reason = "색조카테고리"' in block
+    category_kept = 'skip_reason = "화장품카테고리아님"' in block
+    check("24 상품저장 필터 리뷰수/가격 해지", review_gone and price_gone and color_kept and category_kept,
+          f"리뷰조건제거{review_gone} 가격조건제거{price_gone} 색조유지{color_kept} 카테고리유지{category_kept}")
+
+
 # --------------------- #22 검색 스크래퍼 무한스크롤 적용(1순위)
 #  실측: 스크롤 없이는 첫 페이지(40개)만 로드돼 PDRN검색어 28상점,
 #  스파그로우검색어 35상점만 회수됐다. 스크롤 강제시 각각 48/127~139
