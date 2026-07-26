@@ -137,10 +137,13 @@ KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
 HANGUL_RE = re.compile(r"[가-힣]")
 CJK_RE = re.compile(r"[一-龯]")
 MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 30     # [15->30 상향] 출력토큰 예산이 배치크기에 비례해서
-                        # 커지므로(250*n+500, 위 budget 계산 참고) 30까지는
-                        # 안전하다(30*250+500=8000, 상한과 정확히 일치).
-                        # 호출횟수가 절반이 되므로 API 왕복/오버헤드가 준다.
+MAX_BATCH_SIZE = 100    # [30->100 추가 확대] 검색으로 확인: Haiku 4.5의
+                        # 실제 최대 출력 토큰은 64,000이다(8,000으로 캡을
+                        # 걸어둔 건 실제 한도의 1/8에 불과했다). 배치를
+                        # 100으로 늘려도 예상 출력(100*250+1000=26,000)이
+                        # 여유있게 한도 안에 들어온다. 호출횟수가 30건
+                        # 기준 대비 또 3분의1로 줄어 캐시읽기 오버헤드
+                        # (매 호출 10%)와 왕복횟수가 그만큼 더 준다.
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 
@@ -173,7 +176,12 @@ def validate_translation(original: str, translated: str | None) -> tuple[bool, s
     return True, "OK"
 
 
-def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
+def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list[str]:
+    """[버그 발견] 기본값이 10으로 박혀있어서, MAX_BATCH_SIZE를 100으로
+    올려도 translate_in_place.py처럼 batch_size를 명시 안 하고 부르면
+    여전히 10건씩 처리되고 있었다(호출부 확인: translate_batch(items)
+    — 인자 없이 호출). 기본값 자체를 MAX_BATCH_SIZE로 맞춰서, 별도로
+    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다."""
     """items: [{"title": ..., "brand": ...}, ...] 형태. brand_size씩 묶어서 번역한다.
 
     [핵심개선] 실측 확인된 문제: 브랜드사전(972개, 화해로 검증된 정확한
@@ -207,7 +215,7 @@ def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
 
             try:
                 # 응답 잘림 방지: 항목당 넉넉히 잡고 상한만 둔다.
-                budget = min(8000, 250 * len(chunk) + 500)
+                budget = min(20000, 250 * len(chunk) + 1000)
                 response = _call_api(prompt, max_tokens=budget)
                 parsed = {}
                 for line in response.strip().split("\n"):
