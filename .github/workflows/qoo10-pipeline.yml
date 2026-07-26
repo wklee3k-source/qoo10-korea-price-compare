@@ -490,6 +490,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           BATCH=50
+          NO_PROGRESS=0
+          MAX_NO_PROGRESS=3  # 연속 무진전 허용 횟수(harvest의 MAX_RETRIES=3과 맞춤)
           ITER=0
           while true; do
             ITER=$((ITER + 1))
@@ -583,16 +585,29 @@ jobs:
             # 막히면 매 반복 BATCH(50)개 상점을 실패로 소진하며 무한정
             # 커밋을 이어간다(과거 discovery-live 커밋폭탄 86,269건과 같은
             # 위험). 커밋/푸시가 끝난 뒤에 확인해서 진행상황(실패 카운트
-            # 포함)은 안전하게 저장한 상태로 중단한다 — 일시적 장애면
-            # 다음 트리거 때는 복구돼 있을 가능성이 높다.
+            # 포함)은 안전하게 저장한 상태로 중단한다.
+            #
+            # [연속 3회 허용 이유] harvest_full_catalog.py는 크롤 실패한
+            # 상점을 MAX_RETRIES(3)회 채워야 harvested에 넣는다. 그래서
+            # 무진전 1회에 바로 나가버리면, 그 3회 재시도 로직이 한 실행
+            # 안에서는 절대 완주하지 못한다(1회차엔 failed=1만 쌓이고
+            # harvested는 그대로라 즉시 break). 연속 3회까지 허용해서
+            # 재시도가 자연히 소진되게 하되, 그 이상이면 진짜 장애로
+            # 보고 중단한다.
             HARVESTED_AFTER=$(python3 -c "
           import json, pathlib
           p = pathlib.Path('../output/fullcatalog_state_${B}.json')
           print(len(json.loads(p.read_text())['harvested_shops']) if p.exists() else 0)
           ")
             if [ "$HARVESTED_AFTER" -eq "$HARVESTED" ]; then
-              echo "::warning::브랜치 $B: 수확 진행 없음(${HARVESTED}개 그대로) — 큐텐 장애 가능성, 이번 실행 중단"
-              break
+              NO_PROGRESS=$((NO_PROGRESS + 1))
+              echo "::warning::브랜치 $B: 수확 진행 없음(${HARVESTED}개 그대로) ${NO_PROGRESS}/${MAX_NO_PROGRESS}회"
+              if [ "$NO_PROGRESS" -ge "$MAX_NO_PROGRESS" ]; then
+                echo "::warning::브랜치 $B: ${MAX_NO_PROGRESS}회 연속 무진전 — 큐텐 장애 가능성, 이번 실행 중단(다음 트리거에서 재시도)"
+                break
+              fi
+            else
+              NO_PROGRESS=0
             fi
           done
 

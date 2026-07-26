@@ -291,14 +291,18 @@ def t35_harvest_loop_no_progress_guard():
     wf = WF.read_text(encoding="utf-8")
     block = wf.split("  harvest_full_catalog_parallel:")[1].split("\n  merge_fullcatalog_shards:")[0]
     has_after_check = "HARVESTED_AFTER" in block
-    has_break = bool(re.search(r'\[ "\$HARVESTED_AFTER" -eq "\$HARVESTED" \][\s\S]{0,300}?break', block))
+    has_counter_init = "NO_PROGRESS=0" in block and "MAX_NO_PROGRESS=" in block
+    has_break = bool(re.search(r'NO_PROGRESS.*-ge.*MAX_NO_PROGRESS[\s\S]{0,300}?break', block))
+    # 진행이 있으면 카운터가 리셋돼야 연속(consecutive) 판정이 정확해진다
+    has_reset = bool(re.search(r"else\s*\n\s*NO_PROGRESS=0", block))
     # 커밋/푸시 뒤에 있어야 진행상황(실패카운트)이 유실되지 않는다
     push_idx = block.find("push 40회 재시도 실패")
     guard_idx = block.find("HARVESTED_AFTER=")
     after_push = push_idx != -1 and guard_idx != -1 and guard_idx > push_idx
-    ok = has_after_check and has_break and after_push
+    ok = has_after_check and has_counter_init and has_break and has_reset and after_push
     check("35 수확 루프 무진전 중단 가드", ok,
-          f"AFTER확인{has_after_check} break존재{has_break} 커밋후배치{after_push}")
+          f"AFTER확인{has_after_check} 카운터초기화{has_counter_init} break존재{has_break} "
+          f"진행시리셋{has_reset} 커밋후배치{after_push}")
 
 
 # --------------------- #34 재시도-보류도 CHUNK(max_new) 상한에 포함
