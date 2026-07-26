@@ -484,11 +484,22 @@ jobs:
           ITER=0
           while true; do
             ITER=$((ITER + 1))
-            # discovery-live의 visited_shops는 읽기만 한다(절대 안 씀).
+            # discovery-live의 visited_shops는 읽기만 한다(절대 안 씀). 이 job은
+            # fullcatalog-live만 체크아웃했으므로 origin/discovery-live 참조가
+            # 로컬에 아직 없다 — 매 반복마다 fetch해서 최신 목록을 받는다
+            # (발굴이 계속 진행 중이면 방문상점 수도 계속 늘어나므로).
+            git fetch origin discovery-live 2>/dev/null
             SHOPS=$(git show origin/discovery-live:output/discovery_state.json 2>/dev/null | \
               python3 -c "
           import json, sys, zlib
-          d = json.load(sys.stdin)
+          raw = sys.stdin.read()
+          if not raw.strip():
+              # discovery-live를 아직 못 읽었으면(fetch 실패 등) 빈 목록으로
+              # 처리하고, 바깥 while 루프가 30초 대기 후 다음 반복에서
+              # 다시 시도한다 — 여기서 죽으면 job 전체가 실패로 끝난다.
+              print('')
+              sys.exit(0)
+          d = json.loads(raw)
           all_shops = sorted(d['visited_shops'])
           # [중요] 파이썬 내장 hash()는 프로세스마다 랜덤(PYTHONHASHSEED)이라
           # 재실행할 때마다 상점이 다른 브랜치로 재배정되는 심각한 버그가
