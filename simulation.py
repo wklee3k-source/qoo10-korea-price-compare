@@ -281,6 +281,25 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #29 이미 번역된 것 불필요한 재시도 방지
+#  실측위험: 이미 정상 번역된 항목도 매 병합사이클마다 재검증되는데,
+#  길이검사(원문대비 50%미만)가 애매해서 짧지만 완전한 번역이 계속
+#  재번역 대상으로 잡혀 비용이 낭비될 수 있었다. 재검증 경로는
+#  strict=False로 완전무결한 실패신호(가나잔존/한글전무)만 걸러야 한다.
+def t29_no_unnecessary_retranslation():
+    at_src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
+    tip_src = (SRC / "translate_in_place.py").read_text(encoding="utf-8")
+
+    has_strict_param = "strict: bool = True" in at_src
+    fresh_check_strict = bool(re.search(r"validate_translation\(items\[k\]\[.title.\],\s*cand\)", at_src))
+    recheck_uses_lenient = "validate_translation(p[\"title\"], cur, strict=False)" in tip_src
+
+    ok = has_strict_param and fresh_check_strict and recheck_uses_lenient
+    check("29 이미번역된것 재시도방지(strict분리)", ok,
+          f"strict파라미터{has_strict_param} 신규검증strict유지{fresh_check_strict} "
+          f"재검증lenient{recheck_uses_lenient}")
+
+
 # --------------------- #28 번역 비용절감(프롬프트캐싱+배치확대)
 #  실측: 1,630건 번역(약 109회 호출)에 $5~10 발생. 원인: 매 호출마다
 #  긴 시스템 프롬프트를 캐싱 없이 처음부터 재전송. Haiku 4.5는 캐싱

@@ -145,16 +145,28 @@ MAX_BATCH_SIZE = 500    # [100->500 추가 확대] 호출횟수를 10회 미만�
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 
-def validate_translation(original: str, translated: str | None) -> tuple[bool, str]:
-    """번역 결과 3중 검사. (통과여부, 사유)를 돌려준다.
+def validate_translation(original: str, translated: str | None, strict: bool = True) -> tuple[bool, str]:
+    """번역 결과 검사. (통과여부, 사유)를 돌려준다.
 
     [1] 개수검사 — 애초에 결과가 없으면(번호 파싱 실패/응답 잘림) 탈락.
     [2] 글자검사 — 가나가 남아있거나 한글이 하나도 없으면 번역이 안 된 것.
-    [3] 길이검사 — 원문 대비 절반 미만이면 뒷부분이 생략된 것.
+    [3] 길이검사(strict=True일 때만) — 원문 대비 절반 미만이면 뒷부분이
+        생략된 것으로 본다.
 
     실패는 '원문 그대로 채우기'가 아니라 반드시 빈칸으로 남겨야 다음
     사이클에 재시도된다(과거 실패 #13 재발방지).
-    """
+
+    [strict=False 도입 이유] '이미 번역된 걸 재검증'할 때(translate_
+    in_place.py의 자가치유 로직) 매번 길이검사까지 다시 적용하면, 이미
+    멀쩡한 번역인데도 한글이 원문보다 짧다는 이유만으로 계속 재번역
+    대상에 걸릴 위험이 있다(한글이 일본어보다 짧게 나오는 경우가 실제로
+    흔함 — 조사/한자 표기 차이 등). [1][2]는 명백한 실패 신호(가나잔존,
+    한글전무)라 오탐 위험이 없지만, [3]은 애매해서 '이미 확보한 정상
+    번역이 계속 다시 청구되는' 낭비를 만들 수 있다. 그래서 재검증
+    경로에서는 strict=False로 호출해서 [3]을 건너뛴다 — 이미 번역된
+    것은 명백히 나쁜 신호가 있을 때만 재시도 대상이 된다. 반대로 방금
+    막 받은 새 응답을 검사할 때(strict=True, 기본값)는 길이검사까지
+    그대로 유지해서 응답 잘림을 여전히 잡아낸다."""
     if not translated or not translated.strip():
         return False, "빈응답"
 
@@ -168,7 +180,7 @@ def validate_translation(original: str, translated: str | None) -> tuple[bool, s
         if KANA_RE.search(original) or CJK_RE.search(original):
             return False, "한글없음"
 
-    if len(t) < len(original.strip()) * MIN_LENGTH_RATIO:
+    if strict and len(t) < len(original.strip()) * MIN_LENGTH_RATIO:
         return False, f"길이부족({len(t)}/{len(original.strip())})"
 
     return True, "OK"

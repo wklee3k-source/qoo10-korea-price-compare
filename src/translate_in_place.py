@@ -30,15 +30,18 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     state = json.loads(path.read_text(encoding="utf-8"))
     products = state.get("all_products", [])
 
-    # 빈칸뿐 아니라 "채워져 있지만 검증에 떨어지는 것"(일본어 잔존/길이부족)도
-    # 재번역 대상에 넣는다 — 과거 오염분이 남아 있어도 스스로 회복된다.
+    # 빈칸은 무조건 재번역 대상. 채워진 건 "명백히 나쁜 신호"(가나잔존/
+    # 한글전무)만 재번역 대상으로 삼는다 — strict=False라서 길이검사는
+    # 건너뛴다. 이미 확보한 정상 번역이 길이검사의 오탐 때문에 매 사이클
+    # 다시 청구되는 낭비를 막기 위함(사용자 지시: "이미 번역된건 재시도
+    # 안되게").
     to_translate = []
     for p in products:
         cur = p.get("translated_kr")
         if not cur:
             to_translate.append(p)
             continue
-        ok, _ = validate_translation(p["title"], cur)
+        ok, _ = validate_translation(p["title"], cur, strict=False)
         if not ok:
             to_translate.append(p)
     if not to_translate:
