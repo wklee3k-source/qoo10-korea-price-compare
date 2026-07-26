@@ -281,6 +281,23 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #33 build_excel 글롭 매치없음 안전처리
+#  실측위험: output/*_korea_side.json, output/*.xlsx 둘 다 매칭되는
+#  파일이 없으면 bash 글롭이 리터럴 문자열로 넘어가 python/git add가
+#  "파일없음" 오류를 낸다(과거실패 #18과 같은 부류 — nullglob 없이
+#  와일드카드를 무방비로 씀).
+def t33_build_excel_glob_safety():
+    wf = WF.read_text(encoding="utf-8")
+    job_exists = "  build_excel:" in wf
+    block = wf.split("  build_excel:")[1] if job_exists else ""
+    has_nullglob_for_loop = bool(re.search(r"shopt -s nullglob\s*\n\s*for f in \.\./output/\*_korea_side\.json", block))
+    has_nullglob_for_add = bool(re.search(r"shopt -s nullglob\s*\n\s*xlsx_files=\(output/\*\.xlsx\)", block))
+    guarded_add = "if [ ${#xlsx_files[@]} -gt 0 ]" in block
+    ok = job_exists and has_nullglob_for_loop and has_nullglob_for_add and guarded_add
+    check("33 build_excel 글롭 매치없음 안전처리", ok,
+          f"job존재{job_exists} 반복문nullglob{has_nullglob_for_loop} add용nullglob{has_nullglob_for_add} 존재확인후add{guarded_add}")
+
+
 # --------------------- #32 hwahae retry_state 파일 커밋 포함 확인
 #  실측위험: 30번에서 만든 재시도카운트 파일(hwahae_verified_39.retry_
 #  state.json)이 git add에서 빠져있었다. GH Actions는 매번 새 VM이라

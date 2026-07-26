@@ -1414,15 +1414,33 @@ jobs:
       - name: Build excel for each updated korea_side.json
         working-directory: src
         run: |
+          # [버그수정, 재확인중 발견] 매칭되는 파일이 없으면 bash 글롭이
+          # 확장 안 되고 리터럴 문자열("../output/*_korea_side.json")
+          # 그대로 넘어가서 python이 "파일 없음" 오류를 낸다. nullglob을
+          # 켜서 매칭 없으면 반복문 자체가 그냥 안 돌게 한다.
+          shopt -s nullglob
           for f in ../output/*_korea_side.json; do
             base=$(basename "$f" _korea_side.json)
             python excel_builder.py "$f" "../output/${base}_비교.xlsx"
           done
+          shopt -u nullglob
 
       - name: Commit excel output
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/*.xlsx
+          # [버그수정, 재확인중 발견] output/*.xlsx가 하나도 없으면 글롭이
+          # 리터럴 문자열로 넘어가 git add가 pathspec 오류로 실패한다
+          # (과거실패 #18과 같은 부류 — 존재 안 할 수 있는 경로를 무방비로
+          # git add에 넘김). nullglob으로 매칭 없으면 빈 배열이 되게 하고,
+          # 실제로 매칭된 게 있을 때만 add한다.
+          shopt -s nullglob
+          xlsx_files=(output/*.xlsx)
+          shopt -u nullglob
+          if [ ${#xlsx_files[@]} -gt 0 ]; then
+            git add "${xlsx_files[@]}"
+          else
+            echo "[정보] 새로 생성된 xlsx 없음 — add 생략"
+          fi
           git diff --cached --quiet || git commit -m "Auto: build comparison excel"
           git push
