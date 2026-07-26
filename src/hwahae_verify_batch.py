@@ -497,6 +497,16 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                     retry_counts[item["goods_no"]] = n
                     retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
                     print(f"    [보류-재시도대상] 기술적실패({','.join(tech_failures)})로 인해 확정 보류 ({n}/{MAX_VERIFY_RETRIES}회)")
+                    # [설계허점 수정 - 재확인중 발견] 이 continue가 processed_
+                    # this_call을 안 늘리면, CHUNK(max_new) 상한이 무력화된다
+                    # — 기술적실패가 대량으로 겹치는 상황(예: Exa/네이버가
+                    # 동시에 다운)에서는 이 for문이 max_new를 넘어 items
+                    # 전체를 한 호출 안에서 다 훑어버릴 수 있다(각 상품마다
+                    # 실제 API 호출 4번씩 하면서). '완료'는 아니어도 '이번
+                    # 호출에서 실제로 API를 썼다'는 사실은 똑같으므로,
+                    # processed_this_call을 여기서도 늘려서 CHUNK 상한이
+                    # 실제 API 소비량을 제대로 제한하게 한다.
+                    processed_this_call += 1
                     continue
                 print(f"    [포기] {MAX_VERIFY_RETRIES}회 연속 기술적실패 — 실패로 확정 처리")
                 retry_counts.pop(item["goods_no"], None)
