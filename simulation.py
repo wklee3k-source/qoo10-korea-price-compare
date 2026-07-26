@@ -281,6 +281,42 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #26 전체상품 수확(harvest_full_catalog) 안전성
+def t26_harvest_full_catalog_safety():
+    wf = WF.read_text(encoding="utf-8")
+    job_exists = "  harvest_full_catalog_parallel:" in wf
+    block = wf.split("  harvest_full_catalog_parallel:")[1].split("\n  merge_discovery_shards:")[0] if job_exists else ""
+
+    # discovery-live는 읽기만 해야 한다(쓰기 금지 — 과거실패#2·#4 재발방지 원칙 유지)
+    reads_discovery_only = "git show origin/discovery-live:" in block
+    never_writes_discovery = "push origin discovery-live" not in block and "checkout discovery-live" not in block
+
+    # 비결정적 hash() 대신 결정적 해시를 써야 재실행해도 배정이 안 바뀐다
+    no_nondeterministic_hash = "hash(s) % 12" not in block
+    uses_deterministic_hash = "zlib.crc32" in block
+
+    # 별도 브랜치(fullcatalog-live)에만 push해야 discovery-live와 경합이 없다
+    pushes_own_branch = "push origin fullcatalog-live" in block
+
+    # 스크래퍼/워커 스크립트 실제 존재 확인
+    scraper_exists = (SRC / "qoo10_shop_full_catalog.py").exists()
+    worker_exists = (SRC / "harvest_full_catalog.py").exists()
+
+    # 필터(색조제외/카테고리화이트리스트/리뷰20이하)가 워커 스크립트에 있는지
+    worker_src = (SRC / "harvest_full_catalog.py").read_text(encoding="utf-8") if worker_exists else ""
+    has_color_filter = "COLOR_COSMETIC_CATEGORIES" in worker_src
+    has_review_cap = "REVIEW_MAX" in worker_src and "> REVIEW_MAX" in worker_src
+
+    ok = all([job_exists, reads_discovery_only, never_writes_discovery, no_nondeterministic_hash,
+              uses_deterministic_hash, pushes_own_branch, scraper_exists, worker_exists,
+              has_color_filter, has_review_cap])
+    check("26 전체상품 수확 안전성(읽기전용/결정적해시/별도브랜치/필터)", ok,
+          f"job존재{job_exists} discovery읽기전용{reads_discovery_only} discovery미쓰기{never_writes_discovery} "
+          f"비결정적hash제거{no_nondeterministic_hash} 결정적hash{uses_deterministic_hash} "
+          f"별도브랜치push{pushes_own_branch} 스크래퍼{scraper_exists} 워커{worker_exists} "
+          f"색조필터{has_color_filter} 리뷰상한{has_review_cap}")
+
+
 # --------------------- #25 번역 건너뛰기(skip_translate) 옵션 존재
 def t25_skip_translate_option():
     wf = WF.read_text(encoding="utf-8")

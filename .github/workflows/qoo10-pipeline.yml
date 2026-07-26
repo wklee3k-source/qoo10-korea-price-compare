@@ -43,6 +43,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_harvest_catalog:
+        description: "이미 발굴된 상점(discovery-live)의 전체상품을 랭크5 말고 다 훑을지(색조제외, 리뷰수20이하). fullcatalog-live 브랜치에 저장(discovery-live와 완전분리)"
+        required: false
+        type: boolean
+        default: false
       run_hwahae_verify:
         description: "output/hwahae_input_39.json을 화해로 검증할지"
         required: false
@@ -417,6 +422,129 @@ jobs:
             done
             if [ "$PUSHED" != "1" ]; then
               echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
+            fi
+          done
+
+  harvest_full_catalog_parallel:
+    # [전체상품 수확] 이미 발굴된 상점(discovery-live의 visited_shops)의
+    # 랭크5(베스트5)가 아니라 전체상품을 훑는다. 필터: 색조제외/화장품
+    # 카테고리 화이트리스트/리뷰수20이하만 저장. discovery-live와 완전히
+    # 분리된 fullcatalog-live 브랜치에 저장한다 — discovery-live를
+    # 건드리면 발굴 워커와 push 경합이 생기고(과거실패 #2·#4 재발위험),
+    # 이 job은 discovery-live를 읽기만 하고 절대 쓰지 않는다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_harvest_catalog
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        branch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+      fail-fast: false
+    concurrency:
+      group: harvest-catalog-branch-${{ matrix.branch }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show pipeline code version
+        run: echo "[VERSION] $(cat VERSION 2>/dev/null || echo unknown) (commit ${{ github.sha }})"
+
+      - name: Switch to dedicated branch (avoids push contention with discover)
+        run: |
+          git fetch origin fullcatalog-live 2>/dev/null && git checkout fullcatalog-live || git checkout -b fullcatalog-live
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main 2>/dev/null
+          git checkout origin/main -- src/ data/ VERSION requirements.txt 2>/dev/null || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}
+
+      - name: Install dependencies
+        working-directory: src
+        run: |
+          pip install --break-system-packages -q playwright 2>/dev/null || pip install -q playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Harvest full catalog for this shard's shops
+        working-directory: src
+        run: |
+          B="${{ matrix.branch }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BATCH=50
+          ITER=0
+          while true; do
+            ITER=$((ITER + 1))
+            # discovery-live의 visited_shops는 읽기만 한다(절대 안 씀).
+            SHOPS=$(git show origin/discovery-live:output/discovery_state.json 2>/dev/null | \
+              python3 -c "
+          import json, sys, zlib
+          d = json.load(sys.stdin)
+          all_shops = sorted(d['visited_shops'])
+          # [중요] 파이썬 내장 hash()는 프로세스마다 랜덤(PYTHONHASHSEED)이라
+          # 재실행할 때마다 상점이 다른 브랜치로 재배정되는 심각한 버그가
+          # 된다(같은 상점을 여러 워커가 중복 수확하거나, 어떤 상점은 영영
+          # 안 배정될 수 있음). zlib.crc32는 입력이 같으면 항상 같은 값을
+          # 내는 결정적 해시라 안전하다.
+          mine = [s for s in all_shops if zlib.crc32(s.encode()) % 12 == $B]
+          print(' '.join(mine))
+          ")
+            if [ -z "$SHOPS" ]; then
+              echo "[대기] discovery-live에 이 브랜치(${B}) 몫 상점이 아직 없음"
+              sleep 30
+              continue
+            fi
+            HARVESTED=$(python3 -c "
+          import json, pathlib
+          p = pathlib.Path('../output/fullcatalog_state_${B}.json')
+          print(len(json.loads(p.read_text())['harvested_shops']) if p.exists() else 0)
+          ")
+            TODO=$(python3 -c "
+          import json
+          harvested_path = '../output/fullcatalog_state_${B}.json'
+          try:
+              harvested = set(json.load(open(harvested_path))['harvested_shops'])
+          except FileNotFoundError:
+              harvested = set()
+          shops = '''$SHOPS'''.split()
+          todo = [s for s in shops if s not in harvested][:$BATCH]
+          print(' '.join(todo))
+          ")
+            if [ -z "$TODO" ]; then
+              echo "[완료] 브랜치 ${B} 몫 상점 전부 수확 완료(누적 ${HARVESTED}개)"
+              break
+            fi
+            echo "::group::브랜치 $B 반복 $ITER (이번 배치 $(echo $TODO | wc -w)개, 누적수확 $HARVESTED)"
+            python harvest_full_catalog.py "$B" $TODO
+            echo "::endgroup::"
+
+            git add "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
+            git diff --cached --quiet || git commit -m "Auto: full-catalog harvest branch $B progress (반복 $ITER)"
+
+            PUSHED=0
+            for i in $(seq 1 40); do
+              if git push origin fullcatalog-live; then PUSHED=1; break; fi
+              sleep_time=$((RANDOM % 5 + 1))
+              sleep "$sleep_time"
+              cp "../output/fullcatalog_state_${B}.json" "/tmp/fcstate_${B}_backup.json" 2>/dev/null || true
+              git fetch origin fullcatalog-live 2>/dev/null
+              git reset --hard origin/fullcatalog-live -q 2>/dev/null || true
+              git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
+              cp "/tmp/fcstate_${B}_backup.json" "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
+              git add "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
+              git diff --cached --quiet || git commit -m "Auto: full-catalog harvest branch $B progress (반복 $ITER, 재시도)"
+            done
+            if [ "$PUSHED" != "1" ]; then
+              echo "::warning::브랜치 $B: push 40회 재시도 실패"
             fi
           done
 
