@@ -281,6 +281,35 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #30 검증(hwahae_verify) 기술적실패 vs 무결과 구분
+#  실측위험: Exa/화해/무신사/네이버 검색함수 4개가 전부 '기술적 실패'
+#  (타임아웃/네트워크오류/서브프로세스비정상종료/JSON파싱실패)와 '정상
+#  조회했지만 결과없음'을 구분 안 하고 똑같이 None을 반환했다. 그래서
+#  4곳 다 None이면 무조건 "이 상품은 한국에 없다"로 영구 확정했는데,
+#  실제로는 일시적 오류였을 수 있다(9번 수정과 동일한 원칙의 재발).
+def t30_verify_failure_vs_no_match():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    has_exception_class = "class SearchTechnicalFailure" in src
+    has_safe_wrapper = "def _safe_search" in src
+    # 4개 검색함수 전부 SearchTechnicalFailure를 실제로 raise하는지
+    raises_in_all_four = all(
+        f"def _search_{name}" in src and "raise SearchTechnicalFailure" in src.split(f"def _search_{name}")[1].split("\ndef ")[0]
+        for name in ("exa", "hwahae", "musinsa", "naver")
+    )
+    run_batch_src = src.split("def run_batch(")[1]
+    raw_call_count = sum(len(re.findall(rf"= _search_{name}\(", run_batch_src)) for name in ("exa", "hwahae", "musinsa", "naver"))
+    no_raw_calls_left = raw_call_count == 0  # 전부 _safe_search(_search_X, ...) 형태여야 함(직접 대입호출 금지)
+    has_retry_state = "retry_state_path" in run_batch_src and "MAX_VERIFY_RETRIES" in run_batch_src
+    # 재시도 대상은 results/done에 안 들어가야 한다(continue로 보류)
+    holds_back_on_retry = bool(re.search(r"if n < MAX_VERIFY_RETRIES:[\s\S]{0,600}?continue", run_batch_src))
+
+    ok = all([has_exception_class, has_safe_wrapper, raises_in_all_four,
+              no_raw_calls_left, has_retry_state, holds_back_on_retry])
+    check("30 검증단계 기술적실패/무결과 구분", ok,
+          f"예외클래스{has_exception_class} 안전래퍼{has_safe_wrapper} 4곳전부raise{raises_in_all_four} "
+          f"직접호출잔존금지{no_raw_calls_left} 재시도상태{has_retry_state} 보류로직{holds_back_on_retry}")
+
+
 # --------------------- #29 이미 번역된 것 불필요한 재시도 방지
 #  실측위험: 이미 정상 번역된 항목도 매 병합사이클마다 재검증되는데,
 #  길이검사(원문대비 50%미만)가 애매해서 짧지만 완전한 번역이 계속
