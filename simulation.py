@@ -288,7 +288,7 @@ def t26_harvest_full_catalog_safety():
     block = wf.split("  harvest_full_catalog_parallel:")[1].split("\n  merge_discovery_shards:")[0] if job_exists else ""
 
     # discovery-live는 읽기만 해야 한다(쓰기 금지 — 과거실패#2·#4 재발방지 원칙 유지)
-    reads_discovery_only = "git show origin/discovery-live:" in block
+    reads_discovery_only = "git show FETCH_HEAD:output/discovery_state.json" in block and "git fetch origin discovery-live" in block
     never_writes_discovery = "push origin discovery-live" not in block and "checkout discovery-live" not in block
 
     # 비결정적 hash() 대신 결정적 해시를 써야 재실행해도 배정이 안 바뀐다

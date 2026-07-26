@@ -488,8 +488,18 @@ jobs:
             # fullcatalog-live만 체크아웃했으므로 origin/discovery-live 참조가
             # 로컬에 아직 없다 — 매 반복마다 fetch해서 최신 목록을 받는다
             # (발굴이 계속 진행 중이면 방문상점 수도 계속 늘어나므로).
+            #
+            # [실측버그 수정] actions/checkout@v4는 기본적으로 얕은(depth=1)+
+            # 단일브랜치 클론이라, remote.origin.fetch refspec이 main
+            # 하나로만 좁혀져 있다. 그 상태에서 'git fetch origin
+            # discovery-live'를 해도 origin/discovery-live라는 원격추적
+            # 참조는 안 만들어지고 FETCH_HEAD만 갱신된다(실측 재현:
+            # 'git show origin/discovery-live:...' -> "fatal: invalid
+            # object name" 이었는데, 'git show FETCH_HEAD:...'는 정상
+            # 작동함을 확인). 그래서 origin/discovery-live 대신
+            # FETCH_HEAD를 참조한다.
             git fetch origin discovery-live 2>/dev/null
-            SHOPS=$(git show origin/discovery-live:output/discovery_state.json 2>/dev/null | \
+            SHOPS=$(git show FETCH_HEAD:output/discovery_state.json 2>/dev/null | \
               python3 -c "
           import json, sys, zlib
           raw = sys.stdin.read()
