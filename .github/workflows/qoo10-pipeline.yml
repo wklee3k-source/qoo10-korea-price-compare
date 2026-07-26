@@ -444,7 +444,11 @@ jobs:
       contents: write
     strategy:
       matrix:
-        branch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        # [경합 완화] 12워커가 fullcatalog-live에 동시에 push하다가 경합이
+        # 너무 잦아서(실측: 12개 중 10개가 40회 재시도 끝에 push 실패)
+        # 6워커로 줄인다. 아래 SHOPS 배정의 나머지 연산도 %6으로 맞춰야
+        # 6~11번 상점이 누락되지 않는다(같이 수정함).
+        branch: [0, 1, 2, 3, 4, 5]
       fail-fast: false
     concurrency:
       group: harvest-catalog-branch-${{ matrix.branch }}
@@ -521,7 +525,7 @@ jobs:
           # 된다(같은 상점을 여러 워커가 중복 수확하거나, 어떤 상점은 영영
           # 안 배정될 수 있음). zlib.crc32는 입력이 같으면 항상 같은 값을
           # 내는 결정적 해시라 안전하다.
-          mine = [s for s in all_shops if zlib.crc32(s.encode()) % 12 == $B]
+          mine = [s for s in all_shops if zlib.crc32(s.encode()) % 6 == $B]
           print(' '.join(mine))
           ")
             if [ -z "$SHOPS" ]; then
