@@ -706,7 +706,11 @@ jobs:
     # 한다.
     if: github.event_name == 'workflow_dispatch' && inputs.run_merge_discovery
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # [상향] 번역 대기물량이 3,514건까지 쌓여 20분 안에 못 끝나고 도중에
+    # 취소되는 사고가 실측 확인됐다(13:43 시작 -> 14:04 취소, 번역
+    # 커밋 못함). 발굴 일시정지로 push 경합은 이미 없앴으니, 이제
+    # 병목은 순수하게 번역 API 호출 시간이다. 60분으로 늘려 대응한다.
+    timeout-minutes: 60
     permissions:
       contents: write
       actions: write
