@@ -52,8 +52,9 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 고를 때 (2) 크롤한 상품을 채택할 때. 상품 쪽 효과는 작지만(실측 +107건),
 # 샵 쪽 효과가 크다 — 리뷰 6~9인 샵을 여태 통째로 무시하고 있었고, 그게
 # 키워드 큐 고갈의 직접 원인이었다.
-REVIEW_THRESHOLD = 10  # 10 미만(0~9). 4 -> 6 -> 10 순으로 완화
-MIN_PRICE_JPY = 1500  # 이 가격 이하(너무 저가) 상품은 제외
+REVIEW_THRESHOLD = 10  # [v1.9.1부터 미사용] 상점선별 필터 해지됨. 과거 기록용으로만 남김
+MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
+PRODUCT_SAVE_REVIEW_THRESHOLD = 20  # 20 미만(0~19)만 최종 상품목록에 저장. 상점선별 단계와는 별개(그쪽은 리뷰수 무관하게 전부 방문)
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 
@@ -212,10 +213,15 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
             skip_reason = "화장품카테고리아님"
         elif has_options:
             skip_reason = "옵션있음"
-        elif review_count >= REVIEW_THRESHOLD:
-            skip_reason = f"리뷰수{review_count}(4개이상)"
-        elif price_jpy is not None and price_jpy <= MIN_PRICE_JPY:
-            skip_reason = f"가격{price_jpy}엔(1500엔이하)"
+        elif review_count >= PRODUCT_SAVE_REVIEW_THRESHOLD:
+            skip_reason = f"리뷰수{review_count}(20개이상)"
+        # [v1.9.0에서 완전해지 -> 방금 재조정] 가격 필터(1500엔 이하)는
+        # 계속 해지 상태로 둔다. 리뷰수만 20개 미만으로 다시 걸어달라는
+        # 요청 반영 — PRODUCT_SAVE_REVIEW_THRESHOLD=20 (구
+        # REVIEW_THRESHOLD=10보다 완화된 값. 상점선별 단계는 여전히
+        # v1.9.1대로 리뷰수 무관하게 전부 방문후보로 삼는다 — 이건
+        # '어떤 상점에 들어갈지'가 아니라 '그 상점에서 크롤한 상품 중
+        # 뭘 최종목록에 저장할지'만 다시 제한하는 것이다.
 
         item["passes_filter"] = skip_reason is None
         item["skip_reason"] = skip_reason
@@ -235,11 +241,16 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
 
 
 def find_low_review_shops(keyword: str, visited_shops: set) -> list[dict]:
+    """[해지] 예전엔 검색결과 중 review_count<REVIEW_THRESHOLD인 것만
+    방문후보로 삼았다. 사용자 지시로 이 필터도 없앤다 — 이제 검색결과에
+    나온 모든 상점이 방문후보가 된다(이미 방문한 상점만 제외). 실측
+    확인(검증기록 2번): 리뷰필터 있으면 24개, 없으면 28개로 큰 차이가
+    아니었지만, 저장단계 필터 해지(v1.9.0)와 함께 상점 선별 단계까지
+    완전히 열어서 "리뷰수와 무관하게 전부 발굴"로 방향을 통일한다."""
     html = search_qoo10(keyword)
     results = parse_results(html)
-    low = [r for r in results if r["review_count"] < REVIEW_THRESHOLD]
     seen = {}
-    for r in low:
+    for r in results:
         if r["shop_id"] not in visited_shops:
             seen[r["shop_id"]] = r
     return list(seen.values())
