@@ -137,13 +137,11 @@ KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
 HANGUL_RE = re.compile(r"[가-힣]")
 CJK_RE = re.compile(r"[一-龯]")
 MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 100    # [30->100 추가 확대] 검색으로 확인: Haiku 4.5의
-                        # 실제 최대 출력 토큰은 64,000이다(8,000으로 캡을
-                        # 걸어둔 건 실제 한도의 1/8에 불과했다). 배치를
-                        # 100으로 늘려도 예상 출력(100*250+1000=26,000)이
-                        # 여유있게 한도 안에 들어온다. 호출횟수가 30건
-                        # 기준 대비 또 3분의1로 줄어 캐시읽기 오버헤드
-                        # (매 호출 10%)와 왕복횟수가 그만큼 더 준다.
+MAX_BATCH_SIZE = 500    # [100->500 추가 확대] 호출횟수를 10회 미만으로
+                        # 줄이라는 요청 반영. 3,514건 기준 ceil(3514/500)
+                        # =8회. 출력예산은 아래 budget에서 100토큰/건으로
+                        # 잡아도 500*100+2000=52,000으로 Haiku 4.5 실제
+                        # 한도(64,000) 안에 12,000토큰 여유를 남긴다.
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 
@@ -215,7 +213,7 @@ def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list
 
             try:
                 # 응답 잘림 방지: 항목당 넉넉히 잡고 상한만 둔다.
-                budget = min(20000, 250 * len(chunk) + 1000)
+                budget = min(60000, 100 * len(chunk) + 2000)
                 response = _call_api(prompt, max_tokens=budget)
                 parsed = {}
                 for line in response.strip().split("\n"):
