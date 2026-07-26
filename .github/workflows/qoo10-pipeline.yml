@@ -1220,7 +1220,20 @@ jobs:
             echo "::endgroup::"
 
             python append_progress_history.py ../output
+            # [버그 수정 - 재확인중 발견] retry_state 파일(hwahae_verify_
+            # batch.py의 기술적실패 재시도 카운트)이 git add에 빠져있었다.
+            # GitHub Actions는 매번 새 VM이라, 커밋 안 하면 이 파일은
+            # 그 VM이 사라질 때 같이 사라진다 — 그러면 재시도 카운트가
+            # 매번 0부터 다시 시작해서 "3회 실패시 포기" 안전장치가
+            # 실제로는 절대 발동 안 하고 무한 재시도만 반복하게 된다.
+            #
+            # [18번 버그 재발방지] 이 파일은 기술적실패가 한 번도 없으면
+            # 아예 안 만들어질 수 있는 선택적 파일이다(archive/와 같은
+            # 부류). 필수 파일과 같은 git add에 섞으면, 이 파일이 없을 때
+            # pathspec 오류로 전체가 통째로 실패한다(과거실패 #18과 동일
+            # 패턴 재발 위험) — 그래서 반드시 존재할 때만 별도로 add한다.
             git add ../output/hwahae_verified_39.json ../output/progress_history.json
+            [ -f ../output/hwahae_verified_39.retry_state.json ] && git add ../output/hwahae_verified_39.retry_state.json
             if ! git diff --cached --quiet; then
               git commit -m "Auto: hwahae verification progress"
               for i in $(seq 1 15); do

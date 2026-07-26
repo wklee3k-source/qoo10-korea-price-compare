@@ -281,6 +281,28 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #32 hwahae retry_state 파일 커밋 포함 확인
+#  실측위험: 30번에서 만든 재시도카운트 파일(hwahae_verified_39.retry_
+#  state.json)이 git add에서 빠져있었다. GH Actions는 매번 새 VM이라
+#  커밋 안 하면 파일이 유실되고, 재시도 카운트가 매번 0부터 시작해서
+#  "3회 실패시 포기" 안전장치가 절대 발동 안 한다. 동시에 이 파일은
+#  선택적(archive/와 같은 부류)이라 필수파일과 같은 git add에 섞으면
+#  안 된다(18번 버그 재발 위험) — 존재확인 후 별도 add해야 한다.
+def t32_hwahae_retry_state_committed():
+    wf = WF.read_text(encoding="utf-8")
+    block = wf.split("run_batch.py \"$CHUNK\"")[0] if False else wf  # placeholder, 실제로는 아래에서 hwahae_verify job 블록만 추출
+    job_block = wf.split("^  hwahae_verify:", 1)
+    # split by regex since job name has leading spaces consistently
+    job_block = re.split(r"\n  hwahae_verify:\n", wf)[1].split("\n  naver_api_test:")[0] if "\n  hwahae_verify:\n" in wf else ""
+    included = "hwahae_verified_39.retry_state.json" in job_block
+    # 필수파일과 분리된 별도 add(존재확인 [ -f ... ] 붙여서)인지 확인
+    separated_safely = bool(re.search(r"\[ -f [^\]]*retry_state\.json \] && git add", job_block))
+    not_mixed_with_required = not bool(re.search(r"git add [^\n]*hwahae_verified_39\.json[^\n]*retry_state\.json", job_block))
+    ok = included and separated_safely and not_mixed_with_required
+    check("32 hwahae retry_state 커밋 포함(안전하게 분리)", ok,
+          f"포함{included} 안전분리{separated_safely} 필수파일과안섞임{not_mixed_with_required}")
+
+
 # --------------------- #31 한->일 역번역 완전 비활성화 확인 (사용자지시)
 def t31_kr_to_jp_disabled():
     wf = WF.read_text(encoding="utf-8")
