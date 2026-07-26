@@ -281,6 +281,39 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #28 번역 비용절감(프롬프트캐싱+배치확대)
+#  실측: 1,630건 번역(약 109회 호출)에 $5~10 발생. 원인: 매 호출마다
+#  긴 시스템 프롬프트를 캐싱 없이 처음부터 재전송. Haiku 4.5는 캐싱
+#  최소기준이 4,096토큰이라 기존 프롬프트(500~700토큰)로는 cache_control을
+#  붙여도 조용히 무시됐다. 브랜드사전(972개)을 시스템 프롬프트에 통째로
+#  포함시켜 기준을 넘기고, 배치크기도 15->30으로 늘려 호출횟수를 줄인다.
+def t28_translation_cost_optimization():
+    src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
+    has_cache_control = '"cache_control": {"type": "ephemeral"}' in src
+    uses_full_prompt_in_call = "FULL_SYSTEM_PROMPT" in src.split("def _call_api")[1].split("\ndef ")[0]
+    prompt_crosses_threshold = False
+    try:
+        import importlib.util
+        import os as _os
+        _prev_cwd = _os.getcwd()
+        _os.chdir(SRC)  # auto_translate.py가 "../data/..."라는 상대경로를 쓰므로 cwd를 맞춰준다
+        try:
+            spec = importlib.util.spec_from_file_location("auto_translate_check", SRC / "auto_translate.py")
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            prompt_crosses_threshold = len(mod.FULL_SYSTEM_PROMPT) > 4096 * 1.2  # 여유있게 문자수로 근사확인
+            batch_30 = mod.MAX_BATCH_SIZE == 30
+        finally:
+            _os.chdir(_prev_cwd)
+    except Exception as e:  # noqa: BLE001
+        batch_30 = False
+        prompt_crosses_threshold = f"모듈로드실패:{e}"
+    ok = has_cache_control and uses_full_prompt_in_call and prompt_crosses_threshold is True and batch_30
+    check("28 번역 비용절감(캐싱+배치확대)", ok,
+          f"cache_control{has_cache_control} FULL프롬프트사용{uses_full_prompt_in_call} "
+          f"임계값초과{prompt_crosses_threshold} 배치30{batch_30}")
+
+
 # --------------------- #27 수확 통합(merge_fullcatalog_shards) 안전성
 def t27_merge_fullcatalog_safety():
     wf = WF.read_text(encoding="utf-8")

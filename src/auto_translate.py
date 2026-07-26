@@ -55,6 +55,49 @@ SYSTEM_PROMPT = """너는 큐텐재팬(일본 이커머스)의 한국 화장품 
 줄바꿈해서 출력한다. 형식: "1. 번역결과\\n2. 번역결과\\n..." """
 
 
+def _load_brand_dict() -> dict:
+    try:
+        d = json.load(open("../data/brand_translations_learned.json", encoding="utf-8"))
+        d.pop("_설명", None)
+        d.pop("_아도르_참고", None)
+        return d
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+BRAND_DICT = _load_brand_dict()
+
+
+def _build_system_prompt() -> str:
+    """[비용문제 수정] 실측 확인: 1,630건 번역(약 109회 API 호출)에 $5~10이
+    나갔다 — 매 호출마다 시스템 프롬프트를 처음부터 다시 전송했기 때문이다.
+    Anthropic 프롬프트 캐싱을 적용하면 두 번째 호출부터 캐싱된 부분은
+    최대 90% 할인되는데, 문제는 Haiku 4.5의 캐싱 최소기준이 4,096토큰
+    이라는 것이다(Sonnet/Opus는 1,024토큰). 기존 시스템 프롬프트는 약
+    500~700토큰뿐이라 cache_control을 붙여도 조용히 무시된다(API가 에러
+    없이 그냥 캐싱을 안 함 — 실측 확인이 필요했던 부분).
+
+    그래서 이미 갖고 있던 브랜드사전(972개, data/brand_translations_
+    learned.json)을 시스템 프롬프트 안에 통째로 포함시킨다. 이러면:
+    (1) 시스템 프롬프트가 4,096토큰을 확실히 넘어 캐싱이 실제로 작동하고,
+    (2) 매번 아이템별로 브랜드 힌트를 개별 조립할 필요 없이 모델이
+        항상 전체 브랜드 사전을 참고할 수 있어 번역 일관성도 좋아진다.
+    패딩을 위한 낭비가 아니라, 실제로 유용한 내용을 채워서 기준을
+    넘기는 것이다."""
+    lines = [f"{jp}={kr}" for jp, kr in BRAND_DICT.items()]
+    brand_table = "\n".join(lines)
+    return (
+        SYSTEM_PROMPT
+        + "\n\n6. 아래는 실측으로 확인된 한국 화장품 브랜드명 대응표다(일본어"
+        + "표기=정확한 한글 정식표기). 상품명에 이 목록의 브랜드가 나오면"
+        + "반드시 이 표기를 그대로 쓴다:\n"
+        + brand_table
+    )
+
+
+FULL_SYSTEM_PROMPT = _build_system_prompt()
+
+
 def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     """[중대버그 이력] max_tokens가 4000 고정이던 시절, translate_in_place가
     batch_size=len(titles)로 수천 건을 한 통에 보내는 바람에 응답이 약 80건
@@ -62,17 +105,29 @@ def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     translated_kr에 채워넣었고, 그 칸이 채워졌다는 이유로 재번역 대상에서도
     영구 제외됐다 — 실측 2,520건 중 2,035건(80.8%)이 일본어인 채로 굳었다.
     이제 (1) 배치를 잘게 쪼개고 (2) 배치 크기에 비례해 토큰을 잡고
-    (3) 실패는 원문 폴백이 아니라 None으로 남겨 재시도되게 한다."""
+    (3) 실패는 원문 폴백이 아니라 None으로 남겨 재시도되게 한다.
+
+    [비용문제 수정] 1,630건 번역에 약 109회 호출이 나갔는데, 매번 이
+    시스템 프롬프트(약 500토큰)를 처음부터 다시 통째로 보내고 있었다
+    (프롬프트 캐싱 미적용). 실측 청구액이 예상보다 훨씬 커서(사용자
+    확인: $5~10) 원인을 추적한 결과다. Anthropic 프롬프트 캐싱은 동일한
+    프리픽스를 cache_control로 표시해두면, 두 번째 호출부터 그 부분은
+    최대 90% 할인된 가격으로 읽는다. system 블록을 캐싱 대상으로
+    표시한다 — 같은 프로세스 안에서 반복 호출될 때(번역 배치 109회처럼)
+    비용이 크게 줄어든다."""
     payload = json.dumps({
         "model": MODEL,
         "max_tokens": max_tokens,
-        "system": SYSTEM_PROMPT,
+        "system": [
+            {"type": "text", "text": FULL_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}
+        ],
         "messages": [{"role": "user", "content": user_content}],
     }).encode("utf-8")
     req = urllib.request.Request(API_URL, data=payload, method="POST")
     req.add_header("content-type", "application/json")
     req.add_header("x-api-key", API_KEY)
     req.add_header("anthropic-version", "2023-06-01")
+    req.add_header("anthropic-beta", "prompt-caching-2024-07-31")
     with urllib.request.urlopen(req, timeout=60) as res:
         data = json.loads(res.read().decode("utf-8"))
     return data["content"][0]["text"]
@@ -82,7 +137,10 @@ KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
 HANGUL_RE = re.compile(r"[가-힣]")
 CJK_RE = re.compile(r"[一-龯]")
 MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 15     # 이보다 크게 보내면 응답이 잘린다(실측 80건 부근에서 절단)
+MAX_BATCH_SIZE = 30     # [15->30 상향] 출력토큰 예산이 배치크기에 비례해서
+                        # 커지므로(250*n+500, 위 budget 계산 참고) 30까지는
+                        # 안전하다(30*250+500=8000, 상한과 정확히 일치).
+                        # 호출횟수가 절반이 되므로 API 왕복/오버헤드가 준다.
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 
@@ -113,19 +171,6 @@ def validate_translation(original: str, translated: str | None) -> tuple[bool, s
         return False, f"길이부족({len(t)}/{len(original.strip())})"
 
     return True, "OK"
-
-
-def _load_brand_dict() -> dict:
-    try:
-        d = json.load(open("../data/brand_translations_learned.json", encoding="utf-8"))
-        d.pop("_설명", None)
-        d.pop("_아도르_참고", None)
-        return d
-    except Exception:  # noqa: BLE001
-        return {}
-
-
-BRAND_DICT = _load_brand_dict()
 
 
 def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
