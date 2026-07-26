@@ -281,6 +281,26 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #36 번역 유저메시지 토큰낭비 제거
+#  실측: 브랜드사전 972개가 시스템프롬프트(캐싱대상)에 이미 전부 들어
+#  있는데, 유저메시지에도 항목마다 브랜드힌트를 또 붙이고 있었다.
+#  유저메시지는 캐싱이 안 돼 매번 전액 청구된다 — 힌트 1개당 약 20토큰
+#  x 500건 = 호출당 1만 토큰이 할인 없이 낭비되고 있었다.
+def t36_no_duplicate_brand_hint():
+    src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
+    fn = src.split("def translate_batch(")[1].split("\ndef ")[0]
+    # 주석에 설명으로 언급된 건 무시하고, 실제 코드에서 힌트를 쓰는지만 본다
+    code_only = "\n".join(ln for ln in fn.split("\n") if not ln.strip().startswith("#"))
+    no_hint_in_prompt = "hint" not in code_only and "정확한 브랜드명:" not in code_only
+    # 시스템프롬프트 쪽에는 브랜드사전이 반드시 있어야 한다(대체 경로)
+    has_dict_in_system = "brand_table" in src and "BRAND_DICT.items()" in src
+    # 재시도가 지수적으로 쪼개지지 않아야 한다(호출횟수 최소화)
+    no_exponential_split = "2 ** (attempt - 1)" not in fn
+    ok = no_hint_in_prompt and has_dict_in_system and no_exponential_split
+    check("36 번역 유저메시지 중복힌트 제거", ok,
+          f"힌트제거{no_hint_in_prompt} 시스템프롬프트에사전{has_dict_in_system} 재시도지수분할제거{no_exponential_split}")
+
+
 # --------------------- #35 수확 루프 무진전시 중단 가드
 #  실측위험: harvest_full_catalog_parallel의 while true는 TODO가 빌
 #  때만 break했다. 큐텐 광범위 장애/IP차단시 매 반복 BATCH(50)개

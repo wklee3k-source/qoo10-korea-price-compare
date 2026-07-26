@@ -208,19 +208,30 @@ def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list
         todo = [i for i, r in enumerate(results) if r is None]
         if not todo:
             break
-        # 재시도는 배치를 더 잘게 쪼갠다(잘림이 원인이면 작게 보내면 살아난다).
-        size = max(1, batch_size // (2 ** (attempt - 1)))
+        # [토큰절감 - 재확인중 발견] 예전엔 재시도마다 배치크기를 절반씩
+        # 줄였다(500 -> 250 -> 125). 응답 잘림이 원인일 때를 대비한
+        # 방어였지만, todo 리스트는 이미 '실패한 것만' 모아둔 상태라
+        # 그것들만 다시 보내면 자연히 양이 줄어든다. 배치까지 또 쪼개면
+        # 호출 횟수만 늘어나고(캐시읽기 오버헤드가 호출마다 붙음),
+        # 실패가 몇 건뿐일 때도 불필요하게 여러 번 왕복하게 된다.
+        # 이제 1차는 최대 배치로, 2차부터만 절반으로 줄인다 — 잘림
+        # 대비는 유지하면서 호출 횟수는 최소화.
+        size = batch_size if attempt == 1 else max(1, batch_size // 2)
         print(f"  [번역 {attempt}차] 대상 {len(todo)}건, 배치 {size}건씩", file=sys.stderr)
 
         for i in range(0, len(todo), size):
             idxs = todo[i:i + size]
             chunk = [items[k] for k in idxs]
-            lines = []
-            for j, item in enumerate(chunk):
-                brand = item.get("brand") or ""
-                known_kr_brand = BRAND_DICT.get(brand)
-                hint = f" [정확한 브랜드명: {known_kr_brand} — 반드시 이 표기 그대로 사용]" if known_kr_brand else ""
-                lines.append(f"{j+1}. {item['title']}{hint}")
+            # [토큰절감 - 재확인중 발견] 예전엔 항목마다 브랜드힌트를
+            # 붙였다(" [정확한 브랜드명: XXX — 반드시 이 표기 그대로 사용]").
+            # 그런데 v1.13.0에서 브랜드사전 972개 전체를 시스템 프롬프트에
+            # 넣었으므로, 이 힌트는 완전히 중복이다. 게다가 시스템
+            # 프롬프트는 캐싱돼서 2회차부터 90% 할인되는 반면, 유저
+            # 메시지는 캐싱 대상이 아니라 매번 전액 청구된다 — 힌트
+            # 1개당 약 20토큰 × 500건 = 호출당 1만 토큰이 할인 없이
+            # 낭비되고 있었다. 시스템 프롬프트의 대응표만으로 충분하므로
+            # 제거한다.
+            lines = [f"{j+1}. {item['title']}" for j, item in enumerate(chunk)]
             prompt = f"다음 {len(chunk)}개 상품명을 번역하라:\n\n" + "\n".join(lines)
 
             try:
