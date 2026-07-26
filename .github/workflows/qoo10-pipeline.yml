@@ -38,6 +38,11 @@ on:
         required: false
         type: boolean
         default: false
+      skip_translate:
+        description: "병합(run_merge_discovery)만 하고 번역(Claude Haiku API 비용발생)은 건너뛸지 — true면 병합/발굴 일시정지·재기동은 그대로 하되 번역 스텝만 생략"
+        required: false
+        type: boolean
+        default: false
       run_hwahae_verify:
         description: "output/hwahae_input_39.json을 화해로 검증할지"
         required: false
@@ -524,6 +529,7 @@ jobs:
           done
 
       - name: Translate merged pool if 100+ pending (then push)
+        if: inputs.skip_translate != true
         working-directory: src
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -281,6 +281,15 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #25 번역 건너뛰기(skip_translate) 옵션 존재
+def t25_skip_translate_option():
+    wf = WF.read_text(encoding="utf-8")
+    has_input = "skip_translate:" in wf
+    has_guard = re.search(r'Translate merged pool[^\n]*\n\s*if:\s*inputs\.skip_translate\s*!=\s*true', wf)
+    check("25 번역 건너뛰기(skip_translate) 옵션", has_input and bool(has_guard),
+          f"입력존재{has_input} 가드적용{bool(has_guard)}")
+
+
 # --------------------- #24 상품저장 필터에서 리뷰수/가격 조건 해지 확인
 #  사용자 지시로 리뷰수·가격 필터를 해지했다. 색조/카테고리불일치/
 #  옵션있음 조건은 그대로 유지돼야 한다(색조 봉인은 #13에서 별도 검사).
