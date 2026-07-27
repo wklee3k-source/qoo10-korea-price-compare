@@ -128,7 +128,12 @@ def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     req.add_header("x-api-key", API_KEY)
     req.add_header("anthropic-version", "2023-06-01")
     req.add_header("anthropic-beta", "prompt-caching-2024-07-31")
-    with urllib.request.urlopen(req, timeout=60) as res:
+    # [실측 타임아웃 사고] timeout=60이던 시절, 배치 500건(출력 5만 토큰)은
+    # 응답 생성에 60초를 훌쩍 넘겨서 전부 TimeoutError로 실패했다 —
+    # 40분간 계속 헛돌며 3,514건 중 14건만 성공. 배치 크기를 줄이는 것과
+    # 별개로, 읽기 타임아웃 자체도 넉넉히 잡아야 한다(대량 생성은 원래
+    # 오래 걸린다). 600초면 배치 200건 기준으로도 충분한 여유.
+    with urllib.request.urlopen(req, timeout=600) as res:
         data = json.loads(res.read().decode("utf-8"))
     return data["content"][0]["text"]
 
@@ -137,11 +142,14 @@ KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
 HANGUL_RE = re.compile(r"[가-힣]")
 CJK_RE = re.compile(r"[一-龯]")
 MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 500    # [100->500 추가 확대] 호출횟수를 10회 미만으로
-                        # 줄이라는 요청 반영. 3,514건 기준 ceil(3514/500)
-                        # =8회. 출력예산은 아래 budget에서 100토큰/건으로
-                        # 잡아도 500*100+2000=52,000으로 Haiku 4.5 실제
-                        # 한도(64,000) 안에 12,000토큰 여유를 남긴다.
+MAX_BATCH_SIZE = 100    # [500->100 하향, 실측 반영] 500건은 출력이 5만
+                        # 토큰이라 응답 생성에만 수 분이 걸려, 읽기
+                        # 타임아웃으로 전량 실패했다(실측: 40분간 헛돌며
+                        # 3,514건 중 14건만 성공). 100건이면 출력 약
+                        # 1만 토큰으로 1분 내외에 끝나 안정적이다.
+                        # 3,514건 기준 36회 호출 — 캐싱이 작동하므로
+                        # 호출 횟수가 늘어도 비용 증가는 미미하다
+                        # (시스템프롬프트는 2회차부터 90% 할인).
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 

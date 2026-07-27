@@ -491,7 +491,7 @@ def t28_translation_cost_optimization():
             mod = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(mod)
             prompt_crosses_threshold = len(mod.FULL_SYSTEM_PROMPT) > 4096 * 1.2  # 여유있게 문자수로 근사확인
-            batch_500 = mod.MAX_BATCH_SIZE == 500
+            batch_ok = mod.MAX_BATCH_SIZE == 100
             import inspect as _inspect
             default_matches_max = (
                 _inspect.signature(mod.translate_batch).parameters["batch_size"].default
@@ -500,13 +500,13 @@ def t28_translation_cost_optimization():
         finally:
             _os.chdir(_prev_cwd)
     except Exception as e:  # noqa: BLE001
-        batch_500 = False
+        batch_ok = False
         default_matches_max = False
         prompt_crosses_threshold = f"모듈로드실패:{e}"
-    ok = has_cache_control and uses_full_prompt_in_call and prompt_crosses_threshold is True and batch_500 and default_matches_max
+    ok = has_cache_control and uses_full_prompt_in_call and prompt_crosses_threshold is True and batch_ok and default_matches_max
     check("28 번역 비용절감(캐싱+배치확대)", ok,
           f"cache_control{has_cache_control} FULL프롬프트사용{uses_full_prompt_in_call} "
-          f"임계값초과{prompt_crosses_threshold} 배치500{batch_500} 기본값일치{default_matches_max}")
+          f"임계값초과{prompt_crosses_threshold} 배치100{batch_ok} 기본값일치{default_matches_max}")
 
 
 # --------------------- #27 수확 통합(merge_fullcatalog_shards) 안전성
