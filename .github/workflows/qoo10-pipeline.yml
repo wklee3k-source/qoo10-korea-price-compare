@@ -53,6 +53,11 @@ on:
         required: false
         type: boolean
         default: false
+      translate_rounds:
+        description: "번역 라운드 상한(라운드당 300건). 비워두면 60(전량). 소규모 시험 실행시 1 같은 작은 값 지정"
+        required: false
+        type: string
+        default: ""
       run_hwahae_verify:
         description: "output/hwahae_input_39.json을 화해로 검증할지"
         required: false
@@ -847,7 +852,12 @@ jobs:
           # 3,514건 기준 36라운드 필요 — 여유있게 60까지 허용(60분
           # 타임아웃이 실질 상한 역할을 하고, 못 끝낸 분량은 이미
           # 커밋돼 있으므로 다음 트리거에서 이어서 진행된다).
-          for round in $(seq 1 60); do
+          # [라운드 상한] 기본 60라운드(3,514건 기준 36라운드면 충분).
+          # translate_rounds 입력으로 줄일 수 있다 — 비용 사고 이후
+          # '1라운드만 돌려서 확인' 같은 소규모 시험 실행을 위해 추가.
+          TROUNDS="${{ inputs.translate_rounds || '60' }}"
+          echo "[번역] 최대 $TROUNDS 라운드, 라운드당 $TCHUNK건"
+          for round in $(seq 1 "$TROUNDS"); do
             git fetch origin discovery-live 2>/dev/null
             git reset --hard origin/discovery-live -q
             # reset --hard가 위에서 맞춰둔 최신코드까지 되돌려버리므로 매번 다시 맞춘다.
