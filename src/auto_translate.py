@@ -128,7 +128,12 @@ def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     req.add_header("x-api-key", API_KEY)
     req.add_header("anthropic-version", "2023-06-01")
     req.add_header("anthropic-beta", "prompt-caching-2024-07-31")
-    with urllib.request.urlopen(req, timeout=60) as res:
+    # [실측 타임아웃 사고] timeout=60이던 시절, 배치 500건(출력 5만 토큰)은
+    # 응답 생성에 60초를 훌쩍 넘겨서 전부 TimeoutError로 실패했다 —
+    # 40분간 계속 헛돌며 3,514건 중 14건만 성공. 배치 크기를 줄이는 것과
+    # 별개로, 읽기 타임아웃 자체도 넉넉히 잡아야 한다(대량 생성은 원래
+    # 오래 걸린다). 600초면 배치 200건 기준으로도 충분한 여유.
+    with urllib.request.urlopen(req, timeout=600) as res:
         data = json.loads(res.read().decode("utf-8"))
     return data["content"][0]["text"]
 
@@ -137,11 +142,14 @@ KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
 HANGUL_RE = re.compile(r"[가-힣]")
 CJK_RE = re.compile(r"[一-龯]")
 MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 500    # [100->500 추가 확대] 호출횟수를 10회 미만으로
-                        # 줄이라는 요청 반영. 3,514건 기준 ceil(3514/500)
-                        # =8회. 출력예산은 아래 budget에서 100토큰/건으로
-                        # 잡아도 500*100+2000=52,000으로 Haiku 4.5 실제
-                        # 한도(64,000) 안에 12,000토큰 여유를 남긴다.
+MAX_BATCH_SIZE = 100    # [500->100 하향, 실측 반영] 500건은 출력이 5만
+                        # 토큰이라 응답 생성에만 수 분이 걸려, 읽기
+                        # 타임아웃으로 전량 실패했다(실측: 40분간 헛돌며
+                        # 3,514건 중 14건만 성공). 100건이면 출력 약
+                        # 1만 토큰으로 1분 내외에 끝나 안정적이다.
+                        # 3,514건 기준 36회 호출 — 캐싱이 작동하므로
+                        # 호출 횟수가 늘어도 비용 증가는 미미하다
+                        # (시스템프롬프트는 2회차부터 90% 할인).
 MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
 
 
@@ -186,12 +194,18 @@ def validate_translation(original: str, translated: str | None, strict: bool = T
     return True, "OK"
 
 
-def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list[str]:
+def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE, on_batch_done=None) -> list[str]:
     """[버그 발견] 기본값이 10으로 박혀있어서, MAX_BATCH_SIZE를 100으로
     올려도 translate_in_place.py처럼 batch_size를 명시 안 하고 부르면
     여전히 10건씩 처리되고 있었다(호출부 확인: translate_batch(items)
     — 인자 없이 호출). 기본값 자체를 MAX_BATCH_SIZE로 맞춰서, 별도로
-    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다."""
+    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다.
+
+    [중간저장 지원] on_batch_done(results) 콜백을 주면, 배치 하나가
+    끝날 때마다 그때까지의 결과로 호출한다. 예전엔 모든 배치가 끝나야
+    호출자가 결과를 받을 수 있어서, GitHub Actions 타임아웃(60분)에
+    걸리면 그때까지 번역한 것 전부가 통째로 날아갔다(실측: 36분 넘게
+    돌았는데 저장된 건 0건). 이제 배치마다 저장할 수 있다."""
     """items: [{"title": ..., "brand": ...}, ...] 형태. brand_size씩 묶어서 번역한다.
 
     [핵심개선] 실측 확인된 문제: 브랜드사전(972개, 화해로 검증된 정확한
@@ -255,6 +269,15 @@ def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list
                 elif attempt == MAX_ATTEMPTS:
                     # 끝까지 실패하면 원문으로 덮지 않고 None으로 남긴다.
                     print(f"    [번역포기-{reason}] {items[k]['title'][:40]}", file=sys.stderr)
+
+            # [중간저장] 배치 하나가 끝날 때마다 호출자가 저장할 수 있게
+            # 한다. 타임아웃으로 잘려도 여기까지는 보존된다.
+            if on_batch_done is not None:
+                try:
+                    on_batch_done(results)
+                except Exception as e:  # noqa: BLE001
+                    print(f"    [중간저장 실패-무시하고 계속] {type(e).__name__}: {e}", file=sys.stderr)
+
             time.sleep(0.3)  # rate limit 여유
 
     fail = sum(1 for r in results if r is None)

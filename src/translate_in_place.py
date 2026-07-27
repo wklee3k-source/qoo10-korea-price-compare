@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from auto_translate import translate_batch, validate_translation  # noqa: E402
 
 
-def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 100):
+def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_translations_learned.json", threshold: int = 100, max_items: int | None = None):
     path = Path(state_path)
     if not path.exists():
         print(f"[SKIP] {path} 없음")
@@ -55,7 +55,17 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
         print(f"[WAIT] {len(to_translate)}건 대기중(threshold={threshold} 미만, 더 모일 때까지 보류)")
         return
 
-    print(f"[INFO] {len(to_translate)}건 신규 번역 시작")
+    print(f"[INFO] {len(to_translate)}건 신규 번역 대상")
+
+    # [청크 처리 - 사용자 지적으로 도입] 예전엔 대기 중인 전량을 한 번의
+    # 호출에서 다 번역하려 했다. 그래서 GitHub Actions 타임아웃(60분)에
+    # 걸리면 커밋 전이라 전부 날아갔다(실측: 36분 넘게 돌았는데 저장 0건).
+    # 이제 한 번에 max_items건만 처리하고 끝낸다 — 워크플로가 이걸
+    # 반복 호출하면서 매번 커밋/푸시하므로, 중간에 잘려도 이미 커밋된
+    # 만큼은 확실히 보존된다(hwahae_verify가 CHUNK로 쓰는 방식과 동일).
+    if max_items is not None and len(to_translate) > max_items:
+        to_translate = to_translate[:max_items]
+        print(f"[INFO] 이번 호출에서는 {len(to_translate)}건만 처리(max_items={max_items})")
 
     try:
         brand_dict = json.loads(Path(brand_dict_path).read_text(encoding="utf-8"))
@@ -70,7 +80,24 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
     # 이제 auto_translate가 배치를 스스로 잘게 쪼개고, 검증 탈락분은 None을
     # 돌려준다. None은 필드를 건드리지 않고 비워둬서 다음 사이클에 재시도된다.
     items = [{"title": p["title"], "brand": p.get("brand", "")} for p in to_translate]
-    translated = translate_batch(items)
+
+    # [중간저장 - 사용자 지적으로 수정] 예전엔 translate_batch가 전부
+    # 끝난 뒤에야 파일을 썼다. 그래서 GitHub Actions 타임아웃(60분)에
+    # 걸리면 그때까지 번역한 것 전부가 통째로 날아갔다(실측: 36분 넘게
+    # 돌았는데 저장된 건 0건). 이제 배치 하나가 끝날 때마다 즉시
+    # 파일에 반영해서, 중간에 잘려도 그때까지의 성과는 보존된다.
+    def save_progress(partial_results):
+        done_now = 0
+        for p, t in zip(to_translate, partial_results):
+            if t is None:
+                continue  # 아직 안 됐거나 실패 — 빈칸으로 두면 다음에 재시도
+            p["translated_kr"] = t
+            p["known_brand"] = brand_dict.get(p.get("brand", ""), "")
+            done_now += 1
+        path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  [중간저장] 누적 {done_now}/{len(to_translate)}건 -> {path}", flush=True)
+
+    translated = translate_batch(items, on_batch_done=save_progress)
 
     done = 0
     for p, t in zip(to_translate, translated):
@@ -86,4 +113,8 @@ def translate_in_place(state_path: str, brand_dict_path: str = "../data/brand_tr
 
 
 if __name__ == "__main__":
-    translate_in_place(sys.argv[1] if len(sys.argv) > 1 else "../output/discovery_state.json")
+    state_arg = sys.argv[1] if len(sys.argv) > 1 else "../output/discovery_state.json"
+    # 2번째 인자로 이번 호출 처리 상한(건수)을 받는다. 워크플로가 이걸
+    # 주고 반복 호출하면서 매번 커밋해서, 타임아웃 유실을 막는다.
+    max_items_arg = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].strip() else None
+    translate_in_place(state_arg, max_items=max_items_arg)
