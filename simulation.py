@@ -656,7 +656,11 @@ def t23_step_raised_and_push_every_iter():
     wf = WF.read_text(encoding="utf-8")
     block = wf.split("discover_low_review_shops_parallel:")[1].split("\n  merge_discovery_shards:")[0]
     step_val = re.search(r"^\s*STEP=(\d+)\s*$", block, re.M)
-    step_ok = bool(step_val) and int(step_val.group(1)) >= 10
+    # [기준 정정] 예전엔 'STEP>=10'을 요구했는데(재검색 낭비 축소 목적),
+    # 실전에서 상점 30곳을 다 채워야 커밋돼 26분간 진행이 안 보이는
+    # 부작용이 더 컸다. 이제는 반대로 '작은 값으로 자주 커밋'이 요구사항
+    # 이므로 STEP<=5인지 검사한다.
+    step_ok = bool(step_val) and int(step_val.group(1)) <= 5
     # "3회차마다만 push"하던 조건(ITER % 3)이 완전히 사라졌어야 한다.
     no_stale_push_gate = "ITER % 3" not in block
     push_every_iter = "git push origin discovery-live" in block

@@ -211,9 +211,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # [2순위 개선과 통일] 병렬버전(STEP=30)과 값을 맞춘다. 이 job은
-          # 현재 if:false로 비활성화돼 있지만, 나중에 다시 켜질 경우를 대비.
-          STEP=30
+          # [30->2 되돌림] 병렬버전과 값을 맞춘다.
+          STEP=2
           current=$START
           while [ "$current" -lt "$FINAL_CAP" ]; do
             next=$((current + STEP))
@@ -357,16 +356,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           B="${{ matrix.branch }}"
-          # [2순위 개선] 예전엔 STEP=3이라, 검색어 하나가 상점 48~139개를
-          # 물어와도 3개씩만 처리하고 다음 회차로 넘어갔다. 그런데 검색어를
-          # "다 소진할 때까지" 매 회차마다 똑같은 키워드로 큐텐을 다시
-          # 검색해야 했다(실측: 139개 상점을 STEP=3으로 다 돌려면 검색을
-          # 46번 반복해야 함 — 결과는 매번 똑같은데 network round-trip만
-          # 반복). 게다가 1순위(스크롤 추가)로 검색 자체가 더 오래 걸리게
-          # 됐으니, 중복 재검색의 비용이 더 커졌다. STEP을 30으로 올려서
-          # 검색어 하나를 훨씬 적은 재검색 횟수로 소진한다(139개 기준
-          # 46회 -> 5회).
-          STEP=30
+          # [30 -> 2 되돌림] v1.8.0에서 '재검색 낭비를 줄이자'며 3->30으로
+          # 올렸는데, 실전에서 부작용이 훨씬 컸다: 상점 30곳을 다 채워야
+          # 커밋되니 26분간 진행상황이 전혀 안 보였고(실측), '자주 저장해서
+          # 중간에 죽어도 잃지 않는다'는 원래 설계 의도가 깨졌다.
+          # 상점 2곳마다 커밋하도록 되돌린다 — 재검색이 늘어나는 비용보다
+          # 진행 가시성과 유실 방지가 우선이다.
+          STEP=2
           ITER=0
           while true; do
             ITER=$((ITER + 1))
