@@ -186,12 +186,18 @@ def validate_translation(original: str, translated: str | None, strict: bool = T
     return True, "OK"
 
 
-def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list[str]:
+def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE, on_batch_done=None) -> list[str]:
     """[버그 발견] 기본값이 10으로 박혀있어서, MAX_BATCH_SIZE를 100으로
     올려도 translate_in_place.py처럼 batch_size를 명시 안 하고 부르면
     여전히 10건씩 처리되고 있었다(호출부 확인: translate_batch(items)
     — 인자 없이 호출). 기본값 자체를 MAX_BATCH_SIZE로 맞춰서, 별도로
-    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다."""
+    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다.
+
+    [중간저장 지원] on_batch_done(results) 콜백을 주면, 배치 하나가
+    끝날 때마다 그때까지의 결과로 호출한다. 예전엔 모든 배치가 끝나야
+    호출자가 결과를 받을 수 있어서, GitHub Actions 타임아웃(60분)에
+    걸리면 그때까지 번역한 것 전부가 통째로 날아갔다(실측: 36분 넘게
+    돌았는데 저장된 건 0건). 이제 배치마다 저장할 수 있다."""
     """items: [{"title": ..., "brand": ...}, ...] 형태. brand_size씩 묶어서 번역한다.
 
     [핵심개선] 실측 확인된 문제: 브랜드사전(972개, 화해로 검증된 정확한
@@ -255,6 +261,15 @@ def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE) -> list
                 elif attempt == MAX_ATTEMPTS:
                     # 끝까지 실패하면 원문으로 덮지 않고 None으로 남긴다.
                     print(f"    [번역포기-{reason}] {items[k]['title'][:40]}", file=sys.stderr)
+
+            # [중간저장] 배치 하나가 끝날 때마다 호출자가 저장할 수 있게
+            # 한다. 타임아웃으로 잘려도 여기까지는 보존된다.
+            if on_batch_done is not None:
+                try:
+                    on_batch_done(results)
+                except Exception as e:  # noqa: BLE001
+                    print(f"    [중간저장 실패-무시하고 계속] {type(e).__name__}: {e}", file=sys.stderr)
+
             time.sleep(0.3)  # rate limit 여유
 
     fail = sum(1 for r in results if r is None)

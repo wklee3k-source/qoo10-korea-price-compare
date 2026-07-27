@@ -831,20 +831,47 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          for i in $(seq 1 15); do
+          # [청크 반복 - 사용자 지적으로 재구성] 예전엔 python을 한 번만
+          # 부르고 그게 다 끝나야 커밋했다. 타임아웃(60분)에 걸리면 그때까지
+          # 번역한 게 전부 날아갔다(실측: 36분 돌았는데 저장 0건).
+          # 이제 500건씩 나눠 부르고 매 청크마다 커밋/푸시한다 —
+          # hwahae_verify가 CHUNK로 쓰는 검증된 방식과 동일.
+          TCHUNK=500
+          TRANSLATED_ANY=0
+          for round in $(seq 1 30); do
             git fetch origin discovery-live 2>/dev/null
             git reset --hard origin/discovery-live -q
             # reset --hard가 위에서 맞춰둔 최신코드까지 되돌려버리므로 매번 다시 맞춘다.
             git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
-            python translate_in_place.py ../output/discovery_state.json
+
+            BEFORE=$(python3 -c "import json; d=json.load(open('../output/discovery_state.json')); print(sum(1 for p in d['all_products'] if p.get('translated_kr')))")
+            python translate_in_place.py ../output/discovery_state.json "$TCHUNK"
+            AFTER=$(python3 -c "import json; d=json.load(open('../output/discovery_state.json')); print(sum(1 for p in d['all_products'] if p.get('translated_kr')))")
+
             git add ../output/discovery_state.json 2>/dev/null || true
-            git diff --cached --quiet && { echo "번역할 변경사항 없음"; break; }
-            git commit -m "Auto: translate merged pool (1.5단계, 100+ threshold)"
-            if git push origin discovery-live; then echo "번역 push 성공"; echo "TRANSLATED=1" >> "$GITHUB_ENV"; break; fi
-            sleep_time=$((RANDOM % 6 + 1))
-            echo "push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/15)"
-            sleep "$sleep_time"
+            if git diff --cached --quiet; then
+              echo "[번역] 이번 라운드 변경사항 없음 — 종료 (누적 번역 $AFTER건)"
+              break
+            fi
+            git commit -m "Auto: translate merged pool chunk (round $round, $BEFORE -> $AFTER건)"
+            PUSHED=0
+            for i in $(seq 1 10); do
+              if git push origin discovery-live; then PUSHED=1; TRANSLATED_ANY=1; break; fi
+              sleep_time=$((RANDOM % 6 + 1))
+              echo "번역 push 실패(경합), ${sleep_time}초 대기 후 재시도 ($i/10)"
+              sleep "$sleep_time"
+              git fetch origin discovery-live 2>/dev/null
+              git reset --hard origin/discovery-live -q 2>/dev/null || true
+              git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
+              break  # 리셋했으니 이번 라운드 결과는 버리고 다음 라운드에서 다시 번역
+            done
+            echo "[번역] 라운드 $round 완료: $BEFORE -> $AFTER건"
+            if [ "$AFTER" -le "$BEFORE" ]; then
+              echo "[번역] 진행 없음 — 종료"
+              break
+            fi
           done
+          if [ "$TRANSLATED_ANY" = "1" ]; then echo "TRANSLATED=1" >> "$GITHUB_ENV"; fi
 
       - name: Auto-trigger stage 2 (verification) if translation happened
         if: env.TRANSLATED == '1'

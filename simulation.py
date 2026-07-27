@@ -281,6 +281,32 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #37 번역 중간저장(청크+매라운드 커밋)
+#  실측사고: 번역이 전량 끝난 뒤에만 파일을 쓰고 커밋해서, GitHub
+#  Actions 타임아웃(60분)에 걸리면 그때까지 번역한 게 통째로 날아갔다
+#  (36분 넘게 돌았는데 저장 0건). hwahae_verify가 CHUNK로 쓰는 검증된
+#  방식과 동일하게, 청크 단위로 처리하고 매 라운드 커밋해야 한다.
+def t37_translation_incremental_save():
+    at_src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
+    tip_src = (SRC / "translate_in_place.py").read_text(encoding="utf-8")
+    wf = WF.read_text(encoding="utf-8")
+
+    has_callback = "on_batch_done" in at_src and "on_batch_done(results)" in at_src
+    has_max_items = "max_items" in tip_src and "to_translate[:max_items]" in tip_src
+    saves_in_callback = "def save_progress" in tip_src and "path.write_text" in tip_src.split("def save_progress")[1][:600]
+
+    block = wf.split("Translate merged pool")[1].split("\n      - name:")[0]
+    has_chunk_loop = "TCHUNK=" in block and "for round in" in block
+    commits_each_round = "git commit -m" in block and "git push origin discovery-live" in block
+    has_no_progress_guard = bool(re.search(r'\[ "\$AFTER" -le "\$BEFORE" \][\s\S]{0,150}?break', block))
+
+    ok = all([has_callback, has_max_items, saves_in_callback, has_chunk_loop,
+              commits_each_round, has_no_progress_guard])
+    check("37 번역 중간저장(청크+매라운드커밋)", ok,
+          f"콜백{has_callback} max_items{has_max_items} 콜백내저장{saves_in_callback} "
+          f"청크루프{has_chunk_loop} 매라운드커밋{commits_each_round} 무진전가드{has_no_progress_guard}")
+
+
 # --------------------- #36 번역 유저메시지 토큰낭비 제거
 #  실측: 브랜드사전 972개가 시스템프롬프트(캐싱대상)에 이미 전부 들어
 #  있는데, 유저메시지에도 항목마다 브랜드힌트를 또 붙이고 있었다.
