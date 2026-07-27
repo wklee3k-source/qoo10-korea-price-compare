@@ -297,14 +297,19 @@ def t37_translation_incremental_save():
 
     block = wf.split("Translate merged pool")[1].split("\n      - name:")[0]
     has_chunk_loop = "TCHUNK=" in block and "for round in" in block
+    # [100건 단위 통일] 청크가 배치보다 크면 한 python 호출 안에서 여러
+    # 배치가 돌고 그동안 커밋이 안 돼 유실 구간이 커진다. 같은 값이어야
+    # 배치1개=커밋1회로 유실이 최소화된다.
+    m_chunk = re.search(r"TCHUNK=(\d+)", block)
+    chunk_matches_batch = bool(m_chunk) and int(m_chunk.group(1)) == 100
     commits_each_round = "git commit -m" in block and "git push origin discovery-live" in block
     has_no_progress_guard = bool(re.search(r'\[ "\$AFTER" -le "\$BEFORE" \][\s\S]{0,150}?break', block))
 
     ok = all([has_callback, has_max_items, saves_in_callback, has_chunk_loop,
-              commits_each_round, has_no_progress_guard])
+              chunk_matches_batch, commits_each_round, has_no_progress_guard])
     check("37 번역 중간저장(청크+매라운드커밋)", ok,
           f"콜백{has_callback} max_items{has_max_items} 콜백내저장{saves_in_callback} "
-          f"청크루프{has_chunk_loop} 매라운드커밋{commits_each_round} 무진전가드{has_no_progress_guard}")
+          f"청크루프{has_chunk_loop} 청크100{chunk_matches_batch} 매라운드커밋{commits_each_round} 무진전가드{has_no_progress_guard}")
 
 
 # --------------------- #36 번역 유저메시지 토큰낭비 제거
