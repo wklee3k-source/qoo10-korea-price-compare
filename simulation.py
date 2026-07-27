@@ -281,6 +281,38 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #38 수확 전용 파이프라인(같은 프로세스/분리 저장)
+#  요구사항: 수확도 발굴과 똑같이 번역->검증->검수페이지를 타되,
+#  결과물은 끝까지 분리 저장돼야 한다.
+def t38_harvest_full_pipeline_separated():
+    wf = WF.read_text(encoding="utf-8")
+    mf = (SRC / "merge_fullcatalog_states.py").read_text(encoding="utf-8")
+    br = (SRC / "build_review.py").read_text(encoding="utf-8")
+    bb = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    # 통합본이 발굴본과 같은 형식(list)이어야 하위도구 재사용이 가능하다
+    list_format = '"all_products": list(products.values())' in mf
+    # 검수 생성기가 환경변수로 소스/출력을 바꿀 수 있어야 한다
+    env_state = 'os.environ.get("QOO10_STATE_FILE"' in br
+    env_verified = 'os.environ.get("QOO10_VERIFIED_FILE"' in br
+    env_subdir = 'os.environ.get("QOO10_BATCH_SUBDIR"' in bb
+    # 워크플로에 수확 전용 번역/검증/검수 스텝이 있어야 한다
+    block = wf.split("  merge_fullcatalog_shards:")[1].split("\n  merge_discovery_shards:")[0]
+    has_tr = "Translate harvest pool" in block
+    has_vf = "Verify harvest pool" in block
+    has_rv = "Build harvest review pages" in block
+    # 결과물이 분리 저장돼야 한다
+    sep_files = "fullcatalog_verified.json" in block and "docs/harvest" in block
+    # 발굴 파일을 쓰면 안 된다
+    no_discovery_write = "push origin discovery-live" not in block
+
+    ok = all([list_format, env_state, env_verified, env_subdir, has_tr, has_vf, has_rv,
+              sep_files, no_discovery_write])
+    check("38 수확 전용 파이프라인(동일프로세스/분리저장)", ok,
+          f"list형식{list_format} env소스{env_state} env검증{env_verified} env출력{env_subdir} "
+          f"번역{has_tr} 검증{has_vf} 검수{has_rv} 분리저장{sep_files} 발굴미쓰기{no_discovery_write}")
+
+
 # --------------------- #37 번역 중간저장(청크+매라운드 커밋)
 #  실측사고: 번역이 전량 끝난 뒤에만 파일을 쓰고 커밋해서, GitHub
 #  Actions 타임아웃(60분)에 걸리면 그때까지 번역한 게 통째로 날아갔다

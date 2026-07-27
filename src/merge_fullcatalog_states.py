@@ -60,9 +60,15 @@ def merge(output_dir: str, discovery_state_path: str | None):
                 continue  # 발굴 우선 — 이미 발굴본에 있으면 수확본엔 안 넣는다
             products[gno] = p
 
+    # [형식 통일] 발굴본(discovery_state.json)은 all_products가 list인데
+    # 수확 워커는 dict(goods_no->item)로 쓴다. 통합본을 list로 내보내야
+    # 하위 도구(translate_in_place.py, hwahae_verify_batch.py,
+    # build_review*.py)를 하나도 안 고치고 그대로 재사용할 수 있다 —
+    # "프로세스는 똑같이 가되 저장만 분리"라는 요구사항의 핵심.
     result = {
         "harvested_shops": list(harvested),
-        "all_products": products,
+        "visited_shops": list(harvested),  # 발굴본과 같은 키 이름도 함께 제공
+        "all_products": list(products.values()),
     }
     main_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(

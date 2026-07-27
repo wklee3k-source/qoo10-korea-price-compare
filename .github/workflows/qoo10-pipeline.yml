@@ -700,6 +700,108 @@ jobs:
             sleep "$sleep_time"
           done
 
+      - name: Translate harvest pool (same process, separate file)
+        if: inputs.skip_translate != true
+        working-directory: src
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # [발굴과 동일 프로세스] merge_fullcatalog_states.py가 통합본을
+          # 발굴본과 똑같은 형식(all_products = list)으로 저장하므로,
+          # translate_in_place.py를 그대로 재사용한다. 파일만 다르다.
+          TCHUNK=300
+          TROUNDS="${{ inputs.translate_rounds || '60' }}"
+          echo "[수확번역] 최대 $TROUNDS 라운드, 라운드당 $TCHUNK건"
+          for round in $(seq 1 "$TROUNDS"); do
+            git fetch origin fullcatalog-live 2>/dev/null
+            git reset --hard origin/fullcatalog-live -q
+            git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
+
+            BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/fullcatalog_state.json'); print(sum(1 for x in json.loads(p.read_text())['all_products'] if x.get('translated_kr')) if p.exists() else 0)")
+            python translate_in_place.py ../output/fullcatalog_state.json "$TCHUNK"
+            AFTER=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/fullcatalog_state.json'); print(sum(1 for x in json.loads(p.read_text())['all_products'] if x.get('translated_kr')) if p.exists() else 0)")
+
+            git add ../output/fullcatalog_state.json 2>/dev/null || true
+            if git diff --cached --quiet; then
+              echo "[수확번역] 변경사항 없음 — 종료 (누적 $AFTER건)"
+              break
+            fi
+            git commit -m "Auto: translate harvest pool chunk (round $round, $BEFORE -> $AFTER건)"
+            if ! git push origin fullcatalog-live; then
+              echo "[수확번역] push 실패 — 다음 라운드에서 재시도"
+              continue
+            fi
+            echo "[수확번역] 라운드 $round: $BEFORE -> $AFTER건"
+            if [ "$AFTER" -le "$BEFORE" ]; then echo "[수확번역] 진행 없음 — 종료"; break; fi
+          done
+
+      - name: Verify harvest pool (same process, separate file)
+        working-directory: src
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+        run: |
+          pip install --break-system-packages -q playwright 2>/dev/null || pip install -q playwright
+          python -m playwright install --with-deps chromium 2>/dev/null || true
+
+          # 번역된 것만 검증 입력으로 뽑는다(발굴 쪽과 동일한 방식).
+          python3 -c "
+          import json, pathlib
+          p = pathlib.Path('../output/fullcatalog_state.json')
+          if not p.exists():
+              print('[SKIP] 수확 통합본 없음'); raise SystemExit(0)
+          st = json.loads(p.read_text())
+          rows = [{'goods_no': x['goods_no'], 'translated_kr': x['translated_kr'], 'known_brand': x.get('known_brand','')}
+                  for x in st['all_products'] if x.get('translated_kr')]
+          json.dump(rows, open('../output/fullcatalog_input.json','w'), ensure_ascii=False, indent=2)
+          print(f'[INFO] 수확 검증대상 {len(rows)}건')
+          "
+          [ -f ../output/fullcatalog_input.json ] || { echo "[SKIP] 검증대상 없음"; exit 0; }
+
+          CHUNK=2
+          TOTAL=$(python3 -c "import json; print(len(json.load(open('../output/fullcatalog_input.json'))))")
+          for round in $(seq 1 100); do
+            DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/fullcatalog_verified.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
+            [ "$DONE_BEFORE" -ge "$TOTAL" ] && { echo "수확검증 전부 완료 ($DONE_BEFORE/$TOTAL)"; break; }
+            python hwahae_verify_batch.py ../output/fullcatalog_input.json ../output/fullcatalog_verified.json "$CHUNK" || true
+            git add ../output/fullcatalog_input.json ../output/fullcatalog_verified.json 2>/dev/null || true
+            [ -f ../output/fullcatalog_verified.retry_state.json ] && git add ../output/fullcatalog_verified.retry_state.json
+            git diff --cached --quiet || { git commit -m "Auto: harvest verification progress"; git push origin fullcatalog-live || true; }
+            DONE_AFTER=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/fullcatalog_verified.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
+            [ "$DONE_AFTER" -eq "$DONE_BEFORE" ] && { echo "진행 없음 — 중단"; break; }
+          done
+
+      - name: Build harvest review pages (separate docs/harvest/)
+        working-directory: src
+        env:
+          QOO10_STATE_FILE: fullcatalog_state.json
+          QOO10_VERIFIED_FILE: fullcatalog_verified.json
+          QOO10_BATCH_SUBDIR: harvest
+        run: |
+          # [결과만 분리] 발굴과 완전히 같은 생성기를 쓰되, 환경변수로
+          # 입력파일과 출력폴더만 바꾼다 -> docs/harvest/ 에 별도 생성.
+          if [ ! -f ../output/fullcatalog_verified.json ]; then
+            echo "[SKIP] 수확 검증결과 없음 — 검수페이지 생략"; exit 0
+          fi
+          mkdir -p ../docs/harvest
+          python build_review_batches.py || { echo "[경고] 수확 검수페이지 생성 실패"; exit 0; }
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf /tmp/main-wt-harvest
+          git worktree add /tmp/main-wt-harvest origin/main 2>/dev/null || git worktree add -f /tmp/main-wt-harvest origin/main
+          mkdir -p /tmp/main-wt-harvest/docs/harvest
+          cp -r ../docs/harvest/. /tmp/main-wt-harvest/docs/harvest/
+          cd /tmp/main-wt-harvest
+          git add docs/harvest
+          git diff --cached --quiet && { echo "검수페이지 변경 없음"; exit 0; }
+          git commit -m "Auto: publish harvest review pages (docs/harvest/)"
+          for i in $(seq 1 10); do
+            if git push origin HEAD:main; then echo "수확 검수페이지 배포 성공"; break; fi
+            sleep $((RANDOM % 5 + 1)); git pull --rebase origin main -q || true
+          done
+
       - name: Resume harvest workers after merge
         if: always()
         run: |
