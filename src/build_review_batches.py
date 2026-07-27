@@ -12,6 +12,7 @@ review_02.html, ... 형태의 별도 HTML파일로 만든다. 기존 comparison/
 """
 
 import re
+import os
 import sys
 from pathlib import Path
 
@@ -20,7 +21,11 @@ from build_review import build_pairs, esc, dim_minor_text  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 COMPARISON = BASE / "comparison"
-BATCH_DIR = BASE / "docs"
+# [발굴/수확 분리] 출력 폴더를 환경변수로 고른다. 발굴분은 docs/(기존
+# 그대로, GitHub Pages 루트), 수확분은 QOO10_BATCH_SUBDIR=harvest를 줘서
+# docs/harvest/에 따로 만든다 — 같은 프로세스를 그대로 타되 결과물만
+# 분리해서 보이게 하는 게 목적.
+BATCH_DIR = BASE / "docs" / os.environ.get("QOO10_BATCH_SUBDIR", "")
 BATCH_SIZE = 100
 
 

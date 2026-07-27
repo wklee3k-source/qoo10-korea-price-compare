@@ -12,6 +12,7 @@ build_review.py — comparison_pairs.json과 review.html을 일관된 로직으�
     을 읽어서 output/comparison_pairs.json과 comparison/review.html을 만든다.
 """
 
+import os
 import json
 import re
 from pathlib import Path
@@ -40,7 +41,13 @@ def to_pc_url(mobile_url: str) -> str:
 
 
 def load_qoo10_products():
-    products = json.loads((OUTPUT / "discovery_state.json").read_text(encoding="utf-8"))["all_products"]
+    # [발굴/수확 분리] 환경변수로 어느 통합본을 읽을지 고른다. 기본은
+    # 발굴본(discovery_state.json), 수확분을 처리할 땐
+    # QOO10_STATE_FILE=fullcatalog_state.json을 준다. 두 파일은 형식이
+    # 동일하므로(merge_fullcatalog_states.py가 list로 맞춰서 저장) 이
+    # 함수 아래 로직은 하나도 안 바꿔도 된다.
+    state_file = os.environ.get("QOO10_STATE_FILE", "discovery_state.json")
+    products = json.loads((OUTPUT / state_file).read_text(encoding="utf-8"))["all_products"]
     archive_dir = OUTPUT / "archive"
     if archive_dir.exists():
         for f in archive_dir.glob("discovery_archive_*.json"):
@@ -119,7 +126,9 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
 
 def build_pairs():
     qoo10_by_goods = load_qoo10_products()
-    kr = json.loads((OUTPUT / "hwahae_verified_39.json").read_text(encoding="utf-8"))
+    # [발굴/수확 분리] 검증결과 파일도 환경변수로 고른다.
+    verified_file = os.environ.get("QOO10_VERIFIED_FILE", "hwahae_verified_39.json")
+    kr = json.loads((OUTPUT / verified_file).read_text(encoding="utf-8"))
     brand_dict = json.loads((DATA / "brand_translations_learned.json").read_text(encoding="utf-8"))
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
