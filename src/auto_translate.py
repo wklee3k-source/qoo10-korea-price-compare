@@ -55,66 +55,6 @@ SYSTEM_PROMPT = """너는 큐텐재팬(일본 이커머스)의 한국 화장품 
 줄바꿈해서 출력한다. 형식: "1. 번역결과\\n2. 번역결과\\n..." """
 
 
-def _call_api(user_content: str, max_tokens: int = 4000) -> str:
-    """[중대버그 이력] max_tokens가 4000 고정이던 시절, translate_in_place가
-    batch_size=len(titles)로 수천 건을 한 통에 보내는 바람에 응답이 약 80건
-    분량에서 잘렸다. 잘린 뒤쪽은 아래 폴백 로직이 '일본어 원문 그대로'를
-    translated_kr에 채워넣었고, 그 칸이 채워졌다는 이유로 재번역 대상에서도
-    영구 제외됐다 — 실측 2,520건 중 2,035건(80.8%)이 일본어인 채로 굳었다.
-    이제 (1) 배치를 잘게 쪼개고 (2) 배치 크기에 비례해 토큰을 잡고
-    (3) 실패는 원문 폴백이 아니라 None으로 남겨 재시도되게 한다."""
-    payload = json.dumps({
-        "model": MODEL,
-        "max_tokens": max_tokens,
-        "system": SYSTEM_PROMPT,
-        "messages": [{"role": "user", "content": user_content}],
-    }).encode("utf-8")
-    req = urllib.request.Request(API_URL, data=payload, method="POST")
-    req.add_header("content-type", "application/json")
-    req.add_header("x-api-key", API_KEY)
-    req.add_header("anthropic-version", "2023-06-01")
-    with urllib.request.urlopen(req, timeout=60) as res:
-        data = json.loads(res.read().decode("utf-8"))
-    return data["content"][0]["text"]
-
-
-KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
-HANGUL_RE = re.compile(r"[가-힣]")
-CJK_RE = re.compile(r"[一-龯]")
-MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
-MAX_BATCH_SIZE = 15     # 이보다 크게 보내면 응답이 잘린다(실측 80건 부근에서 절단)
-MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
-
-
-def validate_translation(original: str, translated: str | None) -> tuple[bool, str]:
-    """번역 결과 3중 검사. (통과여부, 사유)를 돌려준다.
-
-    [1] 개수검사 — 애초에 결과가 없으면(번호 파싱 실패/응답 잘림) 탈락.
-    [2] 글자검사 — 가나가 남아있거나 한글이 하나도 없으면 번역이 안 된 것.
-    [3] 길이검사 — 원문 대비 절반 미만이면 뒷부분이 생략된 것.
-
-    실패는 '원문 그대로 채우기'가 아니라 반드시 빈칸으로 남겨야 다음
-    사이클에 재시도된다(과거 실패 #13 재발방지).
-    """
-    if not translated or not translated.strip():
-        return False, "빈응답"
-
-    t = translated.strip()
-
-    if KANA_RE.search(t):
-        return False, "일본어(가나)잔존"
-
-    if not HANGUL_RE.search(t):
-        # 원문이 영문/숫자뿐이면 한글이 없는 게 정상이다.
-        if KANA_RE.search(original) or CJK_RE.search(original):
-            return False, "한글없음"
-
-    if len(t) < len(original.strip()) * MIN_LENGTH_RATIO:
-        return False, f"길이부족({len(t)}/{len(original.strip())})"
-
-    return True, "OK"
-
-
 def _load_brand_dict() -> dict:
     try:
         d = json.load(open("../data/brand_translations_learned.json", encoding="utf-8"))
@@ -128,7 +68,144 @@ def _load_brand_dict() -> dict:
 BRAND_DICT = _load_brand_dict()
 
 
-def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
+def _build_system_prompt() -> str:
+    """[비용문제 수정] 실측 확인: 1,630건 번역(약 109회 API 호출)에 $5~10이
+    나갔다 — 매 호출마다 시스템 프롬프트를 처음부터 다시 전송했기 때문이다.
+    Anthropic 프롬프트 캐싱을 적용하면 두 번째 호출부터 캐싱된 부분은
+    최대 90% 할인되는데, 문제는 Haiku 4.5의 캐싱 최소기준이 4,096토큰
+    이라는 것이다(Sonnet/Opus는 1,024토큰). 기존 시스템 프롬프트는 약
+    500~700토큰뿐이라 cache_control을 붙여도 조용히 무시된다(API가 에러
+    없이 그냥 캐싱을 안 함 — 실측 확인이 필요했던 부분).
+
+    그래서 이미 갖고 있던 브랜드사전(972개, data/brand_translations_
+    learned.json)을 시스템 프롬프트 안에 통째로 포함시킨다. 이러면:
+    (1) 시스템 프롬프트가 4,096토큰을 확실히 넘어 캐싱이 실제로 작동하고,
+    (2) 매번 아이템별로 브랜드 힌트를 개별 조립할 필요 없이 모델이
+        항상 전체 브랜드 사전을 참고할 수 있어 번역 일관성도 좋아진다.
+    패딩을 위한 낭비가 아니라, 실제로 유용한 내용을 채워서 기준을
+    넘기는 것이다."""
+    lines = [f"{jp}={kr}" for jp, kr in BRAND_DICT.items()]
+    brand_table = "\n".join(lines)
+    return (
+        SYSTEM_PROMPT
+        + "\n\n6. 아래는 실측으로 확인된 한국 화장품 브랜드명 대응표다(일본어"
+        + "표기=정확한 한글 정식표기). 상품명에 이 목록의 브랜드가 나오면"
+        + "반드시 이 표기를 그대로 쓴다:\n"
+        + brand_table
+    )
+
+
+FULL_SYSTEM_PROMPT = _build_system_prompt()
+
+
+def _call_api(user_content: str, max_tokens: int = 4000) -> str:
+    """[중대버그 이력] max_tokens가 4000 고정이던 시절, translate_in_place가
+    batch_size=len(titles)로 수천 건을 한 통에 보내는 바람에 응답이 약 80건
+    분량에서 잘렸다. 잘린 뒤쪽은 아래 폴백 로직이 '일본어 원문 그대로'를
+    translated_kr에 채워넣었고, 그 칸이 채워졌다는 이유로 재번역 대상에서도
+    영구 제외됐다 — 실측 2,520건 중 2,035건(80.8%)이 일본어인 채로 굳었다.
+    이제 (1) 배치를 잘게 쪼개고 (2) 배치 크기에 비례해 토큰을 잡고
+    (3) 실패는 원문 폴백이 아니라 None으로 남겨 재시도되게 한다.
+
+    [비용문제 수정] 1,630건 번역에 약 109회 호출이 나갔는데, 매번 이
+    시스템 프롬프트(약 500토큰)를 처음부터 다시 통째로 보내고 있었다
+    (프롬프트 캐싱 미적용). 실측 청구액이 예상보다 훨씬 커서(사용자
+    확인: $5~10) 원인을 추적한 결과다. Anthropic 프롬프트 캐싱은 동일한
+    프리픽스를 cache_control로 표시해두면, 두 번째 호출부터 그 부분은
+    최대 90% 할인된 가격으로 읽는다. system 블록을 캐싱 대상으로
+    표시한다 — 같은 프로세스 안에서 반복 호출될 때(번역 배치 109회처럼)
+    비용이 크게 줄어든다."""
+    payload = json.dumps({
+        "model": MODEL,
+        "max_tokens": max_tokens,
+        "system": [
+            {"type": "text", "text": FULL_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}
+        ],
+        "messages": [{"role": "user", "content": user_content}],
+    }).encode("utf-8")
+    req = urllib.request.Request(API_URL, data=payload, method="POST")
+    req.add_header("content-type", "application/json")
+    req.add_header("x-api-key", API_KEY)
+    req.add_header("anthropic-version", "2023-06-01")
+    req.add_header("anthropic-beta", "prompt-caching-2024-07-31")
+    # [실측 타임아웃 사고] timeout=60이던 시절, 배치 500건(출력 5만 토큰)은
+    # 응답 생성에 60초를 훌쩍 넘겨서 전부 TimeoutError로 실패했다 —
+    # 40분간 계속 헛돌며 3,514건 중 14건만 성공. 배치 크기를 줄이는 것과
+    # 별개로, 읽기 타임아웃 자체도 넉넉히 잡아야 한다(대량 생성은 원래
+    # 오래 걸린다). 600초면 배치 200건 기준으로도 충분한 여유.
+    with urllib.request.urlopen(req, timeout=600) as res:
+        data = json.loads(res.read().decode("utf-8"))
+    return data["content"][0]["text"]
+
+
+KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
+HANGUL_RE = re.compile(r"[가-힣]")
+CJK_RE = re.compile(r"[一-龯]")
+MIN_LENGTH_RATIO = 0.5  # 번역문이 원문의 이 비율보다 짧으면 생략으로 간주
+MAX_BATCH_SIZE = 100    # [500->100 하향, 실측 반영] 500건은 출력이 5만
+                        # 토큰이라 응답 생성에만 수 분이 걸려, 읽기
+                        # 타임아웃으로 전량 실패했다(실측: 40분간 헛돌며
+                        # 3,514건 중 14건만 성공). 100건이면 출력 약
+                        # 1만 토큰으로 1분 내외에 끝나 안정적이다.
+                        # 3,514건 기준 36회 호출 — 캐싱이 작동하므로
+                        # 호출 횟수가 늘어도 비용 증가는 미미하다
+                        # (시스템프롬프트는 2회차부터 90% 할인).
+MAX_ATTEMPTS = 3        # 실패분 재시도 횟수(시도마다 배치를 절반으로 줄임)
+
+
+def validate_translation(original: str, translated: str | None, strict: bool = True) -> tuple[bool, str]:
+    """번역 결과 검사. (통과여부, 사유)를 돌려준다.
+
+    [1] 개수검사 — 애초에 결과가 없으면(번호 파싱 실패/응답 잘림) 탈락.
+    [2] 글자검사 — 가나가 남아있거나 한글이 하나도 없으면 번역이 안 된 것.
+    [3] 길이검사(strict=True일 때만) — 원문 대비 절반 미만이면 뒷부분이
+        생략된 것으로 본다.
+
+    실패는 '원문 그대로 채우기'가 아니라 반드시 빈칸으로 남겨야 다음
+    사이클에 재시도된다(과거 실패 #13 재발방지).
+
+    [strict=False 도입 이유] '이미 번역된 걸 재검증'할 때(translate_
+    in_place.py의 자가치유 로직) 매번 길이검사까지 다시 적용하면, 이미
+    멀쩡한 번역인데도 한글이 원문보다 짧다는 이유만으로 계속 재번역
+    대상에 걸릴 위험이 있다(한글이 일본어보다 짧게 나오는 경우가 실제로
+    흔함 — 조사/한자 표기 차이 등). [1][2]는 명백한 실패 신호(가나잔존,
+    한글전무)라 오탐 위험이 없지만, [3]은 애매해서 '이미 확보한 정상
+    번역이 계속 다시 청구되는' 낭비를 만들 수 있다. 그래서 재검증
+    경로에서는 strict=False로 호출해서 [3]을 건너뛴다 — 이미 번역된
+    것은 명백히 나쁜 신호가 있을 때만 재시도 대상이 된다. 반대로 방금
+    막 받은 새 응답을 검사할 때(strict=True, 기본값)는 길이검사까지
+    그대로 유지해서 응답 잘림을 여전히 잡아낸다."""
+    if not translated or not translated.strip():
+        return False, "빈응답"
+
+    t = translated.strip()
+
+    if KANA_RE.search(t):
+        return False, "일본어(가나)잔존"
+
+    if not HANGUL_RE.search(t):
+        # 원문이 영문/숫자뿐이면 한글이 없는 게 정상이다.
+        if KANA_RE.search(original) or CJK_RE.search(original):
+            return False, "한글없음"
+
+    if strict and len(t) < len(original.strip()) * MIN_LENGTH_RATIO:
+        return False, f"길이부족({len(t)}/{len(original.strip())})"
+
+    return True, "OK"
+
+
+def translate_batch(items: list[dict], batch_size: int = MAX_BATCH_SIZE, on_batch_done=None) -> list[str]:
+    """[버그 발견] 기본값이 10으로 박혀있어서, MAX_BATCH_SIZE를 100으로
+    올려도 translate_in_place.py처럼 batch_size를 명시 안 하고 부르면
+    여전히 10건씩 처리되고 있었다(호출부 확인: translate_batch(items)
+    — 인자 없이 호출). 기본값 자체를 MAX_BATCH_SIZE로 맞춰서, 별도로
+    작게 지정하지 않는 한 항상 최대치로 배치를 묶게 한다.
+
+    [중간저장 지원] on_batch_done(results) 콜백을 주면, 배치 하나가
+    끝날 때마다 그때까지의 결과로 호출한다. 예전엔 모든 배치가 끝나야
+    호출자가 결과를 받을 수 있어서, GitHub Actions 타임아웃(60분)에
+    걸리면 그때까지 번역한 것 전부가 통째로 날아갔다(실측: 36분 넘게
+    돌았는데 저장된 건 0건). 이제 배치마다 저장할 수 있다."""
     """items: [{"title": ..., "brand": ...}, ...] 형태. brand_size씩 묶어서 번역한다.
 
     [핵심개선] 실측 확인된 문제: 브랜드사전(972개, 화해로 검증된 정확한
@@ -145,24 +222,35 @@ def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
         todo = [i for i, r in enumerate(results) if r is None]
         if not todo:
             break
-        # 재시도는 배치를 더 잘게 쪼갠다(잘림이 원인이면 작게 보내면 살아난다).
-        size = max(1, batch_size // (2 ** (attempt - 1)))
+        # [토큰절감 - 재확인중 발견] 예전엔 재시도마다 배치크기를 절반씩
+        # 줄였다(500 -> 250 -> 125). 응답 잘림이 원인일 때를 대비한
+        # 방어였지만, todo 리스트는 이미 '실패한 것만' 모아둔 상태라
+        # 그것들만 다시 보내면 자연히 양이 줄어든다. 배치까지 또 쪼개면
+        # 호출 횟수만 늘어나고(캐시읽기 오버헤드가 호출마다 붙음),
+        # 실패가 몇 건뿐일 때도 불필요하게 여러 번 왕복하게 된다.
+        # 이제 1차는 최대 배치로, 2차부터만 절반으로 줄인다 — 잘림
+        # 대비는 유지하면서 호출 횟수는 최소화.
+        size = batch_size if attempt == 1 else max(1, batch_size // 2)
         print(f"  [번역 {attempt}차] 대상 {len(todo)}건, 배치 {size}건씩", file=sys.stderr)
 
         for i in range(0, len(todo), size):
             idxs = todo[i:i + size]
             chunk = [items[k] for k in idxs]
-            lines = []
-            for j, item in enumerate(chunk):
-                brand = item.get("brand") or ""
-                known_kr_brand = BRAND_DICT.get(brand)
-                hint = f" [정확한 브랜드명: {known_kr_brand} — 반드시 이 표기 그대로 사용]" if known_kr_brand else ""
-                lines.append(f"{j+1}. {item['title']}{hint}")
+            # [토큰절감 - 재확인중 발견] 예전엔 항목마다 브랜드힌트를
+            # 붙였다(" [정확한 브랜드명: XXX — 반드시 이 표기 그대로 사용]").
+            # 그런데 v1.13.0에서 브랜드사전 972개 전체를 시스템 프롬프트에
+            # 넣었으므로, 이 힌트는 완전히 중복이다. 게다가 시스템
+            # 프롬프트는 캐싱돼서 2회차부터 90% 할인되는 반면, 유저
+            # 메시지는 캐싱 대상이 아니라 매번 전액 청구된다 — 힌트
+            # 1개당 약 20토큰 × 500건 = 호출당 1만 토큰이 할인 없이
+            # 낭비되고 있었다. 시스템 프롬프트의 대응표만으로 충분하므로
+            # 제거한다.
+            lines = [f"{j+1}. {item['title']}" for j, item in enumerate(chunk)]
             prompt = f"다음 {len(chunk)}개 상품명을 번역하라:\n\n" + "\n".join(lines)
 
             try:
                 # 응답 잘림 방지: 항목당 넉넉히 잡고 상한만 둔다.
-                budget = min(8000, 250 * len(chunk) + 500)
+                budget = min(60000, 100 * len(chunk) + 2000)
                 response = _call_api(prompt, max_tokens=budget)
                 parsed = {}
                 for line in response.strip().split("\n"):
@@ -181,6 +269,15 @@ def translate_batch(items: list[dict], batch_size: int = 10) -> list[str]:
                 elif attempt == MAX_ATTEMPTS:
                     # 끝까지 실패하면 원문으로 덮지 않고 None으로 남긴다.
                     print(f"    [번역포기-{reason}] {items[k]['title'][:40]}", file=sys.stderr)
+
+            # [중간저장] 배치 하나가 끝날 때마다 호출자가 저장할 수 있게
+            # 한다. 타임아웃으로 잘려도 여기까지는 보존된다.
+            if on_batch_done is not None:
+                try:
+                    on_batch_done(results)
+                except Exception as e:  # noqa: BLE001
+                    print(f"    [중간저장 실패-무시하고 계속] {type(e).__name__}: {e}", file=sys.stderr)
+
             time.sleep(0.3)  # rate limit 여유
 
     fail = sum(1 for r in results if r is None)

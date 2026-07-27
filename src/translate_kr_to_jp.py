@@ -44,8 +44,16 @@ def _call_api(user_content: str, max_tokens: int = 4000) -> str:
     return data["content"][0]["text"]
 
 
-def translate_batch(names: list[str], batch_size: int = 10) -> list[str]:
-    results = []
+def translate_batch(names: list[str], batch_size: int = 50) -> list[str | None]:
+    """[버그 수정] 예전엔 실패시 빈 문자열("")을 결과에 채워넣었는데,
+    호출부(__main__)가 'results[goods_no] = t'로 그 빈 문자열까지
+    그대로 저장했다. 그러면 다음 실행에서 'goods_no not in results'가
+    False가 되어(키 자체는 이미 있으니) 그 상품은 실패한 채로 영원히
+    재시도 대상에서 빠진다 — auto_translate.py에서 이미 한 번 고쳤던
+    것과 같은 부류의 버그(실패를 '완료'로 잘못 표시). 이제 실패는
+    None을 돌려주고, 호출부가 None인 건 저장하지 않아서 다음 실행에
+    자연히 재시도된다."""
+    results: list[str | None] = []
     for i in range(0, len(names), batch_size):
         chunk = names[i:i + batch_size]
         numbered = "\n".join(f"{j+1}. {t}" for j, t in enumerate(chunk))
@@ -58,10 +66,11 @@ def translate_batch(names: list[str], batch_size: int = 10) -> list[str]:
                 if m:
                     parsed[int(m.group(1))] = m.group(2).strip()
             for j in range(len(chunk)):
-                results.append(parsed.get(j + 1, ""))
+                val = parsed.get(j + 1)
+                results.append(val if val else None)  # 파싱실패도 None(재시도 대상)
         except Exception as e:  # noqa: BLE001
             print(f"    [배치번역 실패] {type(e).__name__}: {e}", file=sys.stderr)
-            results.extend([""] * len(chunk))
+            results.extend([None] * len(chunk))
         time.sleep(0.3)
     return results
 
@@ -75,18 +84,26 @@ if __name__ == "__main__":
     except (FileNotFoundError, json.JSONDecodeError):
         results = {}
 
-    # 성공(구매링크확보)한 항목만 대상 — 실패건은 화면에 안 나오니 번역 불필요
+    # 성공(구매링크확보)한 항목만 대상 — 실패건은 화면에 안 나오니 번역 불필요.
+    # results에 이미 goods_no가 있으면 "성공적으로 번역된 것"만 완료로 본다
+    # (예전엔 실패시 빈 문자열("")을 저장해서 이 조건이 영원히 True가 되는
+    # 버그가 있었다 — 이제 실패는 아예 저장을 안 하므로 이 체크만으로 충분).
     targets = [x for x in verified if x.get("product_url") and x["goods_no"] not in results]
     print(f"[INFO] 전체 {len(verified)}건 중 신규 번역대상 {len(targets)}건", file=sys.stderr)
 
-    batch_size = 10
+    # [비용효율] 배치크기 10->50 (auto_translate.py와 동일 취지 — 호출당
+    # 시스템프롬프트 반복전송 오버헤드를 줄임)
+    batch_size = 50
     for i in range(0, len(targets), batch_size):
         chunk = targets[i:i + batch_size]
         names = [x.get("name") or x.get("translated_kr") or "" for x in chunk]
         translated = translate_batch(names, batch_size=batch_size)
+        saved = 0
         for x, t in zip(chunk, translated):
-            results[x["goods_no"]] = t
+            if t:  # None/빈값은 저장 안 함 -> 다음 실행에 자연히 재시도
+                results[x["goods_no"]] = t
+                saved += 1
         json.dump(results, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-        print(f"  [{i+len(chunk)}/{len(targets)}] 저장완료", file=sys.stderr)
+        print(f"  [{i+len(chunk)}/{len(targets)}] 저장완료({saved}/{len(chunk)}건 성공)", file=sys.stderr)
 
     print(f"[완료] 총 {len(results)}건 번역 완료", file=sys.stderr)

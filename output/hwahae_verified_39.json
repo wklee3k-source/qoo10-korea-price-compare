@@ -22044,5 +22044,78 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1203685090",
+    "translated_kr": "[아누아]30g 레티놀 0.1 + 카페인 리바이탈라이징 아이크림 레티놀 0.1 + 카페인 함유 리바이탈라이징 아이크림",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 레티놀 0.1 카페인 리바이탈라이징 아이크림 30g"
+    },
+    "brand": "아누아",
+    "name": "아누아 레티놀 0.1 카페인 리바이탈라이징 아이크림 30g",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "27200",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11267716333",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8881222/88812226664.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881222/88812226664.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11267716333"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881222/88812226665.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/11267716334"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101391/91013915470.jpg",
+        "mall": "S Cosmetic",
+        "link": "https://smartstore.naver.com/main/products/13469405118"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203603284",
+    "translated_kr": "[엑시스와이]10ml 비건 콜라겐 아이 세럼 비건 콜라겐 아이 세럼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 콜라겐 아이 세럼",
+      "musinsa": "비건 콜라겐 아이 세럼 10ml",
+      "naver": "엑시스와이 비건 콜라겐 아이 세럼 10ml+수분팩1매"
+    },
+    "brand": "엑시스와이 (AXIS-Y)",
+    "name": "비건 콜라겐 아이 세럼",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20500",
+    "mall": "예삐상점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10500275583",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8804478/88044780935.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8804478/88044780935.jpg",
+        "mall": "예삐상점",
+        "link": "https://smartstore.naver.com/main/products/10500275583"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]

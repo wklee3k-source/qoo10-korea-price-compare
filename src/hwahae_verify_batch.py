@@ -49,6 +49,16 @@ NEWS_DOMAIN_RE = re.compile(
 HEADLINE_SENTENCE_RE = re.compile(r"[다요]\s*,|[다요][!?]|하면|한다면")
 
 
+class SearchTechnicalFailure(Exception):
+    """[9번 수정과 동일 원칙] 검색 자체가 기술적으로 실패한 경우(타임아웃,
+    네트워크 오류, 서브프로세스 비정상종료, JSON 파싱실패 등)에만
+    발생시킨다. '정상적으로 조회했는데 결과가 없음'(진짜 무매칭)과는
+    반드시 구분해야 한다 — 예전엔 둘 다 그냥 None을 반환해서, 화해 서버가
+    30초 안에 안 열리거나 네트워크가 잠깐 끊겨도 '이 상품은 한국에
+    없다'고 영구 확정해버렸다. 실제로 찾을 수 있었던 상품이 일시적
+    오류 때문에 영영 실패로 묻히는 사고였다."""
+
+
 def _clean_query(text: str) -> str:
     t = VOLUME_IN_QUERY_RE.sub("", text)
     t = BRACKET_RE.sub("", t)
@@ -67,40 +77,50 @@ def _normalize_volume_ml(text: str) -> float | None:
 
 
 def _search_exa(keyword: str) -> dict | None:
-    """후보1: Exa 의미기반검색(원본 번역 그대로 검색)."""
+    """후보1: Exa 의미기반검색(원본 번역 그대로 검색).
+
+    [실패구분] import/네트워크/파싱 오류는 SearchTechnicalFailure로
+    올리고, '검색은 됐는데 결과가 0건'만 None(진짜 무결과)으로 본다."""
     try:
         from exa_search import search as exa_search
-
-        items = exa_search(keyword, num_results=5)
-        if not items:
-            return None
-
-        def _is_bad(it: dict) -> bool:
-            url = it.get("url") or ""
-            title = it["title"]
-            return bool(
-                GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
-            )
-
-        candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
-        if not candidates:
-            candidates = [it for it in items if not _is_bad(it)]
-        if not candidates:
-            candidates = items
-        title = candidates[0]["title"]
-        cleaned = EXA_REVIEW_RE.sub("", title)
-        cleaned = EXA_TAIL_RE.sub("", cleaned)
-        cleaned = _clean_query(cleaned)
-        return {"source": "exa", "name": cleaned, "brand": None, "volume": None, "raw_title": title}
     except Exception as e:  # noqa: BLE001
-        print(f"    [Exa 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        return None
+        raise SearchTechnicalFailure(f"exa_search 임포트 실패: {e}") from e
+
+    try:
+        items = exa_search(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"Exa 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None  # 진짜 무결과 — 기술적 실패 아님
+
+    def _is_bad(it: dict) -> bool:
+        url = it.get("url") or ""
+        title = it["title"]
+        return bool(
+            GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
+        )
+
+    candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
+    if not candidates:
+        candidates = [it for it in items if not _is_bad(it)]
+    if not candidates:
+        candidates = items
+    title = candidates[0]["title"]
+    cleaned = EXA_REVIEW_RE.sub("", title)
+    cleaned = EXA_TAIL_RE.sub("", cleaned)
+    cleaned = _clean_query(cleaned)
+    return {"source": "exa", "name": cleaned, "brand": None, "volume": None, "raw_title": title}
 
 
 def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | None:
     """후보2: 화해 검색(원본 번역 그대로, 격리된 서브프로세스). 나중에
     재확인 호출을 안 해도 되도록, 필요한 정보(단종여부/가격/사진/링크)를
-    이 1번의 호출에서 전부 뽑아둔다."""
+    이 1번의 호출에서 전부 뽑아둔다.
+
+    [실패구분] 서브프로세스 타임아웃/비정상종료/JSON파싱실패는
+    SearchTechnicalFailure로 올린다. 정상 실행됐는데 화해가 못 찾은
+    경우("corrected" 없음)만 None(진짜 무결과)으로 본다."""
     try:
         proc = subprocess.run(
             [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), keyword, known_volume, known_brand],
@@ -108,29 +128,40 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
             text=True,
             timeout=30,
         )
+    except subprocess.TimeoutExpired as e:
+        raise SearchTechnicalFailure(f"화해 서브프로세스 타임아웃(30초)") from e
+
+    if proc.returncode != 0:
+        raise SearchTechnicalFailure(f"화해 서브프로세스 비정상종료(code={proc.returncode}): {proc.stderr[-300:]}")
+
+    try:
         r = json.loads(proc.stdout)
-        if not r.get("corrected"):
-            return None
-        return {
-            "source": "hwahae",
-            "name": r.get("corrected"),
-            "brand": r.get("brand"),
-            "volume": r.get("volume"),
-            "obsolete": r.get("obsolete"),
-            "sale": r.get("sale"),
-            "price": r.get("price"),
-            "image_url": r.get("image_url"),
-            "product_url": r.get("product_url"),
-        }
-    except Exception as e:  # noqa: BLE001
-        print(f"    [화해 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        return None
+    except json.JSONDecodeError as e:
+        raise SearchTechnicalFailure(f"화해 결과 파싱 실패: {proc.stdout[-300:]}") from e
+
+    if not r.get("corrected"):
+        return None  # 정상 실행됐지만 화해가 못 찾음 — 진짜 무결과
+
+    return {
+        "source": "hwahae",
+        "name": r.get("corrected"),
+        "brand": r.get("brand"),
+        "volume": r.get("volume"),
+        "obsolete": r.get("obsolete"),
+        "sale": r.get("sale"),
+        "price": r.get("price"),
+        "image_url": r.get("image_url"),
+        "product_url": r.get("product_url"),
+    }
 
 
 def _search_musinsa(keyword: str, known_volume: str, known_brand: str) -> dict | None:
     """후보4: 무신사 검색(격리된 서브프로세스) — 화해와 같은 역할(브랜드/
     상품명 확인)을 하면서, 자체적으로 구매 가능한 쇼핑몰이라 실제 구매링크도
-    바로 제공한다(goods_no로 상품페이지 URL 구성)."""
+    바로 제공한다(goods_no로 상품페이지 URL 구성).
+
+    [실패구분] 화해와 동일 원칙 — 서브프로세스 기술적 실패는
+    SearchTechnicalFailure, 정상실행+무매칭만 None."""
     try:
         proc = subprocess.run(
             [sys.executable, str(SCRIPT_DIR / "musinsa_name_corrector.py"), keyword, known_volume, known_brand],
@@ -138,24 +169,32 @@ def _search_musinsa(keyword: str, known_volume: str, known_brand: str) -> dict |
             text=True,
             timeout=30,
         )
+    except subprocess.TimeoutExpired as e:
+        raise SearchTechnicalFailure("무신사 서브프로세스 타임아웃(30초)") from e
+
+    if proc.returncode != 0:
+        raise SearchTechnicalFailure(f"무신사 서브프로세스 비정상종료(code={proc.returncode}): {proc.stderr[-300:]}")
+
+    try:
         r = json.loads(proc.stdout)
-        if not r.get("corrected"):
-            return None
-        top = (r.get("all_candidates") or [{}])[0]
-        goods_no = top.get("goods_no")
-        return {
-            "source": "musinsa",
-            "name": r.get("corrected"),
-            "brand": r.get("brand"),
-            "volume": None,
-            "price": top.get("price"),
-            "product_url": f"https://www.musinsa.com/products/{goods_no}" if goods_no else None,
-            "image": None,
-            "mallName": "무신사",
-        }
-    except Exception as e:  # noqa: BLE001
-        print(f"    [무신사오류] {type(e).__name__}: {e}")
-        return None
+    except json.JSONDecodeError as e:
+        raise SearchTechnicalFailure(f"무신사 결과 파싱 실패: {proc.stdout[-300:]}") from e
+
+    if not r.get("corrected"):
+        return None  # 정상 실행됐지만 무신사가 못 찾음 — 진짜 무결과
+
+    top = (r.get("all_candidates") or [{}])[0]
+    goods_no = top.get("goods_no")
+    return {
+        "source": "musinsa",
+        "name": r.get("corrected"),
+        "brand": r.get("brand"),
+        "volume": None,
+        "price": top.get("price"),
+        "product_url": f"https://www.musinsa.com/products/{goods_no}" if goods_no else None,
+        "image": None,
+        "mallName": "무신사",
+    }
 
 
 def _extract_quantity(text: str) -> int:
@@ -188,36 +227,43 @@ def _extract_quantity(text: str) -> int:
 def _search_naver(keyword: str, known_brand: str) -> dict | None:
     """후보3: 네이버쇼핑 검색(원본 번역 그대로). 나중에 별도 "구매정보"
     재호출을 안 해도 되도록, 이 1번의 호출에서 가격/링크/사진후보까지
-    전부 뽑아둔다."""
+    전부 뽑아둔다.
+
+    [실패구분] import/네트워크 오류는 SearchTechnicalFailure, 정상
+    조회+결과0건만 None(진짜 무결과)."""
     try:
         from naver_shop_search import search as naver_search
-
-        items = naver_search(keyword, display=5, known_brand=known_brand)
-        if not items:
-            return None
-        top = items[0]
-        seen = set()
-        image_candidates = []
-        for it in items:
-            img = it.get("image")
-            if img and img not in seen:
-                seen.add(img)
-                image_candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
-        return {
-            "source": "naver",
-            "name": top["title"],
-            "brand": top.get("brand"),
-            "volume": None,
-            "price": top.get("lprice"),
-            "mall": top.get("mallName"),
-            "seller_trust": top.get("seller_trust"),
-            "product_url": top.get("link"),
-            "image_url": top.get("image"),
-            "image_candidates": image_candidates,
-        }
     except Exception as e:  # noqa: BLE001
-        print(f"    [네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        return None
+        raise SearchTechnicalFailure(f"naver_shop_search 임포트 실패: {e}") from e
+
+    try:
+        items = naver_search(keyword, display=5, known_brand=known_brand)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"네이버 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None  # 진짜 무결과
+
+    top = items[0]
+    seen = set()
+    image_candidates = []
+    for it in items:
+        img = it.get("image")
+        if img and img not in seen:
+            seen.add(img)
+            image_candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
+    return {
+        "source": "naver",
+        "name": top["title"],
+        "brand": top.get("brand"),
+        "volume": None,
+        "price": top.get("lprice"),
+        "mall": top.get("mallName"),
+        "seller_trust": top.get("seller_trust"),
+        "product_url": top.get("link"),
+        "image_url": top.get("image"),
+        "image_candidates": image_candidates,
+    }
 
 
 # 브랜드/카테고리성 흔한 화장품 용어 — 이런 단어들은 원본과 후보 둘 다에
@@ -339,13 +385,35 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
 
 
+def _safe_search(fn, *args, failures: list, label: str, **kwargs):
+    """4개 검색함수를 감싸서, SearchTechnicalFailure가 나면 failures
+    리스트에 기록하고 None을 돌려준다 — 호출부의 'if not cand_X: ...'
+    로직은 그대로 두면서, 이게 '진짜 무결과'인지 '기술적 실패'인지를
+    별도로 추적할 수 있게 한다."""
+    try:
+        return fn(*args, **kwargs)
+    except SearchTechnicalFailure as e:
+        print(f"    [{label}-기술적실패-재시도대상] {e}", file=sys.stderr)
+        failures.append(label)
+        return None
+
+
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     items = json.loads(Path(input_path).read_text(encoding="utf-8"))
 
     out_path = Path(output_path)
     results = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else []
     done = {r["goods_no"] for r in results}
-    print(f"[INFO] 전체 {len(items)}건 중 이미 처리된 {len(done)}건부터 이어서 진행")
+
+    # [재시도 추적] 기술적 실패로 확정을 보류한 상품의 시도횟수를 별도
+    # 파일에 저장한다(results는 '완료'만 담는 리스트라 재시도 대기건을
+    # 넣을 자리가 없다). MAX_VERIFY_RETRIES에 도달하면 그때 포기하고
+    # results에 실패로 기록한다(과거 실패 패턴과 동일한 상한 원칙).
+    retry_state_path = out_path.with_name(out_path.stem + ".retry_state.json")
+    retry_counts = json.loads(retry_state_path.read_text(encoding="utf-8")) if retry_state_path.exists() else {}
+    MAX_VERIFY_RETRIES = 3
+
+    print(f"[INFO] 전체 {len(items)}건 중 이미 처리된 {len(done)}건부터 이어서 진행 (재시도대기 {len(retry_counts)}건)")
 
     processed_this_call = 0
     for item in items:
@@ -361,12 +429,13 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         kw_cleaned = _clean_query(kw_raw)
 
         print(f"[상품] {item['goods_no']}: {kw_raw}")
+        tech_failures: list[str] = []  # 이번 상품 처리중 기술적으로 실패한 소스 이름들
 
         # 2차: 4곳에 각각 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
-        cand_exa = _search_exa(kw_raw)
-        cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
-        cand_musinsa = _search_musinsa(kw_cleaned, known_volume, known_brand)
-        cand_naver = _search_naver(kw_cleaned, known_brand)
+        cand_exa = _safe_search(_search_exa, kw_raw, failures=tech_failures, label="Exa")
+        cand_hwahae = _safe_search(_search_hwahae, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="화해")
+        cand_musinsa = _safe_search(_search_musinsa, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="무신사")
+        cand_naver = _safe_search(_search_naver, kw_cleaned, known_brand, failures=tech_failures, label="네이버")
 
         # [근본수정] Exa는 상품명은 정확히 찾아줘도 브랜드정보를 절대 안 준다
         # (구조적 한계). 화해 초벌검색(kw_cleaned)이 실패해서 cand_hwahae가
@@ -377,7 +446,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # "브랜드판단불가/불일치"로 잘못 보이는 문제가 있었다.
         if not cand_hwahae and cand_exa and cand_exa.get("name"):
             print(f"    [Exa이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> Exa확인명 '{cand_exa['name']}'로 재검색")
-            cand_hwahae_retry = _search_hwahae(cand_exa["name"], known_volume, known_brand)
+            cand_hwahae_retry = _safe_search(_search_hwahae, cand_exa["name"], known_volume, known_brand, failures=tech_failures, label="화해재검색")
             if cand_hwahae_retry:
                 cand_hwahae = cand_hwahae_retry
 
@@ -392,7 +461,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 if helper and helper.get("name"):
                     retry_query = f"{helper.get('brand') or ''} {helper['name']}".strip()
                     print(f"    [{helper['source']}이름 재검색] '{kw_cleaned}' 실패 -> 확인명 '{retry_query}'로 재검색")
-                    cand_naver_retry = _search_naver(retry_query, known_brand)
+                    cand_naver_retry = _safe_search(_search_naver, retry_query, known_brand, failures=tech_failures, label="네이버재검색")
                     if cand_naver_retry:
                         cand_naver = cand_naver_retry
                         break
@@ -408,7 +477,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             if qoo10_qty != naver_qty:
                 print(f"    [수량불일치] 큐텐={qoo10_qty}개 vs 네이버={naver_qty}개 -> 1개 기준으로 재검색")
                 requery = f"{known_brand or cand_hwahae and cand_hwahae.get('brand') or ''} {kw_cleaned} 1개".strip()
-                cand_naver_retry = _search_naver(requery, known_brand)
+                cand_naver_retry = _safe_search(_search_naver, requery, known_brand, failures=tech_failures, label="네이버수량재검색")
                 if cand_naver_retry and _extract_quantity(cand_naver_retry.get("name") or "") == qoo10_qty:
                     cand_naver = cand_naver_retry
                 else:
@@ -418,7 +487,33 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver] if c]
 
         if not candidates:
-            print("    [전체실패] 4곳 다 못 찾음")
+            if tech_failures:
+                # [9번 수정과 동일 원칙] 4곳 다 못 찾았어도, 그중 일부가
+                # 기술적으로 실패한 거라면 아직 '진짜 무결과'라고 확정할
+                # 수 없다. results/done에 안 넣고 보류해서 다음 실행에
+                # 다시 시도한다. MAX_VERIFY_RETRIES에 도달하면 그때 포기.
+                n = retry_counts.get(item["goods_no"], 0) + 1
+                if n < MAX_VERIFY_RETRIES:
+                    retry_counts[item["goods_no"]] = n
+                    retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
+                    print(f"    [보류-재시도대상] 기술적실패({','.join(tech_failures)})로 인해 확정 보류 ({n}/{MAX_VERIFY_RETRIES}회)")
+                    # [설계허점 수정 - 재확인중 발견] 이 continue가 processed_
+                    # this_call을 안 늘리면, CHUNK(max_new) 상한이 무력화된다
+                    # — 기술적실패가 대량으로 겹치는 상황(예: Exa/네이버가
+                    # 동시에 다운)에서는 이 for문이 max_new를 넘어 items
+                    # 전체를 한 호출 안에서 다 훑어버릴 수 있다(각 상품마다
+                    # 실제 API 호출 4번씩 하면서). '완료'는 아니어도 '이번
+                    # 호출에서 실제로 API를 썼다'는 사실은 똑같으므로,
+                    # processed_this_call을 여기서도 늘려서 CHUNK 상한이
+                    # 실제 API 소비량을 제대로 제한하게 한다.
+                    processed_this_call += 1
+                    continue
+                print(f"    [포기] {MAX_VERIFY_RETRIES}회 연속 기술적실패 — 실패로 확정 처리")
+                retry_counts.pop(item["goods_no"], None)
+            else:
+                print("    [전체실패] 4곳 다 정상조회했지만 못 찾음(진짜 무결과)")
+                retry_counts.pop(item["goods_no"], None)
+
             entry = {
                 "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
                 "brand": None, "name": None, "volume": "", "source": None, "obsolete": None,
@@ -427,6 +522,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             }
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
             processed_this_call += 1
             continue
 
@@ -476,7 +572,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 이 문제로 브랜드정보 없이 나가고 있었다).
         if not entry_brand and winner_name and winner["source"] != "hwahae":
             print(f"    [승자이름으로 화해 최종재검색] 브랜드정보 없음 -> '{winner_name}'로 화해 재검색")
-            hwahae_final_retry = _search_hwahae(winner_name, known_volume, known_brand)
+            hwahae_final_retry = _safe_search(_search_hwahae, winner_name, known_volume, known_brand, failures=tech_failures, label="화해최종재검색")
             if hwahae_final_retry and hwahae_final_retry.get("brand"):
                 entry_brand = hwahae_final_retry["brand"]
                 hwahae_data = hwahae_final_retry
@@ -544,6 +640,8 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
 
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+        if retry_counts.pop(item["goods_no"], None) is not None:
+            retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
         processed_this_call += 1
 
         status = entry["name"] or "매칭실패"
