@@ -58,6 +58,11 @@ on:
         required: false
         type: string
         default: ""
+      hold_discovery:
+        description: "발굴을 대기 상태로 둘지. true면 병합 후 자동 재기동과 시간기반 안전망(ensure_discovery_alive)이 모두 꺼져서, 발굴이 멈춘 채로 유지된다(번역/검증에 자원을 몰아줄 때 사용)"
+        required: false
+        type: boolean
+        default: false
       run_hwahae_verify:
         description: "output/hwahae_input_39.json을 화해로 검증할지"
         required: false
@@ -901,7 +906,7 @@ jobs:
             -d '{"ref":"main","inputs":{"run_hwahae_verify":"true"}}'
 
       - name: Resume discovery workers after merge+translate
-        if: always()
+        if: always() && inputs.hold_discovery != true
         run: |
           # [신규] 맨 처음 스텝에서 세운 발굴 워커를 여기서 다시 켠다.
           # if: always()라서 병합/번역이 타임아웃/실패해도 반드시 재기동한다
@@ -942,7 +947,7 @@ jobs:
     # 있는지"를 독립적으로 다시 확인해서, 죽어있으면 그때 다시 켠다.
     # 그래서 이번 시간에 재기동이 실패해도 다음 정각에는 반드시 복구된다.
     needs: merge_discovery_shards
-    if: always() && github.event_name == 'workflow_dispatch' && inputs.run_merge_discovery
+    if: always() && github.event_name == 'workflow_dispatch' && inputs.run_merge_discovery && inputs.hold_discovery != true
     runs-on: ubuntu-latest
     permissions:
       actions: write
