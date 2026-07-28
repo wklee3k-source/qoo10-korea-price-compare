@@ -23275,5 +23275,385 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213462651",
+    "translated_kr": "제모 폼 120g 의약외품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "건강용품",
+      "naver_web": "B02",
+      "naver_rematch": "안구건조온열기 원적외선 무선 온열안대 발열 눈찜질 아이마스크 수면안대"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180589025",
+    "translated_kr": "신상품 어성초 77 수딩 토너 250ml + 어성초 70 데일리 로션 200ml + 어성초 모공 컨트롤 클렌징 오일 200ml (2개)",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "hwahae": "어성초 77 클리어 패드",
+      "daum": "SHOP",
+      "naver_web": "아누아 어성초 77 클리어 패드 70매",
+      "naver_rematch": "[7월 네이버PICK] 아누아 어성초 77 클리어 진정 저자극 토너패드 70매, 1개"
+    },
+    "brand": "아누아",
+    "name": "[7월 네이버PICK] 아누아 어성초 77 클리어 진정 저자극 토너패드 70매, 1개",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "15000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6854000895",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8439850/84398501217.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8439850/84398501217.8.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/6854000895"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8439867/84398675569.7.jpg",
+        "mall": "뷰티스토어랜드",
+        "link": "https://smartstore.naver.com/main/products/6854175247"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1172804214",
+    "translated_kr": "해포도 레티놀 모공 탄력 크림 50g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "레티놀라겐 모공탄력 앰플",
+      "naver": "레티놀 크림 기미 착색 미백 화이트닝 비타민A 레티날 모공축소 트라넥삼산 판테놀 잡티",
+      "daum": "피캄 레티놀라겐 모공탄력 앰플",
+      "naver_web": "테라로직 레틴A 크림"
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "레티놀 크림 기미 착색 미백 화이트닝 비타민A 레티날 모공축소 트라넥삼산 판테놀 잡티",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "34600",
+    "mall": "알엑스더마",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9173589823",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8671809/86718090146.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8671809/86718090146.15.jpg",
+        "mall": "알엑스더마",
+        "link": "https://smartstore.naver.com/main/products/9173589823"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100778/91007783994.jpg",
+        "mall": "에버로운",
+        "link": "https://smartstore.naver.com/main/products/13463273642"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052617/90526172276.1.jpg",
+        "mall": "JHMart",
+        "link": "https://smartstore.naver.com/main/products/12981661266"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165615884",
+    "translated_kr": "제로 모공 패드 2.0 70매 1세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로모공패드 2.0",
+      "daum": "메디큐브 제로 모공 패드 2.0 70매 관심상품 담기",
+      "naver_web": "제로모공패드 2.0 70매",
+      "naver_rematch": "[더보이즈 영훈 PICK] 제로모공패드 2.0, 피지조절&amp;모공줄이는 패드"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로모공패드 2.0",
+    "volume": "155g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "26600",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=102&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1134112/11341126775.34.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1134112/11341126775.34.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=102&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820836/88208363840.4.jpg",
+        "mall": "파니브리즈",
+        "link": "https://smartstore.naver.com/main/products/10663857926"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "724850594",
+    "translated_kr": "폴로 블랙 125ml EDT SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴로 블랙 EDT",
+      "naver": "랄프로렌 향수 폴로 블랙 오드뚜왈렛 EDT 폴로블랙향수, 125ml, 1개",
+      "daum": "존 바바토스 아티산 아쿠아",
+      "naver_web": "폴로랄프로렌 폴로 블랙 EDT"
+    },
+    "brand": "랄프로렌 (RALPHLAUREN)",
+    "name": "폴로 블랙 EDT",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "62000",
+    "mall": "퍼퓸하우스S",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5011619179",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+        "mall": "퍼퓸하우스S",
+        "link": "https://smartstore.naver.com/main/products/5011619179"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8992100/89921006273.jpg",
+        "mall": "퍼퓸아이즈",
+        "link": "https://smartstore.naver.com/main/products/12376495556"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8356406/83564064751.jpg",
+        "mall": "월드퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/6019565263"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8992099/89920995974.jpg",
+        "mall": "퍼퓸아이즈",
+        "link": "https://smartstore.naver.com/main/products/12376485257"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209148971",
+    "translated_kr": "신상 에어로 쿨링 샴푸 400ml+70ml / -5.2도 급속 냉각",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "비레토 에어로라 휴대용 쿨링팬 펠티어 급속냉각 미니 에어컨 손선풍기 고리형",
+      "naver_web": "독일 기술 1/1+1 휴대용 허리선풍기 쿨링 허리 선풍기 초강력 태풍기 무선 냉각 선풍기 에어컨 1초 급속 냉각 전...."
+    },
+    "brand": null,
+    "name": "비레토 에어로라 휴대용 쿨링팬 펠티어 급속냉각 미니 에어컨 손선풍기 고리형",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "23900",
+    "mall": "비레토",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12913487054",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045799/90457998046.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045799/90457998046.jpg",
+        "mall": "비레토",
+        "link": "https://smartstore.naver.com/main/products/12913487054"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941689/89416894464.jpg",
+        "mall": "신일 온라인스토어",
+        "link": "https://smartstore.naver.com/main/products/11872383870"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102831/91028319176.jpg",
+        "mall": "달쓰4",
+        "link": "https://smartstore.naver.com/main/products/13483808824"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104076/91040762483.jpg",
+        "mall": "Tempick",
+        "link": "https://smartstore.naver.com/main/products/13496252131"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102832/91028325209.jpg",
+        "mall": "달쓰4",
+        "link": "https://smartstore.naver.com/main/products/13483814857"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212943200",
+    "translated_kr": "글리콜산 7% 엑스폴리에이팅 토너 240ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "글리콜산7% 산성토너 각질제거 보습 건조방지"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1109029493",
+    "translated_kr": "초 저분자 히알루론산 토너 300ml / 초 저분자 히알루론산 세럼 50ml 선택 1",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "초저분자 히아루론산 토너",
+      "daum": "남자들의 피부 판도를 바꿔줄 신상 파운데이션과 클렌징 아이템",
+      "naver_web": "💧저분자 히알루론산💧 싸이닉 히아루론산 속건조 앰플 세럼",
+      "naver_rematch": "[NCT 재민PICK] 이즈앤트리 초저분자 히아루론산 토너 300ml"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "초저분자 히아루론산 토너",
+    "volume": "300ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "14700",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000197102",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4748654/47486547966.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4748654/47486547966.3.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000197102"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1174662494",
+    "translated_kr": "IVE 장원영 모델 제네시스 새싹 세럼 90ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "제네시스&#39; 캠페인 화보 촬영 속 아이브 장원영 / 사진 제공 = 케라스타즈 케라스타즈의 &#39;제네시스...",
+      "naver_web": "장원영의 제네시스",
+      "naver_rematch": "[장원영 PICK 케라스타즈] 럭셔리 샴푸 트리트먼트 세트 (방 제네시스 샴푸 250ml 제네시스 수엥 75ml)"
+    },
+    "brand": null,
+    "name": "제네시스&#39; 캠페인 화보 촬영 속 아이브 장원영 / 사진 제공 = 케라스타즈 케라스타즈의 &#39;제네시스...",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "98010",
+    "mall": "Chic chang",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11723835743",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8926834/89268346242.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8926834/89268346242.jpg",
+        "mall": "Chic chang",
+        "link": "https://smartstore.naver.com/main/products/11723835743"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165863671",
+    "translated_kr": "올나이터 롱라스팅 메이크업 세팅 스프레이 내추럴 매트 118ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올 나이터 메이크업 세팅 스프레이 글로우",
+      "naver": "어반디케이 올 나이터 메이크업 세팅 스프레이 글로우 118ml",
+      "daum": "올여름 워터프루프 메이크업은 &#39;블루&#39; 하나면 됩니다",
+      "naver_web": "어반디케이 올나이터 롱라스팅 메이크업 세팅 스프레이 울트라 글로우"
+    },
+    "brand": "어반디케이 (URBANDECAY)",
+    "name": "올 나이터 메이크업 세팅 스프레이 글로우",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "44800",
+    "mall": "루미뇽스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13370965620",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9091547/90915475956.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091547/90915475956.2.jpg",
+        "mall": "루미뇽스토어",
+        "link": "https://smartstore.naver.com/main/products/13370965620"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091544/90915443898.2.jpg",
+        "mall": "루미뇽스토어",
+        "link": "https://smartstore.naver.com/main/products/13370933562"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
