@@ -1921,5 +1921,369 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203695258",
+    "translated_kr": "레티노 콜라겐 저분자 300 모공 탄력 젤 마스크 팩(5장입) 팩 페이스팩 페이스 마스크 미용 마스크 페이스 팩 럭셔리 마스크 한국 화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "레티노콜라겐 저분자300 모공탄력 마스크",
+      "naver": "CKD 레티노콜라겐 저분자 300 모공탄력 마스크 10매",
+      "daum": "캐리어 오일",
+      "naver_web": "CKD 레티노 콜라겐 저분자 300 괄사 목주름 크림"
+    },
+    "brand": "씨케이디개런티드",
+    "name": "CKD 레티노콜라겐 저분자 300 모공탄력 마스크 10매",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "35900",
+    "mall": "09SUPER",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11261210135",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8880572/88805720466.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880572/88805720466.jpg",
+        "mall": "09SUPER",
+        "link": "https://smartstore.naver.com/main/products/11261210135"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087833/90878330323.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/13333819991"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212950756",
+    "translated_kr": "시카 페어 인센티브 수징 리페어 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 인텐시브 수딩 리페어 크림",
+      "daum": "사업보고서2023.03.23.pdf",
+      "naver_web": "시카페어™ 인텐시브 수딩 리페어 크림"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 인텐시브 수딩 리페어 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1148824106",
+    "translated_kr": "【20% 할인 전 브랜드 기간 할인】일론 옐로우 시그널 부스터 30g 안색 개선 민감 피부 수분+마스크 팩 증정",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "더일론 시그널 부스터 (레드,옐로우,블루) 택1",
+      "daum": "LAUREN&#39;S PICK",
+      "naver_web": "★일론 전제품 공구 결제창★"
+    },
+    "brand": "일론",
+    "name": "더일론 시그널 부스터 (레드,옐로우,블루) 택1",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "66000",
+    "mall": "어스제이 스킨클리닉",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13499258588",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104376/91043768940.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104376/91043768940.jpg",
+        "mall": "어스제이 스킨클리닉",
+        "link": "https://smartstore.naver.com/main/products/13499258588"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063886/90638865014.jpg",
+        "mall": "키 포인트",
+        "link": "https://smartstore.naver.com/main/products/13094353922"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8541825/85418257577.jpg",
+        "mall": "그레이스피부",
+        "link": "https://smartstore.naver.com/main/products/7873757181"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210637144",
+    "translated_kr": "오리지널 스프레이 데오도란트 150ml 제한 스프레이 바디 케어 한국화장품",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "(해외) 어드밴스드 안티퍼스피런트 데오드란트 스틱 [오리지널클린]",
+      "naver": "도브 오리지널 스프레이 데오드란트, 150ml, 1개",
+      "daum": "특별할인",
+      "naver_web": "도브 오리지널 클린 데오드란트 스틱 6개"
+    },
+    "brand": "도브 (Dove)",
+    "name": "도브 오리지널 클린 데오드란트 스틱 6개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "18740",
+    "mall": "블리스하이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13587699000",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113220/91132209412.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113220/91132209412.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/13587699000"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122967/91229674436.jpg",
+        "mall": "구삼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13685163193"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160857912",
+    "translated_kr": "엘라스틴 바이오틴 클리닉 10000 샴푸, 린스 1000ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로틴클리닉 10000 샴푸",
+      "naver": "엘라스틴 프로틴클리닉 10000 샴푸 1000ml 피치향 1개 헤어 미용 트린트먼트 염색",
+      "daum": "샴푸",
+      "naver_web": "엘라스틴 프로틴클리닉 10000 단백질 고영양 샴푸 플로럴 머스크 향, , 1개"
+    },
+    "brand": "엘라스틴 (Elastine)",
+    "name": "프로틴클리닉 10000 샴푸",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "31200",
+    "mall": "오브런마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12485103091",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9002961/90029613935.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002961/90029613935.jpg",
+        "mall": "오브런마켓",
+        "link": "https://smartstore.naver.com/main/products/12485103091"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1165634740",
+    "translated_kr": "헤어 실드(헤어 픽서/스프레이 분사형)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "헤어실드",
+      "naver": "유리카 헤어 실드 80ml + 여행용미니치약구성",
+      "daum": "퍼리키 실크실드 헤어 퍼퓸 미스트 글로우 벨 Belle, 1개,",
+      "naver_web": "얼굴 소멸 볼륨, 헤어실드"
+    },
+    "brand": "유리카 (YURICA)",
+    "name": "헤어실드",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "11050",
+    "mall": "Nuvianne",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13646962775",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119147/91191473554.jpg",
+        "mall": "Nuvianne",
+        "link": "https://smartstore.naver.com/main/products/13646962775"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889435/88894351701.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11349841359"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122768/91227686679.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/13683175436"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1166619741",
+    "translated_kr": "【정규품】판테놀 대나무 마이티 대나무 판테놀 라인 크림 대용량 100ml 보습 크림 수분 공급 약산성 저자극【한국화장품】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "로자그라프 하이드라탄티 수분크림 250ml [Rosagraf blue line Hydratante Creme]",
+      "daum": "수분크림 뭐 쓰지? 여름철 사용하기 좋은 가볍고 산뜻한 수분크림 추천!",
+      "naver_web": "투데이위드판테놀크림"
+    },
+    "brand": "로자그라프",
+    "name": "로자그라프 하이드라탄티 수분크림 250ml [Rosagraf blue line Hydratante Creme]",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "119000",
+    "mall": "유럽에사는언니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5004765051",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8254928/82549285718.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8254928/82549285718.5.jpg",
+        "mall": "유럽에사는언니",
+        "link": "https://smartstore.naver.com/main/products/5004765051"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8780005/87800053532.1.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10255549830"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8755693/87556933173.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/10012430799"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8663600/86636004635.1.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/9091504312"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9060025/90600253213.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/13055742121"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204664117",
+    "translated_kr": "【1+1】【베이비 선 케어】논케미컬 선 스틱 / 쿨링 선 쿠션 / 마일드 선 크림 아기용 자외선 차단제 민감 피부 UV 케어 한국 베이비",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초",
+      "daum": "예민해진 피부를 지켜내기 위해서는?",
+      "naver_web": "K",
+      "naver_rematch": "내일도착 미니원피스 썸머나잇 플레어 미니 원피스 K"
+    },
+    "brand": "디마프 (De:maf)",
+    "name": "예민해진 피부를 지켜내기 위해서는?",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "27620",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=142625367&shop_id=798&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5922920/59229204671.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5922920/59229204671.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=142625367&shop_id=798&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8783975/87839750028.1.jpg",
+        "mall": "Reve K",
+        "link": "https://smartstore.naver.com/main/products/10295246065"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8316718/83167188157.jpg",
+        "mall": "케이옷장",
+        "link": "https://smartstore.naver.com/main/products/5622691642"
+      }
+    ],
+    "real_page_title": "지그재그 스토어",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204664064",
+    "translated_kr": "【베이비 선 케어】몬디스 논케미컬 선 스틱 / 쿨링 선 쿠션 / 마일드 선 크림 아기용 자외선 차단제 민감 피부 UV 케어 한국 베이비 화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1177840431",
+    "translated_kr": "폴리겐 시크닝 세럼 50ml+스케일러 60g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
