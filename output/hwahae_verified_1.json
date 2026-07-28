@@ -5694,5 +5694,288 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213612689",
+    "translated_kr": "새먼 케어링 센텔라 크림, 100ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "살몬 케어링 센텔라 토너",
+      "naver_web": "헤브블루 살몬 PDRN 케어링 센텔라 크림"
+    },
+    "brand": "헤브블루 (HEVEBLUE)",
+    "name": "헤브블루 살몬 PDRN 케어링 센텔라 크림",
+    "volume": "",
+    "source": "naver_web",
+    "obsolete": false,
+    "sale": false,
+    "price": 41900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205600340",
+    "translated_kr": "데카솔사이드 선 스틱 에어리 피트 10g + 10g (1+1 세트) 선크림 스틱 UV 케어 시카 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "발 다치는 꿈 해몽"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206272761",
+    "translated_kr": "【2본 세트】 미니레 스프릴 스타일링 스프레이 180g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스프릴 메가픽스 스타일링 스프레이",
+      "naver": "호유 미니레 스프릴 스타일링 스프레이 메가픽스 180g 5개세트",
+      "daum": "HOYU",
+      "naver_web": "호유 미니레 스프릴 스타일링 스프레이 3종"
+    },
+    "brand": "호유 (hoyu)",
+    "name": "스프릴 메가픽스 스타일링 스프레이",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "55900",
+    "mall": "도쿄락",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11659362132",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8920387/89203872599.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920387/89203872599.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/11659362132"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626449/86264493756.1.jpg",
+        "mall": "뷰티엔젤상점",
+        "link": "https://smartstore.naver.com/main/products/8719993433"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122298/91222983241.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/13678472150"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121783/91217833233.jpg",
+        "mall": "행복상회01",
+        "link": "https://smartstore.naver.com/main/products/13673322214"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203099521",
+    "translated_kr": "【수량 한정】 엘릭서 슈페리오르 에이징 케어 미용액 체감 세트 aL ca 【의약부외품】",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185503246",
+    "translated_kr": "톤 브라이트닝 톤업 선 스크린, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 톤 브라이트닝 톤업 선스크린 [SPF50+/PA++++]",
+      "naver": "마다가스카르 센텔라 톤 브라이트닝 톤업 선 스크린(SPF50+) 50ml, 1개",
+      "daum": "디오프러스 블루 페더 톤 업 선 스크린 SPF50+ PA++++",
+      "naver_web": "마다가스카르 센텔라 톤 브라이트닝 톤업 선스크린"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 톤 브라이트닝 톤업 선스크린 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "14200",
+    "mall": "미인뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13656366046",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120087/91200876831.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120087/91200876831.jpg",
+        "mall": "미인뷰티",
+        "link": "https://smartstore.naver.com/main/products/13656366046"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054890/90548901514.jpg",
+        "mall": "굿스킨",
+        "link": "https://smartstore.naver.com/main/products/13004390422"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198606605",
+    "translated_kr": "【즉납】【2026년 2월 21일 리뉴얼 발매·국내 정품·2종류에서 선택·추적 가능 메일 배송】 퍼펙트 UV 40g (스킨케어 젤 NB 또는 브라이트닝 UV 젤 NA)",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 유브이 선스크린 스킨케어 밀크 엔에이 [SPF50+/PA++++]",
+      "musinsa": "퍼펙트 UV 선스크린 스킨케어 스프레이 NA 60g",
+      "naver": "아넷사 퍼펙트 UV 선스크린 스킨케어 밀크 NA 60ml",
+      "daum": "케미 퍼펙트 uv 사기 당한거지?",
+      "naver_web": "퍼펙트 UV 프로텍터 S"
+    },
+    "brand": "아넷사",
+    "name": "퍼펙트 UV 선스크린 스킨케어 스프레이 NA 60g",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29600",
+    "mall": "아넷사",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6630533653",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8417503/84175033975.93.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8417503/84175033975.93.jpg",
+        "mall": "아넷사",
+        "link": "https://smartstore.naver.com/main/products/6630533653"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1163811274",
+    "translated_kr": "【즉납】【2026년 4월 16일 한정 발매·국내 정품·대량 구매·우유 패킷 패프 배송】 메이크키프 미스트 EX + 초 쿨 한정품 80ml × 3본 세트 【4971710631739-3】",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "수분크림을 포기해야하는 5가지 이유"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1141036310",
+    "translated_kr": "【즉납】【2026년 리뉴얼 신 패키지·4종류에서 선택·추적 가능 메일 배송】 퍼펙트 UV 스킨케어 밀크 NA 60ml (통상품 냐오하 피카츄 또는 포챠마)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포켓몬 에디션 퍼펙트 UV 선스크린 스킨케어 밀크 NA [SPF50+/PA++++] [피카츄]",
+      "musinsa": "퍼펙트 UV 선스크린 스킨케어 밀크 NA 20ml",
+      "naver": "아넷사 퍼펙트 UV 선스크린 스킨케어 밀크 NA 60ml",
+      "daum": "아넷사 퍼펙트 UV 선스크린 스킨케어 밀크 NA SPF50+ PA++++",
+      "naver_web": "아넷사 퍼펙트 UV 선스크린 스킨케어 밀크 NA -"
+    },
+    "brand": "아넷사 (ANESSA)",
+    "name": "포켓몬 에디션 퍼펙트 UV 선스크린 스킨케어 밀크 NA [SPF50+/PA++++] [피카츄]",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29600",
+    "mall": "아넷사",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6630533653",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8417503/84175033975.93.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8417503/84175033975.93.jpg",
+        "mall": "아넷사",
+        "link": "https://smartstore.naver.com/main/products/6630533653"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113597/91135976270.4.jpg",
+        "mall": "아넷사",
+        "link": "https://smartstore.naver.com/main/products/13591465860"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190163848",
+    "translated_kr": "시티 알도 러브 인 파리 프랑스 오드 파르팜 30ml 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "220715_정부언론1"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "421617586",
+    "translated_kr": "[LG생활건강] 한국 화장품 / 후 공진향 크림 클렌저 / 궁중 세안 비방 / 피부 노폐물 / 메이크업 세정 / 크림 타입 클렌저 / O HUI / SUM / LIRICOS",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "네이버 인플루언서: 김소금의 홈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
