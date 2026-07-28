@@ -2725,5 +2725,366 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1133684811",
+    "translated_kr": "프리미엄 브릴리언트 미스트 90ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프리미엄 브릴리언트 미스트",
+      "naver": "코페르 프리미엄 브릴리언트 미스트 수분 미백 에센스 미스트 90ml",
+      "daum": "모노소울",
+      "naver_web": "프리미엄 브릴리언트 미스트"
+    },
+    "brand": "코페르 (KOPHER)",
+    "name": "프리미엄 브릴리언트 미스트",
+    "volume": "90mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25200",
+    "mall": "코페르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6448876267",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8399337/83993376600.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8399337/83993376600.2.jpg",
+        "mall": "코페르",
+        "link": "https://smartstore.naver.com/main/products/6448876267"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8445862/84458626590.2.jpg",
+        "mall": "코페르",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6914126268"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213379918",
+    "translated_kr": "엘세븐 토탈 리페어 5 인스턴트 미라클 헤어팩 400ml 2개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "토탈 리페어 5 헤어팩",
+      "daum": "로레알파리 토탈리페어5 인스턴트 미라클 헤어팩, , 2개",
+      "naver_web": "로레알 로레알파리 토탈 리페어 5 인스턴트 미라클 헤어팩",
+      "naver_rematch": "[대용량&amp;단독기획] 로레알파리 토탈 리페어 5 헤어팩 700ml 2개 기획세트"
+    },
+    "brand": "로레알파리 (L'OREALPARIS)",
+    "name": "로레알 로레알파리 토탈 리페어 5 인스턴트 미라클 헤어팩",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "52050",
+    "mall": "로레알파리 공식 스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5079143943",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8262366/82623665641.55.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8262366/82623665641.55.jpg",
+        "mall": "로레알파리 공식 스토어",
+        "link": "https://smartstore.naver.com/main/products/5079143943"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1082547960",
+    "translated_kr": "[정품] 워터풀 톤업 선크림 톤업 [SPF50+/PA++++] 50ml 1개 선 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터풀 선크림 [SPF50+/PA++++] [톤업/핑크]",
+      "daum": "닥터지 브라이트닝 업 선 플러스 썬크림 추천",
+      "naver_web": "달바 워터풀 톤업 선크림 SPF 50+ PA++++, , 1개",
+      "naver_rematch": "[2개] 달바 비건 워터풀 핑크 톤업 선크림 50mlX2개"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "워터풀 선크림 [SPF50+/PA++++] [톤업/핑크]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "39900",
+    "mall": "달바 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5750426971",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8329492/83294926385.56.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8329492/83294926385.56.jpg",
+        "mall": "달바 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/5750426971"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8604068/86040682995.9.jpg",
+        "mall": "달바 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/8496182672"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8329492/83294926386.55.jpg",
+        "mall": "달바",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5750426972"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8604068/86040682994.9.jpg",
+        "mall": "달바",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8496182671"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8703052/87030528867.2.jpg",
+        "mall": "MARKET PLUS",
+        "link": "https://smartstore.naver.com/main/products/9486028544"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188890837",
+    "translated_kr": "[정품] 비타C 그린티 엔자임 브라이트 패드 60장 (2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타C 그린티 엔자임 잡티 토닝 패드",
+      "daum": "여드름 잡티 박살내준 성분별 추천템 총정리‼️‼️",
+      "naver_web": "비타C 그린티 엔자임 잡티 토닝 패드 60매",
+      "naver_rematch": "이니스프리 비타C 그린티 엔자임 잡티 토닝 패드"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "비타C 그린티 엔자임 잡티 토닝 패드",
+    "volume": "170mL",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "21000",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=60928&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=innisfree",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5613385/56133854793.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5613385/56133854793.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=60928&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=innisfree"
+      }
+    ],
+    "real_page_title": "[이니스프리]비타C 그린티 엔자임 잡티 토닝 패드",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1132106045",
+    "translated_kr": "어드밴스드 스네일 92 올인원 크림 100g 달팽이 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스네일 92 올인원 크림",
+      "naver": "코스알엑스 어드밴스드 스네일 92 올인원 크림 100g Advanced Snail",
+      "daum": "코스알엑스 어드벤스드 스네일 92 올인원 크림, , 6개",
+      "naver_web": "CosRx , 어드밴스드 스네일 92, 올인원 크림,"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "스네일 92 올인원 크림",
+    "volume": "100g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "34290",
+    "mall": "월드세븐",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8711278653",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8625577/86255778976.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8625577/86255778976.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/8711278653"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082909/90829094232.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13284583900"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190206306",
+    "translated_kr": "코우지산 비타 나이아신 토너 250ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "셀레네인 비타나이아신 토너"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1153393584",
+    "translated_kr": "[Korean-Inteca] 메이크 프렘 인테카 트러블 수징 패드 70장 입",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[메이크프렘] [2pack] 인테카 트러블 수딩 패드 70매 SB0230025*2",
+      "naver_web": "인테카 트러블 패드 70매"
+    },
+    "brand": "메이크프렘",
+    "name": "[메이크프렘] [2pack] 인테카 트러블 수딩 패드 70매 SB0230025*2",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "46400",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3973982?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4670828/46708283114.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4670828/46708283114.4.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3973982?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8770891/87708915430.jpg",
+        "mall": "제이앤세븐",
+        "link": "https://smartstore.naver.com/main/products/10164412088"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8855303/88553038049.jpg",
+        "mall": "B.Tree",
+        "link": "https://smartstore.naver.com/main/products/11008531917"
+      }
+    ],
+    "real_page_title": "메이크프렘(MAKEPREM) [2pack] 인테카 트러블 수딩 패드 70매",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185951937",
+    "translated_kr": "[한국 인기] 톤 & 스팟 콜렉터 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 라이트플렉스 기가와트 다크 스팟 콜렉터",
+      "naver": "Redence 리던스 톤 스포트 콜렉터 앰풀 30ml Tone Spot Corrector Ampoule 30ml",
+      "naver_web": "튤립도레 아크네 콜렉터"
+    },
+    "brand": "바이오엘리먼츠 (BIOELEMENTS)",
+    "name": "(해외) 라이트플렉스 기가와트 다크 스팟 콜렉터",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "32300",
+    "mall": "재팬럭키셀렉트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13511642660",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105615/91056153012.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105615/91056153012.jpg",
+        "mall": "재팬럭키셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13511642660"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204446765",
+    "translated_kr": "쿨링 선 스프레이 SPF50+ PA+++ 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "저자극 쿨링 뿌리는 선 스프레이 [SPF50+/PA+++]",
+      "naver": "닥터아토 쿨링 선 스프레이 SPF50+ PA+++, 150ml, 1개",
+      "daum": "그린핑거 산리오 포차코 에디션 야외놀이 쿨링 선스프레이 SPF50+ PA++++",
+      "naver_web": "닥터아토 쿨링 선 스프레이 SPF50+ PA+++, , 2개"
+    },
+    "brand": "닥터아토 (Dr.ato)",
+    "name": "저자극 쿨링 뿌리는 선 스프레이 [SPF50+/PA+++]",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "18180",
+    "mall": "직구웨이브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13682360366",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122687/91226871609.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122687/91226871609.jpg",
+        "mall": "직구웨이브",
+        "link": "https://smartstore.naver.com/main/products/13682360366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211855765",
+    "translated_kr": "비타C 포스 트릭스 토닝 세럼 마스크 22ml 10장",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "빌리프 비타C 토닝 세럼 & 비타민 마스크 세트 -"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
