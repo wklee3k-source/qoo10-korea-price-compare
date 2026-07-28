@@ -16062,5 +16062,345 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1192835408",
+    "translated_kr": "【수량 한정】 라라스킨 화이트 플럼 필링 젤 클렌징 140g · 워터 라이트 샤워 미스트 60g 세트 필링 클렌징 젤 미스트 화장수 라라스킨",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "도톰한 나비의 꿈",
+      "daum": "2월의 뷰티 신상 파헤치기 #잇츠온세일",
+      "naver_web": "나비의 꿈",
+      "naver_rematch": "꿈토리 아기물티슈 도톰한 나비의 꿈 55gsm 엠보 60매 캡형 20팩"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178120837",
+    "translated_kr": "【1+1】애매함 / 포레스트 피톤 수분 CICA 크림 50ml / 인너 드라이 / 촉촉 보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver_rematch": "[더리즈] ✨스쿠알란 180,000ppm✨ 리코테카 진정 수분 크림 75ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "23000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=155420751&shop_id=49560&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5200079/52000790351.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5200079/52000790351.2.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=155420751&shop_id=49560&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8915482/89154825601.5.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/11610315195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822998/88229980095.6.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/10685474173"
+      }
+    ],
+    "real_page_title": "지그재그 스토어",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182232360",
+    "translated_kr": "2026 복주머니 [공식] 앤허니 멜티 4종 세트 샴푸 트리트먼트 헤어오일 매트 메이크 스틱",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "제 149 호 2018년 1월"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1143029712",
+    "translated_kr": "[공식] PDRN 턴오버 앰플 10mL 2개 세트 미용액 c-PDRN 스킨케어 한국화장품 국내 발송",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더블 볼륨 멜팅 c-PDRN",
+      "daum": "앰플"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "더블 볼륨 멜팅 c-PDRN",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 52000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208828941",
+    "translated_kr": "[공식] 블루아가베 수징 젤 200g [시원한 보습 민감한 피부 대응 윤기 관리]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블루 아가베 수딩젤",
+      "naver": "닥터바이오 블루 아가베 수딩 젤 200g",
+      "naver_web": "닥터바이오 블루 아가베 수딩젤 -"
+    },
+    "brand": "닥터바이오 (Dr.Bio)",
+    "name": "블루 아가베 수딩젤",
+    "volume": "200g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "14890",
+    "mall": "뷰티판도라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12819949006",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9036445/90364459955.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9036445/90364459955.jpg",
+        "mall": "뷰티판도라",
+        "link": "https://smartstore.naver.com/main/products/12819949006"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9053206/90532066527.jpg",
+        "mall": "숙리빙마켓",
+        "link": "https://smartstore.naver.com/main/products/12987555435"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1071060050",
+    "translated_kr": "백발용 검은 샴푸 [국내 정품] 검은 샴푸 프리미엄 100g 백발 염색 두피 관리 샴푸 프리미엄 남녀겸용 저자극 헤어케어 리페어 샴푸",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "강남 염색",
+      "naver_web": "지금 추천하는 두피수분크림 10종 필수템!",
+      "naver_rematch": "애쉬블루 염색 노원 강남미용실 옴브레전문점 박승철헤어스투디오 중계롯데마트점"
+    },
+    "brand": null,
+    "name": "강남 염색",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "120000",
+    "mall": "노원미용실 중계롯데마트점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/712534325",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1130865/11308652954.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1130865/11308652954.4.jpg",
+        "mall": "노원미용실 중계롯데마트점",
+        "link": "https://smartstore.naver.com/main/products/712534325"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1072999/10729999484.1.jpg",
+        "mall": "노원미용실 중계롯데마트점",
+        "link": "https://smartstore.naver.com/main/products/572107196"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1074176/10741766888.1.jpg",
+        "mall": "노원미용실 중계롯데마트점",
+        "link": "https://smartstore.naver.com/main/products/573945252"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204019916",
+    "translated_kr": "2026년 5월 발매 [국내 정품] THREE 쓰리 밸런싱 클리어 클렌징 오일 / 185ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "타라곤 에센셜 오일",
+      "daum": "2026.01.21 CONNECTION DAILY NEWS",
+      "naver_web": "5 ファス FAS ザブラックブライトセラムⅡ リニューアル サンプル",
+      "naver_rematch": "프랑스 Essenciagua 에센시아가 타라곤 아로마 에센셜 오일 5ml"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207613050",
+    "translated_kr": "라이팅 톤업 선 쿠션 SPF50+ PA+++000 / 미스티 버블",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]",
+      "naver": "아떼 비건 릴리프 라이팅 톤 업 선쿠션 미스티퍼플 (SPF50+) 12g, 1개",
+      "daum": "선쿠션 추천 3종 비교 분석",
+      "naver_web": "비건 릴리프 라이팅 톤업 선쿠션"
+    },
+    "brand": "아떼 (athe)",
+    "name": "비건 릴리프 라이팅 톤업 선쿠션 [SPF50+/PA++++] [01 미스티퍼플]",
+    "volume": "12g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "13400",
+    "mall": "럭키바이스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13084571453",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9062908/90629082545.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9062908/90629082545.jpg",
+        "mall": "럭키바이스토어",
+        "link": "https://smartstore.naver.com/main/products/13084571453"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048059/90480590507.jpg",
+        "mall": "지오마니아",
+        "link": "https://smartstore.naver.com/main/products/12936079497"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1150372235",
+    "translated_kr": "아쿠아 스쿠알란 수분 크림, 60ml + 30ml, 30ml, 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아쿠아 스쿠알란 수분크림",
+      "musinsa": "[대용량] 아쿠아 스쿠알란 수분크림 80ml",
+      "naver": "에스네이처 아쿠아 스쿠알란 수분크림 60ml+30ml 1개",
+      "daum": "에스네이처 아쿠아 스쿠알란 보습 수분크림 기획전 60+추가 30ml증정",
+      "naver_web": "S.NATURE"
+    },
+    "brand": "에스네이처 (S.NATURE)",
+    "name": "아쿠아 스쿠알란 수분크림",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "9820",
+    "mall": "리틀시크",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13673653099",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121816/91218164118.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121816/91218164118.1.jpg",
+        "mall": "리틀시크",
+        "link": "https://smartstore.naver.com/main/products/13673653099"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8928636/89286361303.jpg",
+        "mall": "영영 MART",
+        "link": "https://smartstore.naver.com/main/products/11741850804"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202098452",
+    "translated_kr": "[공식] 레티노이드 리프트 실크 마스크, 4매 / 레티놀 마스크 / 탄력 관리 / 밀착 / 보습 / 하이드로겔 / 페이스팩 / 한국 스킨케어",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "쿨닥 더마테라피 콜라겐 하이드로겔 아이패치",
+      "naver": "이다야 쿨닥 더마테라피 콜라겐 하이드로겔 아이패치",
+      "daum": "쿨하게 붙이고 끝내는, 하이드로겔 패치",
+      "naver_web": "리브론 페이스 비닐 일회용 랩 마스크팩 얼굴 비닐팩 100매 1+1"
+    },
+    "brand": "이다야 (IIDAYA)",
+    "name": "리브론 페이스 비닐 일회용 랩 마스크팩 얼굴 비닐팩 100매 1+1",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "35000",
+    "mall": "이다야",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11836360423",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8938087/89380871017.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8938087/89380871017.2.jpg",
+        "mall": "이다야",
+        "link": "https://smartstore.naver.com/main/products/11836360423"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054641/90546418464.jpg",
+        "mall": "비셀렉트몰",
+        "link": "https://smartstore.naver.com/main/products/13001907372"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
