@@ -695,6 +695,35 @@ def t55_naver_single_source_pass():
           f"표시{flagged} 검수전달{passed_to_review} 경고{warned} 뒤로정렬{sorted_back}")
 
 
+# --------------------- #56 검색어 길이별 성과 측정
+#  생성 검색어의 23.2%가 단어 하나짜리인데, 유리한지 불리한지 측정된 적이
+#  없다. 발굴은 상점 1곳당 검색어 5.4개를 쓴다 — 5개 중 4개는 새 상점을
+#  못 만든다는 뜻이고, 그 낭비가 어디서 오는지 알아야 큐 순서를 손댈지
+#  판단할 수 있다. 추측으로 큐를 건드리면 멀쩡한 검색어까지 뒤로 밀린다.
+#
+#  측정 자체가 새 실패를 만들면 안 된다: 개별 로그를 쌓으면 상태파일이
+#  계속 커지고(과거 .git 2.7GB 사고와 같은 부류), 저장에 포함되지 않으면
+#  워커가 재기동될 때마다 통계가 날아간다.
+def t56_keyword_length_stats():
+    src = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+
+    has_bucket = "def _kw_bucket(" in src and "def _record_kw(" in src
+    # 구간별 누적만 담아야 한다(개별 로그 금지 = 파일이 커지지 않는다).
+    aggregate_only = "keyword_stats.setdefault(" in src and "keyword_stats.append" not in src
+    # 저장에 포함돼야 재기동해도 이어진다.
+    persisted = '"keyword_stats": keyword_stats' in src
+    # 이어서 누적해야 한다(매번 0부터면 재기동마다 초기화된다).
+    resumes = 'state.get("keyword_stats")' in src
+    # 검색어 처리가 끝난 시점에 기록돼야 한다(중간에 끊긴 건 세면 안 됨).
+    recorded_at_end = "_record_kw(kw, len(shops)" in src and \
+        src.index("_record_kw(kw,") < src.index("seen_keywords.add(kw)\n        pending_keywords.pop(0)")
+
+    ok = has_bucket and aggregate_only and persisted and resumes and recorded_at_end
+    check("56 검색어 길이별 성과 측정", ok,
+          f"구간함수{has_bucket} 누적만{aggregate_only} 저장포함{persisted} "
+          f"이어누적{resumes} 완료시점기록{recorded_at_end}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
