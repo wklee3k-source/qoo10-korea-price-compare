@@ -28,6 +28,11 @@ on:
         description: "검색어 1개당 최대 몇 개 상점까지 처리할지(비워두면 제한없음)"
         required: false
         type: string
+      run_learn_decisions:
+        description: "검수 확정 결과에서 브랜드/표기 사전을 학습해 main에 반영"
+        required: false
+        type: boolean
+        default: false
       merge_threshold:
         description: "발굴이 이만큼 새로 쌓이면 자동으로 통합을 실행(0이면 자동통합 끔). 기본 500"
         required: false
@@ -1517,3 +1522,59 @@ jobs:
           fi
           git diff --cached --quiet || git commit -m "Auto: build comparison excel"
           git push
+
+  learn_from_decisions:
+    # [검수 피드백 루프] 검수페이지에서 사진을 고르면 '이 큐텐 상품 = 이
+    # 한국 상품'이라는 확정이 comparison/decisions/ 에 쌓인다. 그 파일을
+    # 읽어 브랜드 대응과 표기 변형을 사전에 되먹인다. 지금까지는 판단이
+    # 쌓이기만 하고 파이프라인에 반영되지 않았다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_learn_decisions
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch discovery/verified snapshots (read-only)
+        run: |
+          mkdir -p output
+          # 다른 브랜치의 데이터는 얕게 받아 파일만 꺼낸다(.git 비대화 방지).
+          git fetch --depth 1 origin discovery-live \
+            && git show FETCH_HEAD:output/discovery_state.json > output/discovery_state.json || echo "[경고] 발굴본 없음"
+          git fetch --depth 1 origin hwahae-live \
+            && git show FETCH_HEAD:output/hwahae_verified_39.json > output/hwahae_verified_39.json || echo "[경고] 검증본 없음"
+
+      - name: Learn brand/alias from confirmed decisions
+        working-directory: src
+        run: |
+          mkdir -p ../comparison/decisions
+          python learn_from_decisions.py \
+            --decisions ../comparison/decisions \
+            --decisions ../output/review \
+            --discovery ../output/discovery_state.json \
+            --verified ../output/hwahae_verified_39.json \
+            --brand-dict ../data/brand_translations_learned.json \
+            --alias-dict ../data/name_alias_learned.json
+
+      - name: Commit learned dictionaries
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/brand_translations_learned.json data/name_alias_learned.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "새로 배운 것이 없어 커밋 생략"
+          else
+            git commit -m "Auto: 검수 확정 결과에서 브랜드/표기 사전 학습"
+            for i in 1 2 3 4 5; do
+              git push origin main && break
+              sleep $((RANDOM % 5 + 1)); git pull --rebase origin main -q || true
+            done
+          fi

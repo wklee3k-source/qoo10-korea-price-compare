@@ -551,6 +551,41 @@ def t51_hold_review_flag():
           f"플래그가드{guard} 생성건너뜀{skips_build} docs정리{clears_docs}")
 
 
+# --------------------- #52 검수 피드백 루프(브랜드/표기 사전 학습)
+#  검수페이지의 확정 결과가 comparison/decisions/ 에 쌓이는데 아무도 읽지
+#  않고 있었다. 확정 건에서 브랜드 대응과 표기 변형을 사전에 되먹인다.
+#  사전 오염이 가장 무서운 실패다 — 한 번 잘못 들어가면 이후 모든 판정에
+#  퍼지고, 어디서 틀어졌는지 추적이 어렵다. 그래서 (1) 확정+비제외 건만
+#  쓰고 (2) 기존 항목은 덮어쓰지 않으며 (3) 표기 변형은 나머지가 거의 다
+#  일치하고 딱 한 토큰씩만 다를 때만 받는다.
+def t52_decision_feedback_loop():
+    script = SRC / "learn_from_decisions.py"
+    if not script.exists():
+        check("52 검수 피드백 루프", False, "learn_from_decisions.py 없음"); return
+    src = script.read_text(encoding="utf-8")
+    wf = WF.read_text(encoding="utf-8")
+    import yaml as _yaml
+    d = _yaml.safe_load(wf)
+
+    only_confirmed = 'r.get("match_confirmed") and not r.get("excluded")' in src
+    no_overwrite = ("if jp_brand in brand_dict or jp_brand in added:" in src
+                    and "if key in alias_dict or key in added:" in src)
+    strict_alias = "if len(l_only) != 1 or len(r_only) != 1:" in src
+    # 번역이 덜 된 값이 사전에 들어가면 그대로 굳는다.
+    kana_guard = "KANA_RE.search(kr_brand)" in src
+
+    job = d["jobs"].get("learn_from_decisions", {})
+    has_job = bool(job)
+    reads_both = wf.count("--decisions") >= 2      # 신규 경로 + 예전 경로
+    readonly_other_branches = "--depth 1 origin discovery-live" in wf and "git show FETCH_HEAD" in wf
+
+    ok = (only_confirmed and no_overwrite and strict_alias and kana_guard
+          and has_job and reads_both and readonly_other_branches)
+    check("52 검수 피드백 루프(사전 학습)", ok,
+          f"확정건만{only_confirmed} 덮어쓰기방지{no_overwrite} 엄격변형{strict_alias} "
+          f"가나차단{kana_guard} 잡{has_job} 양쪽경로{reads_both} 타브랜치읽기전용{readonly_other_branches}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
