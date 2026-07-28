@@ -401,6 +401,34 @@ def t46_permanent_source_failure_disables_source():
           f"패턴{has_patterns} 집합{has_disabled} 재시도안함{not_retried} 호출스킵{skips_call}")
 
 
+# --------------------- #47 Exa는 보조 호출(무료 크레딧 소진 방지)
+#  Exa는 무료 월 크레딧($10 = 약 1,428건)이 정해져 있다. 상품마다 무조건
+#  부르면 며칠 만에 소진되고 402로 검증이 멈춘다(실측 2026-07-28).
+#  무료 3곳(화해/무신사/네이버)을 먼저 돌리고, 정족수를 채웠고 화해도
+#  있으면 Exa를 건너뛴다. 단, 화해가 없을 때는 반드시 불러야 한다 —
+#  Exa가 찾아준 이름으로 화해를 재검색하는 경로가 브랜드정보를 되살리는
+#  유일한 수단이기 때문이다.
+def t47_exa_called_as_fallback_only():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    body = src.split("def run_batch(")[1]
+
+    exa_call = '_safe_search(_search_exa'
+    hwahae_call = '_safe_search(_search_hwahae, kw_cleaned'
+    if exa_call not in body or hwahae_call not in body:
+        check("47 Exa 보조호출", False, "호출부를 못 찾음"); return
+
+    # 무료 소스가 Exa보다 먼저 호출돼야 '이미 합의했는지'를 알 수 있다.
+    free_first = body.index(hwahae_call) < body.index(exa_call)
+    # 생략 조건이 정족수 상수와 화해 존재를 함께 봐야 한다.
+    has_guard = "len(_free_sources) >= MIN_CONSENSUS_SOURCES and cand_hwahae" in body
+    # 무조건 호출하던 옛 코드가 남아있으면 안 된다.
+    no_unconditional = body.count(exa_call) == 1
+
+    ok = free_first and has_guard and no_unconditional
+    check("47 Exa 보조호출(크레딧 절약)", ok,
+          f"무료우선{free_first} 생략조건{has_guard} 무조건호출없음{no_unconditional}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

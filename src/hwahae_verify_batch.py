@@ -482,11 +482,29 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         print(f"[상품] {item['goods_no']}: {kw_raw}")
         tech_failures: list[str] = []  # 이번 상품 처리중 기술적으로 실패한 소스 이름들
 
-        # 2차: 4곳에 각각 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
-        cand_exa = _safe_search(_search_exa, kw_raw, failures=tech_failures, label="Exa")
+        # 2차: 각 소스에 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
+        #
+        # [v3.2.0 — Exa를 '보조 호출'로 전환] Exa는 무료 월 크레딧($10 =
+        # 약 1,428건)이 정해져 있어서, 상품마다 무조건 부르면 한 달 물량을
+        # 며칠 만에 소진한다(실측 2026-07-28: 1,507건 검증하고 402로 정지).
+        # 무료 3곳(화해/무신사/네이버)을 먼저 돌리고, 이미 채택 조건을
+        # 만족했으면 Exa는 부르지 않는다.
         cand_hwahae = _safe_search(_search_hwahae, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="화해")
         cand_musinsa = _safe_search(_search_musinsa, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="무신사")
         cand_naver = _safe_search(_search_naver, kw_cleaned, known_brand, failures=tech_failures, label="네이버")
+
+        # [Exa를 부르는 조건]
+        #  ① 무료 3곳이 합의 정족수(MIN_CONSENSUS_SOURCES)를 못 채웠거나,
+        #  ② 화해를 못 찾았을 때. 화해가 없으면 브랜드정보가 통째로 빠지는데,
+        #     바로 아래 '[근본수정]' 블록이 Exa가 찾아준 정확한 이름으로 화해를
+        #     재검색해서 그걸 되살리는 유일한 경로다.
+        # 실측 1,507건 기준 21.6%에서 Exa 호출이 생략된다.
+        _free_sources = {c["source"] for c in (cand_hwahae, cand_musinsa, cand_naver) if c}
+        if len(_free_sources) >= MIN_CONSENSUS_SOURCES and cand_hwahae:
+            cand_exa = None
+            print(f"    [Exa생략] 무료 {len(_free_sources)}곳이 이미 합의 — Exa 크레딧 절약")
+        else:
+            cand_exa = _safe_search(_search_exa, kw_raw, failures=tech_failures, label="Exa")
 
         # [근본수정] Exa는 상품명은 정확히 찾아줘도 브랜드정보를 절대 안 준다
         # (구조적 한계). 화해 초벌검색(kw_cleaned)이 실패해서 cand_hwahae가
