@@ -36232,5 +36232,83 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1188182768",
+    "translated_kr": "화이트 홀릭 크림 50ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197007088",
+    "translated_kr": "팔로 초강력 진정 토너 패드 대용량 150장 민감성 피부 저자극 홍조 제거 쿨링 급속냉각 피부 트러블 응급 모공 수분 폭탄 고대 곡물 팩 초밀착 쭉",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207298088",
+    "translated_kr": "포켓몬 콜라보 글로우 턴 3D 볼륨 샴푸 대용량 500ml 기획 세트(+100ml+키홀더 파우치)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "볼드 볼륨 마스카라"
+    },
+    "brand": "캐시캣 (CathyCat)",
+    "name": "볼드 볼륨 마스카라",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1203221705",
+    "translated_kr": "한국화장품 애즈렌 수저 선 에센스 SPF50+ PA+++ 75g×2개 카모마일 플라워 워터 47% 함유",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "73선에센스 [SPF50+/PA++++]"
+    },
+    "brand": "메이베나 (MAYBENA)",
+    "name": "73선에센스 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
