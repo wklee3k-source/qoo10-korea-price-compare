@@ -276,6 +276,76 @@ def t40_shard_divisor_matches_worker_count():
 
 
 
+# --------------------- #43 발굴 검색어 고갈 자동 보충 (워커 영구정지 사고)
+#  워크플로의 시드 분배 단계는 "브랜치 전용 상태파일이 없을 때" 한 번만
+#  돌아서, 파일이 이미 있는 워커의 pending_keywords가 0이 되면 그 워커는
+#  영원히 빈 실행만 반복한다. 실측 2026-07-28: 워커0 2,237개 / 워커1 0개
+#  (발굴 처리량 50% 손실), 통합본 pending도 0이라 재분배할 재료조차 없었다.
+#  수확본에서 새 검색어를 뽑아 채우는 단계가 반드시 살아있어야 한다.
+def t43_keyword_refill_when_exhausted():
+    wf = WF.read_text(encoding="utf-8")
+    import yaml as _yaml
+    d = _yaml.safe_load(wf)
+
+    script = SRC / "refill_discovery_keywords.py"
+    has_script = script.exists()
+    src = script.read_text(encoding="utf-8") if has_script else ""
+
+    job = d["jobs"].get("discover_low_review_shops_parallel", {})
+    steps = job.get("steps", [])
+    names = [str(st.get("name", "")) for st in steps]
+    has_pool_step = any("harvest pool" in n.lower() for n in names)
+    has_refill_step = any("refill" in n.lower() for n in names)
+
+    # 보충 배정은 인덱스가 아니라 결정적 해시여야 한다 — 워커마다 다른
+    # 시점에 돌기 때문에 인덱스 기준이면 같은 검색어를 둘이 집어간다.
+    deterministic = "md5" in src and "% workers" in src
+
+    # --workers 값이 matrix 워커수와 일치해야 한다(#40과 같은 부류의 사고).
+    n_workers = len(job.get("strategy", {}).get("matrix", {}).get("branch", []))
+    declared = {int(m) for m in re.findall(r"--workers (\d+)", wf)}
+    workers_match = bool(n_workers) and declared == {n_workers}
+
+    # 수확본은 읽기 전용이어야 한다(발굴이 수확 상태를 건드리면 안 됨).
+    # 쓰기는 자기 워커 상태파일 하나뿐이고, 그것도 원자적 교체여야 한다.
+    write_calls = src.count('"w", encoding')
+    pool_readonly = write_calls == 1 and "os.replace(tmp_path, state_path)" in src
+
+    # 이미 쓴 검색어를 다시 넣으면 같은 상점을 무한 재방문한다.
+    excludes_used = "collect_used_keywords" in src and "seen_keywords" in src
+
+    ok = (has_script and has_pool_step and has_refill_step and deterministic
+          and workers_match and pool_readonly and excludes_used)
+    check("43 발굴 검색어 고갈 자동보충",
+          ok,
+          f"스크립트{has_script} 수확본받기{has_pool_step} 보충단계{has_refill_step} "
+          f"결정적해시{deterministic} 워커수일치{workers_match}({n_workers} vs {sorted(declared)}) "
+          f"수확읽기전용{pool_readonly} 기존검색어제외{excludes_used}")
+
+
+# --------------------- #44 검증 워커수 변경시 재샤딩 (중복검증/조기완료 사고)
+#  검증 샤드 파일은 "파일이 없을 때만" 만들어졌다. 그래서 워커수를 바꾸면
+#  (1 -> 3) 예전 나눗셈(% 1)으로 만들어진 샤드0 파일에 다른 샤드 몫이
+#  그대로 남아, DONE 카운트가 부풀어 조기 '완료' 판정이 나고 같은 상품을
+#  두 워커가 중복 검증한다. 승계 단계는 파일 존재와 무관하게 매번 돌면서
+#  자기 몫만 남겨야 한다.
+def t44_verify_reshard_on_worker_change():
+    wf = WF.read_text(encoding="utf-8")
+    block = wf.split("이미 검증된 것 승계")[1].split("TOTAL=$(")[0] if "이미 검증된 것 승계" in wf else ""
+
+    # 조건부 실행(if [ ! -f ... ])이면 재샤딩이 영영 안 일어난다.
+    not_conditional = "[ ! -f ../output/hwahae_verified_" not in block
+    # 자기 몫만 남기는 필터가 있어야 한다.
+    has_filter = "crc32" in block and "== $S" in block
+    # 기존 통합본과 자기 파일을 둘 다 재료로 써야 한다(둘 중 하나만 보면 유실).
+    reads_both = "hwahae_verified_39.json" in block and "hwahae_verified_${S}.json" in block
+
+    ok = bool(block) and not_conditional and has_filter and reads_both
+    check("44 검증 워커수 변경시 재샤딩",
+          ok,
+          f"승계블록{bool(block)} 무조건실행{not_conditional} 몫필터{has_filter} 양쪽읽기{reads_both}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
