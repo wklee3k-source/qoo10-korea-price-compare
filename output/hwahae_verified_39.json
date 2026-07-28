@@ -39534,5 +39534,125 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1166542583",
+    "translated_kr": "포맨 이지 버튼 셀프 다운 퍼머 모든 머리결용 본품 20ml + 리필 20ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1189316227",
+    "translated_kr": "[PDRN 한정 세트] 더마힐러 포어 타이트닝 앰플 30ml + 토너팩 2장 X 6개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1173120891",
+    "translated_kr": "마녀공장 퓨어 클렌징 티슈",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퓨어 클렌징 티슈",
+      "musinsa": "[2+2] 퓨어 클렌징 티슈 20매"
+    },
+    "brand": "마녀공장 (manyo)",
+    "name": "퓨어 클렌징 티슈",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1201547339",
+    "translated_kr": "퍼퓸 핸드크림 [헬로키티] 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼퓸드 핸드크림 망고씨드버터 [플라워샵]"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "퍼퓸드 핸드크림 망고씨드버터 [플라워샵]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158151170",
+    "translated_kr": "【NEW】 어성초 센텔라 레드스팟 크림 한국화장품 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 센텔라 레드 스팟 크림",
+      "naver": "아누아 어성초 센텔라 레드 스팟 크림 연고 30g (+30g 추가) 기획"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 센텔라 레드 스팟 크림",
+    "volume": "30g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "28800",
+    "mall": "시손느파세",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12707301563",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9025181/90251812487.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025181/90251812487.2.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/12707301563"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8987824/89878247169.2.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/12333736452"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051716/90517160117.1.jpg",
+        "mall": "비래유통",
+        "link": "https://smartstore.naver.com/main/products/12972649107"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
