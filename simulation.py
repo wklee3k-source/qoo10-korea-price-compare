@@ -496,6 +496,38 @@ def t49_translation_markdown_roundtrip():
           f"가나차단{kana_guard} 덮어쓰기방지{no_overwrite} 빈칸건너뜀{empty_skip} 워크플로연결{in_workflow}")
 
 
+# --------------------- #50 임계치 자동통합 + 번역요청서 분할
+#  발굴이 N건 쌓이면 통합을 자동 호출한다. 세 가지가 반드시 있어야 한다.
+#  (1) 기준선(merge_baseline.json) — 통합이 샤드 파일을 비우지 않으므로,
+#      "지난 통합 시점의 샤드 합계"를 남겨야 신규분을 셀 수 있다.
+#  (2) 중복 트리거 방지 — 워커 둘이 거의 동시에 임계치를 넘으면 통합이
+#      두 번 떠서 20분씩 헛돈다.
+#  (3) 번역요청서 분할 — 500줄을 한 장에 주면 응답이 약 27k 토큰이라
+#      중간에 잘리거나 번호가 어긋난다(과거 API 번역에서 실제로 응답이
+#      잘려 2,035건이 일본어인 채 굳은 사고가 있었다).
+def t50_threshold_merge_and_chunking():
+    wf = WF.read_text(encoding="utf-8")
+    exp = (SRC / "export_translation_request.py").read_text(encoding="utf-8")
+
+    has_baseline_write = "merge_baseline.json" in wf and "shard_total_at_merge" in wf
+    has_threshold = "merge_threshold" in wf and "NEW_COUNT" in wf
+    # 0이면 자동통합을 끌 수 있어야 한다(수동 운영으로 되돌릴 여지).
+    can_disable = '"$THRESHOLD" != "0"' in wf
+    dedup = "merge_discovery_shards" in wf.split("[자동통합]")[1] if "[자동통합]" in wf else False
+
+    chunked = "chunk: int = 200" in exp and "chunks = [pending[i:i + chunk]" in exp
+    # 장수가 줄었을 때 옛 뒷장이 남으면 이미 끝난 목록을 다시 번역하게 된다.
+    clears_stale = 'glob(f"{stem}*{suffix}")' in exp and "unlink()" in exp
+    # 번호는 장이 넘어가도 이어져야 한다(장마다 1번부터면 반영 시 충돌).
+    continuous = "base_no" in exp
+
+    ok = (has_baseline_write and has_threshold and can_disable and dedup
+          and chunked and clears_stale and continuous)
+    check("50 임계치 자동통합/번역요청 분할", ok,
+          f"기준선{has_baseline_write} 임계치{has_threshold} 끌수있음{can_disable} "
+          f"중복방지{dedup} 분할{chunked} 낡은장정리{clears_stale} 번호연속{continuous}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

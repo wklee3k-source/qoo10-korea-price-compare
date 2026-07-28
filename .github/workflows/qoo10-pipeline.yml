@@ -28,6 +28,14 @@ on:
         description: "검색어 1개당 최대 몇 개 상점까지 처리할지(비워두면 제한없음)"
         required: false
         type: string
+      merge_threshold:
+        description: "발굴이 이만큼 새로 쌓이면 자동으로 통합을 실행(0이면 자동통합 끔). 기본 500"
+        required: false
+        type: string
+      translation_chunk:
+        description: "번역요청서 한 장에 담을 줄 수. 기본 200 (500줄을 한 장에 주면 응답이 잘린다)"
+        required: false
+        type: string
       discovery_parallel:
         description: "병렬(matrix 4개 브랜치)로 돌릴지 — 각자 자기 전용 파일에만 저장(병합 안 함). 병합은 run_merge_discovery로 별도 실행"
         required: false
@@ -451,6 +459,61 @@ jobs:
             if [ "$PUSHED" != "1" ]; then
               echo "::warning::브랜치 $B: 40회 재시도에도 push 실패. 로컬 파일은 다음 반복에서 이어서 커밋 시도됨"
             fi
+
+            # ---- [v3.5.0] 임계치 자동통합 ----------------------------------
+            # 지난 통합 이후 새로 쌓인 상품이 THRESHOLD를 넘으면 통합을 부른다.
+            # 통합은 시작할 때 발굴 run을 취소하므로(push 경합 방지) 이 run은
+            # 곧 죽는다 — 정상 동작이다. 진행분은 이미 커밋됐고, 통합이
+            # 끝나면 발굴을 다시 켠다.
+            THRESHOLD="${{ inputs.merge_threshold || '500' }}"
+            if [ "$THRESHOLD" != "0" ]; then
+              NEW_COUNT=$(python3 -c "
+            import json, pathlib, glob
+            total = 0
+            for f in glob.glob('../output/discovery_state_*.json'):
+                try:
+                    total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+                except Exception:
+                    pass
+            base = 0
+            bp = pathlib.Path('../output/merge_baseline.json')
+            if bp.exists():
+                try:
+                    base = json.loads(bp.read_text()).get('shard_total_at_merge', 0)
+                except Exception:
+                    base = 0
+            print(max(total - base, 0))
+            ")
+              echo "[자동통합] 지난 통합 이후 신규 $NEW_COUNT건 / 임계 $THRESHOLD건"
+              if [ "$NEW_COUNT" -ge "$THRESHOLD" ]; then
+                # 이미 통합이 돌고 있으면 부르지 않는다 — 워커 2개가 거의
+                # 동시에 임계치를 넘으면 통합이 두 번 떠서 20분씩 헛돈다.
+                # 진행중/대기중인 다른 Qoo10 run 중에 통합 job이 있는지 본다.
+                # (기존 '일시정지' 로직과 같은 방식 — 검증 전용 run은
+                # 통합 job이 없으므로 여기 걸리지 않는다.)
+                MERGING=0
+                RUNS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=20")
+                IDS=$(echo "$RUNS_JSON" | jq -r --argjson me "${{ github.run_id }}" \
+                  '.workflow_runs[] | select(.status=="in_progress" or .status=="queued") | select(.id != $me) | select(.name=="Qoo10 Pipeline") | .id')
+                for RID in $IDS; do
+                  N=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                    "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/jobs?per_page=30" \
+                    | jq -r '[.jobs[] | select(.conclusion != "skipped") | select(.status != "completed") | select(.name | contains("merge_discovery_shards"))] | length')
+                  MERGING=$((MERGING + ${N:-0}))
+                done
+                if [ "${MERGING:-0}" != "0" ]; then
+                  echo "[자동통합] 이미 통합이 진행중 — 트리거 생략"
+                else
+                  echo "[자동통합] 임계치 도달 — 통합을 호출한다(이 run은 곧 취소됨)"
+                  curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                    -H "Accept: application/vnd.github+json" \
+                    "https://api.github.com/repos/${{ github.repository }}/actions/workflows/qoo10-pipeline.yml/dispatches" \
+                    -d '{"ref":"main","inputs":{"run_merge_discovery":"true"}}'
+                  sleep 60
+                fi
+              fi
+            fi
           done
 
   harvest_full_catalog_parallel:
@@ -843,7 +906,22 @@ jobs:
             # 유실됐다(git diff --cached --quiet가 "변경없음"으로 잘못
             # 보고함 — 사실은 아무것도 안 올라가서 비교할 게 없었을 뿐).
             # archive/는 있을 때만 별도로 add한다.
-            git add ../output/discovery_state.json ../output/progress_history.json 2>/dev/null || true
+            # [v3.5.0] 자동통합 기준선 기록 — 발굴 워커가 "지난 통합 이후
+            # 몇 건이 새로 쌓였는지"를 알려면 통합 시점의 샤드 합계를
+            # 남겨둬야 한다. 통합 자체가 샤드 파일을 비우지 않기 때문이다.
+            python3 -c "
+            import json, pathlib, glob
+            total = 0
+            for f in glob.glob('../output/discovery_state_*.json'):
+                try:
+                    total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+                except Exception:
+                    pass
+            pathlib.Path('../output/merge_baseline.json').write_text(
+                json.dumps({'shard_total_at_merge': total}), encoding='utf-8')
+            print(f'[기준선] 통합 시점 샤드 합계 {total}건')
+            "
+            git add ../output/discovery_state.json ../output/progress_history.json ../output/merge_baseline.json 2>/dev/null || true
             [ -d ../output/archive ] && git add ../output/archive/ 2>/dev/null || true
             git diff --cached --quiet && { echo "합칠 변경사항 없음"; break; }
             git commit -m "Auto: merge discovery shards (1.5단계)"
@@ -863,8 +941,8 @@ jobs:
           # [v3.4.0] 엑셀과 함께, 다른 Claude 창에 '파일 전체를 그대로
           # 붙여넣기만' 하면 되는 마크다운도 뽑는다. 지시문·성분어 용어집·
           # 출력형식이 파일 안에 들어있어서 사용자가 따로 쓸 말이 없다.
-          python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md
-          git add ../output/미번역상품.xlsx ../output/번역요청.md 2>/dev/null || true
+          python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md "" "${{ inputs.translation_chunk || '200' }}"
+          git add ../output/미번역상품.xlsx ../output/번역요청*.md 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Auto: export untranslated products to Excel"
             for i in $(seq 1 10); do
@@ -874,8 +952,8 @@ jobs:
               git reset --hard origin/discovery-live -q 2>/dev/null || true
               git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
               python export_untranslated.py ../output/discovery_state.json ../output/미번역상품.xlsx
-              python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md
-              git add ../output/미번역상품.xlsx ../output/번역요청.md 2>/dev/null || true
+              python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md "" "${{ inputs.translation_chunk || '200' }}"
+              git add ../output/미번역상품.xlsx ../output/번역요청*.md 2>/dev/null || true
               git diff --cached --quiet || git commit -m "Auto: export untranslated products to Excel (재시도)"
             done
           fi

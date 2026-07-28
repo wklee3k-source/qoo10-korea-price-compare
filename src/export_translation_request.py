@@ -52,7 +52,15 @@ INSTRUCTION = """아래 표는 큐텐재팬에 올라온 한국 화장품의 일
 """
 
 
-def export(state_path: str, out_path: str, limit: int | None = None) -> int:
+def export(state_path: str, out_path: str, limit: int | None = None,
+           chunk: int = 200) -> int:
+    """미번역 목록을 chunk건씩 잘라 여러 장으로 뽑는다.
+
+    [왜 자르나] 500줄을 한 장으로 주면 입력은 문제없지만(약 32k 토큰)
+    **응답이 27k 토큰**이 된다. 이 길이는 한 번의 답변에서 잘리거나
+    중간부터 번호가 어긋나기 쉽다. 200줄이면 응답이 약 11k 토큰이라
+    안전하고, 중간에 실패해도 그 장만 다시 하면 된다.
+    """
     path = Path(state_path)
     if not path.exists():
         print(f"[SKIP] {path} 없음")
@@ -66,48 +74,58 @@ def export(state_path: str, out_path: str, limit: int | None = None) -> int:
         pending = pending[:limit]
 
     print(f"[INFO] 전체 {len(products)}건 중 미번역 {total_pending}건")
+
+    out = Path(out_path)
+    stem, suffix = out.stem, out.suffix or ".md"
+    # 이전 회차 파일을 먼저 지운다 — 안 지우면 이미 끝난 목록이 남아
+    # 다시 번역하게 되고, 장수가 줄었을 때 옛 뒷장이 유령처럼 남는다.
+    for old_file in out.parent.glob(f"{stem}*{suffix}"):
+        old_file.unlink()
+
     if not pending:
         print("[INFO] 미번역 상품 없음 — 번역요청 파일 생성 생략")
-        # 남은 게 없으면 예전 파일을 지운다. 안 지우면 이미 끝난 목록을
-        # 다시 번역하게 된다.
-        out = Path(out_path)
-        if out.exists():
-            out.unlink()
-            print(f"[INFO] 이전 {out.name} 삭제")
         return 0
 
-    lines = [
-        "# 번역 요청",
-        "",
-        f"미번역 {total_pending}건 중 {len(pending)}건. "
-        "**이 파일 전체를 복사해서 다른 Claude 창에 붙여넣으세요.**",
-        "",
-        "---",
-        "",
-        INSTRUCTION,
-        "",
-        "**목록**",
-        "",
-        "```",
-    ]
-    index_map = {}
-    for i, p in enumerate(pending, 1):
-        title = (p.get("title") or "").replace("\n", " ").replace("|", "/").strip()
-        lines.append(f"{i}|{title}")
-        index_map[i] = p.get("goods_no")
-    lines += [
-        "```",
-        "",
-        "---",
-        "",
-        "<!-- 번호↔상품번호 대응표. 반영할 때 쓰므로 지우지 마세요. -->",
-        "<!-- INDEX_MAP " + json.dumps(index_map, ensure_ascii=False) + " -->",
-        "",
-    ]
+    chunks = [pending[i:i + chunk] for i in range(0, len(pending), chunk)]
+    n_files = len(chunks)
+    base_no = 0
+    for idx, part in enumerate(chunks, 1):
+        lines = [
+            f"# 번역 요청 {idx}/{n_files}",
+            "",
+            f"미번역 {total_pending}건 중 이 장은 {len(part)}건 "
+            f"({base_no + 1}~{base_no + len(part)}번). "
+            "**이 파일 전체를 복사해서 다른 Claude 창에 붙여넣으세요.**",
+            "",
+            "---",
+            "",
+            INSTRUCTION,
+            "",
+            "**목록**",
+            "",
+            "```",
+        ]
+        index_map = {}
+        for i, p in enumerate(part, base_no + 1):
+            title = (p.get("title") or "").replace("\n", " ").replace("|", "/").strip()
+            lines.append(f"{i}|{title}")
+            index_map[i] = p.get("goods_no")
+        lines += [
+            "```",
+            "",
+            "---",
+            "",
+            "<!-- 번호↔상품번호 대응표. 반영할 때 쓰므로 지우지 마세요. -->",
+            "<!-- INDEX_MAP " + json.dumps(index_map, ensure_ascii=False) + " -->",
+            "",
+        ]
+        name = out.parent / (f"{stem}_{idx:02d}{suffix}" if n_files > 1 else f"{stem}{suffix}")
+        name.write_text("\n".join(lines), encoding="utf-8")
+        print(f"[OK] {name.name} — {len(part)}건")
+        base_no += len(part)
 
-    Path(out_path).write_text("\n".join(lines), encoding="utf-8")
     ja_only = sum(1 for p in pending if not HANGUL_RE.search(p.get("title") or ""))
-    print(f"[OK] {out_path} 생성 — {len(pending)}건 (일본어만 {ja_only}건)")
+    print(f"[완료] {n_files}장 / 총 {len(pending)}건 (일본어만 {ja_only}건)")
     return len(pending)
 
 
@@ -116,4 +134,5 @@ if __name__ == "__main__":
         print(__doc__)
         raise SystemExit(1)
     lim = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].strip() else None
-    export(sys.argv[1], sys.argv[2], lim)
+    ch = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4].strip() else 200
+    export(sys.argv[1], sys.argv[2], lim, ch)
