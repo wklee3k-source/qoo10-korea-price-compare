@@ -18548,5 +18548,234 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210269451",
+    "translated_kr": "[공식 / 병행 수입품 (정규 유통)] 상처 흉터 케어용 실리콘 젤 7g 1개 울트라젤",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1156018704",
+    "translated_kr": "【30g 대용량】울트라 젤 / 흉터 케어 / 비타민C 함유 실리콘 젤 / 한국 공식 정품",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1083146394",
+    "translated_kr": "카로텐 IPMP 블레미시 세럼 팩 패드 80장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "985534908",
+    "translated_kr": "톤 업 UV 프라이머 35g SPF50+ PA++++ 무향료 안면 전신용 자외선 차단제 높은 자외선 차단 땀과 물에 강한 워터프루프 처방 안면 바디 용 자외선 차단제 피부에 부드러운",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "16 아이 뽄드 프라이머"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1131291926",
+    "translated_kr": "제로 모공 1day 세럼, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 모공 원데이 펩타이드 세럼",
+      "naver": "메디큐브 에센스 제로 모공 ONE DAY 세럼 30ml"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로 모공 원데이 펩타이드 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26870",
+    "mall": "팡팡바스켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8059154770",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8560365/85603655093.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8560365/85603655093.jpg",
+        "mall": "팡팡바스켓",
+        "link": "https://smartstore.naver.com/main/products/8059154770"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8951810/89518100478.jpg",
+        "mall": "LV뷰티",
+        "link": "https://smartstore.naver.com/main/products/11973589790"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1197828462",
+    "translated_kr": "브라이트닝 업 선 플러스, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "브라이트닝 업 선 플러스 [SPF50+/PA+++]",
+      "musinsa": "브라이트닝 업 선 플러스 50mLx2개"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "브라이트닝 업 선 플러스 [SPF50+/PA+++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197705949",
+    "translated_kr": "딥 클리어 클렌징 밤, 132ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "딥 클리어 클렌징 밤"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "983100128",
+    "translated_kr": "바디판타지 바디 스프레이 투 화이트 미스트 / 3개 / 236ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디스프레이 [프레시화이트머스크]",
+      "naver": "바디판타지 프래그런스 바디스프레이 화이트티 50ml 3개"
+    },
+    "brand": "바디판타지 (BODYFANTASIES)",
+    "name": "바디스프레이 [프레시화이트머스크]",
+    "volume": "94ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38000",
+    "mall": "지금하루상점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12525838303",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9007034/90070349156.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9007034/90070349156.1.jpg",
+        "mall": "지금하루상점",
+        "link": "https://smartstore.naver.com/main/products/12525838303"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209320507",
+    "translated_kr": "【공식】【신 발매】비타 에자임 버블 필링 + 스크럽 + 폼 3in1 190ml / 비자극 / 필링 + 스크럽 + 폼 + 메이크 리무버 + 버블 팩",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "폼 워시"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196875989",
+    "translated_kr": "【공식】【3종 특가 세트】피토 & 휴먼 줄기세포 스템셀 올인원 100ml 1+1 + PDRN 시카 마스크 5장 / 식물 줄기세포 배양액 / 올인원 도입",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "PDRN 1% 토너 패드"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
