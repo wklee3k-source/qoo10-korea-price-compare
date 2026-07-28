@@ -1384,5 +1384,308 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1190200956",
+    "translated_kr": "크림슨 스카이(폴리시) 8ml #샴페인스파클 #이브닝파티",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "폴리쉬 오일 [화이트유자]",
+      "naver_web": "폴리쉬",
+      "naver_rematch": "팜스테이 시트러스 유자 바이탈라이징 클렌징 오일 200ml, 2개"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1110755534",
+    "translated_kr": "MT 메타트론 화장품 콘투어 에멀전 유액 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "칠자화 유액",
+      "naver": "MT Metatron MT 메타트론 콘투어 에멀전 50ml 보습 유액"
+    },
+    "brand": "황후지화 (Hwanghoozihwa)",
+    "name": "칠자화 유액",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "62990",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13555842175",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110035/91100352542.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110035/91100352542.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/13555842175"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1093334597",
+    "translated_kr": "CHRISTINA 크리스티나 언스트레스 토탈셀러니티 세럼 30mL 미용액 세럼 스킨케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "[셀리맥스] [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml 76008"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1058092233",
+    "translated_kr": "[조합자유][2개세트]멜로우 캄 릴렉스 딥나이트리페어 샴푸 트리트먼트 바디소프 리필 레필 야간미용 보습[기프트래핑 대응]",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "YOLU",
+      "naver_rematch": "요루 이중 거즈원단 면 무형광 바이오워싱 천 꽃무늬 원단 체리 크림"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1073637416",
+    "translated_kr": "바이탈 하이드라 솔루션 하이드로플럼프 워터크림 50ml 1EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바이탈 하이드라 솔루션™ 하이드로 플럼프 워터 크림",
+      "daum": "갠적으로 여름,겨울마다 쓰는 기초템!!",
+      "naver_web": "바이탈 하이드라 솔루션™ 하이드로 플럼프 워터 크림"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "바이탈 하이드라 솔루션™ 하이드로 플럼프 워터 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209892305",
+    "translated_kr": "마스크핏 크리스탈메시 쿠션 15g SPF50+ PA++++ 윤기피부 고밀착 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++",
+      "daum": "2019 ALLURE BEAUTY FAIR",
+      "naver_web": "뷰스타 규리의 촉촉한쿠션"
+    },
+    "brand": "티르티르",
+    "name": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "14850",
+    "mall": "티르티르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10186169049",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+        "mall": "티르티르",
+        "link": "https://smartstore.naver.com/main/products/10186169049"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672459.13.jpg",
+        "mall": "티르티르",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10186169048"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118224/91182242075.jpg",
+        "mall": "굿스킨",
+        "link": "https://smartstore.naver.com/main/products/13637731366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201775475",
+    "translated_kr": "[Q10인기] 올데이타이트 메이크업 세팅 픽스미스트 35ml, 75ml, 120ml/메이크키프미스트 피지 무너짐 방지 보습 화장 스프레이 윤기피부 미니 메이크업픽스",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "워터파크 메이크업 오래 유지하는 꿀팁",
+      "naver_web": "피부 노화를 더 악화시키는 상상도 못할 6가지 요소"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190706746",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "naver": "아누아 PDRN 콜라겐 글로우 페이셜 세럼 하이드레이팅 페이스 미스트 히알루론산 이슬이 1 01 Fl Oz (Pa of 1)",
+      "daum": "9월 주목해야 할 신상 뷰티",
+      "naver_web": "호주에서 Anua PDRN 히알루론산 하이드레이팅 캡슐 미스트 100ml를 구매하세요"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "60300",
+    "mall": "토닥토닥키즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13635117165",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+        "mall": "토닥토닥키즈",
+        "link": "https://smartstore.naver.com/main/products/13635117165"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202269222",
+    "translated_kr": "앰버바닐라 세럼 바디크림, 200g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세럼 바디 크림 [앰버바닐라]",
+      "naver": "[백화점제품] 로라메르시에 세럼 바디 크림 엠버 바닐라, 200ml, 1개",
+      "daum": "명절 밥상처럼 풍요로운 화장대",
+      "naver_web": "로라메르시에 세럼 바디 크림 |"
+    },
+    "brand": "로라메르시에 (LAURAMERCIER)",
+    "name": "세럼 바디 크림 [앰버바닐라]",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "95800",
+    "mall": "엔리비",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12387184239",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8993169/89931694964.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8993169/89931694964.1.jpg",
+        "mall": "엔리비",
+        "link": "https://smartstore.naver.com/main/products/12387184239"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8869011/88690115875.9.jpg",
+        "mall": "HILUX",
+        "link": "https://smartstore.naver.com/main/products/11145605553"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002331/90023316451.jpg",
+        "mall": "마리공주뷰티",
+        "link": "https://smartstore.naver.com/main/products/12478805626"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204443091",
+    "translated_kr": "프리미엄 염색 3+3 리필 기획 3종 택1",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "씨드비 프리미엄 물염색 3+3리필기획 3종 택1",
+      "daum": "✅롯데마트 전단광고 전단지 세일 품목",
+      "naver_web": "씨드비 프리미엄 물염색 3+3리필기획 3종 택1"
+    },
+    "brand": "씨드비",
+    "name": "씨드비 프리미엄 물염색 3+3리필기획 3종 택1",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "42300",
+    "mall": "리점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13667288330",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121179/91211799238.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121179/91211799238.jpg",
+        "mall": "리점",
+        "link": "https://smartstore.naver.com/main/products/13667288330"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
