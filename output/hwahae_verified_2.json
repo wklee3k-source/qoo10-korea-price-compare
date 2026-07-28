@@ -14381,5 +14381,265 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190643492",
+    "translated_kr": "클리니크 테이크 더 데이 오프 클렌징 밤",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "테이크 더 데이 오프 클렌징 밤",
+      "naver": "크리니크 테이크 더 데이 오프 차콜 클렌징 밤 30ml"
+    },
+    "brand": "크리니크 (CLINIQUE)",
+    "name": "테이크 더 데이 오프 클렌징 밤",
+    "volume": "125ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "8500",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000180066",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5945367/59453676131.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5945367/59453676131.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000180066"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8857543/88575436444.jpg",
+        "mall": "뷰티홀세일",
+        "link": "https://smartstore.naver.com/main/products/11030930237"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204850730",
+    "translated_kr": "더말로지카 콜로이드 마스크 베이스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜로이달 마스크 베이스",
+      "naver": "더말로지카 콜로이드 마스크 베이스 177ml"
+    },
+    "brand": "더말로지카 (dermalogica)",
+    "name": "콜로이달 마스크 베이스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "120000",
+    "mall": "BLUE CHERRY",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13502806153",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104731/91047316505.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104731/91047316505.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/13502806153"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1014154934",
+    "translated_kr": "래디언썸100 마이크로 플루이다이저 토너 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209326507",
+    "translated_kr": "프라임 어드밴서 오리지널 에너지 100 앰플 듀오 기획 세트 / 30ml + 30ml / 윤기·탄력 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "오휘 프라임 어드밴서 오리지널 에너지 100 앰플 듀오 세럼 기획 (기초 화장품 세트)"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1182454757",
+    "translated_kr": "148ml 모공 케어 클렌징 솔루션",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1120577790",
+    "translated_kr": "섬유 향수 화이트 코튼 70ml 패브릭미스트",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "로에르센트 섬유향수 페브릭 퍼퓸 50ml",
+      "naver": "실버디자인 500ml 섬유향수 패브릭미스트 화이트머스크탈취제 오도르섬유향수다우니코튼"
+    },
+    "brand": "수솝",
+    "name": "로에르센트 섬유향수 페브릭 퍼퓸 50ml",
+    "volume": "",
+    "source": "musinsa",
+    "obsolete": null,
+    "sale": null,
+    "price": "9200",
+    "mall": "아이실버스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12702598288",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9024710/90247109212.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9024710/90247109212.jpg",
+        "mall": "아이실버스토어",
+        "link": "https://smartstore.naver.com/main/products/12702598288"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1110441674",
+    "translated_kr": "NMN 텐션 업 선세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "NMN 텐션 업 선세럼 [SPF50+/PA++++]",
+      "musinsa": "NMN 엔엠엔 텐션 업 선 세럼 50ml",
+      "naver": "[포카A세트] 메이크프렘 NMN 텐션 업 선 세럼 SPF 50+ PA++++ 50ml, 1개"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "NMN 텐션 업 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "16120",
+    "mall": "메이크프렘",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13034852003",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9057936/90579363095.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9057936/90579363095.1.jpg",
+        "mall": "메이크프렘",
+        "link": "https://smartstore.naver.com/main/products/13034852003"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1169779070",
+    "translated_kr": "PDRN 핑크톤업 선크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 핑크 톤업 선크림 [SPF50+/PA++++]",
+      "naver": "PDRN 핑크 톤업 선크림"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "PDRN 핑크 톤업 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25800",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2196&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5301891/53018913083.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5301891/53018913083.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2196&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6014421/60144211025.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000236819"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9018042/90180429705.jpg",
+        "mall": "마리공주뷰티",
+        "link": "https://smartstore.naver.com/main/products/12635918799"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=2196&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
+  },
+  {
+    "goods_no": "1136050411",
+    "translated_kr": "[오징어게임]브링그린 징크 더카 트러블 세럼 25ml 한 그릇 더 기획 (+25ml+오징어게임 2 공기놀이)/징크 더카 비 세럼/공지/오징어게임 2",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1198986499",
+    "translated_kr": "CH 밴 크로놀로지스트 1000ml 샴푸 스칼프 스칼프샴푸 헤어샴푸 펌프 포함 살롱 전매 업무용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
