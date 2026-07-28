@@ -2961,5 +2961,286 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1171040599",
+    "translated_kr": "젠틀 리프레싱 바디워시 1L / 대용량 / 민감성 피부용 / 저자극",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "젠틀 민감성 수분 바디워시 [리프레싱]",
+      "naver": "[세타필] 울트라 젠틀 리프레싱 고보습 바디워시 1L 1개",
+      "daum": "세타필 울트라 젠틀 리프레싱 바디워시, , 1개",
+      "naver_web": "젠틀 민감성 수분 바디워시 리프레싱"
+    },
+    "brand": "세타필 (Cetaphil)",
+    "name": "젠틀 민감성 수분 바디워시 [리프레싱]",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "18100",
+    "mall": "홍아네 슈퍼마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11664846207",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8920935/89209356674.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920935/89209356674.jpg",
+        "mall": "홍아네 슈퍼마켓",
+        "link": "https://smartstore.naver.com/main/products/11664846207"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920925/89209250722.jpg",
+        "mall": "재현이의 쇼핑생활",
+        "link": "https://smartstore.naver.com/main/products/11664740255"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079810/90798103931.jpg",
+        "mall": "에바다.",
+        "link": "https://smartstore.naver.com/main/products/13253593599"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117350/91173509085.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13628998476"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1157702880",
+    "translated_kr": "베이비 모이스처 보습 크림 180ml / 비 스킨케어 / 저자극 / 민감성 피부 / 배리어 기능",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "제니&로제처럼 화잘먹 피부! 마스크팩·수분크림·클렌징·모공토너 스킨케어",
+      "naver_web": "아기피부 올케어관리 5종세트"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160787843",
+    "translated_kr": "[아따씬치 에디션] 프로폴리스 트리트먼트 앰플 에센스 300ml / 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "차앤박 프로폴리스 트리트먼트 앰플 에센스 2개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1139807140",
+    "translated_kr": "파르팜 바디워시 / 500ml / 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "코린드팜 키즈 헤어 바디샤워젤 여아용"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190189496",
+    "translated_kr": "아젤라산 10 히알루론 레드니스 수징 패드 90장",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "naver_web": "호주에서 Azelaic Acid 10 Hyaluron Redness Soothing Serum 구매",
+      "naver_rematch": "Anua Azelaic Acid 10 히알루론산 레드 니스 수딩 세럼"
+    },
+    "brand": "아누아",
+    "name": "Anua Azelaic Acid 10 히알루론산 레드 니스 수딩 세럼",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "60000",
+    "mall": "키티지현",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13214853151",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9075936/90759363473.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075936/90759363473.jpg",
+        "mall": "키티지현",
+        "link": "https://smartstore.naver.com/main/products/13214853151"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190038005",
+    "translated_kr": "아젤라산 CICA 스킨 클리어 토너 250ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "naver": "아누아 아젤라산 3 CICA 클리어라이징 토너 살리실릭 함유 데 각질 제거 페이셜 진정 8 45 Fl Oz (Pa of 1)",
+      "daum": "AC클리어 CICA 90% 퓨어엔 시카토너&스킨",
+      "naver_web": "아누아 아젤라산 3 아젤라익애씨드 CICA 스킨 클리어 토너"
+    },
+    "brand": null,
+    "name": "아누아 아젤라산 3 아젤라익애씨드 CICA 스킨 클리어 토너",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "74700",
+    "mall": "무역미라미라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13640918405",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118542/91185429114.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118542/91185429114.jpg",
+        "mall": "무역미라미라",
+        "link": "https://smartstore.naver.com/main/products/13640918405"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1155411612",
+    "translated_kr": "[정품] 레드 시카 바디 미스트 200ml / 진정 케어 · 모공 케어 · 쿨링 · 산뜻한 보습 · 트러블 예방",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 아크네 바디워시 3.0",
+      "naver": "메디큐브 레드 아크네 트러블 바디워시 3.0 비누향, 1000ml, 1개",
+      "daum": "가드름, 등드름 싹 박멸! 제대로 효과 본 바디템 추천",
+      "naver_web": "레드 아크네 바디워시, , 1개"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "레드 아크네 바디워시 3.0",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "36900",
+    "mall": "메디큐브 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/13667308132",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121181/91211819040.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121181/91211819040.jpg",
+        "mall": "메디큐브 공식몰",
+        "link": "https://smartstore.naver.com/main/products/13667308132"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1176327562",
+    "translated_kr": "[1+1] 글로우톤 3D 볼륨 샴푸 500g+500g 남성·여성 두피 탈모 완화의 허브 향",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "헤어가 지닌 놀라운 힘"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1107252885",
+    "translated_kr": "비타 디페어 크림 50ml+50ml (진정/탄력/보습/영양/활력/광채/주름 방지)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비타 디페어 크림",
+      "daum": "부산광역시 부산진구 에이스약국 동물약국 주소·영업시간",
+      "naver_web": "제이엠솔루션 비타 디페어 크림"
+    },
+    "brand": "제이엠솔루션 (JMsolution)",
+    "name": "비타 디페어 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1131288363",
+    "translated_kr": "블랙슈거 퍼펙트 버블 폼 클렌저 200ml x2 / x3 / 택일 / 블랙슈거 / 딥 클렌징 / 약알칼리성 /",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
