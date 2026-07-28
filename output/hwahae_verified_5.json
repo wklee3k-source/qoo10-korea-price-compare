@@ -21795,5 +21795,381 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1198940759",
+    "translated_kr": "릴리프 선 아쿠아-프레시: 라이스 + B5 아쿠아 프레시 UV크림 50ml 쌀 촉촉 자외선차단제",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "제품찾기",
+      "naver_web": "1027_img"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191514690",
+    "translated_kr": "어성초 LHA 모이스처 필링 젤, 120ml _뷰티풀_케이",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 LHA 모이스처 필링젤",
+      "naver": "아누아 어성초 LHA 모이스처 필링젤 120ml 민감 얼굴 각질 제거 제거제",
+      "naver_web": "미국 K"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 LHA 모이스처 필링젤",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "15900",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8085134708",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8562963/85629635031.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8562963/85629635031.3.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/8085134708"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210476388",
+    "translated_kr": "톤&스팟 컬렉터 앰플, 30ml, 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "톤앤스팟 코렉터 앰플",
+      "naver": "한스라벨르 나이아신아마이드 다크스팟 크림 칙칙한 피부톤 기미 케어 50ml x 2개",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "톤앤스팟 코렉터 앰플"
+    },
+    "brand": "리덴스 (Re:dence)",
+    "name": "톤앤스팟 코렉터 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "258900",
+    "mall": "공주 유통",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13662571617",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120708/91207082458.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120708/91207082458.jpg",
+        "mall": "공주 유통",
+        "link": "https://smartstore.naver.com/main/products/13662571617"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075304/90753047109.jpg",
+        "mall": "아네스퀸뷰티마켓",
+        "link": "https://smartstore.naver.com/main/products/13208536012"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8594097/85940974466.jpg",
+        "mall": "까까조",
+        "link": "https://smartstore.naver.com/main/products/8396474143"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210837026",
+    "translated_kr": "세럼 핏 UV 프로텍터 01 클리어 50ml (SPF50+/PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+      "musinsa": "세럼핏 UV프로텍터 01 클리어",
+      "naver": "바이유어 세럼핏 UV프로텍터 01 클리어 50ml(SPF50+/PA++++)",
+      "daum": "서울에서 K",
+      "naver_web": "N배송 : 네이버+ 스토어 : 바이유어 세럼핏 UV프로텍터 01 클리어"
+    },
+    "brand": "바이유어 (BYUR)",
+    "name": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "바이유어",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13408774828",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095328/90953285164.2.jpg",
+        "mall": "바이유어",
+        "link": "https://smartstore.naver.com/main/products/13408774828"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5974696/59746969506.jpg",
+        "mall": "바이유어닷컴",
+        "link": "https://byur.com/product/detail.html?product_no=144&cate_no=69&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151302581",
+    "translated_kr": "【정규품】두피 강화 클리닉 탈모 증상 완화 약산성 저자극 샴푸 400ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "두피강화 클리닉 탈모증상완화 샴푸",
+      "naver": "라보에이치 두피강화클리닉 탈모증상완화 약산성 저자극 샴푸 400ml",
+      "daum": "오프온 두피 탈모케어 샴푸 약산성 바이오틴 성분 저자극 두피샴푸",
+      "naver_web": "라보에이치 두피강화클리닉 탈모증상완화 약산성 저자극 샴푸 리필팩"
+    },
+    "brand": "라보에이치",
+    "name": "라보에이치 두피강화클리닉 탈모증상완화 약산성 저자극 샴푸 400ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "17280",
+    "mall": "라보에이치",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/4821989532",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8236651/82366512384.53.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8236651/82366512384.53.jpg",
+        "mall": "라보에이치",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4821989532"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8790610/87906108608.11.jpg",
+        "mall": "아모레퍼시픽몰 헤어바디",
+        "link": "https://smartstore.naver.com/main/products/10361603960"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8236651/82366512385.53.jpg",
+        "mall": "아모레퍼시픽몰 헤어바디",
+        "link": "https://smartstore.naver.com/main/products/4821989533"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9078216/90782160855.jpg",
+        "mall": "컨설팅뷰티",
+        "link": "https://smartstore.naver.com/main/products/13237650523"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8934631/89346317040.jpg",
+        "mall": "MOMOBOX",
+        "link": "https://smartstore.naver.com/main/products/11801806453"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1149096041",
+    "translated_kr": "【정규품】소프트 리셋 그린 클렌징 밤 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "소프트리셋 그린 클렌징 밤",
+      "musinsa": "소프트리셋 그린 클렌징 밤",
+      "naver": "휘게 소프트리셋 그린 클렌징밤 100ml (티트리/셔벗/딥클렌징)",
+      "daum": "휘게 소프트리셋 그린 클렌징밤",
+      "naver_web": "소프트리셋 그린 클렌징 밤"
+    },
+    "brand": "휘게 (HYGGEE)",
+    "name": "소프트리셋 그린 클렌징 밤",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "16900",
+    "mall": "HYGGEE",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5652181286",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8319667/83196678590.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8319667/83196678590.7.jpg",
+        "mall": "HYGGEE",
+        "link": "https://smartstore.naver.com/main/products/5652181286"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110213/91102139571.jpg",
+        "mall": "글로벌미루",
+        "link": "https://smartstore.naver.com/main/products/13557629204"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199174229",
+    "translated_kr": "갈락 나이아신3.0 에센스 톤업 미용액 피부 결 모공 케어 스킨케어 30ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2026 상반기 스킨케어 트렌드, 딱 이것만 챙기세요",
+      "naver_web": "갈락나이아신3.0에센스미백 미용액 도입 미용액 에센스 미용액 피부결 한국코스메 나이아신...."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1152063267",
+    "translated_kr": "저자극 페이스 앤 바디 대용량 자외선차단제 150ml (SPF50+ PA++++)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "식물나라 산소수 페이스 앤 바디 선크림 150ml",
+      "daum": "핏유어스킨 대용량 선크림 선스크린 페이스 앤 바디 SPF50+ PA++++, 1개,",
+      "naver_web": "NEW 식물나라 저자극 페이스 앤 바디 선크림 2개 대용량"
+    },
+    "brand": "식물나라",
+    "name": "식물나라 산소수 페이스 앤 바디 선크림 150ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "32000",
+    "mall": "꿀디샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8602292884",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8614679/86146793207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8614679/86146793207.jpg",
+        "mall": "꿀디샵",
+        "link": "https://smartstore.naver.com/main/products/8602292884"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205515583",
+    "translated_kr": "【NEW】레티놀 나이아신 나이트 케어 마스크 24ml 10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 나이아신 나이트 케어 마스크",
+      "naver": "아누아 레티놀 나이아신 나이트 케어 마스크 24mL 10매, 1개",
+      "daum": "각질 제거는 밤에 자기 전에만! 남자 초보 스킨케어 루틴",
+      "naver_web": "아누아 레티놀 나이아신 나이트 케어 마스크｜한국코스메 ：코리아데파트"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "레티놀 나이아신 나이트 케어 마스크",
+    "volume": "24mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "19200",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12978549991",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9052306/90523061001.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052306/90523061001.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12978549991"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052306/90523061002.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12978549992"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1150780717",
+    "translated_kr": "[1+1] 녹두 약산성 클렌징 폼 160ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "녹두 약산성 클렌징폼",
+      "musinsa": "[2천만 돌파] 녹두 약산성 클렌징 폼 160ml X 2개 (+필터패드 10매 추가 증정)",
+      "naver": "[혜리 클렌징/1+1] 네이버단독 비플레인 녹두 약산성 클렌징폼 100ml, 2개",
+      "daum": "녹두 약산성 클렌징 폼 X 2개 +20ml증정",
+      "naver_web": "비플레인 녹두 약산성 클렌징폼, , 1개"
+    },
+    "brand": "비플레인 (beplain)",
+    "name": "녹두 약산성 클렌징폼",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "19900",
+    "mall": "비플레인 beplain",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11046612369",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8859111/88591118596.44.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8859111/88591118596.44.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/11046612369"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8207336/82073367197.78.jpg",
+        "mall": "비플레인 beplain",
+        "link": "https://smartstore.naver.com/main/products/4528843889"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
