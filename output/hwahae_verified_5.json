@@ -13440,5 +13440,268 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1210849392",
+    "translated_kr": "【12별자리 네일 특집】COCONAIL 별자리 네일 수호 컬러 행운 컬러 여름 신색 57색 벗겨지는 젤 네일 필 오프 셀프 네일 컬러 젤 마그넷 베이스 탑 초보자",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "체리시 네일 폴리쉬 [레이지 베리]",
+      "naver": "올리오 체리시 네일 폴리쉬 레이지 베리 9ml"
+    },
+    "brand": "올리오 (Ollio)",
+    "name": "체리시 네일 폴리쉬 [레이지 베리]",
+    "volume": "9ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "12800",
+    "mall": "올리오 Ollio",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13432079828",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9097659/90976590164.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097659/90976590164.1.jpg",
+        "mall": "올리오 Ollio",
+        "link": "https://smartstore.naver.com/main/products/13432079828"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1184939705",
+    "translated_kr": "【정규 대리점】뷰티 아이즈 에센스 시트 프리미엄 플러스 60매 눈 아래 시트 눈 아래 케어 화장품 코스메 스킨 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "플루이드 [아이]",
+      "naver": "액시지아(AXXZIA) 뷰티아이즈 에센스시트 프리미엄 플러스 60매(30회분) 눈매 팩 눈가 케어 아이시트 눈밑",
+      "daum": "AXXZIA 뷰티 아이 에센스 시트 프리미엄 플러스 60매",
+      "naver_web": "수분크림을 포기해야하는 5가지 이유"
+    },
+    "brand": "메트리젠 (MATRIGEN)",
+    "name": "액시지아(AXXZIA) 뷰티아이즈 에센스시트 프리미엄 플러스 60매(30회분) 눈매 팩 눈가 케어 아이시트 눈밑",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "117750",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12890675900",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9043518/90435186887.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9043518/90435186887.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/12890675900"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "971284727",
+    "translated_kr": "[ 제로이드 ] 제로이드 수징 시트 마스크 28ml x 5장입",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "화장품_전체보기"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1140051239",
+    "translated_kr": "리프레싱 에멀젼 45ml PDRN 유액 피부 트러블 민감 피부 리프레싱",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈",
+      "naver_web": "트러블 흔적 & 속건조 수분 크림"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168906628",
+    "translated_kr": "【덤·네일 오일】오브제 글랑스 보습 퍼퓨메 핸드 크림 (G.E.S, 30ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "핸드크림 [더펄]",
+      "naver_web": "💖 오브제 핸드크림 더펄"
+    },
+    "brand": "오브제그랑스 (obje-grance)",
+    "name": "핸드크림 [더펄]",
+    "volume": "30ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1180176379",
+    "translated_kr": "페르난다 서스테이너블 프레그런스 바디 스플래시 요거트 스무디 95ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "페르난다 바디미스트 요거트 스무디 프레그런스 바디 스플래쉬 95ml",
+      "naver_web": "페르난다 프레그런스 유자 바디 스플래쉬 미스트"
+    },
+    "brand": "페르난다",
+    "name": "페르난다 바디미스트 요거트 스무디 프레그런스 바디 스플래쉬 95ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "19800",
+    "mall": "포스트패스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11690318051",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8923482/89234828518.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8923482/89234828518.1.jpg",
+        "mall": "포스트패스",
+        "link": "https://smartstore.naver.com/main/products/11690318051"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8881172/88811728273.1.jpg",
+        "mall": "일본홀세일",
+        "link": "https://smartstore.naver.com/main/products/11267217942"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211967820",
+    "translated_kr": "수량 한정! 샘플 가격 JOOMO 조모 제모 크림 100g",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "더리즈 리코테카 진정 수분크림 미백 주름개선 영양 크림 75ml+30ml"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1152231085",
+    "translated_kr": "【스킨 케어 3종 세트】 히알큐브 토너 + 세럼 + 크림 히알루론산 10종류 배합 히알루론산 3종 세트 화장수 클렌징 폼 인너 드라이 피부",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1049263673",
+    "translated_kr": "프리미엄 터치 침투 미용액 헤어 오일 (에어리 스무스) 70ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "피노 프리미엄터치 침투 미용액 헤어오일 70ml",
+      "daum": "피노 프리미엄 터치 침투 미용액 헤어 마스크, , 4개",
+      "naver_web": "시세이도 피노 프리미엄 터치 침투 미용액 헤어 오일"
+    },
+    "brand": "FINO",
+    "name": "피노 프리미엄터치 침투 미용액 헤어오일 70ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "18900",
+    "mall": "생활한입",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11895958845",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8944046/89440469454.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944046/89440469454.jpg",
+        "mall": "생활한입",
+        "link": "https://smartstore.naver.com/main/products/11895958845"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8860178/88601782866.jpg",
+        "mall": "클릭온재팬",
+        "link": "https://smartstore.naver.com/main/products/11057276655"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1100114507",
+    "translated_kr": "GRAZE POINT 안티에이징 바디 오일 탄력·광택 케어 고보습 프레그런스",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "Coreana Colour",
+      "naver_web": "윤기와 광채, 그리고 탄력까지 관리해요.ㅣ탄력 바디, 언에이징 바디오일 by 그레이즈포인트"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
