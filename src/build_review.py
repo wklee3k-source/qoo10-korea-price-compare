@@ -346,6 +346,7 @@ def build_pairs():
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
             "obsolete": x.get("obsolete"),
+            "naver_rematched": x.get("naver_rematched"),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
@@ -399,6 +400,19 @@ def build_html(pairs: list[dict]):
 
         brand_label = {"match": "일치", "mismatch": "불일치", "unknown": "판단불가"}[p["brand_status"]]
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
+        # [v3.9.0] 브랜드를 확인하지 못한 건은 눈에 띄게 경고한다. 이 구간이
+        # 오매칭이 숨는 곳이고(브랜드가 달라도 걸러낼 수단이 없다), 동시에
+        # 채택하면 브랜드 대응이 사전에 새로 등록되는 구간이기도 하다.
+        if p["brand_status"] == "unknown":
+            brand_badge += ('<span class="badge warn">⚠ 브랜드 미확인 — 사진을 꼭 대조하세요'
+                            ' (채택하면 브랜드 사전에 등록됩니다)</span>')
+        elif p["brand_status"] == "mismatch":
+            brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
+        # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
+        # (끼우면 브랜드 불일치 경고가 가려진다).
+        if p.get("naver_rematched"):
+            brand_badge += ('<span class="badge unknown">재검색 매칭 — 다른 소스가 알려준'
+                            ' 이름으로 찾은 건입니다</span>')
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
         elif p.get("vol_status") == "unknown":

@@ -372,6 +372,35 @@ _PRODUCT_CATEGORY_GROUPS = [
 ]
 
 
+def _search_naver_rematch(keyword: str, known_brand: str) -> dict | None:
+    """[v4.0.0] 다른 소스가 알려준 '정확한 한국 상품명'으로 네이버를 다시 검색.
+
+    구매링크는 사실상 네이버쇼핑에서만 나온다(실측: 링크 확보 885건 중
+    867건 = 98%). 그래서 네이버가 못 찾으면 화해가 정확히 찾아낸 상품도
+    통째로 버려졌다 — 링크 실패 651건 중 367건(56%)이 이 유형이다.
+
+    원인은 검색어다. 큐텐 번역본은 실제 한국 상품명과 자주 어긋난다.
+        큐텐 번역: 케라시스 그린프로폴리스 스칼프 클렌징 헤어트리트먼트
+        실제 이름: 케라시스 그린 프로폴리스 스칼프 클렌징 샴푸
+    화해가 알려준 이름으로 다시 치면 바로 찾힌다.
+
+    표본 100건 실측 회수율 71%(신뢰필터에 걸린 19건 별도, 완전 실패 10건).
+
+    ⚠️ 이 결과는 '독립적으로 같은 답을 낸' 소스가 아니라 '남의 답으로
+    조회한 것'이다. 그래서 source를 naver_rematch로 따로 두고 결과에
+    naver_rematched 표시를 남긴다 — 합의의 성격이 다르다는 걸 검수 때
+    구분할 수 있어야 한다.
+    """
+    return _rename_source(_search_naver(keyword, known_brand), "naver_rematch")
+
+
+def _rename_source(cand: dict | None, source: str) -> dict | None:
+    if cand:
+        cand = dict(cand)
+        cand["source"] = source
+    return cand
+
+
 def _detect_categories(text: str) -> set[str]:
     found = set()
     for group in _PRODUCT_CATEGORY_GROUPS:
@@ -465,7 +494,7 @@ MIN_CONSENSUS_SOURCES = int(os.environ.get("MIN_CONSENSUS_SOURCES", "2"))
 
 # 상품DB 소스 — 브랜드/용량/가격/구매링크까지 주는 곳. 제목만 주는
 # 웹문서 소스(exa/daum/naver_web)와 구분한다.
-PRODUCT_SOURCES = {"hwahae", "musinsa", "naver"}
+PRODUCT_SOURCES = {"hwahae", "musinsa", "naver", "naver_rematch"}
 
 
 REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
@@ -624,7 +653,25 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                     print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
                     cand_naver = None
 
-        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver, cand_daum, cand_naver_web] if c]
+        # [v4.0.0] 네이버가 구매링크를 못 준 경우, 다른 소스가 알려준 정확한
+        # 이름으로 네이버를 한 번 더 친다. 반드시 합의 판정 '전에' 해야
+        # 한다 — '화해만 찾음(1곳)'으로 거부된 뒤에 하면 이미 늦다.
+        # 상품DB 쪽 이름을 먼저 쓴다(제목만 주는 소스보다 정확).
+        cand_naver_rematch = None
+        if not (cand_naver and cand_naver.get("product_url")):
+            for helper in (cand_hwahae, cand_musinsa, cand_daum, cand_naver_web, cand_exa):
+                hint = (helper or {}).get("name")
+                if not hint:
+                    continue
+                print(f"    [네이버 재검색] '{helper['source']}'가 확인한 이름 '{hint[:40]}'로 재조회")
+                cand_naver_rematch = _safe_search(_search_naver_rematch, hint, known_brand,
+                                                  failures=tech_failures, label="네이버재검색")
+                if cand_naver_rematch and cand_naver_rematch.get("product_url"):
+                    break
+                cand_naver_rematch = None
+
+        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver,
+                                  cand_daum, cand_naver_web, cand_naver_rematch] if c]
 
         if not candidates:
             if tech_failures:
@@ -735,7 +782,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 호출하면서 필요한 정보를 전부 뽑아뒀으므로, 그 결과를 그대로 쓴다.
         # API 호출 수: Exa(1) + 화해(1) + 네이버(1) = 3회로 절감.)
         hwahae_data = cand_hwahae or {}
-        naver_data = cand_naver or {}
+        # 원래 네이버 결과에 링크가 있으면 그걸 쓰고, 없을 때만 재검색분을 쓴다.
+        naver_data = cand_naver if (cand_naver and cand_naver.get("product_url")) else (
+            cand_naver_rematch or cand_naver or {})
 
         musinsa_data = cand_musinsa or {}
 
@@ -764,6 +813,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "name": winner_name or hwahae_data.get("name"),
             "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
+            # [v4.0.0] 이 건의 링크가 '독립 검색'이 아니라 '남의 답으로 재조회'해서
+            # 나온 것인지 표시한다. 합의의 성격이 다르므로 검수 때 구분해야 한다.
+            "naver_rematched": bool(cand_naver_rematch and naver_data is cand_naver_rematch),
             "obsolete": hwahae_data.get("obsolete"),
             "sale": hwahae_data.get("sale"),
             "price": naver_data.get("price") or hwahae_data.get("price") or musinsa_data.get("price"),
