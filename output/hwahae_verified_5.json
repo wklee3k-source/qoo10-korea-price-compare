@@ -23756,5 +23756,308 @@
     "stock_evidence": [
       "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=21&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
     ]
+  },
+  {
+    "goods_no": "1192657055",
+    "translated_kr": "코우지산 비타 젤리 세럼 미스트 100ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "달바 비타 토닝 안티에이징 스프레이 세럼 8퍼센트, , 2개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210576443",
+    "translated_kr": "코우지산 비타 젤리 세럼 미스트 100ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "달바 비타 토닝 안티에이징 스프레이 세럼 8퍼센트, , 2개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172740048",
+    "translated_kr": "락트산 5% + 히알루론산 2% 엑스폴리에이팅 세럼 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "일반 젖산 5% + 히알루론산 2% 부드러운 각질 제거 세럼으로 매끄러운 피부를 선사합니다 1 Fl Oz (Pack of 1)",
+      "daum": "하이드라퀀치 세럼 8종 세트",
+      "naver_web": "건강하고 빛나는 피부를위한 효과적인 산 박피"
+    },
+    "brand": "디오디너리",
+    "name": "일반 젖산 5% + 히알루론산 2% 부드러운 각질 제거 세럼으로 매끄러운 피부를 선사합니다 1 Fl Oz (Pack of 1)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "40800",
+    "mall": "유니크메리스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13280595196",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9082510/90825105528.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082510/90825105528.jpg",
+        "mall": "유니크메리스토어",
+        "link": "https://smartstore.naver.com/main/products/13280595196"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1043988185",
+    "translated_kr": "제로 벨벳 틴트 5.5g 16 버니 누드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 벨벳 틴트 [16 버니누드]",
+      "naver": "롬앤 제로 벨벳 틴트 버니누드 16호",
+      "daum": "롬앤 제로 벨벳 틴트 , 16 버니 누드, 1개"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "제로 벨벳 틴트 [16 버니누드]",
+    "volume": "5.5g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "12870",
+    "mall": "와우마트369",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13680084008",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122459/91224595218.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122459/91224595218.jpg",
+        "mall": "와우마트369",
+        "link": "https://smartstore.naver.com/main/products/13680084008"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1175710049",
+    "translated_kr": "이롱 앰플 50ml 센시엔드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "앰플 [센시엔드]",
+      "naver": "일론 센시엔드 앰플 50ml 민감피부 SOS응급 피부장벽",
+      "daum": "악마술사 5가지 빌드 간단 소개"
+    },
+    "brand": "더일론 (THEiLLON)",
+    "name": "앰플 [센시엔드]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "88000",
+    "mall": "스킨몽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9216906772",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8676140/86761407095.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8676140/86761407095.1.jpg",
+        "mall": "스킨몽",
+        "link": "https://smartstore.naver.com/main/products/9216906772"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8902985/89029852165.jpg",
+        "mall": "오드엘르",
+        "link": "https://smartstore.naver.com/main/products/11485341800"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8684879/86848798777.3.jpg",
+        "mall": "하얀에스테틱",
+        "link": "https://smartstore.naver.com/main/products/9304298454"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8942122/89421229282.jpg",
+        "mall": "더블유엠에스테틱",
+        "link": "https://smartstore.naver.com/main/products/11876718680"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196576304",
+    "translated_kr": "초 따뜻한 녹차 모이스트 클렌징 폼 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스쳐 클렌징 클리어 [녹차]",
+      "daum": "토요코인",
+      "naver_web": "과일나라 첫물녹차 모이스트 클렌징폼 a1",
+      "naver_rematch": "네이티브 모이스처라이징 페이스 워시 페이셜 클렌저 (2 팩)"
+    },
+    "brand": "아스파시아 (ASPSIA)",
+    "name": "모이스쳐 클렌징 클리어 [녹차]",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "54100",
+    "mall": "GOOD MALL",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12306416861",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8985092/89850927578.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8985092/89850927578.jpg",
+        "mall": "GOOD MALL",
+        "link": "https://smartstore.naver.com/main/products/12306416861"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8774297/87742971922.17.jpg",
+        "mall": "디올로지끄 에스테틱",
+        "link": "https://smartstore.naver.com/main/products/10198468461"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1191597930",
+    "translated_kr": "마다가스카르 센텔라 프로바이오 시카 에센스 토너 210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 프로바이오시카 에센스 토너",
+      "musinsa": "마다가스카르 센텔라 프로바이오시카 에센스 토너 210ml",
+      "naver": "[스킨1004] 마다가스카르 센텔라 프로바이오시카 에센스 토너 210ml KRSKT011",
+      "daum": "장벽 케어와 자외선 차단을 동시에!",
+      "naver_web": "마다가스카르 센텔라 프로바이오시카 에센스 토너"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 프로바이오시카 에센스 토너",
+    "volume": "210ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "22500",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3039689?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4714082/47140821085.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4714082/47140821085.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3039689?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "real_page_title": "스킨1004(SKIN1004) 마다가스카르 센텔라 프로바이오시카 에센스 토너 210ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199599598",
+    "translated_kr": "클래식 샤워 프레쉬 EDP SP 30ml 신 패키지 향수 남성 여성",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "도움이 되는 여러가지 향수 상식...",
+      "naver_web": "엘리자베스아덴 그린티 라벤더 오드뚜왈렛"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1186826457",
+    "translated_kr": "국내 배송 프로 히알 샷 모이스처 앰플 마스크 34g × 5매",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "패드",
+      "naver_web": "리더스 메디유 아미노 수분 탄력 광채 마스크팩 10+10+10"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168783300",
+    "translated_kr": "메디에이크 독일 닥터 아토피 연구자가 만든 보습 크림 30",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "데일리 누디 [2016]",
+      "naver": "케미젤 데일리 누디 2016",
+      "daum": "11월 의료우대혜택 상세페이지_제주국제자유도시개발센터, 제주첨단과학기술단지.pdf",
+      "naver_web": "2016 글로벌 보건 산업 동향_종합본_수정.hwp"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
