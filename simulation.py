@@ -94,43 +94,6 @@ def t06_no_whole_batch_send():
             hits.append(f.name)
     check("06 번역 전량 일괄전송 금지", not hits, f"{hits}")
 
-
-# ------------- #7 번역 실패시 원문 폴백 금지 (실패가 성공으로 위장됨)
-def t07_no_original_fallback():
-    s = (SRC / "auto_translate.py").read_text(encoding="utf-8")
-    bad = re.search(r"results\.append\(parsed\.get\([^)]*chunk\[[^\]]*\]\[.title.\]\)", s) \
-        or re.search(r"results\.extend\([^)]*\[.title.\] for", s)
-    check("07 번역실패 원문폴백 금지", not bad)
-
-
-# ------------------------------------- #8 번역 3중 검증이 실제로 동작하는가
-def t08_validator_behaviour():
-    sys.path.insert(0, str(SRC))
-    try:
-        from auto_translate import validate_translation as V
-    except Exception as e:  # noqa: BLE001
-        check("08 번역 3중 검증", False, f"import 실패 {e}")
-        return
-
-    cases = [
-        # (원문, 번역, 통과해야하나, 설명)
-        ("ドクダミ 化粧水 200ml", "어성초 화장수 200ml", True, "정상"),
-        ("レッド ブレミッシュ サンクリーム 50ml", "レッド ブレミッシュ サンクリーム 50ml", False, "가나잔존"),
-        ("モデリングクリームマスク 71g スパチュラ付き / ドクダミ 保湿パック 韓国コスメ",
-         "모델링크림마스크 71g", False, "길이부족"),
-        ("シカ クリーム", None, False, "빈응답"),
-        ("シカ クリーム", "   ", False, "공백"),
-        ("VT CICA MASK 10EA", "VT CICA MASK 10EA", True, "원문이 영문뿐"),
-        ("美容液 50ml", "美容液 50ml", False, "한자만 남고 한글없음"),
-    ]
-    bad = []
-    for orig, tr, want, why in cases:
-        got, reason = V(orig, tr)
-        if got != want:
-            bad.append(f"{why}(기대{want} 실제{got}:{reason})")
-    check("08 번역 3중 검증", not bad, "; ".join(bad))
-
-
 # ------------------- #9 캡 중단시 검색어 소각 금지 (재생산율 0.58 사고)
 def t09_keyword_not_burned_on_cap():
     s = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
@@ -312,6 +275,34 @@ def t40_shard_divisor_matches_worker_count():
     check("40 워커수-샤딩나눗셈 일치", not bad, "; ".join(bad))
 
 
+
+# --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
+#  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
+#  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
+#  핵심 안전조건: API 호출 흔적이 남아있지 않을 것, 잘못된 번역값이
+#  들어가 "완료"로 굳지 않을 것(과거 실패 #13과 같은 부류).
+def t42_excel_translation_roundtrip():
+    wf = WF.read_text(encoding="utf-8")
+    no_api_key = "ANTHROPIC_API_KEY" not in wf
+    no_api_scripts = not any((SRC / f).exists() for f in
+                             ("auto_translate.py", "translate_in_place.py", "translate_kr_to_jp.py"))
+    has_export = (SRC / "export_untranslated.py").exists()
+    has_import = (SRC / "import_translated.py").exists()
+    exports_in_wf = "export_untranslated.py" in wf
+
+    imp = (SRC / "import_translated.py").read_text(encoding="utf-8") if has_import else ""
+    # 일본어 잔존값은 반드시 걸러야 한다(넣으면 영영 재번역 안 됨)
+    guards_kana = "KANA_RE.search(trans)" in imp
+    # 이미 번역된 것은 덮어쓰지 않아야 한다
+    no_overwrite = 'if p.get("translated_kr"):' in imp and "continue" in imp
+
+    ok = all([no_api_key, no_api_scripts, has_export, has_import,
+              exports_in_wf, guards_kana, no_overwrite])
+    check("42 번역 엑셀왕복(API제거)", ok,
+          f"API키없음{no_api_key} API스크립트없음{no_api_scripts} export{has_export} "
+          f"import{has_import} 워크플로연결{exports_in_wf} 가나필터{guards_kana} 덮어쓰기방지{no_overwrite}")
+
+
 # --------------------- #41 품질기준(리뷰10 미만 + 2곳 이상 합의)
 def t41_quality_thresholds():
     disc = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
@@ -350,91 +341,6 @@ def t39_verify_sharding():
     check("39 검증 샤딩(3워커) 안전성", ok,
           f"matrix{has_matrix} crc32{uses_crc32} 샤드파일{shard_files} "
           f"샤드0만통합{merge_only_shard0} 기존승계{inherits_existing} 요청지연{has_delay}")
-
-
-# --------------------- #38 수확 전용 파이프라인(같은 프로세스/분리 저장)
-#  요구사항: 수확도 발굴과 똑같이 번역->검증->검수페이지를 타되,
-#  결과물은 끝까지 분리 저장돼야 한다.
-def t38_harvest_full_pipeline_separated():
-    wf = WF.read_text(encoding="utf-8")
-    mf = (SRC / "merge_fullcatalog_states.py").read_text(encoding="utf-8")
-    br = (SRC / "build_review.py").read_text(encoding="utf-8")
-    bb = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
-
-    # 통합본이 발굴본과 같은 형식(list)이어야 하위도구 재사용이 가능하다
-    list_format = '"all_products": list(products.values())' in mf
-    # 검수 생성기가 환경변수로 소스/출력을 바꿀 수 있어야 한다
-    env_state = 'os.environ.get("QOO10_STATE_FILE"' in br
-    env_verified = 'os.environ.get("QOO10_VERIFIED_FILE"' in br
-    env_subdir = 'os.environ.get("QOO10_BATCH_SUBDIR"' in bb
-    # 워크플로에 수확 전용 번역/검증/검수 스텝이 있어야 한다
-    block = wf.split("  merge_fullcatalog_shards:")[1].split("\n  merge_discovery_shards:")[0]
-    has_tr = "Translate harvest pool" in block
-    has_vf = "Verify harvest pool" in block
-    has_rv = "Build harvest review pages" in block
-    # 결과물이 분리 저장돼야 한다
-    sep_files = "fullcatalog_verified.json" in block and "docs/harvest" in block
-    # 발굴 파일을 쓰면 안 된다
-    no_discovery_write = "push origin discovery-live" not in block
-
-    ok = all([list_format, env_state, env_verified, env_subdir, has_tr, has_vf, has_rv,
-              sep_files, no_discovery_write])
-    check("38 수확 전용 파이프라인(동일프로세스/분리저장)", ok,
-          f"list형식{list_format} env소스{env_state} env검증{env_verified} env출력{env_subdir} "
-          f"번역{has_tr} 검증{has_vf} 검수{has_rv} 분리저장{sep_files} 발굴미쓰기{no_discovery_write}")
-
-
-# --------------------- #37 번역 중간저장(청크+매라운드 커밋)
-#  실측사고: 번역이 전량 끝난 뒤에만 파일을 쓰고 커밋해서, GitHub
-#  Actions 타임아웃(60분)에 걸리면 그때까지 번역한 게 통째로 날아갔다
-#  (36분 넘게 돌았는데 저장 0건). hwahae_verify가 CHUNK로 쓰는 검증된
-#  방식과 동일하게, 청크 단위로 처리하고 매 라운드 커밋해야 한다.
-def t37_translation_incremental_save():
-    at_src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
-    tip_src = (SRC / "translate_in_place.py").read_text(encoding="utf-8")
-    wf = WF.read_text(encoding="utf-8")
-
-    has_callback = "on_batch_done" in at_src and "on_batch_done(results)" in at_src
-    has_max_items = "max_items" in tip_src and "to_translate[:max_items]" in tip_src
-    saves_in_callback = "def save_progress" in tip_src and "path.write_text" in tip_src.split("def save_progress")[1][:600]
-
-    block = wf.split("Translate merged pool")[1].split("\n      - name:")[0]
-    has_chunk_loop = "TCHUNK=" in block and "for round in" in block
-    # [100건 단위 통일] 청크가 배치보다 크면 한 python 호출 안에서 여러
-    # 배치가 돌고 그동안 커밋이 안 돼 유실 구간이 커진다. 같은 값이어야
-    # 배치1개=커밋1회로 유실이 최소화된다.
-    m_chunk = re.search(r"TCHUNK=(\d+)", block)
-    chunk_matches_batch = bool(m_chunk) and int(m_chunk.group(1)) == 100
-    commits_each_round = "git commit -m" in block and "git push origin discovery-live" in block
-    has_no_progress_guard = bool(re.search(r'\[ "\$AFTER" -le "\$BEFORE" \][\s\S]{0,150}?break', block))
-
-    ok = all([has_callback, has_max_items, saves_in_callback, has_chunk_loop,
-              chunk_matches_batch, commits_each_round, has_no_progress_guard])
-    check("37 번역 중간저장(청크+매라운드커밋)", ok,
-          f"콜백{has_callback} max_items{has_max_items} 콜백내저장{saves_in_callback} "
-          f"청크루프{has_chunk_loop} 청크100{chunk_matches_batch} 매라운드커밋{commits_each_round} 무진전가드{has_no_progress_guard}")
-
-
-# --------------------- #36 번역 유저메시지 토큰낭비 제거
-#  실측: 브랜드사전 972개가 시스템프롬프트(캐싱대상)에 이미 전부 들어
-#  있는데, 유저메시지에도 항목마다 브랜드힌트를 또 붙이고 있었다.
-#  유저메시지는 캐싱이 안 돼 매번 전액 청구된다 — 힌트 1개당 약 20토큰
-#  x 500건 = 호출당 1만 토큰이 할인 없이 낭비되고 있었다.
-def t36_no_duplicate_brand_hint():
-    src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
-    fn = src.split("def translate_batch(")[1].split("\ndef ")[0]
-    # 주석에 설명으로 언급된 건 무시하고, 실제 코드에서 힌트를 쓰는지만 본다
-    code_only = "\n".join(ln for ln in fn.split("\n") if not ln.strip().startswith("#"))
-    no_hint_in_prompt = "hint" not in code_only and "정확한 브랜드명:" not in code_only
-    # 시스템프롬프트 쪽에는 브랜드사전이 반드시 있어야 한다(대체 경로)
-    has_dict_in_system = "brand_table" in src and "BRAND_DICT.items()" in src
-    # 재시도가 지수적으로 쪼개지지 않아야 한다(호출횟수 최소화)
-    no_exponential_split = "2 ** (attempt - 1)" not in fn
-    ok = no_hint_in_prompt and has_dict_in_system and no_exponential_split
-    check("36 번역 유저메시지 중복힌트 제거", ok,
-          f"힌트제거{no_hint_in_prompt} 시스템프롬프트에사전{has_dict_in_system} 재시도지수분할제거{no_exponential_split}")
-
-
 # --------------------- #35 수확 루프 무진전시 중단 가드
 #  실측위험: harvest_full_catalog_parallel의 while true는 TODO가 빌
 #  때만 break했다. 큐텐 광범위 장애/IP차단시 매 반복 BATCH(50)개
@@ -559,66 +465,6 @@ def t30_verify_failure_vs_no_match():
     check("30 검증단계 기술적실패/무결과 구분", ok,
           f"예외클래스{has_exception_class} 안전래퍼{has_safe_wrapper} 4곳전부raise{raises_in_all_four} "
           f"직접호출잔존금지{no_raw_calls_left} 재시도상태{has_retry_state} 보류로직{holds_back_on_retry}")
-
-
-# --------------------- #29 이미 번역된 것 불필요한 재시도 방지
-#  실측위험: 이미 정상 번역된 항목도 매 병합사이클마다 재검증되는데,
-#  길이검사(원문대비 50%미만)가 애매해서 짧지만 완전한 번역이 계속
-#  재번역 대상으로 잡혀 비용이 낭비될 수 있었다. 재검증 경로는
-#  strict=False로 완전무결한 실패신호(가나잔존/한글전무)만 걸러야 한다.
-def t29_no_unnecessary_retranslation():
-    at_src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
-    tip_src = (SRC / "translate_in_place.py").read_text(encoding="utf-8")
-
-    has_strict_param = "strict: bool = True" in at_src
-    fresh_check_strict = bool(re.search(r"validate_translation\(items\[k\]\[.title.\],\s*cand\)", at_src))
-    recheck_uses_lenient = "validate_translation(p[\"title\"], cur, strict=False)" in tip_src
-
-    ok = has_strict_param and fresh_check_strict and recheck_uses_lenient
-    check("29 이미번역된것 재시도방지(strict분리)", ok,
-          f"strict파라미터{has_strict_param} 신규검증strict유지{fresh_check_strict} "
-          f"재검증lenient{recheck_uses_lenient}")
-
-
-# --------------------- #28 번역 비용절감(프롬프트캐싱+배치확대)
-#  실측: 1,630건 번역(약 109회 호출)에 $5~10 발생. 원인: 매 호출마다
-#  긴 시스템 프롬프트를 캐싱 없이 처음부터 재전송. Haiku 4.5는 캐싱
-#  최소기준이 4,096토큰이라 기존 프롬프트(500~700토큰)로는 cache_control을
-#  붙여도 조용히 무시됐다. 브랜드사전(972개)을 시스템 프롬프트에 통째로
-#  포함시켜 기준을 넘기고, 배치크기도 15->30으로 늘려 호출횟수를 줄인다.
-def t28_translation_cost_optimization():
-    src = (SRC / "auto_translate.py").read_text(encoding="utf-8")
-    has_cache_control = '"cache_control": {"type": "ephemeral"}' in src
-    uses_full_prompt_in_call = "FULL_SYSTEM_PROMPT" in src.split("def _call_api")[1].split("\ndef ")[0]
-    prompt_crosses_threshold = False
-    try:
-        import importlib.util
-        import os as _os
-        _prev_cwd = _os.getcwd()
-        _os.chdir(SRC)  # auto_translate.py가 "../data/..."라는 상대경로를 쓰므로 cwd를 맞춰준다
-        try:
-            spec = importlib.util.spec_from_file_location("auto_translate_check", SRC / "auto_translate.py")
-            mod = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(mod)
-            prompt_crosses_threshold = len(mod.FULL_SYSTEM_PROMPT) > 4096 * 1.2  # 여유있게 문자수로 근사확인
-            batch_ok = mod.MAX_BATCH_SIZE == 100
-            import inspect as _inspect
-            default_matches_max = (
-                _inspect.signature(mod.translate_batch).parameters["batch_size"].default
-                == mod.MAX_BATCH_SIZE
-            )
-        finally:
-            _os.chdir(_prev_cwd)
-    except Exception as e:  # noqa: BLE001
-        batch_ok = False
-        default_matches_max = False
-        prompt_crosses_threshold = f"모듈로드실패:{e}"
-    ok = has_cache_control and uses_full_prompt_in_call and prompt_crosses_threshold is True and batch_ok and default_matches_max
-    check("28 번역 비용절감(캐싱+배치확대)", ok,
-          f"cache_control{has_cache_control} FULL프롬프트사용{uses_full_prompt_in_call} "
-          f"임계값초과{prompt_crosses_threshold} 배치100{batch_ok} 기본값일치{default_matches_max}")
-
-
 # --------------------- #27 수확 통합(merge_fullcatalog_shards) 안전성
 def t27_merge_fullcatalog_safety():
     wf = WF.read_text(encoding="utf-8")
@@ -678,17 +524,6 @@ def t26_harvest_full_catalog_safety():
           f"비결정적hash제거{no_nondeterministic_hash} 결정적hash{uses_deterministic_hash} "
           f"별도브랜치push{pushes_own_branch} 스크래퍼{scraper_exists} 워커{worker_exists} "
           f"색조필터{has_color_filter} 리뷰상한{has_review_cap}")
-
-
-# --------------------- #25 번역 건너뛰기(skip_translate) 옵션 존재
-def t25_skip_translate_option():
-    wf = WF.read_text(encoding="utf-8")
-    has_input = "skip_translate:" in wf
-    has_guard = re.search(r'Translate merged pool[^\n]*\n\s*if:\s*inputs\.skip_translate\s*!=\s*true', wf)
-    check("25 번역 건너뛰기(skip_translate) 옵션", has_input and bool(has_guard),
-          f"입력존재{has_input} 가드적용{bool(has_guard)}")
-
-
 # --------------------- #24 상품저장 필터에서 리뷰수/가격 조건 해지 확인
 #  사용자 지시로 리뷰수·가격 필터를 해지했다. 색조/카테고리불일치/
 #  옵션있음 조건은 그대로 유지돼야 한다(색조 봉인은 #13에서 별도 검사).
