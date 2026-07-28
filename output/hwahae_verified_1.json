@@ -24417,5 +24417,241 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1201691434",
+    "translated_kr": "액티브 모이스처 크림 60g 한국 크림 보습 크림 페이스 케어 데일리 케어 컨디션 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "(해외) 하이드라 크림 위드 오렌지 - 데일리 페이스 케어"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192838559",
+    "translated_kr": "어드밴스드 레티노 멜라 세럼 50ml 한국 세럼 레티놀 케어 페이스 케어 보습 세럼 데일리 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205678472",
+    "translated_kr": "두피 브러시 두피 브러시 샴푸 브러시 두피 마사지 두피 케어 실리콘 브러시 혈액 순환 촉진 목욕탕",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1028730145",
+    "translated_kr": "풀 퍼퓸 스크럽 500g 슈가-플로르 소프/씨솔트-로즈 페탈/씨솔트-화이트 블랑 실버 스푼 포함",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1166625243",
+    "translated_kr": "딥 대미지 리페어 샴푸 500g + 딥 대미지 트리트먼트 EX 텐더 블룸 320ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스",
+      "naver": "어노브 딥 데미지 리페어 듀오 샴푸(스윗브리즈) 500g + 트리트먼트(텐더블룸) EX 대용량 320ml"
+    },
+    "brand": "어노브",
+    "name": "어노브 딥 데미지 리페어 듀오 샴푸(스윗브리즈) 500g + 트리트먼트(텐더블룸) EX 대용량 320ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "48150",
+    "mall": "뽐므스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12661152639",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9020566/90205663545.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9020566/90205663545.jpg",
+        "mall": "뽐므스토어",
+        "link": "https://smartstore.naver.com/main/products/12661152639"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188387614",
+    "translated_kr": "코레아나 1+1 한국 리턴 크림 영양 크림의 주름 개선에 탄력",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "[1+1+1] 프랭클리 레티놀 0.1 고보습크림 주름개선 영양탄력 30ml, 3개"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200598614",
+    "translated_kr": "펩타이드9 볼륨 & 텐션 톡스 크림 50g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드9 볼륨 앤 텐션 톡스 크림 프로",
+      "musinsa": "펩타이드9 볼륨 앤 텐션 톡스 크림 프로 50g",
+      "naver": "메디필 펩타이드9 볼륨 앤 텐션 톡스 크림 프로 50g 볼꺼짐크림"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "펩타이드9 볼륨 앤 텐션 톡스 크림 프로",
+    "volume": "50g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "구름아래",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13620766975",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116527/91165277392.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116527/91165277392.jpg",
+        "mall": "구름아래",
+        "link": "https://smartstore.naver.com/main/products/13620766975"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194271375",
+    "translated_kr": "3개 세트 비오레 UV 아쿠아 리치 라이트 업 에센스 100g 자외선 차단제 SPF50",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 유브이 아쿠아 리치 라이트 업 에센스 [SPF50+/PA++++]",
+      "naver": "비오레 Biore UV 아쿠아 리치 라이트업 에센스 선크림 SPF50 100g 3개 세트"
+    },
+    "brand": "비오레 (Biore)",
+    "name": "(해외) 유브이 아쿠아 리치 라이트 업 에센스 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "51000",
+    "mall": "재팬투코리아",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12050289751",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8959480/89594800450.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8959480/89594800450.jpg",
+        "mall": "재팬투코리아",
+        "link": "https://smartstore.naver.com/main/products/12050289751"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116611/91166115210.jpg",
+        "mall": "글로버디",
+        "link": "https://smartstore.naver.com/main/products/13621604793"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8929017/89290171131.jpg",
+        "mall": "션샤인오사카",
+        "link": "https://smartstore.naver.com/main/products/11745660612"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8588622/85886229908.jpg",
+        "mall": "틴닷",
+        "link": "https://smartstore.naver.com/main/products/8341729585"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199354826",
+    "translated_kr": "불독 오리지널 5날 면도칼 대나무 홀더 홀더(날 포함 + 교체용 2개 입) 대나무 제 면도 면도칼 남성용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199687551",
+    "translated_kr": "우편 투함 U・V락 프리미엄 브라이트 30입(30일분) 마시는 자외선 차단제/자외선 대책/서플리먼트/비타민C/유브락",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
