@@ -1390,7 +1390,12 @@ jobs:
           python3 -c "import json; state = json.load(open('/tmp/ds_for_verify.json')); translated = [{'goods_no': p['goods_no'], 'translated_kr': p['translated_kr'], 'known_brand': p.get('known_brand', '')} for p in state.get('all_products', []) if p.get('translated_kr')]; json.dump(translated, open('../output/hwahae_input_39.json', 'w'), ensure_ascii=False, indent=2); print(f'[INFO] discovery-live에서 번역완료 {len(translated)}건 가져옴')"
 
           TOTAL=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_input_39.json'))))")
-          CHUNK=2
+          # [CHUNK 2 -> 10 상향] 2건은 너무 작아서, 그 2건이 모두 기술적
+          # 실패로 보류되면 즉시 '진행 없음'이 되어 루프가 끝났다. 10건이면
+          # 일부가 보류돼도 나머지가 확정되므로 루프가 계속 돈다.
+          CHUNK=10
+          VNOPROG=0
+          MAX_VNOPROG=3  # 연속 무진전 허용(hwahae_verify_batch의 재시도 3회와 맞춤)
           while true; do
             DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_39.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
             if [ "$DONE_BEFORE" -ge "$TOTAL" ]; then
@@ -1428,9 +1433,22 @@ jobs:
             fi
 
             DONE_AFTER=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_verified_39.json'))))")
+            # [v1.16.5와 동일한 수정 - 검증 루프에도 적용] 기술적 실패로
+            # '보류'된 상품은 results에 안 들어가므로 DONE 카운트가 안 오른다.
+            # CHUNK가 2건뿐이라 그 2건이 다 보류되면 즉시 '진행 없음'으로
+            # 판정돼 루프가 끝나버렸다(실측: 3건만 처리하고 종료). 그러면
+            # hwahae_verify_batch.py의 MAX_VERIFY_RETRIES(3회) 재시도 로직이
+            # 한 실행 안에서 절대 완주하지 못한다. 연속 무진전을 허용해서
+            # 재시도가 자연히 소진되게 하되, 그 이상이면 진짜 장애로 보고 중단.
             if [ "$DONE_AFTER" -eq "$DONE_BEFORE" ]; then
-              echo "진행 없음 — 중단"
-              break
+              VNOPROG=$((VNOPROG + 1))
+              echo "::warning::검증 진행 없음 ${VNOPROG}/${MAX_VNOPROG}회 (기술적실패 재시도 중일 수 있음)"
+              if [ "$VNOPROG" -ge "$MAX_VNOPROG" ]; then
+                echo "${MAX_VNOPROG}회 연속 무진전 — 중단"
+                break
+              fi
+            else
+              VNOPROG=0
             fi
           done
 
