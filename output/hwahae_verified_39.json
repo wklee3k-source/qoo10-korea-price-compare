@@ -39253,5 +39253,150 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1170033513",
+    "translated_kr": "프리미엄 펩타이드 나이터 1500샷 넥 패치 1.0 1장 /3장 구매마다 펩타이드 톡스 포어/ 체계적 관리/하루 한 장의 습관으로 거친 목 라인을 매끈하게~",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194273240",
+    "translated_kr": "프리미엄 펩타이드 나이터 1500샷 넥 패치 1.0_1세트(4장) /1개월 집중 관리/ 체계적 관리/하루 한 장의 습관으로 거친 목 라인을 매끈하게~",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207093725",
+    "translated_kr": "CPR 트리플 시너지 링클 케어 세럼 30ml+30ml 한국화장품, 스킨케어, 레티날 미용액, 콜라겐 세럼",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1189130624",
+    "translated_kr": "MTS 스칼프 부스트 앰플(300 / 500 / 1000·3종 중 1개 선택)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "두피 부스트 앰플 [MTS 500]",
+      "naver": "FORBEAUT MTS 스칼프 부스트 앰플 1000 스칼프 케어 탈모 두피 관리 수분 공급 헤어케어 두피 컨디션 지원"
+    },
+    "brand": "포뷰트 (ForBeaut)",
+    "name": "두피 부스트 앰플 [MTS 500]",
+    "volume": "10ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "71890",
+    "mall": "LOVE UNLIMITED",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13420580028",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9096509/90965090363.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096509/90965090363.jpg",
+        "mall": "LOVE UNLIMITED",
+        "link": "https://smartstore.naver.com/main/products/13420580028"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8700915/87009155361.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9464655053"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8737865/87378659350.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9834157083"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210270319",
+    "translated_kr": "【1+1 기획】【한국 인기 UV】마스터즈 아쿠아리치 선 크림 50ml×2개 세트 (+포켓몬 에디션)SPF50+",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마스터즈 아쿠아 리치 선크림 [SPF50+/PA++++]",
+      "naver": "AHC 마스터즈 아쿠아리치 선크림 듀오세트 2개(총 30ml 4개)+()마스터즈 10ml 1개"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "마스터즈 아쿠아 리치 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "40160",
+    "mall": "팜어니스트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13648116322",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119262/91192627101.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119262/91192627101.jpg",
+        "mall": "팜어니스트",
+        "link": "https://smartstore.naver.com/main/products/13648116322"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178892890",
+    "translated_kr": "[1+1 / 더블 기획] DIVE-IN FOR MEN 저분자 히알루론산 올인원 200g + 200g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 포맨 저분자 히알루론산 올인원"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 포맨 저분자 히알루론산 올인원",
+    "volume": "200g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
