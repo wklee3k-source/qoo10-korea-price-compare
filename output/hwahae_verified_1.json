@@ -24663,5 +24663,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203828339",
+    "translated_kr": "【미용피부과 전문의 감수】여성 청결 부위 케어 오일 120ml 펨케어 바디 오일 보습 질 건조 착색 칙칙함 냄새 마사지 갱년기 폐경 가려움 산후 회음 음부 VIO 가슴",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "타라곤 에센셜 오일",
+      "naver_rematch": "프랑스 Essenciagua 에센시아가 타라곤 아로마 에센셜 오일 5ml"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "963806129",
+    "translated_kr": "SELLA 클래식 내추럴 클렌징바 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "옥시젠 물티슈 [클래식]",
+      "naver": "플러스셀라 클래식 클렌징바 2EA 천연비누",
+      "daum": "신세계그룹, 산불 피해복구 성금 5...",
+      "naver_web": "SELLA 미니 클렌징 비누, , 2개"
+    },
+    "brand": "아토앤오투 (ATONO2)",
+    "name": "옥시젠 물티슈 [클래식]",
+    "volume": "70g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "24000",
+    "mall": "플러스 셀라",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6070491949",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8361499/83614991437.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8361499/83614991437.4.jpg",
+        "mall": "플러스 셀라",
+        "link": "https://smartstore.naver.com/main/products/6070491949"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8209408/82094082246.6.jpg",
+        "mall": "플러스 셀라",
+        "link": "https://smartstore.naver.com/main/products/4549562246"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
