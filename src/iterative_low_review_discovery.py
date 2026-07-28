@@ -54,7 +54,7 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 키워드 큐 고갈의 직접 원인이었다.
 REVIEW_THRESHOLD = 10  # [v1.9.1부터 미사용] 상점선별 필터 해지됨. 과거 기록용으로만 남김
 MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
-PRODUCT_SAVE_REVIEW_THRESHOLD = 20  # 20 미만(0~19)만 최종 상품목록에 저장. 상점선별 단계와는 별개(그쪽은 리뷰수 무관하게 전부 방문)
+PRODUCT_SAVE_REVIEW_THRESHOLD = 10  # 20 -> 10 하향(품질 우선). 실측: 통합본 4,586건 중 리뷰<10이 4,355건(95%)이라 물량 손실은 5%뿐
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 

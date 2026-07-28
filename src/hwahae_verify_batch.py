@@ -22,6 +22,8 @@ GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 �
     python hwahae_verify_batch.py <input.json> <output.json> [max_new]
 """
 
+import os
+import time
 import difflib
 import json
 import re
@@ -47,6 +49,26 @@ NEWS_DOMAIN_RE = re.compile(
     r"donga\.com|chosun\.com|joongang|hani\.co\.kr|mk\.co\.kr|hankyung|edaily|yna\.co\.kr"
 )
 HEADLINE_SENTENCE_RE = re.compile(r"[다요]\s*,|[다요][!?]|하면|한다면")
+
+
+# [v3.1.1] 소스가 "일시적으로 실패"한 게 아니라 "아예 못 쓰는 상태"인 경우가
+# 있다. 실측 2026-07-28: Exa 크레딧이 소진돼 모든 호출이 HTTP 402(Payment
+# Required)로 떨어졌는데, 이게 기술적실패로 분류돼 상품마다 3회씩 재시도된
+# 뒤 '보류'로 쌓였다 — 검증이 통째로 멈춘 것과 같았다. 화해/네이버/무신사가
+# 멀쩡하고 채택 기준도 2곳 합의라 Exa 없이도 검증은 정상 진행 가능하므로,
+# 이런 오류는 그 소스만 꺼버리고 나머지로 계속 간다.
+PERMANENT_FAILURE_PATTERNS = (
+    "402",              # Payment Required — 크레딧 소진
+    "Payment Required",
+    "401",              # Unauthorized — 키 만료/오타
+    "Unauthorized",
+    "403",              # Forbidden — 권한 없음
+)
+DISABLED_SOURCES: set[str] = set()
+
+
+def _is_permanent_failure(message: str) -> bool:
+    return any(pat in message for pat in PERMANENT_FAILURE_PATTERNS)
 
 
 class SearchTechnicalFailure(Exception):
@@ -383,19 +405,48 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 
 
 REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
+# [품질 강화] 서로 독립된 소스 몇 곳 이상이 찾아내야 채택할지. 1이면
+# 예전처럼 한 곳만 찾아도 통과(오매칭 위험), 2면 두 곳 이상이 같은
+# 상품을 찾았을 때만 채택한다. 환경변수로 조절 가능.
+MIN_CONSENSUS_SOURCES = int(os.environ.get("MIN_CONSENSUS_SOURCES", "2"))
+
+
+REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
 
 
 def _safe_search(fn, *args, failures: list, label: str, **kwargs):
     """4개 검색함수를 감싸서, SearchTechnicalFailure가 나면 failures
     리스트에 기록하고 None을 돌려준다 — 호출부의 'if not cand_X: ...'
     로직은 그대로 두면서, 이게 '진짜 무결과'인지 '기술적 실패'인지를
-    별도로 추적할 수 있게 한다."""
+    별도로 추적할 수 있게 한다.
+
+    [지연 추가] 예전엔 상품 하나당 4곳(Exa/화해/무신사/네이버)을 지연
+    없이 연달아 때렸다. 워커 1개일 땐 티가 안 났지만, 병렬 워커를 여러
+    개 띄우면 그 패턴이 워커 수만큼 겹쳐서 대상 사이트에 부담이 된다.
+    특히 화해/무신사는 공식 API가 아니라 브라우저 스크래핑이라 더
+    조심해야 한다. 매 요청 뒤 REQUEST_DELAY초 쉰다(기본 1초, 환경변수로
+    조절 가능)."""
+    # [v3.1.1] 이미 꺼진 소스는 호출조차 하지 않는다(지연시간도 아낀다).
+    if label in DISABLED_SOURCES:
+        return None
     try:
         return fn(*args, **kwargs)
     except SearchTechnicalFailure as e:
-        print(f"    [{label}-기술적실패-재시도대상] {e}", file=sys.stderr)
+        msg = str(e)
+        if _is_permanent_failure(msg):
+            # 결제/인증 문제는 몇 번을 재시도해도 그대로다. 이 소스만 끄고
+            # 나머지 소스로 계속 간다 — failures에 넣지 않으므로 상품이
+            # '보류'로 쌓이지 않는다.
+            DISABLED_SOURCES.add(label)
+            print(f"    [{label}-영구장애] {msg} — 이번 실행에서 {label}를 끄고 나머지 소스로 진행",
+                  file=sys.stderr)
+            return None
+        print(f"    [{label}-기술적실패-재시도대상] {msg}", file=sys.stderr)
         failures.append(label)
         return None
+    finally:
+        if REQUEST_DELAY > 0 and label not in DISABLED_SOURCES:
+            time.sleep(REQUEST_DELAY)
 
 
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
@@ -535,6 +586,31 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         scored.sort(key=lambda x: -x[0])
         best_score, winner = scored[0]
         print(f"    [투표결과] " + " / ".join(f"{c['source']}={s:.1f}" for s, c in scored) + f" -> 승자: {winner['source']}")
+
+        # [품질 강화 - 2곳 이상 합의 요건] 예전엔 4곳 중 한 곳만 찾아도
+        # 통과시켰다. 그러면 그 한 곳이 엉뚱한 상품을 물어와도 검증할
+        # 방법이 없다(실측: 화해가 'ph6.9 위치하젤 클렌저'를 찾았는데
+        # 네이버는 전혀 다른 '뉴트로지나 리무버'를 가져온 사례).
+        # 서로 독립된 소스 2곳 이상이 같은 상품을 찾아냈을 때만 채택하면
+        # 오매칭이 크게 준다 — 물량은 줄지만 '양보다 질' 방침에 맞다.
+        # (실측: 실제 검증분 442건 중 2곳 이상 합의는 310건 = 70.1%)
+        n_sources = len({c["source"] for c in candidates})
+        if n_sources < MIN_CONSENSUS_SOURCES:
+            print(f"    [거부-합의부족] {n_sources}곳만 찾음(최소 {MIN_CONSENSUS_SOURCES}곳 필요) — 오매칭 방지를 위해 채택하지 않음")
+            entry = {
+                "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
+                "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "reject_reason": f"합의부족({n_sources}곳)",
+                "brand": None, "name": None, "volume": "", "source": None,
+                "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
+                "product_url": None, "image_url": None, "image_candidates": [],
+            }
+            results.append(entry)
+            out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            if retry_counts.pop(item["goods_no"], None) is not None:
+                retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
+            processed_this_call += 1
+            continue
 
         if best_score < REJECT_SCORE_THRESHOLD:
             print(f"    [거부] 최고점수({best_score:.1f})가 임계값({REJECT_SCORE_THRESHOLD}) 미만 — 틀린 매칭을 억지로 채택하지 않고 실패 처리")
