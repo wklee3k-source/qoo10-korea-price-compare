@@ -39929,5 +39929,87 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "934718142",
+    "translated_kr": "트러블 솝 어성초 비누 손수 만든 비누 100g 1+1 / 여드름 케어 / 피지 컨트롤 / 부드러운 사용감 / 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1120312659",
+    "translated_kr": "글리콜릭 애씨드 7% 엑스폴리에이팅 토너 글리콜릭애씨드 7% 엑스폴리에이팅토너(토닝솔루션) 100ml, 240ml / 글리콜릭",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212963285",
+    "translated_kr": "어성초 BHA 지우게 필링 패드 70장 (60+10장) 모공 케어 각질 케어 피지 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175058164",
+    "translated_kr": "PDRN 히알루론산 100 모이스처라이징 크림 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 100 수분 크림",
+      "naver": "아누아 PDRN 피디알엔 히알루론산 100 수분 크림 60ml (+60ml+토너40ml)"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 100 수분 크림",
+    "volume": "60mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "30000",
+    "mall": "블랙 올리브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13527605632",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9107211/91072115985.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107211/91072115985.1.jpg",
+        "mall": "블랙 올리브",
+        "link": "https://smartstore.naver.com/main/products/13527605632"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
