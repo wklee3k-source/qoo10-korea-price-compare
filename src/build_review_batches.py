@@ -59,6 +59,9 @@ def render_cards(pairs: list[dict]) -> str:
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        if p.get("single_source_naver"):
+            brand_badge += ('<span class="badge warn">⚠ 단독 매칭 — 네이버 한 곳만 찾았습니다.'
+                            ' 사진을 반드시 대조하세요</span>')
         if p.get("naver_rematched"):
             brand_badge += ('<span class="badge unknown">재검색 매칭 — 다른 소스가 알려준'
                             ' 이름으로 찾은 건입니다</span>')
@@ -159,9 +162,12 @@ def sort_by_brand_confidence(pairs: list[dict]) -> list[dict]:
     # 원래 순서를 보존하려고 인덱스를 함께 쓴다(같은 등급 안에서는
     # 기존 순서 그대로 — 정렬 때문에 매번 순서가 뒤바뀌면 어제 어디까지
     # 봤는지 알 수 없게 된다).
-    return [x for _, _, x in sorted(
-        ((BRAND_ORDER.get(p.get("brand_status"), 1), i, p) for i, p in enumerate(pairs)),
-        key=lambda t: (t[0], t[1]))]
+    # [v4.1.0] 2차 기준: 합의 없이 네이버 단독으로 통과한 건은 뒤로.
+    #  오매칭을 거를 자동 수단이 없어 사진 대조가 필수인 구간이다.
+    return [x for _, _, _, x in sorted(
+        ((BRAND_ORDER.get(p.get("brand_status"), 1),
+          1 if p.get("single_source_naver") else 0, i, p) for i, p in enumerate(pairs)),
+        key=lambda t: (t[0], t[1], t[2]))]
 
 
 def build_batches():

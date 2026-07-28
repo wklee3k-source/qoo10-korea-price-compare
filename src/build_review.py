@@ -347,6 +347,7 @@ def build_pairs():
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
             "obsolete": x.get("obsolete"),
             "naver_rematched": x.get("naver_rematched"),
+            "single_source_naver": x.get("single_source_naver"),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
@@ -410,6 +411,9 @@ def build_html(pairs: list[dict]):
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        if p.get("single_source_naver"):
+            brand_badge += ('<span class="badge warn">⚠ 단독 매칭 — 네이버 한 곳만 찾았습니다.'
+                            ' 사진을 반드시 대조하세요</span>')
         if p.get("naver_rematched"):
             brand_badge += ('<span class="badge unknown">재검색 매칭 — 다른 소스가 알려준'
                             ' 이름으로 찾은 건입니다</span>')

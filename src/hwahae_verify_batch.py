@@ -744,6 +744,27 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                   f"브랜드/가격/구매링크를 확인할 수 없어 채택하지 않음")
             n_sources = 0
 
+        # [v4.1.0] 네이버가 직접 찾았고 구매링크까지 확보했으면 단독으로도
+        # 통과시킨다.
+        #
+        # 실측: 링크 실패 651건 중 205건(31%)이 '네이버는 찾았고 링크도
+        # 있는데 다른 소스가 확인해주지 않아' 버려진 건이다. 링크를 손에
+        # 쥐고도 못 쓰는 상태였다.
+        #
+        # ⚠️ 대가는 분명하다. 2곳 합의는 오매칭을 거르려고 넣은 기준이고
+        # (실측 사례: 화해 'ph6.9 위치하젤 클렌저' vs 네이버 '뉴트로지나
+        # 리무버'), 단독 통과는 그 안전망을 끈다는 뜻이다. 그래서 버리는
+        # 대신 '표시하고 사람이 본다'로 간다 — 결과에 single_source_naver를
+        # 남기고, 검수페이지에서 경고와 함께 뒤쪽에 배치한다.
+        single_source_naver = False
+        if n_sources < MIN_CONSENSUS_SOURCES and n_sources > 0:
+            _nv = cand_naver if (cand_naver and cand_naver.get("product_url")) else None
+            if _nv:
+                single_source_naver = True
+                print("    [단독통과] 네이버가 직접 찾고 구매링크까지 확보 — "
+                      "합의 없이 통과(검수에서 사진 대조 필요)")
+                n_sources = MIN_CONSENSUS_SOURCES
+
         if n_sources < MIN_CONSENSUS_SOURCES:
             print(f"    [거부-합의부족] {n_sources}곳만 찾음(최소 {MIN_CONSENSUS_SOURCES}곳 필요) — 오매칭 방지를 위해 채택하지 않음")
             entry = {
@@ -816,6 +837,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             # [v4.0.0] 이 건의 링크가 '독립 검색'이 아니라 '남의 답으로 재조회'해서
             # 나온 것인지 표시한다. 합의의 성격이 다르므로 검수 때 구분해야 한다.
             "naver_rematched": bool(cand_naver_rematch and naver_data is cand_naver_rematch),
+            # [v4.1.0] 합의 없이 네이버 단독으로 통과한 건. 오매칭을 거를
+            # 자동 수단이 없으므로 검수에서 반드시 사진을 대조해야 한다.
+            "single_source_naver": single_source_naver,
             "obsolete": hwahae_data.get("obsolete"),
             "sale": hwahae_data.get("sale"),
             "price": naver_data.get("price") or hwahae_data.get("price") or musinsa_data.get("price"),
