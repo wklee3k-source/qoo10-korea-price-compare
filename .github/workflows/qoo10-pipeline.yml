@@ -4,6 +4,19 @@ permissions:
   contents: write
 
 on:
+  # [v3.8.0] 검수페이지에서 "GitHub에 저장"을 누르면 결정 파일이 main의
+  # comparison/decisions/ 로 커밋된다. 그 push를 그대로 신호로 삼아
+  # 사전 학습을 자동 실행한다 — 검수를 끝낸 뒤 따로 트리거를 돌릴 필요가
+  # 없다. paths를 결정 파일로 좁혔기 때문에, 학습 job이 만드는 커밋
+  # (data/*.json)은 이 트리거를 다시 부르지 않는다(무한 반복 방지).
+  push:
+    branches: [main]
+    paths:
+      - "comparison/decisions/**"
+      - "output/review/*_decisions.json"
+      # (기존 트리거 흡수) 스크랩 결과가 올라오면 엑셀 생성
+      - "output/*_korea_side.json"
+
   workflow_dispatch:
     inputs:
       keyword:
@@ -80,10 +93,6 @@ on:
         description: "네이버쇼핑 API 테스트용 검색어 (비워두면 이 job 안 돎)"
         required: false
         type: string
-  push:
-    paths:
-      - "output/*_korea_side.json"
-
 jobs:
   scrape:
     if: github.event_name == 'workflow_dispatch' && inputs.keyword != ''
@@ -1474,7 +1483,9 @@ jobs:
 
 
   build_excel:
-    if: github.event_name == 'push'
+    # [v3.8.0] push 트리거에 '검수 결정 저장'이 추가됐다. 그때 엑셀을 만들
+    # 이유가 없으므로 그 커밋에서는 돌지 않게 한다.
+    if: github.event_name == 'push' && !contains(github.event.head_commit.message, '검수 결정 저장')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1528,7 +1539,7 @@ jobs:
     # 한국 상품'이라는 확정이 comparison/decisions/ 에 쌓인다. 그 파일을
     # 읽어 브랜드 대응과 표기 변형을 사전에 되먹인다. 지금까지는 판단이
     # 쌓이기만 하고 파이프라인에 반영되지 않았다.
-    if: github.event_name == 'workflow_dispatch' && inputs.run_learn_decisions
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.run_learn_decisions)
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

@@ -579,11 +579,24 @@ def t52_decision_feedback_loop():
     reads_both = wf.count("--decisions") >= 2      # 신규 경로 + 예전 경로
     readonly_other_branches = "--depth 1 origin discovery-live" in wf and "git show FETCH_HEAD" in wf
 
+    # [v3.8.0] 검수 저장(push)이 곧 학습 신호다. 두 가지를 지켜야 한다.
+    #  (1) 학습 job이 만드는 커밋(data/*.json)이 트리거를 다시 부르면
+    #      무한 반복이 된다 — paths를 결정 파일로 좁혀야 한다.
+    #  (2) 같은 push 트리거를 쓰는 build_excel이 검수 저장 때마다 덩달아
+    #      돌면 안 된다.
+    triggers = d[True]
+    push_paths = (triggers.get("push") or {}).get("paths") or []
+    auto_on_push = "github.event_name == 'push'" in str(job.get("if"))
+    no_loop = all(("decisions" in p or "korea_side" in p) for p in push_paths) and bool(push_paths)
+    excel_guard = "검수 결정 저장" in str(d["jobs"].get("build_excel", {}).get("if"))
+
     ok = (only_confirmed and no_overwrite and strict_alias and kana_guard
-          and has_job and reads_both and readonly_other_branches)
+          and has_job and reads_both and readonly_other_branches
+          and auto_on_push and no_loop and excel_guard)
     check("52 검수 피드백 루프(사전 학습)", ok,
           f"확정건만{only_confirmed} 덮어쓰기방지{no_overwrite} 엄격변형{strict_alias} "
-          f"가나차단{kana_guard} 잡{has_job} 양쪽경로{reads_both} 타브랜치읽기전용{readonly_other_branches}")
+          f"가나차단{kana_guard} 잡{has_job} 양쪽경로{reads_both} 타브랜치읽기전용{readonly_other_branches} "
+          f"저장시자동{auto_on_push} 무한반복방지{no_loop} 엑셀오작동방지{excel_guard}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
