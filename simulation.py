@@ -615,7 +615,8 @@ def t53_review_brand_ordering():
 
     has_order = 'BRAND_ORDER = {"match": 0, "unknown": 1, "mismatch": 2}' in src
     applied = "all_pairs = sort_by_brand_confidence(all_pairs)" in src
-    stable = "enumerate(pairs)" in src and "key=lambda t: (t[0], t[1])" in src
+    # 같은 등급 안에서는 입력 순서(enumerate 인덱스)가 마지막 정렬키여야 한다.
+    stable = "enumerate(pairs)" in src and "t[1], t[2]))" in src
     warns = "브랜드 미확인" in src and "오매칭 의심" in src
     styled = ".badge.warn" in tmpl
 
@@ -657,6 +658,41 @@ def t54_naver_rematch():
     check("54 네이버 재검색(링크 회수)", ok,
           f"함수{has_fn} 상품소스{in_product_sources} 합의전호출{before_quorum} "
           f"원본우선{prefers_original} 표시{flagged} 검수노출{shown}")
+
+
+# --------------------- #55 네이버 단독 통과(합의 없이)
+#  네이버가 직접 찾고 구매링크까지 확보한 건은 합의 없이 통과시킨다.
+#  실측: 링크 실패 651건 중 205건(31%)이 '네이버는 찾았고 링크도 있는데
+#  다른 소스가 확인해주지 않아' 버려진 건이었다.
+#
+#  대가가 분명한 완화다 — 2곳 합의는 오매칭을 거르려고 넣은 기준이고
+#  (실측: 화해 'ph6.9 위치하젤 클렌저' vs 네이버 '뉴트로지나 리무버'),
+#  단독 통과는 그 안전망을 끄는 것이다. 그래서 반드시 세 가지를 지킨다.
+#   (1) 링크가 실제로 있을 때만 — 링크도 없으면 통과시킬 이유가 없다.
+#   (2) 결과에 표시를 남긴다.
+#   (3) 검수페이지에서 경고를 띄우고 뒤로 배치한다 — 사진 대조가 필수인
+#       구간이므로 확실한 건들과 섞이면 안 된다.
+def t55_naver_single_source_pass():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    body = src.split("def run_batch(")[1]
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    requires_link = 'cand_naver.get("product_url")' in body and "single_source_naver = True" in body
+    # 정족수 상수 자체는 건드리지 않아야 한다(다른 소스 조합에는 그대로 적용).
+    quorum_intact = 'MIN_CONSENSUS_SOURCES", "2"' in src
+    # 아무도 못 찾은 건(0곳)까지 통과시키면 안 된다.
+    not_from_zero = "n_sources < MIN_CONSENSUS_SOURCES and n_sources > 0" in body
+    flagged = '"single_source_naver": single_source_naver' in body
+    passed_to_review = '"single_source_naver": x.get("single_source_naver")' in review
+    warned = "단독 매칭" in review and "단독 매칭" in batches
+    sorted_back = 'if p.get("single_source_naver") else 0' in batches
+
+    ok = (requires_link and quorum_intact and not_from_zero and flagged
+          and passed_to_review and warned and sorted_back)
+    check("55 네이버 단독통과(링크 확보시)", ok,
+          f"링크필수{requires_link} 정족수유지{quorum_intact} 0곳제외{not_from_zero} "
+          f"표시{flagged} 검수전달{passed_to_review} 경고{warned} 뒤로정렬{sorted_back}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
