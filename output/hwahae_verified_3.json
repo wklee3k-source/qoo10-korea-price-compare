@@ -7196,5 +7196,296 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213391178",
+    "translated_kr": "[국내 정품] 아르티스 디보체 버터 핸드 크림 3306 퍼스트 석류 40g 각질층 구석구석 촉촉함 전해주는 히알루론산",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1186591970",
+    "translated_kr": "PDRN 리주비네이팅 크림 20ml 2개",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "musinsa": "[SET] PDRN 리쥬비네이팅 크림 50g 2개",
+      "naver": "SS크림 2개세트 연어정액크림 PDRN 기능성화장품 최신상품",
+      "naver_web": "PDRN 리쥬비네이팅크림 2개 + 피토올로지 클렌징폼 30mlX1개"
+    },
+    "brand": "애즈어스",
+    "name": "[SET] PDRN 리쥬비네이팅 크림 50g 2개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "222800",
+    "mall": "리PLAY",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13349386262",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9089389/90893896594.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089389/90893896594.jpg",
+        "mall": "리PLAY",
+        "link": "https://smartstore.naver.com/main/products/13349386262"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185499516",
+    "translated_kr": "클린 잇 제로 클렌징 밤 오리지널 180ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클린 잇 제로 클렌징밤 [오리지널]",
+      "musinsa": "클린잇제로 오리지널 클렌징밤 대용량 180ml",
+      "naver": "[바닐라코] 클린 잇 제로 오리지널 클렌징밤 180ml, 1개",
+      "daum": "신세경 클린잇제로",
+      "naver_web": "클린 잇 제로 오리지널 클렌징밤 대용량 3개 SET"
+    },
+    "brand": "바닐라코 (banilaco)",
+    "name": "클린 잇 제로 클렌징밤 [오리지널]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "18950",
+    "mall": "바닐라코 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/218789209",
+    "image_url": "https://shopping-phinf.pstatic.net/main_7536910/7536910110.233.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_7536910/7536910110.233.jpg",
+        "mall": "바닐라코 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/218789209"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8601557/86015572742.47.jpg",
+        "mall": "바닐라코 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/8471072419"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195056792",
+    "translated_kr": "아토배리어365 세라히알 세럼 7ml*5 (35ml) 미용액 세라마이드 히알루론산 하이드로세럼",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "에스트라 아토베리어 365 예민보습 로션 기획세트+사은품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211943755",
+    "translated_kr": "애슬리즘 프로텍트 에센스 자외선 차단제 UV",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "비오레 UV 아스리즘 프로텍트 에센스 선크림 70g SPF50+ 애슬리즘",
+      "daum": "땡볕에도 뽀얀 피부 유지하는 애들이 몰래 바르는 선크림",
+      "naver_web": "FACE > 피부 고민별 > UV 차단"
+    },
+    "brand": "비오레",
+    "name": "비오레 UV 아스리즘 프로텍트 에센스 선크림 70g SPF50+ 애슬리즘",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "16100",
+    "mall": "플라이투재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/2085014163",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1194470/11944700278.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1194470/11944700278.1.jpg",
+        "mall": "플라이투재팬",
+        "link": "https://smartstore.naver.com/main/products/2085014163"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091315/90913151056.jpg",
+        "mall": "간사이마켓",
+        "link": "https://smartstore.naver.com/main/products/13368640720"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937866/89378663043.jpg",
+        "mall": "마토리상사",
+        "link": "https://smartstore.naver.com/main/products/11834152456"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1167330917",
+    "translated_kr": "[병렬수입품] 시카플러스트 리페어 크림 B5+ 100ml 더마 시카 테크놀로지 채용 시어버터 배합의 쾌적한 밤 타입 텍스처가 끈기지 않고 촉촉함 있는 피부로 민감피부도 저자극",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191280447",
+    "translated_kr": "[국내 정품] AQ 앱솔루트 로션 하이드로인퓨즈 에멀전 마이크로 래디언스 본체 최상급 라인 화장수 도입 유액 스킨케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212714853",
+    "translated_kr": "약용 스킨 컨디셔너 에센셜 N (화장수 (민감피부용)) 330ml 외상자 한정 디자인 & 전용 페이셜 코튼 10장 부착 스킨콘 하토무기 의약부외품 스킨케어 피부트러블 건조",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1143161627",
+    "translated_kr": "클라랑스 픽스 메이크업 N 50ml 메이크 키프 미스트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "핑크 롤 메이크업 브러쉬 세트",
+      "naver": "클라랑스 메이크업 픽서 50ml",
+      "naver_web": "메이크업픽서추천 클라랑스픽스메이크업 솔직 리뷰"
+    },
+    "brand": "코링코 (CORINGCO)",
+    "name": "핑크 롤 메이크업 브러쉬 세트",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38600",
+    "mall": "RED BAND",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11601456814",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8914596/89145967220.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8914596/89145967220.jpg",
+        "mall": "RED BAND",
+        "link": "https://smartstore.naver.com/main/products/11601456814"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8897852/88978523188.jpg",
+        "mall": "투데이 굿즈",
+        "link": "https://smartstore.naver.com/main/products/11434012823"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8115792/81157929089.1.jpg",
+        "mall": "atocosme",
+        "link": "https://smartstore.naver.com/main/products/3613411623"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8882202/88822028264.jpg",
+        "mall": "메모쇼핑",
+        "link": "https://smartstore.naver.com/main/products/11277517933"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8716914/87169144836.jpg",
+        "mall": "월드유로샵",
+        "link": "https://smartstore.naver.com/main/products/9624642566"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206921803",
+    "translated_kr": "닥터초이스 D-판테놀 시카 버블 토너 150ml 한국 피부과 전문의 개발 병원·약국 취급 각질 모공 니키비 케어 식물성 버블 화장수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "토너 [AHABHA각질]",
+      "naver": "오오티디, AHA BHA 클래리파잉 토너, 250ml(8.45fl oz) OOT-81268"
+    },
+    "brand": "#OOTD (오오티디)",
+    "name": "토너 [AHABHA각질]",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "34960",
+    "mall": "AZ플라자",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13304488069",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9084899/90848998401.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084899/90848998401.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13304488069"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
