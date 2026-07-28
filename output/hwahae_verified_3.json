@@ -11267,5 +11267,247 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1094595212",
+    "translated_kr": "펌키니 퍼퓸 핸드크림 미니 15ml/펌키니, 카모, FEY9, 베인/향수 핸드",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "튜브 핸드 [FEY9]",
+      "daum": "선물의 축복이 끝이 없네, 5만원 이하 카톡 선물하기 추천템",
+      "naver_web": "탬버린즈 튜브 핸드크림 베인"
+    },
+    "brand": "탬버린즈 (TAMBURINS)",
+    "name": "튜브 핸드 [FEY9]",
+    "volume": "65ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1165002562",
+    "translated_kr": "칠해서 굳는 비타민 모델링 마스크 세트 고농도 브라이트닝 앰플 배합 밀착 쿨링팩 민감피부 대응 (3회분)",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "카푸치니 전제품 공구",
+      "naver_web": "목주름팩 추천 10개 인기 상품 지금 바로!"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1043783702",
+    "translated_kr": "자네도 서블리믹 아쿠아 인텐시브 트리트먼트 W 1800g 리필 (전상품 최저가에 도전)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver": "시세이도 서브리믹 아쿠아 인텐시브 트리트먼트 W 리필 1800g 살롱전용",
+      "naver_web": "서브리믹 아쿠아인텐시브 트리트먼트 택1"
+    },
+    "brand": "시세이도",
+    "name": "시세이도 서브리믹 아쿠아 인텐시브 트리트먼트 W 리필 1800g 살롱전용",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "80500",
+    "mall": "글로벌DK잡화점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13657136491",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120164/91201647276.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120164/91201647276.jpg",
+        "mall": "글로벌DK잡화점",
+        "link": "https://smartstore.naver.com/main/products/13657136491"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119060/91190608229.jpg",
+        "mall": "일본직구 도쿄나라",
+        "link": "https://smartstore.naver.com/main/products/13646097450"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098604/90986043115.jpg",
+        "mall": "동경살롱",
+        "link": "https://smartstore.naver.com/main/products/13441532763"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119187/91191873301.jpg",
+        "mall": "후쿠오카 셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13647362522"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213037418",
+    "translated_kr": "그레이스 온 에멀젼 120g 모발끝까지 부드럽게, 부드럽게 정돈되는 밀크",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC",
+      "naver_web": "집에 손님이 오는 꿈"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213035674",
+    "translated_kr": "밀키 세럼 익스트라 리페어 120ml/배송료무료 헹굴필요없는 트리트먼트 미용실 살롱 전매품 미용원 헤어케어 손상케어 아웃바스",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1119949757",
+    "translated_kr": "메가할인 한정 밀본 MILBON 플라미아 헤어 세럼 샴푸 M&트리트먼트 M 각 400ml 리필 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212192265",
+    "translated_kr": "비오레 더 클렌즈 오일 메이크 리무버 리필용 280ml (1.8회분) 클렌징 오일 메이크 리무버",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "메이쿠 오또시 후쿠다케 코튼",
+      "naver_web": "Biore 비오레 클렌징오일 미스트 뿌리는 메이크업 리무버"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164714279",
+    "translated_kr": "콜라주 풀풀 폼 비누 핑크 펌프 150ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "콜라주 풀풀 거품 비누 핑크"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1137348429",
+    "translated_kr": "콜라주 풀풀 폼 비누 핑크 펌프 300ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "콜라주 풀풀 거품 비누 핑크"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1174259960",
+    "translated_kr": "헤어팩 세럼",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 세럼 헤어 마스크팩",
+      "musinsa": "LPP 데미지케어 노워시 트리트먼트 헤어팩 200ml",
+      "daum": "환절기 영양 헤어팩/세럼 ~52%할인",
+      "naver_web": "헤어팩 트리트먼트 헤어에센스 마스크팩 앰플 컨디셔너 손상모팩 린스 세럼 아르간오일 염색약 퍼머약 스트"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "헤어팩 트리트먼트 헤어에센스 마스크팩 앰플 컨디셔너 손상모팩 린스 세럼 아르간오일 염색약 퍼머약 스트",
+    "volume": "",
+    "source": "naver_web",
+    "obsolete": true,
+    "sale": false,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
