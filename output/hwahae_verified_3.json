@@ -1370,5 +1370,326 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1078218188",
+    "translated_kr": "마데카솔루션 에센스 퍼펙션 120ml / 피부배리어 피부진정 보습",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "마데카 솔루션 에센스 퍼펙션 1개 피부장벽 보습 진정 보호 병풀추출물"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1083089713",
+    "translated_kr": "퓨어핏 시카 약산성 클렌징패드 100매입 * 1개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "퓨어 핏 약산성 클렌징 패드",
+      "naver": "코스알엑스 약산성 굿모닝 젤 클렌저 50ml 여행용 미니",
+      "daum": "클린한 클린 뷰티 클렌징 모음전!",
+      "naver_web": "코스알엑스 퓨어 핏 시카 약산성 클렌징 패드"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "코스알엑스 퓨어 핏 시카 약산성 클렌징 패드",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "1980",
+    "mall": "패션뷰티몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9801980274",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8734648/87346482547.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8734648/87346482547.jpg",
+        "mall": "패션뷰티몰",
+        "link": "https://smartstore.naver.com/main/products/9801980274"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1080682873",
+    "translated_kr": "더 히알루로닉 아씨드 3 세럼 20ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "더 히알루론산 3 세럼",
+      "daum": "💦💦 프리메라 3C",
+      "naver_web": "바이오더마 하이드라비오 히알루+ 세럼",
+      "naver_rematch": "코스알엑스 더 히알루론산 3 세럼 / 수분앰플, 속건조 세럼, 피부장벽 20ml, 2개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "바이오더마 하이드라비오 히알루+ 세럼",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "34500",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9495986683",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8704048/87040487005.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8704048/87040487005.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/9495986683"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3453700/34537006835.3.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2775295?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=325868"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1098322167",
+    "translated_kr": "5번 화이트볼 글루타치온C 미용액 미용액 스킨케어 보습",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "3번 참은만큼 보들보들 결세럼팩",
+      "naver": "넘버즈인 3번 참은만큼 보들보들 결세럼팩 27g",
+      "daum": "일본직구 No.1 코스믹 COSMIK 마스크팩 COSMETIC > 스킨케어 > 마스크팩/필링/모공팩 > 마스크팩",
+      "naver_web": "비타민세럼 16.5% 비건/1일 기미 개선/ 항산화 100시간/ 비타민C 135 000ppm 저...."
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "일본직구 No.1 코스믹 COSMIK 마스크팩 COSMETIC > 스킨케어 > 마스크팩/필링/모공팩 > 마스크팩",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "1690",
+    "mall": "옴니코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7324951761",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8486945/84869452083.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8486945/84869452083.1.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/7324951761"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8908375/89083750016.jpg",
+        "mall": "다매로드",
+        "link": "https://smartstore.naver.com/main/products/11539239610"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206535075",
+    "translated_kr": "[NEW] 9배 고농축 어성초 토너팩 70매 모공케어 진정케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "9배 고농축 어성초 토너패드",
+      "naver": "구달 어성초 히알루론 수딩 클리어 패드 70매 (+10매)",
+      "daum": "요즘 성분 ZIP. 2",
+      "naver_web": "블랑네이처 9배 고농축 어성초 토너패드"
+    },
+    "brand": "블랑네이처 (BLANCNATURE)",
+    "name": "9배 고농축 어성초 토너패드",
+    "volume": "220ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "28900",
+    "mall": "09SUPER",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11236470645",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8878098/88780980977.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8878098/88780980977.jpg",
+        "mall": "09SUPER",
+        "link": "https://smartstore.naver.com/main/products/11236470645"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121378/91213783000.jpg",
+        "mall": "흰백89",
+        "link": "https://smartstore.naver.com/main/products/13669272047"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203893854",
+    "translated_kr": "[대용량] 살롱10 시카 프로틴 트리트먼트 215ml × 3본 세트/윤기 헤어팩 손상머리 갈라짐 끊김 표백머리 윤기머리 살랑살랑머리 정돈머리 한국 인기",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1149072325",
+    "translated_kr": "플로리아 뉴트라 에너지 토너 에멀션 2점세트 (진정/탄력/보습/영양공급/활력/화장수/유액/한국화장품)",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "hwahae": "플로리아 뉴트라 에너지 에센스",
+      "daum": "플로리아 뉴트라 에너지 3종세트",
+      "naver_web": "TONYMOLY 플로리아 뉴트라 에너지 에센스",
+      "naver_rematch": "토니모리 플로리아 뉴트라 에너지 토너/에멀전/에센스 -"
+    },
+    "brand": "토니모리",
+    "name": "토니모리 플로리아 뉴트라 에너지 토너/에멀전/에센스 -",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25750",
+    "mall": "에이티씨글로벌",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12292387454",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8983689/89836898170.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8983689/89836898170.jpg",
+        "mall": "에이티씨글로벌",
+        "link": "https://smartstore.naver.com/main/products/12292387454"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188002169",
+    "translated_kr": "리프팅 크림 1618 글로우 래디언스 보습 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 리프팅 래디언스 크림",
+      "naver": "알펜무어1618 글로우 리프팅 래디언스 크림 50ml",
+      "daum": "알펜무어1618 글로우 리프팅 래디언스 크림 , 2개",
+      "naver_web": "‘쇼호스트 정서경’이 기획한 ‘알펜무어1618 글로우 리프팅 래디언스 크림’ 출시"
+    },
+    "brand": "알펜무어1618 (Alpen1618)",
+    "name": "글로우 리프팅 래디언스 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10790",
+    "mall": "건강엔H몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13198897238",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9074340/90743408335.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074340/90743408335.jpg",
+        "mall": "건강엔H몰",
+        "link": "https://smartstore.naver.com/main/products/13198897238"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074859/90748597260.jpg",
+        "mall": "THE 담다",
+        "link": "https://smartstore.naver.com/main/products/13204086163"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064920/90649200531.jpg",
+        "mall": "케이디와이코스메틱",
+        "link": "https://smartstore.naver.com/main/products/13104689439"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9026469/90264698288.2.jpg",
+        "mall": "주안기업",
+        "link": "https://smartstore.naver.com/main/products/12720187347"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183360751",
+    "translated_kr": "【대용량 220장 토너 패드】8 히알루론산 카테킨 커밍 패드 (110장×2개) 토너 패드 닦아내기 진정 부기 케어 여드름 케어 수분 공급 쿨다운 차가움 부분 팩 각질",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "피부과 시술에 대한 궁금증의 해답"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203681851",
+    "translated_kr": "[엑시스와이] 50ml 다크 스팟 코렉팅 글로우 세럼",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "피부 노화 원인 80%는 햇빛, 자외선 손상 피부를 되돌리는 방법",
+      "naver_web": "다크 스팟 코렉팅 글로우 세럼"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
