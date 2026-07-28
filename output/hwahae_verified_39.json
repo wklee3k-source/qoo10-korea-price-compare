@@ -35891,5 +35891,66 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202066299",
+    "translated_kr": "글리콜산 7% 토닝 솔루션 240ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1084409242",
+    "translated_kr": "얼라이브랩 오투 스칼프 워터 샴푸 산소수 두피 샴푸 350ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오투 스칼프 워터 샴푸"
+    },
+    "brand": "얼라이브랩 (ALIVELAB)",
+    "name": "오투 스칼프 워터 샴푸",
+    "volume": "350ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1154405798",
+    "translated_kr": "큐리페어 멜라 크림 35ml+큐리페어 에스오에스 멜더 시스템 (1.5ml X 20개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "큐리페어 멜더 에스오에스 시스템"
+    },
+    "brand": "코페르 (KOPHER)",
+    "name": "큐리페어 멜더 에스오에스 시스템",
+    "volume": "1.5mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 98000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
