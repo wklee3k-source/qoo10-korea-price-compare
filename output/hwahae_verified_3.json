@@ -10681,5 +10681,320 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1203107274",
+    "translated_kr": "[대인기・여름 인너드라이・사막 피부 케어] 퀸톡스 캡슐 바이오 크림 2개 + 세럼 샘플 3개 국내 배송 공식 상품 한국 화장품 보습 안티에이징 케어 철갑상어 PDRN",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213272505",
+    "translated_kr": "[정품] 에센스 2종 세트 PDRN 히알루론산×어성초 캡슐 100+77 B3 징크 각 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 B3징크 트러블 세럼",
+      "daum": "DK SHOP 기획전",
+      "naver_web": "아누아 피디알엔 히알루론산 캡슐 100 세럼 + 크림 세트"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 B3징크 트러블 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188151379",
+    "translated_kr": "6개 모델링마스크 컵팩 28g 4종 (쿨 티트리/비타민/콜라겐/진정약초)",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "옥시젠 물티슈 [프리미엄]",
+      "naver": "루이셀 모델링컵팩 이지컵팩 28g 6종+에센스 70ml 6개 SET",
+      "daum": "갤러리형으로 보기",
+      "naver_web": "린제이 프리미엄 모델링 컵팩 X 6개"
+    },
+    "brand": "아토앤오투 (ATONO2)",
+    "name": "린제이 프리미엄 모델링 컵팩 X 6개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "11900",
+    "mall": "씨-어딜",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10007982160",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8755248/87552484525.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8755248/87552484525.jpg",
+        "mall": "씨-어딜",
+        "link": "https://smartstore.naver.com/main/products/10007982160"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1187534997",
+    "translated_kr": "피에이치솔루션 쿨 티트리 마스크 300g (24매)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "뽑아쓰는 마스크팩 피에이치 솔루션 [쿨티트리]",
+      "daum": "저속노화/불면증에 좋은 허브솔루션! 마스크팩, 온열안대, 바디미스트, 멀티밤",
+      "naver_web": "뽑아쓰는 마스크팩 피에이치 솔루션 쿨 티트리"
+    },
+    "brand": "린제이 (LINDSAY)",
+    "name": "뽑아쓰는 마스크팩 피에이치 솔루션 [쿨티트리]",
+    "volume": "300g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158450594",
+    "translated_kr": "프리미엄 르르르 차가운 마스크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "닥터모나 프리미엄",
+      "naver": "계란유래 단백질샴푸 닥터모나 하아르 닥터란 달걀샴푸 탈모증상완화",
+      "naver_web": "네이버 인플루언서: 굥블리의 홈"
+    },
+    "brand": "하아르 (H'ar)",
+    "name": "닥터모나 프리미엄",
+    "volume": "4g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "35000",
+    "mall": "JUNJENY",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9931177422",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8747567/87475679695.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8747567/87475679695.jpg",
+        "mall": "JUNJENY",
+        "link": "https://smartstore.naver.com/main/products/9931177422"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8747564/87475646779.jpg",
+        "mall": "무지아이",
+        "link": "https://smartstore.naver.com/main/products/9931144506"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8579806/85798069471.jpg",
+        "mall": "스토어탑",
+        "link": "https://smartstore.naver.com/main/products/8253569148"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1141183919",
+    "translated_kr": "정규품 DR TA 화이트 로션 n (의약부외품) 150ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "TA 앰플",
+      "naver": "케어셀라 바이오케이 TA",
+      "daum": "뷰티 전문가 8인의 파우치 속 고가품 vs 저가품",
+      "naver_web": "プラスリストア TAホワイトクリームMD"
+    },
+    "brand": "지쿱",
+    "name": "케어셀라 바이오케이 TA",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "199000",
+    "mall": "하라힐즈서울역점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11590983386",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8913549/89135493792.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913549/89135493792.jpg",
+        "mall": "하라힐즈서울역점",
+        "link": "https://smartstore.naver.com/main/products/11590983386"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105615/91056150916.jpg",
+        "mall": "재팬럭키셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13511640564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834045/88340458475.1.jpg",
+        "mall": "하라힐즈샵",
+        "link": "https://smartstore.naver.com/main/products/10795952485"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051856/90518568105.jpg",
+        "mall": "유어굿파트너",
+        "link": "https://smartstore.naver.com/main/products/12974057095"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1113268244",
+    "translated_kr": "국내정규품 신제품 A-부스트 세럼 30ml 부스트세럼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "[셀리맥스] [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml 76008",
+      "daum": "2022 NEW! 자외선 차단제 선택하는 법_선배&#39;s 어드바이스 #112",
+      "naver_web": "무인양품, ‘발효된 쌀겨로 만들어진 부스터 세럼’ 출시"
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "BFT 진정 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "19900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095814/90958149698.1.jpg",
+        "mall": "아비트라3호점",
+        "link": "https://smartstore.naver.com/main/products/13413639362"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8816120/88161209894.jpg",
+        "mall": "케이더스토리",
+        "link": "https://smartstore.naver.com/main/products/10616704245"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091654/90916548592.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13372038256"
+      }
+    ],
+    "real_page_title": "셀리맥스(CELIMAX) [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1149446206",
+    "translated_kr": "퍼퓸 핸드크림/무화과 호텔우드 50ml 무화과/호텔우드",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "퍼퓸 실키 촉감 핸드크림 50ml (호텔우드/플라워파크/무화과)",
+      "daum": "동구밭 퍼퓸 핸드크림 허브우드 미백 주름개선"
+    },
+    "brand": "헤트라스 뷰티",
+    "name": "퍼퓸 실키 촉감 핸드크림 50ml (호텔우드/플라워파크/무화과)",
+    "volume": "",
+    "source": "musinsa",
+    "obsolete": null,
+    "sale": null,
+    "price": 9800,
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.musinsa.com/products/6214284",
+    "image_url": null,
+    "image_candidates": [],
+    "real_page_title": "헤트라스 뷰티(HETRAS BEAUTY) 퍼퓸 실키 촉감 핸드크림 50ml (호텔우드/플라워파크/무화과)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1159460250",
+    "translated_kr": "아누아 PDRN 히알루론산 캡슐 100 세럼 30ml + (30ml 리필팩)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼",
+      "daum": "아누아 PDRN 히알루론산 캡슐 100 세럼",
+      "naver_web": "PDRN 히알루론산 캡슐 100 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼",
+    "volume": "30mL",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1180391066",
+    "translated_kr": "PDRN 리들샷 헤어 앰플 100dL 300dL 700dL 15ml (헤어케어/두피케어/탈모 앰플/리들샷/니들 미용액/육모제)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 리들샷 헤어 앰플 [700dL]",
+      "daum": "피디알엔 리들샷 헤어 앰플 4주차",
+      "naver_web": "VT PDRN 리들샷 탈모 두피앰플 100DL * 1 + 300DL * 1 + 700DL * 1"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "PDRN 리들샷 헤어 앰플 [700dL]",
+    "volume": "15ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 78000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
