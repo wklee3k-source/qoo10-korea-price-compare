@@ -440,7 +440,11 @@ def t47_exa_called_as_fallback_only():
 def t48_web_only_sources_cannot_form_consensus():
     src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
 
-    has_const = 'PRODUCT_SOURCES = {"hwahae", "musinsa", "naver"}' in src
+    # [v4.0.0] naver_rematch가 추가됐다. 집합의 정확한 내용이 아니라
+    # '상품DB 소스만 들어있는지'를 본다.
+    pconst = src.split("PRODUCT_SOURCES =")[1].split("\n")[0] if "PRODUCT_SOURCES =" in src else ""
+    has_const = all(k in pconst for k in ('"hwahae"', '"musinsa"', '"naver"')) and \
+        all(k not in pconst for k in ('"exa"', '"daum"', '"naver_web"'))
     guard = "not (_found_sources & PRODUCT_SOURCES)" in src
     # 정족수 자체는 건드리지 않았어야 한다.
     quorum_kept = 'MIN_CONSENSUS_SOURCES", "2"' in src
@@ -618,6 +622,41 @@ def t53_review_brand_ordering():
     ok = has_order and applied and stable and warns and styled
     check("53 검수페이지 브랜드 정렬/경고", ok,
           f"등급{has_order} 적용{applied} 순서보존{stable} 경고문구{warns} 스타일{styled}")
+
+
+# --------------------- #54 네이버 재검색(구매링크 회수)
+#  구매링크는 사실상 네이버쇼핑에서만 나온다(링크 885건 중 867건=98%).
+#  그래서 네이버가 못 찾으면 화해가 정확히 찾은 상품도 통째로 버려졌다
+#  (링크 실패 651건 중 367건이 이 유형). 다른 소스가 알려준 정확한
+#  이름으로 네이버를 한 번 더 치면 표본 100건에서 71%가 회수됐다.
+#
+#  두 가지가 중요하다.
+#  (1) 반드시 합의 판정 '전에' 해야 한다 — '화해만 찾음(1곳)'으로 이미
+#      거부된 뒤에 하면 아무 소용이 없다.
+#  (2) 이 결과는 '독립적으로 같은 답을 낸' 게 아니라 '남의 답으로 조회한'
+#      것이다. 합의의 성격이 다르므로 결과에 표시가 남아야 하고,
+#      검수페이지에서 구분할 수 있어야 한다.
+def t54_naver_rematch():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    body = src.split("def run_batch(")[1]
+
+    has_fn = "def _search_naver_rematch(" in src
+    in_product_sources = '"naver_rematch"' in src.split("PRODUCT_SOURCES =")[1].split("\n")[0]
+
+    # 합의 판정보다 앞에서 호출돼야 한다.
+    call_i = body.find("_safe_search(_search_naver_rematch")
+    quorum_i = body.find("if n_sources < MIN_CONSENSUS_SOURCES")
+    before_quorum = 0 < call_i < quorum_i
+
+    # 원래 네이버 결과가 링크를 줬으면 재검색분을 쓰지 않아야 한다.
+    prefers_original = 'cand_naver if (cand_naver and cand_naver.get("product_url"))' in body
+    flagged = '"naver_rematched"' in body
+    shown = '"naver_rematched"' in (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    ok = has_fn and in_product_sources and before_quorum and prefers_original and flagged and shown
+    check("54 네이버 재검색(링크 회수)", ok,
+          f"함수{has_fn} 상품소스{in_product_sources} 합의전호출{before_quorum} "
+          f"원본우선{prefers_original} 표시{flagged} 검수노출{shown}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
