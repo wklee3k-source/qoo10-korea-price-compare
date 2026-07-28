@@ -7110,5 +7110,323 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1204413243",
+    "translated_kr": "[선물 포함] [산뜻한 마무리] 블루 카모마일 히알루론산 수분 선크림 50ml [정품]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블루 캐모마일 히알루론산 수분 선 크림 [SPF50+/PA++++]",
+      "naver": "[수분광선크림] 비긴스 바이 정샘물 블루 캐모마일 히알루론산 수분 선 크림 50ml",
+      "daum": "미닉, 남성 피부 맞춤 &#39;노세범 블루 캐모마일 수분 선크림&#39; 선보여",
+      "naver_web": "블루 캐모마일 히알루론산 수분 선크림 + 수분선크림"
+    },
+    "brand": "비긴스바이정샘물 (BeginSbyJUNGSAEMMOOL)",
+    "name": "블루 캐모마일 히알루론산 수분 선 크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "22000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000225192",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5447226/54472262026.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5447226/54472262026.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000225192"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8914595/89145958323.10.jpg",
+        "mall": "정샘물뷰티",
+        "link": "https://smartstore.naver.com/main/products/11601447917"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204411271",
+    "translated_kr": "[선물 포함] [부드러운 밀착] 블루 카모마일 히알루론산 에어리 선 스틱 15g / 수분 보습 차징 / 기름종이 선 스틱 [정품]",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "올여름 선케어는 선스틱 하나로 끝!"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1146790722",
+    "translated_kr": "[글래스 스킨] 블루밍데이즈 글로우 밤 01 pure",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블루밍 데이즈 글로우 밤",
+      "daum": "아페리레 블루밍 데이즈 글로우 밤 01순수",
+      "naver_web": "Pure Color Gelée Glow Balm"
+    },
+    "brand": "아페리레 (Aperire)",
+    "name": "블루밍 데이즈 글로우 밤",
+    "volume": "9.5g",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208715918",
+    "translated_kr": "세인무 보떼롱드 셸르 버스트 하리 데콜테 바디 케어 미용액 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164543671",
+    "translated_kr": "릭스 사랑스러운 고양이 오드트왈렛 30ml 시트러스 플로랄 향 향수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플라잇 오브 팬시 오 드 트왈렛",
+      "naver": "안나수이 플라잇 오브 팬시 향수 오드뚜왈렛 EDT 50ml",
+      "naver_web": "플라잇 오브 팬시 오 드 트왈렛"
+    },
+    "brand": "안나수이 (ANNASUI)",
+    "name": "플라잇 오브 팬시 오 드 트왈렛",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "64000",
+    "mall": "오승재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12844483488",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9038899/90388994480.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038899/90388994480.1.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/12844483488"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011956/90119561512.jpg",
+        "mall": "베스트재팬",
+        "link": "https://smartstore.naver.com/main/products/12575050651"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090842/90908420904.jpg",
+        "mall": "모찌팜",
+        "link": "https://smartstore.naver.com/main/products/13363910572"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109405/91094053484.1.jpg",
+        "mall": "재팬양품",
+        "link": "https://smartstore.naver.com/main/products/13549543131"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089930/90899302197.jpg",
+        "mall": "딜위드",
+        "link": "https://smartstore.naver.com/main/products/13354791865"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202511112",
+    "translated_kr": "스팟! 과 제리 [화왕] SPOT JELLY 배꼽 때 팩 스팟 젤리 1세트입 배꼽 때 제거 팩 오염물 제거 배꼽 청소 배꼽 때 배꼽 냄새 배꼽 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "TPO 팩 [운동]",
+      "naver": "스팟 과 제리 카오 SPOT JELLY 배꼽 팩 스포트 2 세트 입 제거 더러운 청소 배려 163755",
+      "naver_web": "미분배저작물 수업목적보상금"
+    },
+    "brand": "리플라이미 (reply:me)",
+    "name": "스팟 과 제리 카오 SPOT JELLY 배꼽 팩 스포트 2 세트 입 제거 더러운 청소 배려 163755",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "43900",
+    "mall": "클릭온재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13674490892",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121900/91219001911.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121900/91219001911.jpg",
+        "mall": "클릭온재팬",
+        "link": "https://smartstore.naver.com/main/products/13674490892"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116675/91166756072.jpg",
+        "mall": "엘로잇",
+        "link": "https://smartstore.naver.com/main/products/13622245655"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113062/91130627843.jpg",
+        "mall": "쿠레센돌",
+        "link": "https://smartstore.naver.com/main/products/13586117431"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120854/91208547909.jpg",
+        "mall": "오하요교토",
+        "link": "https://smartstore.naver.com/main/products/13664037001"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118197/91181975202.jpg",
+        "mall": "어라운드도쿄",
+        "link": "https://smartstore.naver.com/main/products/13637464493"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209629038",
+    "translated_kr": "리뉴얼 품 약용 촉촉한 로션 촉촉함 180ml & 에멀전 135ml 촉촉한 화장수 유액 세트 피부 거칠어짐 건조함 여드름",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "큐렐/Curel",
+      "naver_web": "뷰티용품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172303971",
+    "translated_kr": "브라이트닝 클리어 에멀전 MB 없어질 때까지 판매",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "MB 샴푸",
+      "naver": "시세이도 d 프로그램 브라이트닝 클리어 에멀젼 MB 리필",
+      "naver_web": "여자단백질 추천 10개 인기 건강 필수 상품 지금 구매!"
+    },
+    "brand": "샤멘느 (chamenne)",
+    "name": "시세이도 d 프로그램 브라이트닝 클리어 에멀젼 MB 리필",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "42700",
+    "mall": "초이스재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9496246479",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8704074/87040746802.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8704074/87040746802.jpg",
+        "mall": "초이스재팬",
+        "link": "https://smartstore.naver.com/main/products/9496246479"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8790610/87906108346.jpg",
+        "mall": "놀자재팬",
+        "link": "https://smartstore.naver.com/main/products/10361603698"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213266252",
+    "translated_kr": "멀티 케어 율무 앰플 30g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "멀티케어 율무앰플",
+      "naver": "닥터에픽 멀티케어 율무앰플 30g 마스크팩포함 코익스 시카좀",
+      "daum": "닥터에픽 멀티케어 율무앰플",
+      "naver_web": "배우 정인선, 함은정 PICK! 닥터에픽 멀티케어 율무앰플 선착순 특가"
+    },
+    "brand": "닥터에픽 (Dr.epic)",
+    "name": "멀티케어 율무앰플",
+    "volume": "30g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "25570",
+    "mall": "필오넷",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13307879077",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9085238/90852389409.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085238/90852389409.1.jpg",
+        "mall": "필오넷",
+        "link": "https://smartstore.naver.com/main/products/13307879077"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1137010633",
+    "translated_kr": "살롱 10 프로페셔널 시카 세라마이드 오일 세럼 60ml + 25ml × 1 촉촉한 머리 K 뷰티 헤어케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뷰티 전문가가 꼽은 최고의 K",
+      "naver_web": "피부비만관리사팁 스토리채널"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
