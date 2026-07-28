@@ -70,23 +70,32 @@ def main() -> int:
         print("[중단] 표본이 없다")
         return 0
 
-    recovered, empty, failed = 0, 0, 0
+    recovered, empty, failed, trust_only = 0, 0, 0, 0
     by_src = Counter()
     samples = []
     for i, t in enumerate(targets, 1):
         try:
             hits = naver_search(t["name"], display=5, strict_trust_only=True)
+            loose = hits or naver_search(t["name"], display=5, strict_trust_only=False)
         except Exception as e:  # noqa: BLE001
             failed += 1
             print(f"  [{i}] 호출실패: {type(e).__name__}: {e}")
             time.sleep(REQUEST_DELAY)
             continue
+        # [주의] naver_shop_search.search()는 'product_url'이 아니라 'link'를
+        # 돌려준다. 첫 측정에서 이걸 잘못 봐서 회수율이 0%로 나왔다 —
+        # 가설이 틀린 게 아니라 자가 측정이 틀렸던 것.
         got = hits[0] if hits else None
-        if got and got.get("product_url"):
+        if got and got.get("link"):
             recovered += 1
             by_src[t["src"]] += 1
             if len(samples) < 8:
                 samples.append((t, got))
+        elif loose and loose[0].get("link"):
+            # 검색은 됐는데 '신뢰 판매처' 필터에서 전부 빠진 경우.
+            # 회수 실패의 원인이 검색 실패인지 필터인지 구분해야, 필터를
+            # 손볼지 검색을 손볼지 판단할 수 있다.
+            trust_only += 1
         else:
             empty += 1
         if i % 20 == 0:
@@ -97,6 +106,7 @@ def main() -> int:
     print("\n" + "=" * 56)
     print(f"표본 {n}건")
     print(f"  회수 성공(구매링크 확보): {recovered}건 ({recovered / n * 100:.1f}%)")
+    print(f"  검색은 됐으나 신뢰필터에 걸림: {trust_only}건")
     print(f"  여전히 못 찾음          : {empty}건")
     print(f"  호출 실패               : {failed}건")
     print(f"  이름을 준 소스별 회수   : {dict(by_src)}")
@@ -105,7 +115,8 @@ def main() -> int:
     for t, got in samples:
         print(f"  큐텐  : {str(t['original'])[:40]}")
         print(f"  {t['src']:9s}: {t['name'][:40]}")
-        print(f"  → 네이버: {str(got.get('name'))[:40]} / {got.get('mall')}\n")
+        print(f"  → 네이버: {str(got.get('title'))[:40]} / {got.get('mallName')} "
+              f"[{got.get('seller_trust')}]\n")
     return 0
 
 
