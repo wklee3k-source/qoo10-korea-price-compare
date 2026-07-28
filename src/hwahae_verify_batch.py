@@ -51,6 +51,26 @@ NEWS_DOMAIN_RE = re.compile(
 HEADLINE_SENTENCE_RE = re.compile(r"[다요]\s*,|[다요][!?]|하면|한다면")
 
 
+# [v3.1.1] 소스가 "일시적으로 실패"한 게 아니라 "아예 못 쓰는 상태"인 경우가
+# 있다. 실측 2026-07-28: Exa 크레딧이 소진돼 모든 호출이 HTTP 402(Payment
+# Required)로 떨어졌는데, 이게 기술적실패로 분류돼 상품마다 3회씩 재시도된
+# 뒤 '보류'로 쌓였다 — 검증이 통째로 멈춘 것과 같았다. 화해/네이버/무신사가
+# 멀쩡하고 채택 기준도 2곳 합의라 Exa 없이도 검증은 정상 진행 가능하므로,
+# 이런 오류는 그 소스만 꺼버리고 나머지로 계속 간다.
+PERMANENT_FAILURE_PATTERNS = (
+    "402",              # Payment Required — 크레딧 소진
+    "Payment Required",
+    "401",              # Unauthorized — 키 만료/오타
+    "Unauthorized",
+    "403",              # Forbidden — 권한 없음
+)
+DISABLED_SOURCES: set[str] = set()
+
+
+def _is_permanent_failure(message: str) -> bool:
+    return any(pat in message for pat in PERMANENT_FAILURE_PATTERNS)
+
+
 class SearchTechnicalFailure(Exception):
     """[9번 수정과 동일 원칙] 검색 자체가 기술적으로 실패한 경우(타임아웃,
     네트워크 오류, 서브프로세스 비정상종료, JSON 파싱실패 등)에만
@@ -406,14 +426,26 @@ def _safe_search(fn, *args, failures: list, label: str, **kwargs):
     특히 화해/무신사는 공식 API가 아니라 브라우저 스크래핑이라 더
     조심해야 한다. 매 요청 뒤 REQUEST_DELAY초 쉰다(기본 1초, 환경변수로
     조절 가능)."""
+    # [v3.1.1] 이미 꺼진 소스는 호출조차 하지 않는다(지연시간도 아낀다).
+    if label in DISABLED_SOURCES:
+        return None
     try:
         return fn(*args, **kwargs)
     except SearchTechnicalFailure as e:
-        print(f"    [{label}-기술적실패-재시도대상] {e}", file=sys.stderr)
+        msg = str(e)
+        if _is_permanent_failure(msg):
+            # 결제/인증 문제는 몇 번을 재시도해도 그대로다. 이 소스만 끄고
+            # 나머지 소스로 계속 간다 — failures에 넣지 않으므로 상품이
+            # '보류'로 쌓이지 않는다.
+            DISABLED_SOURCES.add(label)
+            print(f"    [{label}-영구장애] {msg} — 이번 실행에서 {label}를 끄고 나머지 소스로 진행",
+                  file=sys.stderr)
+            return None
+        print(f"    [{label}-기술적실패-재시도대상] {msg}", file=sys.stderr)
         failures.append(label)
         return None
     finally:
-        if REQUEST_DELAY > 0:
+        if REQUEST_DELAY > 0 and label not in DISABLED_SOURCES:
             time.sleep(REQUEST_DELAY)
 
 

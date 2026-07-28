@@ -346,6 +346,54 @@ def t44_verify_reshard_on_worker_change():
           f"승계블록{bool(block)} 무조건실행{not_conditional} 몫필터{has_filter} 양쪽읽기{reads_both}")
 
 
+# --------------------- #45 검증 push 경합시 결과파일 유실 (실측 39건 소실)
+#  push가 경합으로 밀리면 재시도 경로의 `git reset --hard`가 방금 만든
+#  결과파일을 지운다. 복원용 /tmp 백업을 push '뒤'에 뜨고 있었기 때문에
+#  첫 청크에는 백업이 없어 파일이 통째로 사라졌고, 다음 루프의 json.load가
+#  FileNotFoundError로 job을 죽였다(2026-07-28 run 30324712542, 39건 유실).
+#  백업은 반드시 push 전에, 그리고 파일이 없을 때 되살리는 경로가 있어야 한다.
+def t45_verify_backup_before_push():
+    wf = WF.read_text(encoding="utf-8")
+    if "hwahae_verify_batch.py ../output/hwahae_input_" not in wf:
+        check("45 검증 백업 선행", False, "검증 실행 블록을 못 찾음"); return
+
+    loop = wf.split("hwahae_verify_batch.py ../output/hwahae_input_")[1].split("DONE_AFTER=")[0]
+    backup = "cp ../output/hwahae_verified_${S}.json /tmp/vshard_backup.json"
+    push = "git push origin hwahae-live"
+    # 백업이 push보다 먼저 나와야 한다.
+    backup_first = backup in loop and push in loop and loop.index(backup) < loop.index(push)
+
+    # DONE_AFTER 계산이 파일 없음에도 죽지 않아야 한다.
+    after = wf.split("DONE_AFTER=")[1].split("\n")[0] if "DONE_AFTER=" in wf else ""
+    safe_read = "exists()" in after
+    # 사라진 파일을 백업에서 되살리는 경로가 있어야 한다.
+    has_restore = "|| cp /tmp/vshard_backup.json ../output/hwahae_verified_${S}.json" in wf
+
+    ok = backup_first and safe_read and has_restore
+    check("45 검증결과 백업선행/유실복구", ok,
+          f"백업선행{backup_first} 안전읽기{safe_read} 복구경로{has_restore}")
+
+
+# --------------------- #46 결제/인증 실패는 재시도 대상이 아니다
+#  Exa 크레딧이 소진돼 모든 호출이 HTTP 402로 떨어졌는데, 이게 일시적
+#  기술실패로 분류돼 상품마다 3회씩 재시도된 뒤 '보류'로 쌓였다 — 다른
+#  소스(화해/네이버/무신사)가 멀쩡한데도 검증이 사실상 멈췄다.
+#  결제/인증 오류는 그 소스만 끄고 나머지로 계속 가야 한다.
+def t46_permanent_source_failure_disables_source():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    has_patterns = "PERMANENT_FAILURE_PATTERNS" in src and '"402"' in src
+    has_disabled = "DISABLED_SOURCES" in src
+    fn = src.split("def _safe_search(")[1].split("\ndef ")[0] if "def _safe_search(" in src else ""
+    # 영구장애면 failures에 넣지 않아야 '보류'로 안 쌓인다.
+    branch = fn.split("_is_permanent_failure(")[1].split("print(")[0] if "_is_permanent_failure(" in fn else ""
+    not_retried = bool(branch) and "failures.append" not in branch
+    skips_call = "if label in DISABLED_SOURCES" in fn
+
+    ok = has_patterns and has_disabled and not_retried and skips_call
+    check("46 결제/인증 실패시 소스 비활성화", ok,
+          f"패턴{has_patterns} 집합{has_disabled} 재시도안함{not_retried} 호출스킵{skips_call}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

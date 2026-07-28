@@ -1115,6 +1115,15 @@ jobs:
             python hwahae_verify_batch.py ../output/hwahae_input_${S}.json ../output/hwahae_verified_${S}.json "$CHUNK"
             echo "::endgroup::"
 
+            # [v3.1.1 — 검증결과 유실 사고 수정] 백업은 반드시 push '전에'
+            # 떠야 한다. 예전엔 push 블록이 끝난 뒤에 백업했는데, push가
+            # 경합으로 밀리면 재시도 경로의 `git reset --hard`가 방금 만든
+            # 결과파일을 지우고, 복원해야 할 /tmp 백업은 (첫 청크라) 아직
+            # 존재하지 않아 파일 자체가 사라졌다. 그 다음 루프에서
+            # FileNotFoundError로 job이 죽었고 검증 39건이 통째로 날아갔다
+            # (실측 2026-07-28 03:04, run 30324712542).
+            cp ../output/hwahae_verified_${S}.json /tmp/vshard_backup.json 2>/dev/null || true
+
             python append_progress_history.py ../output
             # [버그 수정 - 재확인중 발견] retry_state 파일(hwahae_verify_
             # batch.py의 기술적실패 재시도 카운트)이 git add에 빠져있었다.
@@ -1147,9 +1156,11 @@ jobs:
                 git diff --cached --quiet || git commit -m "Auto: hwahae verification shard $S progress (재시도)"
               done
             fi
-            cp ../output/hwahae_verified_${S}.json /tmp/vshard_backup.json 2>/dev/null || true
-
-            DONE_AFTER=$(python3 -c "import json; print(len(json.load(open('../output/hwahae_verified_${S}.json'))))")
+            # [v3.1.1] 결과파일이 어떤 이유로든 사라졌으면 백업에서 되살린다.
+            # 예전엔 여기서 json.load를 그냥 호출해서 파일이 없으면
+            # FileNotFoundError로 job 전체가 죽었다.
+            [ -f ../output/hwahae_verified_${S}.json ] || cp /tmp/vshard_backup.json ../output/hwahae_verified_${S}.json 2>/dev/null || true
+            DONE_AFTER=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_${S}.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
             # [v1.16.5와 동일한 수정 - 검증 루프에도 적용] 기술적 실패로
             # '보류'된 상품은 results에 안 들어가므로 DONE 카운트가 안 오른다.
             # CHUNK가 2건뿐이라 그 2건이 다 보류되면 즉시 '진행 없음'으로
