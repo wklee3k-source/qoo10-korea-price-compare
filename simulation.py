@@ -599,6 +599,27 @@ def t52_decision_feedback_loop():
           f"저장시자동{auto_on_push} 무한반복방지{no_loop} 엑셀오작동방지{excel_guard}")
 
 
+# --------------------- #53 검수페이지 브랜드 확실도 정렬/경고
+#  브랜드가 사전으로 확인된 건은 앞에, 판단불가·불일치는 뒤에 몰아
+#  마지막에 집중해서 보게 한다. 뒤쪽 구간이 오매칭이 숨는 곳이면서
+#  동시에 채택 시 브랜드 사전이 새로 채워지는 구간이다(커버리지 38.6%).
+#  같은 등급 안에서는 기존 순서를 보존해야 한다 — 매번 순서가 뒤바뀌면
+#  어제 어디까지 봤는지 알 수 없다.
+def t53_review_brand_ordering():
+    src = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+    tmpl = (ROOT / "comparison" / "review.html").read_text(encoding="utf-8")
+
+    has_order = 'BRAND_ORDER = {"match": 0, "unknown": 1, "mismatch": 2}' in src
+    applied = "all_pairs = sort_by_brand_confidence(all_pairs)" in src
+    stable = "enumerate(pairs)" in src and "key=lambda t: (t[0], t[1])" in src
+    warns = "브랜드 미확인" in src and "오매칭 의심" in src
+    styled = ".badge.warn" in tmpl
+
+    ok = has_order and applied and stable and warns and styled
+    check("53 검수페이지 브랜드 정렬/경고", ok,
+          f"등급{has_order} 적용{applied} 순서보존{stable} 경고문구{warns} 스타일{styled}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

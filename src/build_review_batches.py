@@ -49,6 +49,14 @@ def render_cards(pairs: list[dict]) -> str:
 
         brand_label = {"match": "일치", "mismatch": "불일치", "unknown": "판단불가"}[p["brand_status"]]
         brand_badge = f'<span class="badge {p["brand_status"]}">브랜드{brand_label}</span>'
+        # [v3.9.0] 브랜드를 확인하지 못한 건은 눈에 띄게 경고한다. 이 구간이
+        # 오매칭이 숨는 곳이고(브랜드가 달라도 걸러낼 수단이 없다), 동시에
+        # 채택하면 브랜드 대응이 사전에 새로 등록되는 구간이기도 하다.
+        if p["brand_status"] == "unknown":
+            brand_badge += ('<span class="badge warn">⚠ 브랜드 미확인 — 사진을 꼭 대조하세요'
+                            ' (채택하면 브랜드 사전에 등록됩니다)</span>')
+        elif p["brand_status"] == "mismatch":
+            brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         if p.get("vol_auto_corrected"):
             vol_badge = '<span class="badge unknown">용량 자동수정됨(업로드명 확인!)</span>'
         elif p.get("vol_status") == "unknown":
@@ -129,9 +137,36 @@ def render_cards(pairs: list[dict]) -> str:
     return "\n".join(cards_html) + '\n<div id="pagination-bottom" class="pagination"></div>'
 
 
+# [v3.9.0] 브랜드 확실도 순 정렬.
+#  브랜드가 사전으로 확인된 건(match)은 오매칭 가능성이 낮아 빠르게
+#  넘길 수 있다. 반대로 판단불가(unknown)·불일치(mismatch)는 눈여겨봐야
+#  하므로 뒤로 몰아 마지막에 집중해서 본다. 앞뒤를 섞어두면 주의가
+#  분산돼 확실한 건에도 시간을 쓰게 된다.
+#
+#  뒤로 보낸 건이 오히려 더 값지다: 판단불가는 대부분 브랜드 사전에
+#  없는 브랜드라, 여기서 채택하면 그 브랜드 대응이 사전에 새로 등록된다
+#  (learn_from_decisions). 지금 사전 커버리지가 38.6%뿐이라, 이 구간을
+#  검수할수록 다음 회차의 브랜드 판정 범위가 넓어진다.
+BRAND_ORDER = {"match": 0, "unknown": 1, "mismatch": 2}
+
+
+def sort_by_brand_confidence(pairs: list[dict]) -> list[dict]:
+    # 원래 순서를 보존하려고 인덱스를 함께 쓴다(같은 등급 안에서는
+    # 기존 순서 그대로 — 정렬 때문에 매번 순서가 뒤바뀌면 어제 어디까지
+    # 봤는지 알 수 없게 된다).
+    return [x for _, _, x in sorted(
+        ((BRAND_ORDER.get(p.get("brand_status"), 1), i, p) for i, p in enumerate(pairs)),
+        key=lambda t: (t[0], t[1]))]
+
+
 def build_batches():
     all_pairs = build_pairs()
+    all_pairs = sort_by_brand_confidence(all_pairs)
+    from collections import Counter
+    dist = Counter(p.get("brand_status") for p in all_pairs)
     print(f"[정보] 성공(구매링크확보) 총 {len(all_pairs)}건 -> {BATCH_SIZE}개씩 배치 생성")
+    print(f"[정렬] 브랜드 일치 {dist.get('match', 0)} / 판단불가 {dist.get('unknown', 0)} "
+          f"/ 불일치 {dist.get('mismatch', 0)} 순으로 배치")
 
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     BATCH_DIR.mkdir(exist_ok=True, parents=True)
