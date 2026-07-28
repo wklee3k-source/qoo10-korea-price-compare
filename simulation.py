@@ -369,9 +369,16 @@ def t45_verify_backup_before_push():
     # 사라진 파일을 백업에서 되살리는 경로가 있어야 한다.
     has_restore = "|| cp /tmp/vshard_backup.json ../output/hwahae_verified_${S}.json" in wf
 
-    ok = backup_first and safe_read and has_restore
-    check("45 검증결과 백업선행/유실복구", ok,
-          f"백업선행{backup_first} 안전읽기{safe_read} 복구경로{has_restore}")
+    # [v3.1.2] reset --hard는 '이번 커밋에서 새로 생긴 파일'을 전부 지운다.
+    # 결과파일만 지켜서는 부족했다 — 입력파일이 사라져 다음 청크가 죽었다.
+    input_backup = "cp ../output/hwahae_input_${S}.json /tmp/vinput_backup.json" in loop
+    input_first = input_backup and loop.index("cp ../output/hwahae_input_${S}.json /tmp/vinput_backup.json") < loop.index(push)
+    input_restore = "|| cp /tmp/vinput_backup.json ../output/hwahae_input_${S}.json" in wf
+
+    ok = backup_first and safe_read and has_restore and input_first and input_restore
+    check("45 검증 입출력 백업선행/유실복구", ok,
+          f"결과백업선행{backup_first} 안전읽기{safe_read} 결과복구{has_restore} "
+          f"입력백업선행{input_first} 입력복구{input_restore}")
 
 
 # --------------------- #46 결제/인증 실패는 재시도 대상이 아니다

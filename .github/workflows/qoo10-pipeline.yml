@@ -1111,6 +1111,9 @@ jobs:
               echo "샤드$S 전부 완료됨 ($DONE_BEFORE/$TOTAL)"
               break
             fi
+            # [v3.1.2] 어떤 이유로든 파일이 사라졌으면 백업에서 되살린 뒤 진행한다.
+            [ -f ../output/hwahae_verified_${S}.json ] || cp /tmp/vshard_backup.json ../output/hwahae_verified_${S}.json 2>/dev/null || true
+            [ -f ../output/hwahae_input_${S}.json ] || cp /tmp/vinput_backup.json ../output/hwahae_input_${S}.json 2>/dev/null || true
             echo "::group::샤드$S 처리 $DONE_BEFORE/$TOTAL 부터 최대 $CHUNK건"
             python hwahae_verify_batch.py ../output/hwahae_input_${S}.json ../output/hwahae_verified_${S}.json "$CHUNK"
             echo "::endgroup::"
@@ -1123,6 +1126,11 @@ jobs:
             # FileNotFoundError로 job이 죽었고 검증 39건이 통째로 날아갔다
             # (실측 2026-07-28 03:04, run 30324712542).
             cp ../output/hwahae_verified_${S}.json /tmp/vshard_backup.json 2>/dev/null || true
+            # [v3.1.2] 입력파일도 같이 백업한다. reset --hard는 '이번 커밋에서
+            # 새로 생긴 파일'을 전부 지우므로 결과파일만 지켜서는 부족했다
+            # (실측 2026-07-28 03:23, run 30325602811: 결과는 살았는데
+            # hwahae_input_1.json이 사라져 다음 청크가 FileNotFoundError로 죽음).
+            cp ../output/hwahae_input_${S}.json /tmp/vinput_backup.json 2>/dev/null || true
 
             python append_progress_history.py ../output
             # [버그 수정 - 재확인중 발견] retry_state 파일(hwahae_verify_
@@ -1152,7 +1160,8 @@ jobs:
                 git reset --hard origin/hwahae-live -q 2>/dev/null || true
                 git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
                 cp /tmp/vshard_backup.json ../output/hwahae_verified_${S}.json 2>/dev/null || true
-                git add ../output/hwahae_verified_${S}.json 2>/dev/null || true
+                cp /tmp/vinput_backup.json ../output/hwahae_input_${S}.json 2>/dev/null || true
+                git add ../output/hwahae_verified_${S}.json ../output/hwahae_input_${S}.json 2>/dev/null || true
                 git diff --cached --quiet || git commit -m "Auto: hwahae verification shard $S progress (재시도)"
               done
             fi
