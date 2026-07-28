@@ -13379,5 +13379,318 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1170554654",
+    "translated_kr": "5종 세트 #토너 #크림 #세럼 #클렌징 밀크 #여드름 #모공 #트러블 피부 #피지 밸런스 정리 #피지 밸런스 정리",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "여신코스메틱 스토리채널"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1162632838",
+    "translated_kr": "[선택 가능 향 3종] 고급 향수 솔리드 퍼퓸 사봉 / 화이트 / 앰버 바닐라 향 20g 여성 남성 향수 프레그런스 일본 제조",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "생활/리빙용품",
+      "naver_web": "소중이가 너무너무 간지러워요",
+      "naver_rematch": "1+1 솔라콤 펜트리 수납함 정리함 냉장고 약통 투명 슬라이딩 리빙박스 소형"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211213188",
+    "translated_kr": "본드 550 세트 샴푸&550ml 트리트먼트 550g 파이버 플렉스",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "NO.3 헤어 퍼펙터",
+      "naver": "Schwarzkopf 슈바츠코프 파이버플렉스 본드 헤어케어 2종 세트 (샴푸 550mL + 트리트먼트 550g)",
+      "daum": "신제품관",
+      "naver_web": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너"
+    },
+    "brand": "올라플렉스 (OLAPLEX)",
+    "name": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "87700",
+    "mall": "애니바이마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13677001397",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122151/91221512416.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122151/91221512416.1.jpg",
+        "mall": "애니바이마켓",
+        "link": "https://smartstore.naver.com/main/products/13677001397"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207680190",
+    "translated_kr": "볼라 소프트 프로텍트 크림 EX 플러스 데리케이트 존 볼라 소프트 항문 케어 피부 보호 마유 글리실레틴산 스테아릴 화장품 천등 제약 메가할 메가포",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1094137657",
+    "translated_kr": "[FEG 공식] 퍼펙트 세럼 아젤라산 5% 배합 시카 배합 퍼펙트 세럼 30ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "에센스",
+      "naver_web": "아젤라산 12% 페이셜 세럼, 피부 히알루론산 및 나이아신아마이드, 홍조 완화, 페이드",
+      "naver_rematch": "나이아신아마이드와 히알루론산이 함유된 14% 아젤라산 페이셜 세럼 - 홍조 진정 잡티 개선 및 다크 스팟 민감성 피부를 위한 젠틀 케어 1.4 Fl Oz (Pack of 1)"
+    },
+    "brand": null,
+    "name": "아젤라산 12% 페이셜 세럼, 피부 히알루론산 및 나이아신아마이드, 홍조 완화, 페이드",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "58600",
+    "mall": "에어 다이렉트 샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13479797949",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9102430/91024308301.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102430/91024308301.jpg",
+        "mall": "에어 다이렉트 샵",
+        "link": "https://smartstore.naver.com/main/products/13479797949"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102431/91024311237.jpg",
+        "mall": "에어 링크 마켓",
+        "link": "https://smartstore.naver.com/main/products/13479800885"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111757/91117575893.jpg",
+        "mall": "와이써치모어",
+        "link": "https://smartstore.naver.com/main/products/13573065482"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213263295",
+    "translated_kr": "[정품] 핑크 세럼 세트 복숭아 70 나이아신 30ml + 나이아신아마이드10 TXA 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 나이아시나마이드 10 + TXA 4 세럼",
+      "daum": "뜨거운 태양에 맞서는 7월의 신상 뷰티템",
+      "naver_web": "아누아 복숭아 70 나이아신 세럼 마스크 10개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "(해외) 나이아시나마이드 10 + TXA 4 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1191891962",
+    "translated_kr": "공식 신제품 오드퍼퓸 핸드크림 5종/고보습 버터 텍스처/들뜨지않음/부드러운 핸드케어/은은한 향/아로마/나이아신아마이드/병풀 에키스",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "Embrace Vibrant Colours and New Life Returns"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207910422",
+    "translated_kr": "수량한정가격 포데이즈 포데이즈 무사 이오 DN 젤 클렌징 파이널 110g 클렌징",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "이레이즈 스틱 [DN]",
+      "naver_rematch": "NORTIX 화이트보드 벽지 접촉 용지 스티커 얼룩 이레이즈 드라이 스틱 방지 학교 슈퍼 1"
+    },
+    "brand": "크리오란 (KRYOLAN)",
+    "name": "이레이즈 스틱 [DN]",
+    "volume": "4g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "56610",
+    "mall": "유니크 루틴",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13525436597",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9106994/91069946950.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106994/91069946950.jpg",
+        "mall": "유니크 루틴",
+        "link": "https://smartstore.naver.com/main/products/13525436597"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106959/91069594450.jpg",
+        "mall": "퍼플드림마켓",
+        "link": "https://smartstore.naver.com/main/products/13525084097"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106994/91069946188.jpg",
+        "mall": "유니크 루틴",
+        "link": "https://smartstore.naver.com/main/products/13525435835"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082475/90824752251.jpg",
+        "mall": "레몬레드",
+        "link": "https://smartstore.naver.com/main/products/13280241919"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1147216883",
+    "translated_kr": "그린토마토 클레이 마스크 클렌저 120ml+30ml/한국 올리브영 클렌저 인기",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "연혁과 역사] 1985년 4월25일 애경산업 설립",
+      "naver_web": "올리브영 1위 풀리 그린토마토 클레이 팩클렌저, 대한민국 1위 팩클렌저로 모공부터 각질까지 한 번에",
+      "naver_rematch": "풀리 그린 토마토 젤라또 팩 클렌저 100ml"
+    },
+    "brand": "풀리",
+    "name": "올리브영 1위 풀리 그린토마토 클레이 팩클렌저, 대한민국 1위 팩클렌저로 모공부터 각질까지 한 번에",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "21800",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222912",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5872471/58724712163.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5872471/58724712163.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222912"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1148959345",
+    "translated_kr": "마스터즈 아쿠아 리치 선 크림 SPF50+ PA++++ 30ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마스터즈 아쿠아 리치 선크림 [SPF50+/PA++++]",
+      "daum": "2026 싱글즈 코스메틱 어워즈 : 베스트 선케어&베이스 11",
+      "naver_web": "AHC 마스터즈 아쿠아 리치 선크림 SPF50+ PA++++, , 2개",
+      "naver_rematch": "AHC 마스터즈 아쿠아리치 선크림 50ml+클렌징폼30ml"
+    },
+    "brand": "AHC (에이에이치씨)",
+    "name": "마스터즈 아쿠아 리치 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "17900",
+    "mall": "AHC 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/11498115970",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8904262/89042626335.24.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8904262/89042626335.24.jpg",
+        "mall": "AHC 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/11498115970"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8904262/89042626336.23.jpg",
+        "mall": "AHC",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11498115971"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087032/90870320514.jpg",
+        "mall": "케이디와이코스메틱",
+        "link": "https://smartstore.naver.com/main/products/13325810182"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
