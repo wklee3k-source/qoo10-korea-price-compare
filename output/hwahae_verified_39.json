@@ -37577,5 +37577,126 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207952441",
+    "translated_kr": "넥 케어 시트 프리미엄 펩타이드 목 원 팩 4장/목 원의 탄력 케어/목의 주름/목 톤 업/붙이고 자는 팩/목 케어/목 팩/목용 팩/넥 시트 마스크/에이징 케어/",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202531550",
+    "translated_kr": "2개 세트 수분×유브이 히알루 시카 워터 핏 선 세럼 100ml 유브이 뷰티 에센스 일광 차단제 윤기 피부 유브이 촉촉함 유브이 미 피부 케어 윤기 피부 유브이 보습 유브이 베이스 화장 베이스 유브이 대책",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1110913352",
+    "translated_kr": "올리브영 아이디얼 포맨 퍼펙트 올인원 기획 (올인원 150ml+150ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 올인원",
+      "naver": "올리브영 아이디얼포맨 퍼펙트 올인원 150ml+프루아가방(랜덤)"
+    },
+    "brand": "아이디얼포맨 (idealFORMEN)",
+    "name": "퍼펙트 올인원",
+    "volume": "150mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "30200",
+    "mall": "미라클 뷰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13093726626",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9063823/90638237718.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063823/90638237718.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13093726626"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209471298",
+    "translated_kr": "정품 더블 샷 퍼퓸 바디 미스트 120ml 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "헤트라스 더블샷 퍼퓸 바디미스트 호텔우드 120ml 2개"
+    },
+    "brand": "헤트라스 (hetras.)",
+    "name": "헤트라스 더블샷 퍼퓸 바디미스트 호텔우드 120ml 2개",
+    "volume": "",
+    "source": "naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "26000",
+    "mall": "주식회사제이씨",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13144116018",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9068862/90688627110.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068862/90688627110.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13144116018"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068862/90688627647.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13144116555"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209318877",
+    "translated_kr": "【정품】VQM 피토신 코나피디르 슈퍼젝션 크림 20g",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "더리즈 리코테카 진정 수분크림 미백 주름개선 영양 크림 75ml+30ml"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
