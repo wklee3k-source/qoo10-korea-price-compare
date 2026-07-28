@@ -9095,5 +9095,350 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1179909383",
+    "translated_kr": "트리트먼트 밀크 (브라이트닝) 촉촉함 130ml 유액",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "100% 퓨어 호호바 오일",
+      "naver": "시세이도 아쿠아라벨 트리트먼트 밀크 (브라이트닝) 촉촉함 / 본품 / 130ml / 로션 유액",
+      "daum": "바디로션/크림/오일",
+      "naver_web": "AQUALABEL_트리트먼트 밀크 매우 촉촉한 / 리필 / / 기분에 붙어 부드럽게 향기로운 로즈 아쿠아"
+    },
+    "brand": "데저트에센스 (DESERTESSENCE)",
+    "name": "시세이도 아쿠아라벨 트리트먼트 밀크 (브라이트닝) 촉촉함 / 본품 / 130ml / 로션 유액",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "17700",
+    "mall": "놀자재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10361578168",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8790608/87906082816.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8790608/87906082816.jpg",
+        "mall": "놀자재팬",
+        "link": "https://smartstore.naver.com/main/products/10361578168"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944028/89440282007.jpg",
+        "mall": "셀레네 재팬",
+        "link": "https://smartstore.naver.com/main/products/11895771398"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8515742/85157428922.jpg",
+        "mall": "구매월드",
+        "link": "https://smartstore.naver.com/main/products/7612928600"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8763602/87636027352.jpg",
+        "mall": "일본직구 도쿄클라쓰",
+        "link": "https://smartstore.naver.com/main/products/10091524695"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8763612/87636125224.jpg",
+        "mall": "일본직구 도쿄클라쓰",
+        "link": "https://smartstore.naver.com/main/products/10091622566"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1131627367",
+    "translated_kr": "[히카로닉] 초저분자 히알루론산 토너 200ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "초저분자 히아루론산 토너",
+      "musinsa": "초저분자 히알루로닉 수분 미스트 100ml 2개",
+      "naver": "오가니시티 히알루론산 1%원액 보습토너 지성용(초저분자 히알루론산), 100ml, 1개",
+      "daum": "이즈앤트리 초저분자 히아루론산 토너",
+      "naver_web": "더 촉촉하게, 더 매끈하게, 더 편안하게 비앤힐 초저분자 히알루론산 토너"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "더 촉촉하게, 더 매끈하게, 더 편안하게 비앤힐 초저분자 히알루론산 토너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "24900",
+    "mall": "오가니시티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13628204640",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117271/91172715249.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117271/91172715249.jpg",
+        "mall": "오가니시티",
+        "link": "https://smartstore.naver.com/main/products/13628204640"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203100547",
+    "translated_kr": "[국내 발송] 프리미엄 2.0 넥 스틱 20g 펩타이드 나이트 1000 샷",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프리미엄 펩타이드 나이테 1000샷 넥스틱 2.0",
+      "daum": "9~10월 다나와 리포터 채택 대상 품목 공지",
+      "naver_web": "호주에서 Medipeel Premium Naite Thread Neck Stick 구매"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "프리미엄 펩타이드 나이테 1000샷 넥스틱 2.0",
+    "volume": "20g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209962351",
+    "translated_kr": "히알루론산 2% + B5 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알루로닉 애시드 2% + B5",
+      "naver": "히알루로닉 애시드 2% + B5 60ml",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "디오디너리 히알루론산 2% + B5 세럼"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "히알루로닉 애시드 2% + B5",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "디오디너리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10248980563",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8779348/87793484207.jpg",
+        "mall": "디오디너리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10248980563"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745261/87452613128.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908110855"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8745255/87452559827.5.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/9908057554"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8838536/88385360513.3.jpg",
+        "mall": "TheOrdinary",
+        "link": "https://smartstore.naver.com/main/products/10840854500"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185221397",
+    "translated_kr": "[3개 세트] 13종류에서 선택 가능 퀄리티퍼스트 더마레이저 마스크 7장입/10장입/15장입 여성 보습 건조 피지 탄력 피부트러블 모공 [선물포장 대응]",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "극도로 예민한 피부를 위한 민감성용 로션",
+      "daum": "민감 지성 피부를 위한",
+      "naver_web": "추천 히알루론산고분자 10종 필수 피부보습 제품!",
+      "naver_rematch": "클리니크 예민한 피부를 위한 특별히 진정 크림 가려움 완화 1온스 30밀리리터 미개봉"
+    },
+    "brand": "오픈워크 (OPENWORK)",
+    "name": "추천 히알루론산고분자 10종 필수 피부보습 제품!",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "156700",
+    "mall": "사모에컴퍼니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13258483846",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9080299/90802994178.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080299/90802994178.jpg",
+        "mall": "사모에컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13258483846"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105711/91057116377.jpg",
+        "mall": "구대동오",
+        "link": "https://smartstore.naver.com/main/products/13512606025"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080362/90803624852.jpg",
+        "mall": "사모에컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/13259114520"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096376/90963765705.jpg",
+        "mall": "트리니샵",
+        "link": "https://smartstore.naver.com/main/products/13419255369"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1154810148",
+    "translated_kr": "템플 우드 오드파르팡 40ml 1개 / 향 계열: 우디/머스크 남녀공용 / 샌달우드의 감각적이고 동양적인 사찰과 숲을 연상시키는 안개 향",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1102931734",
+    "translated_kr": "옥수수 수염 차 50개입 x4개 / 옥수수 차 / 한국 차 / 한국 식품 / 티백 차",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "초당옥수수 수염차 미인차 40T",
+      "naver_web": "담터 옥수수수염차 티백 40T x 6개",
+      "naver_rematch": "담터 옥수수수염차 40T+10T 옥수수차"
+    },
+    "brand": "담터",
+    "name": "담터 옥수수수염차 티백 40T x 6개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "3810",
+    "mall": "간식바구니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10057827033",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8760232/87602329571.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8760232/87602329571.jpg",
+        "mall": "간식바구니",
+        "link": "https://smartstore.naver.com/main/products/10057827033"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8323828/83238281949.jpg",
+        "mall": "DS마트",
+        "link": "https://smartstore.naver.com/main/products/5693784021"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8192767/81927672783.1.jpg",
+        "mall": "티타임고려",
+        "link": "https://smartstore.naver.com/main/products/4383150604"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1128427421",
+    "translated_kr": "[세일 최저가] 앳클리닉 볼피린 링클샷 앰플 PDRN 30ml 한국화장품 인기 유튜버 추천 콜라겐 탄력 세럼 올리브영 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "정앤솔",
+      "naver_web": "콜라겐약추천 10개 인기 추천 지금 필수 상품!"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192655532",
+    "translated_kr": "덴스 오일 라 프랑스 90ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "알로디아 덴스 오일 프랑스향",
+      "naver_web": "일본헤어오일 처분 아로디아 덴스 오일 사쿠라오스만서스금목 라 프랑스 바디 헤어 네일 전신 미용 코스메틱...."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1115102513",
+    "translated_kr": "[신규/김지조브티케어] 티엑스 토닝 토너 200ml 브라이트닝 안색 토너 주름케어 멜라닌 피부 톤 개선 색소침착 트라넥삼산 다크 스팟 글루타치온",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 베스트 오브 뷰티의 에디터스 픽 ‘스킨케어’ ‘베이스’ ‘맨’",
+      "naver_web": "리르 콜라겐 리프팅 롤러 넥 크림"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
