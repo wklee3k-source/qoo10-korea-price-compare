@@ -23325,5 +23325,391 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193433355",
+    "translated_kr": "공식 코나피딜 그린박싱 CONAPIDIL Greenboxin 150ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "VS 볼륨 샤이닝 세럼",
+      "naver": "코나피딜 그린박싱 스트롱 안면홍조 트러블 열감소 진정겔 수딩 쿨링 수분앰플",
+      "naver_web": "얼굴 홍조 치트키 코나피딜 그린박신 VS 그린박신 스트롱 차이 효과 부작용 사용법"
+    },
+    "brand": "셀큐랩 (Cellculab)",
+    "name": "코나피딜 그린박싱 스트롱 안면홍조 트러블 열감소 진정겔 수딩 쿨링 수분앰플",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "66000",
+    "mall": "이지뷰티랩",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11421030692",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8896554/88965541057.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8896554/88965541057.jpg",
+        "mall": "이지뷰티랩",
+        "link": "https://smartstore.naver.com/main/products/11421030692"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211663273",
+    "translated_kr": "우편 의약외품 트란시노 약용 UV 파우더 EX 내추럴 멀티 베이지 11g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "naver": "트란시노 UV 파우더 EX 자연스러운 멀티 베이지 11g",
+      "daum": "COSMETIC",
+      "naver_web": "트란시노 약용 UV 파우더 n / 멀티 베이지 /"
+    },
+    "brand": "다이이찌산쿄",
+    "name": "트란시노 UV 파우더 EX 자연스러운 멀티 베이지 11g",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "31900",
+    "mall": "영점팔프로언니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11260816885",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8880532/88805327216.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880532/88805327216.1.jpg",
+        "mall": "영점팔프로언니",
+        "link": "https://smartstore.naver.com/main/products/11260816885"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110001/91100019936.jpg",
+        "mall": "천조국상점",
+        "link": "https://smartstore.naver.com/main/products/13555509570"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1189371186",
+    "translated_kr": "신상 셰이킹 미스트",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "대형 강풍기 축사 냉방 미스트 선풍기"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191102778",
+    "translated_kr": "인테카 수딩 크림 31ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인테카 수딩 크림",
+      "musinsa": "인테카 수딩 크림 80ml",
+      "naver": "메이크프렘 인테카 수딩크림 70ml+31ml+31ml",
+      "daum": "메이크프렘 인테카 수딩크림 기획",
+      "naver_web": "인테카 수딩 크림"
+    },
+    "brand": "메이크프렘 (makep:rem)",
+    "name": "인테카 수딩 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "22350",
+    "mall": "더담다101",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11121780281",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8866629/88666290603.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8866629/88666290603.2.jpg",
+        "mall": "더담다101",
+        "link": "https://smartstore.naver.com/main/products/11121780281"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8749627/87496274257.7.jpg",
+        "mall": "파니브리즈",
+        "link": "https://smartstore.naver.com/main/products/9951771984"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1103882936",
+    "translated_kr": "어드밴스드 10X 모이스처 헤어 앰플 세럼 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드밴스드 10X 모이스춰 앰플 세럼",
+      "daum": "케라시스 어드밴스드 10X 모이스춰 헤어 앰플 세럼, , 1개",
+      "naver_web": "애경 케라시스 어드밴스드 10X 모이스처 앰플 세럼",
+      "naver_rematch": "케라시스 어드밴스드 10X 모이스춰 헤어 앰플 세럼 80ml 5개"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 10X 모이스춰 앰플 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "33800",
+    "mall": "원라이브:쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9834245321",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8737874/87378747587.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8737874/87378747587.jpg",
+        "mall": "원라이브:쇼핑",
+        "link": "https://smartstore.naver.com/main/products/9834245321"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8299137/82991376401.1.jpg",
+        "mall": "그린생활건강KSM",
+        "link": "https://smartstore.naver.com/main/products/5446882246"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201973573",
+    "translated_kr": "벤튼 과바 모이스처 수딩 크림 80ml",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "daum": "화장품/이미용품",
+      "naver_web": "N배송 : 네이버+ 스토어 : 알로에 프로폴리스 수딩젤 시원촉촉 쿨링케어 수딩젤추천",
+      "naver_rematch": "[벤튼] 알로에 프로폴리스 수딩젤 100ml 시원촉촉 쿨링케어 수딩젤추천"
+    },
+    "brand": "벤튼",
+    "name": "[벤튼] 알로에 프로폴리스 수딩젤 100ml 시원촉촉 쿨링케어 수딩젤추천",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "17000",
+    "mall": "벤튼",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/2146343880",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8080162/80801623634.27.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8080162/80801623634.27.jpg",
+        "mall": "벤튼",
+        "link": "https://shopping.naver.com/outlink/itemdetail/2146343880"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6481914/6481914286.40.jpg",
+        "mall": "벤튼",
+        "link": "https://smartstore.naver.com/main/products/106529000"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1161269723",
+    "translated_kr": "단독 기획 내추럴 커버 로션 50g + 미니어처 10ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[NEW 보송버전 출시] [덱스PICK] 오브제 내추럴 커버 로션 50g 단품/기획(+미니어처 10ml)",
+      "daum": "산뜻하게, 여름 출발! 6월의 신상 뷰티템",
+      "naver_web": "오브제 내추럴 커버 로션 단품/기획"
+    },
+    "brand": "OBGE",
+    "name": "[NEW 보송버전 출시] [덱스PICK] 오브제 내추럴 커버 로션 50g 단품/기획(+미니어처 10ml)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "27900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000204975",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5833433/58334330676.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5833433/58334330676.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000204975"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119696/91196960299.jpg",
+        "mall": "핸디홈즈",
+        "link": "https://smartstore.naver.com/main/products/13652449519"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119696/91196960347.jpg",
+        "mall": "핸디홈즈",
+        "link": "https://smartstore.naver.com/main/products/13652449567"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119696/91196960271.jpg",
+        "mall": "핸디홈즈",
+        "link": "https://smartstore.naver.com/main/products/13652449491"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1070022062",
+    "translated_kr": "스킨 케어 원 스텝 오리지널 클리어 패드 70매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "원스텝 오리지널 클리어 패드",
+      "naver": "코스알엑스 원스텝 오리지널 클리어 스킨 카밍 패드 100매, 1개",
+      "daum": "10월의 신상 화장품_스킨케어_잇츠온세일",
+      "naver_web": "원스텝 오리지널 클리어 패드 70매 x 4개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "원스텝 오리지널 클리어 패드",
+    "volume": "185ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "21600",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/3555764328",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8110028/81100281662.31.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8110028/81100281662.31.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/3555764328"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8110028/81100281663.31.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/3555764329"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "490748002",
+    "translated_kr": "아나수이 오드 트왈렛 30ml EDT SP",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "스카이 EDT",
+      "naver": "안나수이 판타지아 오드 트왈렛 EDT SP 75ml",
+      "naver_web": "안나수이 판타지아 오드트왈렛"
+    },
+    "brand": "안나수이",
+    "name": "안나수이 판타지아 오드 트왈렛 EDT SP 75ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "73100",
+    "mall": "재팬양품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13549545841",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9109405/91094056194.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109405/91094056194.1.jpg",
+        "mall": "재팬양품",
+        "link": "https://smartstore.naver.com/main/products/13549545841"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1105060861",
+    "translated_kr": "공식 대나무 하이드레이팅 모이스처 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밤부 하이드레이팅 모이스처 크림",
+      "naver": "에빠끌라 H 아이소바이옴 울트라 수딩 하이드레이팅 크림 40ml [병원판매화장품]",
+      "daum": "뿌려도 건조한 내 피부에 오아이스 같은 촉촉한 미스트",
+      "naver_web": "하이드레이팅 아이 크림"
+    },
+    "brand": "리프랩 (LEAFLAB)",
+    "name": "밤부 하이드레이팅 모이스처 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "라로슈포제공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "http://www.larocheposay.co.kr/product/view/3738.do",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5985608/59856082925.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5985608/59856082925.jpg",
+        "mall": "라로슈포제공식몰",
+        "link": "http://www.larocheposay.co.kr/product/view/3738.do"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4498911/44989111774.31.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=59973&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=laneige"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9115899/91158992411.jpg",
+        "mall": "리프랩",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13614481999"
+      }
+    ],
+    "real_page_title": "[라로슈포제공식온라인몰] 에빠끌라H 아이소바이옴 울트라 수딩 하이드레이팅 크림 40ml [병원판매화장품]",
+    "in_stock": false,
+    "stock_evidence": [
+      "품절 (SPAN, visible)",
+      "품절 (SPAN, visible)"
+    ]
   }
 ]
