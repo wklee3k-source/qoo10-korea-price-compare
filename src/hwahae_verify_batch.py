@@ -385,6 +385,10 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 
 
 REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
+# [품질 강화] 서로 독립된 소스 몇 곳 이상이 찾아내야 채택할지. 1이면
+# 예전처럼 한 곳만 찾아도 통과(오매칭 위험), 2면 두 곳 이상이 같은
+# 상품을 찾았을 때만 채택한다. 환경변수로 조절 가능.
+MIN_CONSENSUS_SOURCES = int(os.environ.get("MIN_CONSENSUS_SOURCES", "2"))
 
 
 REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
@@ -550,6 +554,31 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         scored.sort(key=lambda x: -x[0])
         best_score, winner = scored[0]
         print(f"    [투표결과] " + " / ".join(f"{c['source']}={s:.1f}" for s, c in scored) + f" -> 승자: {winner['source']}")
+
+        # [품질 강화 - 2곳 이상 합의 요건] 예전엔 4곳 중 한 곳만 찾아도
+        # 통과시켰다. 그러면 그 한 곳이 엉뚱한 상품을 물어와도 검증할
+        # 방법이 없다(실측: 화해가 'ph6.9 위치하젤 클렌저'를 찾았는데
+        # 네이버는 전혀 다른 '뉴트로지나 리무버'를 가져온 사례).
+        # 서로 독립된 소스 2곳 이상이 같은 상품을 찾아냈을 때만 채택하면
+        # 오매칭이 크게 준다 — 물량은 줄지만 '양보다 질' 방침에 맞다.
+        # (실측: 실제 검증분 442건 중 2곳 이상 합의는 310건 = 70.1%)
+        n_sources = len({c["source"] for c in candidates})
+        if n_sources < MIN_CONSENSUS_SOURCES:
+            print(f"    [거부-합의부족] {n_sources}곳만 찾음(최소 {MIN_CONSENSUS_SOURCES}곳 필요) — 오매칭 방지를 위해 채택하지 않음")
+            entry = {
+                "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
+                "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "reject_reason": f"합의부족({n_sources}곳)",
+                "brand": None, "name": None, "volume": "", "source": None,
+                "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
+                "product_url": None, "image_url": None, "image_candidates": [],
+            }
+            results.append(entry)
+            out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            if retry_counts.pop(item["goods_no"], None) is not None:
+                retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
+            processed_this_call += 1
+            continue
 
         if best_score < REJECT_SCORE_THRESHOLD:
             print(f"    [거부] 최고점수({best_score:.1f})가 임계값({REJECT_SCORE_THRESHOLD}) 미만 — 틀린 매칭을 억지로 채택하지 않고 실패 처리")

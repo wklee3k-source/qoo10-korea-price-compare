@@ -266,7 +266,10 @@ jobs:
       cancel-in-progress: false
     strategy:
       matrix:
-        branch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        # [12 -> 2 축소] '하루 100건, 양보다 질' 방침. 시뮬레이션상
+        # 하루 100건 검수하려면 상점 164곳만 방문하면 되므로 2워커면
+        # 충분하다(워커당 82곳). 사이트 부하와 차단 위험도 함께 줄어든다.
+        branch: [0, 1]
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
@@ -329,7 +332,7 @@ jobs:
               main_path = pathlib.Path('../output/discovery_state.json')
               main_state = json.loads(main_path.read_text()) if main_path.exists() else {'pending_keywords': None}
               all_seeds = main_state.get('pending_keywords') or ['メディヒール エッセンシャルマスクパック']
-              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 12 == int(suffix)]
+              my_seeds = [kw for i, kw in enumerate(all_seeds) if i % 2 == int(suffix)]  # 워커수(2)와 반드시 일치해야 함
               if not my_seeds:
                   my_seeds = [all_seeds[int(suffix) % len(all_seeds)]]
               branch_path.write_text(json.dumps({
@@ -1336,7 +1339,10 @@ jobs:
     timeout-minutes: 240
     strategy:
       matrix:
-        shard: [0, 1, 2]
+        # [3 -> 1 축소] 하루 164건 검증이면 1워커(1.5건/분)로 약 2시간이면
+        # 끝난다. 샤딩 구조는 그대로 두고 개수만 줄여서, 나중에 물량을
+        # 늘릴 때 숫자만 바꾸면 되게 남겨둔다.
+        shard: [0]
       fail-fast: false
     concurrency:
       group: hwahae-verify-shard-${{ matrix.shard }}
@@ -1412,7 +1418,7 @@ jobs:
           state = json.load(open('/tmp/ds_for_verify.json'))
           rows = [{'goods_no': p['goods_no'], 'translated_kr': p['translated_kr'], 'known_brand': p.get('known_brand','')}
                   for p in state.get('all_products', []) if p.get('translated_kr')]
-          mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 3 == $S]
+          mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 1 == $S]  # 나눗셈은 워커수(1)와 일치
           json.dump(mine, open('../output/hwahae_input_${S}.json','w'), ensure_ascii=False, indent=2)
           print(f'[INFO] 전체 {len(rows)}건 중 샤드${S} 몫 {len(mine)}건')
           "
@@ -1425,7 +1431,7 @@ jobs:
           import json, pathlib, zlib
           p = pathlib.Path('../output/hwahae_verified_39.json')
           done = json.loads(p.read_text()) if p.exists() else []
-          mine = [x for x in done if zlib.crc32(str(x['goods_no']).encode()) % 3 == $S]
+          mine = [x for x in done if zlib.crc32(str(x['goods_no']).encode()) % 1 == $S]  # 나눗셈은 워커수(1)와 일치
           json.dump(mine, open('../output/hwahae_verified_${S}.json','w'), ensure_ascii=False, indent=2)
           print(f'[INFO] 기존 검증 {len(done)}건 중 샤드${S} 몫 {len(mine)}건 승계')
           "

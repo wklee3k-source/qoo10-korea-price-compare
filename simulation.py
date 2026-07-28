@@ -281,7 +281,51 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
-# --------------------- #39 검증 샤딩(3워커) 안전성
+# --------------------- #40 워커수와 샤딩 나눗셈 일치 (누락시 데이터 유실)
+#  워커 수를 바꿀 때 나눗셈(% N)을 같이 안 고치면, 남는 나머지값에
+#  해당하는 항목이 어느 워커에도 배정되지 않아 영구히 처리 안 된다.
+#  (수확에서 12->6 줄일 때 실제로 겪고 고친 문제)
+def t40_shard_divisor_matches_worker_count():
+    import yaml as _yaml
+    wf = WF.read_text(encoding="utf-8")
+    d = _yaml.safe_load(wf)
+    bad = []
+
+    checks = [
+        ("discover_low_review_shops_parallel", "branch", r"% (\d+) == int\(suffix\)"),
+        ("harvest_full_catalog_parallel", "branch", r"% (\d+) == \$B"),
+        ("hwahae_verify", "shard", r"% (\d+) == \$S"),
+    ]
+    for job_name, key, pat in checks:
+        job = d["jobs"].get(job_name)
+        if not job:
+            bad.append(f"{job_name} 없음"); continue
+        n_workers = len(job.get("strategy", {}).get("matrix", {}).get(key, []))
+        anchor = f"  {job_name}:"
+        block = wf.split(anchor)[1] if anchor in wf else ""
+        divisors = {int(m) for m in re.findall(pat, block)}
+        if not divisors:
+            bad.append(f"{job_name}: 나눗셈 못찾음"); continue
+        if divisors != {n_workers}:
+            bad.append(f"{job_name}: 워커{n_workers} vs 나눗셈{sorted(divisors)}")
+
+    check("40 워커수-샤딩나눗셈 일치", not bad, "; ".join(bad))
+
+
+# --------------------- #41 품질기준(리뷰10 미만 + 2곳 이상 합의)
+def t41_quality_thresholds():
+    disc = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    ver = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    m = re.search(r"^PRODUCT_SAVE_REVIEW_THRESHOLD\s*=\s*(\d+)", disc, re.M)
+    review10 = bool(m) and int(m.group(1)) == 10
+    has_consensus = "MIN_CONSENSUS_SOURCES" in ver and "n_sources < MIN_CONSENSUS_SOURCES" in ver
+    m2 = re.search(r'MIN_CONSENSUS_SOURCES\s*=\s*int\(os\.environ\.get\("MIN_CONSENSUS_SOURCES",\s*"(\d+)"\)\)', ver)
+    consensus2 = bool(m2) and int(m2.group(1)) == 2
+    check("41 품질기준(리뷰<10, 합의2곳)", review10 and has_consensus and consensus2,
+          f"리뷰10{review10} 합의로직{has_consensus} 기본값2{consensus2}")
+
+
+# --------------------- #39 검증 샤딩 안전성
 #  검증이 전체 파이프라인 유일한 병목이었다(1.5건/분, 3,147건이면 35시간).
 #  발굴/수확에서 검증된 샤딩 방식을 적용. 핵심 안전조건:
 #  결정적 해시(crc32) 사용, 샤드별 전용 출력파일, 샤드0만 통합/검수페이지
@@ -292,7 +336,7 @@ def t39_verify_sharding():
     d = yaml.safe_load(wf) if (yaml := __import__("yaml")) else None
     job = d["jobs"]["hwahae_verify"]
 
-    has_matrix = job.get("strategy", {}).get("matrix", {}).get("shard") == [0, 1, 2]
+    has_matrix = len(job.get("strategy", {}).get("matrix", {}).get("shard", [])) >= 1
     block = wf.split("  hwahae_verify:")[1].split("\n  naver_api_test:")[0]
     code_only = "\n".join(l for l in block.split("\n") if not l.strip().startswith("#"))
     uses_crc32 = "zlib.crc32" in block and "hash(str(" not in code_only
