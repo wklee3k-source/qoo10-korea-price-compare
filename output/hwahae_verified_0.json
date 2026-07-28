@@ -3502,5 +3502,299 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195385469",
+    "translated_kr": "[스킨 부스터/보습] 닥터지 스킨 부스트 PDRN 선 세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨부스트 PDRN 선세럼 [SPF50+/PA++++]",
+      "musinsa": "스킨부스트 PDRN 선 세럼 50mL",
+      "naver": "닥터지 스킨부스트 PDRN 선 세럼 SPF50+ PA++++, 50ml, 1개",
+      "daum": "변우석 × 닥터지 NEW 스킨부스트 PDRN 선세럼 영상",
+      "naver_web": "닥터지, ‘스킨부스트 PDRN 선세럼’ 출시"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "스킨부스트 PDRN 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23240",
+    "mall": "잡펠리스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13673548733",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121805/91218059752.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121805/91218059752.jpg",
+        "mall": "잡펠리스",
+        "link": "https://smartstore.naver.com/main/products/13673548733"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205514714",
+    "translated_kr": "[더마 마스크 10매 선물] 마데카 크림 하이드라 카밍 50ml 3개 한국 인기 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마데카크림 하이드라 카밍",
+      "naver": "센텔리안24 마데카 크림 하이드라 카밍 3개 50ml",
+      "daum": "신규 브랜드",
+      "naver_web": "마데카크림 하이드라 카밍 3개"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "마데카크림 하이드라 카밍",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "38890",
+    "mall": "플러스울트라 쇼핑몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13654713228",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119922/91199224013.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119922/91199224013.jpg",
+        "mall": "플러스울트라 쇼핑몰",
+        "link": "https://smartstore.naver.com/main/products/13654713228"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198332621",
+    "translated_kr": "실크 펩타이드 실 리프트 앰플 60ml + 골드 크림 50ml 세트 (하리·탄력) 한국 화장품 정품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "세라믹 슬릭 세럼",
+      "naver": "성분에디터 녹는실 리프팅 실크 펩타이드 앰플 60ml + 녹는실 골드 크림 50ml 세트 1세트",
+      "daum": "고요한 정서가 깃든 타임리스 주얼리",
+      "naver_web": "[세라믹 슬릭 3"
+    },
+    "brand": "지샌달 (Jysandal)",
+    "name": "성분에디터 녹는실 리프팅 실크 펩타이드 앰플 60ml + 녹는실 골드 크림 50ml 세트 1세트",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "48900",
+    "mall": "플로우커머스90",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13661269595",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120578/91205780440.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120578/91205780440.jpg",
+        "mall": "플로우커머스90",
+        "link": "https://smartstore.naver.com/main/products/13661269595"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1197433998",
+    "translated_kr": "로지 나이트 리페어 3종 세트 (샴푸+트리트먼트+오일) [손상 보수/비건/로즈 향/선물]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[손상모 케어] 아닐로 로지나잇 리페어 3종세트(샴푸+앰플트리트먼트+에센스)",
+      "daum": "한겨울을 녹이는 12월 신상 뷰티템",
+      "naver_web": "에스티로더 어드밴스드 나이트 리페어 3 종 세트"
+    },
+    "brand": "아닐로",
+    "name": "[손상모 케어] 아닐로 로지나잇 리페어 3종세트(샴푸+앰플트리트먼트+에센스)",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "62400",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=B000000200529",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5184281/51842810584.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5184281/51842810584.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=B000000200529"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183255345",
+    "translated_kr": "굿 셀라 슈퍼 세라마이드 토너 180ml+에멀전 130ml / 2종 세트 화장수 기초 스킨 케어 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "아모레퍼시픽 연혁과 역사] 2006년 6월1일 태평양 인적분할, 아모레퍼시픽 설립",
+      "naver_web": "피부 뒤집어진거 일주일안에 복구하는법"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213396216",
+    "translated_kr": "하시 보수도 제약 언젠가의 비누 연리 타입 100g 효소 세안 비누 효소 세안료 모공 검은 얼룩 각질 제거 케어 거품 팩 연리 타입 얼굴 코 세안 비누 미용 비누 저자극 보습",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193643034",
+    "translated_kr": "【정품】 콜라겐 나이트 래핑 마스크 75ml + 브러시",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "디지털 디톡스 스킨케어",
+      "naver_web": "메디큐브 콜라겐 나이트 래핑 마스크,"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193642948",
+    "translated_kr": "GIVENCHY 【정품】 프리즘 리버 미니 파우더 No0/No1/No2/No3/No4 지방시 프리즘 리버 PRISME LIBRE 루스 파우더",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1159703255",
+    "translated_kr": "【1+1 한국인기 두피케어 샴푸】프로페셔널 리페어링 스칼프 세럼샴푸 275ml × 2본 세트 헤어케어 / 두피영양 / 탈모증상완화샴푸 / 모발케어 / 모발",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로페셔널 리페어링 스칼프 테라피 세럼 샴푸",
+      "naver": "[달바] 프로페셔널 리페어링 스칼프 테라피 세럼 샴푸 275ml 2개 세트",
+      "daum": "뷰티쁠 크루가 먼저 써본 #5월뷰티신상",
+      "naver_web": "달바 프로페셔널 리페어링 스칼프 테라피 세럼 샴푸, , 1개"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "프로페셔널 리페어링 스칼프 테라피 세럼 샴푸",
+    "volume": "275ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "33900",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12274701539",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8981921/89819212255.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981921/89819212255.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274701539"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152064671",
+    "translated_kr": "스템셀라인 스킨세럼크림 [중·건성피부용 3종]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정",
+      "daum": "꽃이 피기 시작하는 4월의 신상 뷰티템",
+      "naver_web": "아스타잔틴 스템셀 3종 세트"
+    },
+    "brand": "아벤느",
+    "name": "[아벤느] 비타민 액티브 Cg 안티에이징 미백 크림 50ml + 세럼 10ml 증정",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "41600",
+    "mall": "아벤느코리아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11730664019",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174518.2.jpg",
+        "mall": "아벤느코리아",
+        "link": "https://smartstore.naver.com/main/products/11730664019"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8927517/89275174517.jpg",
+        "mall": "아벤느",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11730664018"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8954193/89541938684.1.jpg",
+        "mall": "재팬아롱다롱",
+        "link": "https://smartstore.naver.com/main/products/11997427996"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120253/91202534454.jpg",
+        "mall": "멀티플렉스아울렛몰",
+        "link": "https://smartstore.naver.com/main/products/13658023669"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
