@@ -518,8 +518,13 @@ def t50_threshold_merge_and_chunking():
     chunked = "chunk: int = 200" in exp and "chunks = [pending[i:i + chunk]" in exp
     # 장수가 줄었을 때 옛 뒷장이 남으면 이미 끝난 목록을 다시 번역하게 된다.
     clears_stale = 'glob(f"{stem}*{suffix}")' in exp and "unlink()" in exp
-    # 번호는 장이 넘어가도 이어져야 한다(장마다 1번부터면 반영 시 충돌).
-    continuous = "base_no" in exp
+    # [v3.5.1] 키는 순번이 아니라 상품번호여야 한다. 순번을 쓰면 사용자가
+    # 번역하는 동안 안전망 통합이 돌아 요청서가 새로 생성됐을 때 번호가
+    # 밀려 엉뚱한 상품에 이름이 박힌다(4시간 크론 운영에서 실제로 발생 가능).
+    imp = (SRC / "import_translation_response.py").read_text(encoding="utf-8")
+    keyed_by_goods = "f\"{p.get('goods_no')}|{title}\"" in exp
+    import_by_goods = "str(num) if str(num) in by_goods" in exp.replace(exp, imp)
+    continuous = keyed_by_goods and import_by_goods
 
     ok = (has_baseline_write and has_threshold and can_disable and dedup
           and chunked and clears_stale and continuous)

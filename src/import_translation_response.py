@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 KANA_RE = re.compile(r"[ぁ-んァ-ヴ]")
-LINE_RE = re.compile(r"^\s*(\d+)\s*\|\s*(.*?)\s*$")
+LINE_RE = re.compile(r"^\s*(\d{4,})\s*\|\s*(.*?)\s*$")
 INDEX_MAP_RE = re.compile(r"<!--\s*INDEX_MAP\s*(\{.*?\})\s*-->", re.S)
 
 
@@ -46,8 +46,10 @@ def parse_response(response_path: str) -> dict[int, str]:
     return out
 
 
-def apply(state_path: str, request_path: str, response_path: str) -> int:
-    index_map = load_index_map(request_path)
+def apply(state_path: str, request_path: str | None, response_path: str) -> int:
+    # [v3.5.1] 응답의 키는 상품번호 그 자체다. 요청서를 안 넘겨도 반영된다
+    # — 요청서가 새로 생성돼 사라져도 손에 든 응답만으로 처리할 수 있다.
+    index_map = load_index_map(request_path) if request_path else {}
     answers = parse_response(response_path)
     print(f"[INFO] 요청 {len(index_map)}건 / 응답 파싱 {len(answers)}건")
 
@@ -56,7 +58,8 @@ def apply(state_path: str, request_path: str, response_path: str) -> int:
 
     applied = skipped_empty = skipped_kana = skipped_done = missing = 0
     for num, korean in answers.items():
-        goods_no = index_map.get(num)
+        # 상품번호로 바로 찾고, 못 찾으면 옛 순번 방식으로 한 번 더 시도한다.
+        goods_no = str(num) if str(num) in by_goods else index_map.get(num)
         if goods_no is None:
             missing += 1
             continue
@@ -88,7 +91,10 @@ def apply(state_path: str, request_path: str, response_path: str) -> int:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
+    if len(sys.argv) == 3:          # state, 응답  (요청서 없이)
+        apply(sys.argv[1], None, sys.argv[2])
+    elif len(sys.argv) >= 4:        # state, 요청서, 응답
+        apply(sys.argv[1], sys.argv[2], sys.argv[3])
+    else:
         print(__doc__)
         raise SystemExit(1)
-    apply(sys.argv[1], sys.argv[2], sys.argv[3])
