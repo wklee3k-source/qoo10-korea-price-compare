@@ -36775,5 +36775,79 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1177153831",
+    "translated_kr": "국내 백화점 딥 딕 핸드&바디 젤 올페온 200ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1088294544",
+    "translated_kr": "화장수+유액 저렴한 2점 스킨케어 세트 닥터즈 코스메 보습 건성 피부 박피부 저자극 피부 트러블 홍조 에이징 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "에이징 사해화장품 세라마이드 하이드로컴플렉스 보습 세트 (아쿠아겔+듀크림) 솔트 진정 보습"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1136989285",
+    "translated_kr": "일광 차단제 화장 베이스 모이스트 스킨 유브이 글로우 베이스 30g SPF38 PA+++ 일광 차단제 톤 업 피부 트러블 건성 피부 보습 세라마이드 무첨가 저자극 민감성 피부",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "FB22 베이스 마스터 파운데이션",
+      "naver": "[피카소] FB22 베이스 마스터 파운데이션 5009491353"
+    },
+    "brand": "피카소 (piccasso)",
+    "name": "FB22 베이스 마스터 파운데이션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "49000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/6097891?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5928983/59289833149.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5928983/59289833149.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6097891?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063890/90638903140.4.jpg",
+        "mall": "피카소 라운지",
+        "link": "https://smartstore.naver.com/main/products/13094392048"
+      }
+    ],
+    "real_page_title": "피카소(PICCASSO) FB22 베이스 마스터 파운데이션",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
