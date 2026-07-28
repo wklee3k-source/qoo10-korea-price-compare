@@ -40561,5 +40561,83 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1152745577",
+    "translated_kr": "프린 헤어 컬러 염모제 부다페스트 딥 블랙 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192597637",
+    "translated_kr": "Axenda 루티나 크림 모공 밤 슬리핑 밤 멀티 밤 15ml 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199247944",
+    "translated_kr": "DMT 페이셜 크림 100ml + 100ml 더블 기획",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "DMT 이너클렌저",
+      "naver": "(최신제조) 피지오겔 DMT 페이셜크림 100ml+100ml 더블기획_OY7865"
+    },
+    "brand": "피지오겔 (PHYSIOGEL)",
+    "name": "(최신제조) 피지오겔 DMT 페이셜크림 100ml+100ml 더블기획_OY7865",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "29300",
+    "mall": "블루밍케어샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13653216033",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9119772/91197726814.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119772/91197726814.jpg",
+        "mall": "블루밍케어샵",
+        "link": "https://smartstore.naver.com/main/products/13653216033"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119209/91192093760.jpg",
+        "mall": "GREENOLIVER",
+        "link": "https://smartstore.naver.com/main/products/13647582981"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091049/90910495686.2.jpg",
+        "mall": "JnCO",
+        "link": "https://smartstore.naver.com/main/products/13365985354"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
