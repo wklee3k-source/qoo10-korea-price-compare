@@ -46,6 +46,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_naver_probe:
+        description: "실험: 승자 이름으로 네이버 재검색했을 때 구매링크 회수율 측정(읽기 전용)"
+        required: false
+        type: boolean
+        default: false
       merge_threshold:
         description: "발굴이 이만큼 새로 쌓이면 자동으로 통합을 실행(0이면 자동통합 끔). 기본 500"
         required: false
@@ -1589,3 +1594,39 @@ jobs:
               sleep $((RANDOM % 5 + 1)); git pull --rebase origin main -q || true
             done
           fi
+
+  naver_rematch_probe:
+    # [실험/측정 전용] 아무것도 바꾸지 않는다. '네이버가 못 찾아서 버려진
+    # 건'을 승자 이름으로 다시 검색하면 얼마나 되살아나는지만 잰다.
+    # 구현 전에 재는 이유: 회수율이 낮으면 검증 시간만 늘고 얻는 게 없다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_naver_probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch verified snapshot (read-only)
+        run: |
+          mkdir -p output
+          git fetch --depth 1 origin hwahae-live
+          # 지금은 전체 재검증 중이라 통합본이 비어 있다. 재검증 직전에
+          # 통째로 백업해둔 archive 본으로 측정한다.
+          git show FETCH_HEAD:output/archive/hwahae_verified_before_full_reverify.json > output/probe_input.json \
+            || git show FETCH_HEAD:output/hwahae_verified_39.json > output/probe_input.json
+          python3 -c "import json;print('[입력]', len(json.load(open('output/probe_input.json'))), '건')"
+
+      - name: Probe recovery rate
+        working-directory: src
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          REQUEST_DELAY: "1"
+        run: |
+          python naver_rematch_probe.py ../output/probe_input.json 100
