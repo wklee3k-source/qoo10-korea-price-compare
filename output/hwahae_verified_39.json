@@ -39121,5 +39121,52 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1202284934",
+    "translated_kr": "[조합 자유][2개 세트] 스무스 모이스트 샴푸 트리트먼트 리필용 380ml $헤어케어 윤기머리 마찰 $[선물 래핑 대응]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193262729",
+    "translated_kr": "3데이즈 레이어 앰플 55ml 미용액 스킨케어, 한국 스킨케어, 인기 화장품, 보습",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "오어스 트리플 레이어 히알루론시카 7초 세럼 인 앰플 105ml"
+    },
+    "brand": "오어스",
+    "name": "오어스 트리플 레이어 히알루론시카 7초 세럼 인 앰플 105ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "29900",
+    "mall": "스마일데이즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12459535444",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9000404/90004046191.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9000404/90004046191.jpg",
+        "mall": "스마일데이즈",
+        "link": "https://smartstore.naver.com/main/products/12459535444"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
