@@ -461,6 +461,41 @@ def t48_web_only_sources_cannot_form_consensus():
           f"상수{has_const} 가드{guard} 정족수유지{quorum_kept} " + ("; ".join(key_safe) or "키안전처리OK"))
 
 
+# --------------------- #49 번역 왕복 마크다운(붙여넣기 전용) 안전성
+#  번역은 사람이 다른 Claude 창에서 하므로, 요청 파일은 '전체를 그대로
+#  붙여넣기만' 하면 되게 지시문까지 품고 있어야 한다. 반영 쪽은 기존
+#  엑셀 경로와 똑같은 안전장치를 지켜야 한다 — 특히 가나가 남은 값이
+#  들어가면 그 상품이 '번역완료'로 굳어 영영 재시도되지 않는다.
+#  또한 번호를 그대로 믿고 N번째 항목에 넣으면 그 사이 통합이 한 번 더
+#  돌았을 때 엉뚱한 상품에 이름이 박히므로, 상품번호 대응표를 써야 한다.
+def t49_translation_markdown_roundtrip():
+    exp = SRC / "export_translation_request.py"
+    imp = SRC / "import_translation_response.py"
+    if not exp.exists() or not imp.exists():
+        check("49 번역 왕복 마크다운", False, f"스크립트 없음(export {exp.exists()} import {imp.exists()})")
+        return
+    e = exp.read_text(encoding="utf-8")
+    i = imp.read_text(encoding="utf-8")
+    wf = WF.read_text(encoding="utf-8")
+
+    has_instruction = "INSTRUCTION" in e and "ドクダミ" in e   # 지시문+용어집 포함
+    has_index_map = "INDEX_MAP" in e and "INDEX_MAP" in i      # 번호↔상품번호 대응
+    # 미번역이 0건이면 예전 파일을 지워야 한다(안 지우면 끝난 목록을 또 번역).
+    clears_stale = "unlink()" in e
+
+    kana_guard = "KANA_RE" in i and "가나잔존" in i
+    no_overwrite = 'if product.get("translated_kr")' in i
+    empty_skip = "if not korean:" in i
+
+    in_workflow = wf.count("export_translation_request.py") >= 2  # 최초 + push재시도 경로
+
+    ok = (has_instruction and has_index_map and clears_stale and kana_guard
+          and no_overwrite and empty_skip and in_workflow)
+    check("49 번역 왕복 마크다운(붙여넣기 전용)", ok,
+          f"지시문{has_instruction} 대응표{has_index_map} 낡은파일정리{clears_stale} "
+          f"가나차단{kana_guard} 덮어쓰기방지{no_overwrite} 빈칸건너뜀{empty_skip} 워크플로연결{in_workflow}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

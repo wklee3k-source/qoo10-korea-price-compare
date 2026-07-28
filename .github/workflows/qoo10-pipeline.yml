@@ -860,7 +860,11 @@ jobs:
           # 미번역 상품을 엑셀로 뽑아 사용자가 직접 번역해 다시 넣는다.
           # (사용자 방침: 번역은 별도 Claude 창에서 처리)
           python export_untranslated.py ../output/discovery_state.json ../output/미번역상품.xlsx
-          git add ../output/미번역상품.xlsx 2>/dev/null || true
+          # [v3.4.0] 엑셀과 함께, 다른 Claude 창에 '파일 전체를 그대로
+          # 붙여넣기만' 하면 되는 마크다운도 뽑는다. 지시문·성분어 용어집·
+          # 출력형식이 파일 안에 들어있어서 사용자가 따로 쓸 말이 없다.
+          python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md
+          git add ../output/미번역상품.xlsx ../output/번역요청.md 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Auto: export untranslated products to Excel"
             for i in $(seq 1 10); do
@@ -870,7 +874,8 @@ jobs:
               git reset --hard origin/discovery-live -q 2>/dev/null || true
               git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
               python export_untranslated.py ../output/discovery_state.json ../output/미번역상품.xlsx
-              git add ../output/미번역상품.xlsx 2>/dev/null || true
+              python export_translation_request.py ../output/discovery_state.json ../output/번역요청.md
+              git add ../output/미번역상품.xlsx ../output/번역요청.md 2>/dev/null || true
               git diff --cached --quiet || git commit -m "Auto: export untranslated products to Excel (재시도)"
             done
           fi
