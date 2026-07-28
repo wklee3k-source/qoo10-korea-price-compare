@@ -1052,6 +1052,9 @@ jobs:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          # [v3.3.0] 다음(Daum) 웹문서 검색용. 없으면 다음 소스만 조용히
+          # 빠지고(빈 결과 취급) 나머지 소스로 정상 진행한다.
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

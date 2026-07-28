@@ -123,16 +123,69 @@ def _search_exa(keyword: str) -> dict | None:
             GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
         )
 
+    return _pick_title_candidate(items, "exa")
+
+
+# [v3.3.0] 제목만 주는 검색소스(Exa/다음/네이버웹문서)가 셋으로 늘어서,
+# '쇼핑성 URL 우선 -> 잡음 제거 -> 제목 정리' 로직을 한 곳으로 모았다.
+# 소스마다 따로 구현하면 규칙이 갈라져서, 같은 상품인데 소스별로 다른
+# 이름이 나오고 투표가 엉킨다.
+def _pick_title_candidate(items: list[dict], source: str) -> dict | None:
+    def _is_bad(it: dict) -> bool:
+        url = it.get("url") or ""
+        title = it.get("title") or ""
+        return bool(
+            GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
+        )
+
     candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
     if not candidates:
         candidates = [it for it in items if not _is_bad(it)]
     if not candidates:
         candidates = items
+    if not candidates:
+        return None
     title = candidates[0]["title"]
     cleaned = EXA_REVIEW_RE.sub("", title)
     cleaned = EXA_TAIL_RE.sub("", cleaned)
     cleaned = _clean_query(cleaned)
-    return {"source": "exa", "name": cleaned, "brand": None, "volume": None, "raw_title": title}
+    if not cleaned:
+        return None
+    return {"source": source, "name": cleaned, "brand": None, "volume": None, "raw_title": title}
+
+
+def _search_daum(keyword: str) -> dict | None:
+    """후보5: 다음(Daum) 웹문서 검색. 무료 일 30,000건이라 사실상 무제한."""
+    try:
+        from daum_search import search as daum_search
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"daum_search 임포트 실패: {e}") from e
+
+    try:
+        items = daum_search(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"다음 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None
+    return _pick_title_candidate(items, "daum")
+
+
+def _search_naver_web(keyword: str) -> dict | None:
+    """후보6: 네이버 웹문서 검색(쇼핑 DB에 없는 상품을 잡기 위한 보완)."""
+    try:
+        from naver_web_search import search as naver_web
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"naver_web_search 임포트 실패: {e}") from e
+
+    try:
+        items = naver_web(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"네이버웹문서 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None
+    return _pick_title_candidate(items, "naver_web")
 
 
 def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | None:
@@ -410,6 +463,10 @@ REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 �
 # 상품을 찾았을 때만 채택한다. 환경변수로 조절 가능.
 MIN_CONSENSUS_SOURCES = int(os.environ.get("MIN_CONSENSUS_SOURCES", "2"))
 
+# 상품DB 소스 — 브랜드/용량/가격/구매링크까지 주는 곳. 제목만 주는
+# 웹문서 소스(exa/daum/naver_web)와 구분한다.
+PRODUCT_SOURCES = {"hwahae", "musinsa", "naver"}
+
 
 REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
 
@@ -499,7 +556,14 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         #     바로 아래 '[근본수정]' 블록이 Exa가 찾아준 정확한 이름으로 화해를
         #     재검색해서 그걸 되살리는 유일한 경로다.
         # 실측 1,507건 기준 21.6%에서 Exa 호출이 생략된다.
-        _free_sources = {c["source"] for c in (cand_hwahae, cand_musinsa, cand_naver) if c}
+        # [v3.3.0] 다음 웹문서(일 30,000건 무료) / 네이버 웹문서(일 25,000건,
+        # 쇼핑과 쿼터 공유)를 무료 소스로 추가한다. Exa와 달리 사실상 물량
+        # 제한이 없어서 매 상품 호출해도 된다.
+        cand_daum = _safe_search(_search_daum, kw_cleaned, failures=tech_failures, label="다음")
+        cand_naver_web = _safe_search(_search_naver_web, kw_cleaned, failures=tech_failures, label="네이버웹문서")
+
+        _free_sources = {c["source"] for c in
+                         (cand_hwahae, cand_musinsa, cand_naver, cand_daum, cand_naver_web) if c}
         if len(_free_sources) >= MIN_CONSENSUS_SOURCES and cand_hwahae:
             cand_exa = None
             print(f"    [Exa생략] 무료 {len(_free_sources)}곳이 이미 합의 — Exa 크레딧 절약")
@@ -513,11 +577,18 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 실측: 같은 상품인데 검색어가 조금만 달라도 화해 1차검색이 실패하는
         # 경우가 있었고, 그때 브랜드정보가 통째로 빠지면서 정상 매칭도
         # "브랜드판단불가/불일치"로 잘못 보이는 문제가 있었다.
-        if not cand_hwahae and cand_exa and cand_exa.get("name"):
-            print(f"    [Exa이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> Exa확인명 '{cand_exa['name']}'로 재검색")
-            cand_hwahae_retry = _safe_search(_search_hwahae, cand_exa["name"], known_volume, known_brand, failures=tech_failures, label="화해재검색")
-            if cand_hwahae_retry:
-                cand_hwahae = cand_hwahae_retry
+        # [v3.3.0] Exa뿐 아니라 다음/네이버웹문서가 찾아준 이름으로도 시도한다
+        # (Exa는 무료 크레딧 때문에 자주 생략되므로, 그때 이 경로가 통째로
+        # 죽지 않도록). 먼저 성공하는 이름 하나로 끝낸다.
+        if not cand_hwahae:
+            for helper in (cand_exa, cand_daum, cand_naver_web):
+                if not (helper and helper.get("name")):
+                    continue
+                print(f"    [{helper['source']}이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> 확인명 '{helper['name']}'로 재검색")
+                cand_hwahae_retry = _safe_search(_search_hwahae, helper["name"], known_volume, known_brand, failures=tech_failures, label="화해재검색")
+                if cand_hwahae_retry:
+                    cand_hwahae = cand_hwahae_retry
+                    break
 
         # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해 또는
         # 무신사가 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로
@@ -553,7 +624,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                     print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
                     cand_naver = None
 
-        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver] if c]
+        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver, cand_daum, cand_naver_web] if c]
 
         if not candidates:
             if tech_failures:
@@ -613,6 +684,19 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 오매칭이 크게 준다 — 물량은 줄지만 '양보다 질' 방침에 맞다.
         # (실측: 실제 검증분 442건 중 2곳 이상 합의는 310건 = 70.1%)
         n_sources = len({c["source"] for c in candidates})
+
+        # [v3.3.0 — 소스 추가에 따른 기준 보정] 소스가 4곳에서 6곳으로
+        # 늘면서, 제목만 주는 웹문서 소스(exa/daum/naver_web) 둘이 서로
+        # 다른 엉뚱한 페이지를 물어와도 '2곳 합의'가 기계적으로 성립하는
+        # 구멍이 생겼다. 예전엔 제목전용 소스가 Exa 하나뿐이라 2곳을
+        # 채우려면 반드시 상품DB(화해/무신사/네이버쇼핑) 하나가 끼어야
+        # 했다 — 그 불변조건을 명시적으로 지킨다. 정족수 자체는 2 그대로다.
+        _found_sources = {c["source"] for c in candidates}
+        if _found_sources and not (_found_sources & PRODUCT_SOURCES):
+            print(f"    [거부-상품DB없음] 웹문서 소스만 찾음({sorted(_found_sources)}) — "
+                  f"브랜드/가격/구매링크를 확인할 수 없어 채택하지 않음")
+            n_sources = 0
+
         if n_sources < MIN_CONSENSUS_SOURCES:
             print(f"    [거부-합의부족] {n_sources}곳만 찾음(최소 {MIN_CONSENSUS_SOURCES}곳 필요) — 오매칭 방지를 위해 채택하지 않음")
             entry = {

@@ -429,6 +429,38 @@ def t47_exa_called_as_fallback_only():
           f"무료우선{free_first} 생략조건{has_guard} 무조건호출없음{no_unconditional}")
 
 
+# --------------------- #48 무료 검색소스 추가시 합의기준이 헐거워지는 구멍
+#  소스가 4곳(exa/화해/무신사/네이버쇼핑)에서 6곳(+다음/네이버웹문서)으로
+#  늘면서, 제목만 주는 웹문서 소스 둘이 서로 다른 엉뚱한 페이지를 물어와도
+#  '2곳 합의'가 기계적으로 성립하는 구멍이 생겼다. 예전엔 제목전용 소스가
+#  Exa 하나뿐이라 2곳을 채우려면 반드시 상품DB가 하나 끼어야 했다.
+#  그 불변조건(브랜드/가격/구매링크를 주는 소스 최소 1곳)을 지켜야 한다.
+#  또한 키가 없는 소스가 '기술적 실패'로 처리되면 상품이 보류로 쌓여
+#  검증이 멈춘다(Exa 402 사고와 같은 부류) — 빈 결과로 조용히 빠져야 한다.
+def t48_web_only_sources_cannot_form_consensus():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+
+    has_const = 'PRODUCT_SOURCES = {"hwahae", "musinsa", "naver"}' in src
+    guard = "not (_found_sources & PRODUCT_SOURCES)" in src
+    # 정족수 자체는 건드리지 않았어야 한다.
+    quorum_kept = 'MIN_CONSENSUS_SOURCES", "2"' in src
+
+    # 키가 없을 때 예외를 던지지 않고 빈 리스트를 돌려주는지.
+    key_safe = []
+    for name, guard_line in (("daum_search.py", "if not API_KEY:"),
+                             ("naver_web_search.py", "if not CLIENT_ID or not CLIENT_SECRET:")):
+        f = SRC / name
+        if not f.exists():
+            key_safe.append(f"{name} 없음"); continue
+        body = f.read_text(encoding="utf-8")
+        if guard_line not in body or "return []" not in body.split(guard_line)[1][:80]:
+            key_safe.append(f"{name}: 키없음 안전처리 누락")
+
+    ok = has_const and guard and quorum_kept and not key_safe
+    check("48 웹문서 소스만으로 합의 불가", ok,
+          f"상수{has_const} 가드{guard} 정족수유지{quorum_kept} " + ("; ".join(key_safe) or "키안전처리OK"))
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
