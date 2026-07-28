@@ -1618,5 +1618,308 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169557632",
+    "translated_kr": "비타C+ 칙칙함 탄력 앰플 20ml + 15ml 1세트 미용액영양 기프트세트 상품 윤윤윤",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1087617498",
+    "translated_kr": "오드퍼퓸 50ml 3종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "34번가 생제르망 오드퍼퓸",
+      "musinsa": "[3종 중 택 2]오 드 퍼퓸 50ml (+아비브 에코백,쇼핑백)",
+      "daum": "롱테이크 오드 퍼퓸 향수 디스커버리 3종 키트",
+      "naver_web": "라리브 크리스탈 오드퍼퓸 3종 75mlx3종",
+      "naver_rematch": "34번가 생제르망 오드퍼퓸 30mL"
+    },
+    "brand": "벨라로라 (BELLALAURA)",
+    "name": "34번가 생제르망 오드퍼퓸",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "아워블렌드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4995248021",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8253976/82539768688.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8253976/82539768688.3.jpg",
+        "mall": "아워블렌드",
+        "link": "https://smartstore.naver.com/main/products/4995248021"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8926668/89266683477.1.jpg",
+        "mall": "씨에고 See-ego",
+        "link": "https://smartstore.naver.com/main/products/11722172978"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8791793/87917930942.jpg",
+        "mall": "포에버 홍콩",
+        "link": "https://smartstore.naver.com/main/products/10373426263"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195231376",
+    "translated_kr": "오르페옹 EDP SP 7.5ml【미니향수 미니보틀】【향수 맨즈 레이디스】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "딥디크 오르페옹 EDP 75ml",
+      "naver_web": "장폴고티에 르 말 르 퍼퓸 EDP"
+    },
+    "brand": "딥티크",
+    "name": "딥디크 오르페옹 EDP 75ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "249100",
+    "mall": "TK솔루션",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9866008981",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8741051/87410511254.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8741051/87410511254.1.jpg",
+        "mall": "TK솔루션",
+        "link": "https://smartstore.naver.com/main/products/9866008981"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205030887",
+    "translated_kr": "자작나무 보습 선스틱 + 자작나무 수분 선크림 [한국 선스틱]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선크림 [SPF50+/PA++++]",
+      "naver": "라운드랩 자작나무 수분 선스틱 19g (+19g 바디미스트 20ml 추가) 기획",
+      "daum": "메디힐 수분선세럼 바르고 중간중간 자작나무 수분선스틱 바르는거 상관없나요",
+      "naver_web": "뷰티 : 네이버+ 스토어 : 상품상세 : 라운드랩 자작나무 수분 선스틱"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "25500",
+    "mall": "시손느파세",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11701582565",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8924609/89246093032.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924609/89246093032.1.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/11701582565"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118165/91181656561.jpg",
+        "mall": "내일건강몰",
+        "link": "https://smartstore.naver.com/main/products/13637145854"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200867593",
+    "translated_kr": "비타10 포어토닝 세럼 20ml + 20ml / 비타민C",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "8월 주목해야 할 신상 뷰티",
+      "naver_web": "이니스프리 비타씨 그린티 엔자임 잡티 토닝 세럼 이엑스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203399559",
+    "translated_kr": "포켓몬 에디션 PDRN 글로우 앰플 미스트 100ml 더블 기획(+포켓몬 티코스터)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "포켓몬 에디션 피디알엔 글로우 앰플",
+      "naver": "[포켓몬 에디션] VT 피디알엔 글로우 앰플 미스트 100ml 더블 기획 (+포켓몬 티 코스터)",
+      "daum": "연혁과 역사] 1985년 4월25일 애경산업 설립",
+      "naver_web": "새거) 브이티 VT 포켓몬 PDRN 글로우앰플미스트"
+    },
+    "brand": "브이티코스메틱",
+    "name": "[포켓몬 에디션] VT 피디알엔 글로우 앰플 미스트 100ml 더블 기획 (+포켓몬 티 코스터)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "51300",
+    "mall": "이유온스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13657492626",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120200/91202003411.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120200/91202003411.jpg",
+        "mall": "이유온스토어",
+        "link": "https://smartstore.naver.com/main/products/13657492626"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120137/91201370928.jpg",
+        "mall": "맑음결스토어",
+        "link": "https://smartstore.naver.com/main/products/13656860143"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1080883557",
+    "translated_kr": "닥터 펩타이드 볼륨 리프팅 프로 에센스 100ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드 볼륨 리프팅 프로 에센스",
+      "daum": "닥터펩티 펩타이드 볼륨 리프팅 프로 에센스 2개 +마스터에센스 파우치 20매",
+      "naver_web": "닥터펩티 펩타이드 볼륨 리프팅 프로 에센스 2개",
+      "naver_rematch": "닥터펩티 펩타이드 볼륨 에센스 3개 혼합 구성 (2.0+리프팅+마스터) +(증정) 파우치 20매 구성 버블 제형 거품에센스"
+    },
+    "brand": "닥터펩티 (DR.PEPTI)",
+    "name": "펩타이드 볼륨 리프팅 프로 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "111900",
+    "mall": "닥터펩티",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11763988802",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8930849/89308499389.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8930849/89308499389.11.jpg",
+        "mall": "닥터펩티",
+        "link": "https://smartstore.naver.com/main/products/11763988802"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188963997",
+    "translated_kr": "타임 레볼루션 더 퍼스트 에센스 패드 250ml 75장입 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "미샤 타임 레볼루션 더 퍼스트 에센스 패드 75매 1+1",
+      "naver_web": "타임레볼루션 더퍼스트 에센스패드75매(6/22"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175139603",
+    "translated_kr": "모이스처 밸런싱 실리콘 무첨가 샴푸 530ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스춰 밸런싱 무실리콘 샴푸",
+      "daum": "아도르 모이스처 밸런싱 무실리콘 샴푸",
+      "naver_web": "사이오스 실리콘 프리 모이스쳐 샴푸 |"
+    },
+    "brand": "아도르 (Lador)",
+    "name": "모이스춰 밸런싱 무실리콘 샴푸",
+    "volume": "530ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 14000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188184009",
+    "translated_kr": "라이스 70 인텐시브 모이스처라이징 밀크 150ml 유액 고보습 보습 밀크 쌀겨 세라마이드 윤기 피부 촉촉 윤기 배리어 인너드라이 스킨케어 저자극 건성 피부 복합 피부 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "COSMETIC",
+      "naver_web": "ifacemaker.com****"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
