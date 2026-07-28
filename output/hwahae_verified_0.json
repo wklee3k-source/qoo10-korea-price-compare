@@ -17433,5 +17433,218 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1195196973",
+    "translated_kr": "1초 대미지 케어 마블 헤어팩 300g LPP 프로틴 트리트먼트",
+    "winner_source": null,
+    "candidates_summary": {
+      "musinsa": "바이오레시피 1초 데미지케어 마블 헤어팩 300g/ 손상모복구 LPP 트리트먼트 단백질 헤어클리닉"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206859514",
+    "translated_kr": "프리미엄 넥 스틱 20g 스킨케어 스틱타입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1142718952",
+    "translated_kr": "[누보셀]누보셀 이데베논 더블샷 앰플 11ml × 3개 + 선물 메디힐 마스크팩 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168739896",
+    "translated_kr": "iP 베이스케어 세럼 토대 미용액 리필 90g / 베이스케어세럼 미용액 탄산 거품 탄산거품 보습 건조 탄력 윤기 리필 리필용 리필용 /",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "naver": "소피나 iP 베이스케어 세럼 리필 180g 탄산 거품 토대 미용액 보습 에센스"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "인진쑥 진정 보습 세럼",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "109900",
+    "mall": "도쿄하나미",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13666835299",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121134/91211346207.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121134/91211346207.1.jpg",
+        "mall": "도쿄하나미",
+        "link": "https://smartstore.naver.com/main/products/13666835299"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185473248",
+    "translated_kr": "2개 세트 미츠키 히알루론산 원액 100% 120ml / 듬뿍 사용 가능한 대용량 / 평소 스킨케어나 샴푸에 몇 방울 더하기 이온도입기에도 / 보습 원액미용액 츠무기코스메 공식",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172198931",
+    "translated_kr": "츠무기 헤어밤 웻타입 오가닉 시어버터 츠무기코스메 공식",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190625107",
+    "translated_kr": "클리니칼 1% 레티놀 트리트먼트 - 고농도 에이징 케어 모공리스 (30ml)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1198969593",
+    "translated_kr": "나이아신 히알루론산 21% 세럼 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신 히알루론 21%세럼",
+      "musinsa": "더마팩토리 나이아신 히알루론 21%세럼 80ml 2개",
+      "naver": "더마팩토리 나이아신 히알루론 21%세럼 (나이아신아마이드 + 히알루론산) 80ml"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "나이아신 히알루론 21%세럼",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15000",
+    "mall": "더마팩토리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10829312055",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8837381/88373818068.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837381/88373818068.1.jpg",
+        "mall": "더마팩토리",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10829312055"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8824812/88248120978.jpg",
+        "mall": "B.Tree",
+        "link": "https://smartstore.naver.com/main/products/10703615056"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1171719506",
+    "translated_kr": "대용량 (10개입) 로즈페탈 새틴 (풋팩/핸드팩) 발뒤꿈치 케어 각질 케어 바디팩 한국팩",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1177231189",
+    "translated_kr": "뷰티파이잉 하이드로젤 포어패드 (30개입) / 모공 케어 / 스킨케어 / 모공 / 각질 케어 / beautifying pore",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver": "[피토버] 플러스 매끈 모공 에센스 235ml_PPME235"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
