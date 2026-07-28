@@ -2377,5 +2377,325 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1149960305",
+    "translated_kr": "아토 배리어 365 하이드로 수징 크림 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 하이드로 수딩크림",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "에스트라 아토베리어365 하이드로 수딩크림"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 하이드로 수딩크림",
+    "volume": "80ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": true,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207544119",
+    "translated_kr": "엑스퍼트 마데카 크림 리뉴 PDRN 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엑스퍼트 마데카 크림 액티브 리뉴 PDRN",
+      "musinsa": "엑스퍼트 마데카크림 액티브 리뉴 PDRN 50ml",
+      "naver": "센텔리안24 엑스퍼트 마데카 크림 액티브 리뉴 PDRN 50ml + 휴대용 미니 15ml",
+      "daum": "동국제약, 센텔리안24 ‘엑스퍼트 마데카 액티브 리뉴 PDRN 기획세트’ 올리브영 출시",
+      "naver_web": "센텔리안24 ‘엑스퍼트 마데카 액티브 리뉴 PDRN 기획세트’ 올리브영 출시"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "엑스퍼트 마데카 크림 액티브 리뉴 PDRN",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "51500",
+    "mall": "DJ산업-",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12932806074",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9047731/90477317084.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047731/90477317084.jpg",
+        "mall": "DJ산업-",
+        "link": "https://smartstore.naver.com/main/products/12932806074"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054656/90546569055.jpg",
+        "mall": "케이쇼핑KShopping",
+        "link": "https://smartstore.naver.com/main/products/13002057963"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178084813",
+    "translated_kr": "멀티 비타민 10% 얼티밋 토닝 겔 마스크 5매 / 한국 화장품 / 비타민 / 비타민 C / 톤업 /",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "SKINCARE",
+      "naver_web": "아이오페 멀티 비타민 10% 얼티밋 토닝 겔 마스크 4매+1매 추가증정"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211858497",
+    "translated_kr": "[대용량 2개 조합] 리쥬란 토너 패드 포어 타이트닝 리필용 60매입 2개 세트 모공 핀홀 각질 스킨 케어 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "SBA 식품관",
+      "naver_web": "중요한 약속 전날 바로 효과보는 시술있을까요?"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209241128",
+    "translated_kr": "선 어웨이 쿨링 선 CC EX SPF50+PA+++ 스페셜 기획 세트 [본품+리필 2개]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선-어웨이 쿨링 선 CC EX [SPF50+/PA+++]",
+      "naver": "숨 37도 선어웨이 쿨링 선 씨씨 CC EX 스페셜 기획세트 선쿠션 본품+리필2개",
+      "daum": "선케어",
+      "naver_web": "숨37 선 어웨이 쿨링 선 CC EX 스페셜 기획세트"
+    },
+    "brand": "숨37도 (SUM37)",
+    "name": "선-어웨이 쿨링 선 CC EX [SPF50+/PA+++]",
+    "volume": "15g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "27900",
+    "mall": "에리카핑크",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7286036597",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8483053/84830536919.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8483053/84830536919.jpg",
+        "mall": "에리카핑크",
+        "link": "https://smartstore.naver.com/main/products/7286036597"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8950118/89501187743.jpg",
+        "mall": "동화코스메틱",
+        "link": "https://smartstore.naver.com/main/products/11956677055"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185851789",
+    "translated_kr": "[1+1] 레드 락토 콜라겐 래핑 마스크 팩 70ml *2 + 브러시",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 레드 락토 콜라겐 3000 샷 세럼 2 스텝 마스크",
+      "daum": "❤️메디필 레드 락토 콜라겐 랩핑 마스크",
+      "naver_web": "메디필 레드 락토 콜라겐 랩핑 마스크 , 1개입, 1개"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "(해외) 레드 락토 콜라겐 3000 샷 세럼 2 스텝 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1127039327",
+    "translated_kr": "【배송료 200원】 【리필】 그린 티 시드 히알루론산 세럼 80ml :: 세럼 / 에센스 / 예쁨 - 보습",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뷰티쁠 크루가 먼저 써본 #5월뷰티신상",
+      "naver_web": "프리미엄 피부 산 솔루션으로 피부톤을 되살리세요."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205914428",
+    "translated_kr": "글루타치온 글로우 토너 140ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이지알 글루타치온 글로우 토너",
+      "naver": "메디큐브 에이지알 글루타치온 글로우 토너",
+      "daum": "이마트, 초저가 화장품 내놔…LG생건과 맞손",
+      "naver_web": "medicube 공식몰"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "에이지알 글루타치온 글로우 토너",
+    "volume": "140ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "100000",
+    "mall": "electro Z",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10748381487",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8829288/88292887409.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8829288/88292887409.jpg",
+        "mall": "electro Z",
+        "link": "https://smartstore.naver.com/main/products/10748381487"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8966001/89660012355.jpg",
+        "mall": "사나래마켓",
+        "link": "https://smartstore.naver.com/main/products/12115501650"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213166057",
+    "translated_kr": "티 트리 오일 롤 온 5ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리 롤 온 오일",
+      "naver": "나이미 호주산 티트리 오일 100% 100ml, 1개",
+      "daum": "이다",
+      "naver_web": "티 트리 에센셜 오일 롤온 블렌드 , / 0.33 fl.oz 롤온"
+    },
+    "brand": "네이처카인드 (NATUREKIND)",
+    "name": "티트리 롤 온 오일",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "40000",
+    "mall": "나이스데이 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/599972406",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1081509/10815090179.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1081509/10815090179.11.jpg",
+        "mall": "나이스데이 공식몰",
+        "link": "https://smartstore.naver.com/main/products/599972406"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5853808/58538089303.jpg",
+        "mall": "블랑네이처",
+        "link": "https://blancnature.co.kr/product/detail.html?product_no=200&cate_no=45&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8777227/87772277119.3.jpg",
+        "mall": "아로마랩",
+        "link": "https://smartstore.naver.com/main/products/10227773568"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206908383",
+    "translated_kr": "세라마이드 유자 에너자이징 선 세럼 40ml / SPF 50+ PA++++ / 자외선 차단제 / UV 미용액 / 가벼운 세럼 텍스처 / 하리 피부 / 시간 절약 스킨 케어 / 세라마이드",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "BFT 진정 세럼",
+      "naver": "[셀리맥스] [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml 76008",
+      "daum": "여름엔 피부도 쿨하게 by 신논현역피부과 미파문 문득곤 원장님 도움말 : 미파문피부과..."
+    },
+    "brand": "셀리맥스 (celimax)",
+    "name": "여름엔 피부도 쿨하게 by 신논현역피부과 미파문 문득곤 원장님 도움말 : 미파문피부과...",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "19900",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5863304/58633046564.2.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2440556?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095814/90958149698.1.jpg",
+        "mall": "아비트라3호점",
+        "link": "https://smartstore.naver.com/main/products/13413639362"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8816120/88161209894.jpg",
+        "mall": "케이더스토리",
+        "link": "https://smartstore.naver.com/main/products/10616704245"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091654/90916548592.jpg",
+        "mall": "스마일핫픽",
+        "link": "https://smartstore.naver.com/main/products/13372038256"
+      }
+    ],
+    "real_page_title": "셀리맥스(CELIMAX) [+노니마스크팩1매 증정]나이아신 시카 흔적 세럼 40ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
