@@ -37949,5 +37949,109 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200599853",
+    "translated_kr": "[본품/특전 포함] 프로바이오더름 3D 리프팅 크림 50ml | 리프팅 보습 탄탄 크림 주름 처짐 팔자주름 리프트업 탄력",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179078716",
+    "translated_kr": "산시비오 더마 로션 250ml / 토너 250ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "하이드라비오 에센스 로션"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1166658308",
+    "translated_kr": "H3 하이드로 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "H3 히알루론산 하이드로 앰플",
+      "naver": "[브이티코스메틱] VT H3 하이드로 앰플 (히알루로닉) 5017270994"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "H3 히알루론산 하이드로 앰플",
+    "volume": "30mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "14880",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/5162566?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=329254",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5508390/55083902763.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5508390/55083902763.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/5162566?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=329254"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9099987/90999872882.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13455362530"
+      }
+    ],
+    "real_page_title": "브이티코스메틱(VT COSMETICS) VT H3 하이드로 앰플 (히알루로닉)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160353393",
+    "translated_kr": "셀퓨전C 포스트 알파 쿨링 패드 70장",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "CELL FUSION C 포스트 알파 퍼스트 쿨링 패드 리필 70매 + 70매 721729"
+    },
+    "brand": "셀퓨전씨",
+    "name": "CELL FUSION C 포스트 알파 퍼스트 쿨링 패드 리필 70매 + 70매 721729",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "39000",
+    "mall": "데일로모드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13685131858",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122964/91229643101.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122964/91229643101.jpg",
+        "mall": "데일로모드",
+        "link": "https://smartstore.naver.com/main/products/13685131858"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
