@@ -21835,5 +21835,369 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169290424",
+    "translated_kr": "【공식】프리미엄 케어 세라미스트 1000ml 리필 사이즈 / 헤어케어 보습 손상 케어 미용",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "츠바키 프리미엄 EX 리페어 헤어 마스크 손상모 헤어팩 동백 허니 프루트 향(리필), 150g, 1개",
+      "daum": "7월 신상 뷰티 아이템 28: 머리부터 발끝까지 올여름 완벽 준비"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "츠바키 프리미엄 EX 리페어 헤어 마스크 손상모 헤어팩 동백 허니 프루트 향(리필), 150g, 1개",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10050",
+    "mall": "재팬캐리어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13626323934",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117083/91170834543.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117083/91170834543.jpg",
+        "mall": "재팬캐리어",
+        "link": "https://smartstore.naver.com/main/products/13626323934"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023137/90231373034.jpg",
+        "mall": "온리브 마켓",
+        "link": "https://smartstore.naver.com/main/products/12686862110"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924000/89240009970.jpg",
+        "mall": "코스트물류",
+        "link": "https://smartstore.naver.com/main/products/11695499503"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056236/90562363328.jpg",
+        "mall": "굿 라이프 도쿄",
+        "link": "https://smartstore.naver.com/main/products/13017852236"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1159676293",
+    "translated_kr": "(2개) 바세린 SPF50+ 자외선차단제 170ml (데일리 프로텍트&브라이트닝)",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "(유니레버) 데일리 선크림 [SPF50+/PA+++]",
+      "naver": "바세린 선크림 대용량 스포츠 바디 수분 썬크림 톤업 선세럼 50ml, 2개",
+      "daum": "6월의 Hot Pick!ー로우라이즈 에어리 듀 선세럼 SPF50+/PA++++",
+      "naver_web": "바세린 에센스 선크림 자외선차단제 썬크림 SPF50+ PA++++ 2개"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "바세린 에센스 선크림 자외선차단제 썬크림 SPF50+ PA++++ 2개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10900",
+    "mall": "에스세이지",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11668037905",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8921254/89212548371.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8921254/89212548371.2.jpg",
+        "mall": "에스세이지",
+        "link": "https://smartstore.naver.com/main/products/11668037905"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206100908",
+    "translated_kr": "【공식】루치 선 크림 50ml 보습 크림 탄력 윤기 건조 케어 스킨케어 라비올라",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "daum": "화장품",
+      "naver_rematch": "메디필 멜라논 73%(+기미 케어)미백 연고 트라넥삼산 주근깨 멜라노사 크림"
+    },
+    "brand": "메디필",
+    "name": "메디필 멜라논 73%(+기미 케어)미백 연고 트라넥삼산 주근깨 멜라노사 크림",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "14500",
+    "mall": "비타스킨",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11896156825",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8944066/89440667434.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944066/89440667434.7.jpg",
+        "mall": "비타스킨",
+        "link": "https://smartstore.naver.com/main/products/11896156825"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "984467802",
+    "translated_kr": "네롤리 가든 클렌징 폼 150ml / 천연 딥 클렌저 / 저자극 각질 모공 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 비타 오일 인 젤 클렌저 오렌지 & 네롤리",
+      "naver": "촉촉한 폼클랜징 약산성 딥클랜져 깨끗한세안제 아마란스 드라보 소프트 브리즈 클랜져",
+      "daum": "미세먼지에 노출된 피부 고민별 클렌저 처방전",
+      "naver_web": "아로마티카 글로우 비타 오일 인 젤 클렌저 오렌지&네롤리"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "글로우 비타 오일 인 젤 클렌저 오렌지 & 네롤리",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "피누스 스토어114",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13017728660",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9056223/90562239752.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056223/90562239752.jpg",
+        "mall": "피누스 스토어114",
+        "link": "https://smartstore.naver.com/main/products/13017728660"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1082955620",
+    "translated_kr": "【정규 판매점】아이브 아이브 이너 플로라 로션 아이브 180ml 윤활 로션 여성용 마사지 젤 일본제 유산균 미용 성분 닦아내기 불필요 욕실 피부 플로라 여",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "지금 추천하는 인기 화장실온수기 10개 필수 선택!"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "983949051",
+    "translated_kr": "클레이 크림 샴푸 200g 【사라사라 쿨 또는 촉촉 모이스트】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "프라이밍 샴푸 [핑크클레이]",
+      "naver": "코코네 클레이 크림 샴푸 올인원 노린스 샴푸, 380ml, 1개 (벨가못 얼그레이향)",
+      "daum": "코코네 클레이 크림 샴푸 스무스 리필",
+      "naver_web": "거품없이 사용하는 신세계 올인원 샴푸 cocone 코코네 클레이 크림 샴푸 1병 , , 1개"
+    },
+    "brand": "클레이에스테 (CLAYESTHE)",
+    "name": "코코네 클레이 크림 샴푸 올인원 노린스 샴푸, 380ml, 1개 (벨가못 얼그레이향)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "48000",
+    "mall": "Lead Cycle",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10337759511",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8788226/87882263879.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8788226/87882263879.1.jpg",
+        "mall": "Lead Cycle",
+        "link": "https://smartstore.naver.com/main/products/10337759511"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8808857/88088572595.1.jpg",
+        "mall": "Lead Cycle",
+        "link": "https://smartstore.naver.com/main/products/10544067112"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8801677/88016770332.2.jpg",
+        "mall": "Lead Cycle",
+        "link": "https://smartstore.naver.com/main/products/10472265124"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8949727/89497275655.1.jpg",
+        "mall": "Lead Cycle",
+        "link": "https://smartstore.naver.com/main/products/11952764967"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8949706/89497064748.2.jpg",
+        "mall": "Lead Cycle",
+        "link": "https://smartstore.naver.com/main/products/11952554060"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1087789912",
+    "translated_kr": "피지 모공 더블 클렌징 세트 [어성초 포어 컨트롤 클렌징 오일, 200ml + 어성초 포어 딥 클렌징 폼, 150ml]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 어성초 피지모공 더블클렌징세트 클렌징오일+클렌징폼 2종",
+      "daum": "제니&로제처럼 화잘먹 피부! 마스크팩·수분크림·클렌징·모공토너 스킨케어",
+      "naver_web": "피지모공 더블클렌징 세트"
+    },
+    "brand": "아누아",
+    "name": "아누아 어성초 피지모공 더블클렌징세트 클렌징오일+클렌징폼 2종",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "29900",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12281707328",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8982621/89826218044.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8982621/89826218044.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/12281707328"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8982621/89826218045.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12281707329"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1113370944",
+    "translated_kr": "【2개 세트 국내 당일 발송】NUMBUZIN 넘버즈인 5번 화이트 진주 글루타치온C 미용액 30ml 한국화장품 스킨케어 화제 대인기",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "3번 참은만큼 보들보들 결세럼팩",
+      "naver_rematch": "넘버즈인 3번 참은만큼 보들보들 결세럼팩 27g"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1173118335",
+    "translated_kr": "【쿠텐 더블한정기획】다이브인 저분자 히알루론산 세럼 50ml + 리필 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 세럼",
+      "musinsa": "[SET] 밸런스풀 시카 컨트롤 세럼 50ml 기획세트 (시카 컨트롤 세럼 10ml X 2개+시카마스크 1매)+다이브인 세럼 50ml (+시카 컨트롤 마스크 1매)",
+      "naver": "[NEW/1등수분세럼] 토리든 다이브인 저분자 히알루론산 세럼 50ml 리필 기획(+리필 50ml)",
+      "daum": "토리든 다이브인 저분자 히알루론산 세럼 2종 세트",
+      "naver_web": "다이브인 저분자 히알루론산 세럼"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 세럼",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "36000",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258291",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6041917/60419172729.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6041917/60419172729.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000258291"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183257583",
+    "translated_kr": "펩타이드9 비타놀 크림 프로 50g [탄력 + 촉촉 + 에이징 케어]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드9 비타놀 크림 프로",
+      "musinsa": "펩타이드9 비타놀 앰플 프로 30ml",
+      "daum": "볼카",
+      "naver_web": "펩타이드9 비타놀메디필",
+      "naver_rematch": "메디필 펩타이드9 비타놀 앰플 프로 30ml / 미백 집중케어"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "펩타이드9 비타놀 크림 프로",
+    "volume": "50g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "17300",
+    "mall": "마켓굿잡",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10408654156",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8795315/87953159117.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8795315/87953159117.jpg",
+        "mall": "마켓굿잡",
+        "link": "https://smartstore.naver.com/main/products/10408654156"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8795316/87953167817.jpg",
+        "mall": "마켓굿잡",
+        "link": "https://smartstore.naver.com/main/products/10408662856"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
