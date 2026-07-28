@@ -18328,5 +18328,225 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1146169530",
+    "translated_kr": "츠무기 계란껍질막 미용액 원액 90% 배합 20ml / 진한 보습 베이비콜라겐 탄력·결 탄력 피부로 / 보습 미용액 츠무기코스메 공식",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194166058",
+    "translated_kr": "[300엔 OFF 샵 쿠폰 배포 중] 스쿠아스 순 아젤라인산 25% 배합 크림 AZ25페이스크림 아젤라인산 고농도 배합 순 아젤라인산 단품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "더리즈 리코테카 진정 수분크림 미백 주름개선 영양 크림 75ml+30ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22900",
+    "mall": "더리즈 TheLeeds",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11610315195",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8915482/89154825601.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8915482/89154825601.5.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/11610315195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822998/88229980095.6.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/10685474173"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1157139971",
+    "translated_kr": "[도브] 바디스크럽 슈가+코코넛밀크 298g Body Scrub Sugar & Coconut Milk 298g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈가 앤드 [코코넛밀크스크럽]",
+      "naver": "도브 슈가와 코코넛 밀크 바디 스크럽 298g, 1개"
+    },
+    "brand": "도브 (Dove)",
+    "name": "슈가 앤드 [코코넛밀크스크럽]",
+    "volume": "298g",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "16050",
+    "mall": "뱅글스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13455801387",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9100031/91000311739.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100031/91000311739.jpg",
+        "mall": "뱅글스토어",
+        "link": "https://smartstore.naver.com/main/products/13455801387"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065174/90651748483.jpg",
+        "mall": "타두리룸",
+        "link": "https://smartstore.naver.com/main/products/13107237391"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1163541573",
+    "translated_kr": "아노브 글로우 바디로션 290ml × 2 누바닐라 한국 뷰티 바디케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106037437",
+    "translated_kr": "루시드 엘 하이대미지 리페어 헤어오일 90ml 모질 복원",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1163366172",
+    "translated_kr": "유니콘시일드 메이크업 픽서 메이크 미스트 UNICONIC SHIELD",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "유니콘 메이크업 픽서 [쿨]"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194294028",
+    "translated_kr": "센텔 토너패드 60개 (180ml)",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "센텔카밍샷 토너패드"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200102621",
+    "translated_kr": "*PDRN 히알루론산 하이드레이팅 미스트 100ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164534478",
+    "translated_kr": "하이드로세라마이드 톤업 에센스 선크림 50ml 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "바세린 에센스 선크림 50ml 2개 백탁없는 수분 썬크림 바디 톤업 골프장 선세럼"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183740173",
+    "translated_kr": "[정규품·병행 수입품] 이젠시아 크림 50g 민감피부용 고보습 수분크림 진정 케어 피부 배리어 촉촉한 마무리",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
