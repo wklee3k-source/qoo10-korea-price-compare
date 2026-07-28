@@ -22,6 +22,8 @@ GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 �
     python hwahae_verify_batch.py <input.json> <output.json> [max_new]
 """
 
+import os
+import time
 import difflib
 import json
 import re
@@ -385,17 +387,30 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
 
 
+REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
+
+
 def _safe_search(fn, *args, failures: list, label: str, **kwargs):
     """4개 검색함수를 감싸서, SearchTechnicalFailure가 나면 failures
     리스트에 기록하고 None을 돌려준다 — 호출부의 'if not cand_X: ...'
     로직은 그대로 두면서, 이게 '진짜 무결과'인지 '기술적 실패'인지를
-    별도로 추적할 수 있게 한다."""
+    별도로 추적할 수 있게 한다.
+
+    [지연 추가] 예전엔 상품 하나당 4곳(Exa/화해/무신사/네이버)을 지연
+    없이 연달아 때렸다. 워커 1개일 땐 티가 안 났지만, 병렬 워커를 여러
+    개 띄우면 그 패턴이 워커 수만큼 겹쳐서 대상 사이트에 부담이 된다.
+    특히 화해/무신사는 공식 API가 아니라 브라우저 스크래핑이라 더
+    조심해야 한다. 매 요청 뒤 REQUEST_DELAY초 쉰다(기본 1초, 환경변수로
+    조절 가능)."""
     try:
         return fn(*args, **kwargs)
     except SearchTechnicalFailure as e:
         print(f"    [{label}-기술적실패-재시도대상] {e}", file=sys.stderr)
         failures.append(label)
         return None
+    finally:
+        if REQUEST_DELAY > 0:
+            time.sleep(REQUEST_DELAY)
 
 
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):

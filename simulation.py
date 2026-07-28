@@ -281,6 +281,33 @@ def t21_merge_preserves_translation():
           f"보존분기존재{has_guard} 무조건덮어쓰기잔존{unconditional_overwrite}")
 
 
+# --------------------- #39 검증 샤딩(3워커) 안전성
+#  검증이 전체 파이프라인 유일한 병목이었다(1.5건/분, 3,147건이면 35시간).
+#  발굴/수확에서 검증된 샤딩 방식을 적용. 핵심 안전조건:
+#  결정적 해시(crc32) 사용, 샤드별 전용 출력파일, 샤드0만 통합/검수페이지
+#  담당(동시 실행시 서로 덮어쓰기 방지), 요청간 지연 존재.
+def t39_verify_sharding():
+    wf = WF.read_text(encoding="utf-8")
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    d = yaml.safe_load(wf) if (yaml := __import__("yaml")) else None
+    job = d["jobs"]["hwahae_verify"]
+
+    has_matrix = job.get("strategy", {}).get("matrix", {}).get("shard") == [0, 1, 2]
+    block = wf.split("  hwahae_verify:")[1].split("\n  naver_api_test:")[0]
+    code_only = "\n".join(l for l in block.split("\n") if not l.strip().startswith("#"))
+    uses_crc32 = "zlib.crc32" in block and "hash(str(" not in code_only
+    shard_files = "hwahae_verified_${S}.json" in block and "hwahae_input_${S}.json" in block
+    # 통합/검수페이지는 샤드0만 (동시 덮어쓰기 방지)
+    merge_only_shard0 = block.count("if: matrix.shard == 0") >= 2
+    inherits_existing = "몫 {len(mine)}건 승계" in block or "승계" in block
+    has_delay = "REQUEST_DELAY" in src and "time.sleep(REQUEST_DELAY)" in src
+
+    ok = all([has_matrix, uses_crc32, shard_files, merge_only_shard0, inherits_existing, has_delay])
+    check("39 검증 샤딩(3워커) 안전성", ok,
+          f"matrix{has_matrix} crc32{uses_crc32} 샤드파일{shard_files} "
+          f"샤드0만통합{merge_only_shard0} 기존승계{inherits_existing} 요청지연{has_delay}")
+
+
 # --------------------- #38 수확 전용 파이프라인(같은 프로세스/분리 저장)
 #  요구사항: 수확도 발굴과 똑같이 번역->검증->검수페이지를 타되,
 #  결과물은 끝까지 분리 저장돼야 한다.
@@ -438,7 +465,9 @@ def t32_hwahae_retry_state_committed():
     job_block = wf.split("^  hwahae_verify:", 1)
     # split by regex since job name has leading spaces consistently
     job_block = re.split(r"\n  hwahae_verify:\n", wf)[1].split("\n  naver_api_test:")[0] if "\n  hwahae_verify:\n" in wf else ""
-    included = "hwahae_verified_39.retry_state.json" in job_block
+    # [샤딩 대응] 파일명이 hwahae_verified_39.retry_state.json에서
+    # 샤드별(hwahae_verified_${S}.retry_state.json)로 바뀌었다.
+    included = "retry_state.json" in job_block
     # 필수파일과 분리된 별도 add(존재확인 [ -f ... ] 붙여서)인지 확인
     separated_safely = bool(re.search(r"\[ -f [^\]]*retry_state\.json \] && git add", job_block))
     not_mixed_with_required = not bool(re.search(r"git add [^\n]*hwahae_verified_39\.json[^\n]*retry_state\.json", job_block))
