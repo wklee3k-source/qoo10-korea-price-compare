@@ -1332,7 +1332,18 @@ jobs:
           # 병합본(discovery-live)의 최신 discovery_state.json을 가져온다.
           git fetch https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git discovery-live
           git show FETCH_HEAD:output/discovery_state.json > ../output/discovery_state.json || true
-          python build_review_batches.py || echo "[경고] 리뷰페이지 생성 실패(데이터 부족 등) — 다음 검증때 재시도됨"
+          # [v3.6.1] 재검증처럼 통합본을 통째로 비우고 다시 채우는 동안에는
+          # 검수페이지를 건드리면 안 된다 — 채워진 만큼만 표시돼 건수가
+          # 출렁이고, 사용자가 보던 목록이 사라진다. hwahae-live에
+          # output/.hold_review 파일이 있으면 생성·배포를 통째로 건너뛴다.
+          # (입력값이 아니라 파일로 둔 이유: 외부 크론이 보내는 Body에는
+          # 이 플래그가 없어서, 입력값 방식이면 크론이 올 때마다 뚫린다.)
+          if [ -f ../output/.hold_review ]; then
+            echo "[보류] output/.hold_review 있음 — 검수페이지 생성/배포를 건너뛴다"
+            rm -rf docs
+          else
+            python build_review_batches.py || echo "[경고] 리뷰페이지 생성 실패(데이터 부족 등) — 다음 검증때 재시도됨"
+          fi
 
       - name: Push generated docs/ to main (GitHub Pages source)
         if: matrix.shard == 0

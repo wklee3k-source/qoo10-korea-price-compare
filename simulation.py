@@ -533,6 +533,24 @@ def t50_threshold_merge_and_chunking():
           f"중복방지{dedup} 분할{chunked} 낡은장정리{clears_stale} 번호연속{continuous}")
 
 
+# --------------------- #51 재검증 중 검수페이지 보호
+#  통합본을 비우고 다시 채우는 재검증 동안 검수페이지를 갱신하면,
+#  채워진 만큼만 표시돼 사용자가 보던 목록이 사라진다. 플래그는 입력값이
+#  아니라 브랜치의 파일이어야 한다 — 외부 크론 Body에는 그 입력값이 없어서
+#  입력값 방식이면 크론이 올 때마다 보호가 뚫린다.
+def t51_hold_review_flag():
+    wf = WF.read_text(encoding="utf-8")
+    guard = "if [ -f ../output/.hold_review ]" in wf
+    # 가드 블록 안(else 가지)에서만 생성이 호출돼야 한다.
+    block = wf.split("if [ -f ../output/.hold_review ]")[1].split("- name:")[0] if guard else ""
+    skips_build = "else" in block and "python build_review_batches.py" in block
+    # docs/를 지워야 다음 '배포' 스텝이 옛 산출물을 올리지 않는다.
+    clears_docs = "rm -rf docs" in wf
+    ok = guard and skips_build and clears_docs
+    check("51 재검증 중 검수페이지 보호", ok,
+          f"플래그가드{guard} 생성건너뜀{skips_build} docs정리{clears_docs}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
