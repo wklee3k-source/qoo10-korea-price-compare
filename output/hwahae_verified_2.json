@@ -16953,5 +16953,202 @@
     "stock_evidence": [
       "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=2494&cate_no=446&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
     ]
+  },
+  {
+    "goods_no": "1115102513",
+    "translated_kr": "[신규/김지조브티케어] 티엑스 토닝 토너 200ml 브라이트닝 안색 토너 주름케어 멜라닌 피부 톤 개선 색소침착 트라넥삼산 다크 스팟 글루타치온",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170089061",
+    "translated_kr": "[6종 중 선택/한정 세트 구성] 꿀과 마카다미아 네이처 샴푸 2개 + 트리트먼트 2개 두피케어 쫀득한 머리 pH 밸런스 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168788972",
+    "translated_kr": "콜라겐 젤 크림 110ml + 연어 PDRN 핑크 펩타이드 앰플 30ml 보습 탄력 촉촉함 저자극 민감피부 OK 한국화장품 스킨케어 에이징케어 촉촉함 데일리 케어 피부 결 정돈",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208942440",
+    "translated_kr": "마데카 크림 미스트 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마데카 크림 미스트",
+      "musinsa": "마데카 크림 미스트 120ml",
+      "naver": "[동국제약] 센텔리안24 마데카 크림 미스트 120ml"
+    },
+    "brand": "센텔리안24 (CENTELLIAN24)",
+    "name": "마데카 크림 미스트",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "15900",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12274638295",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8981914/89819149011.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981914/89819149011.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274638295"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209475510",
+    "translated_kr": "아토배리어365 젠틀 포밍 클렌저 150ml 한국화장품 민감피부 건성피부 보습 클렌징 거품 클렌징",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "에스트라 아스트라 아토베리어365 버블 클렌저 150ml 젠틀 포밍클렌저"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210420789",
+    "translated_kr": "티트리 퓨리파잉 토닉 100ml 한국 헤어케어 두피케어 스칼프 토닉 두피 에센스 피지 케어 상큼함 스프레이 타입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210409617",
+    "translated_kr": "글로우어스 씨 솔트 스칼프 스케일러 EX 265g 한국 헤어케어 두피케어 두피 클렌징 스칼프케어 상큼함 솔트 스크럽",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170148962",
+    "translated_kr": "플라르네 풀 리파인 밀크 f M 또는 EM 200g 유액 리뉴얼 발매 선행 유액 최신 미용 연구 성과 엄선 미용성분 각질층까지 침투 피부 고민 대책 건조·피부트러블 방지 모공·칙칙함 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "칠자화 유액"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1134929066",
+    "translated_kr": "[정품] 로즈마리 스칼프 스케일링 샴푸 1000ml / 두피 강화 / 아로마 공법 / 대용량 / 두피케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "아로마티카 로즈마리 스칼프 스케일링 샴푸 750ML+리필500ML 비건 탈모 기능성 저자극"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1130037920",
+    "translated_kr": "TKM 2+1 이벤트 1,073원/개부터 Q10 온리 최저가 [비티] 시카 버블 스파클링 부스터 10g 4개입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
