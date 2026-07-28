@@ -21254,5 +21254,252 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209775978",
+    "translated_kr": "샴푸 & 트리트먼트 2매 세트 선택 3종류 (딥 리페어/컨트롤/리라이트) 지질 보수 본체 저수 미용액",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205488486",
+    "translated_kr": "샴푸 & 트리트먼트 2매 세트 딥 리페어 손상 보수 지질 보수 본체 저수 미용액",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1086220705",
+    "translated_kr": "모로칸 아르간 오일 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+      "musinsa": "인텐시브 모로칸 아르간 헤어에센스 오일",
+      "naver": "모로칸오일 트리트먼트 100ml (쇼핑백+펌프 포함)"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "60300",
+    "mall": "모로칸오일 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/7028659518",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8457315/84573159840.35.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8457315/84573159840.35.jpg",
+        "mall": "모로칸오일 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/7028659518"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8387401/83874018596.3.jpg",
+        "mall": "모로칸오일 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/6329516107"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164591973",
+    "translated_kr": "루미더름 레티날 어드밴스드 A 1.0 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티날 어드밴스드 에이 1.0 크림",
+      "naver": "루미덤 레티날 어드밴스드 에이 1.0 크림"
+    },
+    "brand": "루미덤 (Lumiderm)",
+    "name": "레티날 어드밴스드 에이 1.0 크림",
+    "volume": "25ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "26800",
+    "mall": "포미즈몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12069683130",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8961419/89614193829.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961419/89614193829.jpg",
+        "mall": "포미즈몰",
+        "link": "https://smartstore.naver.com/main/products/12069683130"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8996168/89961686111.jpg",
+        "mall": "루미덤",
+        "link": "https://smartstore.naver.com/main/products/12417175386"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1121493315",
+    "translated_kr": "【신제품】루미더름 바이탈 나이아신아마이드 20% 크림",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "바이탈 나이아신아마이드 20퍼센트 크림"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1138039205",
+    "translated_kr": "베리 페리 모공 클렌징 무스 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베리페리 포어 클렌징 무스",
+      "naver": "네오젠 베리페리 포어 클렌징 무스 150ml"
+    },
+    "brand": "네오젠더마로지 (NEOGENDERMALOGY)",
+    "name": "베리페리 포어 클렌징 무스",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "17000",
+    "mall": "네오젠",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/11117969083",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8866247/88662479405.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8866247/88662479405.3.jpg",
+        "mall": "네오젠",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11117969083"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8866247/88662479406.4.jpg",
+        "mall": "NEOGEN",
+        "link": "https://smartstore.naver.com/main/products/11117969084"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211935642",
+    "translated_kr": "스네일 솔루션 에멀젼 120ml 1개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194006631",
+    "translated_kr": "【초보습×선인장 함수 미용】선인장 스크럽 스케일러 170g 단품 사보타 인기 좋은 향 좋은 향기 향수 미용액",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1096221902",
+    "translated_kr": "나노 클렌징 젤 민감성 피부용 310ml x 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+      "naver": "일본 코스트코 신데렐라 타임 나노클렌징겔 민감성피부용 310mlx2개"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "일본 코스트코 신데렐라 타임 나노클렌징겔 민감성피부용 310mlx2개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": true,
+    "sale": false,
+    "price": "40000",
+    "mall": "도쿄 하루 마켓 2호점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11360642771",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8890515/88905153122.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890515/88905153122.jpg",
+        "mall": "도쿄 하루 마켓 2호점",
+        "link": "https://smartstore.naver.com/main/products/11360642771"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177160758",
+    "translated_kr": "MTS 스칼프 부스트 앰플 300·500·1000· 스칼프 케어· 탈모· 두피 케어· 수분 공급· 헤어케어· 두피 컨디션 지원· 건강한 두피 환경으로· (",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
