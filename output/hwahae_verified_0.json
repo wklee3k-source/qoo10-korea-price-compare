@@ -17646,5 +17646,283 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212343699",
+    "translated_kr": "[5개입] 때밀이 글로브 소프트바디 레드글로브 클린 각질 케어·바디 클렌징 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "파스텔 벙어리 때장갑 때밀이 장갑 샤워 때타올 목욕장갑 글러브"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197360658",
+    "translated_kr": "다크스팟 5 IN 1 보습 크림 100g 대용량 미강 PDRN 배합 칙칙함 케어 톤업 투명감 촉촉함 탄력 탄력 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "daum": "스킨 케어"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195252368",
+    "translated_kr": "Three-Days Three-Layer Ampoule (55ml) 비타민 콜라겐 에센스 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "PRODUCT GUIDE"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1136786757",
+    "translated_kr": "그린티 히알루론산 미스트 150ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린티 히알루론산 미스트",
+      "naver": "이니스프리 그린티 히알루론산 미스트 150ml 1개",
+      "daum": "NEW SEASON, NEW BEAUTY!",
+      "naver_web": "그린티 히알루론산 미스트"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "그린티 히알루론산 미스트",
+    "volume": "150mL",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "22500",
+    "mall": "플로우커머스90",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13661254320",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120576/91205765161.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120576/91205765161.jpg",
+        "mall": "플로우커머스90",
+        "link": "https://smartstore.naver.com/main/products/13661254320"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1196294541",
+    "translated_kr": "[정규품][피지케어] 블랑네이처 애크네 클렌징폼 기획 150ml (+ 50ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아크네 클렌징폼",
+      "naver": "[BEST] 아크네 클렌징폼 150ML",
+      "daum": "한류스타가 제안하는 K",
+      "naver_web": "블랑네이처 아크네 클렌징 폼 기획/단품"
+    },
+    "brand": "블랑네이처 (BLANCNATURE)",
+    "name": "아크네 클렌징폼",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "23800",
+    "mall": "블랑네이처",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://blancnature.co.kr/product/detail.html?product_no=13&cate_no=45&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_2754018/27540186491.21.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2754018/27540186491.21.jpg",
+        "mall": "블랑네이처",
+        "link": "https://blancnature.co.kr/product/detail.html?product_no=13&cate_no=45&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5030221/50302214203.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000186409"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117321/91173217205.jpg",
+        "mall": "ARKO",
+        "link": "https://smartstore.naver.com/main/products/13628706596"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120334/91203346022.jpg",
+        "mall": "슈퍼 덕후",
+        "link": "https://smartstore.naver.com/main/products/13658835237"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113672/91136729081.jpg",
+        "mall": "별별올리브",
+        "link": "https://smartstore.naver.com/main/products/13592218669"
+      }
+    ],
+    "real_page_title": "블랑네이처",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180395904",
+    "translated_kr": "[1+1] 유노브 (UNOVE) 딥대미지 트리트먼트 EX 헤어팩 / 헤어마스크 207ml 극 대미지 모발용 보습·영양 케어",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "daum": "어노브 딥 데미지 리페어 헤어 마스크 추천"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "어노브 딥 데미지 리페어 헤어 마스크 추천",
+    "volume": "",
+    "source": "daum",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204155956",
+    "translated_kr": "스킨밸런스 컴플렉션 올인원 (1개)",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "컴플렉션 밸런스 크림",
+      "daum": "LG생활건강 연혁과 역사] 2001년 4월3일 LG화학에서 분할 신설 및 설립",
+      "naver_web": "컴플렉션 밸런스 크림"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203711872",
+    "translated_kr": "바이오 앤티링클 석류 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바이오 안티링클 석류 크림",
+      "naver": "디오프러스 바이오 안티링클 크림 석류 100g",
+      "daum": "SVR 덴시티움 리치 크림 + 덴시티움 나이트 밤",
+      "naver_web": "디오프러스 바이오 안티링클 석류 크림 제품의 정보 및"
+    },
+    "brand": "디오프러스 (DEOPROCE)",
+    "name": "바이오 안티링클 석류 크림",
+    "volume": "100g",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "11000",
+    "mall": "코스모듀",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13665654700",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121016/91210165608.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121016/91210165608.jpg",
+        "mall": "코스모듀",
+        "link": "https://smartstore.naver.com/main/products/13665654700"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8315487/83154879462.jpg",
+        "mall": "코스모듀",
+        "link": "https://smartstore.naver.com/main/products/5610382963"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210012916",
+    "translated_kr": "PDRN 윤기 토너 200ml (2개)",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "VT 피디알엔 PDRN 토너",
+      "naver_web": "브이티코스메틱 PDRN 광채토너 제품의 정보 및"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203041614",
+    "translated_kr": "동아 노스칼나젤 여드름 흉터 수술 흉터 켈로이드 붉은색 갈색 색소 침착이 있는 여드름 흉터에 / 한국·서울산",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "여드름 무엇인가? 여드름에 대한 유익한 자료 모음"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
