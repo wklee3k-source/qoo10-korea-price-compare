@@ -6237,5 +6237,319 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204317855",
+    "translated_kr": "프로틴 본드 워터 에센스 + 피카츄 미러 빗 세트",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "단백질 본드 모이스트 샴푸",
+      "naver_web": "헤어플러스 단백질 본드 워터에센스, , 5개"
+    },
+    "brand": "헤어플러스 (HAIR+)",
+    "name": "헤어플러스 단백질 본드 워터에센스, , 5개",
+    "volume": "",
+    "source": "naver_web",
+    "obsolete": false,
+    "sale": true,
+    "price": 25900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205134205",
+    "translated_kr": "히타 트리트먼트 800ml (리필)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "르벨 히타 트리트먼트 헤어케어 보습 정돈 800ml",
+      "daum": "르벨 히타 트리트먼트",
+      "naver_web": "르벨 히타 AP 트리트먼트 2"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "르벨 히타 트리트먼트 헤어케어 보습 정돈 800ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "57500",
+    "mall": "마이템상점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13366171156",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9091068/90910681488.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9091068/90910681488.jpg",
+        "mall": "마이템상점",
+        "link": "https://smartstore.naver.com/main/products/13366171156"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085575/90855758927.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13311248597"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085575/90855758928.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13311248599"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9085575/90855758926.jpg",
+        "mall": "Chafactory",
+        "link": "https://smartstore.naver.com/main/products/13311248596"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212936108",
+    "translated_kr": "큐레루 딥 모이스처 스프레이 (얼굴·몸용) 【의약부외품】 150g 【주문 상품】 취소 불가",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "진주가루",
+      "daum": "태국 진주가루",
+      "naver_web": "Curel_딥 모이스처 스프레이 / 본체 / / 무향료"
+    },
+    "brand": "나수 (NASU)",
+    "name": "Curel_딥 모이스처 스프레이 / 본체 / / 무향료",
+    "volume": "",
+    "source": "naver_web",
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1176213625",
+    "translated_kr": "[데리케이트 존 케어] 퍼퓸 미스트 30ml 3종",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "헤어 퍼퓸 미스트 [3PM]",
+      "musinsa": "헤어퍼퓸 미스트 20ml (3종 택1)",
+      "naver": "SW19 3pm 헤어 퍼퓸 미스트 75ML",
+      "daum": "라리브 퍼퓸 바디 미스트 3종",
+      "naver_web": "헤어 퍼퓸 미스트 3종"
+    },
+    "brand": "SW19 (에스더블유나인틴)",
+    "name": "라리브 퍼퓸 바디 미스트 3종",
+    "volume": "",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": false,
+    "price": "41000",
+    "mall": "모던 뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13471174877",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9101568/91015685229.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9101568/91015685229.jpg",
+        "mall": "모던 뷰티",
+        "link": "https://smartstore.naver.com/main/products/13471174877"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097412/90974125352.jpg",
+        "mall": "가심비 가성비 대용량",
+        "link": "https://smartstore.naver.com/main/products/13429615016"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192583575",
+    "translated_kr": "츠바키 딥 콜라겐 탄력 앰플, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "동백 딥 콜라겐 탄력 앰플",
+      "naver": "라운드랩 동백 딥 콜라겐 탄력 앰플 30ml 2개마다 택배비",
+      "daum": "고민?! 성분에디터 그린토마토 NMN 포어 리프팅 모공 앰플 체험이벤트 #화잘먹극찬템 #곰돌이푸 굿즈 증정",
+      "naver_web": "라운드랩 동백 딥 콜라겐 탄력 앰플 상품비교"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "동백 딥 콜라겐 탄력 앰플",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "29000",
+    "mall": "어쩌다요기요",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11153786159",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8869829/88698296480.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8869829/88698296480.jpg",
+        "mall": "어쩌다요기요",
+        "link": "https://smartstore.naver.com/main/products/11153786159"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192583562",
+    "translated_kr": "츠바키 딥 콜라겐 탄력 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "동백 딥 콜라겐 탄력 크림",
+      "naver": "라운드랩 동백 딥 콜라겐 탄력 크림 50ml",
+      "daum": "라운드랩 동백 딥 콜라겐 탄력 크림",
+      "naver_web": "라운드랩 동백 딥 콜라겐 탄력크림 보습력 밀착력 대박"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "동백 딥 콜라겐 탄력 크림",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "obsolete": false,
+    "sale": true,
+    "price": "20500",
+    "mall": "라운드랩",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11057210593",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8860171/88601716804.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8860171/88601716804.3.jpg",
+        "mall": "라운드랩",
+        "link": "https://smartstore.naver.com/main/products/11057210593"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5163545/51635452330.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000214288"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193991472",
+    "translated_kr": "티트리카 릴리프 앰플, 1개, 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 티트리카 릴리프 앰플",
+      "daum": "피부 진정의 달인 시카 제품 인기",
+      "naver_web": "스킨천사 SKIN1004 티트리카 퓨리파잉 토너 + 릴리프 앰플 , 5개"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 티트리카 릴리프 앰플",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213005678",
+    "translated_kr": "페이스 마스크 퓨어 에브리즈 9FB 32매 입",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "스킨부스터 이데베논 세럼 시트 마스크",
+      "naver": "게스통 스킨부스터 이데베논 세럼 시트 마스크 7종 히알루론산 함유 집중수분 피부보습 마스크팩",
+      "naver_web": "일본직구 쇼우와"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185959847",
+    "translated_kr": "【즉납】【국내 정품·대량 구매·우유 패킷 패프 배송】 딥 클리어 효소 세안 130g × 3점 세트 세안 폼 【4987241173242-3】",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "언택트 뷰티 쇼룸! 얼루어 추천템 득템기회!",
+      "naver_web": "멜라노씨씨 딥클리어 효소 세안, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185129366",
+    "translated_kr": "【즉납】【국내 정품·우유 패킷 패프 배송】 약용 클리어 에멀전 본체 135ml 약용 미백 유액 【4909978204136】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "트란시노 브라이트닝 클리어 밀크로션 약용 미백 유액 100ml",
+      "daum": "프리올/PRIOR",
+      "naver_web": "시세이도 IHADA 이하다 약용 클리어 로션"
+    },
+    "brand": "트란시노",
+    "name": "트란시노 브라이트닝 클리어 밀크로션 약용 미백 유액 100ml",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "36300",
+    "mall": "카와카이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13622400912",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116691/91166911329.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116691/91166911329.jpg",
+        "mall": "카와카이",
+        "link": "https://smartstore.naver.com/main/products/13622400912"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096552/90965523322.jpg",
+        "mall": "신박다운타운",
+        "link": "https://smartstore.naver.com/main/products/13421012986"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105862/91058628292.1.jpg",
+        "mall": "일본직구 엔핍",
+        "link": "https://smartstore.naver.com/main/products/13514117940"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
