@@ -38602,5 +38602,91 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1139837816",
+    "translated_kr": "1+1 쌀 선 크림 / 50ml / 1개 / SPF50+ PA++++ 50ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106360939",
+    "translated_kr": "네이처 샴푸 체리 블라썸 향 1058ml 2개",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212309864",
+    "translated_kr": "크리미 터치 라이너 16 프리티 밀크티 아이라이너 젤 부드러움 극세 베이지",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "캔메이크 크리미 터치 라이너 16 프리티 밀크티 아이라이너 젤 부드럽게 극세 베이지"
+    },
+    "brand": "캔메이크",
+    "name": "캔메이크 크리미 터치 라이너 16 프리티 밀크티 아이라이너 젤 부드럽게 극세 베이지",
+    "volume": "",
+    "source": "naver",
+    "obsolete": null,
+    "sale": null,
+    "price": "17760",
+    "mall": "comecostore",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13458144079",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9100265/91002654431.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100265/91002654431.jpg",
+        "mall": "comecostore",
+        "link": "https://smartstore.naver.com/main/products/13458144079"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "886598736",
+    "translated_kr": "아나수이 나이트 오브 팬시 EDT SP 50ml 오드투왈렛 향수 프레그런스 박스 손상 있음",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "7무 화이트듀 나이트 트리트먼트"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "7무 화이트듀 나이트 트리트먼트",
+    "volume": "",
+    "source": "hwahae",
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
