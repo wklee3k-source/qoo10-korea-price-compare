@@ -724,6 +724,38 @@ def t56_keyword_length_stats():
           f"이어누적{resumes} 완료시점기록{recorded_at_end}")
 
 
+# --------------------- #57 브랜드+이름 동시 불일치 자동 제외
+#  브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
+#  표본 6건을 눈으로 확인한 결과 6건 모두 실제 오매칭이었다
+#  (선크림→파운데이션, 크림→컨디셔너, '광고 출연자 모집' 게시글까지).
+#
+#  이 검사가 지키는 것은 '자동으로 버리지 않는다'는 원칙의 예외 조건이다.
+#   (1) 두 척도를 모두 통과해야 뺀다 — 한 척도만 쓰면 멀쩡한 매칭을 버린다.
+#       단어겹침만 보면 띄어쓰기 차이('맑은쌀 꿀채운'/'맑은쌀꿀채운')로,
+#       글자조각만 보면 표기 차이('UV'/'유브이')로 오탐이 난다.
+#   (2) 브랜드만 다른 건, 이름만 다른 건은 남긴다.
+#   (3) 뺀 건은 파일로 남긴다 — 무엇이 사라졌는지 볼 수 없으면 고칠 수도 없다.
+#  또한 영문 원본 브랜드를 한글 판매처명과 비교하는 건 애초에 불가능하므로
+#  mismatch가 아니라 unknown이어야 한다(실측: LE LABO vs 르라보).
+def t57_brand_name_mismatch_exclusion():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    two_metrics = "_sim_token(" in src and "_sim_bigram(" in src and \
+        "def looks_like_mismatch" in src
+    both_required = "< 0.3 and" in src and "< 0.35" in src
+    # 브랜드 불일치와 이름 불일치가 동시에 성립할 때만 제외해야 한다.
+    combined = 'check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"' in src \
+        and "and looks_like_mismatch(" in src
+    logged = "brand_name_mismatch_excluded.json" in src and "excluded_mismatch.append" in src
+    # 영문↔한글은 판단불가로 떨어져야 한다.
+    latin_guard = 'if not re.search(r"[A-Za-z]", kr_brand_lower):' in src
+
+    ok = two_metrics and both_required and combined and logged and latin_guard
+    check("57 브랜드+이름 동시 불일치 제외", ok,
+          f"두척도{two_metrics} 동시조건{both_required} 결합{combined} "
+          f"제외목록기록{logged} 영문판단불가{latin_guard}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
