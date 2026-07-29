@@ -281,7 +281,11 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     expected = brand_dict.get(orig_brand, "")
     if expected:
         candidates = [expected] + BRAND_ALIASES.get(expected, [])
-        if any(c.lower() in kr_brand_lower for c in candidates):
+        # [v5.2.0] 양방향으로 본다. 사전값이 판매처명 표기라 더 길 수 있고
+        # (Purito -> '퓨리토서울'), 반대로 판매처가 짧게 쓸 수도 있다.
+        # 한 방향만 보면 '퓨리토서울'과 '퓨리토'가 서로 남남이 된다.
+        if any(c.lower() in kr_brand_lower or kr_brand_lower in c.lower()
+               for c in candidates if c):
             return "match"
         return "mismatch"
     orig_alnum = re.sub(r"[^a-z0-9]", "", orig_brand.lower())

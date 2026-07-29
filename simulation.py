@@ -949,6 +949,41 @@ def t62_foreign_brand_exclusion():
           f"검증단계{verify_skips}")
 
 
+# --------------------- #63 브랜드 대응 자동 수확(안전조건)
+#  검증 결과에는 '사전에 없지만 영문 병기 덕에 맞은' 브랜드가 있다
+#  (COSRX -> '코스알엑스 (COSRX)'). 이걸 사전에 넣으면 판매처가 영문을
+#  안 쓰는 다음 상품부터 브랜드 판정이 된다.
+#
+#  그냥 넣으면 위험해서 세 조건을 건다.
+#   ① 영문 5자 이상 — 알파벳만 남겨 부분문자열로 비교하므로 'LOA'는
+#      'FLOAT'에, 'CURE'는 'SECURE'에 들어간다. 우연이 사전에 들어가면
+#      영구 규칙으로 굳는다.
+#   ② 대응값에 한글이 있을 것 — AHC -> 'AHC'는 넣어도 중복일 뿐이다.
+#   ③ 같은 대응이 2건 이상 — 한 번은 우연일 수 있다.
+#  대응이 여러 갈래로 갈리면 자동으로 고르지 않는다(사람이 볼 몫).
+def t63_brand_alias_harvest():
+    script = SRC / "harvest_brand_aliases.py"
+    if not script.exists():
+        check("63 브랜드 대응 자동수확", False, "harvest_brand_aliases.py 없음"); return
+    src = script.read_text(encoding="utf-8")
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    len_guard = "MIN_ALNUM_LEN = 5" in src
+    hangul_guard = "HANGUL_RE.search(kr)" in src
+    vote_guard = "MIN_OCCURRENCES = 2" in src and "n < MIN_OCCURRENCES" in src
+    split_guard = "len(counter) > 1" in src
+    no_overwrite = "jp in clean_dict" in src
+    # 사전값이 판매처명이라 더 길 수 있다(Purito -> '퓨리토서울').
+    # 한 방향만 비교하면 '퓨리토'와 남남이 된다.
+    bidirectional = "kr_brand_lower in c.lower()" in review
+
+    ok = (len_guard and hangul_guard and vote_guard and split_guard
+          and no_overwrite and bidirectional)
+    check("63 브랜드 대응 자동수확(안전조건)", ok,
+          f"길이{len_guard} 한글{hangul_guard} 2건이상{vote_guard} 갈래{split_guard} "
+          f"덮어쓰기방지{no_overwrite} 양방향비교{bidirectional}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
