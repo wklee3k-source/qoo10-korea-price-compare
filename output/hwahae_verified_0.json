@@ -7925,5 +7925,392 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1169665636",
+    "translated_kr": "넘버M 노다웃 콜라겐 리프팅 크림 50g 화이트닝 주름개선 기능성 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300",
+      "naver": "프리티스킨 PDRN TX1 콜라겐 캡슐 크림 300 62g",
+      "daum": "스킨케어",
+      "naver_web": "메디섹션 넘버M 노다웃 콜라겐 리프팅 크림 미백 주름개선 기능성 화장품"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "PDRN TX1 콜라겐 캡슐 크림 300",
+    "volume": "62g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "39000",
+    "mall": "프리티스킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13426295547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+        "mall": "프리티스킨",
+        "link": "https://smartstore.naver.com/main/products/13426295547"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122350/91223501505.jpg",
+        "mall": "라이프라운드",
+        "link": "https://smartstore.naver.com/main/products/13678990414"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205911392",
+    "translated_kr": "더 모이스처 리프트 파밍 마스크 3ml 미니사이즈",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "NEW SEASON, NEW BEAUTY!",
+      "naver_web": "La Mer_더 모이스처 리프트 퍼밍 마스크 /",
+      "naver_rematch": "라메르 더 리프팅 퍼밍 마스크 50ml"
+    },
+    "brand": "라메르",
+    "name": "La Mer_더 모이스처 리프트 퍼밍 마스크 /",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "201600",
+    "mall": "버진뷰티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10866230383",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8841073/88410736396.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8841073/88410736396.jpg",
+        "mall": "버진뷰티",
+        "link": "https://smartstore.naver.com/main/products/10866230383"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096375/90963750797.jpg",
+        "mall": "쁘띠삼촌",
+        "link": "https://smartstore.naver.com/main/products/13419240461"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8249242/82492423275.jpg",
+        "mall": "모두유로",
+        "link": "https://smartstore.naver.com/main/products/4947903275"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1169403361",
+    "translated_kr": "더마 UV365 배리어 하이드로 미네랄 선스크린 [20ml*2] 40ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마UV365 장벽수분 무기자차 선크림 [SPF50+/PA++++]",
+      "naver": "에스트라 더마UV365 BARRIER HYDRO MINERAL 선크림 40ml 1개",
+      "daum": "아모레퍼시픽 연혁과 역사] 2006년 6월1일 태평양 인적분할, 아모레퍼시픽 설립",
+      "naver_web": "호주에서 에스트라 더마 UV 365 배리어 하이드로 미네랄 선스크린 구매"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "더마UV365 장벽수분 무기자차 선크림 [SPF50+/PA++++]",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "32000",
+    "mall": "고투베이직",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9789807389",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8733430/87334309662.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733430/87334309662.2.jpg",
+        "mall": "고투베이직",
+        "link": "https://smartstore.naver.com/main/products/9789807389"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1169403395",
+    "translated_kr": "에이시카 365 수징 리페어 크림 [10ml*6] 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이시카365 리페어 크림 pH4.5",
+      "naver": "에스트라 에이시카365 리페어 크림pH4.5",
+      "daum": "수부지 피부인데 크림 추천좀..",
+      "naver_web": "에이시카365 리페어 크림 pH4.5"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 리페어 크림 pH4.5",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25500",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63995&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5318962/53189625476.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5318962/53189625476.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63995&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9099315/90993156389.jpg",
+        "mall": "디씨스토어49",
+        "link": "https://smartstore.naver.com/main/products/13448646037"
+      }
+    ],
+    "real_page_title": "[에스트라]에이시카365 리페어 크림pH4.5",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1193625970",
+    "translated_kr": "【10본 세트】 닥터브로너스 매직 소프 60ml 미니 세트 바디 소프 오가닉 정규품",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "naver_web": "유아스킨케어 : 닥터 브로너스 베이비 마일드 퓨어 캐스틸 솝 & 오가닉 매직밤",
+      "naver_rematch": "닥터 브로너스 베이비 마일드 퓨어 캐스틸 솝 대용량 올인원 바디워시 475ml"
+    },
+    "brand": "닥터브로너스",
+    "name": "닥터 브로너스 베이비 마일드 퓨어 캐스틸 솝 대용량 올인원 바디워시 475ml",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "21600",
+    "mall": "닥터브로너스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/4968181253",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8251270/82512701575.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8251270/82512701575.7.jpg",
+        "mall": "닥터브로너스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4968181253"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8394420/83944208212.4.jpg",
+        "mall": "JYPs",
+        "link": "https://smartstore.naver.com/main/products/6399707879"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1137947/11379479182.1.jpg",
+        "mall": "JYPs",
+        "link": "https://smartstore.naver.com/main/products/727048988"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1178361387",
+    "translated_kr": "디스커버리 세트 (5ML X 2) 어나더 13 + 산탈 33",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "옥시젠 물티슈 [클래식]",
+      "naver": "르 라보 디스커버리 세트 어나더 13 산탈 33 말차 26 각 0.17 Fl Oz 5ml 185975",
+      "daum": "서울24시감자탕",
+      "naver_web": "르 라보 디스커버리 세트 클래식 컬렉션 2 x 어나더 13 상탈 33"
+    },
+    "brand": "르라보",
+    "name": "르 라보 디스커버리 세트 어나더 13 산탈 33 말차 26 각 0.17 Fl Oz 5ml 185975",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "290230",
+    "mall": "알레뚜따이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10203096284",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8774759/87747599745.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8774759/87747599745.jpg",
+        "mall": "알레뚜따이",
+        "link": "https://smartstore.naver.com/main/products/10203096284"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8774764/87747641687.jpg",
+        "mall": "알레뚜따이",
+        "link": "https://smartstore.naver.com/main/products/10203138226"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8774746/87747460198.jpg",
+        "mall": "알레뚜따이",
+        "link": "https://smartstore.naver.com/main/products/10202956737"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8774776/87747760836.jpg",
+        "mall": "알레뚜따이",
+        "link": "https://smartstore.naver.com/main/products/10203257375"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204022304",
+    "translated_kr": "스테이 프레시 톤업 선 크림 퍼플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+      "musinsa": "스테이프레쉬 톤업 선크림 50ml (퍼플/그린) SPF 50+ PA++++",
+      "naver": "조선미녀 스테이프레쉬 톤업 선크림 50ml - 톤업 그린 / 자외선차단 논코메도제닉 저자극",
+      "daum": "마스크족 여러분~! 파데 하지 말고 &#39;톤.업.선.크.림&#39; 하세요 ♥︎",
+      "naver_web": "조선미녀 스테이프레쉬 톤업 선크림 SPF 50+ PA++++"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "15300",
+    "mall": "코코넛카트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13626484593",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117099/91170995202.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117099/91170995202.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/13626484593"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1095699049",
+    "translated_kr": "리들 샷 300 에센스 50ml / 3일 주기 집중케어 / 흡수 개선 / 피부 결 개선 / 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "리들샷 100",
+      "naver": "VT 브이티코스메틱 피디알엔 PDRN 리들샷 100 앰플 50ml 홈쇼핑 최신상",
+      "daum": "리들샷",
+      "naver_web": "VT 리들샷 500 페이셜 부스팅 퍼스트 앰플 *8개입"
+    },
+    "brand": "브이티코스메틱",
+    "name": "VT 브이티코스메틱 피디알엔 PDRN 리들샷 100 앰플 50ml 홈쇼핑 최신상",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "24900",
+    "mall": "skin pick",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10170662128",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8771516/87715165470.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8771516/87715165470.1.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/10170662128"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1175634679",
+    "translated_kr": "화이트 트러플 퍼스트 아로마틱 스프레이 세럼 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 트러플 퍼스트 아로마틱 스프레이 세럼",
+      "daum": "달바 화이트 트러플 퍼스트 스프레이 세럼 + 아로마틱 스프레이 세럼 세트",
+      "naver_web": "화이트 트러플 퍼스트 아로마틱 스프레이 세럼",
+      "naver_rematch": "달바 화이트 트러플 퍼스트 스프레이 세럼 100ml + 약산성 젤클 9ml 1세트"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "화이트 트러플 퍼스트 아로마틱 스프레이 세럼",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "31900",
+    "mall": "늘푸른 MARKET",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10403893721",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8794839/87948398614.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8794839/87948398614.2.jpg",
+        "mall": "늘푸른 MARKET",
+        "link": "https://smartstore.naver.com/main/products/10403893721"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8897859/88978593684.jpg",
+        "mall": "투데이 굿즈",
+        "link": "https://smartstore.naver.com/main/products/11434083319"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1213549964",
+    "translated_kr": "[SEVENTEEN 민규 미니 스탠딩 2종 포함] 아누아 선택형 헤어케어 세트 / 헤어 오일 / 에센스 / 샴푸 / 헤어 마스크 / 한국 헤어케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기타 : 헤어 / 바디 / 툴> 부문",
+      "naver_web": "지오바니 2치크 헤어 오일 세럼"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
