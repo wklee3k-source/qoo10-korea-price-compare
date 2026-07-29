@@ -752,7 +752,12 @@ def t57_brand_name_mismatch_exclusion():
     # '같은 브랜드의 다른 제품'이라 브랜드를 조건에 걸면 못 잡는다
     # (선세럼↔선크림, 젤↔스프레이, 블론드샴푸↔비듬샴푸).
     # 대신 이름은 반드시 두 척도를 모두 통과해야 한다.
-    combined = "if looks_like_mismatch(translated_kr, x.get(\"name\") or \"\"):" in src
+    # [v4.5.0] 제외는 두 갈래다. (1) 이름만으로 명백한 경우, (2) 브랜드까지
+    # 다를 때 조금 느슨한 임계. (2)에는 반드시 브랜드 상호참조 보호가 있어야
+    # 한다 — 없으면 사전 부실이 곧 삭제가 된다(花王 큐레루 = 나수 Curel).
+    combined = ("looks_like_mismatch(translated_kr, x.get(\"name\") or \"\")" in src
+                and "def is_clear_mismatch(" in src
+                and "def _brand_cross_reference(" in src)
     logged = "brand_name_mismatch_excluded.json" in src and "excluded_mismatch.append" in src
     # 영문↔한글은 판단불가로 떨어져야 한다.
     latin_guard = 'if not re.search(r"[A-Za-z]", kr_brand_lower):' in src
