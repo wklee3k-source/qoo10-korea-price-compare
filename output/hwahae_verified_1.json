@@ -2037,5 +2037,358 @@
     "stock_evidence": [
       "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=2286&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
     ]
+  },
+  {
+    "goods_no": "1185008389",
+    "translated_kr": "[5개 세트] 퍼퓸 실키 피부 감촉 핸드 크림 50ml (*5개) 선물 세트",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "148565 HETRAS BEAUTY 뷰티 퍼퓸 실키 촉감 핸드크림 선물세트 13종 택1",
+      "naver_web": "헤트라스 퍼퓸 실키 촉감 핸드크림 선물세트",
+      "naver_rematch": "헤트라스 퍼퓸 실키 촉감 핸드크림 50ml 5개입 선물세트"
+    },
+    "brand": "헤트라스",
+    "name": "헤트라스 퍼퓸 실키 촉감 핸드크림 선물세트",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "35000",
+    "mall": "헤트라스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9496387166",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8704088/87040887489.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8704088/87040887489.3.jpg",
+        "mall": "헤트라스",
+        "link": "https://smartstore.naver.com/main/products/9496387166"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8704128/87041288890.2.jpg",
+        "mall": "헤트라스",
+        "link": "https://smartstore.naver.com/main/products/9496788567"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5163616/51636169089.1.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4234120?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5678311/56783114967.2.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=143588743&shop_id=19454&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209641531",
+    "translated_kr": "[1+] NEW 사이토카인 부스터 프로 70ml + 70ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사이토카인 부스터 [프로]",
+      "naver": "(부스터 플러스 리뉴얼) 리필드 헤어 리커버리 사이토카인 부스터 프로 70ml",
+      "daum": "차앤박피부과",
+      "naver_web": "리필드"
+    },
+    "brand": "리필드 (Refilled)",
+    "name": "사이토카인 부스터 [프로]",
+    "volume": "70ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "31900",
+    "mall": "더디버트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12585214506",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9012972/90129725362.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9012972/90129725362.1.jpg",
+        "mall": "더디버트",
+        "link": "https://smartstore.naver.com/main/products/12585214506"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210050298",
+    "translated_kr": "[배송료 무료 / 2본 세트] 닥터포헤어 에어로 쿨링 스프레이 100ml / 두피 케어 드라이 샴푸 스칼프 탄산 냉각 시원함",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "애플민트 베러 루트 쿨링 스케일러",
+      "daum": "두피가 꽁꽁 얼어붙는 느낌 가성비 쿨링샴푸 베스트",
+      "naver_web": "달리프 애플 민트 베러 루트 쿨링 두피 스케일러, , 1개",
+      "naver_rematch": "달리프 애플민트 베러루트 쿨링 스케일러 두피각질 두피스크럽 정수리냄새 250ml, 1개"
+    },
+    "brand": "달리프 (Daleaf)",
+    "name": "애플민트 베러 루트 쿨링 스케일러",
+    "volume": "250ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "13900",
+    "mall": "달리프",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5741711938",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8328621/83286210920.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8328621/83286210920.3.jpg",
+        "mall": "달리프",
+        "link": "https://smartstore.naver.com/main/products/5741711938"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8328621/83286210921.3.jpg",
+        "mall": "달리프",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5741711939"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120327/91203276065.jpg",
+        "mall": "포건",
+        "link": "https://smartstore.naver.com/main/products/13658765280"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199519100",
+    "translated_kr": "【1+1】【4가지 모공 케어】그린 토마토 2종 NMN 포어 리프팅 앰플 40ml / 마이 멜로디 & 쿠로미 랜덤 콤 미러 부록 / 처진 모공 / 검은 점 / 모공 수축 / 곰돌이 푸",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver_rematch": "[피토버] 플러스 매끈 모공 에센스 235ml_PPME235"
+    },
+    "brand": "피토버플러스 (PHYTOVER)",
+    "name": "매끈 모공 에센스",
+    "volume": "235ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=170637024&shop_id=49814&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6077457/60774571820.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6077457/60774571820.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=170637024&shop_id=49814&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "지그재그 스토어",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200755583",
+    "translated_kr": "【신상품】【인기】EGF x 케어 오인트 젤 15ml 기획 + 크림 7ml 불안정한 피부를 부드럽게 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2월의 뷰티 신상 파헤치기 #잇츠온세일"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1079053884",
+    "translated_kr": "워터 뱅크 블루 히알루론산 크림 (인텐시브 / 모이스처 / 젤) 50ml 【본품 / 리필】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터뱅크 블루 히알루로닉 인텐시브 크림",
+      "musinsa": "워터뱅크 블루 히알루론산 크림 리필 50ml(옵션)",
+      "naver": "[라네즈] 워터뱅크 블루 히알루론산 크림  20ml jar(옵션) 111976971",
+      "daum": "손상피부 장벽 62% 일시적 개선...워터뱅크 블루 히알루로닉 크림",
+      "naver_web": "워터뱅크 블루 히알루로닉 모이스춰 크림"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "워터뱅크 블루 히알루로닉 인텐시브 크림",
+    "volume": "20ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "16560",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/3762059?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521",
+    "image_url": "https://shopping-phinf.pstatic.net/main_4491684/44916840559.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4491684/44916840559.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3762059?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=319521"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117523/91175232112.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/13630721448"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117523/91175232232.jpg",
+        "mall": "BLUE CHERRY",
+        "link": "https://smartstore.naver.com/main/products/13630721568"
+      }
+    ],
+    "real_page_title": "라네즈(LANEIGE) 워터뱅크 블루 히알루론산 크림  20ml jar(옵션)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195354781",
+    "translated_kr": "자외선 차단제 UV 컷 미네랄 UV 크림 자외선 대책 20ml × 4개 한국 화장품 더마 UV365",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "분기보고서"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1188782765",
+    "translated_kr": "무드 핏 브로 크림 브리치 [3회분] 3타임즈 :: 헤어 브리치 / 눈썹 탈색 / 눈썹 브리치 / 눈썹 컬러링",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "강아지는 미용을 하고나면 엄청난 스트레스를받나요"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203201187",
+    "translated_kr": "라이스 70 글로우 밀키 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "라이스 70 글로우 밀키 토너",
+      "daum": "헤일리 비버가 다시 불붙인 밀크 스킨 열풍",
+      "naver_web": "라이스 70 글로우 밀키 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "라이스 70 글로우 밀키 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1196942000",
+    "translated_kr": "더마톨로지 퍼스트 패키지 【부스터 130ml + 세럼 45ml】",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "2025 NEW 신상 인셀덤 더마톨로지 퍼스트 패키지",
+      "naver_web": "인셀덤 더마톨로지 퍼스트 패키지 3종세트",
+      "naver_rematch": "(최신리뉴얼) 인셀덤 ICD 더마톨로지 퍼스트 패키지(부스터,세럼) 2종 세트"
+    },
+    "brand": "인셀덤",
+    "name": "2025 NEW 신상 인셀덤 더마톨로지 퍼스트 패키지",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "110600",
+    "mall": "NEW뷰티인셀덤ICD",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13666959551",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9121147/91211470459.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121147/91211470459.jpg",
+        "mall": "NEW뷰티인셀덤ICD",
+        "link": "https://smartstore.naver.com/main/products/13666959551"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098298/90982981661.2.jpg",
+        "mall": "NEW뷰티인셀덤ICD",
+        "link": "https://smartstore.naver.com/main/products/13438471309"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098305/90983052162.jpg",
+        "mall": "NEW뷰티인셀덤ICD",
+        "link": "https://smartstore.naver.com/main/products/13438541810"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098302/90983027931.jpg",
+        "mall": "NEW뷰티인셀덤ICD",
+        "link": "https://smartstore.naver.com/main/products/13438517579"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8716451/87164514034.3.jpg",
+        "mall": "뷰티몰화장품",
+        "link": "https://smartstore.naver.com/main/products/9620011764"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
