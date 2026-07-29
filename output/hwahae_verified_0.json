@@ -13377,5 +13377,314 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1197119024",
+    "translated_kr": "CO UV 스프레이 자외선 차단제 스프레이 SPF50+ PA++++ 얼굴 머리 전신 산뜻한 사용감 하얀 뜨는 느낌 없음 워터 프루프 비누 오프 무향료 에탄올 프리 산화 아연",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클래식 화이트 UV 젤 [SPF50+/PA++++]",
+      "naver": "ALITTLE UV 스프레이 선스크린 얼굴 머리 전신 SPF50+ PA++++ 워터프루프 선탠 탈취 메이크업 프로텍트 벌레제거",
+      "naver_web": "에어로졸 자외선 차단제의 호흡기 안전성"
+    },
+    "brand": "세이키세 (SEKKISEI)",
+    "name": "클래식 화이트 UV 젤 [SPF50+/PA++++]",
+    "volume": "80g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "27000",
+    "mall": "클릭온재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11677225164",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8922173/89221735631.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8922173/89221735631.4.jpg",
+        "mall": "클릭온재팬",
+        "link": "https://smartstore.naver.com/main/products/11677225164"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8936517/89365177797.jpg",
+        "mall": "직구잇템",
+        "link": "https://smartstore.naver.com/main/products/11820667210"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203089151",
+    "translated_kr": "[공식] 한국 한정 다슈 병우석 아크릴 스탠드 부착 스칼프 샴푸 2본",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "wp"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1073991504",
+    "translated_kr": "알래스카 큐브 쿨 멘톨 퍼퓸 샤워 바",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "쿨멘톨 샤워바",
+      "naver": "알래스카큐브 쿨멘톨 샤워바 140g 목욕비누 쿨비누 베르가못향",
+      "daum": "동구밭 알래스카큐브 쿨멘톨 퍼퓸 샤워바 3개 세트",
+      "naver_web": "쿨멘톨 퍼퓸 샤워바"
+    },
+    "brand": "알레스카큐브 (ALASKACUBE)",
+    "name": "쿨멘톨 샤워바",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "9050",
+    "mall": "Nuvianne",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13657971458",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120248/91202482243.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120248/91202482243.1.jpg",
+        "mall": "Nuvianne",
+        "link": "https://smartstore.naver.com/main/products/13657971458"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194136237",
+    "translated_kr": "[2개 세트] 헤어&바디 퍼퓨 미스트 100ml 선택 [3종] / 향기 좋음 / 프레그런스 미스트 / 선물 / 선물",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 바디미스트 [화이트머스크향]",
+      "daum": "뷰티쁠 크루가 먼저 써본 #5월뷰티신상",
+      "naver_web": "아브카 퍼퓸 대용량 바디 미스트 화이트머스크향, , 2개",
+      "naver_rematch": "[오리지널] 화이트 머스크 후레그런스 바디 미스트 샤워코롱 100ML"
+    },
+    "brand": "아브카 (AVCA)",
+    "name": "아브카 퍼퓸 대용량 바디 미스트 화이트머스크향, , 2개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "29000",
+    "mall": "THEBODYSHOP",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5718691141",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8326318/83263189636.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8326318/83263189636.4.jpg",
+        "mall": "THEBODYSHOP",
+        "link": "https://smartstore.naver.com/main/products/5718691141"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1097671406",
+    "translated_kr": "[공식점 / P10배 / 국내 배송] \"진한 탄산 본품 4본 세트\" 뷰 BIO 미셀라 헤드 스파 퍼퓨 샴푸 2본 & 실키 리페어 트리트먼트 2본",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172764311",
+    "translated_kr": "세멘 레이트 피코 토닉 샷 피그멘테이션 크림 25g 기미 크림 한국 코스메 케어 색소 침착 대책 보습 페이스 크림",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1192839236",
+    "translated_kr": "미네랄 프리 필링 글로우 샷 1500 30ml 필링 케어 한국 코스메 각질 케어 페이스 케어 글로우 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "원하고 ONEHAGO 프리몰드 아이템",
+      "naver_web": "식욕억제제 주의사항, 부작용"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1028711285",
+    "translated_kr": "1+1 미쟝센 퍼펙트 노워시 트리트먼트 크림팩 230ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 노워시크림팩",
+      "naver": "1+1 미쟝센 퍼펙트 노 워시 트리트먼트 크림팩 230ml+230ml 더블기획",
+      "daum": "미쟝센 퍼펙트 노 워시 트리트먼트 크림팩 1+1 리뉴얼, 2개,",
+      "naver_web": "미쟝센 퍼펙트 노워시 크림팩 230ML+230ML"
+    },
+    "brand": "미쟝센",
+    "name": "1+1 미쟝센 퍼펙트 노 워시 트리트먼트 크림팩 230ml+230ml 더블기획",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "15490",
+    "mall": "블망몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9718315603",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8726281/87262817873.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8726281/87262817873.1.jpg",
+        "mall": "블망몰",
+        "link": "https://smartstore.naver.com/main/products/9718315603"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119217/91192175278.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13647664499"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8875109/88751090731.3.jpg",
+        "mall": "포사도",
+        "link": "https://smartstore.naver.com/main/products/11206580400"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9013080/90130807790.jpg",
+        "mall": "더디버트",
+        "link": "https://smartstore.naver.com/main/products/12586296934"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8696143/86961435373.jpg",
+        "mall": "순원스토어",
+        "link": "https://smartstore.naver.com/main/products/9416935050"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195878819",
+    "translated_kr": "펩타이드 샷 2X 앰플 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타이드샷 앰플 투엑스",
+      "naver": "(10% 슈퍼적립) 앰플엔 펩타이드샷 2X 모공탄력 앰플 대용량 100ml 탄력 2배 모공 앰플",
+      "daum": "앰플엔 펩타이드샷 2X 앰플",
+      "naver_web": "펩타이드샷 앰플 투엑스"
+    },
+    "brand": "앰플엔 (AMPLE:N)",
+    "name": "펩타이드샷 앰플 투엑스",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "19900",
+    "mall": "코리아나화장품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5062150297",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8260667/82606671756.70.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8260667/82606671756.70.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/5062150297"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8568004/85680047675.1.jpg",
+        "mall": "주식회사 나르샤",
+        "link": "https://smartstore.naver.com/main/products/8135547352"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8852268/88522689760.jpg",
+        "mall": "나뭉",
+        "link": "https://smartstore.naver.com/main/products/10978183717"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "967844434",
+    "translated_kr": "의약부외품 D-바 디-바 15g 데오도란트 데오도란트 크림 제한 D 시리즈",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "D&D 디그리저 샴푸",
+      "daum": "vol.62.pdf",
+      "naver_web": "코감기인지 목감기인지 모르겠는데 무슨약먹을까요",
+      "naver_rematch": "빈티지 꽃 다꾸스티커 vol 62 대형 세트 나뭇잎 식물 다이어리꾸미기 압화 인스"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
