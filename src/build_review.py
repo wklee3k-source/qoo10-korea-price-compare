@@ -267,7 +267,8 @@ def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
     return max(score, 0)
 
 
-def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
+def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict,
+                kr_product_name: str = "") -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
     kr_brand_lower = (kr_brand_text or "").lower()
@@ -286,6 +287,14 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
         # 한 방향만 보면 '퓨리토서울'과 '퓨리토'가 서로 남남이 된다.
         if any(c.lower() in kr_brand_lower or kr_brand_lower in c.lower()
                for c in candidates if c):
+            return "match"
+        # [v5.3.0] 브랜드 칸에 판매처명이 들어오는 경우가 많다.
+        #     cellmedics -> 브랜드칸 '더리즈', 상품명 '셀메딕스 MGF 리턴 크림'
+        #     DANONAL    -> 브랜드칸 '마실',   상품명 '다노날 헤어 두피토닉'
+        # 브랜드 칸만 보면 같은 제품인데도 '브랜드가 다릅니다'가 된다.
+        # 상품명에 브랜드가 들어있으면 맞은 것으로 본다.
+        name_lower = (kr_product_name or "").lower()
+        if name_lower and any(c.lower() in name_lower for c in candidates if c and len(c) >= 2):
             return "match"
         return "mismatch"
     orig_alnum = re.sub(r"[^a-z0-9]", "", orig_brand.lower())
@@ -433,7 +442,7 @@ def build_pairs():
 
         if should_exclude(q.get("brand", ""), x.get("brand", ""), translated_kr,
                           x.get("name") or "",
-                          check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict)):
+                          check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict, x.get("name") or "")):
             stats["brand_name_mismatch"] += 1
             excluded_mismatch.append({
                 "goods_no": x.get("goods_no"),
@@ -475,7 +484,7 @@ def build_pairs():
                 vol_match = vol_status == "match"
 
         orig_brand = q.get("brand", "")
-        brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict)
+        brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict, x.get("name") or "")
         kr_qty = extract_quantity(kr_name_display)
         # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
         # 있거나, 구매처 원본명에 "세트/SET"가 있는 경우(예: "선물세트",
@@ -599,7 +608,7 @@ def build_pairs():
             "kr_qty": kr_qty, "is_set": is_set, "kr_name_jp": kr_to_jp.get(x["goods_no"], ""),
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
-            "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status,
+            "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status, "qoo10_brand": orig_brand,
             "obsolete": x.get("obsolete"),
             "naver_rematched": x.get("naver_rematched"),
             "single_source_naver": x.get("single_source_naver"),
@@ -652,7 +661,14 @@ def _drop_search_blackholes(pairs: list[dict], excluded: list[dict]) -> list[dic
     keep_ids = set()
     dropped = 0
     for url, group in by_url.items():
-        if not url or len(group) < BLACKHOLE_MIN:
+        # [v5.3.0] 2건짜리도 큐텐 브랜드가 서로 다르면 블랙홀로 본다.
+        # 같은 링크에 2건이 붙는 건 큐텐에 같은 상품이 여러 셀러로 올라온
+        # 정상 경우일 수 있어 임계를 3으로 뒀는데, 실측에서 브랜드가 다른
+        # 2건짜리가 남았다(LOWVIBE 핸드크림 / Deep;erence 핸드크림 ->
+        # 둘 다 '포트레 핸드크림 누보'). 브랜드가 다르면 같은 상품일 수 없다.
+        distinct_brands = len({(p.get("qoo10_brand") or "").strip() for p in group})
+        is_blackhole = len(group) >= BLACKHOLE_MIN or (len(group) >= 2 and distinct_brands >= 2)
+        if not url or not is_blackhole:
             keep_ids.update(id(p) for p in group)
             continue
         best = max(group, key=lambda p: (_sim_token(p.get("qoo10_name") or "", p.get("kr_name") or ""),

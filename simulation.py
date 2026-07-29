@@ -889,6 +889,10 @@ def t61_search_blackhole_and_articles():
     # 링크당 최소 1건은 남겨야 한다(전량 삭제 금지).
     fn = src.split("def _drop_search_blackholes(")[1].split("\ndef ")[0] if has_blackhole else ""
     keeps_best = "best = max(group" in fn and "keep_ids.add(id(best))" in fn
+    # [v5.3.0] 2건짜리도 큐텐 브랜드가 다르면 블랙홀이다. 임계를 3으로만
+    # 두면 브랜드가 다른 2건짜리가 그대로 남는다(LOWVIBE/Deep;erence
+    # 핸드크림이 둘 다 '포트레 핸드크림 누보'에 붙어 있었다).
+    two_with_diff_brand = "distinct_brands >= 2" in fn
     # 뺀 건은 기록으로 남겨야 한다.
     logged = 'reason": f"검색 블랙홀' in fn
 
@@ -900,10 +904,11 @@ def t61_search_blackhole_and_articles():
                        and "looks_like_article(it.get(\"title\") or \"\")" in vsrc)
 
     ok = (has_article and article_applied and has_blackhole and blackhole_applied
-          and keeps_best and logged and verify_filtered)
+          and keeps_best and logged and verify_filtered and two_with_diff_brand)
     check("61 검색 블랙홀/광고글 차단", ok,
           f"광고패턴{has_article} 광고적용{article_applied} 블랙홀{has_blackhole} "
-          f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged} 검증단계{verify_filtered}")
+          f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged} 검증단계{verify_filtered} "
+          f"브랜드다른2건{two_with_diff_brand}")
 
 
 # --------------------- #62 해외(비한국) 브랜드 제외
@@ -989,6 +994,34 @@ def t63_brand_alias_harvest():
     check("63 브랜드 대응 자동수확(안전조건)", ok,
           f"길이{len_guard} 한글{hangul_guard} 2건이상{vote_guard} 갈래{split_guard} "
           f"덮어쓰기방지{no_overwrite} 양방향비교{bidirectional}")
+
+
+# --------------------- #64 브랜드 칸에 판매처명이 들어오는 경우
+#  네이버 브랜드 칸에는 실제 브랜드가 아니라 판매처명이 자주 들어온다.
+#      cellmedics -> 브랜드칸 '더리즈', 상품명 '셀메딕스 MGF 리턴 크림'
+#      DANONAL    -> 브랜드칸 '마실',   상품명 '다노날 헤어 두피토닉'
+#  브랜드 칸만 보면 같은 제품인데도 '브랜드가 다릅니다'가 되고, 신뢰도가
+#  깎여 뒤로 밀린다. 상품명에 브랜드가 들어있으면 맞은 것으로 본다.
+#
+#  단, 이 완화는 사전에 대응이 등록된 경우에만 쓴다 — 아무 문자열이나
+#  상품명에서 찾으면 짧은 브랜드가 우연히 걸린다.
+def t64_brand_in_product_name():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    fn = src.split("def check_brand(")[1].split("\ndef ")[0]
+
+    accepts_name = "kr_product_name" in src.split("def check_brand(")[1][:200]
+    name_path = "in name_lower for c in candidates" in fn
+    # 사전 대응(expected)이 있을 때만 쓰는 경로여야 한다.
+    only_with_dict = fn.index("name_lower") > fn.index("expected = brand_dict.get")
+    # 2자 미만은 우연 일치가 잦다.
+    len_guard = "len(c) >= 2" in fn
+    # 호출부가 상품명을 실제로 넘겨야 의미가 있다.
+    passed = src.count('brand_dict, x.get("name") or ""') >= 2
+
+    ok = accepts_name and name_path and only_with_dict and len_guard and passed
+    check("64 브랜드칸이 판매처명일 때 상품명 참조", ok,
+          f"인자{accepts_name} 경로{name_path} 사전한정{only_with_dict} "
+          f"길이가드{len_guard} 호출부전달{passed}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
