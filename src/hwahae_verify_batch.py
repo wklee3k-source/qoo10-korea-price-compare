@@ -71,6 +71,23 @@ def _is_permanent_failure(message: str) -> bool:
     return any(pat in message for pat in PERMANENT_FAILURE_PATTERNS)
 
 
+# [v4.9.0] 상품이 아니라 블로그·추천글이 후보로 잡히는 경우를 검증
+#  단계에서 걸러낸다. 검수페이지에서 빼는 것만으로는 부족했다 — 광고글이
+#  '승자'가 되면 진짜 상품을 찾을 기회 자체가 사라지고, 그 상품은 링크
+#  없음으로 버려진다. 실측: '2026 상반기 스킨케어 트렌드' 14건,
+#  '추천글루타치온필름팩 10종 인기 제품 지금 바로!' 12건이 구매링크로
+#  잡혀 있었다. 이런 페이지는 검색어와 느슨하게 맞아 여러 상품을 빨아들인다.
+AD_TITLE_RE = re.compile(
+    r"(추천\s*(글|템|제품|순위)|인기\s*(제품|템|순위)|트렌드|지금\s*바로|"
+    r"베스트\s*\d|TOP\s*\d|\d+\s*종\s*(인기|추천)|후기\s*모음|비교\s*정리|"
+    r"이것만|알아보기|총정리|모집)"
+)
+
+
+def looks_like_article(title: str) -> bool:
+    return bool(AD_TITLE_RE.search(title or ""))
+
+
 class SearchTechnicalFailure(Exception):
     """[9번 수정과 동일 원칙] 검색 자체가 기술적으로 실패한 경우(타임아웃,
     네트워크 오류, 서브프로세스 비정상종료, JSON 파싱실패 등)에만
@@ -138,6 +155,7 @@ def _pick_title_candidate(items: list[dict], source: str) -> dict | None:
             GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
         )
 
+    items = [it for it in items if not looks_like_article(it.get("title") or "")]
     candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
     if not candidates:
         candidates = [it for it in items if not _is_bad(it)]
@@ -318,6 +336,16 @@ def _search_naver(keyword: str, known_brand: str) -> dict | None:
 
     if not items:
         return None  # 진짜 무결과
+
+    # [v4.9.0] 광고/추천글은 후보에서 뺀다. 이게 1위로 잡히면 진짜 상품을
+    # 찾을 기회 자체가 사라진다. 전부 광고글이면 무결과로 본다 —
+    # 억지로 하나 고르느니 다른 소스에 맡기는 편이 낫다.
+    filtered = [it for it in items if not looks_like_article(it.get("title") or "")]
+    if len(filtered) != len(items):
+        print(f"    [광고글제외] 네이버 후보 {len(items) - len(filtered)}건 제거", file=sys.stderr)
+    if not filtered:
+        return None
+    items = filtered
 
     top = items[0]
     seen = set()

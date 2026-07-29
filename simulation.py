@@ -892,11 +892,18 @@ def t61_search_blackhole_and_articles():
     # 뺀 건은 기록으로 남겨야 한다.
     logged = 'reason": f"검색 블랙홀' in fn
 
+    # [v4.9.0] 검증 단계에서도 걸러야 한다. 검수페이지에서만 빼면 광고글이
+    # '승자'가 됐을 때 진짜 상품을 찾을 기회 자체가 사라지고, 그 상품은
+    # 링크 없음으로 버려진다.
+    vsrc = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    verify_filtered = ("def looks_like_article(" in vsrc
+                       and "looks_like_article(it.get(\"title\") or \"\")" in vsrc)
+
     ok = (has_article and article_applied and has_blackhole and blackhole_applied
-          and keeps_best and logged)
+          and keeps_best and logged and verify_filtered)
     check("61 검색 블랙홀/광고글 차단", ok,
           f"광고패턴{has_article} 광고적용{article_applied} 블랙홀{has_blackhole} "
-          f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged}")
+          f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged} 검증단계{verify_filtered}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
