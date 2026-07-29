@@ -59,6 +59,9 @@ def render_cards(pairs: list[dict]) -> str:
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        if int(p.get("confidence", 4)) <= 1:
+            brand_badge += ('<span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이'
+                            ' 높습니다. 사진·용량을 꼭 확인하세요</span>')
         if p.get("single_source_naver"):
             brand_badge += ('<span class="badge warn">⚠ 단독 매칭 — 네이버 한 곳만 찾았습니다.'
                             ' 사진을 반드시 대조하세요</span>')
@@ -162,11 +165,15 @@ def sort_by_brand_confidence(pairs: list[dict]) -> list[dict]:
     # 원래 순서를 보존하려고 인덱스를 함께 쓴다(같은 등급 안에서는
     # 기존 순서 그대로 — 정렬 때문에 매번 순서가 뒤바뀌면 어제 어디까지
     # 봤는지 알 수 없게 된다).
-    # [v4.1.0] 2차 기준: 합의 없이 네이버 단독으로 통과한 건은 뒤로.
-    #  오매칭을 거를 자동 수단이 없어 사진 대조가 필수인 구간이다.
+    # [v4.4.0] 1차 기준을 '매칭 신뢰도(confidence, 0~4)'로 바꾼다.
+    #  브랜드만 보던 것을 브랜드+이름유사도+용량+단독여부를 합친 점수로
+    #  대체했다. 검수페이지 2,100건 전수 점검 결과 신뢰도가 고르지 않아
+    #  (확실 870 / 보통 818 / 의심 412), 섞여 있으면 확실한 건에도 같은
+    #  주의를 쓰게 되고 정작 위험한 건을 놓친다.
+    #  브랜드 등급은 동점일 때의 2차 기준으로 남긴다.
     return [x for _, _, _, x in sorted(
-        ((BRAND_ORDER.get(p.get("brand_status"), 1),
-          1 if p.get("single_source_naver") else 0, i, p) for i, p in enumerate(pairs)),
+        ((-int(p.get("confidence", 0)),
+          BRAND_ORDER.get(p.get("brand_status"), 1), i, p) for i, p in enumerate(pairs)),
         key=lambda t: (t[0], t[1], t[2]))]
 
 

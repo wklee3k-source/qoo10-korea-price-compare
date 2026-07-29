@@ -686,7 +686,12 @@ def t55_naver_single_source_pass():
     flagged = '"single_source_naver": single_source_naver' in body
     passed_to_review = '"single_source_naver": x.get("single_source_naver")' in review
     warned = "단독 매칭" in review and "단독 매칭" in batches
-    sorted_back = 'if p.get("single_source_naver") else 0' in batches
+    # [v4.4.0] 정렬 1차 기준이 신뢰도 점수로 바뀌었고, 단독통과는 그 점수에
+    # 감점(-1)으로 반영된다. 즉 여전히 뒤로 밀린다.
+    sorted_back = ('if p.get("single_source_naver") else 0' in batches
+                   or ('-int(p.get("confidence", 0))' in batches
+                       and "single_source" in (SRC / "build_review.py").read_text(encoding="utf-8")
+                       .split("def match_confidence(")[1].split("\ndef ")[0]))
 
     ok = (requires_link and quorum_intact and not_from_zero and flagged
           and passed_to_review and warned and sorted_back)
@@ -756,6 +761,38 @@ def t57_brand_name_mismatch_exclusion():
     check("57 브랜드+이름 동시 불일치 제외", ok,
           f"두척도{two_metrics} 동시조건{both_required} 결합{combined} "
           f"제외목록기록{logged} 영문판단불가{latin_guard}")
+
+
+# --------------------- #58 매칭 신뢰도 기반 검수 정렬
+#  검수페이지 2,100건 전수 점검 결과 신뢰도가 고르지 않았다
+#  (확실 870 / 보통 818 / 의심 412). 섞여 있으면 확실한 건에도 같은 주의를
+#  쓰게 되고 정작 위험한 건을 놓친다. 브랜드만 보던 정렬을
+#  브랜드+이름유사도+용량+단독여부를 합친 점수로 바꾼다.
+#
+#  낮은 점수를 자동으로 버리지는 않는다 — 실측 표본 10건 중 3건이 정상
+#  매칭이었다('花王 큐레루'와 '나수 Curel'은 같은 제품, 'LE LABO'와
+#  '르라보'도 같은 제품). 순서만 바꾸고 판단은 사람이 한다.
+def t58_confidence_ordering():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    has_fn = "def match_confidence(" in src
+    # 네 가지 신호를 모두 반영해야 한다.
+    uses_all = all(k in src.split("def match_confidence(")[1].split("\ndef ")[0]
+                   for k in ("brand_status", "_sim_token", "vol_mismatch", "single_source"))
+    attached = '"confidence": match_confidence(' in src
+    # 양쪽 용량을 다 알 때만 불일치로 봐야 한다(한쪽만 있으면 판단불가).
+    vol_guard = "qoo10_vol is not None and kr_vol is not None and not vol_match" in src
+    sorts_by_conf = '-int(p.get("confidence", 0))' in batches
+    warns_low = "신뢰도 낮음" in src and "신뢰도 낮음" in batches
+    # 정렬만 하고 버리지는 않는다.
+    not_dropped = 'confidence' not in batches.split("def build_batches(")[1].split("all_pairs = [")[0] \
+        or "continue" not in batches.split('"confidence"')[0][-200:]
+
+    ok = has_fn and uses_all and attached and vol_guard and sorts_by_conf and warns_low and not_dropped
+    check("58 신뢰도 기반 검수 정렬", ok,
+          f"함수{has_fn} 네신호{uses_all} 부착{attached} 용량가드{vol_guard} "
+          f"정렬{sorts_by_conf} 경고{warns_low} 버리지않음{not_dropped}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
