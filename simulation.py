@@ -930,6 +930,13 @@ def t62_foreign_brand_exclusion():
     # 한국 브랜드가 목록에 섞이면 멀쩡한 상품이 통째로 사라진다.
     korean_safe = valid and not ({"アヌア", "メディキューブ", "雪花秀", "呂", "オフィ",
                                   "アモーレパシフィック", "ヘラ", "イニスフリー"} & set(brands))
+    # [v5.2.1] 목록을 공백으로 쪼개 만들다가 'LE LABO'가 'LE'와 'LABO'로,
+    # 'Suntory Wellness'가 'Suntory'와 'Wellness'로 갈라져 있었다.
+    # 조각은 어떤 브랜드와도 일치하지 않아 조용히 아무 일도 안 한다 —
+    # 걸러진 줄 알았던 상품이 그대로 검증·검수에 들어왔다.
+    no_fragments = valid and not ({"LE", "LABO", "JILL", "STUART", "ADVANCED",
+                                   "CLINICALS", "AZABU", "COSMETICS", "Suntory",
+                                   "Wellness"} & set(brands))
     loaded = 'foreign_path = DATA / "foreign_brands.json"' in src
     applied = 'in foreign_brands:' in src
     counted = '"foreign": 0' in src
@@ -941,11 +948,11 @@ def t62_foreign_brand_exclusion():
     wf = WF.read_text(encoding="utf-8")
     verify_skips = "foreign_brands.json" in wf and "해외브랜드제외" in wf
 
-    ok = (exists and valid and korean_safe and loaded and applied and counted and safe
-          and verify_skips)
+    ok = (exists and valid and korean_safe and no_fragments and loaded and applied
+          and counted and safe and verify_skips)
     check("62 해외 브랜드 제외", ok,
           f"파일{exists}({len(brands) if isinstance(brands, list) else '깨짐'}종) 형식{valid} "
-          f"한국브랜드미포함{korean_safe} 읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe} "
+          f"한국브랜드미포함{korean_safe} 조각없음{no_fragments} 읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe} "
           f"검증단계{verify_skips}")
 
 
