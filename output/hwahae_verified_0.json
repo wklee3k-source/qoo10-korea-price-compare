@@ -7134,5 +7134,417 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1178847743",
+    "translated_kr": "르 라보 매차 26 오 드 파르팡 스프레이",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "상탈33 퍼퓨밍 바디로션",
+      "naver": "르라보 떼마차26 오드퍼퓸 100ml",
+      "daum": "하 하늘은 도대체 왜!!!!!!! 나에게 돈을 안주고 향수",
+      "naver_web": "상탈 33 퍼퓨밍 바디 로션"
+    },
+    "brand": "르라보",
+    "name": "르라보 떼마차26 오드퍼퓸 100ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "240920",
+    "mall": "라 메종드 퍼퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13679170458",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122368/91223681546.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122368/91223681546.1.jpg",
+        "mall": "라 메종드 퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/13679170458"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8606650/86066508690.jpg",
+        "mall": "빈앤코",
+        "link": "https://smartstore.naver.com/main/products/8522008367"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8780693/87806931834.3.jpg",
+        "mall": "씨에고 See-ego",
+        "link": "https://smartstore.naver.com/main/products/10262428067"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8541851/85418512027.1.jpg",
+        "mall": "아이민홍콩",
+        "link": "https://smartstore.naver.com/main/products/7874011704"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1014156682",
+    "translated_kr": "래디언썸100 마이크로 플루이다이저 에센스 50ml",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "naver_web": "ICD 래디언솜 100 마이크로플루다이저 크림 사용",
+      "naver_rematch": "ICD 인셀덤 래디언솜 100 마이크로플루다이저 크림"
+    },
+    "brand": "인셀덤",
+    "name": "ICD 인셀덤 래디언솜 100 마이크로플루다이저 크림",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "99000",
+    "mall": "ICD 인셀덤 정품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12910208114",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045471/90454719106.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045471/90454719106.jpg",
+        "mall": "ICD 인셀덤 정품",
+        "link": "https://smartstore.naver.com/main/products/12910208114"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9037710/90377104269.jpg",
+        "mall": "인셀덤 정품몰",
+        "link": "https://smartstore.naver.com/main/products/12832593277"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052723/90527238510.jpg",
+        "mall": "인셀덤보타랩 정품몰",
+        "link": "https://smartstore.naver.com/main/products/12982727500"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052729/90527292029.jpg",
+        "mall": "더겟",
+        "link": "https://smartstore.naver.com/main/products/12982781019"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194263979",
+    "translated_kr": "[1+1] 프래그런스 바디워시 600ml×2개 세트_선택 2종 [화이트머스크/시트러스]_브라이트닝/퍼퓸 바디클렌저",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스마일 바디워시 [브라이트닝자몽&오렌지]",
+      "naver": "NEW 줄라이모닝 약산성 퍼퓸 바디워시 촉촉한 바디워시 400ml2개 세트",
+      "daum": "연혁과 역사] 1985년 4월25일 애경산업 설립",
+      "naver_web": "해피바스 스마일 바디워시 브라이트닝 자몽 앤 오렌지 3개/바디클렌저"
+    },
+    "brand": "해피바스 (HAPPYBATH)",
+    "name": "스마일 바디워시 [브라이트닝자몽&오렌지]",
+    "volume": "900g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "68480",
+    "mall": "줄라이 모닝",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13193176265",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9073768/90737687362.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073768/90737687362.jpg",
+        "mall": "줄라이 모닝",
+        "link": "https://smartstore.naver.com/main/products/13193176265"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9056673/90566737734.jpg",
+        "mall": "호앤토",
+        "link": "https://smartstore.naver.com/main/products/13022226641"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068861/90688610980.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13144099888"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068861/90688612720.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13144101628"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068861/90688613310.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/13144102218"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151287022",
+    "translated_kr": "시피원 헤어프리미엄 트리트먼트 250ml 머리 영양 두피 머릿결",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "블랙 트러플 오일 머릿결 케어 약산성 샴푸",
+      "naver": "씨피원 대용량 프리미엄 헤어 트리트먼트 250ml",
+      "daum": "헤어드라이어, 올바른 사용법과 관리",
+      "naver_web": "#머릿결"
+    },
+    "brand": "CP-1",
+    "name": "씨피원 대용량 프리미엄 헤어 트리트먼트 250ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "12600",
+    "mall": "씨피원 CP-1",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4785063928",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8232958/82329586389.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8232958/82329586389.1.jpg",
+        "mall": "씨피원 CP-1",
+        "link": "https://smartstore.naver.com/main/products/4785063928"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1082869/10828695264.6.jpg",
+        "mall": "씨피원 CP-1",
+        "link": "https://smartstore.naver.com/main/products/602638915"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8232958/82329586390.1.jpg",
+        "mall": "CP-1",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4785063929"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8710462/87104620831.jpg",
+        "mall": "씨피원 CP-1",
+        "link": "https://smartstore.naver.com/main/products/9560118561"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151033114",
+    "translated_kr": "마다가스카르 센텔라 히알루 시카 광채 토너 210ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 광채 토너",
+      "musinsa": "마다가스카르 센텔라 히알루-시카 광채 토너 210ml",
+      "naver": "마다가스카르 센텔라 히알루-시카 광채 토너 210ml",
+      "daum": "마다가스카르 센텔라 히알루",
+      "naver_web": "마다가스카르 센텔라 히알루"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 광채 토너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "22500",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5288639812",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8283313/82833131954.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8283313/82833131954.7.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/5288639812"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1128159000",
+    "translated_kr": "[공식] 한국 화제의 기미 제거 크림 /메디올가 브라이트닝 크림 30ml 피부 톤업",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "나뛰르 뉴트리티브 쉬어 & 코코아 크림 포 베리 드라이 스킨",
+      "daum": "메디올가 브라이트닝 반점 제거 미백 에센스 잡티 기미 제거 검버섯 주근깨 케어 톤업 화이트닝 아하...",
+      "naver_web": "Dermal Therapy 더말 테라피 베리 드라이 스킨 크림 Very Dry Skin Cream, , 1개",
+      "naver_rematch": "Dermal Therapy Very Dry Face Cream 더말 테라피 베리 드라이 페이스 크림 50g 2개"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199465479",
+    "translated_kr": "씨클루노 스노우 아이스 스프레이 모모리엘 88[완숙 복숭아 향]",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "배바닐라",
+      "naver_rematch": "포켓몬카드 덱소스 배바닐라 MC 201/742 스타트덱 100"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194066827",
+    "translated_kr": "톤업 자외선차단제 비타톤업 선크림 SPF50+ PA++++ 50ml 화장 베이스 한국코스메",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "FB22 베이스 마스터 파운데이션",
+      "naver": "LYS 선크림 톤업 베이스겸용 파데프리 자연광채 피부보정 자외선차단 데일리",
+      "daum": "어떤 선 크림을 사야 잘 샀다고 소문이 날까?",
+      "naver_web": "뉴스 스킨 선라이트 선크림 SPF50"
+    },
+    "brand": "피카소 (piccasso)",
+    "name": "FB22 베이스 마스터 파운데이션",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "22000",
+    "mall": "LYS 몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11083579558",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8862808/88628089880.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8862808/88628089880.5.jpg",
+        "mall": "LYS 몰",
+        "link": "https://smartstore.naver.com/main/products/11083579558"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8929174/89291749814.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/11747239296"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1153873935",
+    "translated_kr": "[정품]글루타치온솜 CC 선크림 토닝 튜브 SPF50+ PA++++ 50ml/자외선차단제/한국코스메/SPF50+/밀크 타입/UV컷 크림/자외선차단제 추천",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온좀 CC 선크림 토닝 튜브 [SPF50+/PA++++]",
+      "naver": "아비브 글루타치온좀 CC 톤업 선크림 토닝 튜브 SPF50+ PA++++ 50ml, 1개",
+      "naver_web": "소아비만의 원인, 치료"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "글루타치온좀 CC 선크림 토닝 튜브 [SPF50+/PA++++]",
+    "volume": "50mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "20000",
+    "mall": "아비브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11668436156",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8921294/89212946623.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8921294/89212946623.4.jpg",
+        "mall": "아비브",
+        "link": "https://smartstore.naver.com/main/products/11668436156"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8921294/89212946624.3.jpg",
+        "mall": "아비브",
+        "link": "https://shopping.naver.com/outlink/itemdetail/11668436157"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119065/91190651632.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13646140853"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180316822",
+    "translated_kr": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 50ml SPF 50 PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]",
+      "naver": "[대용량] 마다가스카르 센텔라 히알루-시카 워터핏 선세럼 100ml, 1개",
+      "daum": "선케어의 진화, 스킨1004 센텔라 히알루",
+      "naver_web": "스킨1004 마다가스카르 센텔라 히알루 시카 워터핏 선 세럼 1개_MZ"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 히알루-시카 워터핏 선 세럼 [SPF50+/PA++++]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "30600",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10565600046",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8811010/88110105570.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8811010/88110105570.1.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/10565600046"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8820058/88200582302.7.jpg",
+        "mall": "Top뷰티",
+        "link": "https://smartstore.naver.com/main/products/10656076404"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8926133/89261337490.jpg",
+        "mall": "코코넛카트",
+        "link": "https://smartstore.naver.com/main/products/11716827023"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
