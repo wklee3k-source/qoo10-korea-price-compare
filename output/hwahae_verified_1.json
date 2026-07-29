@@ -13095,5 +13095,359 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1183542274",
+    "translated_kr": "아웃바스 트리트먼트 아미노산 '팔가 크림·리테이너 60ml' 세정하지 않는 트리트먼트 뷰티살롱 전매품 살롱 전매 헤어 트리트먼트 데미지 헤어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1184619424",
+    "translated_kr": "【공식/정품판매】Green bio 슈퍼 트리트먼트 마스크 30ml x 6개입 박스 케라틴·실크 함유 살롱 품질 데미지 보수·보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver": "올마실 비건 8초 살롱 프리미엄 헤어 마스크 100ml",
+      "naver_web": "도쿄 스카이 트리 지역"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "27000",
+    "mall": "마실 Masil 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/9266318440",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/9266318440"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038200/90382005237.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12837494245"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1201488693",
+    "translated_kr": "오일 컷 클렌징 190ml 1+1 / 촉촉한 시원한 클렌징 / 각질 케어 / 민감 피부 / 메이크 제거 / 보습 케어 / 피지 케어 / 투명감 / 민감 피부 / 기능성 / 한국화장품",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "hwahae": "녹두 클렌징 오일",
+      "daum": "화장품",
+      "naver_web": "비플레인 녹두 클렌징 오일 , , 2개",
+      "naver_rematch": "살림백서 제로 녹두 15000 클렌징 오일 150ml 대용량 블랙헤드 제거 코 피지제거"
+    },
+    "brand": "살림백서",
+    "name": "살림백서 제로 녹두 15000 클렌징 오일 150ml 대용량 블랙헤드 제거 코 피지제거",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "9700",
+    "mall": "살림백서",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12747797305",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9029230/90292308246.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9029230/90292308246.jpg",
+        "mall": "살림백서",
+        "link": "https://smartstore.naver.com/main/products/12747797305"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210371779",
+    "translated_kr": "1+1 톡스 필 업 리프팅 세럼 11ml+11ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "스킨케어 비건 쿠션 [SPF38/PA++] [21호]",
+      "daum": "스킨케어",
+      "naver_web": "리프팅앰플 리프톡스",
+      "naver_rematch": "[아이소이] 스킨케어 비건 쿠션 SPF38 PA++ 21호 (본품13g+리필 13g)"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "리프팅앰플 리프톡스",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "40800",
+    "mall": "아이소이 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/7899595094",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8544409/85444095417.18.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8544409/85444095417.18.jpg",
+        "mall": "아이소이 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/7899595094"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8966447/89664476202.9.jpg",
+        "mall": "아이소이 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/12119965497"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1087607248",
+    "translated_kr": "【세트 상품】퍼퓸 바디 로션 바디 워시 세트 3종 중 선택",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "퍼퓸 바디로션+바디워시 듀오 SET (3종 중 택1)",
+      "daum": "티블레스 앤틱 허브 블랙 퍼퓸 바디로션 앤 바디워시 기프트 세트",
+      "naver_web": "퍼퓸 바디로션 3종 선물세트"
+    },
+    "brand": "스카이보틀",
+    "name": "퍼퓸 바디로션+바디워시 듀오 SET (3종 중 택1)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "30000",
+    "mall": "스카이보틀",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11221948016",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8876645/88766458347.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8876645/88766458347.1.jpg",
+        "mall": "스카이보틀",
+        "link": "https://smartstore.naver.com/main/products/11221948016"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206316873",
+    "translated_kr": "스피디 클렌징 젤 130g",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "휩 스피디",
+      "musinsa": "스피디 퍼펙트 휩 150ml 2개",
+      "naver": "코세 소프티모 스피디 클렌징 젤 240ml",
+      "daum": "★시세이도 센카N 퍼펙트 휩N/클렌징폼/젤/오일/스피디휩/화이트클레이/에어리터치/모이스트터치/리퀴드...",
+      "naver_web": "센카 스피디 퍼펙트 휩 클렌징 폼, , 1개"
+    },
+    "brand": "우노 (UNO)",
+    "name": "센카 스피디 퍼펙트 휩 클렌징 폼, , 1개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "7500",
+    "mall": "도쿄락",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13557837577",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9110234/91102347944.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110234/91102347944.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/13557837577"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105960/91059608823.jpg",
+        "mall": "엘사론",
+        "link": "https://smartstore.naver.com/main/products/13515098471"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105964/91059649438.jpg",
+        "mall": "엘사론",
+        "link": "https://smartstore.naver.com/main/products/13515139086"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104578/91045789190.jpg",
+        "mall": "라벤-더",
+        "link": "https://smartstore.naver.com/main/products/13501278838"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9077995/90779958989.jpg",
+        "mall": "트렌드-픽-",
+        "link": "https://smartstore.naver.com/main/products/13235448658"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182363746",
+    "translated_kr": "인스타 화이트 톤 업 크림 50g 화장 베이스 건성 침투 미갑 탄력 윤기",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "화장품",
+      "naver_rematch": "메디필 멜라논 73%(+기미 케어)미백 연고 트라넥삼산 주근깨 멜라노사 크림"
+    },
+    "brand": "메디필",
+    "name": "화장품",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "14500",
+    "mall": "비타스킨",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11896156825",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8944066/89440667434.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944066/89440667434.7.jpg",
+        "mall": "비타스킨",
+        "link": "https://smartstore.naver.com/main/products/11896156825"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142461931",
+    "translated_kr": "M) 세정하지 않는 타입 히팅 가드 노워시 트리트먼트 147ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히팅 가드 노워시 헤어 트리트먼트",
+      "daum": "바쁜 일상 속 빛나는 머릿결의 비결: 어노브 노워시 앰플 트리트먼트 완벽 가이드",
+      "naver_web": "어노브 히팅 가드 노워시 트리트먼트 -",
+      "naver_rematch": "어노브 히팅 가드 노워시 열보호 헤어 트리트먼트 더블세트 (147mlX2)"
+    },
+    "brand": "어노브 (UNOVE)",
+    "name": "히팅 가드 노워시 헤어 트리트먼트",
+    "volume": "147ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "30900",
+    "mall": "어노브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8283369974",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8582787/85827870297.34.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8582787/85827870297.34.jpg",
+        "mall": "어노브",
+        "link": "https://smartstore.naver.com/main/products/8283369974"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8581763/85817633695.9.jpg",
+        "mall": "어노브",
+        "link": "https://smartstore.naver.com/main/products/8273133372"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8648991/86489913603.6.jpg",
+        "mall": "어노브",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8945413280"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1173470636",
+    "translated_kr": "30장입 【4상자 세트】 네오사이트 원데이 링 UV",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "naver_web": "칼라 콘택트",
+      "naver_rematch": "타몽 투명 소프트렌즈 통 콘택트 렌즈 케이스 원데이 일회용 돌기 국산 칼라"
+    },
+    "brand": null,
+    "name": "타몽 투명 소프트렌즈 통 콘택트 렌즈 케이스 원데이 일회용 돌기 국산 칼라",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "90",
+    "mall": "타몽",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5981666535",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8352616/83526166023.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8352616/83526166023.jpg",
+        "mall": "타몽",
+        "link": "https://smartstore.naver.com/main/products/5981666535"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8062666/80626663097.5.jpg",
+        "mall": "SSC 마켓",
+        "link": "https://smartstore.naver.com/main/products/3128918849"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207914280",
+    "translated_kr": "【공식 피네스】사지나·아이롱 헤어 마스크 주 1회로 아침 편한 머리로 미용실 전문 판매 제조업체 공동 개발 산열 케어 스트레이트 마감용 헹굼 트리트먼트 9g×4본 일본 제",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
