@@ -19135,5 +19135,361 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194313865",
+    "translated_kr": "[30명 리뷰 캠페인] 제주도 탄제린 X PDRN 벨벳 엘릭시아 핸드 크림 50ml / 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "naver_rematch": "[닥터슈 크리에이티브] PDRN 모이스처 맥스 크림 고기능 연어DNA성분 피부진정 장벽강화"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "26000",
+    "mall": "닥터슈 크리에이티브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10831785692",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+        "mall": "닥터슈 크리에이티브",
+        "link": "https://smartstore.naver.com/main/products/10831785692"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1010015951",
+    "translated_kr": "[VC 미용액] [비타민C 유도체 고농도 30% 배합] 일본 제조 비타민C 미용액 스킨케어 모공 에이징 케어 여드름 케어 피부 트러블 각질 케어 고보습 건성 피부 민감한 피부 세럼 여성용 기미 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "일본 퀄리티퍼스트 더마 레이저 울세라 C W 세럼 30ml 비타민 함유 일본화장품",
+      "daum": "일본직구 No.1 코스믹 COSMIK 마스크팩 COSMETIC > 스킨케어 > 마스크팩/필링/모공팩 > 마스크팩",
+      "naver_web": "하또무기 스킨.에센스.밀크 세트"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "25800",
+    "mall": "여기서부터 일본",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13617138333",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116164/91161648750.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116164/91161648750.jpg",
+        "mall": "여기서부터 일본",
+        "link": "https://smartstore.naver.com/main/products/13617138333"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1020889597",
+    "translated_kr": "[공식] 베이직 헤어 케어 세트 샴푸 : 200ml 트리트먼트 : 185ml 샴푸 트리트먼트 세트 샴푸 트리트먼트 맨즈 남성용 여성 헤어 케어 두피 케어 보습 일본 제조",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "두피강화 클리닉 탈모증상완화 샴푸",
+      "naver": "LABO H 탈모증상완화 샴푸 두피강화 (본품+리필) 400ml 2입 기획 + 증정338591",
+      "daum": "샴푸",
+      "naver_web": "헤어 트리트먼트"
+    },
+    "brand": "라보에이치 (LABO-H)",
+    "name": "두피강화 클리닉 탈모증상완화 샴푸",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "30780",
+    "mall": "하마-마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13501099268",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104560/91045609620.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104560/91045609620.2.jpg",
+        "mall": "하마-마켓",
+        "link": "https://smartstore.naver.com/main/products/13501099268"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095158/90951587901.jpg",
+        "mall": "CleanBox",
+        "link": "https://smartstore.naver.com/main/products/13407077565"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1122439844",
+    "translated_kr": "[공식] 셀라 인텐시브 수딩 앰플 60ml 앰플 / 주름 / 스킨케어 / 미스트 / 보습",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "SUMMER CARRY",
+      "naver_web": "시카골드 화산재팩/피지제거/모공수축/피부진정/블랙헤드",
+      "naver_rematch": "미니캐리어 서머레디백 기내용 여행가방 14인치 Carry on luggage"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1110551308",
+    "translated_kr": "시카 두 케어링 앰플 (50ml)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "시카 듀 케어링 토너",
+      "naver": "[키시닝 뷰티] 시카 듀 케어링 앰플 50ml KISY02001",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "키시닝뷰티 시카 듀 케어링 스킨케어 3 SET"
+    },
+    "brand": "키시닝뷰티 (kisyningbeauty)",
+    "name": "[키시닝 뷰티] 시카 듀 케어링 앰플 50ml KISY02001",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "30600",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4265198?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6103499/61034991809.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6103499/61034991809.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4265198?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5983015/59830153660.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6282554?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=325868"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107172/91071723091.jpg",
+        "mall": "살림담다 마켓",
+        "link": "https://smartstore.naver.com/main/products/13527212738"
+      }
+    ],
+    "real_page_title": "키시닝 뷰티(KISYNING BEAUTY) 시카 듀 케어링 앰플 50ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1108224056",
+    "translated_kr": "시카두 · 케어링 · 토너 (150ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 듀 케어링 토너",
+      "naver": "[키시닝 뷰티] 시카 듀 케어링 토너 150ml KISY02000",
+      "naver_web": "시카 듀 케어링 토너"
+    },
+    "brand": "키시닝뷰티 (kisyningbeauty)",
+    "name": "시카 듀 케어링 토너",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "26100",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4265106?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6103499/61034994817.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6103499/61034994817.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4265106?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "real_page_title": "키시닝 뷰티(KISYNING BEAUTY) 시카 듀 케어링 토너 150ml",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195927854",
+    "translated_kr": "닥터셀렉트 비아주 알게 솝 100g 살롱 판매 상품 무료배송 스킨케어 천연 미네랄 솝 비누 닥터셀렉트 천연 미네랄",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "구매",
+      "naver_web": "모낭염인지 여드름인지 모르겠어요"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1153077693",
+    "translated_kr": "루미너스 하이드레이팅 시트 마스크 4장 입 박스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "루미너스 하이드레이팅 시트 마스크",
+      "naver_web": "루미너스 하이드레이팅 시트 마스크",
+      "naver_rematch": "세인트프랑 루미너스 하이드레이팅 마스크 25g x 4개 [1박스]"
+    },
+    "brand": "베이지크 (BEIGIC)",
+    "name": "루미너스 하이드레이팅 시트 마스크",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "7800",
+    "mall": "스마트Living",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13685559547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9123007/91230070790.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9123007/91230070790.jpg",
+        "mall": "스마트Living",
+        "link": "https://smartstore.naver.com/main/products/13685559547"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1122941494",
+    "translated_kr": "O2 버블 산소 펩타이드 에센스 50ml 고농축 펩타이드 에센스 디엠셀 버블 세럼 탄력 · 탄성 · 수분 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver": "디엠쎌 산소 버블 펩타이드 오투 에센스, EGF 펩타이드 판테놀 탄력 보습 항산화 케어",
+      "daum": "새로운 성분으로 무장한 5월 신상 #스킨케어"
+    },
+    "brand": "디엠쎌",
+    "name": "디엠쎌 산소 버블 펩타이드 오투 에센스, EGF 펩타이드 판테놀 탄력 보습 항산화 케어",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "56000",
+    "mall": "디엠쎌코스메틱",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9631228488",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8717573/87175730758.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8717573/87175730758.1.jpg",
+        "mall": "디엠쎌코스메틱",
+        "link": "https://smartstore.naver.com/main/products/9631228488"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047073/90470732084.jpg",
+        "mall": "Ecoflower",
+        "link": "https://smartstore.naver.com/main/products/12926221092"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047069/90470699601.jpg",
+        "mall": "J.W Mall",
+        "link": "https://smartstore.naver.com/main/products/12926188609"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204653366",
+    "translated_kr": "【3개 세트】열 손상으로부터 모발을 보호하는 히팅 가드 노 워시 트리트먼트 147ml 3개 헹굼하지 않는 트리트먼트 헤어케어 영양 단백질 대량 구매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히팅 가드 노워시 헤어 트리트먼트",
+      "daum": "바쁜 일상 속 빛나는 머릿결의 비결: 어노브 노워시 앰플 트리트먼트 완벽 가이드",
+      "naver_web": "어노브 히팅 가드 노워시 헤어 트리트먼트, , 1개",
+      "naver_rematch": "어노브 히팅 가드 노워시 열보호 헤어 트리트먼트 더블세트 (147mlX2)"
+    },
+    "brand": "어노브 (UNOVE)",
+    "name": "히팅 가드 노워시 헤어 트리트먼트",
+    "volume": "147ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "30900",
+    "mall": "어노브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8283369974",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8582787/85827870297.34.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8582787/85827870297.34.jpg",
+        "mall": "어노브",
+        "link": "https://smartstore.naver.com/main/products/8283369974"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8581763/85817633695.9.jpg",
+        "mall": "어노브",
+        "link": "https://smartstore.naver.com/main/products/8273133372"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8648991/86489913603.6.jpg",
+        "mall": "어노브",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8945413280"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
