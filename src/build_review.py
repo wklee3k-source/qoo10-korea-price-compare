@@ -148,6 +148,30 @@ def looks_like_mismatch(qoo10_name: str, kr_name: str) -> bool:
     return _sim_token(qoo10_name, kr_name) < 0.3 and _sim_bigram(qoo10_name, kr_name) < 0.45
 
 
+def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
+                     vol_mismatch: bool, single_source: bool) -> int:
+    """이 매칭이 얼마나 믿을 만한지 0~4로 매긴다(높을수록 확실).
+
+    [왜 필요한가] 검수페이지 2,100건을 전수 점검해보니 신뢰도가 고르지 않다.
+    브랜드가 확인되고 이름도 거의 일치하는 건이 있는가 하면, 브랜드도 못
+    맞추고 이름도 절반만 겹치는 건이 섞여 있다. 섞여 있으면 확실한 건에도
+    같은 주의를 쓰게 되고, 정작 위험한 건을 놓친다.
+
+    자동으로 버리지는 않는다. 낮은 점수 구간에도 정상 매칭이 30%쯤 있다
+    (실측 표본 10건 중 3건 — '花王 큐레루'와 '나수 Curel'은 같은 제품,
+    'LE LABO'와 '르라보'도 같은 제품). 순서만 바꾸고 판단은 사람이 한다.
+    """
+    score = 0
+    score += 2 if brand_status == "match" else (1 if brand_status == "unknown" else 0)
+    t, b = _sim_token(qoo10_name, kr_name), _sim_bigram(qoo10_name, kr_name)
+    score += 2 if (t >= 0.5 or b >= 0.6) else (1 if (t >= 0.3 or b >= 0.35) else 0)
+    if vol_mismatch:
+        score -= 1          # 용량이 다르면 다른 SKU이거나 오매칭이다
+    if single_source:
+        score -= 1          # 합의 없이 네이버 단독으로 통과한 건
+    return max(score, 0)
+
+
 def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
@@ -427,6 +451,12 @@ def build_pairs():
             "obsolete": x.get("obsolete"),
             "naver_rematched": x.get("naver_rematched"),
             "single_source_naver": x.get("single_source_naver"),
+            # [v4.4.0] 매칭 신뢰도(0~4). 검수 순서를 이 값으로 정한다.
+            "confidence": match_confidence(
+                translated_kr, x.get("name") or "", brand_status,
+                # 양쪽 다 용량을 알 때만 '불일치'로 본다(한쪽만 있으면 판단불가).
+                bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                bool(x.get("single_source_naver"))),
         })
 
     if excluded_mismatch:
@@ -496,6 +526,9 @@ def build_html(pairs: list[dict]):
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        if int(p.get("confidence", 4)) <= 1:
+            brand_badge += ('<span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이'
+                            ' 높습니다. 사진·용량을 꼭 확인하세요</span>')
         if p.get("single_source_naver"):
             brand_badge += ('<span class="badge warn">⚠ 단독 매칭 — 네이버 한 곳만 찾았습니다.'
                             ' 사진을 반드시 대조하세요</span>')
