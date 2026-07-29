@@ -7100,5 +7100,340 @@
     "stock_evidence": [
       "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=2196&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
     ]
+  },
+  {
+    "goods_no": "1199126524",
+    "translated_kr": "트리팩스 샴푸 500ml 리필",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "엑스트라 데미지 케어 샴푸",
+      "naver": "산콜 트리팩스 샴푸 1000ml 리필",
+      "daum": "&#34;간편해서 즐겨 썼는데&#34; 340억 대박 &#39;염색 샴푸&#39; 날벼락",
+      "naver_web": "케라시스 엑스트라 데미지 샴푸 리필"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "산콜 트리팩스 샴푸 1000ml 리필",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "60300",
+    "mall": "우주인우츄진",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13169334909",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9071384/90713846006.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071384/90713846006.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13169334909"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9076009/90760099198.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13215588876"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9073348/90733489784.jpg",
+        "mall": "우주인우츄진",
+        "link": "https://smartstore.naver.com/main/products/13188978687"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120044/91200448704.jpg",
+        "mall": "재팬 도코도코",
+        "link": "https://smartstore.naver.com/main/products/13655937919"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185443098",
+    "translated_kr": "[메디힐 마스크팩 증정][정품][화장품보다 먼저 세포랩]세포랩 바이오제닉 에센스 90% 3종/2종 택1/여배우용 미용액/수분/보습/탄력/민감피부케어/한국 미용액",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168004689",
+    "translated_kr": "퍼퓸 샴푸+린스 세트[스윗파라올리/프레시래시/바이올렛/그린릴리/화이트데이지]윤기 영양 보습 수분 향수 샴푸 부드러운 머릿결로 한국 인기 샴푸",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 샴푸 [블루밍앤플라워리]",
+      "naver": "케라시스 샴푸선물세트 바디워시 샴푸 린스 선물세트 설날 직원선물",
+      "daum": "샴푸",
+      "naver_web": "케라시스 퍼퓸 샴푸 스위트 앤 플라워리"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "케라시스 퍼퓸 샴푸 스위트 앤 플라워리",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "26950",
+    "mall": "DG한국물산",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9874407006",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8741890/87418909279.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8741890/87418909279.jpg",
+        "mall": "DG한국물산",
+        "link": "https://smartstore.naver.com/main/products/9874407006"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152733985",
+    "translated_kr": "46cm 약산성 데오도란트 바디워시 600ml(스파클링 시트러스/리프레싱 허벌/클린소프)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "데오드란트 약산성 바디워시 [아이스 블라스트]",
+      "naver": "엘지 46cm 체취솔루션 약산성 데오드란트 바디워시 클린 솝향 600ml 1개 샤워",
+      "daum": "피부 타입별 바디워시 선택 기준",
+      "naver_web": "온더바디 46cm 체취솔루션 약산성 데오드란트 바디워시 클린솝향, , 1개"
+    },
+    "brand": "46cm (46센티미터)",
+    "name": "데오드란트 약산성 바디워시 [아이스 블라스트]",
+    "volume": "600mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "12180",
+    "mall": "더진스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13155639148",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070015/90700150245.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070015/90700150245.jpg",
+        "mall": "더진스토어",
+        "link": "https://smartstore.naver.com/main/products/13155639148"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1128159002",
+    "translated_kr": "[공식] 한국 판매 NO1 포츠포츠 조그만 사마귀 메디 AHA 사마귀 제거 크림 25ml 속립종 스팟크림",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "프로티니 No1"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1057964902",
+    "translated_kr": "레드 브레미시 시카 S 크림 보습크림 (70ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 시카 S 크림2X",
+      "naver": "닥터지 레드 블레미쉬 시카 S 크림 2X(투엑스) 70mL 비건 진정 크림",
+      "daum": "닥스 트렌치코트 디자인 진짜 잘 나왔네요 닥스 트렌치코트 지금 할인 받을 수 있는 곳 알려주세요",
+      "naver_web": "닥터지 레드 블레미쉬 시카 S 크림 |"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 시카 S 크림2X",
+    "volume": "70ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "26800",
+    "mall": "닥터지",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/4949402476",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8249392/82493922575.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8249392/82493922575.11.jpg",
+        "mall": "닥터지",
+        "link": "https://smartstore.naver.com/main/products/4949402476"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8254159/82541594371.9.jpg",
+        "mall": "닥터지",
+        "link": "https://shopping.naver.com/outlink/itemdetail/4997073704"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198891587",
+    "translated_kr": "퀄리티 퍼스트 슈퍼 블랙 VC1 샷 28개 입",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "하이포클로로스애씨드 필 샷",
+      "naver_web": "Quality 퀄리티 퍼스트 더마 레이저 슈퍼 VC 100 마스크팩 7개입, 1개입, 1개",
+      "naver_rematch": "하이포클로로스애씨드 바디 필 샷"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "Quality 퀄리티 퍼스트 더마 레이저 슈퍼 VC 100 마스크팩 7개입, 1개입, 1개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "44000",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=2608&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5797843/57978430415.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5797843/57978430415.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=2608&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119908/91199089900.jpg",
+        "mall": "미인뷰티",
+        "link": "https://smartstore.naver.com/main/products/13654579115"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1153165117",
+    "translated_kr": "5번 백옥 글루타치온C 뿌린 마스크 10장 글루타치온 필름 팩 시트마스크 팩 마스크팩 한국 인기 페이스팩 개별포장 보습 미백 민감피부 기미 여드름 흔적 색소침착",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "환절기 꿀피부 비법: 2026년 에디터가 강추하는 K",
+      "naver_web": "프롬더스킨 글루타치온 콜라겐 팩 2통+클렌징폼 1통"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180318670",
+    "translated_kr": "마다가스카르 센텔라 라이트 클렌징 오일 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 라이트 클렌징오일",
+      "musinsa": "마다가스카르 센텔라 라이트 클렌징 오일 200ml",
+      "naver": "스킨1004 마다가스카르 센텔라 라이트 클렌징 오일 200ml",
+      "daum": "스킨천사 마다가스카르 센텔라 라이트 클렌징오일",
+      "naver_web": "마다가스카르 센텔라 라이트 클렌징오일"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 라이트 클렌징오일",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10600",
+    "mall": "여우화장",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13273149934",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9081766/90817660266.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081766/90817660266.1.jpg",
+        "mall": "여우화장",
+        "link": "https://smartstore.naver.com/main/products/13273149934"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8875450/88754506939.jpg",
+        "mall": "에이치에스 푸른유통",
+        "link": "https://smartstore.naver.com/main/products/11209996608"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1179883204",
+    "translated_kr": "나이아신아마이드 10% + TXA 4% 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "daum": "아누아X톡신 TXA 세럼 2차 마켓 성료",
+      "naver_web": "아누아 나이아신아마이드 10% + TXA 4% 다크 스팟 코렉팅 세럼 호주 구매",
+      "naver_rematch": "1+1 아누아 나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼 앰플 30mL"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "26800",
+    "mall": "옴니코스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13620804079",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116531/91165314496.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116531/91165314496.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/13620804079"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
