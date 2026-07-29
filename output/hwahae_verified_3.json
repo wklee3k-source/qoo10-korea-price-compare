@@ -21427,5 +21427,63 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1120374130",
+    "translated_kr": "[공식] 젤 크림 믹서 / 10g / 미니 사이즈 / 끈적이지 않고 가벼운 사용감! 산뜻하게 사용하는 보습 크림으로 지성 피부에 추천",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 앰플 [리페어]",
+      "naver": "마실 MASIL 8초살롱 헤어 리페어 앰플 20개입",
+      "daum": "지금 꼭 써봐야 할 4월 뷰티 신상",
+      "naver_web": "💆 헤어 에센스 VS 헤어 세럼: 모발 영양 공급과 케어, 어떤 제품이 내 머리카락에 더 효과적일까?"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1043694380",
+    "translated_kr": "로열 타임 리셋 아이크림 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "로열 타임리셋 아이크림",
+      "naver": "베니아3 로열 타임리셋 아이크림 30ml",
+      "daum": "선역 보스급 캐릭터",
+      "naver_web": "로열 타임리셋 아이크림"
+    },
+    "brand": "뷰클래스 (VUCLASS)",
+    "name": "로열 타임리셋 아이크림",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "38000",
+    "mall": "벤스랩",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7755514012",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8530001/85300014334.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8530001/85300014334.2.jpg",
+        "mall": "벤스랩",
+        "link": "https://smartstore.naver.com/main/products/7755514012"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
