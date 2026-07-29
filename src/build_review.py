@@ -131,6 +131,43 @@ def _sim_bigram(a: str, b: str) -> float:
     return len(sa & sb) / min(len(sa), len(sb))
 
 
+def _flat(text: str) -> str:
+    return re.sub(r"[^가-힣A-Za-z0-9]", "", text or "").lower()
+
+
+def _brand_cross_reference(qoo10_brand: str, kr_brand: str,
+                           qoo10_name: str, kr_name: str) -> bool:
+    """어느 한쪽 브랜드가 반대편 문자열 안에 들어있으면 같은 브랜드로 본다.
+
+    사전이 없어도 살릴 수 있는 경우들이다(공백·기호 무시 비교).
+        큐텐 'LE LABO 르 라보 매차 26'  vs  매칭 브랜드 '르라보'
+        큐텐 브랜드 '花王'(큐레루)       vs  매칭 이름 'Curel_딥 모이스처'
+    이 보호가 없으면 브랜드 사전 부실이 곧 삭제로 이어진다.
+    """
+    pairs = ((kr_brand, qoo10_name), (qoo10_brand, kr_name),
+             (qoo10_brand, kr_brand), (kr_brand, qoo10_brand))
+    return any(len(_flat(a)) >= 2 and _flat(a) in _flat(b) for a, b in pairs)
+
+
+def is_clear_mismatch(qoo10_brand: str, kr_brand: str,
+                      qoo10_name: str, kr_name: str) -> bool:
+    """오매칭이 거의 확실한 건 — 브랜드도 다르고 이름도 어긋난다.
+
+    `looks_like_mismatch`(이름만 본다)보다 임계가 느슨한 대신,
+    브랜드가 서로 다르고 어느 쪽도 반대편에 나타나지 않을 때만 적용한다.
+
+    [왜 이렇게 좁게 잡나] 글자만으로는 완벽히 못 가른다. 임계를 조금만
+    낮추면 정상 매칭이 함께 사라진다 —
+        花王 '큐레루 딥 모이스처 스프레이'  =  '나수 Curel_딥 모이스처 스프레이'
+        原料工房 '티트리 그린 바디워시'      =  '원료공방 그린더마 티트리 바디워시'
+    둘 다 같은 제품인데 브랜드 표기만 다르다. 애매하면 남긴다 —
+    남으면 사람이 3초 보고 넘기지만, 잘못 지우면 사라진 줄도 모른다.
+    """
+    if _brand_cross_reference(qoo10_brand, kr_brand, qoo10_name, kr_name):
+        return False
+    return _sim_token(qoo10_name, kr_name) < 0.5 and _sim_bigram(qoo10_name, kr_name) < 0.42
+
+
 def looks_like_mismatch(qoo10_name: str, kr_name: str) -> bool:
     """[v4.4.0] 이름이 두 척도 모두 낮으면 다른 상품으로 본다.
 
@@ -281,7 +318,13 @@ def build_pairs():
         # 젤↔스프레이, 블론드샴푸↔비듬샴푸). 브랜드 조건을 떼야 잡힌다.
         # 브랜드만 다르고 이름이 맞는 건은 그대로 남긴다 — 사전이 부실해
         # 생기는 오판이 많기 때문이다.
-        if looks_like_mismatch(translated_kr, x.get("name") or ""):
+        # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
+        # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
+        # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
+        if (looks_like_mismatch(translated_kr, x.get("name") or "")
+                or (check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"
+                    and is_clear_mismatch(q.get("brand", ""), x.get("brand", ""),
+                                          translated_kr, x.get("name") or ""))):
             stats["brand_name_mismatch"] += 1
             excluded_mismatch.append({
                 "goods_no": x.get("goods_no"),
