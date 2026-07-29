@@ -12234,5 +12234,300 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209640500",
+    "translated_kr": "케이프 [묶음구매] 슈퍼하드 무향료 특대 300g×2개 세트",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "(2개세트) 카오 케이프 무향료 헤어스프레이 300g 대용량 1+1 슈퍼하드",
+      "naver_web": "2종 세트 케이프 슈퍼 하드 무향료 특대 ×2개 최저가 검색, 역대 최저가 24,980원"
+    },
+    "brand": "카오",
+    "name": "(2개세트) 카오 케이프 무향료 헤어스프레이 300g 대용량 1+1 슈퍼하드",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "16600",
+    "mall": "도쿄락",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9973108061",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8751761/87517610334.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8751761/87517610334.jpg",
+        "mall": "도쿄락",
+        "link": "https://smartstore.naver.com/main/products/9973108061"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1166972228",
+    "translated_kr": "뱀파이어 톤업 스프레이 100ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "뱀파이어 톤업 스프레이",
+      "naver": "[백옥 톤업/아이돌 백설기 피부] 아윌미백 뱀파이어 톤업 스프레이",
+      "daum": "아윌미백, 올영 세일 기간 전 제품 완판…기능성 미백 바디케어 시장 개척",
+      "naver_web": "아윌미백, ‘뱀파이어 톤업 스프레이’ 올영 입점 확대→中 라방 완판"
+    },
+    "brand": "아윌미백 (iwillme:back)",
+    "name": "아윌미백, ‘뱀파이어 톤업 스프레이’ 올영 입점 확대→中 라방 완판",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "14900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000226594",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6059823/60598238231.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6059823/60598238231.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000226594"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185689565",
+    "translated_kr": "FEMEE! 데리케이트존 용 펨케어 미스트 페미 소취 냄새 VIO 검은색 대책 스프레이 타입 체취 케어 엉덩이 겨드랑이 젖꼭지 프레그런스 잉글리시 페어 프리지아의 향기",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VIO 트리트먼트 로션",
+      "naver": "이로하 인티메이트 VIO 트리트먼트 로션 100ml (제모 , 왁싱 , 인그로운헤어 케어)"
+    },
+    "brand": "이로하인티메이트케어 (irohaINTIMATECARE)",
+    "name": "VIO 트리트먼트 로션",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "24000",
+    "mall": "쥬피앙.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10377048158",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8792155/87921552849.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8792155/87921552849.1.jpg",
+        "mall": "쥬피앙.",
+        "link": "https://smartstore.naver.com/main/products/10377048158"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961712/89617120543.jpg",
+        "mall": "TC코스메틱",
+        "link": "https://smartstore.naver.com/main/products/12072609844"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207978874",
+    "translated_kr": "[트리플 유효 성분으로 주름 개선 × 미백] 트라넥삼산 크림 20g 의약부외품 주름 기미 주근깨 피부 트러블 나이아신아마이드 트라넥삼산 글리칠리틴산 2K 일본제",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175369881",
+    "translated_kr": "미스트 화장수 3본 세트 인간 줄기세포 배양액 시카 배합 보습 스프레이 진정 건조 대책 메이크 위에서 OK 고보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "daum": "Coreana Colour",
+      "naver_web": "https://cert.k",
+      "naver_rematch": "인진쑥 진정 보습 세럼 30ml"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "인진쑥 진정 보습 세럼",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "26970",
+    "mall": "바이베스트몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10539632561",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8808413/88084138044.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8808413/88084138044.jpg",
+        "mall": "바이베스트몰",
+        "link": "https://smartstore.naver.com/main/products/10539632561"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019540/90195406089.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650895183"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019539/90195397286.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650886380"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "766676040",
+    "translated_kr": "파라 젤 파라젤 아트 탑젤 10g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아바파라 퍼펙트 포어 젤 투 폼 비건 클렌저",
+      "naver": "펄스젤 파라젤 엠보젤 파우더네일 SM02 블랙 3ml",
+      "daum": "코스기 쥬로타",
+      "naver_web": "아트탑젤"
+    },
+    "brand": "오투에니원 (O.TWENTYONE)",
+    "name": "아바파라 퍼펙트 포어 젤 투 폼 비건 클렌저",
+    "volume": "150ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "13000",
+    "mall": "뷰티재료 네일아트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9789018279",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8733352/87333520552.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733352/87333520552.1.jpg",
+        "mall": "뷰티재료 네일아트",
+        "link": "https://smartstore.naver.com/main/products/9789018279"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733349/87333494309.1.jpg",
+        "mall": "뷰티재료 네일아트",
+        "link": "https://smartstore.naver.com/main/products/9788992036"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1039318220",
+    "translated_kr": "모레모 / 헤어 에센스 딜라이트풀 오일 70ml / 헤어 에센스",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "모레모 딜라이트풀 헤어 에센스 오일, , 1개",
+      "naver_web": "모레모 헤어 에센스 딜라이트풀 오일"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1001978260",
+    "translated_kr": "흰머리 염색 트리트먼트 소와니티 헤어 컬러 트리트먼트 210g 특가 2본 세트 선택 가능 3색 검은색/다크 브라운/라이트 브라운",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1126308598",
+    "translated_kr": "박치올 리포솜 앰플 토너 150ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 베스트 오브 뷰티의 위너 ‘스킨케어’ ‘베이스’ ‘맨’",
+      "naver_web": "Face",
+      "naver_rematch": "국산 괄사 마사지 화이트 1개 세라믹 도자기"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161174323",
+    "translated_kr": "[120장 세트] 당근 진정 패드 60장×2개 / 고보습 마스크팩 부착 / 민감 피부용 닦아내기 화장수 / 피부 트러블·모공 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "디에이지 더 블랑 리추얼 패드",
+      "daum": "2월의 뷰티 신상 파헤치기 #잇츠온세일",
+      "naver_web": "참존 디에이지 더 블랑 리추얼 패드"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
