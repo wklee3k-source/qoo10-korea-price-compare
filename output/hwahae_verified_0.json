@@ -2958,5 +2958,341 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1199581764",
+    "translated_kr": "진정 보습 세트 인기 어성초77 토너 + 세라마이드 뷰티에센스 여드름 모공 민감성 피부 한국 스킨케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77 수딩 토너",
+      "naver": "아누아 어성초 77 히알루론산 수분 진정 토너 250ml, 2개",
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "아누아 어성초 77 수딩 토너 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "35000",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6873221070",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8441772/84417721392.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8441772/84417721392.7.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/6873221070"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1153497615",
+    "translated_kr": "AHA 30% + BHA 2% 필링 솔루션 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 아하 30% + 바하 2% 필링 솔루션",
+      "daum": "Deciem 디오디너리 아하 aha30% + 바하 bha 2% 필링 솔루션",
+      "naver_web": "디오디너리 AHA 30% + BHA 2% 필링 솔루션",
+      "naver_rematch": "미국 디오디너리 아하 바하 AHA 30% + BHA 2% 필링 솔루션 30ml 4개"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "(해외) 아하 30% + 바하 2% 필링 솔루션",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "84600",
+    "mall": "더마마슈퍼",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11231049177",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8877555/88775559508.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8877555/88775559508.1.jpg",
+        "mall": "더마마슈퍼",
+        "link": "https://smartstore.naver.com/main/products/11231049177"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8875312/88753124525.jpg",
+        "mall": "윌리엄상회",
+        "link": "https://smartstore.naver.com/main/products/11208614194"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1171460964",
+    "translated_kr": "퍼퓨머드 포 바디워시 600ml 2가지 중 1개 선택",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "옥시젼 젤 [V8]",
+      "daum": "마그나와 V8 카니발로…지속가능한 ‘운전의 즐거움’",
+      "naver_rematch": "알고덤 옥시젼 프로텍트젤 50미리"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1166654877",
+    "translated_kr": "[26SS/New] 아이 패치 60장 2종 (콜라겐 / 캐비아 PDRN) 중 1개 선택",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "다복식당",
+      "naver_web": "아비브 콜라겐 아이패치 부활초 젤리 60매 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185447621",
+    "translated_kr": "어휘 풀 트라이얼 킷 (스킨 부스터 20ml + 세럼 15ml + 튜브 30ml + 폼 30ml)",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "2014 신간도서목록.xlsx"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185044020",
+    "translated_kr": "호텔 테라피 대용량 바디워시 수선 1.013L 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "헤트라스 호텔 테라피 대용량 바디워시 상탈 프레쉬, 1.013L, 2개",
+      "daum": "바디워시 추천 BEST 7: “재구매율 95%” 향기부터 보습까지 검증된 인생템",
+      "naver_web": "헤트라스 호텔 테라피 저자극 퍼퓸 대용량 바디워시 무화과, , 1개"
+    },
+    "brand": "헤트라스",
+    "name": "헤트라스 호텔 테라피 대용량 바디워시 상탈 프레쉬, 1.013L, 2개",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "26460",
+    "mall": "잡하우스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13181698914",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9072621/90726210011.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9072621/90726210011.jpg",
+        "mall": "잡하우스",
+        "link": "https://smartstore.naver.com/main/products/13181698914"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9027445/90274458886.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/12729947945"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8873243/88732439821.jpg",
+        "mall": "루브네물산",
+        "link": "https://smartstore.naver.com/main/products/11187929499"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8972828/89728284678.1.jpg",
+        "mall": "더 사이트",
+        "link": "https://smartstore.naver.com/main/products/12183773973"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177099755",
+    "translated_kr": "오드 파르팜 타입 선택 1",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "샹델라",
+      "naver_web": "마루산 유바리멜론 스팀 케이크, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206937740",
+    "translated_kr": "[정품] 티아미돌 부스터 세럼 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "이븐래디언스 브라이트닝 부스터 세럼",
+      "naver": "[유세린] 이븐래디언스 티아미돌 부스터 세럼 30ml",
+      "daum": "✨유세린 이븐래디언스 브라이트닝 부스터 세럼 일주일 사용",
+      "naver_web": "유세린 티아미돌 부스터 세럼"
+    },
+    "brand": "유세린 (Eucerin)",
+    "name": "이븐래디언스 브라이트닝 부스터 세럼",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "62100",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13572938326",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9111744/91117448737.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111744/91117448737.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/13572938326"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121172/91211726117.jpg",
+        "mall": "블랙 올리브",
+        "link": "https://smartstore.naver.com/main/products/13667215209"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107118/91071184227.1.jpg",
+        "mall": "미라클 뷰",
+        "link": "https://smartstore.naver.com/main/products/13526673874"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185598713",
+    "translated_kr": "[1+1] 에이지레스 리얼 아이 크림 포포페이스 30ml x 2개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "플루이드 [아이]",
+      "daum": "선역 보스급 캐릭터",
+      "naver_web": "에이지 플로리아 링클 퍼펙트 아이 포페이스 크림",
+      "naver_rematch": "토니모리 에이지 플로리아 링클 퍼펙트 아이 포페이스 크림"
+    },
+    "brand": "메트리젠 (MATRIGEN)",
+    "name": "에이지 플로리아 링클 퍼펙트 아이 포페이스 크림",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "동아 수성점 토니모리",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13437629155",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9098213/90982139507.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098213/90982139507.jpg",
+        "mall": "동아 수성점 토니모리",
+        "link": "https://smartstore.naver.com/main/products/13437629155"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8957664/89576642119.jpg",
+        "mall": "마인유통",
+        "link": "https://smartstore.naver.com/main/products/12032131427"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1125526138",
+    "translated_kr": "베이킹 파우더 모공 클렌징 대용량 폼 300ml 2본",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베이킹 파우더 모공 클렌징 폼",
+      "naver": "[에뛰드] 베이킹 파우더 모공 클렌징폼 160ml, 1개",
+      "daum": "에뛰드 베이킹 파우더 모공 클렌징 폼, , 2개",
+      "naver_web": "에뛰드 베이킹 파우더 모공 클렌징 폼, , 1개"
+    },
+    "brand": "에뛰드 (ETUDE)",
+    "name": "베이킹 파우더 모공 클렌징 폼",
+    "volume": "160g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "6400",
+    "mall": "에뛰드 본사직영샵",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/471387527",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8080134/80801343370.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8080134/80801343370.5.jpg",
+        "mall": "에뛰드 본사직영샵",
+        "link": "https://smartstore.naver.com/main/products/471387527"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8080159/80801598507.1.jpg",
+        "mall": "에뛰드 본사직영샵",
+        "link": "https://smartstore.naver.com/main/products/471387493"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
