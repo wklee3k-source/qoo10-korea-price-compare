@@ -132,7 +132,20 @@ def _sim_bigram(a: str, b: str) -> float:
 
 
 def looks_like_mismatch(qoo10_name: str, kr_name: str) -> bool:
-    return _sim_token(qoo10_name, kr_name) < 0.3 and _sim_bigram(qoo10_name, kr_name) < 0.35
+    """[v4.4.0] 이름이 두 척도 모두 낮으면 다른 상품으로 본다.
+
+    브랜드 상태와 무관하게 적용한다. 전수 점검에서 확인된 실패 유형이
+    '같은 브랜드의 다른 제품'이었기 때문이다 — 브랜드가 일치해도 틀린다.
+        워터뱅크 UV 배리어 선 세럼   -> 워터뱅크 UV 베리어 선크림
+        퍼펙트 UV 스킨케어 젤        -> 퍼펙트 유브이 스프레이
+        케라스타즈 블론드 압솔루 샴푸 -> 케라스타즈 방 안티 댄드러프
+    브랜드만 보면 전부 통과한다.
+
+    글자조각 임계를 0.35에서 0.45로 올렸다. 정상 매칭의 실측 하한이
+    0.62였고(화이트샷 세럼 유브이 / POLA 화이트 샷 세럼 UV = 0.62,
+    센텔리안24 = 1.00), 0.45까지는 여유가 있다.
+    """
+    return _sim_token(qoo10_name, kr_name) < 0.3 and _sim_bigram(qoo10_name, kr_name) < 0.45
 
 
 def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
@@ -238,12 +251,13 @@ def build_pairs():
             stats["collab"] += 1
             continue
 
-        # [v4.3.0 제외] 브랜드도 다르고 이름도 안 맞으면 오매칭으로 본다.
-        # 브랜드만 다른 건 남긴다 — 사전이 부실해서 생기는 오판이 많다.
-        # 이름만 안 맞는 건도 남긴다 — 화해는 브랜드를 빼고 짧게 쓰는 등
-        # 표기 차이가 흔하다. 둘이 동시에 어긋날 때만 뺀다.
-        if (check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"
-                and looks_like_mismatch(translated_kr, x.get("name") or "")):
+        # [v4.4.0 제외] 이름이 두 척도 모두 낮으면 다른 상품으로 보고 뺀다.
+        # v4.3.0에서는 '브랜드도 다를 때'만 뺐는데, 전수 점검에서 드러난
+        # 주된 실패가 '같은 브랜드의 다른 제품'이었다(선세럼↔선크림,
+        # 젤↔스프레이, 블론드샴푸↔비듬샴푸). 브랜드 조건을 떼야 잡힌다.
+        # 브랜드만 다르고 이름이 맞는 건은 그대로 남긴다 — 사전이 부실해
+        # 생기는 오판이 많기 때문이다.
+        if looks_like_mismatch(translated_kr, x.get("name") or ""):
             stats["brand_name_mismatch"] += 1
             excluded_mismatch.append({
                 "goods_no": x.get("goods_no"),
