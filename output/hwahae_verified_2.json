@@ -14159,5 +14159,307 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1098077427",
+    "translated_kr": "에스원에스 오리지널 콜라겐 600g 자연파 고분자 콜라겐 (경감 세율)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207662932",
+    "translated_kr": "【정품】 알퓨어 UV 베일 미스트 50g 썬 스크린 스프레이 SPF50 PA+++ 보습 미스트 뷰티살롱 전매품 미용액 화장품 코스메 이온수 피부 얼굴 미용 홈케어 여성",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트",
+      "naver": "큐옴바이오 1조 유산균 앰플 미스트 100ml 피부진정 보습 속건조개선"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "큐옴바이오 1조 유산균 앰플 미스트 100ml 피부진정 보습 속건조개선",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "55120",
+    "mall": "에코메로우",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13498501518",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104301/91043011870.jpg",
+        "mall": "에코메로우",
+        "link": "https://smartstore.naver.com/main/products/13498501518"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8946071/89460714295.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/11916203686"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8956224/89562244586.jpg",
+        "mall": "아르피아헬스케어",
+        "link": "https://smartstore.naver.com/main/products/12017733894"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188800312",
+    "translated_kr": "【공식/정품판매】Green bio 슈퍼 트리트먼트 마스크 30ml x12개 박스 없음 케라틴·실크 함유",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver_web": "태국 그린 바이오 슈퍼 트리트먼트 헤어 케어 Green Bio Super Treatment Hair Care, , 12개",
+      "naver_rematch": "올마실 비건 8초 살롱 프리미엄 헤어 마스크 100ml"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "태국 그린 바이오 슈퍼 트리트먼트 헤어 케어 Green Bio Super Treatment Hair Care, , 12개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "27000",
+    "mall": "마실 Masil 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/9266318440",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/9266318440"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1198987607",
+    "translated_kr": "어성초 70% 인텐스 카밍 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 인텐스 카밍 크림",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "아누아 어성초 70 인텐스 카밍 크림"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 인텐스 카밍 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162182248",
+    "translated_kr": "【공식】PERFECT ONE 퍼펙트 원 올인원 젤 / 모이스처 젤 【리필 파우치】",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+      "daum": "서울에서 K",
+      "naver_web": "PERFECT ONE 1 퍼펙트 원 올인원 젤 모이스처 젤 스킨 케어 (약 개월",
+      "naver_rematch": "PERFECT ONE 50 g 1 퍼펙트 원 올인원 젤 약용 슈퍼 모이스처 젤 [의약 부외품] (단품) (약 개월 분)"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "PERFECT ONE 1 퍼펙트 원 올인원 젤 모이스처 젤 스킨 케어 (약 개월",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "64200",
+    "mall": "RIMeee",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13361270800",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9090578/90905781129.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090578/90905781129.jpg",
+        "mall": "RIMeee",
+        "link": "https://smartstore.naver.com/main/products/13361270800"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152121609",
+    "translated_kr": "10+10+10 히알루론산 마스크 / 콜라겐 / 비타민 / 시커 / 모이스처 / ROYAL SKIN 앰플 마스크팩",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "어성초 카밍 토너 스킨 부스터",
+      "daum": "스킨 / 토너",
+      "naver_rematch": "[수분진정] 아비브 어성초 카밍 토너 스킨부스터 더블 기획 (200ml+200ml)"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1086040472",
+    "translated_kr": "【공식】【한국에서 대인기!】퍼퓸 바디 워시 3종",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "퍼퓸 핸드워시 300ml (3종  택1)",
+      "naver": "[스카이보틀] 퍼퓸 핸드워시 300ml (3종  택1) 01",
+      "daum": "플루 아로마 퍼퓸 스크럽 바디워시",
+      "naver_web": "플루 아로마 퍼퓸 스크럽 바디워시"
+    },
+    "brand": "스카이보틀",
+    "name": "퍼퓸 핸드워시 300ml (3종  택1)",
+    "volume": "",
+    "source": "musinsa",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "17000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/2714108?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_3532851/35328510203.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_3532851/35328510203.4.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/2714108?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5265386/52653860434.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=157129415&shop_id=50166&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "스카이보틀(SKYBOTTLE) 퍼퓸 핸드워시 300ml (3종  택1)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1152971824",
+    "translated_kr": "【공식】【한국에서 대인기!】퍼퓸 헤어 & 바디 미스트 5종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼퓸 헤어 & 바디미스트 [무화과]",
+      "musinsa": "퍼퓸 헤어\\u0026바디미스트 100ml (5종 택1)",
+      "naver": "스카이보틀 퍼퓸 헤어 앤 바디미스트 무화과, 100ml, 1개",
+      "daum": "GQ DROP – 땀에서도 향기가 나고 싶은 남자를 위한 바디 케어 아이템 9",
+      "naver_web": "스카이보틀 퍼퓸 헤어&바디미스트"
+    },
+    "brand": "스카이보틀 (skybottle)",
+    "name": "퍼퓸 헤어 & 바디미스트 [무화과]",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "11900",
+    "mall": "포사도",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12979254241",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9052376/90523765251.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052376/90523765251.1.jpg",
+        "mall": "포사도",
+        "link": "https://smartstore.naver.com/main/products/12979254241"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122766/91227668265.jpg",
+        "mall": "원라이브:브랜드",
+        "link": "https://smartstore.naver.com/main/products/13683157022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9046093/90460936876.jpg",
+        "mall": "호앤토",
+        "link": "https://smartstore.naver.com/main/products/12916425884"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1147293647",
+    "translated_kr": "마이 바이옴 락토 부스터 45mL 도입 미용액 [식물 × 유산균 마이크로바이옴 케어]",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "일본옥션구매대행"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1163548177",
+    "translated_kr": "【I will me back 공식】국내 발송 아이윌미백 브라이트 카밍 바디 젤 크림 300ml 팔꿈치·무릎·겨드랑이 검은 반점 케어 크림 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
