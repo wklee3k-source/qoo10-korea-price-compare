@@ -19364,5 +19364,385 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1212947295",
+    "translated_kr": "【공식】세럼 크림 2점 세트 나노 침투 기술 페이스라인 케어 보습 한국 스킨케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨케어 비건 쿠션 [SPF38/PA++] [21호]",
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "스킨케어",
+      "naver_rematch": "[아이소이] 스킨케어 비건 쿠션 SPF38 PA++ 21호 (본품13g+리필 13g)"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "스킨케어 비건 쿠션 [SPF38/PA++] [21호]",
+    "volume": "13g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "40800",
+    "mall": "아이소이 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/7899595094",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8544409/85444095417.18.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8544409/85444095417.18.jpg",
+        "mall": "아이소이 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/7899595094"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8966447/89664476202.9.jpg",
+        "mall": "아이소이 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/12119965497"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1075097423",
+    "translated_kr": "【도입 미용액】라라이프 3나노 침투 부스터 세럼 50ml 1개 부기 케어·이중턱·팔뚝 지방 분해 라인 개선【공식】",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "래쉬 포머 WP [롱]",
+      "naver": "KATE (케이트)래쉬포머EX (롱WP) BR-3",
+      "daum": "뮤즈클리닉 안양점",
+      "naver_web": "wp"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178513171",
+    "translated_kr": "키세라 C 큐어 파인 노 파운데 PDRN 재생 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "naver_web": "전상품",
+      "naver_rematch": "[닥터슈 크리에이티브] PDRN 모이스처 맥스 크림 고기능 연어DNA성분 피부진정 장벽강화"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "26000",
+    "mall": "닥터슈 크리에이티브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10831785692",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+        "mall": "닥터슈 크리에이티브",
+        "link": "https://smartstore.naver.com/main/products/10831785692"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185488290",
+    "translated_kr": "PDRN 리주 판테놀 크림 15ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "naver": "시카 재생 크림 피부과 레이저 점빼고 점뺀후 egf 이지에프 pdrn 약국입점 연고 튜브",
+      "daum": "EGF 재생크림 vs 시카크림 완벽 비교: 피부 재생 원리, 진정 성분 차이, 시너지 효과 및 피부 타입별...",
+      "naver_web": "피더린 제품 정보"
+    },
+    "brand": "바르시오",
+    "name": "시카 재생 크림 피부과 레이저 점빼고 점뺀후 egf 이지에프 pdrn 약국입점 연고 튜브",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "15900",
+    "mall": "바르시오화장품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/2079955603",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1192777/11927773976.18.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1192777/11927773976.18.jpg",
+        "mall": "바르시오화장품",
+        "link": "https://smartstore.naver.com/main/products/2079955603"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028766/90287665146.8.jpg",
+        "mall": "구미당 스토어",
+        "link": "https://smartstore.naver.com/main/products/12743154205"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9003114/90031140567.38.jpg",
+        "mall": "라온스랩",
+        "link": "https://smartstore.naver.com/main/products/12486629723"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8856520/88565202100.24.jpg",
+        "mall": "리밋티드 인터내셔널",
+        "link": "https://smartstore.naver.com/main/products/11020695893"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9054015/90540154222.20.jpg",
+        "mall": "라온스랩",
+        "link": "https://smartstore.naver.com/main/products/12995643130"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1138462623",
+    "translated_kr": "세안 진흙 진흙파유 폼 세안 120g 세안 폼 세안료 모공 오염 클레이 세안 숯 바다 실트 마유 무향료 장미 향기 당기지 않음 일본 제조 여성 남성용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179916284",
+    "translated_kr": "【공식】안달 유미 프로듀스 화장품 [Upt(업트)] 마일드 필 에센스_건성 피부/스킨케어/미용액",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC",
+      "naver_rematch": "누룩밤 수면팩 트라넥산삼 크림 트라넥삼산 약국 기미 크림 위자드조선"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1107189934",
+    "translated_kr": "【2점 세트】디어 오늘 특허 성분 DKMEX 엘릭서 당나귀 크림 한국 화장품 보습 크림 50ml X 2 초 저분자 콜라겐&로바 밀크 보습/항염/항산화",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300",
+      "naver_rematch": "프리티스킨 PDRN TX1 콜라겐 캡슐 크림 300 62g"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "PDRN TX1 콜라겐 캡슐 크림 300",
+    "volume": "62g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "39000",
+    "mall": "프리티스킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13426295547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+        "mall": "프리티스킨",
+        "link": "https://smartstore.naver.com/main/products/13426295547"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097080/90970805884.jpg",
+        "mall": "프리티스킨",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13426295548"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206166293",
+    "translated_kr": "【본품+리필】울트라 스포츠 선 쿠션 15g 본품+선 쿠션 15g 리필 UV 세트 SPF50+PA++++ 자외선 차단 UV케어 내수성·땀 대응 UV케어 비건 처방",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "73선에센스 [SPF50+/PA++++]",
+      "naver": "[릴리베스] 선쿠션 세트 (본품+리필) SPF50+ PA++++ 000",
+      "daum": "피부 타입별로 골라 쓰는 ‘",
+      "naver_web": "지구자차 인기 추천 10가지 지금 필수템!"
+    },
+    "brand": "메이베나 (MAYBENA)",
+    "name": "73선에센스 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "63000",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4613442?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5341347/53413472500.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5341347/53413472500.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4613442?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112239/91122399252.jpg",
+        "mall": "판다친구",
+        "link": "https://smartstore.naver.com/main/products/13577888841"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120553/91205533500.jpg",
+        "mall": "인디에이",
+        "link": "https://smartstore.naver.com/main/products/13661022659"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120039/91200395182.jpg",
+        "mall": "알리마",
+        "link": "https://smartstore.naver.com/main/products/13655884397"
+      }
+    ],
+    "real_page_title": "릴리베스(LILIIBETH) 선쿠션 세트 (본품+리필) SPF50+ PA++++",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190214184",
+    "translated_kr": "스티바 A 크림 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "칠자화 수",
+      "naver": "미라클뮤즈아하바하메디크림 [약국보습 재생기미미백 착색색소침착스티바a 멜라논멜라토닌멜라토닝]",
+      "daum": "스티바A크림 어디서 저렴하게 구매할 수 있어?",
+      "naver_web": "스티바에이크림0.01% Stieva"
+    },
+    "brand": "미라클뮤즈",
+    "name": "미라클뮤즈아하바하메디크림 [약국보습 재생기미미백 착색색소침착스티바a 멜라논멜라토닌멜라토닝]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "28900",
+    "mall": "미라클뮤즈",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8458307381",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8600280/86002807704.26.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8600280/86002807704.26.jpg",
+        "mall": "미라클뮤즈",
+        "link": "https://smartstore.naver.com/main/products/8458307381"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8644841/86448412196.4.jpg",
+        "mall": "미라클뮤즈",
+        "link": "https://smartstore.naver.com/main/products/8903911873"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088668/90886684802.jpg",
+        "mall": "허니그랜",
+        "link": "https://smartstore.naver.com/main/products/13342174470"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1160195008",
+    "translated_kr": "【celqne】세라마이드 모이스처 크림 50ml 보습 크림 세라마이드 함유 고 보습 배리어 케어 민감한 피부 건성 피부 한국 스킨케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "K",
+      "naver": "후시덤 수분크림 50ml 베리어 리페어 판테놀 3%함유 촉촉한 보습크림",
+      "daum": "뷰티 전문가가 꼽은 최고의 K",
+      "naver_web": "토니모리 원더 세라마이드 모찌 수분 크림"
+    },
+    "brand": "트레믹스 (tremix)",
+    "name": "후시덤 수분크림 50ml 베리어 리페어 판테놀 3%함유 촉촉한 보습크림",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10200",
+    "mall": "SOLLYNE",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13681841027",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122635/91226352270.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122635/91226352270.jpg",
+        "mall": "SOLLYNE",
+        "link": "https://smartstore.naver.com/main/products/13681841027"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117949/91179496227.jpg",
+        "mall": "토닥토닥키즈",
+        "link": "https://smartstore.naver.com/main/products/13634985546"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117955/91179554373.jpg",
+        "mall": "드보라.debora",
+        "link": "https://smartstore.naver.com/main/products/13635043692"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9083034/90830344243.jpg",
+        "mall": "elpobyji",
+        "link": "https://smartstore.naver.com/main/products/13285833911"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103406/91034068048.jpg",
+        "mall": "벨로릭스",
+        "link": "https://smartstore.naver.com/main/products/13489557696"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
