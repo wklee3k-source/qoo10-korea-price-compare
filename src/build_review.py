@@ -298,6 +298,21 @@ def build_pairs():
     # 제외한 건은 버리지 않고 파일로 남긴다 — 자동 판정이 틀렸을 때
     # 무엇이 사라졌는지 볼 수 없으면 고칠 수도 없다.
     excluded_mismatch: list[dict] = []
+    # [v4.7.0] 사람이 눈으로 확인해 뺀 목록. 자동 규칙으로는 못 거르지만
+    # 명백히 다른 제품인 것들이다(C등급 117건을 전수 확인해 98건 제외,
+    # 19건은 같은 제품으로 판단해 남겼다 — 花王 큐레루=나수 Curel,
+    # 資生堂 엘릭서=시세이도 엘릭시르 등 브랜드 표기만 다른 경우).
+    # 파일로 두는 이유: 자동 규칙을 무리하게 넓히면 정상 매칭까지 사라진다.
+    # 판단 근거가 사람인 건 사람이 관리하는 목록에 둔다.
+    manual_path = DATA / "manual_exclusions.json"
+    manual_excluded = set()
+    if manual_path.exists():
+        try:
+            manual_excluded = {str(m.get("goods_no"))
+                               for m in json.loads(manual_path.read_text(encoding="utf-8"))}
+        except (OSError, ValueError) as e:
+            print(f"[경고] manual_exclusions.json 읽기 실패: {e}")
+    print(f"[수동제외] {len(manual_excluded)}건 등록됨")
 
     # [일본어 역번역] 한글 상품명(구매처 원본) 아래에 참고용 일본어 번역을
     # 보여주기 위한 배치번역 결과(translate_kr_to_jp.py가 생성). 없으면
@@ -324,7 +339,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -364,6 +379,10 @@ def build_pairs():
         # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
         # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
+        if str(x.get("goods_no")) in manual_excluded:
+            stats["manual"] += 1
+            continue
+
         if should_exclude(q.get("brand", ""), x.get("brand", ""), translated_kr,
                           x.get("name") or "",
                           check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict)):
@@ -555,7 +574,8 @@ def build_pairs():
               "(자동 판정이 틀렸는지 확인 가능)")
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
           f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
-          f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 최종={stats['ok']}건")
+          f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
+          f"최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
 
