@@ -98,6 +98,43 @@ def extract_quantity(text: str) -> int:
     return 1
 
 
+# [v4.3.0] 브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
+#  실측: 브랜드 불일치 569건 중 184건이 이 유형이었고, 표본 6건을 눈으로
+#  확인한 결과 6건 모두 실제 오매칭이었다(선크림→파운데이션, 크림→컨디셔너,
+#  심지어 '광고 출연자 모집' 게시글까지).
+#
+#  두 가지 척도를 모두 통과해야 뺀다. 한 척도만 쓰면 멀쩡한 매칭을 버린다 —
+#  단어겹침만 보면 '맑은쌀 꿀채운 마스크'와 '맑은쌀꿀채운마스크'가 남남이
+#  되고(띄어쓰기), 글자조각만 보면 'UV'와 '유브이'가 남남이 된다.
+NAME_STOPWORDS = {"세트", "대용량", "본품", "공식", "정품", "무료배송", "리필",
+                  "신상", "인기", "한국", "단독", "증정"}
+
+
+def _name_tokens(text: str) -> set:
+    t = re.sub(r"[\[\]【】()（）/,+#\-]", " ", text or "")
+    t = re.sub(r"\d+\s*(ml|g|매|장|개|종|%)", " ", t, flags=re.I)
+    return {w for w in re.findall(r"[가-힣A-Za-z]{2,}", t) if w not in NAME_STOPWORDS}
+
+
+def _sim_token(a: str, b: str) -> float:
+    A, B = _name_tokens(a), _name_tokens(b)
+    return len(A & B) / min(len(A), len(B)) if A and B else 0.0
+
+
+def _sim_bigram(a: str, b: str) -> float:
+    """공백·기호를 무시한 2글자 조각 겹침 — 띄어쓰기 차이를 흡수한다."""
+    A, B = re.sub(r"[^가-힣A-Za-z]", "", a or ""), re.sub(r"[^가-힣A-Za-z]", "", b or "")
+    if len(A) < 2 or len(B) < 2:
+        return 0.0
+    sa = {A[i:i + 2] for i in range(len(A) - 1)}
+    sb = {B[i:i + 2] for i in range(len(B) - 1)}
+    return len(sa & sb) / min(len(sa), len(sb))
+
+
+def looks_like_mismatch(qoo10_name: str, kr_name: str) -> bool:
+    return _sim_token(qoo10_name, kr_name) < 0.3 and _sim_bigram(qoo10_name, kr_name) < 0.35
+
+
 def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
     if not orig_brand:
         return "unknown"  # 원본에 브랜드 정보 자체가 없으면 "불일치"가 아니라 "판단불가"
@@ -121,6 +158,15 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict) -> str:
         return "match"
     if re.search(r"[\u30A0-\u30FF\u3040-\u309F]", orig_brand):
         return "unknown"
+    # [v4.2.1] 영문 원본 브랜드를 한글 판매처명과 직접 비교할 수는 없다.
+    # 가나와 똑같은 이유인데 영문만 빠져 있었다 — 실측 사고:
+    #     큐텐 'LE LABO' vs 네이버 '르라보'  -> mismatch로 표시
+    # 같은 브랜드인데 '브랜드가 다릅니다' 경고가 붙었다. 브랜드 불일치
+    # 813건 중 245건(30%)이 이 유형이었다. 사전에 대응이 없으면 비교
+    # 자체가 불가능하므로 '판단불가'가 맞다. 판매처명에 라틴문자가
+    # 섞여 있으면(예: '르라보 (LE LABO)') 위 alnum 비교가 이미 처리한다.
+    if not re.search(r"[A-Za-z]", kr_brand_lower):
+        return "unknown"
     return "mismatch"
 
 
@@ -132,6 +178,9 @@ def build_pairs():
     brand_dict = json.loads((DATA / "brand_translations_learned.json").read_text(encoding="utf-8"))
     brand_dict.pop("_설명", None)
     brand_dict.pop("_아도르_참고", None)
+    # 제외한 건은 버리지 않고 파일로 남긴다 — 자동 판정이 틀렸을 때
+    # 무엇이 사라졌는지 볼 수 없으면 고칠 수도 없다.
+    excluded_mismatch: list[dict] = []
 
     # [일본어 역번역] 한글 상품명(구매처 원본) 아래에 참고용 일본어 번역을
     # 보여주기 위한 배치번역 결과(translate_kr_to_jp.py가 생성). 없으면
@@ -157,7 +206,8 @@ def build_pairs():
             translations.setdefault(x["goods_no"], x.get("translated_kr", ""))
 
     pairs = []
-    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0, "select_type": 0, "collab": 0, "ok": 0}
+    stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -186,6 +236,21 @@ def build_pairs():
         # 콜라보/2회분" 골라담기류) 정확한 매칭 신뢰도가 낮다.
         if re.search(r"콜라보|コラボ", q["title"]) or re.search(r"콜라보|コラボ", translated_kr):
             stats["collab"] += 1
+            continue
+
+        # [v4.3.0 제외] 브랜드도 다르고 이름도 안 맞으면 오매칭으로 본다.
+        # 브랜드만 다른 건 남긴다 — 사전이 부실해서 생기는 오판이 많다.
+        # 이름만 안 맞는 건도 남긴다 — 화해는 브랜드를 빼고 짧게 쓰는 등
+        # 표기 차이가 흔하다. 둘이 동시에 어긋날 때만 뺀다.
+        if (check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"
+                and looks_like_mismatch(translated_kr, x.get("name") or "")):
+            stats["brand_name_mismatch"] += 1
+            excluded_mismatch.append({
+                "goods_no": x.get("goods_no"),
+                "qoo10": translated_kr, "qoo10_brand": q.get("brand"),
+                "matched": x.get("name"), "matched_brand": x.get("brand"),
+                "url": x.get("product_url"),
+            })
             continue
 
         stats["ok"] += 1
@@ -350,8 +415,14 @@ def build_pairs():
             "single_source_naver": x.get("single_source_naver"),
         })
 
+    if excluded_mismatch:
+        (OUTPUT / "brand_name_mismatch_excluded.json").write_text(
+            json.dumps(excluded_mismatch, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[제외목록] output/brand_name_mismatch_excluded.json — {len(excluded_mismatch)}건 "
+              "(자동 판정이 틀렸는지 확인 가능)")
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
-          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} 최종={stats['ok']}건")
+          f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
+          f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 최종={stats['ok']}건")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
 
