@@ -17,7 +17,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, ".")
-from build_review import build_pairs, esc, dim_minor_text  # noqa: E402
+from collections import Counter  # noqa: E402
+from build_review import build_pairs, esc, dim_minor_text, CONFIDENCE_TIERS  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 COMPARISON = BASE / "comparison"
@@ -59,6 +60,10 @@ def render_cards(pairs: list[dict]) -> str:
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        _tier = p.get("tier") or "B"
+        _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
+        brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
+                       + brand_badge)
         if int(p.get("confidence", 4)) <= 1:
             brand_badge += ('<span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이'
                             ' 높습니다. 사진·용량을 꼭 확인하세요</span>')
@@ -180,11 +185,13 @@ def sort_by_brand_confidence(pairs: list[dict]) -> list[dict]:
 def build_batches():
     all_pairs = build_pairs()
     all_pairs = sort_by_brand_confidence(all_pairs)
-    from collections import Counter
     dist = Counter(p.get("brand_status") for p in all_pairs)
     print(f"[정보] 성공(구매링크확보) 총 {len(all_pairs)}건 -> {BATCH_SIZE}개씩 배치 생성")
     print(f"[정렬] 브랜드 일치 {dist.get('match', 0)} / 판단불가 {dist.get('unknown', 0)} "
-          f"/ 불일치 {dist.get('mismatch', 0)} 순으로 배치")
+          f"/ 불일치 {dist.get('mismatch', 0)}")
+    tdist = Counter(p.get("tier") for p in all_pairs)
+    print(f"[등급] A 완전신뢰 {tdist.get('A', 0)} / B 확인필요 {tdist.get('B', 0)} "
+          f"/ C 불일치의심 {tdist.get('C', 0)}")
 
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     BATCH_DIR.mkdir(exist_ok=True, parents=True)
@@ -205,7 +212,12 @@ def build_batches():
         new_html = new_html.replace("__BATCH_ID__", batch_id)
         out_path = BATCH_DIR / f"{batch_id}.html"
         out_path.write_text(new_html, encoding="utf-8")
-        batch_meta.append({"id": batch_id, "count": len(batch)})
+        # [v4.6.0] 이 배치가 어떤 등급으로 이뤄져 있는지 허브에 보여준다.
+        # 정렬이 신뢰도 순이라 앞 배치는 A로, 뒤 배치는 C로 채워진다 —
+        # 어느 배치를 볼 때 시간이 더 드는지 미리 알 수 있다.
+        tc = Counter(x.get("tier") for x in batch)
+        label = " · ".join(f"{k} {tc[k]}" for k in ("A", "B", "C") if tc.get(k))
+        batch_meta.append({"id": batch_id, "count": len(batch), "tier_label": label})
         print(f"  배치 {i+1:02d}: {len(batch)}건 -> {out_path.name}")
 
     build_hub(batch_meta, len(all_pairs))
@@ -223,6 +235,9 @@ def build_hub(batch_meta: list[dict], total: int):
   <div class="batch-card-top">
     <span class="batch-name">{b["id"]}</span>
     <span class="batch-total">{b["count"]}건</span>
+  </div>
+  <div class="batch-card-top" style="font-size:12px;color:#666;">
+    <span>{b.get("tier_label", "")}</span>
   </div>
   <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%"></div></div>
   <div class="batch-card-bottom">

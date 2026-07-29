@@ -807,6 +807,33 @@ def t58_confidence_ordering():
           f"정렬{sorts_by_conf} 경고{warns_low} 버리지않음{not_dropped}")
 
 
+# --------------------- #59 검수 신뢰 등급(A/B/C) 표기
+#  1,739건을 신뢰도 점수로 3등급으로 묶어 카드와 허브에 표시한다.
+#  실측 분포: A 870(50.0%) / B 752(43.2%) / C 117(6.7%).
+#  등급이 보이지 않으면 어디에 시간을 쓸지 정할 수 없다 — 앞뒤가 섞여
+#  보이면 확실한 건에도 같은 주의를 쓰게 된다.
+#  등급은 '표시'일 뿐 제외 기준이 아니다. C에도 정상 매칭이 섞여 있다
+#  (花王 큐레루 = 나수 Curel).
+def t59_confidence_tiers():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+    tmpl = (ROOT / "comparison" / "review.html").read_text(encoding="utf-8")
+
+    has_map = 'CONFIDENCE_TIERS = {' in src and '"A": ("완전 신뢰"' in src
+    has_fn = "def confidence_tier(" in src
+    attached = '"tier": confidence_tier(' in src
+    badged = 'tier-{_tier}' in src and 'tier-{_tier}' in batches
+    styled = ".badge.tier-A" in tmpl and ".badge.tier-C" in tmpl
+    hub = 'tier_label' in batches
+    # 등급으로 걸러내면 안 된다(표시 전용).
+    not_filtered = 'tier' not in batches.split("def sort_by_brand_confidence")[1].split("\ndef ")[0]
+
+    ok = has_map and has_fn and attached and badged and styled and hub and not_filtered
+    check("59 검수 신뢰등급 A/B/C 표기", ok,
+          f"등급표{has_map} 함수{has_fn} 부착{attached} 배지{badged} 스타일{styled} "
+          f"허브{hub} 제외에미사용{not_filtered}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

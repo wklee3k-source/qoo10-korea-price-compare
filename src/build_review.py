@@ -210,6 +210,24 @@ def should_exclude(qoo10_brand: str, kr_brand: str, qoo10_name: str, kr_name: st
         qoo10_brand, kr_brand, qoo10_name, kr_name)
 
 
+# [v4.6.0] 신뢰도 점수를 사람이 읽는 3등급으로 묶는다.
+#  실측 분포(1,739건): A 870(50.0%) / B 752(43.2%) / C 117(6.7%)
+#  A는 브랜드와 이름이 모두 확인된 구간이라 빠르게 넘길 수 있고,
+#  C는 표본에서 오매칭이 다수였다. 등급을 눈에 보이게 해야 어디에
+#  시간을 쓸지 정할 수 있다.
+CONFIDENCE_TIERS = {
+    "A": ("완전 신뢰", "브랜드·이름 모두 확인됨"),
+    "B": ("확인 필요", "브랜드나 이름 중 하나가 불확실함"),
+    "C": ("불일치 의심", "다른 제품일 가능성이 큼 — 사진을 꼭 대조"),
+}
+
+
+def confidence_tier(confidence: int) -> str:
+    if confidence >= 4:
+        return "A"
+    return "B" if confidence >= 2 else "C"
+
+
 def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
                      vol_mismatch: bool, single_source: bool) -> int:
     """이 매칭이 얼마나 믿을 만한지 0~4로 매긴다(높을수록 확실).
@@ -524,6 +542,10 @@ def build_pairs():
                 # 양쪽 다 용량을 알 때만 '불일치'로 본다(한쪽만 있으면 판단불가).
                 bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
                 bool(x.get("single_source_naver"))),
+            "tier": confidence_tier(match_confidence(
+                translated_kr, x.get("name") or "", brand_status,
+                bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                bool(x.get("single_source_naver")))),
         })
 
     if excluded_mismatch:
@@ -593,6 +615,10 @@ def build_html(pairs: list[dict]):
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        _tier = p.get("tier") or "B"
+        _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
+        brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
+                       + brand_badge)
         if int(p.get("confidence", 4)) <= 1:
             brand_badge += ('<span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이'
                             ' 높습니다. 사진·용량을 꼭 확인하세요</span>')
