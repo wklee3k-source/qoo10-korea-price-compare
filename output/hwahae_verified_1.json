@@ -4811,5 +4811,299 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1167785009",
+    "translated_kr": "어드밴스드 10x 리페어 앰플 헤어팩 300ml 3개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드밴스드 10X 토탈리커버리 앰플 헤어팩",
+      "naver": "케라시스 어드밴스드 10x 리페어 앰플 헤어팩 300ml 3개",
+      "daum": "케라시스 어드밴스드 10X 리페어 앰플 헤어팩, , 1개",
+      "naver_web": "케라시스 어드밴스드 10X 리페어 앰플 헤어팩"
+    },
+    "brand": "케라시스 (KeraSys)",
+    "name": "어드밴스드 10X 토탈리커버리 앰플 헤어팩",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25800",
+    "mall": "88점빵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8928494203",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8647299/86472994526.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8647299/86472994526.jpg",
+        "mall": "88점빵",
+        "link": "https://smartstore.naver.com/main/products/8928494203"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1106239607",
+    "translated_kr": "정품 어성초 77% 수징 토너 250ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 77% 진정 토너",
+      "naver": "아누아 어성초 77% 진정 토너 500ml",
+      "daum": "CHICOR",
+      "naver_web": "아누아 어성초 77% 진정 토너"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 77% 진정 토너",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "50900",
+    "mall": "주식회사제이씨",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11346031904",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8889054/88890542235.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889054/88890542235.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11346031904"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8889054/88890542176.jpg",
+        "mall": "주식회사제이씨",
+        "link": "https://smartstore.naver.com/main/products/11346031845"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1072253590",
+    "translated_kr": "스페셜 기프트/신규향 단독론칭 특전/블랙핑크 제니 픽 뉴 썸머테일즈 퍼퓸 250ml/제니 바디워시/제니 애용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1179242814",
+    "translated_kr": "큐리페어 멜라 크림 35ml+큐리페어 더마 앰플 50ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "큐리페어 더마앰플",
+      "naver": "코페르 큐리페어 더마 앰플 피부진정 여드름 미백 에센스 100ml",
+      "daum": "초강력 리페어 성분 PDRN의 등장",
+      "naver_web": "큐리페어 더마 앰플"
+    },
+    "brand": "코페르",
+    "name": "코페르 큐리페어 더마 앰플 피부진정 여드름 미백 에센스 100ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "47600",
+    "mall": "코페르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6114251155",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8365875/83658750643.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8365875/83658750643.7.jpg",
+        "mall": "코페르",
+        "link": "https://smartstore.naver.com/main/products/6114251155"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8445862/84458628803.7.jpg",
+        "mall": "코페르",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6914128481"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203203087",
+    "translated_kr": "스킨케어 패드 4종 (각 타입별)/자작나무 촉촉 수분/셀러리 캘밍 진정/유자 C 톤업(브라이트닝)/석류 탄력 펌핑",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver": "더리즈 리코테카 진정 수분크림 미백 주름개선 영양 크림 75ml+30ml",
+      "daum": "얼루어가 깐깐하게 고른 8월 신상 #클린뷰티 #클린픽"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1143335244",
+    "translated_kr": "클레어진 클레어진 여성 워시 200ml+50ml 1개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "클레어진",
+      "daum": "식스그레이스로 이런거 ㅂㄱㅅㄷ 압해 01",
+      "naver_web": "한미약품 프로캄 클레어진 여성청결제 + 세트, , 1개",
+      "naver_rematch": "[약국] 리뉴얼 샘플 3개 프로캄 클레어진 200ml + 휴대용50ml 한미약품 여성 청결제"
+    },
+    "brand": "프로-캄 (PRO-CALM)",
+    "name": "한미약품 프로캄 클레어진 여성청결제 + 세트, , 1개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "10500",
+    "mall": "건강헬스포유",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8788229614",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8633272/86332729937.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8633272/86332729937.7.jpg",
+        "mall": "건강헬스포유",
+        "link": "https://smartstore.naver.com/main/products/8788229614"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098730/90987309516.jpg",
+        "mall": "베리건강몰",
+        "link": "https://smartstore.naver.com/main/products/13442799164"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207298088",
+    "translated_kr": "포켓몬 콜라보 글로우 턴 3D 볼륨 샴푸 대용량 500ml 기획 세트(+100ml+키홀더 파우치)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "볼드 볼륨 마스카라",
+      "daum": "COSMETIC",
+      "naver_web": "올리브영 온라인몰",
+      "naver_rematch": "레브론 볼드 래커 그로우 러셔스 렝스+볼륨 마스카라 002 블랙"
+    },
+    "brand": "캐시캣 (CathyCat)",
+    "name": "볼드 볼륨 마스카라",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "18400",
+    "mall": "Market Heaven",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11974354116",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8951886/89518864804.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8951886/89518864804.jpg",
+        "mall": "Market Heaven",
+        "link": "https://smartstore.naver.com/main/products/11974354116"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8951886/89518863727.jpg",
+        "mall": "Market Heaven",
+        "link": "https://smartstore.naver.com/main/products/11974353039"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210851756",
+    "translated_kr": "당일 발송 리얼 카로틴 IPMP 블레미시 세럼 팩 패드 80장",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203221705",
+    "translated_kr": "한국화장품 애즈렌 수저 선 에센스 SPF50+ PA+++ 75g×2개 카모마일 플라워 워터 47% 함유",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "73선에센스 [SPF50+/PA++++]"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210274396",
+    "translated_kr": "내추럴 커버 파운데이션/2호 베이지/SPF50+ PA+++/일광 차단제/방수/시간 단축 모공 커버/커버업/시미 케어/남성 화장품/한국화장품/메이크업 베이스",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "20170303111608_2017_03.04_judanhak_web_PDF11.compressed.pdf",
+      "naver_web": "봉합흉터제거, 적정 시기와 방법은?"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
