@@ -319,6 +319,22 @@ def build_pairs():
     # 資生堂 엘릭서=시세이도 엘릭시르 등 브랜드 표기만 다른 경우).
     # 파일로 두는 이유: 자동 규칙을 무리하게 넓히면 정상 매칭까지 사라진다.
     # 판단 근거가 사람인 건 사람이 관리하는 목록에 둔다.
+    # [v5.0.0] 한국 화장품이 아닌 브랜드는 애초에 검수 대상이 아니다.
+    #  이 사업은 한국에서 사서 큐텐재팬에 파는 구조라, 일본·유럽 브랜드
+    #  상품은 한국 매입가가 더 비싸거나 아예 유통되지 않는다. 그런데도
+    #  발굴에 섞여 들어와 검증을 소모하고, 억지로 매칭되면 오매칭이 된다
+    #  (실측: 花王 비오레 -> 지에프코스 선크림, ブルガリ 향수 -> 노에비아 크림).
+    #  브랜드 목록으로 관리한다 — 자동 판별이 어렵다. 가타카나라고 해외가
+    #  아니다(アヌア=아누아, メディキューブ=메디큐브는 한국 브랜드다).
+    foreign_path = DATA / "foreign_brands.json"
+    foreign_brands = set()
+    if foreign_path.exists():
+        try:
+            foreign_brands = set(json.loads(foreign_path.read_text(encoding="utf-8")))
+        except (OSError, ValueError) as e:
+            print(f"[경고] foreign_brands.json 읽기 실패: {e}")
+    print(f"[해외브랜드] {len(foreign_brands)}종 등록됨")
+
     manual_path = DATA / "manual_exclusions.json"
     manual_excluded = set()
     if manual_path.exists():
@@ -354,7 +370,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -394,6 +410,10 @@ def build_pairs():
         # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
         # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
+        if (q.get("brand") or "").strip() in foreign_brands:
+            stats["foreign"] += 1
+            continue
+
         if looks_like_article(x.get("name") or ""):
             stats["article"] += 1
             excluded_mismatch.append({
@@ -594,7 +614,7 @@ def build_pairs():
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
           f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
           f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
-          f"광고글제외={stats['article']} "
+          f"광고글제외={stats['article']} 해외브랜드제외={stats['foreign']} "
           f"최종={stats['ok']}건")
     pairs = _drop_search_blackholes(pairs, excluded_mismatch)
     if excluded_mismatch:

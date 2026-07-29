@@ -906,6 +906,42 @@ def t61_search_blackhole_and_articles():
           f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged} 검증단계{verify_filtered}")
 
 
+# --------------------- #62 해외(비한국) 브랜드 제외
+#  이 사업은 한국에서 사서 큐텐재팬에 파는 구조다. 일본·유럽 브랜드
+#  상품은 한국 매입가가 더 비싸거나 아예 유통되지 않아 애초에 대상이
+#  아닌데, 발굴에 섞여 들어와 검증을 소모하고 억지로 매칭되면 오매칭이
+#  된다(실측: 花王 비오레 -> 지에프코스 선크림, ブルガリ 향수 -> 노에비아 크림).
+#
+#  자동 판별이 어렵다는 점이 핵심이다 — 가타카나라고 해외가 아니다.
+#  アヌア=아누아, メディキューブ=메디큐브, 雪花秀=설화수, 呂=려는 전부
+#  한국 브랜드다. 그래서 문자 종류가 아니라 브랜드 목록으로 관리한다.
+def t62_foreign_brand_exclusion():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    path = ROOT / "data" / "foreign_brands.json"
+
+    exists = path.exists()
+    brands = []
+    if exists:
+        try:
+            brands = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            brands = None
+    valid = isinstance(brands, list) and len(brands) > 0 and all(isinstance(b, str) for b in brands)
+    # 한국 브랜드가 목록에 섞이면 멀쩡한 상품이 통째로 사라진다.
+    korean_safe = valid and not ({"アヌア", "メディキューブ", "雪花秀", "呂", "オフィ",
+                                  "アモーレパシフィック", "ヘラ", "イニスフリー"} & set(brands))
+    loaded = 'foreign_path = DATA / "foreign_brands.json"' in src
+    applied = 'in foreign_brands:' in src
+    counted = '"foreign": 0' in src
+    _i = src.find("foreign_path")
+    safe = _i >= 0 and "except (OSError, ValueError)" in src[_i:_i + 800]
+
+    ok = exists and valid and korean_safe and loaded and applied and counted and safe
+    check("62 해외 브랜드 제외", ok,
+          f"파일{exists}({len(brands) if isinstance(brands, list) else '깨짐'}종) 형식{valid} "
+          f"한국브랜드미포함{korean_safe} 읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
