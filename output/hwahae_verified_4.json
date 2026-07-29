@@ -10145,5 +10145,363 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209149809",
+    "translated_kr": "NILE 필링 젤 각질 제거 얼굴 남성 여성 (캘리포니아 자몽 향)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "NILE 필링 젤 각질 제거 얼굴 남성 여성 (150g, CALIFORNIA (자몽) 향기)",
+      "daum": "피부 좋아지는 습관, 피부 관리 루틴",
+      "naver_web": "NILE 필링젤 각질 제거 얼굴 남성 여성"
+    },
+    "brand": null,
+    "name": "NILE 필링 젤 각질 제거 얼굴 남성 여성 (150g, CALIFORNIA (자몽) 향기)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "34880",
+    "mall": "and fiends",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12714386388",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9025889/90258897309.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025889/90258897309.jpg",
+        "mall": "and fiends",
+        "link": "https://smartstore.naver.com/main/products/12714386388"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209763389",
+    "translated_kr": "TOKIO 토키오 인카라미 플래티넘 샴푸 400ml & 트리트먼트 400g -60-",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "7무 피토에너지 약산성 샴푸",
+      "naver_web": "토키오 인카라미 플래티넘 샴푸 리필용 TOKIO IE",
+      "naver_rematch": "토키오 인카라미 플래티넘 샴푸 700ml 리필용 TOKIO IE"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "토키오 인카라미 플래티넘 샴푸 리필용 TOKIO IE",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "62200",
+    "mall": "분더스토리",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11758738434",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8930324/89303249021.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8930324/89303249021.jpg",
+        "mall": "분더스토리",
+        "link": "https://smartstore.naver.com/main/products/11758738434"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8925027/89250279572.1.jpg",
+        "mall": "어반브라운 재팬",
+        "link": "https://smartstore.naver.com/main/products/11705769105"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116411/91164113265.jpg",
+        "mall": "어라운드도쿄",
+        "link": "https://smartstore.naver.com/main/products/13619602848"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103139/91031399187.jpg",
+        "mall": "Greenbean",
+        "link": "https://smartstore.naver.com/main/products/13486888835"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209647232",
+    "translated_kr": "Rexena (레세나) 드라이 실드 파우더 스틱 스타일리시 머스크 본체 세트 20g X 2 제한제",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "레세나 인기 상품을 솔직하게 이야기하는 블로거의 추천과"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209647226",
+    "translated_kr": "Deo-Ace EX plus 데오에이스 EX 플러스 약용 30g 데오도란트 제한제 땀 멈춤 겨드랑이 손 발 얼굴 다한증 무향",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로플렉스 이엑스 플러스",
+      "naver": "프로플렉스 이엑스 플러스 400mg x 90캡슐"
+    },
+    "brand": "아리바이오 (ariBio)",
+    "name": "프로플렉스 이엑스 플러스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "61480",
+    "mall": "써클홀딩스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11158647347",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8870315/88703157669.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8870315/88703157669.1.jpg",
+        "mall": "써클홀딩스",
+        "link": "https://smartstore.naver.com/main/products/11158647347"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8096657/80966573363.4.jpg",
+        "mall": "인월드",
+        "link": "https://smartstore.naver.com/main/products/3422056267"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1142392953",
+    "translated_kr": "글로우턴 탈모 케어 앰플 100ml / 헤어 에센스 / 헤어 케어 / 두피 케어 / 탈모 케어 솔루션",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "내추럴 마일드 스칼프 케어 탈모샴푸",
+      "naver": "릴리이브 그로우턴 앰플 100ml+100ml 탈모 완화 두피 에센스 본품+리필형",
+      "daum": "꽃이 피기 시작하는 4월의 신상 뷰티템",
+      "naver_web": "그로우턴 두피 앰플 세럼 글로우턴 사용법 그로턴 2개 MJ"
+    },
+    "brand": "릴리이브",
+    "name": "릴리이브 그로우턴 앰플 100ml+100ml 탈모 완화 두피 에센스 본품+리필형",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "37200",
+    "mall": "글로우컴퍼니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12319877027",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8986438/89864387744.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986438/89864387744.1.jpg",
+        "mall": "글로우컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/12319877027"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9000474/90004744030.1.jpg",
+        "mall": "글로우컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/12460233283"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116261/91162616228.jpg",
+        "mall": "밸류포켓",
+        "link": "https://smartstore.naver.com/main/products/13618105811"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1187794959",
+    "translated_kr": "【메가 할인 대상】 판테놀 크림 100ml 민감피부 보습 피부 거칠음 케어 배리어 크림 한국 스킨케어 건조피부 윤기 피부",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뜨거운 태양에 맞서는 7월의 신상 뷰티템",
+      "naver_web": "촉촉한 겨울을 위한 보습 열전"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211189584",
+    "translated_kr": "【Aurelie 공식점】 모이스처 세럼 클렌징 MEGUMI 개발 클렌징 오일 메이크 낙시 화장 낙시 촉촉 스킨케어 모공 더러움 식물성 줄기세포",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver": "[피토버] 플러스 매끈 모공 에센스 235ml_PPME235",
+      "daum": "NEW 에센셜 스킨케어"
+    },
+    "brand": "피토버플러스 (PHYTOVER)",
+    "name": "매끈 모공 에센스",
+    "volume": "235ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "20000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=170637024&shop_id=49814&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6077457/60774571820.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6077457/60774571820.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=170637024&shop_id=49814&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6077457/60774571782.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=170637074&shop_id=49814&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "지그재그 스토어",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202571743",
+    "translated_kr": "스칼프 스파 샴푸 300ml 트리트먼트 300g 리필용 두피 케어 진한 거품 온냉감 스파 처방 헤어 케어 지피부 케어 스칼프 스파 볼륨 거품",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "naver_web": "두피 피지낭종? 일반 피부과서도 제거하나요",
+      "naver_rematch": "뾰루지 고름 짜는법 좁쌀여드름 없애기 블랙헤드 없애는법 셀프 스킨플래닝 피지 불리기 초등"
+    },
+    "brand": null,
+    "name": "두피 피지낭종? 일반 피부과서도 제거하나요",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "12800",
+    "mall": "아임홈인",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5400738764",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8294523/82945232392.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8294523/82945232392.jpg",
+        "mall": "아임홈인",
+        "link": "https://smartstore.naver.com/main/products/5400738764"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8258041/82580416731.jpg",
+        "mall": "아임홈인",
+        "link": "https://smartstore.naver.com/main/products/5035895789"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002683/90026831792.jpg",
+        "mall": "만물가드",
+        "link": "https://smartstore.naver.com/main/products/12482320967"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002176/90021763352.jpg",
+        "mall": "만물가드",
+        "link": "https://smartstore.naver.com/main/products/12477252527"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1203052107",
+    "translated_kr": "씻어내지 않는 헤어 트리트먼트 헤어 메인테넌스 에멀전 110mL X 2본 우테나 헤어 밀크 스트레이트 케어 웨이브 습기 블록 히트 프로텍트 프룻티 플로럴 향",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver": "올마실 비건 8초 살롱 프리미엄 헤어 마스크 100ml"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "27000",
+    "mall": "마실 Masil 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/9266318440",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/9266318440"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038200/90382005237.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12837494245"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1073380168",
+    "translated_kr": "정규품 셀만 5종 오리지널 기능성 세트 (토너 150ml + 세럼 30ml + 크림 50ml + 비타민C 세럼 30ml + 워시 파우더 70g) + / 관세 없음",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "(해외)딥 릴리프 아크네 트리트먼트",
+      "daum": "2026.01.28 CONNECTION DAILY NEWS",
+      "naver_web": "Murad 뮤라드 딥 릴리프 트리트먼트",
+      "naver_rematch": "Murad 뮤라드 딥 릴리프 아크네 트리트먼트 30ml"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
