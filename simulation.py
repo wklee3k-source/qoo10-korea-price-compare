@@ -869,6 +869,36 @@ def t60_manual_exclusions():
           f"읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe}")
 
 
+# --------------------- #61 검색 블랙홀 / 광고글 매칭 차단
+#  특정 인기 상품이 서로 다른 큐텐 상품 여러 건에 반복해서 붙는다.
+#  실측(2,590건): 같은 구매링크가 22건·20건·16건에 붙었고, 3건 이상에
+#  붙은 링크가 전체의 14.2%(369건)를 차지했다. 성분어(PDRN·시카·콜라겐)만
+#  겹치면 검색이 인기 상품 몇 개로 수렴하기 때문이다.
+#  또 상품이 아니라 블로그·추천글이 구매링크로 잡히는 경우도 있었다
+#  ('2026 상반기 스킨케어 트렌드' 14건, '추천글루타치온필름팩 10종' 12건).
+#
+#  블랙홀은 전부 지우면 안 된다 — 그중 하나는 진짜 짝일 수 있다.
+#  이름이 가장 비슷한 한 건만 남기고 나머지를 뺀다.
+def t61_search_blackhole_and_articles():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    has_article = "def looks_like_article(" in src and "AD_TITLE_RE" in src
+    article_applied = 'if looks_like_article(x.get("name") or ""):' in src
+    has_blackhole = "def _drop_search_blackholes(" in src and "BLACKHOLE_MIN" in src
+    blackhole_applied = "pairs = _drop_search_blackholes(pairs, excluded_mismatch)" in src
+    # 링크당 최소 1건은 남겨야 한다(전량 삭제 금지).
+    fn = src.split("def _drop_search_blackholes(")[1].split("\ndef ")[0] if has_blackhole else ""
+    keeps_best = "best = max(group" in fn and "keep_ids.add(id(best))" in fn
+    # 뺀 건은 기록으로 남겨야 한다.
+    logged = 'reason": f"검색 블랙홀' in fn
+
+    ok = (has_article and article_applied and has_blackhole and blackhole_applied
+          and keeps_best and logged)
+    check("61 검색 블랙홀/광고글 차단", ok,
+          f"광고패턴{has_article} 광고적용{article_applied} 블랙홀{has_blackhole} "
+          f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

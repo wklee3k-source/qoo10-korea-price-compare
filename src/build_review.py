@@ -131,6 +131,21 @@ def _sim_bigram(a: str, b: str) -> float:
     return len(sa & sb) / min(len(sa), len(sb))
 
 
+# [v4.8.0] 상품이 아니라 블로그·광고·추천글이 구매링크로 잡히는 경우.
+#  실측: '2026 상반기 스킨케어 트렌드, 딱 이것만 챙기세요'가 14건에,
+#  '추천글루타치온필름팩 10종 인기 제품 지금 바로!'가 12건에 붙어 있었다.
+#  이런 페이지는 검색어와 느슨하게 맞아떨어져서 여러 상품을 빨아들인다.
+AD_TITLE_RE = re.compile(
+    r"(추천\s*(글|템|제품|순위)|인기\s*(제품|템|순위)|트렌드|지금\s*바로|"
+    r"베스트\s*\d|TOP\s*\d|\d+\s*종\s*(인기|추천)|후기\s*모음|비교\s*정리|"
+    r"이것만|알아보기|총정리|모집)"
+)
+
+
+def looks_like_article(title: str) -> bool:
+    return bool(AD_TITLE_RE.search(title or ""))
+
+
 def _flat(text: str) -> str:
     return re.sub(r"[^가-힣A-Za-z0-9]", "", text or "").lower()
 
@@ -339,7 +354,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -379,6 +394,15 @@ def build_pairs():
         # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
         # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
+        if looks_like_article(x.get("name") or ""):
+            stats["article"] += 1
+            excluded_mismatch.append({
+                "goods_no": x.get("goods_no"), "qoo10": translated_kr,
+                "matched": x.get("name"), "url": x.get("product_url"),
+                "reason": "상품이 아니라 광고/추천글로 보임",
+            })
+            continue
+
         if str(x.get("goods_no")) in manual_excluded:
             stats["manual"] += 1
             continue
@@ -567,17 +591,62 @@ def build_pairs():
                 bool(x.get("single_source_naver")))),
         })
 
-    if excluded_mismatch:
-        (OUTPUT / "brand_name_mismatch_excluded.json").write_text(
-            json.dumps(excluded_mismatch, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"[제외목록] output/brand_name_mismatch_excluded.json — {len(excluded_mismatch)}건 "
-              "(자동 판정이 틀렸는지 확인 가능)")
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
           f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
           f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
+          f"광고글제외={stats['article']} "
           f"최종={stats['ok']}건")
+    pairs = _drop_search_blackholes(pairs, excluded_mismatch)
+    if excluded_mismatch:
+        print(f"[제외목록] output/brand_name_mismatch_excluded.json — {len(excluded_mismatch)}건 "
+              "(자동 판정이 틀렸는지 확인 가능)")
+        (OUTPUT / "brand_name_mismatch_excluded.json").write_text(
+            json.dumps(excluded_mismatch, ensure_ascii=False, indent=2), encoding="utf-8")
     (OUTPUT / "comparison_pairs.json").write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
     return pairs
+
+
+# [v4.8.0] 검색 블랙홀 정리.
+#  특정 한국 상품이 서로 다른 큐텐 상품 여러 건에 반복해서 붙는다.
+#  실측(2,590건): 같은 구매링크가 22건·20건·16건에 붙은 사례가 있었고,
+#  3건 이상에 붙은 링크가 전체의 14.2%(369건)를 차지했다.
+#      프리티스킨 'PDRN TX1 콜라겐 캡슐 크림'   11건
+#      게스통 '스킨부스터 이데베논 세럼 시트마스크' 16건
+#  성분어(PDRN·시카·콜라겐 등)만 겹치면 검색이 이 인기 상품들로 수렴한다.
+#
+#  전부 지우지는 않는다 — 그중 하나는 진짜 짝일 수 있다. 이름이 가장
+#  비슷한 한 건만 남기고 나머지를 뺀다.
+BLACKHOLE_MIN = 3
+
+
+def _drop_search_blackholes(pairs: list[dict], excluded: list[dict]) -> list[dict]:
+    from collections import defaultdict
+    by_url: dict[str, list[dict]] = defaultdict(list)
+    for p in pairs:
+        by_url[p.get("kr_url") or ""].append(p)
+
+    keep_ids = set()
+    dropped = 0
+    for url, group in by_url.items():
+        if not url or len(group) < BLACKHOLE_MIN:
+            keep_ids.update(id(p) for p in group)
+            continue
+        best = max(group, key=lambda p: (_sim_token(p.get("qoo10_name") or "", p.get("kr_name") or ""),
+                                         int(p.get("confidence", 0))))
+        keep_ids.add(id(best))
+        for p in group:
+            if p is best:
+                continue
+            dropped += 1
+            excluded.append({
+                "goods_no": p.get("goods_no"), "qoo10": p.get("qoo10_name"),
+                "matched": p.get("kr_name"), "url": url,
+                "reason": f"검색 블랙홀: 같은 링크가 {len(group)}건에 중복 매칭",
+            })
+    if dropped:
+        print(f"[블랙홀제외] 같은 링크에 {BLACKHOLE_MIN}건 이상 몰린 매칭 중 {dropped}건 제외"
+              " (링크당 가장 잘 맞는 1건만 유지)")
+    return [p for p in pairs if id(p) in keep_ids]
 
 
 def esc(s):
