@@ -22,6 +22,10 @@
   .badge.mismatch { background:#fdeaea; color:#c0392b; }
   .badge.unknown { background:#fdf3e3; color:#a67a1f; }
   /* [v3.9.0] 브랜드 미확인 경고 — 카드가 뒤쪽에 몰려 있어도 한눈에 띄어야 한다 */
+  /* [v4.6.0] 신뢰 등급 */
+  .badge.tier-A { background:#e3f5ea; color:#1e6b3a; border:1px solid #8fceac; }
+  .badge.tier-B { background:#fdf3e3; color:#8a5b00; border:1px solid #e0b96b; }
+  .badge.tier-C { background:#fdeaea; color:#a01f1f; border:1px solid #e59a9a; }
   .badge.warn { background:#fff3cd; color:#8a5b00; border:1px solid #e0b96b; white-space:normal; }
   .card-body { display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
   .photo-row { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
@@ -89,7 +93,7 @@
 
 <div class="card" data-goods="1096455115" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라비오뜨">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -138,7 +142,7 @@
 
 <div class="card" data-goods="1078649994" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라비오뜨">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -187,7 +191,7 @@
 
 <div class="card" data-goods="1136390189" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -236,7 +240,7 @@
 
 <div class="card" data-goods="1207549451" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · OBgE 오브제">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -285,7 +289,7 @@
 
 <div class="card" data-goods="1209714705" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · skin pick">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -334,7 +338,7 @@
 
 <div class="card" data-goods="1183846495" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -383,7 +387,7 @@
 
 <div class="card" data-goods="1174191912" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -432,7 +436,7 @@
 
 <div class="card" data-goods="1107097362" data-qoo10-name="" data-kr-name="" data-kr-site="musinsa · 컬리N마트">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -481,7 +485,7 @@
 
 <div class="card" data-goods="1137321213" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 스마링">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -530,7 +534,7 @@
 
 <div class="card" data-goods="1186687418" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 힐링DIY마켓">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -579,7 +583,7 @@
 
 <div class="card" data-goods="1181391461" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 지그재그">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -628,7 +632,7 @@
 
 <div class="card" data-goods="909202680" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라클리어 공식 스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -677,7 +681,7 @@
 
 <div class="card" data-goods="1152006526" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리코셀">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -726,7 +730,7 @@
 
 <div class="card" data-goods="1165001254" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · KBOOSTER 공식몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -775,7 +779,7 @@
 
 <div class="card" data-goods="1110551308" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 무신사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -824,7 +828,7 @@
 
 <div class="card" data-goods="1108224056" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -873,7 +877,7 @@
 
 <div class="card" data-goods="1204653366" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 어노브">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -922,7 +926,7 @@
 
 <div class="card" data-goods="985512231" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 네이처리퍼블릭">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -971,7 +975,7 @@
 
 <div class="card" data-goods="1112773913" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 101Shop">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1020,7 +1024,7 @@
 
 <div class="card" data-goods="1087789912" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 아누아">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1069,7 +1073,7 @@
 
 <div class="card" data-goods="1173118335" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1118,7 +1122,7 @@
 
 <div class="card" data-goods="1183257583" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 마켓굿잡">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1167,7 +1171,7 @@
 
 <div class="card" data-goods="1205746446" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1216,7 +1220,7 @@
 
 <div class="card" data-goods="1169201226" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디어클레어스">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1265,7 +1269,7 @@
 
 <div class="card" data-goods="1204555836" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디어클레어스">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1314,7 +1318,7 @@
 
 <div class="card" data-goods="1146350870" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · Afterblow">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1363,7 +1367,7 @@
 
 <div class="card" data-goods="1212749218" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 디오디너리">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1412,7 +1416,7 @@
 
 <div class="card" data-goods="1122416561" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · originbe">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1461,7 +1465,7 @@
 
 <div class="card" data-goods="1205625745" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 뷰티 원">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1510,7 +1514,7 @@
 
 <div class="card" data-goods="1064609458" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아모레퍼시픽공식몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1559,7 +1563,7 @@
 
 <div class="card" data-goods="1202125379" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 벤튼">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1608,7 +1612,7 @@
 
 <div class="card" data-goods="1160562706" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 오감공감">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1657,7 +1661,7 @@
 
 <div class="card" data-goods="1162421706" data-qoo10-name="" data-kr-name="" data-kr-site="naver_web · 니코리재팬">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1706,7 +1710,7 @@
 
 <div class="card" data-goods="1187354085" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더뷰티">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1755,7 +1759,7 @@
 
 <div class="card" data-goods="1207892717" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 원학이커머스1-1">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1804,7 +1808,7 @@
 
 <div class="card" data-goods="1191463910" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1853,7 +1857,7 @@
 
 <div class="card" data-goods="1164465472" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 퍼니코 코스메틱">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1902,7 +1906,7 @@
 
 <div class="card" data-goods="1191434564" data-qoo10-name="" data-kr-name="" data-kr-site="daum · 카린닷컴">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1951,7 +1955,7 @@
 
 <div class="card" data-goods="1202779242" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 88점빵">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2000,7 +2004,7 @@
 
 <div class="card" data-goods="1205776987" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 아비트라몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2049,7 +2053,7 @@
 
 <div class="card" data-goods="1135547179" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 월드세븐">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2098,7 +2102,7 @@
 
 <div class="card" data-goods="1193841835" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · TONDAY 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2147,7 +2151,7 @@
 
 <div class="card" data-goods="1131417905" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 놀자재팬">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2196,7 +2200,7 @@
 
 <div class="card" data-goods="1203101387" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 롯데홈쇼핑.">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2245,7 +2249,7 @@
 
 <div class="card" data-goods="1208957871" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 코스알엑스">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2294,7 +2298,7 @@
 
 <div class="card" data-goods="1178226810" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디큐브 공식몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2343,7 +2347,7 @@
 
 <div class="card" data-goods="1202412626" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 벤튼">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2392,7 +2396,7 @@
 
 <div class="card" data-goods="1149072325" data-qoo10-name="" data-kr-name="" data-kr-site="naver_rematch · 에이티씨글로벌">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2441,7 +2445,7 @@
 
 <div class="card" data-goods="1171946936" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2490,7 +2494,7 @@
 
 <div class="card" data-goods="1204898098" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · skin pick">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2539,7 +2543,7 @@
 
 <div class="card" data-goods="1209143135" data-qoo10-name="" data-kr-name="" data-kr-site="daum · 강산 마켓">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2588,7 +2592,7 @@
 
 <div class="card" data-goods="1186174078" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 로벡틴">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2637,7 +2641,7 @@
 
 <div class="card" data-goods="1118793119" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 지피 MARKET">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2686,7 +2690,7 @@
 
 <div class="card" data-goods="1189368618" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 로에 LOE">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2735,7 +2739,7 @@
 
 <div class="card" data-goods="1188994112" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 네이처리퍼블릭">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2784,7 +2788,7 @@
 
 <div class="card" data-goods="1087790101" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 비플레인 beplain">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2833,7 +2837,7 @@
 
 <div class="card" data-goods="1196266001" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 셀퓨전씨">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2882,7 +2886,7 @@
 
 <div class="card" data-goods="1156624268" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 스킨앤랩">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2931,7 +2935,7 @@
 
 <div class="card" data-goods="1159441896" data-qoo10-name="" data-kr-name="" data-kr-site="daum · 달바 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -2980,7 +2984,7 @@
 
 <div class="card" data-goods="1211859799" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아누아">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3029,7 +3033,7 @@
 
 <div class="card" data-goods="1205368128" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아누아">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3078,7 +3082,7 @@
 
 <div class="card" data-goods="1168490940" data-qoo10-name="" data-kr-name="" data-kr-site="naver · LUNA 루나">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3127,7 +3131,7 @@
 
 <div class="card" data-goods="1207103587" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 코리아나화장품">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3176,7 +3180,7 @@
 
 <div class="card" data-goods="1125687253" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 에스트라">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3225,7 +3229,7 @@
 
 <div class="card" data-goods="1195652726" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · JnH Shop">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3274,7 +3278,7 @@
 
 <div class="card" data-goods="1203834476" data-qoo10-name="" data-kr-name="" data-kr-site="naver_web · 라운드랩">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3323,7 +3327,7 @@
 
 <div class="card" data-goods="1212154060" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 대성케이">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3372,7 +3376,7 @@
 
 <div class="card" data-goods="1212147421" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 대성케이">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3421,7 +3425,7 @@
 
 <div class="card" data-goods="1180095461" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 스킨몽">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3470,7 +3474,7 @@
 
 <div class="card" data-goods="1198551506" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · ALL-KPOP MAG">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3519,7 +3523,7 @@
 
 <div class="card" data-goods="1204176921" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · StreetMap">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3568,7 +3572,7 @@
 
 <div class="card" data-goods="1190079671" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 에스트라">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3617,7 +3621,7 @@
 
 <div class="card" data-goods="1208012735" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 선진tm01">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3666,7 +3670,7 @@
 
 <div class="card" data-goods="1212658505" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 밸류포켓">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3715,7 +3719,7 @@
 
 <div class="card" data-goods="1209471298" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 주식회사제이씨">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3764,7 +3768,7 @@
 
 <div class="card" data-goods="1209318867" data-qoo10-name="" data-kr-name="" data-kr-site="daum · 헤트라스">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3813,7 +3817,7 @@
 
 <div class="card" data-goods="1166658308" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 무신사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3862,7 +3866,7 @@
 
 <div class="card" data-goods="1170454907" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · ALL-KPOP MAG">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3911,7 +3915,7 @@
 
 <div class="card" data-goods="1178760167" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리베르">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -3960,7 +3964,7 @@
 
 <div class="card" data-goods="1210270319" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · AHC 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4009,7 +4013,7 @@
 
 <div class="card" data-goods="1178892890" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4058,7 +4062,7 @@
 
 <div class="card" data-goods="1133813847" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 동아제약 파티온 공식몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4107,7 +4111,7 @@
 
 <div class="card" data-goods="1199149287" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메리베리라이프">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4156,7 +4160,7 @@
 
 <div class="card" data-goods="1114184228" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 메디큐브">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4205,7 +4209,7 @@
 
 <div class="card" data-goods="1190051434" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 레드밤">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4254,7 +4258,7 @@
 
 <div class="card" data-goods="1199549438" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4303,7 +4307,7 @@
 
 <div class="card" data-goods="1211116460" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 닥터자르트">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4352,7 +4356,7 @@
 
 <div class="card" data-goods="1182516343" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 고투베이직">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4401,7 +4405,7 @@
 
 <div class="card" data-goods="1194218772" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 닥터멜락신">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4450,7 +4454,7 @@
 
 <div class="card" data-goods="1152577703" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 엄마의 선물 추천">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4499,7 +4503,7 @@
 
 <div class="card" data-goods="1195329476" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더마벨 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4548,7 +4552,7 @@
 
 <div class="card" data-goods="1162947006" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 마녀공장 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4597,7 +4601,7 @@
 
 <div class="card" data-goods="1189433592" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 도니수니몰">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4646,7 +4650,7 @@
 
 <div class="card" data-goods="960305321" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 코어링크스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4695,7 +4699,7 @@
 
 <div class="card" data-goods="1191147845" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 올리브영">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4744,7 +4748,7 @@
 
 <div class="card" data-goods="1189062196" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 루아더컴퍼니">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge unknown">수량 자동수정됨(업로드명 확인!)</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4793,7 +4797,7 @@
 
 <div class="card" data-goods="1176541018" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 컬리N마트">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4842,7 +4846,7 @@
 
 <div class="card" data-goods="1186550040" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 재팬럭키셀렉트">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4891,7 +4895,7 @@
 
 <div class="card" data-goods="1194719971" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 랜덤플레이 주식회사">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -4940,7 +4944,7 @@
 
 <div class="card" data-goods="1118660034" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 쏘나이스 SSONICE">
   <div class="card-header">
-    <span class="badges"><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-A">A · 완전 신뢰</span><span class="badge match">브랜드일치</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">

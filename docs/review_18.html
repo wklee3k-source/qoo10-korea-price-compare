@@ -22,6 +22,10 @@
   .badge.mismatch { background:#fdeaea; color:#c0392b; }
   .badge.unknown { background:#fdf3e3; color:#a67a1f; }
   /* [v3.9.0] 브랜드 미확인 경고 — 카드가 뒤쪽에 몰려 있어도 한눈에 띄어야 한다 */
+  /* [v4.6.0] 신뢰 등급 */
+  .badge.tier-A { background:#e3f5ea; color:#1e6b3a; border:1px solid #8fceac; }
+  .badge.tier-B { background:#fdf3e3; color:#8a5b00; border:1px solid #e0b96b; }
+  .badge.tier-C { background:#fdeaea; color:#a01f1f; border:1px solid #e59a9a; }
   .badge.warn { background:#fff3cd; color:#8a5b00; border:1px solid #e0b96b; white-space:normal; }
   .card-body { display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
   .photo-row { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
@@ -89,7 +93,7 @@
 
 <div class="card" data-goods="1209405770" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더리즈 TheLeeds">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -138,7 +142,7 @@
 
 <div class="card" data-goods="1212561469" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 슈슈슈">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -187,7 +191,7 @@
 
 <div class="card" data-goods="1140052231" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 지그재그">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -236,7 +240,7 @@
 
 <div class="card" data-goods="1208668153" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · GFCOS">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -285,7 +289,7 @@
 
 <div class="card" data-goods="1166355285" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 라운드랩">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -334,7 +338,7 @@
 
 <div class="card" data-goods="1189190089" data-qoo10-name="" data-kr-name="" data-kr-site="daum · AHC 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -383,7 +387,7 @@
 
 <div class="card" data-goods="1201612789" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 늘아랑">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -432,7 +436,7 @@
 
 <div class="card" data-goods="1213815915" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 일본화장품스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -481,7 +485,7 @@
 
 <div class="card" data-goods="1194293129" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더마팩토리">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -530,7 +534,7 @@
 
 <div class="card" data-goods="1133994465" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 온더하기">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -579,7 +583,7 @@
 
 <div class="card" data-goods="972505222" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 애브리 웰">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -628,7 +632,7 @@
 
 <div class="card" data-goods="1141508529" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 구매확정몰">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">용량판단불가</span><span class="badge unknown">세트상품</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -677,7 +681,7 @@
 
 <div class="card" data-goods="1210647393" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 웨이블리 공식스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">공식몰</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">공식몰</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -726,7 +730,7 @@
 
 <div class="card" data-goods="1153333035" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 더리즈 TheLeeds">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -775,7 +779,7 @@
 
 <div class="card" data-goods="1178120837" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 지그재그">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">신뢰채널</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">신뢰채널</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -824,7 +828,7 @@
 
 <div class="card" data-goods="1196260969" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · k-photocard">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -873,7 +877,7 @@
 
 <div class="card" data-goods="1200337123" data-qoo10-name="" data-kr-name="" data-kr-site="naver_web · 네츄럴샤인">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -922,7 +926,7 @@
 
 <div class="card" data-goods="1034771644" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 이음코너">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -971,7 +975,7 @@
 
 <div class="card" data-goods="1093734916" data-qoo10-name="" data-kr-name="" data-kr-site="daum · 메모리아031">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1020,7 +1024,7 @@
 
 <div class="card" data-goods="1198313653" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · LOVE UNLIMITED">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge match">용량일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1069,7 +1073,7 @@
 
 <div class="card" data-goods="1101463859" data-qoo10-name="" data-kr-name="" data-kr-site="naver · 도로동스토어">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1118,7 +1122,7 @@
 
 <div class="card" data-goods="1212496315" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 코써즐">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1167,7 +1171,7 @@
 
 <div class="card" data-goods="1208355765" data-qoo10-name="" data-kr-name="" data-kr-site="naver_web · 에코메로우">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1216,7 +1220,7 @@
 
 <div class="card" data-goods="1210369485" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리쥬베닐Re-Juvenil">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1265,7 +1269,7 @@
 
 <div class="card" data-goods="1207548004" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 하멜">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1314,7 +1318,7 @@
 
 <div class="card" data-goods="1196343064" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 제이숲N">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1363,7 +1367,7 @@
 
 <div class="card" data-goods="1201930045" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 파인웨이브25">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1412,7 +1416,7 @@
 
 <div class="card" data-goods="1128928195" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아이스트 I.st">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1461,7 +1465,7 @@
 
 <div class="card" data-goods="1183287647" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 닥터슈 크리에이티브">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1510,7 +1514,7 @@
 
 <div class="card" data-goods="1209957893" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 아로셀">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1559,7 +1563,7 @@
 
 <div class="card" data-goods="1207401158" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 향수셀렉터">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">용량판단불가</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1608,7 +1612,7 @@
 
 <div class="card" data-goods="1211535958" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · LAVIEN">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1657,7 +1661,7 @@
 
 <div class="card" data-goods="1205607511" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · UA:JIN">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1706,7 +1710,7 @@
 
 <div class="card" data-goods="1172083985" data-qoo10-name="" data-kr-name="" data-kr-site="naver_web · MONAGE">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1755,7 +1759,7 @@
 
 <div class="card" data-goods="1163878412" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 자꾸사">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1804,7 +1808,7 @@
 
 <div class="card" data-goods="1202551527" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 블리스하이">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1853,7 +1857,7 @@
 
 <div class="card" data-goods="1166971680" data-qoo10-name="" data-kr-name="" data-kr-site="naver · ACEss">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge mismatch">용량불일치</span><span class="badge match">스마트스토어</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1902,7 +1906,7 @@
 
 <div class="card" data-goods="1109185951" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 살림백서">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
@@ -1951,7 +1955,7 @@
 
 <div class="card" data-goods="1168938794" data-qoo10-name="" data-kr-name="" data-kr-site="hwahae · 리더스코스메틱">
   <div class="card-header">
-    <span class="badges"><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
+    <span class="badges"><span class="badge tier-C">C · 불일치 의심</span><span class="badge mismatch">브랜드불일치</span><span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span><span class="badge warn">⚠ 신뢰도 낮음 — 다른 제품일 가능성이 높습니다. 사진·용량을 꼭 확인하세요</span><span class="badge unknown">재검색 매칭 — 다른 소스가 알려준 이름으로 찾은 건입니다</span><span class="badge mismatch">용량불일치</span><span class="badge match">브랜드직영추정</span></span>
     <button class="exclude-btn" onclick="toggleExclude(this)">❌ 이 상품 제외</button>
   </div>
   <div class="card-body">
