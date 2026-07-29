@@ -1181,8 +1181,18 @@ jobs:
           python3 -c "
           import json, zlib
           state = json.load(open('/tmp/ds_for_verify.json'))
+          # [v5.1.0] 한국 브랜드가 아닌 상품은 검증하지 않는다. 예전엔
+          # 검수페이지 만들 때만 걸러서, 검증은 그대로 다 돌고 나서
+          # 버려졌다 — 실측 490건(10.7%)이 헛돌았다. 게다가 억지로 매칭돼
+          # 오매칭으로 남는 경우도 있었다(花王 비오레 -> 지에프코스 선크림).
+          import pathlib as _pl
+          _fp = _pl.Path('../data/foreign_brands.json')
+          foreign = set(json.loads(_fp.read_text(encoding='utf-8'))) if _fp.exists() else set()
+          allp = [p for p in state.get('all_products', []) if p.get('translated_kr')]
+          kept = [p for p in allp if (p.get('brand') or '').strip() not in foreign]
+          print(f'[해외브랜드제외] {len(allp) - len(kept)}건 (남은 검증대상 {len(kept)}건)')
           rows = [{'goods_no': p['goods_no'], 'translated_kr': p['translated_kr'], 'known_brand': p.get('known_brand','')}
-                  for p in state.get('all_products', []) if p.get('translated_kr')]
+                  for p in kept]
           mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 6 == $S]  # 나눗셈은 워커수(6)와 일치
           json.dump(mine, open('../output/hwahae_input_${S}.json','w'), ensure_ascii=False, indent=2)
           print(f'[INFO] 전체 {len(rows)}건 중 샤드${S} 몫 {len(mine)}건')

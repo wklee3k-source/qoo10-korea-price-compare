@@ -936,10 +936,17 @@ def t62_foreign_brand_exclusion():
     _i = src.find("foreign_path")
     safe = _i >= 0 and "except (OSError, ValueError)" in src[_i:_i + 800]
 
-    ok = exists and valid and korean_safe and loaded and applied and counted and safe
+    # [v5.1.0] 검증 단계에서도 걸러야 한다. 검수페이지에서만 빼면 검증이
+    # 그대로 다 돌고 나서 버려진다(실측 490건, 10.7%가 헛돌았다).
+    wf = WF.read_text(encoding="utf-8")
+    verify_skips = "foreign_brands.json" in wf and "해외브랜드제외" in wf
+
+    ok = (exists and valid and korean_safe and loaded and applied and counted and safe
+          and verify_skips)
     check("62 해외 브랜드 제외", ok,
           f"파일{exists}({len(brands) if isinstance(brands, list) else '깨짐'}종) 형식{valid} "
-          f"한국브랜드미포함{korean_safe} 읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe}")
+          f"한국브랜드미포함{korean_safe} 읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe} "
+          f"검증단계{verify_skips}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
