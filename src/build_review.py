@@ -185,6 +185,31 @@ def looks_like_mismatch(qoo10_name: str, kr_name: str) -> bool:
     return _sim_token(qoo10_name, kr_name) < 0.3 and _sim_bigram(qoo10_name, kr_name) < 0.45
 
 
+def should_exclude(qoo10_brand: str, kr_brand: str, qoo10_name: str, kr_name: str,
+                   brand_status: str) -> bool:
+    """검수에서 뺄지 최종 판단 — 두 갈래를 합치고, 보호를 공통으로 씌운다.
+
+    [갈래 1] 이름이 두 척도 모두 낮으면 뺀다(브랜드 무관).
+             주된 실패가 '같은 브랜드의 다른 제품'이라 브랜드를 조건에
+             걸면 놓친다(워터뱅크 선세럼->선크림, 퍼펙트 젤->스프레이).
+    [갈래 2] 브랜드까지 다르면 임계를 조금 느슨하게 적용한다.
+
+    [브랜드 상호참조 보호는 갈래 2에만 적용한다]
+    처음엔 두 갈래 공통으로 씌웠다가 되돌렸다. 실측하니 29건이 되살아났는데
+    그중 4건꼴이 '같은 브랜드의 다른 제품'이었다.
+        W.DRESSROOM 퍼퓸 160ml   -> 더블유드레스룸 핸드크림 50ml
+        W.DRESSROOM 퍼퓨듐 No.97 -> 더블유드레스룸 탈모완화 샴푸 No.97
+    브랜드가 같으니 보호가 걸리고, 정작 다른 제품이 통과한다 — 갈래 1이
+    잡으려던 바로 그 유형이다. 반면 살아난 정상 매칭은 2건꼴이었다
+    (LE LABO='르라보', AESTURA='에스트라'). 이득보다 손해가 커서 뺐다.
+    LE LABO 같은 건은 지워지지만, 그건 표기 차이를 글자로 못 재는 한계다.
+    """
+    if looks_like_mismatch(qoo10_name, kr_name):
+        return True
+    return brand_status == "mismatch" and is_clear_mismatch(
+        qoo10_brand, kr_brand, qoo10_name, kr_name)
+
+
 def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
                      vol_mismatch: bool, single_source: bool) -> int:
     """이 매칭이 얼마나 믿을 만한지 0~4로 매긴다(높을수록 확실).
@@ -321,10 +346,9 @@ def build_pairs():
         # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
         # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
-        if (looks_like_mismatch(translated_kr, x.get("name") or "")
-                or (check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"
-                    and is_clear_mismatch(q.get("brand", ""), x.get("brand", ""),
-                                          translated_kr, x.get("name") or ""))):
+        if should_exclude(q.get("brand", ""), x.get("brand", ""), translated_kr,
+                          x.get("name") or "",
+                          check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict)):
             stats["brand_name_mismatch"] += 1
             excluded_mismatch.append({
                 "goods_no": x.get("goods_no"),
