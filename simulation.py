@@ -834,6 +834,41 @@ def t59_confidence_tiers():
           f"허브{hub} 제외에미사용{not_filtered}")
 
 
+# --------------------- #60 수동 제외 목록
+#  자동 규칙으로는 못 거르지만 사람이 보면 명백히 다른 제품인 건들이 있다.
+#  C등급 117건을 전수 확인해 98건을 뺐고, 19건은 남겼다(花王 큐레루=나수
+#  Curel, 資生堂 엘릭서=시세이도 엘릭시르처럼 브랜드 표기만 다른 경우).
+#  자동 규칙을 무리하게 넓히면 이런 정상 매칭까지 사라지므로, 판단 근거가
+#  사람인 건 사람이 관리하는 파일에 둔다.
+#  파일이 깨져 있어도 검수페이지 생성이 죽으면 안 된다 — 목록은 부가정보다.
+def t60_manual_exclusions():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    path = ROOT / "data" / "manual_exclusions.json"
+
+    exists = path.exists()
+    entries = []
+    if exists:
+        try:
+            entries = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            entries = None
+    valid = isinstance(entries, list) and all(
+        isinstance(e, dict) and e.get("goods_no") and e.get("reason") for e in entries)
+
+    loaded = 'manual_path = DATA / "manual_exclusions.json"' in src
+    applied = 'if str(x.get("goods_no")) in manual_excluded:' in src
+    counted = '"manual": 0' in src
+    # 읽기 실패가 생성 실패로 번지면 안 된다.
+    # (split은 다음 'manual_path'에서 끊기므로 인덱스로 창을 잡는다)
+    _i = src.find("manual_path")
+    safe = _i >= 0 and "except (OSError, ValueError)" in src[_i:_i + 800]
+
+    ok = exists and valid and loaded and applied and counted and safe
+    check("60 수동 제외 목록", ok,
+          f"파일{exists}({len(entries) if isinstance(entries, list) else '깨짐'}건) 형식{valid} "
+          f"읽기{loaded} 적용{applied} 집계{counted} 안전처리{safe}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
