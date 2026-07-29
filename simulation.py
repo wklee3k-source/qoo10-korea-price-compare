@@ -742,10 +742,12 @@ def t57_brand_name_mismatch_exclusion():
 
     two_metrics = "_sim_token(" in src and "_sim_bigram(" in src and \
         "def looks_like_mismatch" in src
-    both_required = "< 0.3 and" in src and "< 0.35" in src
-    # 브랜드 불일치와 이름 불일치가 동시에 성립할 때만 제외해야 한다.
-    combined = 'check_brand(q.get("brand", ""), x.get("brand", ""), brand_dict) == "mismatch"' in src \
-        and "and looks_like_mismatch(" in src
+    both_required = "< 0.3 and" in src and "< 0.45" in src
+    # [v4.4.0] 브랜드 조건은 뗐다. 전수 점검에서 드러난 주된 실패가
+    # '같은 브랜드의 다른 제품'이라 브랜드를 조건에 걸면 못 잡는다
+    # (선세럼↔선크림, 젤↔스프레이, 블론드샴푸↔비듬샴푸).
+    # 대신 이름은 반드시 두 척도를 모두 통과해야 한다.
+    combined = "if looks_like_mismatch(translated_kr, x.get(\"name\") or \"\"):" in src
     logged = "brand_name_mismatch_excluded.json" in src and "excluded_mismatch.append" in src
     # 영문↔한글은 판단불가로 떨어져야 한다.
     latin_guard = 'if not re.search(r"[A-Za-z]", kr_brand_lower):' in src
