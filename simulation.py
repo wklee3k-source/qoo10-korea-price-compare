@@ -821,6 +821,14 @@ def t59_confidence_tiers():
 
     has_map = 'CONFIDENCE_TIERS = {' in src and '"A": ("완전 신뢰"' in src
     has_fn = "def confidence_tier(" in src
+    # [v5.5.0] 등급은 점수 구간이 아니라 '무엇이 불확실한가'로 나눈다.
+    # B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
+    # 섞여 있었다 — 용량·이름 표기 차이(대부분 같은 제품)와 브랜드 불일치
+    # (오매칭 다수)가 한 등급이었다. 브랜드 확인 여부를 1차 기준으로 삼는다.
+    tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
+    brand_first = 'if brand_status != "match" or single_source:' in tfn \
+        and tfn.index('return "C"') < tfn.index('return "B"')
+    b_only_notation = "if vol_mismatch or not name_ok:" in tfn
     attached = '"tier": confidence_tier(' in src
     badged = 'tier-{_tier}' in src and 'tier-{_tier}' in batches
     styled = ".badge.tier-A" in tmpl and ".badge.tier-C" in tmpl
@@ -828,10 +836,11 @@ def t59_confidence_tiers():
     # 등급으로 걸러내면 안 된다(표시 전용).
     not_filtered = 'tier' not in batches.split("def sort_by_brand_confidence")[1].split("\ndef ")[0]
 
-    ok = has_map and has_fn and attached and badged and styled and hub and not_filtered
+    ok = (has_map and has_fn and attached and badged and styled and hub and not_filtered
+          and brand_first and b_only_notation)
     check("59 검수 신뢰등급 A/B/C 표기", ok,
           f"등급표{has_map} 함수{has_fn} 부착{attached} 배지{badged} 스타일{styled} "
-          f"허브{hub} 제외에미사용{not_filtered}")
+          f"허브{hub} 제외에미사용{not_filtered} 브랜드우선{brand_first} B는표기차이{b_only_notation}")
 
 
 # --------------------- #60 수동 제외 목록
