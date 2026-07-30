@@ -1122,7 +1122,10 @@ def t66_form_match_required_for_A():
     synonyms = ('"세럼": ["세럼", "에센스", "앰플"]' in src
                 and '"토너": ["토너", "스킨", "화장수"]' in src)
     tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
-    mismatch_to_c = 'if form == "mismatch":' in tfn and tfn.index('if form == "mismatch":') < tfn.index("brand_status")
+    # (brand_status는 함수 시그니처에도 나오므로 조건문 자체와 비교한다)
+    mismatch_to_c = ('if form == "mismatch":' in tfn
+                     and tfn.index('if form == "mismatch":')
+                     < tfn.index('if brand_status != "match"'))
     unknown_not_a = 'if form != "match":' in tfn
     attached = 'form_status(translated_kr, x.get("name") or "")' in src
 
