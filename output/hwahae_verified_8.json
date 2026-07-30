@@ -261,5 +261,374 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1111284282",
+    "translated_kr": "[1+1] 밸런스풀 시카 진정 크림 80ml*2",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "밸런스풀 시카 진정 크림",
+      "musinsa": "[SET] 밸런스풀 시카 컨트롤 세럼 50ml  기획세트 (시카 컨트롤 세럼 10ml X 2개+시카마스크 1매)+ 밸런스풀 크림 80ml  (+다이브인 세럼 20ml)",
+      "naver": "토리든 밸런스풀 시카 진정 크림 80ml, 2개",
+      "daum": "토리든 밸런스풀 시카 세럼 + 크림 세트",
+      "naver_web": "밸런스풀 시카 진정 크림"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "밸런스풀 시카 진정 크림",
+    "volume": "80ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "35000",
+    "mall": "토리든",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10474477302",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8801898/88018982588.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8801898/88018982588.7.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/10474477302"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8733818/87338184147.jpg",
+        "mall": "브라우저룸",
+        "link": "https://smartstore.naver.com/main/products/9793681874"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1109779971",
+    "translated_kr": "[VT] 리들 샷 2스텝 마스크 5장 세트 (50/100/300) 침 미용 모공 도입 페이스 팩 집중 케어 스킨케어 한국화장품",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "daum": "‘리들샷 유니버스’로 세계 정복에 나서다",
+      "naver_web": "나비의 꿈",
+      "naver_rematch": "[브이티코스메틱] VT 리들샷 유니버스 키트 (스틱파우치 45개입) VTPD40486"
+    },
+    "brand": "브이티코스메틱",
+    "name": "[브이티코스메틱] VT 리들샷 유니버스 키트 (스틱파우치 45개입) VTPD40486",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "20090",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/4528701?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=329254",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6103342/61033423899.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6103342/61033423899.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/4528701?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}&ad_coupon_no=329254"
+      }
+    ],
+    "real_page_title": "브이티코스메틱(VT COSMETICS) VT 리들샷 유니버스 키트 (스틱파우치 45개입)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192596376",
+    "translated_kr": "[메가 할인] 마녀공장 마녀공장 갈락 나이아신 에센스 크림 50ml 갈락토미세스 보습 탄력 탄력 윤기 윤기 침투 스킨케어 기초 화장품 한국화장품 인기 공식",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "네이버 인플루언서",
+      "naver_web": "네이버 인플루언서: 뷰스타 멜바의 홈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172944906",
+    "translated_kr": "NMF 아쿠아 링 앰플 마스크 EX, 10장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엔엠에프 아쿠아링 앰플 마스크 EX",
+      "daum": "신세계면세점 공식사이트",
+      "naver_web": "더 N.M.F 앰플 마스크 오리지널 10매"
+    },
+    "brand": "메디힐 (MEDIHEAL)",
+    "name": "엔엠에프 아쿠아링 앰플 마스크 EX",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1138185679",
+    "translated_kr": "에어리 선스틱 스무딩 바 23g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에어리 선스틱 스무딩 바 [SPF50+/PA++++]",
+      "musinsa": "에어리 선스틱 스무딩 바 SPF50+ PA++++ 22g",
+      "naver": "아비브 에어리 선스틱 스무딩 바 23g, 1개",
+      "daum": "아비브, 휴가철 필수 보송 선스틱 ‘에어리’ 인기 급증",
+      "naver_web": "아비브 에어리 선스틱 스무딩 바 SPF 50+ PA++++"
+    },
+    "brand": "아비브 (Abib)",
+    "name": "에어리 선스틱 스무딩 바 [SPF50+/PA++++]",
+    "volume": "23g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "22400",
+    "mall": "아비브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9423714265",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8696821/86968214588.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8696821/86968214588.5.jpg",
+        "mall": "아비브",
+        "link": "https://smartstore.naver.com/main/products/9423714265"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1187136865",
+    "translated_kr": "리얼 밀크 클렌징폼 피부 보습 탄력 피부 키메 수분 개선 150ml 1본",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "국내 최초] 노폐물 98.9% 세정력 블랑카우 리얼 밀크 클렌징폼 피부보습 탄력 피부결 수분개선, 5개,",
+      "naver_web": "닥터시라보 VC100 에센스로션 ex, , 1개",
+      "naver_rematch": "국내 최초 노폐물 98.9% 세정력 블랑카우 리얼 밀크 클렌징폼 피부보습 탄력 피부결 수분개선 1개 150ml"
+    },
+    "brand": null,
+    "name": "국내 최초] 노폐물 98.9% 세정력 블랑카우 리얼 밀크 클렌징폼 피부보습 탄력 피부결 수분개선, 5개,",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "28800",
+    "mall": "핑크도리마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13355438694",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9089994/90899949026.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089994/90899949026.jpg",
+        "mall": "핑크도리마켓",
+        "link": "https://smartstore.naver.com/main/products/13355438694"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9034557/90345574209.1.jpg",
+        "mall": "시종몰",
+        "link": "https://smartstore.naver.com/main/products/12801063259"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1075016731",
+    "translated_kr": "한국화장품 피부의 보습 더 나이아신아마이드 15 세럼 20ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 나이아신아마이드 15 세럼",
+      "daum": "피부 노화 원인 80%는 햇빛, 자외선 손상 피부를 되돌리는 방법",
+      "naver_web": "코스알엑스 더 나이아신아마이드 15 세럼",
+      "naver_rematch": "코스알엑스 더 나이아신아마이드 15 세럼 / 트러블케어 세럼 피지 유분 20ml, 2개"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "더 나이아신아마이드 15 세럼",
+    "volume": "20mL",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "36340",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/6646807904",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8419130/84191308226.14.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8419130/84191308226.14.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6646807904"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1083261277",
+    "translated_kr": "셀 라인 PRO 리페어 크림 [100구] 반영구 화장 재료 애프터 케어 1g 100개입",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "7무 셀 에센스",
+      "naver": "OFF 오프 셀 리페어 재생크림 100개입 반영구화장재료",
+      "daum": "반영구재료",
+      "naver_web": "바디공식 3중 브이라인 얼굴 리프팅밴드, 1개"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "OFF 오프 셀 리페어 재생크림 100개입 반영구화장재료",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "20000",
+    "mall": "아몬드영",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10493687863",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8803819/88038193172.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8803819/88038193172.jpg",
+        "mall": "아몬드영",
+        "link": "https://smartstore.naver.com/main/products/10493687863"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8300762/83007628845.jpg",
+        "mall": "비엠BM",
+        "link": "https://smartstore.naver.com/main/products/5463134399"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1292342/12923426534.5.jpg",
+        "mall": "샤인뷰티",
+        "link": "https://smartstore.naver.com/main/products/2352731835"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8474218/84742189112.2.jpg",
+        "mall": "뷰티No1",
+        "link": "https://smartstore.naver.com/main/products/7197688790"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209979406",
+    "translated_kr": "【정품】한율 어린 쑥 피지 흡착 쑥 떡 팩 폼 120ml, 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개",
+      "daum": "&#34;G마켓 한율 쑥떡팩폼 클렌징&#34; 캐시닥 정답 12월 10일‥쑥떡 텍스처로 피지쫀득 흡착 클렌징 한율",
+      "naver_web": "아모레퍼시픽 한율 어린쑥 클렌징 흡착팩폼 + 단독증정"
+    },
+    "brand": "한율",
+    "name": "한율 어린쑥 피지흡착 쑥떡팩폼 120ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "21560",
+    "mall": "한율",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10433900724",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8797840/87978405759.13.jpg",
+        "mall": "한율",
+        "link": "https://smartstore.naver.com/main/products/10433900724"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8986573/89865737761.1.jpg",
+        "mall": "아레스유통",
+        "link": "https://smartstore.naver.com/main/products/12321227044"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204386062",
+    "translated_kr": "【정품】조선미녀 인삼 아이크림 30ml(비타민A 레티날 리포솜)",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "인삼 아이크림",
+      "musinsa": "인삼 탄력 크림 60ml",
+      "naver": "조선미녀 인삼 아이크림 눈가 주름 목주름 피부결 개선 미백 탄력 보습 레틴알 코스트코",
+      "daum": "조선미녀 눈가탄력 레티날 인삼 아이크림",
+      "naver_web": "인삼아이크림 더블기획세트"
+    },
+    "brand": "조선미녀",
+    "name": "조선미녀 인삼 아이크림 눈가 주름 목주름 피부결 개선 미백 탄력 보습 레틴알 코스트코",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "38300",
+    "mall": "델라산드라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13274754626",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9081926/90819264958.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081926/90819264958.jpg",
+        "mall": "델라산드라",
+        "link": "https://smartstore.naver.com/main/products/13274754626"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822863/88228638105.jpg",
+        "mall": "월드세븐",
+        "link": "https://smartstore.naver.com/main/products/10684132183"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9035769/90357695915.jpg",
+        "mall": "르밀리언",
+        "link": "https://smartstore.naver.com/main/products/12813184966"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
