@@ -1119,8 +1119,10 @@ def t66_form_match_required_for_A():
     has_groups = "FORM_GROUPS" in src and "def extract_forms(" in src
     has_status = "def form_status(" in src and 'return "unknown"' in src.split("def form_status(")[1]
     # 동의어 묶음이 있어야 한다.
-    synonyms = ('"세럼": ["세럼", "에센스", "앰플"]' in src
-                and '"토너": ["토너", "스킨", "화장수"]' in src)
+    # (사전이 데이터에서 뽑은 어휘로 넓어져 항목 내용이 바뀔 수 있으므로,
+    #  정확한 리스트가 아니라 '동의어가 묶여 있는지'를 본다)
+    fg = src.split("FORM_GROUPS: dict[str, list[str]] = {")[1].split("\n}")[0]
+    synonyms = all(w in fg for w in ('"에센스"', '"앰플"', '"스킨"', '"화장수"', '"린스"'))
     tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
     # (brand_status는 함수 시그니처에도 나오므로 조건문 자체와 비교한다)
     mismatch_to_c = ('if form == "mismatch":' in tfn
