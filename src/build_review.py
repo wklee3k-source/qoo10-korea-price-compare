@@ -253,9 +253,56 @@ CONFIDENCE_TIERS = {
 }
 
 
+# [v6.4.0] 제형(형태) 사전. A등급은 '제형이 같다고 확인된 것'만 받는다.
+#  같은 브랜드·같은 라인이라도 제형이 다르면 다른 상품이다. 실측 오매칭에서
+#  가장 자주 나온 형태가 이것이다.
+#      클렌징폼 -> 클렌징 오일   선크림 -> 선세럼   샴푸 -> 컨디셔너
+#      독도 클렌저 -> 독도 클렌징 밤   미스트 -> 스프레이
+#  한국에서 섞어 쓰는 말은 한 묶음으로 둔다(세럼=에센스=앰플, 토너=스킨).
+#  묶지 않으면 정상 매칭이 대량으로 걸린다.
+FORM_GROUPS: dict[str, list[str]] = {
+    "토너": ["토너", "스킨", "화장수"],
+    "패드": ["토너패드", "패드"],
+    "세럼": ["세럼", "에센스", "앰플"],
+    "크림": ["크림"],
+    "로션": ["로션", "에멀전", "에멀젼"],
+    "밤": ["밤"],
+    "오일": ["오일"],
+    "미스트": ["미스트"],
+    "클렌저": ["클렌징폼", "폼클렌저", "클렌저", "세안", "워시"],
+    "마스크팩": ["마스크팩", "마스크", "시트"],
+    "선크림": ["선크림", "썬크림", "선블럭", "선블록"],
+    "선스틱": ["선스틱"],
+    "쿠션": ["쿠션"],
+    "파운데이션": ["파운데이션"],
+    "샴푸": ["샴푸"],
+    "트리트먼트": ["트리트먼트", "헤어팩"],
+    "컨디셔너": ["컨디셔너", "린스"],
+    "핸드크림": ["핸드크림"],
+    "아이크림": ["아이크림"],
+    "스프레이": ["스프레이"],
+    "파우더": ["파우더"],
+    "향수": ["향수", "퍼퓸", "오드"],
+}
+
+
+def extract_forms(text: str) -> set:
+    flat = _flat(text)
+    return {group for group, words in FORM_GROUPS.items()
+            if any(_flat(w) in flat for w in words)}
+
+
+def form_status(qoo10_name: str, kr_name: str) -> str:
+    """제형 일치 여부. 한쪽이라도 못 읽으면 'unknown'(판단 보류)."""
+    a, b = extract_forms(qoo10_name), extract_forms(kr_name)
+    if not a or not b:
+        return "unknown"
+    return "match" if (a & b) else "mismatch"
+
+
 def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
-                    single_source: bool = False) -> str:
+                    single_source: bool = False, form: str = "match") -> str:
     """등급을 '점수'가 아니라 '무엇이 불확실한가'로 나눈다.
 
     [v5.5.0 개편] 예전엔 점수 구간(4 / 2~3 / 0~1)으로 나눴다. 그런데
@@ -270,9 +317,15 @@ def confidence_tier(confidence: int, brand_status: str = "match",
         B  브랜드는 확인됨. 용량이나 이름만 어긋남 (표기 차이가 대부분)
         C  브랜드를 확인하지 못했거나 소스 합의 없이 통과 (판단 필요)
     """
+    # [v6.4.0] 제형이 다르면 브랜드가 맞아도 다른 상품이다.
+    if form == "mismatch":
+        return "C"
     if brand_status != "match" or single_source:
         return "C"
     if vol_mismatch or not name_ok:
+        return "B"
+    # 제형을 확인하지 못했으면 A로 올리지 않는다. A는 '확인된 것'만 받는다.
+    if form != "match":
         return "B"
     return "A" if confidence >= 4 else "B"
 
@@ -682,6 +735,7 @@ def build_pairs():
                 # 양쪽 다 용량을 알 때만 '불일치'로 본다(한쪽만 있으면 판단불가).
                 volume_mismatch(qoo10_vol, kr_vol),
                 bool(x.get("single_source_naver"))),
+            "form_status": form_status(translated_kr, x.get("name") or ""),
             "tier": confidence_tier(
                 match_confidence(translated_kr, x.get("name") or "", brand_status,
                                  volume_mismatch(qoo10_vol, kr_vol),
@@ -690,7 +744,8 @@ def build_pairs():
                 volume_mismatch(qoo10_vol, kr_vol),
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.5
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.6),
-                bool(x.get("single_source_naver"))),
+                bool(x.get("single_source_naver")),
+                form_status(translated_kr, x.get("name") or "")),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
