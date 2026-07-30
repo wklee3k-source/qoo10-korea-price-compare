@@ -277,6 +277,23 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     return "A" if confidence >= 4 else "B"
 
 
+# [v5.8.0] 용량 파싱을 믿을 수 있는 최소값. 상품명에서 숫자를 뽑다 보니
+#  세트 표기나 성분 함량에서 엉뚱한 값을 집는다 — 실측: '큐리페어 멜라크림
+#  35ml'의 한국 쪽 용량이 3ml로, '리드르 샷 1000 에센스 15ml'가 1ml로
+#  잡혔다. 이런 값으로 '용량 불일치' 판정을 내리면 같은 제품이 B로
+#  내려간다. 5ml 미만은 판단 보류로 본다(진짜 5ml 미만 제품은 향수
+#  샘플 정도이고, 그건 애초에 가격 비교 대상이 아니다).
+MIN_TRUSTED_VOLUME_ML = 5.0
+
+
+def volume_mismatch(qoo10_vol, kr_vol) -> bool:
+    if qoo10_vol is None or kr_vol is None:
+        return False
+    if qoo10_vol < MIN_TRUSTED_VOLUME_ML or kr_vol < MIN_TRUSTED_VOLUME_ML:
+        return False          # 파싱을 믿을 수 없다
+    return abs(qoo10_vol - kr_vol) >= 0.1
+
+
 def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
                      vol_mismatch: bool, single_source: bool) -> int:
     """이 매칭이 얼마나 믿을 만한지 0~4로 매긴다(높을수록 확실).
@@ -663,14 +680,14 @@ def build_pairs():
             "confidence": match_confidence(
                 translated_kr, x.get("name") or "", brand_status,
                 # 양쪽 다 용량을 알 때만 '불일치'로 본다(한쪽만 있으면 판단불가).
-                bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                volume_mismatch(qoo10_vol, kr_vol),
                 bool(x.get("single_source_naver"))),
             "tier": confidence_tier(
                 match_confidence(translated_kr, x.get("name") or "", brand_status,
-                                 bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                                 volume_mismatch(qoo10_vol, kr_vol),
                                  bool(x.get("single_source_naver"))),
                 brand_status,
-                bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                volume_mismatch(qoo10_vol, kr_vol),
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.5
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.6),
                 bool(x.get("single_source_naver"))),
