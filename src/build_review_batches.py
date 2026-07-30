@@ -196,10 +196,25 @@ def build_batches():
     template = (COMPARISON / "review.html").read_text(encoding="utf-8")
     BATCH_DIR.mkdir(exist_ok=True, parents=True)
 
-    n_batches = (len(all_pairs) + BATCH_SIZE - 1) // BATCH_SIZE
+    # [v5.9.0] 한 페이지에 등급이 섞이지 않게 나눈다.
+    #  예전엔 전체를 신뢰도 순으로 줄 세워 100개씩 잘랐다. 그러면 경계
+    #  페이지에 'A 92 · B 8'처럼 섞여, 그 페이지에서 갑자기 검수 방식을
+    #  바꿔야 한다. 등급별로 먼저 나눈 뒤 그 안에서 100개씩 자른다.
+    #  마지막 페이지가 조금 비더라도 한 페이지 = 한 등급이 낫다.
+    batches: list[list[dict]] = []
+    for tier in ("A", "B", "C"):
+        group = [x for x in all_pairs if x.get("tier") == tier]
+        for i in range(0, len(group), BATCH_SIZE):
+            batches.append(group[i:i + BATCH_SIZE])
+    # 등급이 없는 항목(예상치 못한 값)이 있으면 버리지 않고 뒤에 붙인다.
+    known = {"A", "B", "C"}
+    leftovers = [x for x in all_pairs if x.get("tier") not in known]
+    for i in range(0, len(leftovers), BATCH_SIZE):
+        batches.append(leftovers[i:i + BATCH_SIZE])
+
+    n_batches = len(batches)
     batch_meta = []  # 허브페이지용: 각 배치의 id/건수
-    for i in range(n_batches):
-        batch = all_pairs[i * BATCH_SIZE:(i + 1) * BATCH_SIZE]
+    for i, batch in enumerate(batches):
         batch_id = f"review_{i+1:02d}"
         cards_str = render_cards(batch)
         new_html = re.sub(
