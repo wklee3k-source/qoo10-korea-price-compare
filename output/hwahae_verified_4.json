@@ -22283,5 +22283,329 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1202081690",
+    "translated_kr": "【2026년 신발매·국내정규품】POLA 폴라 화이트샷 클리어스킨로션 150ml 무향료 화장수 의약외품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴라",
+      "naver": "폴라 50ml 퍼퓸 인텐스 니치향수 047 POLAR (실버 마운틴 워터) 듀프 클론 카피 저렴이 대체 향수",
+      "daum": "Cosme",
+      "naver_web": "피부 트러블 집에서 셀프 케어하는 법은 어찌 될런지요"
+    },
+    "brand": "인텐스 (INTENSE)",
+    "name": "폴라",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "69000",
+    "mall": "인텐스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/7977398768",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8552189/85521899175.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8552189/85521899175.2.jpg",
+        "mall": "인텐스",
+        "link": "https://smartstore.naver.com/main/products/7977398768"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8338904/83389040466.jpg",
+        "mall": "피엔씨컴퍼니",
+        "link": "https://smartstore.naver.com/main/products/5844541052"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8351917/83519174723.2.jpg",
+        "mall": "자동차페인트붓펜",
+        "link": "https://smartstore.naver.com/main/products/5974675235"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8436385/84363852259.1.jpg",
+        "mall": "자동차페인트붓펜",
+        "link": "https://smartstore.naver.com/main/products/6819351937"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204362475",
+    "translated_kr": "얼티마8 서블림 뷰티 클렌징 오일n 150mL 스킨케어 세안 메이크제거[기프트래핑 대응]",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC",
+      "naver_rematch": "메디필 멜라논 73%(+기미 케어)미백 연고 트라넥삼산 주근깨 멜라노사 크림"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195231376",
+    "translated_kr": "오르페옹 EDP SP 7.5ml【미니향수 미니보틀】【향수 맨즈 레이디스】",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "딥디크 오르페옹 EDP 75ml",
+      "naver_web": "장폴고티에 르 말 르 퍼퓸 EDP"
+    },
+    "brand": "딥티크",
+    "name": "딥디크 오르페옹 EDP 75ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "249100",
+    "mall": "TK솔루션",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9866008981",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8741051/87410511254.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8741051/87410511254.1.jpg",
+        "mall": "TK솔루션",
+        "link": "https://smartstore.naver.com/main/products/9866008981"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210637144",
+    "translated_kr": "오리지널 스프레이 데오도란트 150ml 제한 스프레이 바디 케어 한국화장품",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "(해외) 어드밴스드 안티퍼스피런트 데오드란트 스틱 [오리지널클린]",
+      "naver": "도브 오리지널 스프레이 데오드란트, 150ml, 1개",
+      "daum": "특별할인",
+      "naver_web": "도브 오리지널 클린 데오드란트 스틱 6개"
+    },
+    "brand": "도브 (Dove)",
+    "name": "도브 오리지널 클린 데오드란트 스틱 6개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "18740",
+    "mall": "블리스하이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13587699000",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9113220/91132209412.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113220/91132209412.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/13587699000"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122967/91229674436.jpg",
+        "mall": "구삼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13685163193"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205368481",
+    "translated_kr": "【대용량】 선시비오 에이치 투 오 500ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "대구광역시 달서구 미용실 상가 목록"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1171040599",
+    "translated_kr": "젠틀 리프레싱 바디워시 1L / 대용량 / 민감성 피부용 / 저자극",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "젠틀 민감성 수분 바디워시 [리프레싱]",
+      "naver": "[세타필] 울트라 젠틀 리프레싱 고보습 바디워시 1L 1개",
+      "daum": "세타필 울트라 젠틀 리프레싱 바디워시, , 1개",
+      "naver_web": "젠틀 민감성 수분 바디워시 리프레싱"
+    },
+    "brand": "세타필 (Cetaphil)",
+    "name": "젠틀 민감성 수분 바디워시 [리프레싱]",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "18100",
+    "mall": "홍아네 슈퍼마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11664846207",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8920935/89209356674.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920935/89209356674.jpg",
+        "mall": "홍아네 슈퍼마켓",
+        "link": "https://smartstore.naver.com/main/products/11664846207"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8920925/89209250722.jpg",
+        "mall": "재현이의 쇼핑생활",
+        "link": "https://smartstore.naver.com/main/products/11664740255"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079810/90798103931.jpg",
+        "mall": "에바다.",
+        "link": "https://smartstore.naver.com/main/products/13253593599"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117350/91173509085.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13628998476"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1023263418",
+    "translated_kr": "【즉납】【정품】【최신 제조일】 1개째 2개째 퍼스피렉스 오리지널 데오도란트 롤온 겨드랑이 땀 땀 냄새 제한 제한제 20ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "Perspirex 퍼스피렉스 데오드란트 롤온 오리지널 20ml",
+      "naver_web": "콜게이트 레이디 스피드 스틱 샤워 후레쉬"
+    },
+    "brand": null,
+    "name": "Perspirex 퍼스피렉스 데오드란트 롤온 오리지널 20ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "53800",
+    "mall": "리이드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10669548237",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8821405/88214054151.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821405/88214054151.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669548237"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821406/88214061412.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669555498"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821405/88214058414.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669552500"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202103649",
+    "translated_kr": "봉봉직 네버엔딩 써머 오드트왈렛 향수 미니향수 아토마이저 3ml 유니섹스 시트러스계 mar25",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "제주 향수 [No.7 바람]"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1171638346",
+    "translated_kr": "입사 ME n 의약부외품 175ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "탭 미 팔레트 듀오 [N°2 그루비]",
+      "daum": "고졸 채용정보",
+      "naver_web": "미용 액",
+      "naver_rematch": "미쟝센 퍼펙트 로즈퍼퓸 헤어세럼 80ml 헤어 오일 장미 향 미용 액 케어 제품 머릿결"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1148269996",
+    "translated_kr": "사봉 리페어 컨디셔너 190ml 섬세한·재스민 2025년 05월 01일부터 순차 발송",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "진료확인서를 이메일로 받을 수 있나요?"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
