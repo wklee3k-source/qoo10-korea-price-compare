@@ -247,9 +247,10 @@ def should_exclude(qoo10_brand: str, kr_brand: str, qoo10_name: str, kr_name: st
 #  C는 표본에서 오매칭이 다수였다. 등급을 눈에 보이게 해야 어디에
 #  시간을 쓸지 정할 수 있다.
 CONFIDENCE_TIERS = {
-    "A": ("완전 신뢰", "브랜드·이름 모두 확인됨"),
-    "B": ("표기 차이", "브랜드는 확인됨. 용량·이름 표기만 다름"),
-    "C": ("브랜드 미확인", "브랜드를 확인하지 못함 — 사진을 꼭 대조"),
+    "A": ("완전일치", "브랜드·제형·이름·용량 모두 일치"),
+    "B": ("용량·수량 다름", "브랜드·제형·이름 일치. 용량이나 구성만 다름"),
+    "C": ("이름 비슷", "브랜드·제형 일치. 제품명이 정확히 같지는 않음"),
+    "D": ("확인 불가", "브랜드나 제형을 확인하지 못함 — 사진을 꼭 대조"),
 }
 
 
@@ -419,32 +420,31 @@ def _covers(broad: set, specific: set) -> bool:
 
 def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
-                    single_source: bool = False, form: str = "match") -> str:
-    """등급을 '점수'가 아니라 '무엇이 불확실한가'로 나눈다.
+                    single_source: bool = False, form: str = "match",
+                    name_exact: bool = True) -> str:
+    """등급을 '무엇이 어긋났는가'로 나눈다.
 
-    [v5.5.0 개편] 예전엔 점수 구간(4 / 2~3 / 0~1)으로 나눴다. 그런데
-    B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
-    섞여 있었다.
-        용량 불일치 114 · 이름 애매 66  -> 대부분 같은 제품의 표기 차이
-        브랜드 불일치 117              -> 오매칭이 다수
-    같은 등급으로 묶으면 안전한 것과 위험한 것에 같은 주의를 쓰게 된다.
+    [v7.0.0 개편] 비교 요소를 브랜드 -> 제형 -> 이름 -> 용량 순으로 본다.
+        A  네 가지 모두 일치
+        B  브랜드·제형·이름 일치, 용량/수량만 다름 (가격 비교 시 환산 필요)
+        C  브랜드·제형 일치, 제품명이 정확히 같지는 않음 (표기 차이~다른 제품)
+        D  브랜드나 제형을 확인하지 못함 (사진 대조 필요)
 
-    이제 브랜드가 확인됐는지를 1차 기준으로 삼는다.
-        A  브랜드 확인 + 이름 일치 + 용량 일치 + 소스 합의
-        B  브랜드는 확인됨. 용량이나 이름만 어긋남 (표기 차이가 대부분)
-        C  브랜드를 확인하지 못했거나 소스 합의 없이 통과 (판단 필요)
+    D를 마지막에 둔 이유: 앞의 셋은 '무엇이 얼마나 일치하는가'인데 D는
+    '판단할 근거가 없다'로 성격이 다르다. 실측 1,413건 중 437건이 여기
+    해당하고, 이 구간이 실제 검수의 본체다.
+
+    단독통과(소스 1곳)는 등급이 아니라 배지로 표시한다 — '몇 곳이
+    확인해줬는가'는 일치 여부와 다른 축이라, 등급에 섞으면 이름이 다른
+    단독통과가 C인지 D인지 정해지지 않는다.
     """
-    # [v6.4.0] 제형이 다르면 브랜드가 맞아도 다른 상품이다.
-    if form == "mismatch":
+    if brand_status != "match" or form != "match":
+        return "D"
+    if not name_exact:
         return "C"
-    if brand_status != "match" or single_source:
-        return "C"
-    if vol_mismatch or not name_ok:
+    if vol_mismatch:
         return "B"
-    # 제형을 확인하지 못했으면 A로 올리지 않는다. A는 '확인된 것'만 받는다.
-    if form != "match":
-        return "B"
-    return "A" if confidence >= 4 else "B"
+    return "A"
 
 
 # [v5.8.0] 용량 파싱을 믿을 수 있는 최소값. 상품명에서 숫자를 뽑다 보니
@@ -862,7 +862,9 @@ def build_pairs():
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.5
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.6),
                 bool(x.get("single_source_naver")),
-                form_status(translated_kr, x.get("name") or "")),
+                form_status(translated_kr, x.get("name") or ""),
+                bool(_sim_token(translated_kr, x.get("name") or "") >= 0.8
+                     or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85)),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
