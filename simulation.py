@@ -825,23 +825,24 @@ def t59_confidence_tiers():
     batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
     tmpl = (ROOT / "comparison" / "review.html").read_text(encoding="utf-8")
 
-    has_map = 'CONFIDENCE_TIERS = {' in src and '"A": ("완전 신뢰"' in src
+    has_map = 'CONFIDENCE_TIERS = {' in src and '"A": ("완전일치"' in src and '"D":' in src
     has_fn = "def confidence_tier(" in src
     # [v5.5.0] 등급은 점수 구간이 아니라 '무엇이 불확실한가'로 나눈다.
     # B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
     # 섞여 있었다 — 용량·이름 표기 차이(대부분 같은 제품)와 브랜드 불일치
     # (오매칭 다수)가 한 등급이었다. 브랜드 확인 여부를 1차 기준으로 삼는다.
     tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
-    brand_first = 'if brand_status != "match" or single_source:' in tfn \
-        and tfn.index('return "C"') < tfn.index('return "B"')
-    b_only_notation = "if vol_mismatch or not name_ok:" in tfn
+    # [v7.0.0] 브랜드/제형을 확인 못 하면 D. 등급은 브랜드->제형->이름->용량 순.
+    brand_first = 'if brand_status != "match" or form != "match":' in tfn \
+        and tfn.index('return "D"') < tfn.index('return "C"')
+    b_only_notation = "if not name_exact:" in tfn and "if vol_mismatch:" in tfn
     attached = '"tier": confidence_tier(' in src
     badged = 'tier-{_tier}' in src and 'tier-{_tier}' in batches
     styled = ".badge.tier-A" in tmpl and ".badge.tier-C" in tmpl
     hub = 'tier_label' in batches
     # [v5.9.0] 한 페이지에 등급이 섞이면 그 페이지에서 검수 방식을 바꿔야
     # 한다. 등급별로 먼저 나눈 뒤 그 안에서 자른다.
-    split_by_tier = 'for tier in ("A", "B", "C"):' in batches and "batches.append(group[i:i + BATCH_SIZE])" in batches
+    split_by_tier = 'for tier in ("A", "B", "C", "D"):' in batches and "batches.append(group[i:i + BATCH_SIZE])" in batches
     # 예상치 못한 등급값이 있어도 항목을 버리면 안 된다.
     keeps_leftovers = "leftovers" in batches
     # 등급으로 걸러내면 안 된다(표시 전용).
@@ -1130,10 +1131,9 @@ def t66_form_match_required_for_A():
     # 소분류 문자열에 들어있어서 단순 교집합으로는 이 둘이 구분되지 않는다.
     hierarchy = ("FORM_PARENTS" in src and "def _covers(" in src
                  and "spec_a, spec_b = a - parents, b - parents" in src)
-    mismatch_to_c = ('if form == "mismatch":' in tfn
-                     and tfn.index('if form == "mismatch":')
-                     < tfn.index('if brand_status != "match"'))
-    unknown_not_a = 'if form != "match":' in tfn
+    # 제형 불일치도 D로 간다(브랜드/제형 확인 실패와 같은 취급).
+    mismatch_to_c = 'form != "match"' in tfn
+    unknown_not_a = 'form != "match"' in tfn
     attached = 'form_status(translated_kr, x.get("name") or "")' in src
 
     ok = (has_groups and has_status and synonyms and mismatch_to_c
