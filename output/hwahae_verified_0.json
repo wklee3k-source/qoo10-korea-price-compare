@@ -2557,5 +2557,355 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1207468397",
+    "translated_kr": "EGF×다운타임 오인트 젤 15ml 기획 세트 (+크림 7ml) 스킨 케어 보습 집중 케어 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "글루어 주름개선 모공수축관리 탄력부스터"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202103615",
+    "translated_kr": "봉봉직 언더 더 레몬 트리 오드트왈렛 향수 미니향수 아토마이저 10ml 유니섹스 시트러스계 mar12",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더 님",
+      "naver": "[건성/수부지] 식물성 오일 71% 촉촉 안심 올인원 비누"
+    },
+    "brand": "어글리솝 (UGLYSOAP)",
+    "name": "더 님",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "9900",
+    "mall": "어글리솝",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/8666324543",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8621082/86210824863.9.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8621082/86210824863.9.jpg",
+        "mall": "어글리솝",
+        "link": "https://shopping.naver.com/outlink/itemdetail/8666324543"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8668593/86685933777.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/9141433454"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8608672/86086722363.jpg",
+        "mall": "블리스하이",
+        "link": "https://smartstore.naver.com/main/products/8542222040"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1314087/13140877279.54.jpg",
+        "mall": "프롬더랜드",
+        "link": "https://smartstore.naver.com/main/products/2399270243"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208271013",
+    "translated_kr": "콜라겐 젤리 크림 110ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "Medicube 콜라겐 젤리 크림 50ml",
+      "daum": "드림) 콜라겐젤리크림",
+      "naver_web": "콜라겐 젤리 크림 수분탄력 리프팅 젤크림"
+    },
+    "brand": "메디큐브",
+    "name": "Medicube 콜라겐 젤리 크림 50ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "20200",
+    "mall": "아비트라몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13683145041",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122765/91227656284.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122765/91227656284.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13683145041"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122805/91228058845.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13683547602"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1120303925",
+    "translated_kr": "【정품】 어성초 포어 딥 클렌징폼 150ml / 쫀득한 거품 / 모공 딥 클렌징 / 각질 / 진정 / 8중 히알루론산 / 보습 / 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "마스크와의 전쟁! 피부 청정을 도와줄 스킨케어 신상템 리스트 2",
+      "naver_web": "더마쉐어 비건 비타민 여드름 아크네 앤 포어 딥 폼 클렌저, , 3개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213147004",
+    "translated_kr": "어드밴스드 스네일 96 뮤신파워 에센스 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어드벤스드 스네일 96 뮤신 파워 에센스",
+      "naver": "CosRx 어드밴스드 스네일 96 뮤신 파워 에센스 100ml 3.38fl oz",
+      "daum": "어드벤스드 스네일 96 뮤신 파워 에센스",
+      "naver_web": "코스알엑스 어드밴스드 스네일 96 뮤신 파워 에센스"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "어드벤스드 스네일 96 뮤신 파워 에센스",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "22680",
+    "mall": "아비트라3호점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13406996888",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9095150/90951507224.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095150/90951507224.1.jpg",
+        "mall": "아비트라3호점",
+        "link": "https://smartstore.naver.com/main/products/13406996888"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1132391030",
+    "translated_kr": "아토바리어 365 크림 80ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 크림",
+      "naver": "에스트라 아토베리어 365 크림 대용량 보습",
+      "daum": "남자 지성 수분크림 추천좀",
+      "naver_web": "아토베리어365 크림"
+    },
+    "brand": "에스트라",
+    "name": "에스트라 아토베리어 365 크림 대용량 보습",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "28900",
+    "mall": "이셀러커머스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13278579532",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9082308/90823089864.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082308/90823089864.7.jpg",
+        "mall": "이셀러커머스",
+        "link": "https://smartstore.naver.com/main/products/13278579532"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204931350",
+    "translated_kr": "슈퍼 드롭스 - 비타C 토닝 세럼 대용량 바나나킥 에디션",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "슈퍼드랍스-비타C토닝세럼",
+      "naver": "빌리프 슈퍼 드랍스-비타C 토닝 세럼 30ml",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "빌리프 슈퍼 드랍스 비타C 토닝 세럼"
+    },
+    "brand": "빌리프",
+    "name": "빌리프 슈퍼 드랍스-비타C 토닝 세럼 30ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "34200",
+    "mall": "빌리프 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10002747192",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8754724/87547249465.30.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754724/87547249465.30.jpg",
+        "mall": "빌리프 공식몰",
+        "link": "https://smartstore.naver.com/main/products/10002747192"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8805762/88057629172.14.jpg",
+        "mall": "빌리프/VDL",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10513123812"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8755668/87556683771.13.jpg",
+        "mall": "빌리프/VDL",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10012181397"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113082/91130823871.2.jpg",
+        "mall": "빌리프",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13586313459"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210416288",
+    "translated_kr": "카밍 밸런스 젤 100ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "관리샵 에스테틱 에스테틱 원장님들 진정 관리용 카밍 밸런스 젤 사용",
+      "naver_web": "인셀덤 카밍 밸런스 젤",
+      "naver_rematch": "인셀덤 화장품 리뉴얼 최신상 카밍 밸런스 젤 100ml"
+    },
+    "brand": "인셀덤",
+    "name": "인셀덤 카밍 밸런스 젤",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "38500",
+    "mall": "skin pick",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11378264559",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8892277/88922774924.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8892277/88922774924.1.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/11378264559"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8894015/88940158197.6.jpg",
+        "mall": "ckstore",
+        "link": "https://smartstore.naver.com/main/products/11395647832"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8872007/88720072432.6.jpg",
+        "mall": "라이프 is세일",
+        "link": "https://smartstore.naver.com/main/products/11175562110"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194137521",
+    "translated_kr": "루티너 멀티 밤 15ml 2개",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "naver": "악센다루티너 Routiner 루티너멀티밤 15ml, 2개",
+      "daum": "루티너 멀티밤 효과 3주 써보고 알게 된 5가지",
+      "naver_web": "루티너 멀티밤 부작용 성분 사용법"
+    },
+    "brand": null,
+    "name": "루티너 멀티밤 효과 3주 써보고 알게 된 5가지",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "80580",
+    "mall": "엄미미샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13156230748",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070074/90700741845.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070074/90700741845.jpg",
+        "mall": "엄미미샵",
+        "link": "https://smartstore.naver.com/main/products/13156230748"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1187961763",
+    "translated_kr": "[2026] NEW 최저특전 카밍 밸런스 젤 - 보습 / 진정 100ml (1+1)",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "수분진정크림"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
