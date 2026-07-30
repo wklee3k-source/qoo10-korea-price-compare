@@ -972,5 +972,357 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1079892554",
+    "translated_kr": "퓨어핏 시카 카밍 트루 마스크팩 10매",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "퓨어 핏 시카 시트 마스크",
+      "naver": "[10매] 코스알엑스 퓨어 핏 시카 카밍 트루 진정 시트 마스크 21ml",
+      "daum": "코스알엑스 퓨어 핏 시카 카밍 트루 시트 마스크, 1개입, 1개",
+      "naver_web": "코스알엑스 퓨어핏 시카 카밍 트루 시트마스크"
+    },
+    "brand": "코스알엑스",
+    "name": "[10매] 코스알엑스 퓨어 핏 시카 카밍 트루 진정 시트 마스크 21ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "28000",
+    "mall": "코스알엑스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/6156287640",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8370078/83700787128.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8370078/83700787128.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/6156287640"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8370078/83700787127.4.jpg",
+        "mall": "코스알엑스",
+        "link": "https://smartstore.naver.com/main/products/6156287639"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6094965/60949651947.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000150232"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8934759/89347598396.jpg",
+        "mall": "리치앤모어",
+        "link": "https://smartstore.naver.com/main/products/11803087809"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1022791268",
+    "translated_kr": "- 레드 블레미쉬 클리어 수딩 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 블레미쉬 클리어 수딩 크림",
+      "musinsa": "레드 블레미쉬 클리어 수딩 크림 50mLx3개",
+      "daum": "닥터지 레드 블레미쉬 클리어 수딩 크림 x 5개",
+      "naver_web": "닥터지 레드 블레미쉬 클리어 수딩 크림 EX 제품의 정보 및",
+      "naver_rematch": "DR.G 레드 블레미쉬 클리어 수딩 크림 50mLx3개 4108588"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "레드 블레미쉬 클리어 수딩 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "52610",
+    "mall": "지원HOK06",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13659875946",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120438/91204386758.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120438/91204386758.jpg",
+        "mall": "지원HOK06",
+        "link": "https://smartstore.naver.com/main/products/13659875946"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1182484329",
+    "translated_kr": "[기획세트]복숭아 에센스 모이스처 마스크 5매입+1매 증정 기획세트/팩·마스크팩·마스크팩팩·한국팩·보습케어팩·톤케어·톤업",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "복숭아 77 나이아신 에센스 토너",
+      "daum": "Skintype",
+      "naver_web": "아누아 복숭아 77 나이아신 에센스 토너 기획",
+      "naver_rematch": "아누아 복숭아 77 나이아신 에센스 토너 250ml"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "복숭아 77 나이아신 에센스 토너",
+    "volume": "250ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "19500",
+    "mall": "아누아",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9107365054",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8665186/86651865377.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8665186/86651865377.2.jpg",
+        "mall": "아누아",
+        "link": "https://smartstore.naver.com/main/products/9107365054"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8665186/86651865378.2.jpg",
+        "mall": "아누아",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9107365055"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209892305",
+    "translated_kr": "마스크핏 크리스탈메시 쿠션 15g SPF50+ PA++++ 윤기피부 고밀착 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++",
+      "daum": "2019 ALLURE BEAUTY FAIR",
+      "naver_web": "뷰스타 규리의 촉촉한쿠션"
+    },
+    "brand": "티르티르",
+    "name": "티르티르 마스크 핏 크리스탈 메쉬 쿠션 15g SPF50+ PA++++",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "14850",
+    "mall": "티르티르",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10186169049",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672460.15.jpg",
+        "mall": "티르티르",
+        "link": "https://smartstore.naver.com/main/products/10186169049"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8773067/87730672459.13.jpg",
+        "mall": "티르티르",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10186169048"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118224/91182242075.jpg",
+        "mall": "굿스킨",
+        "link": "https://smartstore.naver.com/main/products/13637731366"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1190706746",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트, 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "naver": "아누아 PDRN 콜라겐 글로우 페이셜 세럼 하이드레이팅 페이스 미스트 히알루론산 이슬이 1 01 Fl Oz (Pa of 1)",
+      "daum": "9월 주목해야 할 신상 뷰티",
+      "naver_web": "호주에서 Anua PDRN 히알루론산 하이드레이팅 캡슐 미스트 100ml를 구매하세요"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "60300",
+    "mall": "토닥토닥키즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13635117165",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117962/91179627846.jpg",
+        "mall": "토닥토닥키즈",
+        "link": "https://smartstore.naver.com/main/products/13635117165"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1205030887",
+    "translated_kr": "자작나무 보습 선스틱 + 자작나무 수분 선크림 [한국 선스틱]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "자작나무 수분 선크림 [SPF50+/PA++++]",
+      "naver": "라운드랩 자작나무 수분 선스틱 19g (+19g 바디미스트 20ml 추가) 기획",
+      "daum": "메디힐 수분선세럼 바르고 중간중간 자작나무 수분선스틱 바르는거 상관없나요",
+      "naver_web": "라운드랩 자작나무 수분 선스틱"
+    },
+    "brand": "라운드랩 (ROUNDLAB)",
+    "name": "자작나무 수분 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "25500",
+    "mall": "시손느파세",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11701582565",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8924609/89246093032.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8924609/89246093032.1.jpg",
+        "mall": "시손느파세",
+        "link": "https://smartstore.naver.com/main/products/11701582565"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118165/91181656561.jpg",
+        "mall": "내일건강몰",
+        "link": "https://smartstore.naver.com/main/products/13637145854"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1200867593",
+    "translated_kr": "비타10 포어토닝 세럼 20ml + 20ml / 비타민C",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "8월 주목해야 할 신상 뷰티",
+      "naver_web": "이니스프리 비타C 그린티 엔자임 잡티 토닝 세럼으로 브라이트닝 케어 한"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1188963997",
+    "translated_kr": "타임 레볼루션 더 퍼스트 에센스 패드 250ml 75장입 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "미샤 타임 레볼루션 더 퍼스트 에센스 패드 75매 1+1",
+      "naver_web": "타임레볼루션 더퍼스트 에센스패드75매(6/22"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1188760323",
+    "translated_kr": "비타민 10 포레스트릭스 세럼, 20ml 비타민C 에센스 비타민C 세럼 에센스 투명감 모공 케어 윤기 피부 저자극 도입액 윤기 민감 피부 스킨케어 도입 에센스 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203695258",
+    "translated_kr": "레티노 콜라겐 저분자 300 모공 탄력 젤 마스크팩(5장입) 팩 페이스팩 페이스 마스크 미용 마스크 페이스 팩 럭셔리 마스크 한국 화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "레티노콜라겐 저분자300 모공탄력 마스크",
+      "naver": "CKD 레티노콜라겐 저분자 300 모공탄력 마스크 10매",
+      "daum": "캐리어 오일",
+      "naver_web": "CKD 레티노 콜라겐 저분자 300 괄사 목주름 크림"
+    },
+    "brand": "씨케이디개런티드",
+    "name": "CKD 레티노콜라겐 저분자 300 모공탄력 마스크 10매",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "35900",
+    "mall": "09SUPER",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11261210135",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8880572/88805720466.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880572/88805720466.jpg",
+        "mall": "09SUPER",
+        "link": "https://smartstore.naver.com/main/products/11261210135"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087833/90878330323.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/13333819991"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087832/90878328196.jpg",
+        "mall": "부띠끄라인",
+        "link": "https://smartstore.naver.com/main/products/13333817864"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
