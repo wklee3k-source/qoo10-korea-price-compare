@@ -1125,16 +1125,22 @@ def t66_form_match_required_for_A():
     synonyms = all(w in fg for w in ('"에센스"', '"앰플"', '"스킨"', '"화장수"', '"린스"'))
     tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
     # (brand_status는 함수 시그니처에도 나오므로 조건문 자체와 비교한다)
+    # [v6.7.0] 대분류/소분류 포함관계를 봐야 한다. '클렌징'과 '클렌징 폼'은
+    # 같은 것이고, '클렌징 폼'과 '클렌징 오일'은 다른 것이다. 대분류 이름이
+    # 소분류 문자열에 들어있어서 단순 교집합으로는 이 둘이 구분되지 않는다.
+    hierarchy = ("FORM_PARENTS" in src and "def _covers(" in src
+                 and "spec_a, spec_b = a - parents, b - parents" in src)
     mismatch_to_c = ('if form == "mismatch":' in tfn
                      and tfn.index('if form == "mismatch":')
                      < tfn.index('if brand_status != "match"'))
     unknown_not_a = 'if form != "match":' in tfn
     attached = 'form_status(translated_kr, x.get("name") or "")' in src
 
-    ok = has_groups and has_status and synonyms and mismatch_to_c and unknown_not_a and attached
+    ok = (has_groups and has_status and synonyms and mismatch_to_c
+          and unknown_not_a and attached and hierarchy)
     check("66 제형 일치가 A등급 조건", ok,
           f"사전{has_groups} 판정{has_status} 동의어{synonyms} 불일치는C{mismatch_to_c} "
-          f"미확인은A아님{unknown_not_a} 부착{attached}")
+          f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
