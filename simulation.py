@@ -1102,6 +1102,36 @@ def t65_translation_term_fixes():
           f"용도설명{explains_purpose} 변형경고{warns_variants}")
 
 
+# --------------------- #66 제형 일치를 A등급 조건으로
+#  같은 브랜드·같은 라인이라도 제형이 다르면 다른 상품이다. 실측 오매칭에서
+#  가장 자주 나온 형태다: 클렌징폼->클렌징오일, 선크림->선세럼,
+#  샴푸->컨디셔너, 독도 클렌저->독도 클렌징 밤, 미스트->스프레이.
+#  브랜드가 맞으니 다른 규칙으로는 걸리지 않는다.
+#
+#  A는 '확인된 것'만 받는다 — 제형을 못 읽었으면(unknown) A로 올리지 않고
+#  B로 둔다. 실측 A 917건 중 176건이 제형 미확인이었고 이들이 B로 내려간다.
+#
+#  ⚠️ 한국에서 섞어 쓰는 말은 한 묶음이어야 한다(세럼=에센스=앰플,
+#  토너=스킨=화장수). 묶지 않으면 정상 매칭이 대량으로 걸린다.
+def t66_form_match_required_for_A():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    has_groups = "FORM_GROUPS" in src and "def extract_forms(" in src
+    has_status = "def form_status(" in src and 'return "unknown"' in src.split("def form_status(")[1]
+    # 동의어 묶음이 있어야 한다.
+    synonyms = ('"세럼": ["세럼", "에센스", "앰플"]' in src
+                and '"토너": ["토너", "스킨", "화장수"]' in src)
+    tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
+    mismatch_to_c = 'if form == "mismatch":' in tfn and tfn.index('if form == "mismatch":') < tfn.index("brand_status")
+    unknown_not_a = 'if form != "match":' in tfn
+    attached = 'form_status(translated_kr, x.get("name") or "")' in src
+
+    ok = has_groups and has_status and synonyms and mismatch_to_c and unknown_not_a and attached
+    check("66 제형 일치가 A등급 조건", ok,
+          f"사전{has_groups} 판정{has_status} 동의어{synonyms} 불일치는C{mismatch_to_c} "
+          f"미확인은A아님{unknown_not_a} 부착{attached}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
