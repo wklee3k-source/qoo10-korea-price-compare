@@ -162,6 +162,14 @@ def looks_too_generic(name: str) -> bool:
     return (name or "").strip() in GENERIC_NAMES
 
 
+# [v7.1.0] 검수 대상이 아닌 큐텐 카테고리.
+#  색조(013·014·016)는 발굴에서 이미 빠지고, 네일·향수는 v7.1.0부터 뺀다.
+#  색상·호수·향으로 갈리는 상품군이라 이름만으로 같은 제품인지 알 수 없고,
+#  하나 틀리면 반품 사유가 된다.
+EXCLUDED_CATEGORIES = {"120000013", "120000014", "120000016",
+                       "120000021", "120000022"}
+
+
 def _flat(text: str) -> str:
     return re.sub(r"[^가-힣A-Za-z0-9]", "", text or "").lower()
 
@@ -613,7 +621,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "generic": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "generic": 0, "excluded_category": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -653,6 +661,12 @@ def build_pairs():
         # [v4.5.0 추가] 브랜드까지 다른 건은 임계를 조금 더 느슨하게 적용한다.
         # 브랜드가 서로 다르고 어느 쪽도 반대편 이름에 안 나타나면, 이름이
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
+        # [v7.1.0] 네일·향수는 색조와 같은 이유로 대상이 아니다. 발굴 단계에서
+        #  빼도록 고쳤지만, 이미 쌓인 238건은 여기서 거른다.
+        if str(q.get("category_gdlc_cd")) in EXCLUDED_CATEGORIES:
+            stats["excluded_category"] += 1
+            continue
+
         if (q.get("brand") or "").strip() in foreign_brands:
             stats["foreign"] += 1
             continue
@@ -871,6 +885,7 @@ def build_pairs():
           f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
           f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
           f"광고글제외={stats['article']} 해외브랜드제외={stats['foreign']} 일반명제외={stats['generic']} "
+          f"제외카테고리={stats['excluded_category']} "
           f"최종={stats['ok']}건")
     pairs = _drop_search_blackholes(pairs, excluded_mismatch)
     if excluded_mismatch:
