@@ -146,6 +146,20 @@ def looks_like_article(title: str) -> bool:
     return bool(AD_TITLE_RE.search(title or ""))
 
 
+# [v5.4.0] 상품명이라기엔 너무 일반적인 값. 실측: 매칭 결과에 '화장품'
+#  하나만 들어온 건이 4건 있었다. 이런 값은 어떤 검색어에도 느슨하게
+#  맞아 여러 상품을 빨아들이고, 사람이 봐도 무엇인지 알 수 없다.
+GENERIC_NAMES = {"화장품", "코스메틱", "스킨케어", "세트", "기획세트", "본품",
+                 "상품", "제품", "뷰티", "미용", "선물세트"}
+
+
+def looks_too_generic(name: str) -> bool:
+    stripped = re.sub(r"[^가-힣A-Za-z0-9]", "", name or "")
+    if len(stripped) < 4:
+        return True
+    return (name or "").strip() in GENERIC_NAMES
+
+
 def _flat(text: str) -> str:
     return re.sub(r"[^가-힣A-Za-z0-9]", "", text or "").lower()
 
@@ -383,7 +397,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "generic": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -425,6 +439,10 @@ def build_pairs():
         # 절반쯤 겹쳐도 다른 제품인 경우가 대부분이었다(실측 표본 8건 전부).
         if (q.get("brand") or "").strip() in foreign_brands:
             stats["foreign"] += 1
+            continue
+
+        if looks_too_generic(x.get("name") or ""):
+            stats["generic"] += 1
             continue
 
         if looks_like_article(x.get("name") or ""):
@@ -627,7 +645,7 @@ def build_pairs():
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
           f"큐텐매칭안됨={stats['no_qoo10_match']} 선택형제외={stats['select_type']} 콜라보제외={stats['collab']} "
           f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
-          f"광고글제외={stats['article']} 해외브랜드제외={stats['foreign']} "
+          f"광고글제외={stats['article']} 해외브랜드제외={stats['foreign']} 일반명제외={stats['generic']} "
           f"최종={stats['ok']}건")
     pairs = _drop_search_blackholes(pairs, excluded_mismatch)
     if excluded_mismatch:
@@ -654,9 +672,14 @@ BLACKHOLE_MIN = 3
 
 def _drop_search_blackholes(pairs: list[dict], excluded: list[dict]) -> list[dict]:
     from collections import defaultdict
+    # [v5.4.0] 링크뿐 아니라 '매칭된 상품명'으로도 묶는다. 같은 상품이
+    # 판매처마다 다른 링크로 올라오면 링크 기준으로는 안 걸린다 —
+    # 실측: '인진쑥 진정 보습 세럼'이 서로 다른 큐텐 상품 12건에,
+    # '칠자화 유액'이 4건에 붙었는데 링크가 달라 통과했다.
     by_url: dict[str, list[dict]] = defaultdict(list)
     for p in pairs:
-        by_url[p.get("kr_url") or ""].append(p)
+        key = _flat(p.get("kr_name") or "") or (p.get("kr_url") or "")
+        by_url[key].append(p)
 
     keep_ids = set()
     dropped = 0
