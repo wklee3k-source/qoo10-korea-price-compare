@@ -1095,16 +1095,13 @@ jobs:
     timeout-minutes: 220
     strategy:
       matrix:
-        # [3 -> 6 증설, v3.6.0] 기존 검증분 전체(3,418건)를 재검증하기로
-        # 했다. 초기 1,500건은 'MIN_CONSENSUS_SOURCES=2' 도입 이전에
-        # 처리돼 합의 정보조차 없고, 이름 겹침 20% 미만인 의심 사례가
-        # 25%였다(2곳 합의 구간은 8%). 4,586건을 처음부터 다시 돌리므로
-        # 워커를 6으로 올린다.
-        # 부하 판단: GH Actions는 잡마다 IP가 다르고 요청간 1초 지연도
-        # 그대로라, IP당 요청속도는 1워커와 같다. 네이버 API 쿼터는
-        # 하루 25,000회인데 4,586건 x 2호출(쇼핑+웹문서)이라 여유가 있다.
-        # ⚠️ 이 개수를 바꾸면 아래 나눗셈(% 6) 두 곳도 반드시 같이 고칠 것.
-        shard: [0, 1, 2, 3, 4, 5]
+        # [6 -> 10 증설, v6.2.0] 번역 용어 교정으로 전체 재검증을 반복하게
+        # 되면서 회차당 6시간이 병목이 됐다. 10워커면 약 3.5시간이다.
+        # 부하 판단: GH Actions는 잡마다 IP가 달라 IP당 요청속도는 1워커와
+        # 같고, 요청간 1초 지연도 그대로다. 네이버 API 쿼터는 하루
+        # 25,000회인데 4,455건 x 2호출(쇼핑+웹문서)이라 여유가 있다.
+        # ⚠️ 이 개수를 바꾸면 아래 나눗셈(% 10) 두 곳도 반드시 같이 고칠 것.
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       fail-fast: false
     concurrency:
       group: hwahae-verify-shard-${{ matrix.shard }}
@@ -1193,7 +1190,7 @@ jobs:
           print(f'[해외브랜드제외] {len(allp) - len(kept)}건 (남은 검증대상 {len(kept)}건)')
           rows = [{'goods_no': p['goods_no'], 'translated_kr': p['translated_kr'], 'known_brand': p.get('known_brand','')}
                   for p in kept]
-          mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 6 == $S]  # 나눗셈은 워커수(6)와 일치
+          mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 10 == $S]  # 나눗셈은 워커수(10)와 일치
           json.dump(mine, open('../output/hwahae_input_${S}.json','w'), ensure_ascii=False, indent=2)
           print(f'[INFO] 전체 {len(rows)}건 중 샤드${S} 몫 {len(mine)}건')
           "
@@ -1217,7 +1214,7 @@ jobs:
               if p.exists():
                   for x in json.loads(p.read_text()):
                       pool[x['goods_no']] = x
-          mine = [x for x in pool.values() if zlib.crc32(str(x['goods_no']).encode()) % 6 == $S]  # 나눗셈은 워커수(6)와 일치
+          mine = [x for x in pool.values() if zlib.crc32(str(x['goods_no']).encode()) % 10 == $S]  # 나눗셈은 워커수(10)와 일치
           json.dump(mine, open('../output/hwahae_verified_${S}.json','w'), ensure_ascii=False, indent=2)
           print(f'[INFO] 기존 검증 {len(pool)}건 중 샤드${S} 몫 {len(mine)}건 승계')
           "
