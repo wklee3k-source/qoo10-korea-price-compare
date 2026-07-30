@@ -23135,5 +23135,314 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1188704003",
+    "translated_kr": "호유 에토라스 레어 밤 80g 스타일링 생 밤 헤어 세트 핸드 크림 hoyu ETORAS",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "모카 밤",
+      "naver_rematch": "손앤박 아티스프레드 컬러밤 03 멜로우"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1184148264",
+    "translated_kr": "글로벌 밀본 스무징 트리트먼트 M 1000g 리필용 리필 미디엄 헤어 보통 머리결용 부드러움 미용실 살롱 미용실 전매 스무스 SMOOTH global",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver": "올마실 비건 8초 살롱 프리미엄 헤어 마스크 100ml"
+    },
+    "brand": "마실 (MASIL)",
+    "name": "8초살롱 헤어 마스크 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "27000",
+    "mall": "마실 Masil 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/9266318440",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8681081/86810818763.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/9266318440"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038200/90382005237.jpg",
+        "mall": "마실 Masil 공식몰",
+        "link": "https://smartstore.naver.com/main/products/12837494245"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211655439",
+    "translated_kr": "컴포트 스트레치 워시 II 55g 택배배송",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "나이키 우먼스 루나커맨드 II 880121",
+      "naver_web": "가네보 컴포트 스트레치 워시 / 본체 / / 과일 꽃의 향기",
+      "naver_rematch": "KANEBO 가네보 가네보 카네보 컴포트 스트레치 워시 / 본품 / 130g / 과일 꽃의 향기 / 클렌징폼 세안제"
+    },
+    "brand": null,
+    "name": "가네보 컴포트 스트레치 워시 / 본체 / / 과일 꽃의 향기",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "66900",
+    "mall": "놀자재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10134034391",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8767853/87678537571.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8767853/87678537571.jpg",
+        "mall": "놀자재팬",
+        "link": "https://smartstore.naver.com/main/products/10134034391"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211242118",
+    "translated_kr": "사봉 바디 스크럽 젠틀맨 600g(7290114049511)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디스크럽 [젠틀맨]",
+      "naver": "사봉 바디 스크럽 젠틀맨 600g 각질 제거 보습",
+      "daum": "갤러리형으로 보기",
+      "naver_web": "바디스크럽 젠틀맨"
+    },
+    "brand": "사봉 (SABON)",
+    "name": "바디스크럽 [젠틀맨]",
+    "volume": "600g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "81500",
+    "mall": "글로벌DK잡화점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13657867570",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9120237/91202378355.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120237/91202378355.jpg",
+        "mall": "글로벌DK잡화점",
+        "link": "https://smartstore.naver.com/main/products/13657867570"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064183/90641830787.jpg",
+        "mall": "도쿄원더스토어",
+        "link": "https://smartstore.naver.com/main/products/13097319695"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9074279/90742796107.jpg",
+        "mall": "재팬투코리아",
+        "link": "https://smartstore.naver.com/main/products/13198285010"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9092524/90925245077.jpg",
+        "mall": "명문피플즈",
+        "link": "https://smartstore.naver.com/main/products/13380734741"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1211213188",
+    "translated_kr": "본드 550 세트 샴푸&550ml 트리트먼트 550g 파이버 플렉스",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "NO.3 헤어 퍼펙터",
+      "naver": "Schwarzkopf 슈바츠코프 파이버플렉스 본드 헤어케어 2종 세트 (샴푸 550mL + 트리트먼트 550g)",
+      "daum": "신제품관",
+      "naver_web": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너"
+    },
+    "brand": "올라플렉스 (OLAPLEX)",
+    "name": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "87700",
+    "mall": "애니바이마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13677001397",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122151/91221512416.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122151/91221512416.1.jpg",
+        "mall": "애니바이마켓",
+        "link": "https://smartstore.naver.com/main/products/13677001397"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1094657609",
+    "translated_kr": "2+1 슈퍼푸드 390ml/바디로션 (복숭아)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼푸드 바디로션 [피치]",
+      "daum": "✅롯데마트 전단광고 전단지 세일 품목",
+      "naver_web": "바세린 슈퍼푸드 피치 바디로션, , 1개"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "슈퍼푸드 바디로션 [피치]",
+    "volume": "390ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1036884081",
+    "translated_kr": "화이트 브라이트닝 에멀션 WT 3 (리필용)",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "시세이도 엘릭서 화이트 엘릭서 브라이트닝 로션 WT",
+      "naver_web": "AQ 앱솔루트 글로우 래디언트 브라이트닝 에멀션"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202027814",
+    "translated_kr": "피요레 파시나토 AC 리필 세트 샴푸 AC & 트리트먼트 AC 700mL + 700g 리필용 FIOLE FASCINATO 아미노 컨트롤 타입",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1062544269",
+    "translated_kr": "케라스타즈 CA 유일 시카 글로스 75ml 리필 리필용 세정 후 남기는 트리트먼트 헤어 오일",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "알보칠 가글 후 치아 시림, 대처법은?"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199472305",
+    "translated_kr": "N. 폴리시 오일 UR 150ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "UR 크림",
+      "naver": "Nap La N’odt 폴리시 오일 UR 어반 로즈 150ml",
+      "daum": "&#34;My bike&#34; 서비스에 대해",
+      "naver_web": "나프라 N 내추럴 헤어밤 어반 로즈 우디향, , 1개"
+    },
+    "brand": "DHC (디에이치씨)",
+    "name": "Nap La N’odt 폴리시 오일 UR 어반 로즈 150ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "38740",
+    "mall": "LOVE UNLIMITED",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13417230906",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9096174/90961741242.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096174/90961741242.jpg",
+        "mall": "LOVE UNLIMITED",
+        "link": "https://smartstore.naver.com/main/products/13417230906"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8966660/89666607860.jpg",
+        "mall": "뷰티 직구 스토어",
+        "link": "https://smartstore.naver.com/main/products/12122097155"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8912775/89127754010.jpg",
+        "mall": "프롬도쿄오",
+        "link": "https://smartstore.naver.com/main/products/11583243604"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
