@@ -14556,5 +14556,198 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205607511",
+    "translated_kr": "VC 로션(55ml) 스킨(토너) APPS 비타민C 유도체 【오니시 닥터스 코스메】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "APPS 비타민 C 유도체",
+      "naver": "10013021 더더마 베스트 VC100 플러스 레티놀 20장 고농도 비타민 C 유도체 함유",
+      "daum": "VC",
+      "naver_web": "일본직구 No.1 코스믹 COSMIK 퀄리티 퍼스트 더마 레이저 슈퍼 VC100 로션 촉촉한"
+    },
+    "brand": "아베아 (AVEA)",
+    "name": "APPS 비타민 C 유도체",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "44400",
+    "mall": "UA:JIN",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12912700289",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045721/90457211281.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045721/90457211281.jpg",
+        "mall": "UA:JIN",
+        "link": "https://smartstore.naver.com/main/products/12912700289"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111018/91110184591.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/13565674195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064259/90642591655.jpg",
+        "mall": "UA:JIN",
+        "link": "https://smartstore.naver.com/main/products/13098080563"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1207289207",
+    "translated_kr": "딥 클렌징 400g【3개 세트】",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "어린 새싹 딥 클렌징 폼",
+      "musinsa": "[SET] 수분 촉촉 딥클렌징 세트 (컨트롤 장벽 클렌저 150ml + 버블 클리어 포밍워시 155ml + 원스텝 클렌징 오일 200ml)",
+      "daum": "난 질레트 프로쉴드가 딥클렌징바 보다 난 거 같음",
+      "naver_web": "화산송이 바하 모공 폼 클렌징 / 피지관리 지성 민감성 피지제거 딥클렌징",
+      "naver_rematch": "[리바이포유] [SET] 수분 촉촉 딥클렌징 세트 (컨트롤 장벽 클렌저 150ml + 버블 클리어 포밍워시 155ml + 원스텝 클렌징 오일 200ml) 102"
+    },
+    "brand": "수이스킨 (suiskin)",
+    "name": "화산송이 바하 모공 폼 클렌징 / 피지관리 지성 민감성 피지제거 딥클렌징",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "67500",
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://link.musinsa.com/app/goods/6748787?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6065914/60659142448.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6065914/60659142448.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6748787?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      }
+    ],
+    "real_page_title": "리바이포유(RBFY) [SET] 수분 촉촉 딥클렌징 세트 (컨트롤 장벽 클렌저 150ml + 버블 클리어 포밍워시 155ml + 원스텝 클렌징 오일 200ml)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "789542280",
+    "translated_kr": "CG 리퀴드 1주일분 샘플",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "CG 젤 크림",
+      "naver": "코스드바하 CG 마데카소사이드 병풀 시카 CICA 수분 젤 크림 60ml 120ml, 1개",
+      "naver_web": "월별 BEST 추천상품"
+    },
+    "brand": "코스드바하 (CosDeBAHA)",
+    "name": "CG 젤 크림",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "13900",
+    "mall": "마르 코스메틱",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13578641347",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112315/91123151758.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112315/91123151758.jpg",
+        "mall": "마르 코스메틱",
+        "link": "https://smartstore.naver.com/main/products/13578641347"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1135469512",
+    "translated_kr": "QB 약용 데오드란트 바 40C 20g×2개 세트 리베르타 소취 크림 겨드랑이 땀 발 냄새 리베르타 퀵뷰티",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "955912094",
+    "translated_kr": "[공식] 레티놀 세럼 / 30ml / 모공·처짐·주름을 집중 케어하는 화제의 강력 성분! 모공을 조여 탄탄한 피부로",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[재입고] 아이오페 레티놀 슈퍼 바운스 세럼 (모공탄력 / 자극도 0.0) 50ml, 1개",
+      "daum": "뷰티 에디터 추천! 저속노화 스킨케어/마스크팩 겨울철 루틴템",
+      "naver_web": "올리브영 모공 앰플"
+    },
+    "brand": "아이오페",
+    "name": "[재입고] 아이오페 레티놀 슈퍼 바운스 세럼 (모공탄력 / 자극도 0.0) 50ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "67230",
+    "mall": "아이오페",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8390872165",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8593537/85935372488.40.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8593537/85935372488.40.jpg",
+        "mall": "아이오페",
+        "link": "https://smartstore.naver.com/main/products/8390872165"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8880778/88807784277.8.jpg",
+        "mall": "티어랩스",
+        "link": "https://smartstore.naver.com/main/products/11263273946"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208305546",
+    "translated_kr": "쿠루쿠루 클렌징 밤 리필 50ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "글로벌 뷰티 브랜드 바닐라코",
+      "naver_rematch": "[바닐라코] 클린잇제로 아나스타티카 쉽틸르 클렌징밤 트래블키트 3ml 16ea"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
