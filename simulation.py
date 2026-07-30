@@ -893,6 +893,13 @@ def t61_search_blackhole_and_articles():
     # 두면 브랜드가 다른 2건짜리가 그대로 남는다(LOWVIBE/Deep;erence
     # 핸드크림이 둘 다 '포트레 핸드크림 누보'에 붙어 있었다).
     two_with_diff_brand = "distinct_brands >= 2" in fn
+    # [v5.4.0] 링크뿐 아니라 매칭 상품명으로도 묶어야 한다. 같은 상품이
+    # 판매처마다 다른 링크로 올라오면 링크 기준으로는 안 걸린다 —
+    # 실측: '인진쑥 진정 보습 세럼'이 12건, '칠자화 유액'이 4건에 붙었다.
+    by_name = '_flat(p.get("kr_name") or "")' in fn
+    # 상품명이라기엔 너무 일반적인 값도 걸러야 한다(매칭 결과가 '화장품').
+    generic = "def looks_too_generic(" in src and "GENERIC_NAMES" in src \
+        and "stats[\"generic\"]" in src
     # 뺀 건은 기록으로 남겨야 한다.
     logged = 'reason": f"검색 블랙홀' in fn
 
@@ -904,11 +911,12 @@ def t61_search_blackhole_and_articles():
                        and "looks_like_article(it.get(\"title\") or \"\")" in vsrc)
 
     ok = (has_article and article_applied and has_blackhole and blackhole_applied
-          and keeps_best and logged and verify_filtered and two_with_diff_brand)
+          and keeps_best and logged and verify_filtered and two_with_diff_brand
+          and by_name and generic)
     check("61 검색 블랙홀/광고글 차단", ok,
           f"광고패턴{has_article} 광고적용{article_applied} 블랙홀{has_blackhole} "
           f"적용{blackhole_applied} 최선1건유지{keeps_best} 기록{logged} 검증단계{verify_filtered} "
-          f"브랜드다른2건{two_with_diff_brand}")
+          f"브랜드다른2건{two_with_diff_brand} 이름기준{by_name} 일반명{generic}")
 
 
 # --------------------- #62 해외(비한국) 브랜드 제외
