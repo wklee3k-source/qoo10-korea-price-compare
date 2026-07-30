@@ -794,7 +794,13 @@ def t58_confidence_ordering():
                    for k in ("brand_status", "_sim_token", "vol_mismatch", "single_source"))
     attached = '"confidence": match_confidence(' in src
     # 양쪽 용량을 다 알 때만 불일치로 봐야 한다(한쪽만 있으면 판단불가).
-    vol_guard = "qoo10_vol is not None and kr_vol is not None and not vol_match" in src
+    # [v5.8.0] 용량 파싱은 상품명에서 숫자를 뽑는 방식이라 세트 표기·성분
+    # 함량에서 엉뚱한 값을 집는다 — 실측: '큐리페어 멜라크림 35ml'의 한국
+    # 용량이 3ml, '리드르 샷 1000 에센스 15ml'가 1ml로 잡혔다. 이런 값으로
+    # 불일치 판정을 내리면 같은 제품이 B로 내려간다. 5ml 미만은 판단 보류.
+    vol_guard = ("def volume_mismatch(" in src
+                 and "MIN_TRUSTED_VOLUME_ML = 5.0" in src
+                 and "volume_mismatch(qoo10_vol, kr_vol)" in src)
     sorts_by_conf = '-int(p.get("confidence", 0))' in batches
     warns_low = "신뢰도 낮음" in src and "신뢰도 낮음" in batches
     # 정렬만 하고 버리지는 않는다.
