@@ -1143,6 +1143,40 @@ def t66_form_match_required_for_A():
           f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy}")
 
 
+# --------------------- #67 네일·향수 카테고리 제외
+#  색조(013·014·016)는 원래 빠져 있었는데 네일(021)·향수(022)는 통과하고
+#  있었다. 이 둘도 색상·호수·향으로 갈리는 상품군이라 이름만으로는 같은
+#  제품인지 알 수 없다. 실측 오매칭:
+#      '앰버바닐라 세럼 바디크림' -> '로즈 바디크림'
+#      '파워네일 마그넷' -> '파워 마그넷 세팅 스프레이'
+#      '서울 시크릿 블로썸 30ml' -> '소울 시크릿 블라썸'
+#  발굴·수확 양쪽에서 빼야 한다 — 한쪽만 고치면 다른 쪽으로 계속 들어온다.
+#  이미 쌓인 238건은 검수페이지에서 거른다.
+def t67_nail_perfume_excluded():
+    disc = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    harvest = (SRC / "harvest_full_catalog.py").read_text(encoding="utf-8")
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    def allowed(text):
+        # 주석에도 코드가 적혀 있으므로(제외 사유 설명), 따옴표로 등록된
+        # 항목만 본다.
+        block = text.split("COSMETIC_ALLOWED_CATEGORIES = {")[1].split("}")[0]
+        codes = set(re.findall(r'"(\d{9})"', block))
+        return "120000021" not in codes and "120000022" not in codes
+
+    disc_ok = allowed(disc)
+    harvest_ok = allowed(harvest)
+    # 색조는 계속 빠져 있어야 한다.
+    color_ok = all('"120000013"' in t for t in (disc, harvest))
+    review_ok = ('EXCLUDED_CATEGORIES' in review
+                 and '"120000021"' in review and '"120000022"' in review
+                 and 'str(q.get("category_gdlc_cd")) in EXCLUDED_CATEGORIES' in review)
+
+    ok = disc_ok and harvest_ok and color_ok and review_ok
+    check("67 네일·향수 카테고리 제외", ok,
+          f"발굴{disc_ok} 수확{harvest_ok} 색조유지{color_ok} 검수페이지{review_ok}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
