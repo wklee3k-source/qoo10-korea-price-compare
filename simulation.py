@@ -1085,10 +1085,18 @@ def t65_translation_term_fixes():
     safe = not any(f'("{w}"' in src for w in ("두피", "미백", "모공", "히알루론산"))
     # 앞으로의 번역에도 반영돼야 한다 — 요청서 지시문에 용어표가 있어야 한다.
     in_request = "美容液 → 에센스" in req and "붙여 쓰는 말" in req
+    # [v6.1.0] 번역 결과가 검색어로 쓰인다는 사실을 지시문이 먼저 알려야
+    # 한다. 이걸 모르면 '매끄러운 번역'을 하게 되고, 실제 상품 표기와
+    # 멀어져 검색이 빗나간다.
+    explains_purpose = "네이버 쇼핑에서 같은 상품을" in req
+    # 같은 브랜드 안에서 라인·번호·색상·제형만 다른 오매칭이 가장 흔했다.
+    warns_variants = "라인명·번호·색상·제형을 절대" in req
 
-    ok = has_terms and has_spacing and safe and in_request
+    ok = (has_terms and has_spacing and safe and in_request
+          and explains_purpose and warns_variants)
     check("65 번역 용어 한국표기", ok,
-          f"용어표{has_terms} 띄어쓰기{has_spacing} 한국어보호{safe} 요청서반영{in_request}")
+          f"용어표{has_terms} 띄어쓰기{has_spacing} 한국어보호{safe} 요청서반영{in_request} "
+          f"용도설명{explains_purpose} 변형경고{warns_variants}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
