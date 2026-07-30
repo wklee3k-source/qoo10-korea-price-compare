@@ -13535,5 +13535,371 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1134796920",
+    "translated_kr": "레드 폼 클렌저 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 폼 클렌저",
+      "naver": "레드 폼 클렌저, 여드름성 피부 완화 기능성",
+      "daum": "메디필 레드 락토 콜라겐 클리어 폼 클렌저 2.0, , 2개",
+      "naver_web": "메디큐브 레드 폼 클렌저"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "레드 폼 클렌저",
+    "volume": "120ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "16700",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=21&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_1134112/11341126779.17.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1134112/11341126779.17.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=21&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8218194/82181944889.6.jpg",
+        "mall": "예뻐지는뷰티공간",
+        "link": "https://smartstore.naver.com/main/products/4637424438"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8234421/82344214388.3.jpg",
+        "mall": "옴니코스",
+        "link": "https://smartstore.naver.com/main/products/4799691723"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=21&cate_no=44&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
+  },
+  {
+    "goods_no": "724850594",
+    "translated_kr": "폴로 블랙 125ml EDT SP",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폴로 블랙 EDT",
+      "naver": "랄프로렌 향수 폴로 블랙 오드뚜왈렛 EDT 폴로블랙향수, 125ml, 1개",
+      "daum": "존 바바토스 아티산 아쿠아",
+      "naver_web": "폴로랄프로렌 폴로 블랙 EDT"
+    },
+    "brand": "랄프로렌 (RALPHLAUREN)",
+    "name": "폴로 블랙 EDT",
+    "volume": "40ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "62000",
+    "mall": "퍼퓸하우스S",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5011619179",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8255613/82556139856.5.jpg",
+        "mall": "퍼퓸하우스S",
+        "link": "https://smartstore.naver.com/main/products/5011619179"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8992100/89921006273.jpg",
+        "mall": "퍼퓸아이즈",
+        "link": "https://smartstore.naver.com/main/products/12376495556"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8356406/83564064751.jpg",
+        "mall": "월드퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/6019565263"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1192657055",
+    "translated_kr": "코우지산 비타 젤리 세럼 미스트 100ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "달바 비타 토닝 안티에이징 스프레이 세럼 8퍼센트, , 2개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1212943200",
+    "translated_kr": "글리콜산 7% 엑스폴리에이팅 토너 240ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "글리콜산7% 산성토너 각질제거 보습 건조방지"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1117569383",
+    "translated_kr": "센텔라 에어핏 선크림 플러스 50ml (SPF50+ PA++++)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++]",
+      "musinsa": "마다가스카르 센텔라 에어핏 선크림 플러스 50ml",
+      "naver": "[무기자차] 센텔라 에어핏 선크림 플러스 50ml",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "마다가스카르 센텔라 에어핏 선크림 플러스"
+    },
+    "brand": "스킨1004 (SKIN1004)",
+    "name": "마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "18000",
+    "mall": "SKIN1004 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/5627620398",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8317211/83172117201.4.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8317211/83172117201.4.jpg",
+        "mall": "SKIN1004 공식몰",
+        "link": "https://smartstore.naver.com/main/products/5627620398"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1180606979",
+    "translated_kr": "신상 에이시카 365 리페어 크림 pH4.5 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에이시카365 리페어 크림 pH4.5",
+      "naver": "에스트라 에이시카365 리페어 크림pH4.5",
+      "daum": "상품명 : 에이시카365 리페어 크림 pH4.5",
+      "naver_web": "에이시카365 리페어 크림pH4.5 *2EA"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "에이시카365 리페어 크림 pH4.5",
+    "volume": "60ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25500",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63995&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5318962/53189625476.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5318962/53189625476.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=63995&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=aestura"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8570221/85702219974.39.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/8157719651"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8315506/83155061603.40.jpg",
+        "mall": "에스트라",
+        "link": "https://smartstore.naver.com/main/products/5610565102"
+      }
+    ],
+    "real_page_title": "[에스트라]에이시카365 리페어 크림pH4.5",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1055956359",
+    "translated_kr": "멜라 B3 세럼 30ml 에센스",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "멜라B3 세럼",
+      "naver": "[라로슈포제] 멜라 B3 기미잡티 세럼 30ml (나이아신아마이드 10%)",
+      "daum": "라로슈포제 리더믹 R 아이에센스",
+      "naver_web": "멜라 B3 세럼 더블 세트 + 추가 증정"
+    },
+    "brand": "라로슈포제",
+    "name": "[라로슈포제] 멜라 B3 기미잡티 세럼 30ml (나이아신아마이드 10%)",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "52360",
+    "mall": "라로슈포제 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10353358451",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8789786/87897862924.50.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8789786/87897862924.50.jpg",
+        "mall": "라로슈포제 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/10353358451"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8909698/89096985501.jpg",
+        "mall": "고고픽픽",
+        "link": "https://smartstore.naver.com/main/products/11552475095"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183746235",
+    "translated_kr": "자연스러운 커버력 스킨 솔루션 BB 크림 50g SPF37 PA++ 크림 50g UV 케어 선크림 자외선 차단제 한국 화장품 건성 피부 피부 배리어 SPF50 UV 컷",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "1초 매직 BB 크림 [SPF34/PA++]",
+      "daum": "2020 Best of Beauty",
+      "naver_web": "프리미엄 PA BB 크림 솔루션으로 결점 없는 피부를 완성하세요.",
+      "naver_rematch": "더페이스샵 fmgt 매직커버 BB 크림 45g (SPF 20 PA++)"
+    },
+    "brand": "마몽드 (Mamonde)",
+    "name": "1초 매직 BB 크림 [SPF34/PA++]",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "17850",
+    "mall": "더페이스샵 본사직영점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9133193564",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8667769/86677693887.3.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8667769/86677693887.3.jpg",
+        "mall": "더페이스샵 본사직영점",
+        "link": "https://smartstore.naver.com/main/products/9133193564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8520118/85201187403.jpg",
+        "mall": "리빙퍼머컬처",
+        "link": "https://smartstore.naver.com/main/products/7656687081"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1013414380",
+    "translated_kr": "카오 큐렐 피지 트러블 케어 미니 세트 카오 민감성 피부 트라이얼",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "큐렐 피지 트러블 케어 미니 세트 ｜ 도코데모",
+      "naver_web": "일본직구 No.1 코스믹 COSMIK 여행용 트라이얼 기획전 > COSMETIC > 여행용 트라이얼"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1081191238",
+    "translated_kr": "블랙헤드 멜팅 클리어 패드 30매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블랙헤드 멜팅 클리어 패드",
+      "naver": "성분에디터 블랙헤드 멜팅 클리어 패드 30매",
+      "daum": "성분에디터 블랙헤드 멜팅 클리어패드",
+      "naver_web": "피지블랙헤드 순삭 성분에디터 블랙헤드 멜팅 클리어 패드 30매 198814"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "블랙헤드 멜팅 클리어 패드",
+    "volume": "65g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "14600",
+    "mall": "잘되는 SKBC",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8340522978",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8588502/85885023301.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8588502/85885023301.jpg",
+        "mall": "잘되는 SKBC",
+        "link": "https://smartstore.naver.com/main/products/8340522978"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8805456/88054566370.jpg",
+        "mall": "너비상회",
+        "link": "https://smartstore.naver.com/main/products/10510061018"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8959500/89595004318.jpg",
+        "mall": "파파건강",
+        "link": "https://smartstore.naver.com/main/products/12050493619"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8860869/88608697431.jpg",
+        "mall": "심이오빠",
+        "link": "https://smartstore.naver.com/main/products/11064191220"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
