@@ -4338,5 +4338,336 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1142033355",
+    "translated_kr": "제로 원데이 엑소좀 샷 모공 앰플 30ml / 7500",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 원데이 엑소좀 샷 모공 앰플 7500",
+      "naver": "제로 원데이 엑소좀 샷 모공 앰플 7500",
+      "daum": "아이소이랑 같이 언급된 메디큐브",
+      "naver_web": "피부 속 탄력을 채워 모공 고민을 관리하는 앰플"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "제로 원데이 엑소좀 샷 모공 앰플 7500",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "37800",
+    "mall": "메디큐브",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1512&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5472519/54725199221.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5472519/54725199221.2.jpg",
+        "mall": "메디큐브",
+        "link": "https://themedicube.co.kr/product/detail.html?product_no=1512&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8768713/87687135863.jpg",
+        "mall": "석플러스",
+        "link": "https://smartstore.naver.com/main/products/10142632659"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8750508/87505081513.jpg",
+        "mall": "와싸이마켓",
+        "link": "https://smartstore.naver.com/main/products/9960579240"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [
+      "페이지 로드 실패: Page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://themedicube.co.kr/product/detail.html?product_no=1512&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open\", waiting until \"domcontentloaded\"\n"
+    ]
+  },
+  {
+    "goods_no": "1159550758",
+    "translated_kr": "프로폴리스 앰플 미스트 100ml X 3",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "광고 천재 퀸와와",
+      "naver_web": "차앤박 프로폴리스 에너지 앰플 미스트 x 10개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194719971",
+    "translated_kr": "아이래쉬 틴팅 세럼 샷 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아이래쉬 틴팅 세럼 샷 [01 블랙]",
+      "naver": "뮤드 아이래쉬 &amp;&amp;&amp; 기획 틴팅 샷 01 블랙 + 세럼",
+      "daum": "코스 블랙속눈썹영양제 틴팅 아이래쉬 세럼 에센스 블랙라벨 , , 1개",
+      "naver_web": "뮤드 아이래쉬 틴팅 세럼 샷"
+    },
+    "brand": "뮤드 (mude)",
+    "name": "아이래쉬 틴팅 세럼 샷 [01 블랙]",
+    "volume": "3g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "15440",
+    "mall": "랜덤플레이 주식회사",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13486873076",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9103138/91031383428.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103138/91031383428.jpg",
+        "mall": "랜덤플레이 주식회사",
+        "link": "https://smartstore.naver.com/main/products/13486873076"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204509914",
+    "translated_kr": "[NEW] 아쿠아 세라마이드 100 젤 클렌저 클렌징 아침 세안 거품 불필요 LHA 세라마이드 클렌저 민감성 피부 클렌저 아침용 세안",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+      "daum": "미세먼지에 노출된 피부 고민별 클렌저 처방전",
+      "naver_web": "아로마티카 바이탈라이징 로즈마리 포어 클렌징 오일, , 1개",
+      "naver_rematch": "아로마티카 바이탈라이징 로즈마리 포어 클렌징오일 200ml 1개"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "15590",
+    "mall": "케이샾.",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12299043383",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8984355/89843554099.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8984355/89843554099.jpg",
+        "mall": "케이샾.",
+        "link": "https://smartstore.naver.com/main/products/12299043383"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1173301903",
+    "translated_kr": "어성초70 데일리 로션 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 데일리 로션",
+      "naver": "아누아 어성초 70 데일리 로션 200ml",
+      "daum": "아누아 어성초 70 데일리 릴리프 로션",
+      "naver_web": "어성초 70 데일리 로션"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 데일리 로션",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "17990",
+    "mall": "JnH Shop",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13071395347",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9061590/90615906439.jpg",
+        "mall": "JnH Shop",
+        "link": "https://smartstore.naver.com/main/products/13071395347"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120245/91202458128.jpg",
+        "mall": "아르떼마켓1",
+        "link": "https://smartstore.naver.com/main/products/13657947343"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122324/91223244727.jpg",
+        "mall": "더뷰티픽",
+        "link": "https://smartstore.naver.com/main/products/13678733636"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1146790722",
+    "translated_kr": "[글래스 스킨] 블루밍데이즈 글로우 밤 01 pure",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "블루밍 데이즈 글로우 밤",
+      "naver": "아페리레 멀티밤 스틱밤 블루밍 데이즈 글로우 밤 01순수 9.5g 1개",
+      "daum": "아페리레 블루밍 데이즈 글로우 밤 01순수",
+      "naver_web": "Pure Color Gelée Glow Balm"
+    },
+    "brand": "아페리레 (Aperire)",
+    "name": "블루밍 데이즈 글로우 밤",
+    "volume": "9.5g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "39400",
+    "mall": "제이케이컴퍼니스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13685172547",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9122968/91229683790.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122968/91229683790.jpg",
+        "mall": "제이케이컴퍼니스토어",
+        "link": "https://smartstore.naver.com/main/products/13685172547"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1208715918",
+    "translated_kr": "세인무 보떼롱드 셸르 버스트 하리 데콜테 바디 케어 에센스 100ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164572296",
+    "translated_kr": "샌달우드 SANDALWOOD 신의 백단 오드트왈렛 30ml 백단 향 향수",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "솔리드퍼퓸 윈디샌달우드 향"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164543671",
+    "translated_kr": "릭스 사랑스러운 고양이 오드트왈렛 30ml 시트러스 플로랄 향 향수",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "플라잇 오브 팬시 오 드 트왈렛",
+      "naver": "안나수이 플라잇 오브 팬시 향수 오드뚜왈렛 EDT 50ml",
+      "naver_web": "플라잇 오브 팬시 오 드 트왈렛"
+    },
+    "brand": "안나수이 (ANNASUI)",
+    "name": "플라잇 오브 팬시 오 드 트왈렛",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "64000",
+    "mall": "오승재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12844483488",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9038899/90388994480.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9038899/90388994480.1.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/12844483488"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011956/90119561512.jpg",
+        "mall": "베스트재팬",
+        "link": "https://smartstore.naver.com/main/products/12575050651"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090842/90908420904.jpg",
+        "mall": "모찌팜",
+        "link": "https://smartstore.naver.com/main/products/13363910572"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109405/91094053484.1.jpg",
+        "mall": "재팬양품",
+        "link": "https://smartstore.naver.com/main/products/13549543131"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089930/90899302197.jpg",
+        "mall": "딜위드",
+        "link": "https://smartstore.naver.com/main/products/13354791865"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1174474445",
+    "translated_kr": "[국내 정품] 레티노 파워 링클 크림 ba L 22g 자신도 (의약부외품)",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "조선변호사 noirciel@ajunews",
+      "naver_web": "Shiseido Elixir 레티노 파워 링클 아이크림 리필 2025 ba L"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
