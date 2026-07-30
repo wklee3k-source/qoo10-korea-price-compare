@@ -246,15 +246,33 @@ def should_exclude(qoo10_brand: str, kr_brand: str, qoo10_name: str, kr_name: st
 #  시간을 쓸지 정할 수 있다.
 CONFIDENCE_TIERS = {
     "A": ("완전 신뢰", "브랜드·이름 모두 확인됨"),
-    "B": ("확인 필요", "브랜드나 이름 중 하나가 불확실함"),
-    "C": ("불일치 의심", "다른 제품일 가능성이 큼 — 사진을 꼭 대조"),
+    "B": ("표기 차이", "브랜드는 확인됨. 용량·이름 표기만 다름"),
+    "C": ("브랜드 미확인", "브랜드를 확인하지 못함 — 사진을 꼭 대조"),
 }
 
 
-def confidence_tier(confidence: int) -> str:
-    if confidence >= 4:
-        return "A"
-    return "B" if confidence >= 2 else "C"
+def confidence_tier(confidence: int, brand_status: str = "match",
+                    vol_mismatch: bool = False, name_ok: bool = True,
+                    single_source: bool = False) -> str:
+    """등급을 '점수'가 아니라 '무엇이 불확실한가'로 나눈다.
+
+    [v5.5.0 개편] 예전엔 점수 구간(4 / 2~3 / 0~1)으로 나눴다. 그런데
+    B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
+    섞여 있었다.
+        용량 불일치 114 · 이름 애매 66  -> 대부분 같은 제품의 표기 차이
+        브랜드 불일치 117              -> 오매칭이 다수
+    같은 등급으로 묶으면 안전한 것과 위험한 것에 같은 주의를 쓰게 된다.
+
+    이제 브랜드가 확인됐는지를 1차 기준으로 삼는다.
+        A  브랜드 확인 + 이름 일치 + 용량 일치 + 소스 합의
+        B  브랜드는 확인됨. 용량이나 이름만 어긋남 (표기 차이가 대부분)
+        C  브랜드를 확인하지 못했거나 소스 합의 없이 통과 (판단 필요)
+    """
+    if brand_status != "match" or single_source:
+        return "C"
+    if vol_mismatch or not name_ok:
+        return "B"
+    return "A" if confidence >= 4 else "B"
 
 
 def match_confidence(qoo10_name: str, kr_name: str, brand_status: str,
@@ -636,10 +654,15 @@ def build_pairs():
                 # 양쪽 다 용량을 알 때만 '불일치'로 본다(한쪽만 있으면 판단불가).
                 bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
                 bool(x.get("single_source_naver"))),
-            "tier": confidence_tier(match_confidence(
-                translated_kr, x.get("name") or "", brand_status,
+            "tier": confidence_tier(
+                match_confidence(translated_kr, x.get("name") or "", brand_status,
+                                 bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
+                                 bool(x.get("single_source_naver"))),
+                brand_status,
                 bool(qoo10_vol is not None and kr_vol is not None and not vol_match),
-                bool(x.get("single_source_naver")))),
+                bool(_sim_token(translated_kr, x.get("name") or "") >= 0.5
+                     or _sim_bigram(translated_kr, x.get("name") or "") >= 0.6),
+                bool(x.get("single_source_naver"))),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
