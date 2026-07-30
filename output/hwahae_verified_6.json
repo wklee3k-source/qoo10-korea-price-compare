@@ -11604,5 +11604,307 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1200726069",
+    "translated_kr": "마스크팩 1장 포함 미용 비누 허브비누 85g 한국화장품 한방 비누 고형비누 클렌징 어린이 데오도란트 홍삼 모공 건조 피부트러블",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "1.안진정.pdf",
+      "naver_web": "2007 화장품 기업체의 디렉토리북 2007 Korea Cosmetic Industry Directory"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200726063",
+    "translated_kr": "2개세트 미용 비누 허브비누 85g 한국화장품 한방 비누 고형비누 클렌징 어린이 데오도란트 홍삼 모공 건조 피부트러블",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "향수아로마 바디워시 [플로럴머스크]",
+      "daum": "1.안진정.pdf",
+      "naver_web": "퍼퓸 세안바 플로럴머스크 3개",
+      "naver_rematch": "1+1 메르헨트 대용량 퍼퓸 바디워시 1000ml 피치블라썸 약산성 향기좋은 바디클렌져"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1016153540",
+    "translated_kr": "에이솔루트 리프레시 밤 9g / 하이드라밤 9g / 주름탄력개선 / 수분충전 / 한국화장품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "발몽 하이드라3 아이 에멀전 50ml 고보습 아이케어"
+    },
+    "brand": "발몽",
+    "name": "발몽 하이드라3 아이 에멀전 50ml 고보습 아이케어",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": true,
+    "obsolete": null,
+    "sale": null,
+    "price": "175000",
+    "mall": "화니앤주",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13527366146",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9107187/91071876499.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107187/91071876499.1.jpg",
+        "mall": "화니앤주",
+        "link": "https://smartstore.naver.com/main/products/13527366146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087731/90877315117.jpg",
+        "mall": "보나 Bona",
+        "link": "https://smartstore.naver.com/main/products/13332804785"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048086/90480863363.1.jpg",
+        "mall": "루나 클리닉",
+        "link": "https://smartstore.naver.com/main/products/12936352353"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1210385244",
+    "translated_kr": "[일본메이커 공식] 팜21 모이스트리페어헤어마스크 건조케어 촉촉함보습 모발질케어 퍼석임·넓어짐대책 살롱품질 헤어트리트먼트 헤어팩 230g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1165001254",
+    "translated_kr": "데일리 더마 캡슐 선세럼 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마 캡슐 선세럼 [SPF50+/PA++++]",
+      "musinsa": "케이부스터 데일리 더마 캡슐 선세럼 50ml",
+      "daum": "2+1 데일리 더마 캡슐 선세럼 청담 피부과 에리스리톨 병풀 알란토인 케이부스터",
+      "naver_web": "ecmbiolab",
+      "naver_rematch": "데일리 더마 캡슐 화잘먹 선스크린 광채 선세럼 50ml + 재생키트 4개"
+    },
+    "brand": "케이부스터 (KBOOSTER)",
+    "name": "더마 캡슐 선세럼 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "37600",
+    "mall": "KBOOSTER 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/11832536898",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8937704/89377047485.11.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937704/89377047485.11.jpg",
+        "mall": "KBOOSTER 공식몰",
+        "link": "https://smartstore.naver.com/main/products/11832536898"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9077794/90777944185.1.jpg",
+        "mall": "KBOOSTER 공식몰",
+        "link": "https://smartstore.naver.com/main/products/13233433854"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9107735/91077357498.jpg",
+        "mall": "미미호호",
+        "link": "https://smartstore.naver.com/main/products/13532847145"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1020889597",
+    "translated_kr": "[공식] 베이직 헤어 케어 세트 샴푸 : 200ml 트리트먼트 : 185ml 샴푸 트리트먼트 세트 샴푸 트리트먼트 맨즈 남성용 여성 헤어 케어 두피 케어 보습 일본 제조",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "두피강화 클리닉 탈모증상완화 샴푸",
+      "naver": "LABO H 탈모증상완화 샴푸 두피강화 (본품+리필) 400ml 2입 기획 + 증정338591",
+      "daum": "샴푸",
+      "naver_web": "헤어 트리트먼트"
+    },
+    "brand": "라보에이치 (LABO-H)",
+    "name": "두피강화 클리닉 탈모증상완화 샴푸",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "30780",
+    "mall": "하마-마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13501099268",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9104560/91045609620.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9104560/91045609620.2.jpg",
+        "mall": "하마-마켓",
+        "link": "https://smartstore.naver.com/main/products/13501099268"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095158/90951587901.jpg",
+        "mall": "CleanBox",
+        "link": "https://smartstore.naver.com/main/products/13407077565"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1183590908",
+    "translated_kr": "라 로슈 포제 메라 B3 데이 트리트먼트 UV 40ml 자외선 차단제",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "디올 하이드라 라이프 밸런싱 2"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199405568",
+    "translated_kr": "[리필 세트] 샴푸 트리트먼트 헤어오일 Straine 스트레인 / 야마시타 토모히사 어댐버서더",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "7무 피토에너지 약산성 샴푸"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194740154",
+    "translated_kr": "【단품 구매 페이지】에이징 스칼프 케어 오일리 컨트롤 샴푸 400ml 트리트먼트 390g 허벌 머스크 헤마틴 숯 감 타닌 멘톨 손상 케어 두피 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195927854",
+    "translated_kr": "닥터셀렉트 비아주 알게 솝 100g 살롱 판매 상품 무료배송 스킨케어 천연 미네랄 솝 비누 닥터셀렉트 천연 미네랄",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "구매",
+      "naver_web": "피부에 좋은 천연 재료 5가지",
+      "naver_rematch": "캐모마일 워터 1L 천연 화장품 스킨 미스트 만들기"
+    },
+    "brand": null,
+    "name": "피부에 좋은 천연 재료 5가지",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "10200",
+    "mall": "에코문",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8568793816",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8611329/86113294138.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8611329/86113294138.1.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8568793816"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8605562/86055627234.2.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8511126911"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8605567/86055674019.2.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8511173696"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8611337/86113377022.1.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8568876699"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
