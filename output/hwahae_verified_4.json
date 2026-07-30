@@ -12270,5 +12270,291 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "993180450",
+    "translated_kr": "호분 네일 반짝임 시리즈 복숭아 진주 (복숭아 진주 / 펄 핑크 / 셰어 핑크)",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "마더오일",
+      "naver": "[우먼홈케어 마더오일] 임산부 바디 오일 임신 산모 마사지",
+      "daum": "青口雲母",
+      "naver_web": "나비의 꿈"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210184004",
+    "translated_kr": "1+1 [피부 배리어] 엘릭서 배리어 선스틱 23g",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "4월 GS25의 간편결제 혜택",
+      "naver_web": "닥터디퍼런트"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208406804",
+    "translated_kr": "[닦아내기] 엘릭서 퓨어 밸런싱 토너 520ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 엘릭서 밸런싱 토너",
+      "naver": "엘무하 NMN 밸런싱 스킨 솔루션 토너 수분 안티에이징 팔자주름 미백 보습",
+      "daum": "LG생활건강 2026 설 선물세트",
+      "naver_web": "퓨어 밸런싱 토너"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "시카 엘릭서 밸런싱 토너",
+    "volume": "125ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "56000",
+    "mall": "ELMUCHA 엘무하",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/10668175167",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8821268/88212681081.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821268/88212681081.jpg",
+        "mall": "ELMUCHA 엘무하",
+        "link": "https://smartstore.naver.com/main/products/10668175167"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9066057/90660574058.jpg",
+        "mall": "하이마이샵",
+        "link": "https://smartstore.naver.com/main/products/13116062966"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1079637346",
+    "translated_kr": "신형! 씻어내지 않음! 고농축 박준 LPP 노 워시 트리트먼트 팩 200ml 헤어에센스, 헤어오일 모발 데미지 완벽 케어! 푸석푸석 머리 수복 아웃바스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폼 워시",
+      "naver_web": "09event_keyword.xlsx",
+      "naver_rematch": "센카퍼펙트휩 페이셜 워시 시세이도 일본 클린징폼 포밍 세안제 세트"
+    },
+    "brand": "장생도라지",
+    "name": "폼 워시",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "18500",
+    "mall": "코스트코이케아",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10570199403",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+        "mall": "코스트코이케아",
+        "link": "https://smartstore.naver.com/main/products/10570199403"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1151496905",
+    "translated_kr": "(스토) 스칼프 리바이탈라이저 토닉 200ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "리바이탈라이징 헤어 앤 두피 에센스 토닉 앰플",
+      "naver": "오바코 에그 뉴럴 셀 스칼프 리바이탈라이저 120ml 두피미스트 스칼프 토닉",
+      "daum": "인바티 어드밴스드 스칼프 리바이탈라이저 토닉",
+      "naver_web": "아베다 인바티 어드밴스드 스칼프 리바이탈라이저"
+    },
+    "brand": "오바코",
+    "name": "오바코 에그 뉴럴 셀 스칼프 리바이탈라이저 120ml 두피미스트 스칼프 토닉",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "33000",
+    "mall": "오바코",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/8821196833",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8636569/86365697156.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8636569/86365697156.1.jpg",
+        "mall": "오바코",
+        "link": "https://smartstore.naver.com/main/products/8821196833"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8988026/89880263557.2.jpg",
+        "mall": "TC코스메틱",
+        "link": "https://smartstore.naver.com/main/products/12335752842"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822581/88225817464.jpg",
+        "mall": "스톰JD",
+        "link": "https://smartstore.naver.com/main/products/10681311542"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9008406/90084068944.jpg",
+        "mall": "올바른상점ONE",
+        "link": "https://smartstore.naver.com/main/products/12539558091"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1209689536",
+    "translated_kr": "[공식] [한국의 인기 드라마 여배우 조수민 픽] 뮤즈 오라 센센트 마포인팅 팩 클렌저 120ml",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1120473571",
+    "translated_kr": "애딕트 헤어오일 / 105ml 헤어오일 헹굼 없음 스타일링 미용실 헤어오일 스타일링용 스타일링오일 살롱 헤어케어 윤기오일 멀티오일 머리",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "키즈 실키 헤어 컨디셔너",
+      "naver": "나프라 N 내추럴 헤어밤 스타일링 살롱전용제품 미용전용 18g 45g",
+      "daum": "헤어 컨디셔너",
+      "naver_web": "노른자 헤어에센스 +"
+    },
+    "brand": "아토팜 (ATOPALM)",
+    "name": "키즈 실키 헤어 컨디셔너",
+    "volume": "300ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "31000",
+    "mall": "달카니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5485853322",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8303034/83030348235.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8303034/83030348235.jpg",
+        "mall": "달카니",
+        "link": "https://smartstore.naver.com/main/products/5485853322"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8309957/83099573018.3.jpg",
+        "mall": "TOKYOTIMES",
+        "link": "https://smartstore.naver.com/main/products/5555077191"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8534286/85342869845.jpg",
+        "mall": "도쿄메신저",
+        "link": "https://smartstore.naver.com/main/products/7798369523"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "952985957",
+    "translated_kr": "백옥생명거울지수(명경지수) HMF 주름&미백케어(단품) 60ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "20251002_혁신제품_인증현황_통합v6.31_한국조달연구원.xlsx"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1011438226",
+    "translated_kr": "[정규품] 서블리믹 아데노바이탈 스칼프파워샷 480ml 리필 (리필용) [2개] 볼륨과 탄력과 코시 없는 머리용",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1143306022",
+    "translated_kr": "한국제 세안용 비누 비더스킨 로즈 100g 모이스처 내추럴 클렌징 솝 비더스킨 잔주름 보습 손 만드는 핸드메이드 비누 세제 메이드 인 코리아",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
