@@ -1059,6 +1059,38 @@ def t64_brand_in_product_name():
           f"길이가드{len_guard} 호출부전달{passed}")
 
 
+# --------------------- #65 번역 용어를 한국 표기로
+#  번역본(translated_kr)은 화면 표시용이 아니라 검증 검색어로 그대로 쓰인다.
+#  일본어를 직역한 용어가 들어가면 한국 쇼핑몰 검색이 빗나가고 그 상품은
+#  구매링크 없음으로 버려진다. 실측 4,586건 중 973건(21%)이 해당했다.
+#      미용액(美容液) 247 · 화장수(化粧水) 151 · 유액(乳液) 55 · 세안료 26
+#      수징 68 · 엑소솜 31 · 블레미시 17
+#  띄어쓰기도 같은 문제다 — 한국 상품명은 붙여 쓴다('선 크림' 41건).
+#
+#  ⚠️ 일본어처럼 보인다고 전부 바꾸면 안 된다. 판단 기준은 '한국에서
+#  그렇게 쓰는가'다. 두피(111)·미백(65)·모공·히알루론산(159)·
+#  자외선 차단제(56)는 한국에서도 정상 표기라 건드리지 않는다.
+def t65_translation_term_fixes():
+    script = SRC / "fix_translation_terms.py"
+    if not script.exists():
+        check("65 번역 용어 한국표기", False, "fix_translation_terms.py 없음"); return
+    src = script.read_text(encoding="utf-8")
+    req = (SRC / "export_translation_request.py").read_text(encoding="utf-8")
+
+    has_terms = all(f'("{a}", "{b}")' in src for a, b in
+                    (("미용액", "에센스"), ("화장수", "토너"), ("유액", "로션"),
+                     ("세안료", "클렌저"), ("수징", "수딩")))
+    has_spacing = '("선 크림", "선크림")' in src and '("토너 패드", "토너패드")' in src
+    # 한국에서 쓰는 말은 교정 대상에 없어야 한다.
+    safe = not any(f'("{w}"' in src for w in ("두피", "미백", "모공", "히알루론산"))
+    # 앞으로의 번역에도 반영돼야 한다 — 요청서 지시문에 용어표가 있어야 한다.
+    in_request = "美容液 → 에센스" in req and "붙여 쓰는 말" in req
+
+    ok = has_terms and has_spacing and safe and in_request
+    check("65 번역 용어 한국표기", ok,
+          f"용어표{has_terms} 띄어쓰기{has_spacing} 한국어보호{safe} 요청서반영{in_request}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
