@@ -23536,5 +23536,363 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1205851278",
+    "translated_kr": "밀본 엘주다 포인트 케어 스틱 15mL 정규품 스포스트 배송 선물 머리카락 곱슬림 직게 간단 대책 마스카라 형태 스타일링 제",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209316335",
+    "translated_kr": "알리 크로노뷰티 젤 UV EX SPF50+PA++++ 90g 무향료",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "크로노 뷰티 페이셜 젤 UV EX [SPF50+/PA++++]",
+      "naver": "일본 알리 ALLIE 크로노뷰티 젤 UV EX 촉촉한 선크림 자외선차단 90g 무향료",
+      "daum": "알리 크로노 뷰티 젤 UV EX , 2개",
+      "naver_web": "알리 크로노 뷰티 젤 UV EX"
+    },
+    "brand": "알리 (ALLIE)",
+    "name": "크로노 뷰티 페이셜 젤 UV EX [SPF50+/PA++++]",
+    "volume": "60g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "27000",
+    "mall": "망고빌라",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13432132380",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9097664/90976642716.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097664/90976642716.jpg",
+        "mall": "망고빌라",
+        "link": "https://smartstore.naver.com/main/products/13432132380"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8778089/87780897691.jpg",
+        "mall": "TOKYO EKI",
+        "link": "https://smartstore.naver.com/main/products/10236394122"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164285646",
+    "translated_kr": "센시비오 H2O 500ml 2개입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "센시비오 H2O",
+      "naver": "바이오더마 클렌징워터 센시비오 H2O 500ml 2개입 코스트코 워터 클렌저 대용량",
+      "daum": "바이오더마 클렌징 워터 센시비오 Sensibio H2O , 단품",
+      "naver_web": "바이오더마 센시비오 H2O 민감용 클렌징 워터 기획세트 + , , 2개"
+    },
+    "brand": "바이오더마 (BIODERMA)",
+    "name": "센시비오 H2O",
+    "volume": "250ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "24080",
+    "mall": "더늠마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12962256520",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9050676/90506767531.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9050676/90506767531.jpg",
+        "mall": "더늠마켓",
+        "link": "https://smartstore.naver.com/main/products/12962256520"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9042737/90427371349.jpg",
+        "mall": "젠트글로벌",
+        "link": "https://smartstore.naver.com/main/products/12882860357"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9109975/91099756360.jpg",
+        "mall": "GH굿즈헌터",
+        "link": "https://smartstore.naver.com/main/products/13555245993"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9080484/90804849664.jpg",
+        "mall": "닥터맘오가닉",
+        "link": "https://smartstore.naver.com/main/products/13260339334"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1185095289",
+    "translated_kr": "[리필] BC 쿠아 폼 컨트롤 샴푸 600ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "폼 워시",
+      "naver": "슈바르츠코프 프로페셔널 BC쿠아 포름 컨트롤 샴푸 750ml",
+      "daum": "슈바츠코프 BC 쿠아 폼 컨트롤 샴푸",
+      "naver_web": "니오신 다이아미터 시스템 1 트리트먼트"
+    },
+    "brand": "장생도라지",
+    "name": "슈바르츠코프 프로페셔널 BC쿠아 포름 컨트롤 샴푸 750ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "76500",
+    "mall": "마이템상점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13161407556",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9070591/90705918653.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9070591/90705918653.jpg",
+        "mall": "마이템상점",
+        "link": "https://smartstore.naver.com/main/products/13161407556"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195074904",
+    "translated_kr": "[정품] 피욜레 쿠오르시아 컬러 샴푸 자주색 purple 1000ml [살롱 전문가용 제품] [브리치 케어] [컬러 케어] [무라샨] [최저가 업데이트 중] [정품] [색 빠짐 케어]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "7무 피토에너지 약산성 샴푸",
+      "naver": "피요레 피오레 FIOLE 쿼르시아 쿠오르시아 컬러 샴푸 보색샴푸 퍼플, 250ml, 1개"
+    },
+    "brand": "피오레",
+    "name": "피요레 피오레 FIOLE 쿼르시아 쿠오르시아 컬러 샴푸 보색샴푸 퍼플, 250ml, 1개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "15000",
+    "mall": "오하요재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12706227126",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9025073/90250738050.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025073/90250738050.jpg",
+        "mall": "오하요재팬",
+        "link": "https://smartstore.naver.com/main/products/12706227126"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068548/90685484508.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/13140973416"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051775/90517756171.jpg",
+        "mall": "일본화장품스토어",
+        "link": "https://smartstore.naver.com/main/products/12973245161"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9004158/90041589319.jpg",
+        "mall": "재팬투코리아",
+        "link": "https://smartstore.naver.com/main/products/12497078466"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011079/90110792853.jpg",
+        "mall": "도쿄루아",
+        "link": "https://smartstore.naver.com/main/products/12566282000"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1063221834",
+    "translated_kr": "눈 밑 팩 시트 양쪽 눈 30회분 뷰티 아이즈 에센스 시트 프리미엄 플러스 60장",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "액시지아(AXXZIA) 뷰티아이즈 에센스시트 프리미엄 플러스 60매(30회분) 눈매 팩 눈가 케어 아이시트 눈밑",
+      "naver_web": "눈에좋은영양제 추천 10종! 지금 꼭 필요한 인기 상품들"
+    },
+    "brand": "리플라이미 (reply:me)",
+    "name": "액시지아(AXXZIA) 뷰티아이즈 에센스시트 프리미엄 플러스 60매(30회분) 눈매 팩 눈가 케어 아이시트 눈밑",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "117750",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12890675900",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9043518/90435186887.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9043518/90435186887.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/12890675900"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199687551",
+    "translated_kr": "우편 투함 U・V락 프리미엄 브라이트 30입(30일분) 마시는 자외선 차단제/자외선 대책/서플리먼트/비타민C/유브락",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199631740",
+    "translated_kr": "올라플렉스 No.6 본드 스무더 100ml 씻어내지 않는 트리트먼트 올라플렉스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "NO.6 본드 스무더",
+      "naver": "올라플렉스 No.6 본드 스무더 100ml",
+      "daum": "제품설명",
+      "naver_web": "올라플렉스 No.6 본드 스무더"
+    },
+    "brand": "올라플렉스 (OLAPLEX)",
+    "name": "NO.6 본드 스무더",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "45320",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000185353",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5140077/51400777798.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5140077/51400777798.1.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000185353"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028722/90287226157.jpg",
+        "mall": "뷰티트렁",
+        "link": "https://smartstore.naver.com/main/products/12742715216"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084899/90848999053.jpg",
+        "mall": "AZ플라자",
+        "link": "https://smartstore.naver.com/main/products/13304488722"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120825/91208258602.jpg",
+        "mall": "랜딩스트립",
+        "link": "https://smartstore.naver.com/main/products/13663747694"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8942089/89420894533.jpg",
+        "mall": "뮬리스토어",
+        "link": "https://smartstore.naver.com/main/products/11876383931"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1164408124",
+    "translated_kr": "4종류에서 선택할 수 있는 본체(500) 세트 글로벌 스무딩M (스무스) 리스트라티브 (리페어) 등 샴푸 500ml 트리트먼트 500g 본체 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver": "[단독 특가] 라온느 블랙 아르간 손상모 단백질 샴푸 500ml+트리트먼트 250ml 세트",
+      "naver_web": "아메리카노, 지방을 연소해 ‘체중감량’에 도움"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1170533624",
+    "translated_kr": "자원도 에릭설 슈페리에르 리프트 모이스트 로션 촉촉한 타입 ba",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "10012970 리프트 모이스트 로션 촉촉한 타입 ba 170mL 스킨에이징케어 보습 모공"
+    },
+    "brand": "엘릭서",
+    "name": "10012970 리프트 모이스트 로션 촉촉한 타입 ba 170mL 스킨에이징케어 보습 모공",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": true,
+    "obsolete": null,
+    "sale": null,
+    "price": "56300",
+    "mall": "UA:JIN",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12912707430",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9045721/90457218422.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9045721/90457218422.1.jpg",
+        "mall": "UA:JIN",
+        "link": "https://smartstore.naver.com/main/products/12912707430"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9096741/90967415218.jpg",
+        "mall": "일상 탈출",
+        "link": "https://smartstore.naver.com/main/products/13422904882"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
