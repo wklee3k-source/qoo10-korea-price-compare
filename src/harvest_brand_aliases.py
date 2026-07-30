@@ -32,7 +32,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_review import check_brand  # noqa: E402
+from build_review import check_brand, _sim_token, _sim_bigram  # noqa: E402
 
 HANGUL_RE = re.compile(r"[가-힣]")
 PAREN_RE = re.compile(r"\s*[\(（][^)）]*[\)）]\s*")
@@ -65,8 +65,22 @@ def harvest(verified_path: str, discovery_path: str, brand_dict_path: str,
         kr_raw = (x.get("brand") or "").strip()
         if not jp or not kr_raw or jp in clean_dict:
             continue
-        # 사전 없이 '영문 포함'으로 통과한 건만 대상이다.
-        if check_brand(jp, kr_raw, clean_dict) != "match":
+        # 두 갈래를 수확한다.
+        #  ① 사전 없이 '영문 포함'으로 통과한 건 (COSRX -> '코스알엑스 (COSRX)')
+        #  ② 브랜드는 판단불가인데 제품명이 거의 일치하는 건
+        #     (ブランネイチャー '9배 고농축 어성초 토너패드' =
+        #      블랑네이처 '9배 고농축 어성초 토너패드')
+        #     이름이 이 정도로 맞으면 브랜드 대응도 맞다고 볼 수 있다.
+        #     실측: 이 조건에 2건 이상 반복까지 걸면 표본 14종 전부 정확했다
+        #     (로라메르시에·쌔뮤·더샘·논픽션·온더바디 등). 1건짜리만 받으면
+        #     판매처명이 섞여 정확도가 3분의 2로 떨어졌다.
+        status = check_brand(jp, kr_raw, clean_dict)
+        if status == "unknown":
+            name = x.get("name") or ""
+            tr = x.get("translated_kr") or q.get("translated_kr") or ""
+            if max(_sim_token(tr, name), _sim_bigram(tr, name)) < 0.7:
+                continue
+        elif status != "match":
             continue
         kr = PAREN_RE.sub(" ", kr_raw).strip()
         if kr:

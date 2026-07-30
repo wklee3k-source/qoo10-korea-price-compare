@@ -997,6 +997,12 @@ def t63_brand_alias_harvest():
     src = script.read_text(encoding="utf-8")
     review = (SRC / "build_review.py").read_text(encoding="utf-8")
 
+    # [v5.7.0] 두 번째 수확 경로: 브랜드 판단불가인데 제품명이 거의 일치하는 건.
+    # 이름이 0.7 이상 맞으면 브랜드 대응도 맞다고 볼 수 있다. 단 2건 이상
+    # 반복될 때만 — 1건짜리는 판매처명이 섞여 정확도가 3분의 2로 떨어졌다.
+    unknown_path = ('status == "unknown"' in src
+                    and "< 0.7" in src
+                    and "MIN_OCCURRENCES = 2" in src)
     len_guard = "MIN_ALNUM_LEN = 5" in src
     hangul_guard = "HANGUL_RE.search(kr)" in src
     vote_guard = "MIN_OCCURRENCES = 2" in src and "n < MIN_OCCURRENCES" in src
@@ -1007,10 +1013,10 @@ def t63_brand_alias_harvest():
     bidirectional = "kr_brand_lower in c.lower()" in review
 
     ok = (len_guard and hangul_guard and vote_guard and split_guard
-          and no_overwrite and bidirectional)
+          and no_overwrite and bidirectional and unknown_path)
     check("63 브랜드 대응 자동수확(안전조건)", ok,
           f"길이{len_guard} 한글{hangul_guard} 2건이상{vote_guard} 갈래{split_guard} "
-          f"덮어쓰기방지{no_overwrite} 양방향비교{bidirectional}")
+          f"덮어쓰기방지{no_overwrite} 양방향비교{bidirectional} 판단불가경로{unknown_path}")
 
 
 # --------------------- #64 브랜드 칸에 판매처명이 들어오는 경우
