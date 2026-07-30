@@ -2481,5 +2481,362 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1106584604",
+    "translated_kr": "[댕기머리] 허브 헤어케어 샴푸 1000ml / 트리트먼트 1000ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "샴푸",
+      "naver_web": "허브헤어케어"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203114526",
+    "translated_kr": "에센셜 물 마이크로피팅 미스트 55ml, 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에센셜 물 마이크로 피팅 미스트",
+      "musinsa": "에센셜 물 마이크로 피팅 미스트 120ml (앰플선 5ml + 물결크림 5ml 2개 증정)",
+      "naver": "정샘물 에센셜 물 마이크로 피팅 미스트 레드밤 기획 120ml+55ml 수분 보습",
+      "daum": "정샘물 에센셜 물 마이크로 피팅 미스트"
+    },
+    "brand": "정샘물뷰티 (JUNGSAEMMOOL)",
+    "name": "에센셜 물 마이크로 피팅 미스트",
+    "volume": "55ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "25000",
+    "mall": "레드밤",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13585184762",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9112969/91129695174.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9112969/91129695174.jpg",
+        "mall": "레드밤",
+        "link": "https://smartstore.naver.com/main/products/13585184762"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188174190",
+    "translated_kr": "TX 앰플 Rx 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TX 기미 앰플RX",
+      "naver": "[닥터멜락신] TX 기미 앰플RX 30ml",
+      "daum": "기미야 없어져라 정말 간절한 마음으로 구입했어요 전과후 사진찍고 꾸주히 사용후 좋으면 다시 찾아올께요",
+      "naver_web": "TX Ampoule Rx"
+    },
+    "brand": "닥터멜락신 (Dr.Melaxin)",
+    "name": "TX 기미 앰플RX",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "24900",
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12274684421",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8981919/89819195137.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981919/89819195137.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274684421"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8721662/87216623121.jpg",
+        "mall": "빛나365",
+        "link": "https://smartstore.naver.com/main/products/9672120851"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1206662108",
+    "translated_kr": "나르시소 로드리게스 포하 오드트왈렛 트래블스프레이 10ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "7무 화이트듀 익스트림 세럼",
+      "naver": "나르시소 로드리게즈 오드퍼퓸 10ml 트래블퍼퓸 니치향수 에센스",
+      "naver_web": "향수 나르시소 로드리게스 Nr 블루 느와르 익스트림 / EDT 스프레이"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "나르시소 로드리게즈 오드퍼퓸 10ml 트래블퍼퓸 니치향수 에센스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "9500",
+    "mall": "비아 퍼퓸",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11093013740",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8863752/88637524062.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8863752/88637524062.jpg",
+        "mall": "비아 퍼퓸",
+        "link": "https://smartstore.naver.com/main/products/11093013740"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8315906/83159065258.jpg",
+        "mall": "자퓸",
+        "link": "https://smartstore.naver.com/main/products/5614568743"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1202103644",
+    "translated_kr": "봉봉직 플라잉 오드파르팜 향수 미니향수 아토마이저 3ml 유니섹스 시트러스계 mar23",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "제주 향수 [No.7 바람]"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208332251",
+    "translated_kr": "【정품】 라이스 아쿠아 프레시 선크림 50ml SPF50+ PA++++ 선크림",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "_Beauty of Joseon_ Relief Sun Aqua-fresh Rice + B550ml _BOJ_ 쌀 아쿠아 프레쉬 선크림 50ml SPF50+ PA",
+      "daum": "HEAT AGING, 피부는 지금 열을 기억한다",
+      "naver_web": "맑은쌀선크림 아쿠아프레쉬: 쌀수+판테놀"
+    },
+    "brand": "조선미녀",
+    "name": "_Beauty of Joseon_ Relief Sun Aqua-fresh Rice + B550ml _BOJ_ 쌀 아쿠아 프레쉬 선크림 50ml SPF50+ PA",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "34360",
+    "mall": "공방수은당",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12894886997",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9043939/90439397983.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9043939/90439397983.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/12894886997"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1204359324",
+    "translated_kr": "【1+1 / SNS화제】 윤기피부 버블 에센스 토너 95ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "극강의 더위에서 발라야 할 단 하나의 제품",
+      "naver_web": "버블 에센스 토너",
+      "naver_rematch": "위드유스킨 호호바스토리 모이스춰 수딩 토너 에센스 스킨 버블거품 용기 포함"
+    },
+    "brand": null,
+    "name": "버블 에센스 토너",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "65000",
+    "mall": "위드유스킨withUskin",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7151196423",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8469569/84695696745.14.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8469569/84695696745.14.jpg",
+        "mall": "위드유스킨withUskin",
+        "link": "https://smartstore.naver.com/main/products/7151196423"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1120129564",
+    "translated_kr": "헤어롤 브러시 (빅, 58mm) 헤어스타일링",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "포뷰트 쉐도우 헤어브러쉬 펌 볼륨 웨이브 스타일링",
+      "daum": "도매의신",
+      "naver_web": "헤어롤 & 돈모브러쉬, 스타일링별로 다르게!"
+    },
+    "brand": "포뷰트",
+    "name": "포뷰트 쉐도우 헤어브러쉬 펌 볼륨 웨이브 스타일링",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "19900",
+    "mall": "포:뷰트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10003024365",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8754752/87547526638.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754752/87547526638.jpg",
+        "mall": "포:뷰트",
+        "link": "https://smartstore.naver.com/main/products/10003024365"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111483/91114838621.jpg",
+        "mall": "헤어디자인후",
+        "link": "https://smartstore.naver.com/main/products/13570328210"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116360/91163607711.jpg",
+        "mall": "해피니스잡화점",
+        "link": "https://smartstore.naver.com/main/products/13619097294"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9113627/91136274954.jpg",
+        "mall": "헤어디자인후",
+        "link": "https://smartstore.naver.com/main/products/13591764542"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097360/90973606405.jpg",
+        "mall": "온지니엘 추천샵",
+        "link": "https://smartstore.naver.com/main/products/13429096069"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212154060",
+    "translated_kr": "[1+1+1] 트라넥삼산 6% 크림 30ml × 3EA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트라넥삼산 6%크림",
+      "daum": "속편한 엉덩이 쌀빵",
+      "naver_web": "더마팩토리 트라넥삼산 6% 크림",
+      "naver_rematch": "더마팩토리 트라넥삼산 6%크림 30ml 화이트닝크림 기미 주근깨 피부보습 미백 잡티"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "트라넥삼산 6%크림",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "7900",
+    "mall": "대성케이",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10004441488",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8754894/87548943761.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8754894/87548943761.1.jpg",
+        "mall": "대성케이",
+        "link": "https://smartstore.naver.com/main/products/10004441488"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1199006617",
+    "translated_kr": "아젤라인산 16BB 카밍 세럼 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "메디큐브 아젤라인산 16BB 카밍세럼 유수분 밸런스 피지 모공케어 고밀도 azelaic 지성 피부 오일리 피부",
+      "naver_web": "메디큐브 아젤라인산 16BB 커밍 세럼 피지·모공 케어"
+    },
+    "brand": "메디큐브",
+    "name": "메디큐브 아젤라인산 16BB 카밍세럼 유수분 밸런스 피지 모공케어 고밀도 azelaic 지성 피부 오일리 피부",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": "40200",
+    "mall": "코야나래",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13640792868",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9118530/91185303577.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9118530/91185303577.jpg",
+        "mall": "코야나래",
+        "link": "https://smartstore.naver.com/main/products/13640792868"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9114380/91143808399.jpg",
+        "mall": "도쿄루아",
+        "link": "https://smartstore.naver.com/main/products/13599297987"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8945417/89454170062.jpg",
+        "mall": "공방수은당",
+        "link": "https://smartstore.naver.com/main/products/11909659453"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
