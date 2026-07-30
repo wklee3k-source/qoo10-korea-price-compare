@@ -741,7 +741,15 @@ def _drop_search_blackholes(pairs: list[dict], excluded: list[dict]) -> list[dic
         # 2건짜리가 남았다(LOWVIBE 핸드크림 / Deep;erence 핸드크림 ->
         # 둘 다 '포트레 핸드크림 누보'). 브랜드가 다르면 같은 상품일 수 없다.
         distinct_brands = len({(p.get("qoo10_brand") or "").strip() for p in group})
-        is_blackhole = len(group) >= BLACKHOLE_MIN or (len(group) >= 2 and distinct_brands >= 2)
+        # [v6.3.0] 같은 브랜드 2건도, 큐텐 상품명까지 같으면 중복 등록이다.
+        #  실측: 네이처리퍼블릭 '알로에 수딩젤 미스트 155ml×3'이 서로 다른
+        #  goods_no로 두 번 올라와 같은 한국 상품에 붙었다. 큐텐에 같은
+        #  상품을 여러 셀러가 올리는 건 정상이지만, 검수 화면에 같은 짝이
+        #  두 번 나오면 사람이 두 번 판단하게 된다.
+        distinct_qoo10 = len({_flat(p.get("qoo10_name") or "") for p in group})
+        is_blackhole = (len(group) >= BLACKHOLE_MIN
+                        or (len(group) >= 2 and distinct_brands >= 2)
+                        or (len(group) >= 2 and distinct_qoo10 == 1))
         if not url or not is_blackhole:
             keep_ids.update(id(p) for p in group)
             continue
