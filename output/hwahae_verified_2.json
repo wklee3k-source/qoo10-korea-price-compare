@@ -636,5 +636,347 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1085159224",
+    "translated_kr": "5번 화이트볼 글루타치온C 에센스 30ml, 1+1",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "5번 글루타치온C 흔적 앰플",
+      "daum": "미스트",
+      "naver_web": "백옥주사 대신 넘버즈인 5번글루타치온C 비타수액 에센셜 토너로 피부미백 관리",
+      "naver_rematch": "[흔적미백] 넘버즈인 5번 글루타치온C 흔적 앰플 30ml+30ml 듀오기획"
+    },
+    "brand": "넘버즈인 (numbuzin)",
+    "name": "5번 글루타치온C 흔적 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "29900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000189837",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6021735/60217354373.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6021735/60217354373.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000189837"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6061358/60613584037.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000184064"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8725430/87254303805.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/9709801535"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194502685",
+    "translated_kr": "[신제품/투명 케어] 스킨앤랩 글루타치온 토너 200ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글루타치온 앰플 토너",
+      "naver": "[패키지 훼손] 스킨앤랩 글루타치온 앰플 토너 200ml 1개",
+      "daum": "CHICOR",
+      "naver_web": "글루타치온 앰플 토너"
+    },
+    "brand": "스킨앤랩 (SKIN&LAB)",
+    "name": "글루타치온 앰플 토너",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "23000",
+    "mall": "가디MALL",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12639727301",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9018423/90184238207.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9018423/90184238207.jpg",
+        "mall": "가디MALL",
+        "link": "https://smartstore.naver.com/main/products/12639727301"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188183806",
+    "translated_kr": "라이스 70 글로우 밀키 토너 250ml 토너 쌀겨 세라마이드 윤기 피부 촉촉 윤기 배리어 고침투 인너드라이 스킨케어 저자극 건성 피부 복합 피부 한국화장품 도입액",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아누아 라이스 70 글로우 밀키 토너 유리 듀이 스킨 수분 공급 및 배리어 케어 워터 나이아신아마이드 세라마이드 모든 타입 무향 논코메도제닉 코리안 스킨케어 8 45 fl oz"
+    },
+    "brand": "아누아",
+    "name": "아누아 라이스 70 글로우 밀키 토너 유리 듀이 스킨 수분 공급 및 배리어 케어 워터 나이아신아마이드 세라마이드 모든 타입 무향 논코메도제닉 코리안 스킨케어 8 45 fl oz",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": true,
+    "obsolete": null,
+    "sale": null,
+    "price": "73170",
+    "mall": "다드림샵 둘",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13266756046",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9081126/90811266378.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9081126/90811266378.jpg",
+        "mall": "다드림샵 둘",
+        "link": "https://smartstore.naver.com/main/products/13266756046"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1194501160",
+    "translated_kr": "하이드로 세라놀 리얼 딥 뷰티 마스크, 4장, 1.19온스(34g) 각",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "히어로 마이 퍼스트 세럼 a.k.a. 만능기초",
+      "daum": "⑰ K",
+      "naver_web": "리얼 마스크",
+      "naver_rematch": "아임리얼 리뉴얼 컬러 새부리형 마스크 비말 언택트플러스 중형 20매"
+    },
+    "brand": "디마프 (De:maf)",
+    "name": "리얼 마스크",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "7700",
+    "mall": "초롱스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/5490773177",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8303526/83035268237.8.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8303526/83035268237.8.jpg",
+        "mall": "초롱스토어",
+        "link": "https://smartstore.naver.com/main/products/5490773177"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8278308/82783085049.2.jpg",
+        "mall": "케이리얼 마스크",
+        "link": "https://smartstore.naver.com/main/products/5238562638"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1212950756",
+    "translated_kr": "시카 페어 인센티브 수딩 리페어 크림, 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 인텐시브 수딩 리페어 크림",
+      "daum": "260718 숨버라 숨민수",
+      "naver_web": "시카페어™ 인텐시브 수딩 리페어 크림"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 인텐시브 수딩 리페어 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 50000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1161371182",
+    "translated_kr": "루트 볼륨 픽서, 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "루트 볼륨 픽서",
+      "naver": "제니하우스 루트 볼륨 픽서 200ml, 1개",
+      "daum": "제니하우스코스메틱 루트 볼륨 픽서 헤어스프레이",
+      "naver_web": "제니하우스 루트볼륨 헤어픽서 기획/단품"
+    },
+    "brand": "제니하우스 (jennyhouse)",
+    "name": "루트 볼륨 픽서",
+    "volume": "200ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "14900",
+    "mall": "제니하우스 공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/9529765270",
+    "image_url": "https://shopping-phinf.pstatic.net/main_8707426/87074267540.7.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707426/87074267540.7.jpg",
+        "mall": "제니하우스 공식몰",
+        "link": "https://smartstore.naver.com/main/products/9529765270"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8707426/87074267541.7.jpg",
+        "mall": "제니하우스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9529765271"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1158865561",
+    "translated_kr": "【눈썹 탈색】로잉스 무드 핏 브로우 크림 브리치 (3회분) 1.제+2제 세트· 눈썹 컬러 세련됨 눈썹 브리치 컬러링",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "(해외) 르 몬스터 매트 립 크레용 [인플루언서]",
+      "daum": "네이버 인플루언서",
+      "naver_rematch": "HAUS LABS by 레이디 가가 르 몬스터 립 크레용 1.4g"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204664117",
+    "translated_kr": "【1+1】【베이비 선 케어】논케미컬 선스틱 / 쿨링 선쿠션 / 마일드 선크림 아기용 자외선 차단제 민감 피부 UV 케어 한국 베이비",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "daum": "5월의 제안_UV P ROOF",
+      "naver_web": "K",
+      "naver_rematch": "콩군하우스 약산성 민감두피 손상모 고영양 컨디셔너 600 무실리콘린스 미용실린스"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": "12060",
+    "mall": "콩군하우스",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13511811160",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9105632/91056321512.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105632/91056321512.jpg",
+        "mall": "콩군하우스",
+        "link": "https://smartstore.naver.com/main/products/13511811160"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8989981/89899810863.jpg",
+        "mall": "1004화장품",
+        "link": "https://smartstore.naver.com/main/products/12355300146"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9119740/91197400856.jpg",
+        "mall": "고퀄추천스토어",
+        "link": "https://smartstore.naver.com/main/products/13652890075"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1195612890",
+    "translated_kr": "하이 에센셜 리주 컨트롤 멜팅 마스크 220g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "하이-에센셜 리쥬 컨트롤 멜팅 마스크",
+      "naver": "더마벨 하이-에센셜 리쥬 컨트롤 멜팅 마스크 [70g]",
+      "daum": "2월의 뷰티 신상 파헤치기 #잇츠온세일",
+      "naver_web": "더마벨 하이"
+    },
+    "brand": "더마벨",
+    "name": "더마벨 하이-에센셜 리쥬 컨트롤 멜팅 마스크 [70g]",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "35000",
+    "mall": "더마벨 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/13623701721",
+    "image_url": "https://shopping-phinf.pstatic.net/main_9116821/91168212184.1.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116821/91168212184.1.jpg",
+        "mall": "더마벨 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/13623701721"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117191/91171912466.jpg",
+        "mall": "더마벨 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/13627401857"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1188174087",
+    "translated_kr": "톤&스팟 컬렉터 앰플 30ml 1개 톤 케어 집중 스팟 케어·시미·주근깨 대책 한국 발 하이 브라이트 포뮬러",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
