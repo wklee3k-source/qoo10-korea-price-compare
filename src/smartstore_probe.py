@@ -107,13 +107,23 @@ def main() -> int:
     path = Path(sys.argv[1])
     limit = int(sys.argv[2]) if len(sys.argv) > 2 else 10
     rows = json.loads(path.read_text(encoding="utf-8"))
-    urls = []
+    # [v7.8.0] 스마트스토어만 보던 것을 도메인별로 넓혔다. 실측 결과
+    #  스마트스토어는 429(IP 대역 차단)라 방법이 없는데, 올리브영 94건·
+    #  지그재그 46건·메디큐브 21건도 0%였다. 이쪽은 원인이 다를 수 있어
+    #  같이 잰다. 브랜드스토어(brand.naver.com)는 데이터에 링크가 없어
+    #  네이버 도메인 전체가 막히는지 확인용으로 직접 넣는다.
+    targets = ["smartstore.naver.com", "shopping.naver.com", "www.oliveyoung.co.kr",
+               "zigzag.kr", "themedicube.co.kr"]
+    per_domain = max(1, limit // len(targets))
+    urls, seen = [], {d: 0 for d in targets}
     for r in rows:
         u = r.get("product_url") or ""
-        if "smartstore.naver.com" in u and u not in urls:
-            urls.append(u)
-        if len(urls) >= limit:
-            break
+        for d in targets:
+            if d in u and seen[d] < per_domain and u not in urls:
+                urls.append(u)
+                seen[d] += 1
+    urls += ["https://brand.naver.com/anua/products/8175823456",
+             "https://brand.naver.com/medicube"]
     if not urls:
         print("[중단] 스마트스토어 링크가 없다")
         return 0
@@ -131,7 +141,7 @@ def main() -> int:
         for key, s in (("데스크톱", s1), ("모바일", s2), ("브라우저", s3)):
             if s == "ok":
                 stat[key] += 1
-        print(f"{i:2d}. {url.rsplit('/', 1)[-1]}")
+        print(f"{i:2d}. {re.sub(r'^https?://', '', url).split('/')[0]}  {url[-40:]}")
         print(f"    데스크톱 {s1:12s} {t1[:44]}")
         print(f"    모바일   {s2:12s} {t2[:44]}")
         print(f"    브라우저 {s3:12s} {t3[:44]}")
