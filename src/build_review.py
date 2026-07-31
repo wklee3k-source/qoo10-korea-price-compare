@@ -380,6 +380,36 @@ FORM_PARENTS: dict[str, set] = {
 }
 
 
+# [v7.2.0] 색상·호수. 같은 제품의 다른 색은 다른 상품이다.
+#  실측: 달바 '워터풀 톤업 선크림 그린'과 '퍼플'은 브랜드·제형·용량이
+#  모두 같아 걸러낼 요소가 없었다. 실제로는 핑크/퍼플/그린 세 종류이고
+#  피부톤에 따라 고르는 별개 상품이다(공식 상세페이지 확인).
+COLOR_WORDS = ["핑크", "퍼플", "그린", "블루", "레드", "옐로우", "오렌지",
+               "화이트", "블랙", "베이지", "브라운", "라벤더", "민트", "피치",
+               "로즈", "아이보리", "실버", "골드", "바이올렛", "코랄", "누드",
+               "그레이", "네이비"]
+SHADE_RE = re.compile(r"(\d{1,2})\s*호")
+
+
+def extract_colors(text: str) -> set:
+    flat = _flat(text)
+    found = {c for c in COLOR_WORDS if c in flat}
+    found |= {f"{m}호" for m in SHADE_RE.findall(text or "")}
+    return found
+
+
+def color_status(qoo10_name: str, kr_name: str) -> str:
+    """색상·호수 일치 여부. 한쪽이라도 없으면 'unknown'(판단 보류).
+
+    한쪽에만 색이 적힌 경우가 흔하다(큐텐은 '그린'을 쓰는데 한국은
+    옵션으로 빼서 상품명에 없음). 그건 어긋난 게 아니라 알 수 없는 것이다.
+    """
+    a, b = extract_colors(qoo10_name), extract_colors(kr_name)
+    if not a or not b:
+        return "unknown"
+    return "match" if (a & b) else "mismatch"
+
+
 def form_status(qoo10_name: str, kr_name: str) -> str:
     """제형 일치 여부. 한쪽이라도 못 읽으면 'unknown'(판단 보류).
 
@@ -429,7 +459,7 @@ def _covers(broad: set, specific: set) -> bool:
 def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
                     single_source: bool = False, form: str = "match",
-                    name_exact: bool = True) -> str:
+                    name_exact: bool = True, color: str = "unknown") -> str:
     """등급을 '무엇이 어긋났는가'로 나눈다.
 
     [v7.0.0 개편] 비교 요소를 브랜드 -> 제형 -> 이름 -> 용량 순으로 본다.
@@ -447,6 +477,9 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     단독통과가 C인지 D인지 정해지지 않는다.
     """
     if brand_status != "match" or form != "match":
+        return "D"
+    # 색이 서로 다르면 같은 제품의 다른 색이다 — 별개 상품으로 본다.
+    if color == "mismatch":
         return "D"
     if not name_exact:
         return "C"
@@ -867,6 +900,7 @@ def build_pairs():
                 volume_mismatch(qoo10_vol, kr_vol),
                 bool(x.get("single_source_naver"))),
             "form_status": form_status(translated_kr, x.get("name") or ""),
+            "color_status": color_status(translated_kr, x.get("name") or ""),
             "tier": confidence_tier(
                 match_confidence(translated_kr, x.get("name") or "", brand_status,
                                  volume_mismatch(qoo10_vol, kr_vol),
@@ -878,7 +912,8 @@ def build_pairs():
                 bool(x.get("single_source_naver")),
                 form_status(translated_kr, x.get("name") or ""),
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.8
-                     or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85)),
+                     or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85),
+                color_status(translated_kr, x.get("name") or "")),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "

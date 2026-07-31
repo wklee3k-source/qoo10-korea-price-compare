@@ -1177,6 +1177,30 @@ def t67_nail_perfume_excluded():
           f"발굴{disc_ok} 수확{harvest_ok} 색조유지{color_ok} 검수페이지{review_ok}")
 
 
+# --------------------- #68 색상·호수 비교
+#  같은 제품의 다른 색은 다른 상품이다. 실측: 달바 '워터풀 톤업 선크림
+#  그린'과 '퍼플'은 브랜드·제형·용량이 모두 같아 걸러낼 요소가 없었다.
+#  공식 상세페이지를 보면 핑크/퍼플/그린 세 종류이고 피부톤에 따라 고르는
+#  별개 상품이다. 색을 잘못 보내면 반품 사유가 된다.
+#
+#  한쪽에만 색이 적힌 경우는 '어긋남'이 아니라 '알 수 없음'이다 —
+#  한국 쇼핑몰은 색을 옵션으로 빼서 상품명에 안 쓰는 경우가 흔하다.
+#  여기서 불일치로 처리하면 정상 매칭이 대량으로 걸린다.
+def t68_color_shade_check():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    has_words = "COLOR_WORDS" in src and "SHADE_RE" in src
+    has_fn = "def color_status(" in src
+    fn = src.split("def color_status(")[1].split("\ndef ")[0] if has_fn else ""
+    one_sided_unknown = 'if not a or not b:' in fn and 'return "unknown"' in fn
+    in_tier = 'if color == "mismatch":' in src
+    attached = 'color_status(translated_kr, x.get("name") or "")' in src
+
+    ok = has_words and has_fn and one_sided_unknown and in_tier and attached
+    check("68 색상·호수 비교", ok,
+          f"색상어{has_words} 함수{has_fn} 한쪽만은보류{one_sided_unknown} "
+          f"등급반영{in_tier} 부착{attached}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
