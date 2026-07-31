@@ -1,8 +1,9 @@
 """
 build_review_batches.py
 
-성공(구매링크 확보)한 항목들을 100개씩 끊어서, 각 배치를 review_01.html,
-review_02.html, ... 형태의 별도 HTML파일로 만든다. 기존 comparison/review.html
+성공(구매링크 확보)한 항목들을 등급별로 나눈 뒤 100개씩 끊어서,
+각 배치를 A_01.html, A_02.html, B_01.html, ... 형태의 별도 HTML파일로
+만든다(v7.5.0 이전에는 review_01.html 식이라 열어보기 전엔 등급을 알 수 없었다). 기존 comparison/review.html
 템플릿(카드형 UI + 20개씩 페이지네이션 JS)을 그대로 재사용한다.
 
 사용법:
@@ -231,8 +232,20 @@ def build_batches():
 
     n_batches = len(batches)
     batch_meta = []  # 허브페이지용: 각 배치의 id/건수
+    # [v7.5.0] 파일명을 등급별 번호로 짓는다(A_01, A_02, B_01 ...).
+    #  예전엔 review_01~15라 어느 페이지가 어느 등급인지 열어봐야 알았다.
+    #  등급별로 페이지를 나눠 놓았으니 이름도 그렇게 붙이는 게 맞다.
+    # 옛 파일명(review_NN.html)이 남아 있으면 허브에 없는 유령 페이지가 된다.
+    # ⚠️ *.html 을 통째로 지우면 허브(index.html)까지 날아간다. 배치 파일만
+    # 골라서 지운다.
+    for pattern in ("review_*.html", "A_*.html", "B_*.html", "C_*.html", "D_*.html", "X_*.html"):
+        for stale in BATCH_DIR.glob(pattern):
+            stale.unlink()
+    tier_seq: dict = {}
     for i, batch in enumerate(batches):
-        batch_id = f"review_{i+1:02d}"
+        tier_of = (batch[0].get("tier") if batch else None) or "X"
+        tier_seq[tier_of] = tier_seq.get(tier_of, 0) + 1
+        batch_id = f"{tier_of}_{tier_seq[tier_of]:02d}"
         cards_str = render_cards(batch)
         new_html = re.sub(
             r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
