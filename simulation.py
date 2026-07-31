@@ -1244,6 +1244,8 @@ def t69_form_shown_in_review():
 #  가져오는 쪽과 보여주는 쪽 양쪽에서 걸러야 한다 — 이미 저장된 값은
 #  재검증 전까지 남아 있기 때문이다.
 def t70_page_title_quality():
+    """[v7.9.0] 수집 자체를 중단했다. 남은 것은 '이미 저장된 값이 화면에
+    새어나오지 않는가'와 '다시 켤 때 참고할 근거가 남아 있는가'다."""
     fetch = (SRC / "fetch_page_title.py").read_text(encoding="utf-8")
     review = (SRC / "build_review.py").read_text(encoding="utf-8")
 
@@ -1258,10 +1260,18 @@ def t70_page_title_quality():
     no_guess_fallback = "m.smartstore.naver.com" not in fetch
     has_probe = (SRC / "smartstore_probe.py").exists()
 
-    ok = fetch_guard and display_guard and no_guess_fallback and has_probe
-    check("70 판매페이지 제목 품질", ok,
-          f"수집단계{fetch_guard} 표시단계{display_guard} 추측우회제거{no_guess_fallback} "
-          f"측정스크립트{has_probe}")
+    # 수집 중단: 매 건 실패할 요청을 보내지 않아야 한다.
+    verify = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    disabled = 'if False and entry.get("product_url"):' in verify
+    # 왜 껐는지가 코드에 남아야 한다 — 나중에 다시 켜려 할 때 같은 시행착오를
+    # 반복하지 않게.
+    documented = "HTTP 490" in verify and "로그인한 브라우저" in verify
+
+    ok = (fetch_guard and display_guard and no_guess_fallback and has_probe
+          and disabled and documented)
+    check("70 판매페이지 제목 수집 중단", ok,
+          f"수집가드{fetch_guard} 표시가드{display_guard} 추측우회제거{no_guess_fallback} "
+          f"측정스크립트{has_probe} 수집중단{disabled} 근거기록{documented}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)

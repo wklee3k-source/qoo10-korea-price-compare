@@ -889,7 +889,23 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 사이트가 막혀있거나(차단/JS필요) 응답이 느려도 전체 배치가
         # 멈추지 않고, 실패하면 조용히 기존 방식(네이버 title)으로
         # 돌아간다("가능하면 정확하게, 안 되면 원래대로").
-        if entry.get("product_url"):
+        # [v7.9.0 중단] 판매페이지에서 상품명을 직접 가져오는 기능을 껐다.
+        #  확보율이 10.1%(2,572건 중 260건)였고 그중 93건은 오류 페이지
+        #  제목이었다. 실제 유효분은 6% 남짓이다.
+        #
+        #  못 가져오는 대부분이 스마트스토어(링크의 85%)인데, 네 가지를
+        #  전부 시험해도 뚫리지 않았다.
+        #      GitHub Actions           HTTP 429  (데이터센터 IP 대역 차단)
+        #      국내 가정용 PC + 스크립트  HTTP 490  (자동화 접근 거부)
+        #      국내 가정용 PC + 브라우저  로그인 페이지로 이동
+        #      로그인한 브라우저          HTTP 429
+        #  로그인 여부와 무관하게 막히므로 IP가 아니라 접근 패턴을 보는
+        #  것으로 판단했다. 더 밀어붙이면 사람 흉내 수준이 되는데
+        #  2,400건에 현실적이지 않고 이용약관에도 걸린다.
+        #
+        #  매 건 실패할 요청을 보내던 비용(검증 4,400건 × 1회)만 남으므로
+        #  중단한다. 한국 상품명은 네이버 검색 API의 title을 쓴다.
+        if False and entry.get("product_url"):
             try:
                 page_title_proc = subprocess.run(
                     [sys.executable, "fetch_page_title.py", entry["product_url"]],
