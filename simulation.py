@@ -840,6 +840,12 @@ def t59_confidence_tiers():
     badged = 'tier-{_tier}' in src and 'tier-{_tier}' in batches
     styled = ".badge.tier-A" in tmpl and ".badge.tier-C" in tmpl
     hub = 'tier_label' in batches
+    # [v7.5.0] 파일명이 등급을 드러내야 한다(A_01, B_01 ...). 열어보기 전에
+    # 어느 등급인지 알 수 있어야 검수 순서를 잡는다.
+    tier_naming = 'batch_id = f"{tier_of}_{tier_seq[tier_of]:02d}"' in batches
+    # 옛 이름의 유령 페이지를 지우되 허브(index.html)는 건드리면 안 된다.
+    cleans_stale_pages = ('"review_*.html"' in batches
+                          and 'BATCH_DIR.glob("*.html")' not in batches)
     # [v5.9.0] 한 페이지에 등급이 섞이면 그 페이지에서 검수 방식을 바꿔야
     # 한다. 등급별로 먼저 나눈 뒤 그 안에서 자른다.
     split_by_tier = 'for tier in ("A", "B", "C", "D"):' in batches and "batches.append(group[i:i + BATCH_SIZE])" in batches
@@ -849,11 +855,13 @@ def t59_confidence_tiers():
     not_filtered = 'tier' not in batches.split("def sort_by_brand_confidence")[1].split("\ndef ")[0]
 
     ok = (has_map and has_fn and attached and badged and styled and hub and not_filtered
-          and brand_first and b_only_notation and split_by_tier and keeps_leftovers)
+          and brand_first and b_only_notation and split_by_tier and keeps_leftovers
+          and tier_naming and cleans_stale_pages)
     check("59 검수 신뢰등급 A/B/C 표기", ok,
           f"등급표{has_map} 함수{has_fn} 부착{attached} 배지{badged} 스타일{styled} "
           f"허브{hub} 제외에미사용{not_filtered} 브랜드우선{brand_first} B는표기차이{b_only_notation} "
-          f"등급별분리{split_by_tier} 누락방지{keeps_leftovers}")
+          f"등급별분리{split_by_tier} 누락방지{keeps_leftovers} 등급파일명{tier_naming} "
+          f"옛페이지정리{cleans_stale_pages}")
 
 
 # --------------------- #60 수동 제외 목록
