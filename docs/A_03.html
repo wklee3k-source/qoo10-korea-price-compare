@@ -5465,7 +5465,7 @@ function collectResults() {
 
 // [중간저장] localStorage에 자동저장 — 파일(경로)별로 구분된 키를 쓰므로
 // 새로고침/브라우저를 껐다 켜도 마지막 작업상태가 그대로 복원된다.
-var BATCH_ID = "review_03";  // build_review_batches.py가 실제 배치ID로 치환한다(원본 review.html을 직접 열면 이 문자열 그대로 남아 pathname을 쓴다)
+var BATCH_ID = "A_03";  // build_review_batches.py가 실제 배치ID로 치환한다(원본 review.html을 직접 열면 이 문자열 그대로 남아 pathname을 쓴다)
 var AUTOSAVE_KEY = 'qoo10_review_autosave_' + (BATCH_ID.indexOf("BATCH_ID") === -1 ? BATCH_ID : location.pathname);
 
 function autoSaveToLocalStorage() {
