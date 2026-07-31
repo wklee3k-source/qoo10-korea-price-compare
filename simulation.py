@@ -1206,6 +1206,28 @@ def t68_color_shade_check():
           f"등급반영{in_tier} 부착{attached}")
 
 
+# --------------------- #69 검수 화면에 제형 노출
+#  등급(A~D)만 보여주면 무엇이 어긋났는지 알 수 없어, 검수할 때마다 상품명
+#  두 줄을 다시 읽어야 한다. 제형은 오매칭의 가장 흔한 원인이므로 한 줄로
+#  뽑아 보여준다.
+#      클렌징폼 / 클렌징오일  [다름]
+#      세럼 / 세럼           [일치]
+#      ? / 크림              [확인불가]
+def t69_form_shown_in_review():
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    in_pair = '"qoo10_forms": sorted(extract_forms(' in review and '"kr_forms":' in review
+    rendered = all("form_row" in t and '<td class="label">제형</td>' in t
+                   for t in (review, batches))
+    # 상태를 색으로도 구분해야 한눈에 들어온다.
+    colored = '"mismatch": "#c0392b"' in batches
+
+    ok = in_pair and rendered and colored
+    check("69 검수 화면에 제형 노출", ok,
+          f"필드{in_pair} 표시{rendered} 색구분{colored}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
