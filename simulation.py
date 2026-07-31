@@ -1236,6 +1236,30 @@ def t69_form_shown_in_review():
           f"필드{in_pair} 표시{rendered} 색구분{colored}")
 
 
+# --------------------- #70 판매페이지 제목 품질
+#  검수페이지는 '판매페이지에서 직접 가져온 상품명'을 최우선으로 쓴다.
+#  그런데 확보한 260건 중 93건이 상품명이 아니었다.
+#      '에러 페이지' 92건 · '지그재그 스토어' 46건 · 'NAVER 로그인'
+#  길이 5자 이상이면 통과시키는 조건뿐이라 그대로 화면에 상품명으로 떴다.
+#  가져오는 쪽과 보여주는 쪽 양쪽에서 걸러야 한다 — 이미 저장된 값은
+#  재검증 전까지 남아 있기 때문이다.
+def t70_page_title_quality():
+    fetch = (SRC / "fetch_page_title.py").read_text(encoding="utf-8")
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    fetch_guard = ("def looks_like_junk_title(" in fetch
+                   and "JUNK_TITLE_PATTERNS" in fetch
+                   and "STORE_ONLY_RE" in fetch)
+    display_guard = ("def looks_like_junk_page_title(" in review
+                     and "looks_like_junk_page_title(_real)" in review)
+    # 스마트스토어는 데스크톱 페이지가 JS로 그려져 제목이 안 잡힌다.
+    mobile_fallback = "m.smartstore.naver.com" in fetch
+
+    ok = fetch_guard and display_guard and mobile_fallback
+    check("70 판매페이지 제목 품질", ok,
+          f"수집단계{fetch_guard} 표시단계{display_guard} 모바일우회{mobile_fallback}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

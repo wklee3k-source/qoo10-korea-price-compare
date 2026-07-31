@@ -170,6 +170,22 @@ EXCLUDED_CATEGORIES = {"120000013", "120000014", "120000016",
                        "120000021", "120000022"}
 
 
+# [v7.6.0] 판매페이지에서 가져온 제목이 상품명이 아닌 경우.
+#  fetch_page_title.py가 걸러내지만, 이미 저장된 데이터에는 남아 있다.
+JUNK_PAGE_TITLE_RE = re.compile(
+    r"(에러|오류|error|not found|찾을 수 없|존재하지 않|삭제된|로그인|login|"
+    r"접근|권한|차단|점검|준비\s*중|페이지를|잘못된|만료|쇼핑몰 제목|네이버쇼핑)", re.I)
+STORE_ONLY_TITLE_RE = re.compile(
+    r"^[^\s]{0,20}\s*(스토어|쇼핑몰|공식몰|store|mall|샵|shop)\s*$", re.I)
+
+
+def looks_like_junk_page_title(title: str) -> bool:
+    text = (title or "").strip()
+    if len(text) < 5:
+        return True
+    return bool(JUNK_PAGE_TITLE_RE.search(text) or STORE_ONLY_TITLE_RE.match(text))
+
+
 def _flat(text: str) -> str:
     return re.sub(r"[^가-힣A-Za-z0-9]", "", text or "").lower()
 
@@ -743,7 +759,12 @@ def build_pairs():
         # 2) 네이버 API의 title(위 스크래핑이 실패한 사이트의 경우 폴백)
         # 3) 승자(화해/Exa 등)의 name
         naver_original_name = (x.get("candidates_summary") or {}).get("naver")
-        kr_name_display = x.get("real_page_title") or naver_original_name or x.get("name") or ""
+        # [v7.6.0] 이미 저장된 값에도 '에러 페이지'·'○○ 스토어'가 섞여 있다.
+        #  재검증 전까지 그대로 화면에 뜨므로 표시 단계에서도 거른다.
+        _real = x.get("real_page_title") or ""
+        if _real and looks_like_junk_page_title(_real):
+            _real = ""
+        kr_name_display = _real or naver_original_name or x.get("name") or ""
 
         qoo10_vol = extract_volume_ml(q["title"])
         kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
