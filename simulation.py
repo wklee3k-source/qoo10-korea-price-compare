@@ -1252,12 +1252,16 @@ def t70_page_title_quality():
                    and "STORE_ONLY_RE" in fetch)
     display_guard = ("def looks_like_junk_page_title(" in review
                      and "looks_like_junk_page_title(_real)" in review)
-    # 스마트스토어는 데스크톱 페이지가 JS로 그려져 제목이 안 잡힌다.
-    mobile_fallback = "m.smartstore.naver.com" in fetch
+    # [v7.7.0] 모바일 주소 우회는 뺐다. "데스크톱이 JS라 모바일이면 된다"는
+    # 추측이었고 실측에서 모바일도 똑같이 막혔다. 남겨두면 실패할 요청을
+    # 한 번 더 보내 검증만 느려진다. 어떤 방법이 되는지는 측정으로 정한다.
+    no_guess_fallback = "m.smartstore.naver.com" not in fetch
+    has_probe = (SRC / "smartstore_probe.py").exists()
 
-    ok = fetch_guard and display_guard and mobile_fallback
+    ok = fetch_guard and display_guard and no_guess_fallback and has_probe
     check("70 판매페이지 제목 품질", ok,
-          f"수집단계{fetch_guard} 표시단계{display_guard} 모바일우회{mobile_fallback}")
+          f"수집단계{fetch_guard} 표시단계{display_guard} 추측우회제거{no_guess_fallback} "
+          f"측정스크립트{has_probe}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)

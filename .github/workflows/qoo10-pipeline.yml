@@ -46,6 +46,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_smartstore_probe:
+        description: "실험: 스마트스토어 상품명을 어떤 방법으로 가져올 수 있는지 측정(읽기 전용)"
+        required: false
+        type: boolean
+        default: false
       run_naver_probe:
         description: "실험: 승자 이름으로 네이버 재검색했을 때 구매링크 회수율 측정(읽기 전용)"
         required: false
@@ -1641,3 +1646,38 @@ jobs:
           REQUEST_DELAY: "1"
         run: |
           python naver_rematch_probe.py ../output/probe_input.json 100
+
+  smartstore_probe:
+    # [측정 전용] 아무것도 바꾸지 않는다. 스마트스토어 상품명을
+    # ① 데스크톱 urllib ② 모바일 urllib ③ 브라우저 중 무엇으로 가져올 수
+    # 있는지만 잰다. 로컬에서는 셋 다 403이었는데 'Blocked by egress policy'
+    # 였다 — 환경 문제였고 스마트스토어 자체 차단인지는 확인되지 않았다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_smartstore_probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Fetch verified snapshot (read-only)
+        run: |
+          mkdir -p output
+          git fetch --depth 1 origin hwahae-live
+          git show FETCH_HEAD:output/hwahae_verified_39.json > output/probe_input.json 2>/dev/null \
+            || git show FETCH_HEAD:output/archive/hwahae_verified_v59_before.json > output/probe_input.json
+          python3 -c "import json;print('[입력]', len(json.load(open('output/probe_input.json'))), '건')"
+
+      - name: Probe smartstore access
+        working-directory: src
+        run: python smartstore_probe.py ../output/probe_input.json 10

@@ -48,27 +48,13 @@ def fetch_title(url: str, timeout: int = 10) -> str:
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
-    # [v7.6.0] 스마트스토어는 데스크톱 페이지가 JS로 그려져 제목이 안 잡힌다.
-    #  모바일 주소(m.smartstore)는 서버가 완성된 HTML을 주는 경우가 많아
-    #  먼저 시도한다. 실패하면 원래 주소로 돌아간다.
-    candidates = [url]
-    if "smartstore.naver.com" in url and "m.smartstore" not in url:
-        candidates.insert(0, url.replace("smartstore.naver.com", "m.smartstore.naver.com"))
-    if "brand.naver.com" in url and "m.brand" not in url:
-        candidates.insert(0, url.replace("brand.naver.com", "m.brand.naver.com"))
-
-    html = ""
-    for candidate in candidates:
-        try:
-            req = urllib.request.Request(candidate, headers=headers)
-            with urllib.request.urlopen(req, timeout=timeout) as res:
-                html = res.read(300_000).decode("utf-8", errors="ignore")
-            if html:
-                break
-        except Exception:  # noqa: BLE001
-            continue
-    if not html:
-        return ""
+    # [v7.7.0] 모바일 주소 우회를 뺐다. "스마트스토어는 데스크톱이 JS라
+    #  모바일이면 된다"는 근거 없는 추측이었고, 실측에서 모바일도 똑같이
+    #  막혔다. 남겨두면 실패할 요청을 한 번 더 보내 검증만 느려진다.
+    #  실제로 어떤 방법이 되는지는 smartstore_probe.py로 측정한다.
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=timeout) as res:
+        html = res.read(300_000).decode("utf-8", errors="ignore")
 
     # 1순위: og:title (실제 상품명이 정확히 들어있는 경우가 많음, 사이트명 등 잡음 없음)
     m = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']', html, re.I)
