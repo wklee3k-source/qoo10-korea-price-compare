@@ -1095,12 +1095,17 @@ def t65_translation_term_fixes():
     explains_purpose = "네이버 쇼핑에서 같은 상품을" in req
     # 같은 브랜드 안에서 라인·번호·색상·제형만 다른 오매칭이 가장 흔했다.
     warns_variants = "라인명·번호·색상·제형을 절대" in req
+    # [v7.3.0] 제형이 틀리면 다른 상품이 된다. 일본어->한국 표기 대응표를
+    # 지시문 맨 앞에 둬서, 번역이 한국 쇼핑몰 표기를 그대로 쓰게 한다.
+    form_table = ("가장 중요: 제형" in req
+                  and "クレンジングオイル | 클렌징오일" in req
+                  and "洗顔料 / 洗顔フォーム | 클렌징폼" in req)
 
     ok = (has_terms and has_spacing and safe and in_request
-          and explains_purpose and warns_variants)
+          and explains_purpose and warns_variants and form_table)
     check("65 번역 용어 한국표기", ok,
           f"용어표{has_terms} 띄어쓰기{has_spacing} 한국어보호{safe} 요청서반영{in_request} "
-          f"용도설명{explains_purpose} 변형경고{warns_variants}")
+          f"용도설명{explains_purpose} 변형경고{warns_variants} 제형대응표{form_table}")
 
 
 # --------------------- #66 제형 일치를 A등급 조건으로
