@@ -901,6 +901,10 @@ def build_pairs():
                 bool(x.get("single_source_naver"))),
             "form_status": form_status(translated_kr, x.get("name") or ""),
             "color_status": color_status(translated_kr, x.get("name") or ""),
+            # [v7.4.0] 검수 화면에 제형을 직접 보여준다. 등급만으로는 무엇이
+            # 어긋났는지 알 수 없어, 사람이 다시 상품명을 읽어야 했다.
+            "qoo10_forms": sorted(extract_forms(translated_kr)),
+            "kr_forms": sorted(extract_forms(x.get("name") or "")),
             "tier": confidence_tier(
                 match_confidence(translated_kr, x.get("name") or "", brand_status,
                                  volume_mismatch(qoo10_vol, kr_vol),
@@ -1050,6 +1054,18 @@ def build_html(pairs: list[dict]):
             brand_badge += '<span class="badge mismatch">⚠ 브랜드가 다릅니다 — 오매칭 의심</span>'
         # 브랜드 등급과는 별개 축이므로 if/elif 사슬에 끼우지 않는다
         # (끼우면 브랜드 불일치 경고가 가려진다).
+        # [v7.4.0] 제형을 한 줄로 보여준다. 등급만 보고는 무엇이 어긋났는지
+        # 알 수 없어 매번 상품명을 다시 읽어야 했다.
+        _qf = " · ".join(p.get("qoo10_forms") or []) or "?"
+        _kf = " · ".join(p.get("kr_forms") or []) or "?"
+        _fs = p.get("form_status") or "unknown"
+        _fcolor = {"match": "#2a7d46", "mismatch": "#c0392b"}.get(_fs, "#a67a1f")
+        _fmark = {"match": "일치", "mismatch": "다름"}.get(_fs, "확인불가")
+        form_row = (f'<strong style="color:{_fcolor};">{esc(_qf)}</strong>'
+                    f' <span style="color:#bbb;">/</span> '
+                    f'<strong style="color:{_fcolor};">{esc(_kf)}</strong>'
+                    f' <span class="badge tier-{"A" if _fs == "match" else "D" if _fs == "mismatch" else "B"}">'
+                    f'{_fmark}</span>')
         _tier = p.get("tier") or "B"
         _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
         brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
@@ -1115,6 +1131,10 @@ def build_html(pairs: list[dict]):
     <tr>
       <td class="label">브랜드</td>
       <td>{esc(p.get('qoo10_brand') or '-')} <span style="color:#bbb;">/</span> <strong>{esc(p.get('kr_brand') or '-')}</strong></td>
+    </tr>
+    <tr>
+      <td class="label">제형</td>
+      <td>{form_row}</td>
     </tr>
     <tr>
       <td class="label">상품명</td>
