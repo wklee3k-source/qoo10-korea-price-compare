@@ -498,6 +498,45 @@ def has_form_conflict(qoo10_name: str, kr_name: str) -> bool:
     return False
 
 
+# [v7.16.0] 핵심 성분·라인 키워드. 화장품은 성분으로 라인을 나누는 경우가
+#  많아, 같은 브랜드라도 성분이 다르면 다른 제품이다.
+#  실측: 아누아 'PDRN 히알루론산 미스트'가 'PDRN 콜라겐 글로우 세럼
+#  미스트'와 A등급으로 묶여 있었다. 브랜드·제형·용량이 모두 같아
+#  걸러낼 요소가 없었다.
+#
+#  ⚠️ 브랜드가 확인된 경우에만 쓴다. 브랜드도 모르는데 성분까지 따지면
+#  판단 근거가 약한 것들이 무더기로 걸린다(전체 40건 중 브랜드 일치는 8건).
+#  또 '한쪽에만 있을 때'가 아니라 '양쪽 다 있는데 전혀 안 겹칠 때'만 본다 —
+#  한쪽이 성분을 생략한 경우는 흔하다.
+INGREDIENT_KEYWORDS = [
+    "히알루론산", "히알루론", "콜라겐", "PDRN", "레티놀", "레티날",
+    "나이아신아마이드", "세라마이드", "펩타이드", "글루타치온", "어성초",
+    "시카", "판테놀", "아젤라", "트라넥삼산", "살리실산", "스쿠알란",
+    "병풀", "프로폴리스", "녹두", "쑥", "율무",
+]
+
+
+def extract_ingredients(text: str) -> set:
+    flat = _flat(text)
+    return {k for k in INGREDIENT_KEYWORDS if _flat(k) in flat}
+
+
+def ingredient_conflict(qoo10_name: str, kr_name: str) -> bool:
+    """양쪽이 서로에게 없는 성분을 각각 내세우면 다른 제품이다.
+
+    '하나도 안 겹칠 때'만 보면 놓친다. 실측 사례가 그랬다.
+        아누아 'PDRN 히알루론산 미스트'  vs  'PDRN 콜라겐 글로우 세럼 미스트'
+        -> PDRN 이 겹쳐서 통과했지만 히알루론산과 콜라겐은 다른 라인이다.
+
+    한쪽만 성분을 밝힌 경우는 걸리지 않는다 — 상품명에서 성분을 생략하는
+    일이 흔하기 때문이다. 양쪽 다 밝혔는데 서로 다를 때만 본다.
+    """
+    a, b = extract_ingredients(qoo10_name), extract_ingredients(kr_name)
+    if not a or not b:
+        return False
+    return bool(a - b) and bool(b - a)
+
+
 def form_status(qoo10_name: str, kr_name: str) -> str:
     """제형 일치 여부. 한쪽이라도 못 읽으면 'unknown'(판단 보류).
 
@@ -568,7 +607,7 @@ def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
                     single_source: bool = False, form: str = "match",
                     name_exact: bool = True, color: str = "unknown",
-                    is_set: bool = False) -> str:
+                    is_set: bool = False, ingredient_mismatch: bool = False) -> str:
     """등급을 '무엇이 어긋났는가'로 나눈다.
 
     [v7.0.0 개편] 비교 요소를 브랜드 -> 제형 -> 이름 -> 용량 순으로 본다.
@@ -587,6 +626,10 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     """
     # 세트는 제형·용량·가격 비교가 모두 성립하지 않는다. 브랜드조차
     #  확인 못 했으면 D가 맞지만, 브랜드가 맞으면 S로 따로 뺀다.
+    # 성분이 전혀 안 겹치면 같은 브랜드라도 다른 제품이다.
+    #  세트보다 먼저 본다 — 세트 구성이 달라도 성분이 아예 다르면 오매칭이다.
+    if ingredient_mismatch and brand_status == "match":
+        return "D"
     if is_set and brand_status == "match":
         return "S"
     if brand_status != "match" or form != "match":
@@ -1087,7 +1130,8 @@ def build_pairs():
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.8
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85),
                 color_status(translated_kr, x.get("name") or ""),
-                is_set_product(translated_kr, x.get("name") or "")),
+                is_set_product(translated_kr, x.get("name") or ""),
+                ingredient_conflict(translated_kr, x.get("name") or "")),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "

@@ -1383,6 +1383,34 @@ def t72_collected_brand_crosscheck():
           f"브랜드보유{has_brand} 읽기{loaded} 대조{used} 안전처리{safe}")
 
 
+# --------------------- #73 성분·라인 불일치
+#  화장품은 성분으로 라인을 나누는 경우가 많아, 같은 브랜드라도 성분이
+#  다르면 다른 제품이다. 실측: 아누아 'PDRN 히알루론산 미스트'가
+#  'PDRN 콜라겐 글로우 세럼 미스트'와 A등급으로 묶여 있었다. 브랜드·제형·
+#  용량이 모두 같아 걸러낼 요소가 없었다.
+#
+#  '하나도 안 겹칠 때'만 보면 놓친다 — 위 사례는 PDRN 이 겹친다.
+#  양쪽이 서로에게 없는 성분을 각각 내세울 때 본다.
+#  한쪽만 성분을 밝힌 경우는 걸리지 않아야 한다. 상품명에서 성분을
+#  생략하는 일이 흔하다.
+def t73_ingredient_conflict():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    has_keys = "INGREDIENT_KEYWORDS" in src and "def extract_ingredients(" in src
+    fn = src.split("def ingredient_conflict(")[1].split("\ndef ")[0] \
+        if "def ingredient_conflict(" in src else ""
+    # 양방향 차집합을 봐야 한다. 교집합만 보면 PDRN 사례를 놓친다.
+    both_ways = "bool(a - b) and bool(b - a)" in fn
+    # 한쪽만 밝힌 경우는 통과시켜야 한다.
+    one_sided_ok = "if not a or not b:" in fn and "return False" in fn
+    in_tier = "ingredient_mismatch and brand_status" in src
+    attached = "ingredient_conflict(translated_kr" in src
+
+    ok = has_keys and both_ways and one_sided_ok and in_tier and attached
+    check("73 성분·라인 불일치", ok,
+          f"키워드{has_keys} 양방향{both_ways} 한쪽만은통과{one_sided_ok} "
+          f"등급반영{in_tier} 부착{attached}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
