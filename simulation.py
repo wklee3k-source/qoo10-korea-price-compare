@@ -1337,6 +1337,44 @@ def t71_apply_collected_pages():
           f"원자적저장{atomic} 정가조건{list_price_only_if_diff} 화면표시{shown}")
 
 
+# --------------------- #72 수집 브랜드 자동 대조
+#  로컬 크롬으로 수집한 판매페이지 정보에는 실제 브랜드가 들어 있다
+#  (2,465건 중 2,028건). 검증 데이터의 brand 칸은 판매처가 자기 스토어명을
+#  넣는 경우가 많아 신뢰도가 낮은데, 이 값은 상품 페이지에서 직접 읽었다.
+#
+#  실측: 이걸로 대조해 오매칭 187건을 찾아냈다.
+#      Dr.Melaxin -> 듀댑,  雪花秀 -> 멜비유,  呂 -> 아모레퍼시픽
+#      ポーラ -> 나이키 운동화,  FULLY -> 후지필름 카메라
+#  화장품이 아닌 것까지 검수 목록에 올라와 있었다.
+#
+#  이 자료를 저장소에 남겨야 다음 회차에도 자동으로 걸러진다. 한 번 확인한
+#  것을 다시 확인하지 않으려면 판단 근거가 데이터로 남아야 한다.
+def t72_collected_brand_crosscheck():
+    path = ROOT / "data" / "collected_pages.json"
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+
+    exists = path.exists()
+    data = {}
+    if exists:
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            data = None
+    valid = isinstance(data, dict) and len(data) > 0
+    has_brand = valid and sum(1 for v in data.values() if v.get("brand")) > 100
+    loaded = 'collected_path = DATA / "collected_pages.json"' in src
+    used = ("_col_brand and brand_status ==" in src
+            and 'brand_status = "mismatch"' in src)
+    # 파일이 없거나 깨져도 검수페이지 생성은 계속돼야 한다.
+    _i = src.find("collected_path")
+    safe = _i >= 0 and "except (OSError, ValueError)" in src[_i:_i + 700]
+
+    ok = exists and valid and has_brand and loaded and used and safe
+    check("72 수집 브랜드 자동 대조", ok,
+          f"파일{exists}({len(data) if isinstance(data, dict) else '깨짐'}건) 형식{valid} "
+          f"브랜드보유{has_brand} 읽기{loaded} 대조{used} 안전처리{safe}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

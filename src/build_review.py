@@ -725,6 +725,22 @@ def build_pairs():
     #  (실측: 花王 비오레 -> 지에프코스 선크림, ブルガリ 향수 -> 노에비아 크림).
     #  브랜드 목록으로 관리한다 — 자동 판별이 어렵다. 가타카나라고 해외가
     #  아니다(アヌア=아누아, メディキューブ=메디큐브는 한국 브랜드다).
+    # [v7.14.0] 로컬 크롬으로 수집한 판매페이지 정보. 검증 데이터의 brand
+    #  칸은 판매처가 자기 스토어명을 넣는 경우가 많아 신뢰도가 낮은데,
+    #  여기 담긴 brand 는 상품 페이지에서 직접 읽은 값이라 정확하다.
+    #  실측: 이걸로 대조해 오매칭 187건을 찾아냈다(나이키 운동화·후지필름
+    #  카메라·프라모델까지 검수 목록에 올라와 있었다).
+    #  다음 회차에도 자동으로 대조되도록 자료를 저장소에 남긴다.
+    collected_path = DATA / "collected_pages.json"
+    collected = {}
+    if collected_path.exists():
+        try:
+            collected = json.loads(collected_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as e:
+            print(f"[경고] collected_pages.json 읽기 실패: {e}")
+    print(f"[수집자료] {len(collected)}건 "
+          f"(브랜드 {sum(1 for v in collected.values() if v.get('brand'))}건)")
+
     foreign_path = DATA / "foreign_brands.json"
     foreign_brands = set()
     if foreign_path.exists():
@@ -885,7 +901,16 @@ def build_pairs():
                 vol_match = vol_status == "match"
 
         orig_brand = q.get("brand", "")
+        # [v7.14.0] 수집한 실제 브랜드가 있으면 그걸로도 대조한다. 검증
+        #  브랜드칸으로는 맞았는데 실제 브랜드가 다르면 오매칭이다.
+        #  실측: NEEDLY 상품에 앤티퍼디(뉴질랜드 브랜드)가 붙어 있었다.
         brand_status = check_brand(orig_brand, x.get("brand", ""), brand_dict, x.get("name") or "")
+        _col = collected.get(str(x.get("goods_no"))) or {}
+        _col_brand = (_col.get("brand") or "").strip()
+        if _col_brand and brand_status == "match":
+            if check_brand(orig_brand, _col_brand, brand_dict,
+                           _col.get("name") or "") == "mismatch":
+                brand_status = "mismatch"
         kr_qty = extract_quantity(kr_name_display)
         # SET(서로 다른 상품이 결합된 세트) 감지: 큐텐 원문에 [SET] 표기가
         # 있거나, 구매처 원본명에 "세트/SET"가 있는 경우(예: "선물세트",
