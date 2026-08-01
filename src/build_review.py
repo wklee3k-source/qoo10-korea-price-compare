@@ -375,10 +375,31 @@ FORM_GROUPS: dict[str, list[str]] = {
 
 
 
+# [v7.15.0] 복합 제형 표기. '크림 마스크'는 크림이 아니라 마스크팩이다.
+#  제형 사전이 글자를 찾는 방식이라 '크림'과 '마스크팩'을 둘 다 잡고,
+#  큐텐 쪽 '크림'과 교집합이 생겨 같은 제품으로 판정됐다.
+#  실측: 셀리맥스 '브라이트닝 크림 35ml' -> '브라이트닝 크림 마스크 4매'.
+#
+#  뒤에 오는 말이 제품의 정체다. '크림 마스크'는 마스크, '앰플 마스크'도
+#  마스크다. 앞의 말은 내용물을 설명할 뿐이다. 그래서 앞쪽 제형을 지운다.
+COMPOUND_FORMS = [
+    (re.compile(r"크림\s*마스크"), "크림", "마스크팩"),
+    (re.compile(r"젤\s*마스크"), "보습젤", "마스크팩"),
+    (re.compile(r"(?:세럼|에센스|앰플)\s*마스크"), "세럼", "마스크팩"),
+    (re.compile(r"오일\s*미스트"), "헤어오일", "미스트"),
+    (re.compile(r"밤\s*스틱"), "밤", "선스틱"),
+]
+
+
 def extract_forms(text: str) -> set:
     flat = _flat(text)
-    return {group for group, words in FORM_GROUPS.items()
-            if any(_flat(w) in flat for w in words)}
+    found = {group for group, words in FORM_GROUPS.items()
+             if any(_flat(w) in flat for w in words)}
+    # 복합 표기는 뒤에 오는 말이 제품의 정체다. 앞의 말은 내용물 설명이다.
+    for rx, drop, keep in COMPOUND_FORMS:
+        if rx.search(text or "") and keep in found:
+            found.discard(drop)
+    return found
 
 
 # [v6.7.0] 대분류 -> 소분류. 큐텐·올리브영의 중카테고리와 소카테고리
