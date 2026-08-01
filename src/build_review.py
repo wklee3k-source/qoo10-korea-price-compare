@@ -909,6 +909,9 @@ def build_pairs():
             "kr_volume": x.get("volume") or (f"{int(kr_vol)}ml" if kr_vol else ""),
             "kr_qty": kr_qty, "is_set": is_set, "kr_name_jp": kr_to_jp.get(x["goods_no"], ""),
             "kr_candidates": kr_candidates, "kr_price": x.get("price"), "kr_url": x.get("product_url"),
+            # [v7.10.0] 로컬 수집으로 얻은 정가. 판매가와 다를 때만 들어 있다.
+            #  네이버 검색 API 는 최저가만 주고 정가를 안 줘서 할인율을 알 수 없었다.
+            "kr_list_price": x.get("list_price"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status, "qoo10_brand": orig_brand,
             "obsolete": x.get("obsolete"),
@@ -1169,7 +1172,7 @@ def build_html(pairs: list[dict]):
     </tr>
     <tr>
       <td class="label">금액</td>
-      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
+      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span>{(' <span style="color:#999;font-size:12px;">정가 ' + f"{p['kr_list_price']:,}" + '원</span>') if p.get('kr_list_price') else ''}</td>
     </tr>
     <tr>
       <td class="label label-with-border">링크</td>
