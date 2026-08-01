@@ -825,7 +825,14 @@ def t59_confidence_tiers():
     batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
     tmpl = (ROOT / "comparison" / "review.html").read_text(encoding="utf-8")
 
-    has_map = 'CONFIDENCE_TIERS = {' in src and '"A": ("완전일치"' in src and '"D":' in src
+    has_map = ('CONFIDENCE_TIERS = {' in src and '"A": ("완전일치"' in src
+               and '"D":' in src and '"S":' in src)
+    # [v7.13.0] 세트·기획 상품은 S로 뺀다. 여러 제품이 묶여 있어 제형·용량·
+    # 가격 비교가 모두 성립하지 않는다. 실측: 대립 제형 규칙에 걸린 27건 중
+    # 4건(14.8%)이 세트 때문에 잘못 걸렸다('퍼펙트9 토너 로션 크림 세트'와
+    # '퍼펙트9 2종세트+핸드크림 증정'이 크림 vs 핸드크림 대립으로 읽힘).
+    set_tier = ("def is_set_product(" in src and "SET_PATTERN" in src
+                and 'if is_set and brand_status == "match":' in src)
     has_fn = "def confidence_tier(" in src
     # [v5.5.0] 등급은 점수 구간이 아니라 '무엇이 불확실한가'로 나눈다.
     # B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
@@ -848,7 +855,7 @@ def t59_confidence_tiers():
                           and 'BATCH_DIR.glob("*.html")' not in batches)
     # [v5.9.0] 한 페이지에 등급이 섞이면 그 페이지에서 검수 방식을 바꿔야
     # 한다. 등급별로 먼저 나눈 뒤 그 안에서 자른다.
-    split_by_tier = 'for tier in ("A", "B", "C", "D"):' in batches and "batches.append(group[i:i + BATCH_SIZE])" in batches
+    split_by_tier = 'for tier in ("A", "B", "C", "S", "D"):' in batches and "batches.append(group[i:i + BATCH_SIZE])" in batches
     # 예상치 못한 등급값이 있어도 항목을 버리면 안 된다.
     keeps_leftovers = "leftovers" in batches
     # 등급으로 걸러내면 안 된다(표시 전용).
@@ -856,12 +863,12 @@ def t59_confidence_tiers():
 
     ok = (has_map and has_fn and attached and badged and styled and hub and not_filtered
           and brand_first and b_only_notation and split_by_tier and keeps_leftovers
-          and tier_naming and cleans_stale_pages)
+          and tier_naming and cleans_stale_pages and set_tier)
     check("59 검수 신뢰등급 A/B/C 표기", ok,
           f"등급표{has_map} 함수{has_fn} 부착{attached} 배지{badged} 스타일{styled} "
           f"허브{hub} 제외에미사용{not_filtered} 브랜드우선{brand_first} B는표기차이{b_only_notation} "
           f"등급별분리{split_by_tier} 누락방지{keeps_leftovers} 등급파일명{tier_naming} "
-          f"옛페이지정리{cleans_stale_pages}")
+          f"옛페이지정리{cleans_stale_pages} 세트등급{set_tier}")
 
 
 # --------------------- #60 수동 제외 목록
