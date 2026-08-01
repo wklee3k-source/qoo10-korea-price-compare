@@ -1274,6 +1274,46 @@ def t70_page_title_quality():
           f"측정스크립트{has_probe} 수집중단{disabled} 근거기록{documented}")
 
 
+# --------------------- #71 로컬 수집 판매페이지 정보 반영
+#  네이버 검색 API 의 title·price 는 요약형이라 실제 판매페이지와 다르다.
+#      API  케라시스 히트 액티브 극손상 바르는 트리트먼트, , 1개
+#      실제 케라시스 히트액티브 극손상 헤어드라이 에센스, 220ml, 2개
+#      API  리쥬란 더마 힐러 모이스처 트리트먼트 앰플  30,400원
+#      실제 리쥬란 더마 힐러 모이스처 크림 60ml, 1개   36,100원(정가 38,000)
+#  상품명이 다르면 검수에서 같은 상품인지 판단할 수 없고, 가격이 다르면
+#  마진 계산이 틀린다.
+#
+#  GitHub Actions 는 네이버가 IP 대역째 막아(429) 페이지를 못 연다. 수집은
+#  로컬 PC 에서 실제 크롬으로 하고 그 결과를 여기서 넣는다(실측 2,465/2,572).
+#
+#  덮어쓰기 전에 원래 값을 남겨야 한다 — 잘못 반영됐을 때 되돌릴 근거이고,
+#  이름이 빈 건(수집 실패 107건)을 덮어쓰면 화면이 비어버린다.
+def t71_apply_collected_pages():
+    script = SRC / "apply_collected_pages.py"
+    if not script.exists():
+        check("71 로컬 수집 반영", False, "apply_collected_pages.py 없음"); return
+    src = script.read_text(encoding="utf-8")
+    review = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    skips_empty = 'if c.get("name")' in src
+    keeps_original = ('r.setdefault("api_name"' in src
+                      and 'r.setdefault("api_price"' in src
+                      and 'r.setdefault("api_image_url"' in src)
+    # 가격은 시간이 지나면 낡는다. 언제 수집했는지 남겨야 한다.
+    stamps_time = '"page_collected_at"' in src
+    atomic = ".replace(vpath)" in src
+    # 정가는 판매가와 다를 때만 의미가 있다.
+    list_price_only_if_diff = "int(lst) != int(sale)" in src
+    shown = '"kr_list_price"' in review and "kr_list_price" in batches
+
+    ok = (skips_empty and keeps_original and stamps_time and atomic
+          and list_price_only_if_diff and shown)
+    check("71 로컬 수집 판매페이지 반영", ok,
+          f"빈이름건너뜀{skips_empty} 원본보존{keeps_original} 수집시각{stamps_time} "
+          f"원자적저장{atomic} 정가조건{list_price_only_if_diff} 화면표시{shown}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

@@ -152,7 +152,7 @@ def render_cards(pairs: list[dict]) -> str:
     </tr>
     <tr>
       <td class="label">금액</td>
-      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span></td>
+      <td><span class="price">{p['qoo10_price_jpy'] or '-'} 円</span> <span style="color:#bbb;">/</span> <span class="price">{p['kr_price'] or '-'} 원</span>{(' <span style="color:#999;font-size:12px;">정가 ' + f"{p['kr_list_price']:,}" + '원</span>') if p.get('kr_list_price') else ''}</td>
     </tr>
     <tr>
       <td class="label label-with-border">링크</td>
