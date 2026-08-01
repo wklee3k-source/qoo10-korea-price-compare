@@ -275,6 +275,7 @@ CONFIDENCE_TIERS = {
     "B": ("용량·수량 다름", "브랜드·제형·이름 일치. 용량이나 구성만 다름"),
     "C": ("이름 비슷", "브랜드·제형 일치. 제품명이 정확히 같지는 않음"),
     "D": ("확인 불가", "브랜드나 제형을 확인하지 못함 — 사진을 꼭 대조"),
+    "S": ("세트·기획", "여러 제품이 묶인 구성 — 구성품과 수량을 확인"),
 }
 
 
@@ -525,10 +526,28 @@ def _covers(broad: set, specific: set) -> bool:
     return False
 
 
+# [v7.13.0] 세트·기획 상품. 여러 제품이 묶여 있어 다른 등급의 판정이
+#  통하지 않는다.
+#   · 제형이 여러 개 잡혀 대립 판정이 오작동한다. 실측: '퍼펙트9 토너
+#     로션 크림 세트'와 '퍼펙트9 2종세트+핸드크림 증정'이 크림 vs 핸드크림
+#     대립으로 읽혀 잘못 걸렸다(27건 중 4건, 14.8%).
+#   · 용량 비교도 성립하지 않는다. 구성품이 여럿이라 어느 용량인지 모른다.
+#   · 가격 비교도 구성이 같아야 의미가 있다.
+#  그래서 따로 S등급으로 빼고, 검수에서 구성품과 수량을 직접 보게 한다.
+SET_PATTERN = re.compile(
+    r"세트|SET|기획|증정|본품\s*\+|택\s*\d|\d+\s*종\b|묶음|패키지|선물|"
+    r"\+\s*\d+\s*(개|매|장|ml|g)|\d+\s*(개입|매입|본|병)\s*세트", re.I)
+
+
+def is_set_product(qoo10_name: str, kr_name: str) -> bool:
+    return bool(SET_PATTERN.search(f"{qoo10_name} {kr_name}"))
+
+
 def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
                     single_source: bool = False, form: str = "match",
-                    name_exact: bool = True, color: str = "unknown") -> str:
+                    name_exact: bool = True, color: str = "unknown",
+                    is_set: bool = False) -> str:
     """등급을 '무엇이 어긋났는가'로 나눈다.
 
     [v7.0.0 개편] 비교 요소를 브랜드 -> 제형 -> 이름 -> 용량 순으로 본다.
@@ -545,6 +564,10 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     확인해줬는가'는 일치 여부와 다른 축이라, 등급에 섞으면 이름이 다른
     단독통과가 C인지 D인지 정해지지 않는다.
     """
+    # 세트는 제형·용량·가격 비교가 모두 성립하지 않는다. 브랜드조차
+    #  확인 못 했으면 D가 맞지만, 브랜드가 맞으면 S로 따로 뺀다.
+    if is_set and brand_status == "match":
+        return "S"
     if brand_status != "match" or form != "match":
         return "D"
     # 색이 서로 다르면 같은 제품의 다른 색이다 — 별개 상품으로 본다.
@@ -1017,7 +1040,8 @@ def build_pairs():
                 form_status(translated_kr, x.get("name") or ""),
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.8
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85),
-                color_status(translated_kr, x.get("name") or "")),
+                color_status(translated_kr, x.get("name") or ""),
+                is_set_product(translated_kr, x.get("name") or "")),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "

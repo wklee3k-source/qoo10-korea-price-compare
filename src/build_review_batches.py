@@ -181,7 +181,7 @@ def render_cards(pairs: list[dict]) -> str:
 #  (learn_from_decisions). 지금 사전 커버리지가 38.6%뿐이라, 이 구간을
 #  검수할수록 다음 회차의 브랜드 판정 범위가 넓어진다.
 BRAND_ORDER = {"match": 0, "unknown": 1, "mismatch": 2}
-TIER_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3}
+TIER_ORDER = {"A": 0, "B": 1, "C": 2, "S": 3, "D": 4}
 
 
 def sort_by_brand_confidence(pairs: list[dict]) -> list[dict]:
@@ -220,12 +220,12 @@ def build_batches():
     #  바꿔야 한다. 등급별로 먼저 나눈 뒤 그 안에서 100개씩 자른다.
     #  마지막 페이지가 조금 비더라도 한 페이지 = 한 등급이 낫다.
     batches: list[list[dict]] = []
-    for tier in ("A", "B", "C", "D"):
+    for tier in ("A", "B", "C", "S", "D"):
         group = [x for x in all_pairs if x.get("tier") == tier]
         for i in range(0, len(group), BATCH_SIZE):
             batches.append(group[i:i + BATCH_SIZE])
     # 등급이 없는 항목(예상치 못한 값)이 있으면 버리지 않고 뒤에 붙인다.
-    known = {"A", "B", "C", "D"}
+    known = {"A", "B", "C", "S", "D"}
     leftovers = [x for x in all_pairs if x.get("tier") not in known]
     for i in range(0, len(leftovers), BATCH_SIZE):
         batches.append(leftovers[i:i + BATCH_SIZE])
@@ -238,7 +238,8 @@ def build_batches():
     # 옛 파일명(review_NN.html)이 남아 있으면 허브에 없는 유령 페이지가 된다.
     # ⚠️ *.html 을 통째로 지우면 허브(index.html)까지 날아간다. 배치 파일만
     # 골라서 지운다.
-    for pattern in ("review_*.html", "A_*.html", "B_*.html", "C_*.html", "D_*.html", "X_*.html"):
+    for pattern in ("review_*.html", "A_*.html", "B_*.html", "C_*.html", "S_*.html",
+                    "D_*.html", "X_*.html"):
         for stale in BATCH_DIR.glob(pattern):
             stale.unlink()
     tier_seq: dict = {}
