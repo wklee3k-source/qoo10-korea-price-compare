@@ -1151,6 +1151,13 @@ def t66_form_match_required_for_A():
     # [v6.7.0] 대분류/소분류 포함관계를 봐야 한다. '클렌징'과 '클렌징 폼'은
     # 같은 것이고, '클렌징 폼'과 '클렌징 오일'은 다른 것이다. 대분류 이름이
     # 소분류 문자열에 들어있어서 단순 교집합으로는 이 둘이 구분되지 않는다.
+    # [v7.12.0] 대립 제형쌍. 제형 사전만으로는 '아이크림'과 '크림',
+    # '선세럼'과 '선크림'을 못 가른다 — 세부어가 상위어를 문자열로 품고
+    # 있어 교집합이 생기기 때문이다. 실측 오매칭 261건을 정상 매칭과
+    # 대조해 뽑은 쌍만 쓴다.
+    conflict = ("CONFLICTING_FORMS" in src and "def has_form_conflict(" in src
+                and "FORM_SPECIALIZATIONS" in src
+                and "has_form_conflict(qoo10_name, kr_name)" in src)
     hierarchy = ("FORM_PARENTS" in src and "def _covers(" in src
                  and "spec_a, spec_b = a - parents, b - parents" in src)
     # 제형 불일치도 D로 간다(브랜드/제형 확인 실패와 같은 취급).
@@ -1159,10 +1166,10 @@ def t66_form_match_required_for_A():
     attached = 'form_status(translated_kr, x.get("name") or "")' in src
 
     ok = (has_groups and has_status and synonyms and mismatch_to_c
-          and unknown_not_a and attached and hierarchy)
+          and unknown_not_a and attached and hierarchy and conflict)
     check("66 제형 일치가 A등급 조건", ok,
           f"사전{has_groups} 판정{has_status} 동의어{synonyms} 불일치는C{mismatch_to_c} "
-          f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy}")
+          f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy} 대립제형{conflict}")
 
 
 # --------------------- #67 네일·향수 카테고리 제외
