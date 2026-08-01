@@ -1162,6 +1162,13 @@ def t66_form_match_required_for_A():
     # '선세럼'과 '선크림'을 못 가른다 — 세부어가 상위어를 문자열로 품고
     # 있어 교집합이 생기기 때문이다. 실측 오매칭 261건을 정상 매칭과
     # 대조해 뽑은 쌍만 쓴다.
+    # [v7.15.0] 복합 표기('크림 마스크')는 뒤에 오는 말이 제품의 정체다.
+    # 제형 사전이 글자를 찾는 방식이라 '크림'과 '마스크팩'을 둘 다 잡고,
+    # 큐텐 쪽 '크림'과 교집합이 생겨 같은 제품으로 판정됐다.
+    # 실측: 셀리맥스 '브라이트닝 크림 35ml' -> '브라이트닝 크림 마스크 4매'.
+    compound = ("COMPOUND_FORMS" in src
+                and "for rx, drop, keep in COMPOUND_FORMS:" in src
+                and "found.discard(drop)" in src)
     conflict = ("CONFLICTING_FORMS" in src and "def has_form_conflict(" in src
                 and "FORM_SPECIALIZATIONS" in src
                 and "has_form_conflict(qoo10_name, kr_name)" in src)
@@ -1173,10 +1180,11 @@ def t66_form_match_required_for_A():
     attached = 'form_status(translated_kr, x.get("name") or "")' in src
 
     ok = (has_groups and has_status and synonyms and mismatch_to_c
-          and unknown_not_a and attached and hierarchy and conflict)
+          and unknown_not_a and attached and hierarchy and conflict and compound)
     check("66 제형 일치가 A등급 조건", ok,
           f"사전{has_groups} 판정{has_status} 동의어{synonyms} 불일치는C{mismatch_to_c} "
-          f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy} 대립제형{conflict}")
+          f"미확인은A아님{unknown_not_a} 부착{attached} 대소분류{hierarchy} 대립제형{conflict} "
+          f"복합표기{compound}")
 
 
 # --------------------- #67 네일·향수 카테고리 제외
