@@ -1060,15 +1060,24 @@ def t64_brand_in_product_name():
     name_path = "in name_lower for c in candidates" in fn
     # 사전 대응(expected)이 있을 때만 쓰는 경로여야 한다.
     only_with_dict = fn.index("name_lower") > fn.index("expected = brand_dict.get")
+    # [v7.11.0] 사전에 없어도 큐텐 브랜드가 상품명에 그대로 있으면 같은
+    # 브랜드다. 네이버 brand 칸에 판매처명이 들어오는 경우가 많아
+    # (viviscal -> '슈퍼대디', SYRS -> '디디에즈'), 사전에 없는 브랜드는
+    # 상품명을 볼 기회조차 없었다. 실측 D등급 78건 중 72건이 이 경우.
+    # 짧은 영문은 다른 단어에 우연히 들어가므로 5자 이상, 4자는 상품명
+    # 앞부분일 때만 받는다.
+    dictless_name = ("len(orig_alnum) >= 5 and orig_alnum in name_alnum" in fn
+                     and "name_alnum.startswith(orig_alnum)" in fn)
     # 2자 미만은 우연 일치가 잦다.
     len_guard = "len(c) >= 2" in fn
     # 호출부가 상품명을 실제로 넘겨야 의미가 있다.
     passed = src.count('brand_dict, x.get("name") or ""') >= 2
 
-    ok = accepts_name and name_path and only_with_dict and len_guard and passed
+    ok = (accepts_name and name_path and only_with_dict and len_guard and passed
+          and dictless_name)
     check("64 브랜드칸이 판매처명일 때 상품명 참조", ok,
           f"인자{accepts_name} 경로{name_path} 사전한정{only_with_dict} "
-          f"길이가드{len_guard} 호출부전달{passed}")
+          f"길이가드{len_guard} 호출부전달{passed} 사전없이도{dictless_name}")
 
 
 # --------------------- #65 번역 용어를 한국 표기로

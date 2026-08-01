@@ -579,6 +579,29 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict,
     kr_alnum = re.sub(r"[^a-z0-9]", "", kr_brand_lower)
     if orig_alnum and len(orig_alnum) >= 2 and orig_alnum in kr_alnum:
         return "match"
+
+    # [v7.11.0] 사전에 없어도, 큐텐 브랜드가 한국 상품명에 그대로 들어
+    #  있으면 같은 브랜드다. 네이버가 주는 brand 칸에는 브랜드가 아니라
+    #  판매처명이 자주 들어온다 — 실측 D등급 78건 중 72건이 이 경우였다.
+    #      viviscal -> brand '슈퍼대디',  상품명 '비비스칼 프로 viviscal pro'
+    #      SYRS     -> brand '디디에즈',  상품명 'SYRS 시르즈 시카 엑소좀'
+    #      呂       -> brand '아모레퍼시픽', 상품명 '려 루트젠 두피에센스'
+    #  v5.3.0에서 상품명 참조를 넣었지만 '사전에 대응이 있을 때'로 한정해,
+    #  사전에 없는 이 브랜드들은 상품명을 볼 기회조차 없었다.
+    #
+    #  ⚠️ 4자 이하는 받지 않는다. 짧은 영문은 다른 단어에 우연히 들어간다
+    #  ('LOA'가 'FLOAT'에, 'CURE'가 'SECURE'에). 한글·한자 브랜드는
+    #  2자만 돼도 상품명에 그대로 쓰이므로 따로 허용한다.
+    name_alnum = re.sub(r"[^a-z0-9]", "", (kr_product_name or "").lower())
+    #  4자는 받되 상품명 '앞부분'에 있을 때만 — 상품명은 대개 브랜드로
+    #  시작한다. 중간에 우연히 들어간 경우를 걸러낸다.
+    if orig_alnum and len(orig_alnum) >= 5 and orig_alnum in name_alnum:
+        return "match"
+    if orig_alnum and len(orig_alnum) == 4 and name_alnum.startswith(orig_alnum):
+        return "match"
+    orig_cjk = re.sub(r"[^가-힣\u4E00-\u9FFF]", "", orig_brand)
+    if orig_cjk and len(orig_cjk) >= 1 and orig_cjk in (kr_product_name or ""):
+        return "match"
     if re.search(r"[\u30A0-\u30FF\u3040-\u309F]", orig_brand):
         return "unknown"
     # [v4.2.1] 영문 원본 브랜드를 한글 판매처명과 직접 비교할 수는 없다.
