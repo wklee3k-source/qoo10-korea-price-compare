@@ -426,6 +426,56 @@ def color_status(qoo10_name: str, kr_name: str) -> str:
     return "match" if (a & b) else "mismatch"
 
 
+# [v7.12.0] 대립 제형쌍 — 이 둘이 서로 어긋나면 다른 상품이다.
+#  제형 사전만으로는 못 가른다. 예를 들어 '아이크림'과 '크림'은 둘 다
+#  '크림'을 품고 있어 교집합이 생기고, '선세럼'과 '선크림'도 마찬가지다.
+#  실측 오매칭 목록 261건과 정상 매칭을 대조해 이 쌍들만 뽑았다.
+#      샴푸 vs 컨디셔너      올라플렉스 No.5 컨디셔너 -> No.4 샴푸
+#      샴푸 vs 트리트먼트    케라시스 스칼프 트리트먼트 -> 스칼프 샴푸
+#      선세럼 vs 선크림      라네즈 워터뱅크 선세럼 -> 선크림
+#      클렌징폼 vs 클렌징오일/밤   1025 독도 클렌저 -> 클렌징 밤
+#      크림 vs 아이/핸드/바디크림  네이처리퍼블릭 콜라겐 크림 -> 아이크림
+#      미스트 vs 픽서
+#
+#  ⚠️ '한쪽에만 있을 때'만 적용한다. 세트 상품은 여러 제형을 함께 담아
+#  ('샴푸+트리트먼트 세트') 양쪽에 다 들어 있으면 대립이 아니다.
+CONFLICTING_FORMS = [
+    ("아이크림", "크림"), ("핸드크림", "크림"), ("바디크림", "크림"),
+    ("선세럼", "선크림"), ("샴푸", "컨디셔너"), ("샴푸", "트리트먼트"),
+    ("미스트", "픽서"), ("클렌징폼", "클렌징오일"), ("클렌징폼", "클렌징밤"),
+]
+
+
+# 세부 제형은 상위어를 문자열로 포함한다('아이크림'에 '크림'). 그래서
+#  '아이크림'이 잡히면 '크림'도 함께 잡혀, 단순 비교로는 대립을 못 본다.
+#  세부 쪽이 있으면 상위어는 없는 것으로 친다.
+FORM_SPECIALIZATIONS = {"아이크림": "크림", "핸드크림": "크림", "바디크림": "크림",
+                        "선세럼": "세럼", "선크림": "크림", "헤어오일": "오일",
+                        "바디오일": "오일", "페이스오일": "오일",
+                        "클렌징오일": "오일", "바디로션": "로션"}
+
+
+def _narrow_forms(forms: set) -> set:
+    out = set(forms)
+    for special, broad in FORM_SPECIALIZATIONS.items():
+        if special in out:
+            out.discard(broad)
+    return out
+
+
+def has_form_conflict(qoo10_name: str, kr_name: str) -> bool:
+    a = _narrow_forms(extract_forms(qoo10_name))
+    b = _narrow_forms(extract_forms(kr_name))
+    if not a or not b:
+        return False
+    for x, y in CONFLICTING_FORMS:
+        if x in a and y in b and x not in b and y not in a:
+            return True
+        if y in a and x in b and y not in b and x not in a:
+            return True
+    return False
+
+
 def form_status(qoo10_name: str, kr_name: str) -> str:
     """제형 일치 여부. 한쪽이라도 못 읽으면 'unknown'(판단 보류).
 
@@ -441,6 +491,9 @@ def form_status(qoo10_name: str, kr_name: str) -> str:
     a, b = extract_forms(qoo10_name), extract_forms(kr_name)
     if not a or not b:
         return "unknown"
+    # 대립 제형은 교집합이 있어도 다른 상품이다('아이크림'과 '크림').
+    if has_form_conflict(qoo10_name, kr_name):
+        return "mismatch"
     parents = set(FORM_PARENTS)
     spec_a, spec_b = a - parents, b - parents
     if spec_a & spec_b:
