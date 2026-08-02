@@ -1130,6 +1130,7 @@ def t65_translation_term_fixes():
     warns_variants = "라인명·번호·색상·제형을 절대" in req
     # [v7.3.0] 제형이 틀리면 다른 상품이 된다. 일본어->한국 표기 대응표를
     # 지시문 맨 앞에 둬서, 번역이 한국 쇼핑몰 표기를 그대로 쓰게 한다.
+    baku_added = "バクチオール → 바쿠치올" in req
     form_table = ("가장 중요: 제형" in req
                   and "クレンジングオイル | 클렌징오일" in req
                   and "洗顔料 / 洗顔フォーム | 클렌징폼" in req)
