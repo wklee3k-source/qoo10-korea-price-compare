@@ -889,7 +889,8 @@ def t59_confidence_tiers():
     # C 는 '이름이 왜 다른지'를 볼 구간, B 는 '용량만' 확인할 구간이다.
     # [v7.25.0] 이름 일치 구간의 B 판정은 용량뿐 아니라 수량·매수 불일치도
     # 본다(상세 검사는 t77). 여기서는 두 조건이 함께 걸려 있는지만 본다.
-    b_only_notation = ('return "B" if vol_mismatch else "C"' in tfn
+    # [v7.31.0] C 구간(이름 불일치)도 수량 불일치를 함께 본다.
+    b_only_notation = ('return "B" if (vol_mismatch or count_mismatch) else "C"' in tfn
                        and "if vol_mismatch or count_mismatch:" in tfn)
     # 네 조합이 실제로 맞게 나오는지 직접 돌려 확인한다.
     tier_cases_ok = False
