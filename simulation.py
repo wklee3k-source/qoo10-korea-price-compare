@@ -833,6 +833,17 @@ def t59_confidence_tiers():
     # '퍼펙트9 2종세트+핸드크림 증정'이 크림 vs 핸드크림 대립으로 읽힘).
     set_tier = ("def is_set_product(" in src and "SET_PATTERN" in src
                 and 'if is_set and brand_status == "match":' in src)
+    # [v7.20.0] '+' 양쪽에 서로 다른 제형이 있으면 세트다. 제형이 두 개
+    # 이상이면 세트로 보는 방식은 못 쓴다 — 상품명에 카테고리 설명이나
+    # 대분류·소분류가 함께 잡혀 실측 255건이 걸렸고 그중 A등급 86건이
+    # 멀쩡한 단품이었다('클렌징'+'클렌징밤', '토너'+'토너패드').
+    # 1+1 은 '+' 뒤에 제형어가 없어 자동으로 걸러진다.
+    plus_split = ("def is_set_by_plus(" in src
+                  and 'nonempty[0] ^ nonempty[1]' in src)
+    # SPF/PA 표기가 '+'를 달고 있어 'SPF50+ PA++++ 50ml' 이 '+ 50ml' 로
+    # 읽히면서 멀쩡한 선크림이 세트로 잡혔다. 먼저 지운다.
+    spf_guard = ("SPF_NOTATION_RE" in src
+                 and "SPF_NOTATION_RE.sub" in src.split("def is_set_product(")[1])
     has_fn = "def confidence_tier(" in src
     # [v5.5.0] 등급은 점수 구간이 아니라 '무엇이 불확실한가'로 나눈다.
     # B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에
@@ -863,12 +874,14 @@ def t59_confidence_tiers():
 
     ok = (has_map and has_fn and attached and badged and styled and hub and not_filtered
           and brand_first and b_only_notation and split_by_tier and keeps_leftovers
-          and tier_naming and cleans_stale_pages and set_tier)
+          and tier_naming and cleans_stale_pages and set_tier
+          and plus_split and spf_guard)
     check("59 검수 신뢰등급 A/B/C 표기", ok,
           f"등급표{has_map} 함수{has_fn} 부착{attached} 배지{badged} 스타일{styled} "
           f"허브{hub} 제외에미사용{not_filtered} 브랜드우선{brand_first} B는표기차이{b_only_notation} "
           f"등급별분리{split_by_tier} 누락방지{keeps_leftovers} 등급파일명{tier_naming} "
-          f"옛페이지정리{cleans_stale_pages} 세트등급{set_tier}")
+          f"옛페이지정리{cleans_stale_pages} 세트등급{set_tier} "
+          f"플러스분할{plus_split} SPF가드{spf_guard}")
 
 
 # --------------------- #60 수동 제외 목록
