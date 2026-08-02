@@ -1422,6 +1422,32 @@ def t73_ingredient_conflict():
           f"등급반영{in_tier} 부착{attached}")
 
 
+# --------------------- #74 자동수정 내역 표시("무엇에서 무엇으로")
+#  용량/수량/발송지를 한국 실제 구매처 기준으로 자동수정할 때, 예전엔
+#  "자동수정 미리보기: ..." 라는 문구만 있고 원래 값이 뭐였는지는 하이라이트
+#  안을 눈으로 찾아야 알 수 있었다. "10g -> 50g"처럼 원래값과 새값을
+#  나란히 적은 change_notes 를 만들어 카드에 보여준다. 미리보기 문구는 뺐다.
+def t74_change_notes_display():
+    src = (SRC / "build_review.py").read_text(encoding="utf-8")
+    batches = (SRC / "build_review_batches.py").read_text(encoding="utf-8")
+
+    collects = "change_notes: list[str] = []" in src
+    vol_note = 'change_notes.append(f"용량 {_orig_vol_str} → {kr_vol_int}' in src
+    qty_notes = ('change_notes.append(f"수량 1{explicit_match.group(1)}' in src
+                and 'change_notes.append(f"수량 표기없음' in src
+                and 'change_notes.append(f"수량 {qty_removed_original}' in src)
+    shipping_note = "change_notes.append(f\"발송지 표기" in src
+    attached = '"change_notes": change_notes' in src
+    no_old_text = "자동수정(용량/수량/발송지) 미리보기" not in src and "자동수정(용량/수량/발송지) 미리보기" not in batches
+    shown = all("vol-fix-notes" in t for t in (src, batches))
+
+    ok = (collects and vol_note and qty_notes and shipping_note and attached
+          and no_old_text and shown)
+    check("74 자동수정 내역 표시", ok,
+          f"수집{collects} 용량{vol_note} 수량{qty_notes} 발송지{shipping_note} "
+          f"부착{attached} 옛문구제거{no_old_text} 표시{shown}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.

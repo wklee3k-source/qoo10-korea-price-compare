@@ -148,7 +148,9 @@ def render_cards(pairs: list[dict]) -> str:
     <tr>
       <td class="label">상품명</td>
       <td>
-        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        {('<div class="vol-fix-preview">' + p['qoo10_title_highlighted']
+    + ('<div class="vol-fix-notes">' + ' · '.join(esc(n) for n in p.get('change_notes') or []) + '</div>'
+       if p.get('change_notes') else '') + '</div>') if p.get('qoo10_title_highlighted') else ''}
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>
