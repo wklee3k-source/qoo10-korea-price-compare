@@ -112,6 +112,11 @@ def extract_quantity(text: str) -> int:
     m = re.search(r"(\d+)\s*(?:PACK|팩)\b", text_wo_choice, re.I)
     if m:
         return int(m.group(1))
+    # [v7.30.0] '더블팩'·'듀오팩'·'트윈팩'은 숫자 없이 2개들이를 뜻한다.
+    #  실측: 유세린 세럼 두 건이 '30ml 더블팩'으로만 적혀 있어 수량표기가
+    #  전혀 안 잡혔고, 가격은 24배 차이인데 A(완전일치)로 남아 있었다.
+    if re.search(r"(더블|듀오|트윈)\s*(팩|기획|구성)", text_wo_choice):
+        return 2
     if re.search(r"세트|SET|Set|1\+1", text_wo_choice):
         return 2
     return 1

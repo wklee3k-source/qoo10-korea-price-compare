@@ -1810,6 +1810,40 @@ def t80_volume_case_insensitive():
         sys.path[:] = _sp
 
 
+# --------------------- #81 '더블팩' 등 숫자 없는 배수 표기 인식 (v7.30.0)
+#  '더블팩'·'듀오팩'·'트윈팩'은 숫자 없이 2개들이를 뜻한다. 실측: 유세린
+#  세럼 두 건이 '30ml 더블팩'으로만 적혀 있어 수량표기가 전혀 안 잡혔고,
+#  가격은 24배 차이(6,990円/121,700원)인데 A(완전일치)로 남아 있었다.
+def t81_double_pack_notation():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        cases_ok = all(_br.extract_quantity(t) == e for t, e in [
+            ("유세린 하이알루론 에피셀린 세럼 30ml 더블팩", 2),
+            ("이든래디언스 티아미돌 부스터 세럼 30ml 더블팩", 2),
+            ("듀오팩 구성 세럼 50ml", 2), ("트윈 기획 크림 100ml", 2),
+            ("일반 크림 100ml", 1)])
+        # '1+1 ... 230ml+230ml 더블기획'처럼 이미 다른 경로(부피 대응)로
+        #  잡히던 케이스에서 이중으로 곱해지면 안 된다
+        no_double_count = _br.total_count(
+            "1+1 미쟝센 노워시 트리트먼트 크림팩 230ml+230ml 더블기획") == 2
+        catches = _br.counts_mismatch(
+            "하이알루론 에피셀린세럼 30ml",
+            "유세린 하이알루론 에피셀린 세럼 30ml 더블팩")
+
+        ok = cases_ok and no_double_count and catches
+        check("81 더블팩 표기 인식", ok,
+              f"패턴{cases_ok} 중복방지{no_double_count} 검출{catches}")
+    except Exception as e:  # noqa: BLE001
+        check("81 더블팩 표기 인식", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
