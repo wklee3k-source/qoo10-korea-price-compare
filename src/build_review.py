@@ -58,7 +58,13 @@ def load_qoo10_products():
 def extract_volume_ml(text: str) -> float | None:
     if not text:
         return None
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(mL|ml|g|L)", text)
+    # [v7.29.0] 대소문자를 구분하지 않는다. 큐텐 원문이 "30ML"처럼
+    #  대문자면 기존 정규식이 아예 못 읽어 '판단불가'로 빠졌다 — 실측:
+    #  아나수이 향수가 30ml vs 75ml(가격 24배 차이)인데 A(완전일치)로
+    #  남아 있었다. 대소문자를 무시해도 오탐은 없다("600mg" 같은 함량
+    #  표기는 이 패턴이 원래도 안 잡고 지금도 안 잡는다 — 'g' 앞에 'm'이
+    #  있어 리터럴 매칭이 안 되기 때문).
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(mL|ml|g|L)", text, re.IGNORECASE)
     if not m:
         return None
     num, unit = float(m.group(1)), m.group(2).lower()

@@ -1778,6 +1778,38 @@ def t79_qoo10_excess_gift_removal():
         sys.path[:] = _sp
 
 
+# --------------------- #80 용량 추출 대소문자 무시 (v7.29.0)
+#  큐텐 원문이 "30ML"처럼 대문자면 extract_volume_ml() 이 아예 못 읽어
+#  '판단불가' 로 빠졌다. 실측: 아나수이 향수가 30ml vs 75ml(가격 24배
+#  차이)인데 A(완전일치)로 남아 있었다. 바로 아래 등급에 같은 상품의
+#  다른 매칭이 있었는데, 거긴 소문자라 정상적으로 용량불일치가 잡혀 있었다.
+def t80_volume_case_insensitive():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        cases_ok = all(_br.extract_volume_ml(t) == e for t, e in [
+            ("30ML EDT SP", 30.0), ("50ML", 50.0), ("Ml 표기 30Ml", 30.0),
+            ("90G", 90.0), ("1L", 1000.0)])
+        # "mg"(함량)는 여전히 안 잡혀야 한다 — 원래도 안 잡히던 것이라
+        #  대소문자 무시를 추가해도 새로 잡히면 안 된다.
+        mg_still_safe = _br.extract_volume_ml("글루타치온 600mg 백옥 앰플") == 30.0 or \
+            _br.extract_volume_ml("600mg 백옥 앰플") is None
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        has_flag = 're.search(r"(\\d+(?:\\.\\d+)?)\\s*(mL|ml|g|L)", text, re.IGNORECASE)' in src
+
+        ok = cases_ok and mg_still_safe and has_flag
+        check("80 용량 추출 대소문자 무시", ok,
+              f"대소문자{cases_ok} mg안전{mg_still_safe} 플래그{has_flag}")
+    except Exception as e:  # noqa: BLE001
+        check("80 용량 추출 대소문자 무시", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
