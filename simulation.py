@@ -1683,13 +1683,28 @@ def t78_bonus_classification():
 
         display_input = "is_set_tier = is_set_product(translated_for_tier, kr_name_display)" in src
 
+        # 제형이 같아도 별개 제품일 수 있다 — '부스터 120ml + 세럼 45ml'.
+        #  '부스터'가 제형 사전에서 세럼으로 매핑돼 본품과 같은 제형이
+        #  되는 바람에 용량 비율만 보고 증정이 됐던 건(v7.28.0).
+        two_products = _br.split_bonus("부스터 120ml + 세럼 45ml")[2]
+        # 수량·성분 표기는 조각으로 세지 않는다. 안 지우면 뒤 조각이
+        #  상품명 전체가 되어 거기 든 제형어로 별개 제품이 된다(오탐 83건).
+        qty_masked = not _br.split_bonus("[1+1] 아누아 선크림 50ml")[2]
+        pct_masked = not _br.split_bonus("AHA 30% + BHA 2% 필링 솔루션 30ml")[2]
+        # 용량이 한쪽만 있으면 성분·설명 나열이다
+        desc_safe = (not _br.split_bonus("레티놀 0.1 + 카페인 아이크림")[2]
+                     and not _br.split_bonus("유산균 + 시카 세럼 50ml")[2])
+
         ok = all([gift_ok, main_ok, other_ok, split_ok, gift_keeps,
                   refill_catches, other_is_set, gift_not_set, asymmetric,
-                  display_input])
+                  display_input, two_products, qty_masked, pct_masked,
+                  desc_safe])
         check("78 본품+증정 3분류", ok,
               f"증정{gift_ok} 본품추가{main_ok} 다른제품{other_ok} 분리{split_ok} "
               f"증정유지{gift_keeps} 리필검출{refill_catches} 세트{other_is_set} "
-              f"증정비세트{gift_not_set} 비대칭{asymmetric} 표시명입력{display_input}")
+              f"증정비세트{gift_not_set} 비대칭{asymmetric} 표시명입력{display_input} "
+              f"2종구성{two_products} 수량마스킹{qty_masked} 성분마스킹{pct_masked} "
+              f"설명보호{desc_safe}")
     except Exception as e:  # noqa: BLE001
         check("78 본품+증정 3분류", False, f"{type(e).__name__}: {e}")
     finally:

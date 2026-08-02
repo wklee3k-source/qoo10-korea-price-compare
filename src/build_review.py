@@ -157,6 +157,20 @@ def total_count(text: str) -> int:
 #  판정 순서가 중요하다. 용량 비율을 제형보다 먼저 보면 '토너 350ml +
 #  크림 20ml'(다른 제품)이 소량이라는 이유로 증정이 된다 — 실측에서
 #  이 순서를 뒤집자 other 13건 -> 39건으로 늘고 오분류가 사라졌다.
+# [v7.28.0] '+' 로 조각을 나누기 전에 지워야 하는 표기들.
+#  수량('1+1', '9+1')과 성분 함량 나열('AHA 30% + BHA 2%')은 제품 구성이
+#  아니라 표기다. 안 지우면 뒤 조각이 상품명 전체가 되어('1] 아누아 선크림')
+#  거기 든 제형어 때문에 별개 제품으로 읽힌다 — 실측 83건 오탐.
+QTY_PLUS_RE = re.compile(r"\d+\s*[+＋]\s*\d+")
+PCT_PLUS_RE = re.compile(r"\d+\s*%\s*[+＋]")
+
+
+def _bonus_text(name: str) -> str:
+    text = SPF_NOTATION_RE.sub(" ", name or "")
+    text = QTY_PLUS_RE.sub(" ", text)
+    return PCT_PLUS_RE.sub("% ", text)
+
+
 GIFT_NONPRODUCT_RE = re.compile(
     r"파우치|쇼핑백|가방|브러[시쉬]|미니거울|거울|약통|화장솜|스파[츄출]러|"
     r"케이스|포토카드|밴드|치약|퍼프|헤어밴드|텀블러|키링|스티커")
@@ -182,9 +196,20 @@ def classify_bonus(seg: str, main_vol, main_sheets, main_forms) -> str:
     if REFILL_RE.search(s):
         return "main"
     forms = _narrow_forms(extract_forms(s))
+    vol, sheets = extract_volume_ml(s), extract_sheet_count(s)
+    # [v7.28.0] 제형이 같아도 별개 제품일 수 있다. 사장님 지적:
+    #  '부스터 120ml + 세럼 45ml' 은 증정이 아니라 2종 세트인데, '부스터'가
+    #  제형 사전에서 세럼으로 매핑돼 본품과 같은 제형이 되는 바람에 용량
+    #  비율만 보고 증정이 됐다.
+    #  조각이 **제형어와 자체 용량을 모두** 가지고 본품에도 용량이 있으면
+    #  두 제품이 나란히 있는 것으로 본다. 셋 중 하나라도 빠지면 성분·설명
+    #  나열일 뿐이다 — 실측 오탐: '레티놀 0.1 + 카페인 아이크림'(용량 없음),
+    #  '유산균 + 시카 세럼 50ml'(본품 용량 없음), 'Vitamin C + AHA 클렌저'.
+    if forms and vol is not None and main_vol and (
+            forms != main_forms or vol / main_vol < BONUS_MAIN_RATIO):
+        return "other"
     if forms and main_forms and forms != main_forms:
         return "other"
-    vol, sheets = extract_volume_ml(s), extract_sheet_count(s)
     if vol is not None and main_vol:
         return "main" if vol / main_vol >= BONUS_MAIN_RATIO else "gift"
     if sheets is not None and main_sheets:
@@ -200,7 +225,7 @@ def split_bonus(name: str) -> tuple[str, int, bool]:
     센다. 다른 제품이 섞여 있으면 애초에 비교가 성립하지 않으므로
     세트로 넘긴다.
     """
-    text = SPF_NOTATION_RE.sub(" ", name or "")
+    text = _bonus_text(name)
     if "+" not in text and "＋" not in text:
         return (name or "", 1, False)
     parts = re.split(r"[+＋]", text)
@@ -284,7 +309,7 @@ def gift_indexes(name: str, strict: bool = False) -> tuple[list[int], int]:
     45ml'(2종 구성)이 '부스터'가 제형 사전에 없어 비교가 안 되는 바람에
     증정으로 읽혔다. 이 기준으로 31건 -> 16건이 된다.
     """
-    text = SPF_NOTATION_RE.sub(" ", name or "")
+    text = _bonus_text(name)
     if "+" not in text and "＋" not in text:
         return [], 0
     parts = re.split(r"[+＋]", text)
@@ -325,7 +350,7 @@ def strip_excess_gifts(jp_title: str, translated_kr: str,
     excess = len(q_gifts) - len(k_gifts)
     if excess <= 0:
         return jp_title, []
-    jp_parts = re.split(r"([+＋])", SPF_NOTATION_RE.sub(" ", jp_title or ""))
+    jp_parts = re.split(r"([+＋])", _bonus_text(jp_title))
     seg_count = (len(jp_parts) + 1) // 2
     if seg_count != q_parts:
         return jp_title, []          # 대응시킬 수 없다
@@ -1323,7 +1348,7 @@ def build_pairs():
             q["title"], translated_kr, kr_name_display)
         translated_for_tier = translated_kr
         if _dropped_gifts:
-            _tk_parts = re.split(r"[+＋]", SPF_NOTATION_RE.sub(" ", translated_kr))
+            _tk_parts = re.split(r"[+＋]", _bonus_text(translated_kr))
             _tk_gifts, _ = gift_indexes(translated_kr, strict=True)
             _tk_drop = set(_tk_gifts[-len(_dropped_gifts):])
             translated_for_tier = "+".join(

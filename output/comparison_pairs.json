@@ -3423,8 +3423,8 @@
     "kr_forms": [
       "세럼"
     ],
-    "tier": "B",
-    "count_mismatch": true,
+    "tier": "S",
+    "count_mismatch": false,
     "dropped_gifts": []
   },
   {
@@ -26308,8 +26308,8 @@
     "kr_forms": [
       "크림"
     ],
-    "tier": "D",
-    "count_mismatch": true,
+    "tier": "S",
+    "count_mismatch": false,
     "dropped_gifts": []
   },
   {
@@ -31337,7 +31337,7 @@
       "클렌징폼",
       "트리트먼트"
     ],
-    "tier": "S",
+    "tier": "A",
     "count_mismatch": false,
     "dropped_gifts": []
   },
@@ -59406,14 +59406,16 @@
   },
   {
     "goods_no": "1143335244",
-    "qoo10_title": "[CLAIR-GYN]クレアジン 女性ウォッシュ 200ml+50ml, 1個",
+    "qoo10_title": "[CLAIR-GYN]クレアジン 女性ウォッシュ 200ml",
     "qoo10_title_original": "[CLAIR-GYN]クレアジン 女性ウォッシュ 200ml+50ml, 1個",
     "vol_auto_corrected": false,
-    "qty_auto_corrected": false,
+    "qty_auto_corrected": true,
     "vol_status": "match",
-    "qoo10_title_highlighted": "",
+    "qoo10_title_highlighted": "[CLAIR-GYN]クレアジン 女性ウォッシュ 200ml+<del class=\"vol-fix\" style=\"color:#c0392b;\">50ml, 1個</del>",
     "qoo10_brand": "Hanmi PRO-CALM",
-    "change_notes": [],
+    "change_notes": [
+      "큐텐 증정 50ml, 1個 → 삭제(한국 구매처에 없음)"
+    ],
     "qoo10_image": "https://gd.image-qoo10.jp/li/088/813/6873813088.g_300-w-st_g.jpg",
     "qoo10_price_jpy": 2467,
     "qoo10_url": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1143335244",
@@ -59459,7 +59461,9 @@
     ],
     "tier": "D",
     "count_mismatch": false,
-    "dropped_gifts": []
+    "dropped_gifts": [
+      "50ml, 1個"
+    ]
   },
   {
     "goods_no": "1172777299",
