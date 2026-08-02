@@ -599,8 +599,55 @@ SET_PATTERN = re.compile(
     r"\+\s*\d+\s*(개|매|장|ml|g)|\d+\s*(개입|매입|본|병)\s*세트", re.I)
 
 
+# [v7.21.0] 자외선 차단 등급 표기. 여기 쓰인 '+'는 등급을 나타내는
+#  기호이지 '제품 A + 제품 B'의 '+'가 아니다. 둘을 구분하지 않으면
+#  'SPF50+ PA++++ 50ml' 이 '+ 50ml' 로 읽혀 멀쩡한 선크림이 세트로 잡힌다.
+#
+#  실측으로 확인된 표기 형태(전부 같은 뜻이다):
+#      SPF50+ PA++++      SPF 50+ PA++++     SPF50+/PA++++
+#      SPF50+PA++++       SPF50+, PA++++     SPF50+ / PA++++
+#      SPF38 PA++         SPF20 PA++         SPF50+
+#  PA 등급은 PA+ ~ PA++++ 네 단계이고, SPF 는 숫자 뒤에 '+'가 붙을 수 있다
+#  (SPF50+ 는 'SPF 50 이상'이라는 뜻). 둘 사이 구분자는 공백·슬래시·쉼표가
+#  섞여 나오고 아예 붙어 있기도 하다.
+SPF_NOTATION_RE = re.compile(
+    r"SPF\s*\d+\s*\+?(?:\s*[/,]?\s*PA\s*\+{1,4})?|PA\s*\+{1,4}", re.I)
+
+
+def is_set_by_plus(text: str) -> bool:
+    """'+' 양쪽에 서로 다른 제형이 있으면 세트다.
+
+    [왜 이 방식인가] 제형이 두 개 이상 잡히면 세트로 보는 방식은 못 쓴다.
+    상품명에 카테고리 설명이 붙거나 대분류·소분류가 함께 잡히는 일이 흔해
+    실측 255건이 걸렸고 그중 A등급 86건이 멀쩡한 단품이었다
+    ('클렌징'+'클렌징밤', '토너'+'토너패드', '미스트'+'바디미스트').
+
+    '+' 를 경계로 나눠 양쪽 제형을 각각 보면 이 문제가 사라진다.
+        큐리페어 멜라 크림 35ml + 큐리페어 더마 앰플 50ml
+          좌 {크림}  우 {세럼}  -> 서로 다름 -> 세트
+        워터 슬리핑 마스크 1+1
+          우쪽에 제형어가 없음 -> 세트 아님
+    1+1·2+1 같은 수량 표기는 '+' 뒤에 제형어가 없어 자동으로 걸러진다.
+    실측 24건이 잡히고 대부분 진짜 세트였다.
+    """
+    text = SPF_NOTATION_RE.sub(" ", text or "")
+    if "+" not in text and "＋" not in text:
+        return False
+    parts = re.split(r"[+＋]", text)
+    forms = [_narrow_forms(extract_forms(part)) for part in parts]
+    nonempty = [f for f in forms if f]
+    if len(nonempty) < 2:
+        return False
+    return bool(nonempty[0] ^ nonempty[1])
+
+
 def is_set_product(qoo10_name: str, kr_name: str) -> bool:
-    return bool(SET_PATTERN.search(f"{qoo10_name} {kr_name}"))
+    # SPF/PA 표기를 먼저 지운다. 'SPF50+ PA++++ 50ml' 에서 마지막 '+'와
+    # 용량이 붙어 '+ 50ml' 로 읽히면서 멀쩡한 선크림이 세트로 잡혔다.
+    combined = SPF_NOTATION_RE.sub(" ", f"{qoo10_name} {kr_name}")
+    if SET_PATTERN.search(combined):
+        return True
+    return is_set_by_plus(qoo10_name) or is_set_by_plus(kr_name)
 
 
 def confidence_tier(confidence: int, brand_status: str = "match",
