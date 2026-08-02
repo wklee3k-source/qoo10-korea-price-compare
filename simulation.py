@@ -1681,7 +1681,7 @@ def t78_bonus_classification():
                       and "split_bonus(kr_name)" in st
                       and "split_bonus(qoo10_name)" not in st)
 
-        display_input = "is_set_tier = is_set_product(translated_kr, kr_name_display)" in src
+        display_input = "is_set_tier = is_set_product(translated_for_tier, kr_name_display)" in src
 
         ok = all([gift_ok, main_ok, other_ok, split_ok, gift_keeps,
                   refill_catches, other_is_set, gift_not_set, asymmetric,
@@ -1692,6 +1692,73 @@ def t78_bonus_classification():
               f"증정비세트{gift_not_set} 비대칭{asymmetric} 표시명입력{display_input}")
     except Exception as e:  # noqa: BLE001
         check("78 본품+증정 3분류", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
+# --------------------- #79 큐텐 증정 초과분 삭제 (v7.27.0)
+#  큐텐에 '크림 50ml + 15ml + 15ml' 로 올려놨는데 한국에서는 50ml 단품밖에
+#  못 사면 15ml 두 개를 줄 수가 없다. 못 지킬 구성을 파는 셈이라 초과분을
+#  업로드용 제목에서 뺀다.
+#  지우는 건 파는 물건을 바꾸는 일이라 기준을 좁게 잡는다:
+#   - 조각에 제형어가 있거나 본품 제형을 모르면 안 지운다
+#     (실측: '부스터 120ml + 세럼 45ml' 2종 구성이 증정으로 읽혔다)
+#   - 조각이 12자를 넘으면 안 지운다
+#     (실측: '큐리베어SOS 멜더 시스템 (1.5ml x 20本)' 이 증정으로 읽혔다)
+#   - 번역본과 원문의 '+' 조각 수가 다르면 대응이 안 되므로 손대지 않는다
+#  이 세 조건으로 31건 -> 14건이 된다.
+def t79_qoo10_excess_gift_removal():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        # 괄호가 깨지지 않아야 한다. 그냥 지우면 '(+7ml)' 가 '(' 로 남는다.
+        brackets_ok = all(_br._remove_gift_segment(t, s) == e for t, s, e in [
+            ("コアタイムアンプル 15ml (+7ml)", "7ml)", "コアタイムアンプル 15ml"),
+            ("企画セット 【120ml+15ml】", "15ml】", "企画セット 【120ml】"),
+            ("オイル200ml+フォーム(20ml+20ml)", "20ml)", "オイル200ml+フォーム(20ml)"),
+            ("クリーム 50ml+15ml+15ml", "15ml", "クリーム 50ml+15ml")])
+
+        # 마지막 조각부터 지운다(앞에서 지우면 '(20ml+20ml)' 가 '(+20ml)')
+        last_first = _br._remove_gift_segment(
+            "A 200ml+B(20ml+20ml)", "20ml)") == "A 200ml+B(20ml)"
+
+        # 제형어가 붙은 조각과 긴 조각은 지우지 않는다
+        strict_skips_form = _br.gift_indexes(
+            "부스터 120ml + 세럼 45ml", strict=True)[0] == []
+        strict_skips_long = _br.gift_indexes(
+            "멜라 크림 35ml+에스오에스 멜더 시스템 (1.5ml x 20개)",
+            strict=True)[0] == []
+
+        # 조각 수가 다르면 손대지 않는다
+        untouched = _br.strip_excess_gifts(
+            "クリーム 50ml", "크림 50ml + 15ml + 15ml", "크림 50ml")[1] == []
+        # 정상 케이스는 지우고 흔적을 돌려준다
+        title, dropped = _br.strip_excess_gifts(
+            "シカペア クリーム 50ml+15ml+15ml",
+            "시카페어 크림 50ml+15ml+15ml", "시카페어 크림 50ml")
+        works = len(dropped) == 2
+
+        # 자동수정 체인의 맨 끝에서 적용해야 한다 — 앞의 용량·수량 자동수정이
+        # q["title"] 원문 기준으로 다시 쓰기 때문에, 먼저 지우면 덮여 사라진다
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        body = src.split("qoo10_title_display = q[\"title\"]")[1].split("pairs.append(")[0]
+        after_shipping = (body.index("_remove_gift_segment(")
+                          > body.index("shipping_removal_pattern"))
+        # 지운 내역이 반드시 남아야 한다(조용히 사라지면 잘못 지워도 모른다)
+        logged = '"큐텐 증정 "' in src and '"dropped_gifts": _dropped_gifts' in src
+
+        ok = all([brackets_ok, last_first, strict_skips_form, strict_skips_long,
+                  untouched, works, after_shipping, logged])
+        check("79 큐텐 증정 초과분 삭제", ok,
+              f"괄호{brackets_ok} 뒤부터{last_first} 제형제외{strict_skips_form} "
+              f"장문제외{strict_skips_long} 불일치보호{untouched} 동작{works} "
+              f"체인끝{after_shipping} 기록{logged}")
+    except Exception as e:  # noqa: BLE001
+        check("79 큐텐 증정 초과분 삭제", False, f"{type(e).__name__}: {e}")
     finally:
         sys.path[:] = _sp
 

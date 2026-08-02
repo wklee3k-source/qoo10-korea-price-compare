@@ -244,6 +244,104 @@ def counts_mismatch(qoo10_name_kr: str, kr_name: str, is_set: bool = False) -> b
     return total_count(qoo10_name_kr) != total_count(k_name) * k_mult
 
 
+def _remove_gift_segment(title: str, seg: str) -> str:
+    """제목에서 증정 조각 하나를 지우고 남은 구두점을 정리한다.
+
+    그냥 지우면 '(+7ml)' 가 '(' 로, '【120ml+15ml】' 가 '【120ml' 로 남는다.
+    조각 앞의 '+' 와, 짝을 잃은 여는 괄호를 함께 치운다.
+    """
+    if not seg or seg not in title:
+        return title
+    # 조각 끝에 닫는 괄호가 붙어 있으면 그건 조각이 아니라 상품명의
+    #  구조다. 같이 지우면 '(20ml+20ml)' 가 '(20ml' 로, '【120ml+15ml】'
+    #  가 '【120ml' 로 짝을 잃는다.
+    closers = ")）]】"
+    trail = ""
+    core = seg
+    while core and core[-1] in closers:
+        trail = core[-1] + trail
+        core = core[:-1]
+    if not core or core not in title:
+        return title
+    # 뒤에서부터 찾는다 — 지우는 건 언제나 마지막 초과분이고, 앞에서
+    #  찾으면 '(20ml+20ml)' 에서 첫 조각이 지워져 '(+20ml)' 가 된다.
+    idx = title.rindex(core)
+    head, tail = title[:idx], title[idx + len(core):]
+    head = re.sub(r"[+＋]\s*$", "", head)
+    out = (head + tail)
+    # 내용이 통째로 사라져 빈 괄호만 남으면 그것도 치운다
+    for op, cl in (("(", ")"), ("（", "）"), ("[", "]"), ("【", "】")):
+        out = re.sub(re.escape(op) + r"\s*" + re.escape(cl), "", out)
+    return re.sub(r"\s{2,}", " ", out).strip(" ,、/")
+
+
+def gift_indexes(name: str, strict: bool = False) -> tuple[list[int], int]:
+    """'+' 로 나눈 조각 중 증정으로 볼 것들의 위치와 전체 조각 수.
+
+    strict 는 '큐텐 쪽에서 지워도 되는가'를 볼 때 쓴다. 지우는 건 실제로
+    파는 구성을 줄이는 일이라 기준을 더 좁힌다 — 조각에 제형어가 있거나
+    본품 제형을 모르면 지우지 않는다. 실측 오분류: '부스터 120ml + 세럼
+    45ml'(2종 구성)이 '부스터'가 제형 사전에 없어 비교가 안 되는 바람에
+    증정으로 읽혔다. 이 기준으로 31건 -> 16건이 된다.
+    """
+    text = SPF_NOTATION_RE.sub(" ", name or "")
+    if "+" not in text and "＋" not in text:
+        return [], 0
+    parts = re.split(r"[+＋]", text)
+    m_vol, m_sheets = extract_volume_ml(parts[0]), extract_sheet_count(parts[0])
+    m_forms = _narrow_forms(extract_forms(parts[0]))
+    found = []
+    for i, seg in enumerate(parts[1:], 1):
+        if classify_bonus(seg, m_vol, m_sheets, m_forms) != "gift":
+            continue
+        if strict and (_narrow_forms(extract_forms(seg)) or not m_forms):
+            continue
+        if strict and len(seg.strip()) > 12:
+            # 조각이 길면 증정 표기가 아니라 별개 제품명일 가능성이 크다.
+            #  실측 오분류: '큐리베어SOS 멜더 시스템 (1.5ml x 20本)' 이
+            #  제형어가 없어 증정으로 읽혔다. 지우면 파는 물건이 바뀐다.
+            continue
+        found.append(i)
+    return found, len(parts)
+
+
+def strip_excess_gifts(jp_title: str, translated_kr: str,
+                       kr_name: str) -> tuple[str, list[str]]:
+    """큐텐 쪽 증정이 한국 구매처보다 많으면 초과분을 상품명에서 지운다.
+
+    [v7.27.0] 사장님 지시. 큐텐에 '크림 50ml + 15ml + 15ml' 로 올려놨는데
+    한국에서는 50ml 단품밖에 못 사면 15ml 두 개를 줄 수가 없다. 그대로
+    두면 못 지킬 구성을 파는 셈이라, 초과분을 업로드용 제목에서 뺀다.
+
+    판정은 번역본으로 하고 삭제는 일본어 원문에서 한다. 둘의 '+' 조각
+    수가 같을 때만 손댄다 — 번역 과정에서 조각이 붙거나 갈라졌으면 어느
+    조각이 어느 조각인지 대응시킬 수 없다.
+
+    지운 내용은 반드시 change_notes 로 남긴다(설계이력 1-1: 조용히
+    사라지면 잘못 지워도 알 수 없다).
+    """
+    q_gifts, q_parts = gift_indexes(translated_kr, strict=True)
+    k_gifts, _ = gift_indexes(kr_name)
+    excess = len(q_gifts) - len(k_gifts)
+    if excess <= 0:
+        return jp_title, []
+    jp_parts = re.split(r"([+＋])", SPF_NOTATION_RE.sub(" ", jp_title or ""))
+    seg_count = (len(jp_parts) + 1) // 2
+    if seg_count != q_parts:
+        return jp_title, []          # 대응시킬 수 없다
+    drop = set(q_gifts[-excess:])    # 뒤쪽부터 지운다
+    kept, removed = [], []
+    for i in range(seg_count):
+        seg = jp_parts[i * 2]
+        if i in drop:
+            removed.append(seg.strip())
+            continue
+        kept.append(seg)
+    if not removed:
+        return jp_title, []
+    return "+".join(kept).strip(), removed
+
+
 # [v4.3.0] 브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
 #  실측: 브랜드 불일치 569건 중 184건이 이 유형이었고, 표본 6건을 눈으로
 #  확인한 결과 6건 모두 실제 오매칭이었다(선크림→파운데이션, 크림→컨디셔너,
@@ -1217,7 +1315,21 @@ def build_pairs():
         #  낸다. 예전엔 검증 승자의 name 을 넣었는데, 로컬 수집(v7.10.0)으로
         #  갱신된 정확한 상품명에 '더블기획'·'기획(+10ml)' 이 적혀 있어도
         #  판정이 그걸 못 봤다 — 실측 38건이 이 이유로 세트를 놓쳤다.
-        is_set_tier = is_set_product(translated_kr, kr_name_display)
+        # [v7.27.0] 큐텐 증정이 한국 구매처보다 많으면 그 초과분을 업로드용
+        #  제목에서 지운다(사장님 지시). 못 지킬 구성을 파는 셈이 되기
+        #  때문이다. 등급 판정도 지운 뒤 기준으로 낸다 — 지웠는데도 세트로
+        #  남으면 검수에서 볼 이유가 없다.
+        _stripped_jp, _dropped_gifts = strip_excess_gifts(
+            q["title"], translated_kr, kr_name_display)
+        translated_for_tier = translated_kr
+        if _dropped_gifts:
+            _tk_parts = re.split(r"[+＋]", SPF_NOTATION_RE.sub(" ", translated_kr))
+            _tk_gifts, _ = gift_indexes(translated_kr, strict=True)
+            _tk_drop = set(_tk_gifts[-len(_dropped_gifts):])
+            translated_for_tier = "+".join(
+                s for i, s in enumerate(_tk_parts) if i not in _tk_drop).strip()
+
+        is_set_tier = is_set_product(translated_for_tier, kr_name_display)
 
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
@@ -1325,6 +1437,24 @@ def build_pairs():
                 lambda mm: f' <del class="vol-fix" style="color:#c0392b;">{mm.group(0).strip()}</del>', base_for_highlight, count=1)
             qty_auto_corrected = True
 
+        # [v7.27.0] 큐텐 증정 초과분 삭제. 자동수정 체인의 **맨 마지막**에
+        #  둔다 — 앞의 용량·수량 자동수정이 q["title"] 원문을 기준으로
+        #  다시 쓰기 때문에, 먼저 지우면 그 결과가 덮여 사라진다.
+        if _dropped_gifts:
+            _base = qoo10_title_display
+            for _seg in _dropped_gifts:
+                _base = _remove_gift_segment(_base, _seg)
+            change_notes.append(
+                "큐텐 증정 " + " · ".join(_dropped_gifts)
+                + " → 삭제(한국 구매처에 없음)")
+            _hl = qoo10_title_highlighted or qoo10_title_display
+            for _seg in _dropped_gifts:
+                _hl = _hl.replace(
+                    _seg, f'<del class="vol-fix" style="color:#c0392b;">{_seg}</del>', 1)
+            qoo10_title_highlighted = _hl
+            qoo10_title_display = _base
+            qty_auto_corrected = True
+
         kr_candidates = x.get("image_candidates") or []
         if not kr_candidates and x.get("image_url"):
             kr_candidates = [{"url": x["image_url"], "mall": x.get("mall"), "link": x.get("product_url")}]
@@ -1380,9 +1510,11 @@ def build_pairs():
                 # [v7.25.0] 총 매수·개수 불일치 -> B. 용량과 마찬가지로
                 #  검수 화면에 보이는 이름(kr_name_display)으로 판정한다.
                 count_mismatch=counts_mismatch(
-                    translated_kr, kr_name_display, is_set_tier)),
+                    translated_for_tier, kr_name_display, is_set_tier)),
             "count_mismatch": counts_mismatch(
-                translated_kr, kr_name_display, is_set_tier),
+                translated_for_tier, kr_name_display, is_set_tier),
+            # [v7.27.0] 지운 큐텐 증정. 검수 화면에서 확인할 수 있어야 한다.
+            "dropped_gifts": _dropped_gifts,
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
