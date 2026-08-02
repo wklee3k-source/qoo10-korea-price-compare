@@ -1462,6 +1462,32 @@ def t74_change_notes_display():
           f"부착{attached} 옛문구제거{no_old_text} 표시{shown}")
 
 
+# --------------------- #75 판정 로직 설계 이력 문서
+#  같은 시도를 반복해서 실패하는 일이 잦았다. '제형이 두 개면 세트'처럼
+#  그럴듯해 보이는 규칙이 실측에서 오탐 투성이라 되돌린 사례가 여럿이고,
+#  되돌린 이유가 커밋 메시지에만 흩어져 있어 나중에 찾기 어려웠다.
+#  판정로직_설계이력.md 에 '시도했다가 못 쓴 방법'과 그 근거를 모아둔다.
+#  새 규칙을 만들기 전에 이 문서를 먼저 읽는다.
+def t75_design_history_doc():
+    doc = ROOT / "판정로직_설계이력.md"
+    if not doc.exists():
+        check("75 판정 로직 설계 이력", False, "판정로직_설계이력.md 없음"); return
+    text = doc.read_text(encoding="utf-8")
+
+    # 실패 사례가 근거(실측 숫자)와 함께 적혀 있어야 한다. 숫자가 없으면
+    # 다음 사람이 "이번엔 다를 것"이라 생각하고 같은 시도를 반복한다.
+    has_failures = "시도했다가 못 쓴 방법" in text
+    has_numbers = all(k in text for k in ("255건", "625건", "187건"))
+    has_order = "판정 순서" in text and "confidence_tier" in text
+    has_pitfalls = all(k in text for k in ("제형 판정의 함정", "브랜드 판정의 함정"))
+    has_checklist = "새 규칙을 만들 때 점검할 것" in text
+
+    ok = has_failures and has_numbers and has_order and has_pitfalls and has_checklist
+    check("75 판정 로직 설계 이력", ok,
+          f"실패사례{has_failures} 실측근거{has_numbers} 판정순서{has_order} "
+          f"함정{has_pitfalls} 점검표{has_checklist}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
