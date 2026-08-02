@@ -73,6 +73,11 @@ def render_cards(pairs: list[dict]) -> str:
                     f'<strong style="color:{_fcolor};">{esc(_kf)}</strong>'
                     f' <span class="badge tier-{"A" if _fs == "match" else "D" if _fs == "mismatch" else "B"}">'
                     f'{_fmark}</span>')
+        # [v7.17.0] 번역본이 한국 표기로 교정됐으면 그 사실을 보여준다.
+        fix_note = ""
+        if p.get("term_fixed"):
+            fix_note = (f'<span class="badge" style="background:#eef3fb;color:#3a5a8c;'
+                        f'border:1px solid #b9cbe6;">표기 교정 {esc(p["term_fixed"])}</span>')
         _tier = p.get("tier") or "B"
         _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
         brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
@@ -138,12 +143,14 @@ def render_cards(pairs: list[dict]) -> str:
     </tr>
     <tr>
       <td class="label">제형</td>
-      <td>{form_row}</td>
+      <td>{form_row} {fix_note}</td>
     </tr>
     <tr>
       <td class="label">상품명</td>
       <td>
-        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        {('<div class="vol-fix-preview">' + p['qoo10_title_highlighted']
+    + ('<div class="vol-fix-notes">' + ' · '.join(esc(n) for n in p.get('change_notes') or []) + '</div>'
+       if p.get('change_notes') else '') + '</div>') if p.get('qoo10_title_highlighted') else ''}
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>

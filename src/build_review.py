@@ -1001,8 +1001,15 @@ def build_pairs():
         qoo10_title_display = q["title"]
         qoo10_title_highlighted = ""  # 바뀐 부분을 <mark>로 감싼 미리보기용(읽기전용)
         vol_auto_corrected = False
+        # [v7.18.0] "무엇에서 무엇으로" 바뀌었는지 기록한다. 미리보기 문장
+        # ("자동수정 미리보기: ...")만으로는 원래 값이 뭐였는지 안 보여서,
+        # 실제로 얼마나 바뀐 건지 판단하려면 원문을 따로 찾아봐야 했다.
+        change_notes: list[str] = []
         if not vol_match and qoo10_vol is not None and kr_vol is not None and brand_status != "mismatch":
             kr_vol_int = int(kr_vol) if kr_vol == int(kr_vol) else kr_vol
+            _orig_m = re.search(r"\d+(?:\.\d+)?\s*(mL|ml|g|L)", q["title"])
+            _orig_vol_str = _orig_m.group(0) if _orig_m else f"{qoo10_vol}"
+            change_notes.append(f"용량 {_orig_vol_str} → {kr_vol_int}{_orig_m.group(1) if _orig_m else 'ml'}")
             qoo10_title_display = re.sub(
                 r"\d+(?:\.\d+)?\s*(mL|ml|g|L)",
                 lambda m: f"{kr_vol_int}{m.group(1)}",
@@ -1032,12 +1039,14 @@ def build_pairs():
             explicit_one_pattern = re.compile(r"(?<!\d)1(\s*(?:個|개|입|병|本))\b")
             explicit_match = explicit_one_pattern.search(qoo10_title_display)
             if explicit_match:
+                change_notes.append(f"수량 1{explicit_match.group(1)} → {kr_qty}{explicit_match.group(1)}")
                 qoo10_title_display = explicit_one_pattern.sub(
                     lambda m: f"{kr_qty}{m.group(1)}", qoo10_title_display, count=1)
                 base_for_highlight = qoo10_title_highlighted or q["title"]
                 qoo10_title_highlighted = explicit_one_pattern.sub(
                     lambda m: f'<mark class="vol-fix">{kr_qty}{m.group(1)}</mark>', base_for_highlight, count=1)
             else:
+                change_notes.append(f"수량 표기없음 → {kr_qty}개")
                 qty_suffix_jp = f" X {kr_qty}個"
                 qoo10_title_display = qoo10_title_display.rstrip() + qty_suffix_jp
                 if qoo10_title_highlighted:
@@ -1060,6 +1069,7 @@ def build_pairs():
             m = qty_removal_pattern.search(qoo10_title_display)
             if m:
                 qty_removed_original = m.group(0).strip()
+                change_notes.append(f"수량 {qty_removed_original} → 표기 제거(단품)")
                 qoo10_title_display = qty_removal_pattern.sub("", qoo10_title_display, count=1).strip()
                 if qoo10_title_highlighted:
                     qoo10_title_highlighted = qty_removal_pattern.sub(
@@ -1078,6 +1088,7 @@ def build_pairs():
         m2 = shipping_removal_pattern.search(qoo10_title_display)
         if m2:
             removed_text = m2.group(0).strip()
+            change_notes.append(f"발송지 표기 '{removed_text}' → 삭제(한국에서 발송)")
             qoo10_title_display = shipping_removal_pattern.sub("", qoo10_title_display, count=1).strip()
             base_for_highlight = qoo10_title_highlighted or q["title"]
             qoo10_title_highlighted = shipping_removal_pattern.sub(
@@ -1091,6 +1102,7 @@ def build_pairs():
         pairs.append({
             "goods_no": x["goods_no"], "qoo10_title": qoo10_title_display, "qoo10_title_original": q["title"],
             "vol_auto_corrected": vol_auto_corrected, "qty_auto_corrected": qty_auto_corrected, "vol_status": vol_status, "qoo10_title_highlighted": qoo10_title_highlighted, "qoo10_brand": orig_brand,
+            "change_notes": change_notes,
             "qoo10_image": q.get("image_url"), "qoo10_price_jpy": q.get("price_jpy"), "qoo10_url": to_pc_url(q.get("item_url")),
             "qoo10_name_kr": x.get("translated_kr") or translations.get(x["goods_no"], ""),
             "kr_brand": x.get("brand"), "kr_name": kr_name_display,
@@ -1115,6 +1127,9 @@ def build_pairs():
             "color_status": color_status(translated_kr, x.get("name") or ""),
             # [v7.4.0] 검수 화면에 제형을 직접 보여준다. 등급만으로는 무엇이
             # 어긋났는지 알 수 없어, 사람이 다시 상품명을 읽어야 했다.
+            # [v7.17.0] 번역본을 한국 표기로 고친 흔적. 무엇이 바뀌었는지
+            #  안 보이면 잘못 고쳐도 알 수 없다.
+            "term_fixed": x.get("term_fixed") or "",
             "qoo10_forms": sorted(extract_forms(translated_kr)),
             "kr_forms": sorted(extract_forms(x.get("name") or "")),
             "tier": confidence_tier(
@@ -1280,6 +1295,11 @@ def build_html(pairs: list[dict]):
                     f'<strong style="color:{_fcolor};">{esc(_kf)}</strong>'
                     f' <span class="badge tier-{"A" if _fs == "match" else "D" if _fs == "mismatch" else "B"}">'
                     f'{_fmark}</span>')
+        # [v7.17.0] 번역본이 한국 표기로 교정됐으면 그 사실을 보여준다.
+        fix_note = ""
+        if p.get("term_fixed"):
+            fix_note = (f'<span class="badge" style="background:#eef3fb;color:#3a5a8c;'
+                        f'border:1px solid #b9cbe6;">표기 교정 {esc(p["term_fixed"])}</span>')
         _tier = p.get("tier") or "B"
         _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
         brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
@@ -1348,12 +1368,14 @@ def build_html(pairs: list[dict]):
     </tr>
     <tr>
       <td class="label">제형</td>
-      <td>{form_row}</td>
+      <td>{form_row} {fix_note}</td>
     </tr>
     <tr>
       <td class="label">상품명</td>
       <td>
-        {'<div class="vol-fix-preview">🔴 자동수정(용량/수량/발송지) 미리보기: ' + p['qoo10_title_highlighted'] + '</div>' if p.get('qoo10_title_highlighted') else ''}
+        {('<div class="vol-fix-preview">' + p['qoo10_title_highlighted']
+    + ('<div class="vol-fix-notes">' + ' · '.join(esc(n) for n in p.get('change_notes') or []) + '</div>'
+       if p.get('change_notes') else '') + '</div>') if p.get('qoo10_title_highlighted') else ''}
         <textarea class="name-edit" data-goods="{goods_no}" rows="2">{p['qoo10_title']}</textarea>
         <div class="name-kr-readonly">{dim_minor_text(p['qoo10_name_kr'])}</div>
         <textarea class="kr-name-edit" data-goods="{goods_no}" rows="2">{esc(kr_name_full)}</textarea>

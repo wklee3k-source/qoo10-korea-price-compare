@@ -41,6 +41,20 @@ TERM_FIXES: list[tuple[str, str]] = [
     ("시트마스크", "마스크팩"),
 ]
 
+# ①-B 한국 표기 기준 교정. 매칭된 한국 상품명과 큐텐 번역본을 1,277쌍
+#  대조해 뽑았다(같은 제품이 확실한 쌍만, 3회 이상 반복된 것만).
+#  번역이 만든 표기가 한국 쇼핑몰 표기와 어긋나면 검색이 빗나간다.
+KOREAN_SPELLING_FIXES: list[tuple[str, str]] = [
+    ("프레시", "프레쉬"),
+    ("배리어", "베리어"),
+    ("글리콜릭", "글리코릭"),
+    ("애씨드", "애시드"),
+    ("스플래시", "스플래쉬"),
+    ("에멀전", "에멀젼"),
+    ("모이스처라이징", "모이스춰라이징"),
+    ("데오도란트", "데오드란트"),
+]
+
 # ② 띄어쓰기 — 한국 상품명은 붙여 쓴다
 SPACING_FIXES: list[tuple[str, str]] = [
     ("선 크림", "선크림"), ("선 스틱", "선스틱"), ("선 세럼", "선세럼"),
@@ -51,7 +65,7 @@ SPACING_FIXES: list[tuple[str, str]] = [
     ("헤어 오일", "헤어오일"), ("헤어 에센스", "헤어에센스"),
 ]
 
-ALL_FIXES = TERM_FIXES + SPACING_FIXES
+ALL_FIXES = TERM_FIXES + KOREAN_SPELLING_FIXES + SPACING_FIXES
 
 
 def fix_text(text: str) -> tuple[str, list[str]]:
@@ -91,6 +105,9 @@ def main() -> int:
             samples.append((original, fixed))
         if not dry:
             p["translated_kr"] = fixed
+            # [v7.17.0] 무엇을 바꿨는지 남긴다. 검수 화면에 표시돼야
+            #  잘못 고친 것을 사람이 알아볼 수 있다.
+            p["term_fixed"] = " · ".join(applied)
 
     print(f"[대상] 전체 {len(products):,}건 중 {changed:,}건 수정")
     for rule, n in counter.most_common():
