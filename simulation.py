@@ -1522,12 +1522,12 @@ def t75_design_history_doc():
 #  매번 오매칭된다. 검수에서 빼도 다음 발굴에 또 들어오므로 발굴 단계에서
 #  막는다.
 #
-#  발굴·수확 양쪽에서 막아야 한다. 한쪽만 고치면 다른 경로로 계속 들어온다
-#  (네일·향수 제외 때 겪은 것과 같은 문제다).
+#  검증 입력을 만들 때 걸러낸다. 검수페이지 생성 때만 빼면 검증이 그대로
+#  다 돌고 나서 버려진다 — 해외브랜드에서 이미 겪은 낭비다(490건이 헛돌았다).
+#  발굴·수확은 건드리지 않는다. 상품 자체는 계속 수집하되 검수 대상에서만 뺀다.
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
-    disc = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
-    harvest = (SRC / "harvest_full_catalog.py").read_text(encoding="utf-8")
+    wf = WF.read_text(encoding="utf-8")
 
     exists = path.exists()
     data = {}
@@ -1540,15 +1540,15 @@ def t76_discovery_blocklist():
     # 사유가 적혀 있어야 한다. 없으면 나중에 왜 막았는지 알 수 없다.
     has_reason = valid and all(b.get("goods_no") and b.get("reason")
                                for b in data["blocked"])
-    both = all("DISCOVERY_BLOCKLIST" in t for t in (disc, harvest))
-    applied = ('in DISCOVERY_BLOCKLIST' in disc and 'in DISCOVERY_BLOCKLIST' in harvest)
-    # 파일이 없거나 깨져도 발굴이 멈추면 안 된다.
-    safe = all("except (OSError, ValueError)" in t for t in (disc, harvest))
+    # 검증 입력 단계에서 걸러야 한다(검수페이지 생성 때가 아니라).
+    at_verify = "discovery_blocklist.json" in wf and "[개별제외]" in wf
+    # 파일이 없어도 검증이 멈추면 안 된다.
+    safe = "_bp.exists()" in wf
 
-    ok = exists and valid and has_reason and both and applied and safe
-    check("76 발굴 제외 목록", ok,
+    ok = exists and valid and has_reason and at_verify and safe
+    check("76 검수 대상 개별 제외", ok,
           f"파일{exists}({len(data.get('blocked', [])) if valid else '깨짐'}건) 형식{valid} "
-          f"사유기록{has_reason} 발굴·수확양쪽{both} 적용{applied} 안전처리{safe}")
+          f"사유기록{has_reason} 검증단계적용{at_verify} 안전처리{safe}")
 
 
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)

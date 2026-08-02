@@ -58,29 +58,6 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 키워드 큐 고갈의 직접 원인이었다.
 REVIEW_THRESHOLD = 10  # [v1.9.1부터 미사용] 상점선별 필터 해지됨. 과거 기록용으로만 남김
 MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
-def _load_discovery_blocklist() -> set:
-    """발굴 단계에서 아예 저장하지 않을 상품번호.
-
-    카테고리·리뷰수 같은 일반 조건으로는 거를 수 없는 개별 사유가 있다.
-    실측: 'エイシカ365 水分鎮静トナー, [25ml*10] 250ml' 는 소분 표기가 앞에
-    와서 용량이 25ml 로 잘못 읽히고, 그 탓에 200ml 상품과 8배 차이로 판정돼
-    매번 오매칭된다. 검수에서 빼도 다음 발굴에 또 들어오므로 여기서 막는다.
-
-    목록이 없거나 깨져도 발굴은 계속돼야 한다 — 이 파일은 부가 정보다.
-    """
-    path = Path(__file__).resolve().parent.parent / "data" / "discovery_blocklist.json"
-    if not path.exists():
-        return set()
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, ValueError) as e:
-        print(f"[경고] discovery_blocklist.json 읽기 실패: {e}", file=sys.stderr)
-        return set()
-    return {str(b.get("goods_no")) for b in data.get("blocked", []) if b.get("goods_no")}
-
-
-DISCOVERY_BLOCKLIST = _load_discovery_blocklist()
-
 PRODUCT_SAVE_REVIEW_THRESHOLD = 10  # 20 -> 10 하향(품질 우선). 실측: 통합본 4,586건 중 리뷰<10이 4,355건(95%)이라 물량 손실은 5%뿐
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
@@ -234,9 +211,7 @@ def crawl_shop_best5(shop_id: str) -> tuple[list[dict], bool]:
 
         skip_reason = None
         price_jpy = item.get("price_jpy")
-        if str(item.get("goods_no")) in DISCOVERY_BLOCKLIST:
-            skip_reason = "발굴제외목록"
-        elif category in COLOR_COSMETIC_CATEGORIES:
+        if category in COLOR_COSMETIC_CATEGORIES:
             skip_reason = "색조카테고리"
         elif category not in COSMETIC_ALLOWED_CATEGORIES:
             skip_reason = "화장품카테고리아님"

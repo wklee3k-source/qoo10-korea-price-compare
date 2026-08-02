@@ -1193,6 +1193,19 @@ jobs:
           allp = [p for p in state.get('all_products', []) if p.get('translated_kr')]
           kept = [p for p in allp if (p.get('brand') or '').strip() not in foreign]
           print(f'[해외브랜드제외] {len(allp) - len(kept)}건 (남은 검증대상 {len(kept)}건)')
+          # [v7.22.1] 개별 사유로 검수에서 뺄 상품은 검증도 하지 않는다.
+          # 검수페이지 생성 때만 걸러내면 검증이 그대로 다 돌고 나서
+          # 버려진다 — 해외브랜드에서 이미 겪은 낭비다. 카테고리·리뷰수
+          # 같은 일반 조건으로 못 거르는 개별 사유일 때 쓴다.
+          _bp = _pl.Path('../data/discovery_blocklist.json')
+          if _bp.exists():
+              _bl = {str(b.get('goods_no')) for b in
+                     json.loads(_bp.read_text(encoding='utf-8')).get('blocked', [])
+                     if b.get('goods_no')}
+              _before = len(kept)
+              kept = [p for p in kept if str(p.get('goods_no')) not in _bl]
+              if _before != len(kept):
+                  print(f'[개별제외] {_before - len(kept)}건 (남은 검증대상 {len(kept)}건)')
           rows = [{'goods_no': p['goods_no'], 'translated_kr': p['translated_kr'], 'known_brand': p.get('known_brand','')}
                   for p in kept]
           mine = [r for r in rows if zlib.crc32(str(r['goods_no']).encode()) % 10 == $S]  # 나눗셈은 워커수(10)와 일치
