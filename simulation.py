@@ -842,8 +842,35 @@ def t59_confidence_tiers():
                   and 'nonempty[0] ^ nonempty[1]' in src)
     # SPF/PA 표기가 '+'를 달고 있어 'SPF50+ PA++++ 50ml' 이 '+ 50ml' 로
     # 읽히면서 멀쩡한 선크림이 세트로 잡혔다. 먼저 지운다.
-    spf_guard = ("SPF_NOTATION_RE" in src
-                 and "SPF_NOTATION_RE.sub" in src.split("def is_set_product(")[1])
+    # [v7.21.0] 자외선 차단 등급의 '+'는 등급 기호이지 '제품A + 제품B'의
+    # '+'가 아니다. PA 등급은 PA+ ~ PA++++ 네 단계이고, 구분자가 공백·
+    # 슬래시·쉼표로 제각각이며 아예 붙어 있기도 하다. 실측 표기 형태를
+    # 전부 처리하는지 직접 돌려서 확인한다.
+    spf_declared = "SPF_NOTATION_RE" in src
+    spf_used = "SPF_NOTATION_RE.sub" in src.split("def is_set_product(")[1]
+    spf_forms_ok = False
+    if spf_declared:
+        import importlib
+        _sys_path = sys.path[:]
+        sys.path.insert(0, str(SRC))
+        try:
+            import build_review as _br
+            importlib.reload(_br)
+            samples = ["SPF50+ PA++++", "SPF 50+ PA++++", "SPF50+/PA++++",
+                       "SPF50+PA++++", "SPF50+, PA++++", "SPF50+ / PA++++",
+                       "SPF38 PA++", "SPF50+", "PA++++", "PA+"]
+            spf_forms_ok = all(not _br.SPF_NOTATION_RE.sub("", t).strip()
+                               for t in samples)
+            # 선크림에 등급이 붙어도 세트가 아니어야 하고,
+            # 진짜 세트는 등급이 있어도 세트로 잡혀야 한다.
+            spf_forms_ok = (spf_forms_ok
+                            and not _br.is_set_product("톤업 선크림 SPF50+ PA++++ 50ml", "")
+                            and _br.is_set_product("선크림 SPF50+ PA++++ 50ml + 선스틱 20g", ""))
+        except Exception:  # noqa: BLE001
+            spf_forms_ok = False
+        finally:
+            sys.path[:] = _sys_path
+    spf_guard = spf_declared and spf_used and spf_forms_ok
     has_fn = "def confidence_tier(" in src
     # [v5.5.0] 등급은 점수 구간이 아니라 '무엇이 불확실한가'로 나눈다.
     # B등급 647건을 전수 확인해보니 성격이 전혀 다른 것들이 같은 점수에

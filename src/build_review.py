@@ -599,9 +599,19 @@ SET_PATTERN = re.compile(
     r"\+\s*\d+\s*(개|매|장|ml|g)|\d+\s*(개입|매입|본|병)\s*세트", re.I)
 
 
-# [v7.20.0] SPF/PA 표기는 '+'를 달고 있어 세트 판정을 방해한다.
-#  'SPF50+ PA++++' 는 세트와 아무 관계가 없다. 먼저 지우고 본다.
-SPF_NOTATION_RE = re.compile(r"SPF\s*\d+\s*\+*|PA\s*\++", re.I)
+# [v7.21.0] 자외선 차단 등급 표기. 여기 쓰인 '+'는 등급을 나타내는
+#  기호이지 '제품 A + 제품 B'의 '+'가 아니다. 둘을 구분하지 않으면
+#  'SPF50+ PA++++ 50ml' 이 '+ 50ml' 로 읽혀 멀쩡한 선크림이 세트로 잡힌다.
+#
+#  실측으로 확인된 표기 형태(전부 같은 뜻이다):
+#      SPF50+ PA++++      SPF 50+ PA++++     SPF50+/PA++++
+#      SPF50+PA++++       SPF50+, PA++++     SPF50+ / PA++++
+#      SPF38 PA++         SPF20 PA++         SPF50+
+#  PA 등급은 PA+ ~ PA++++ 네 단계이고, SPF 는 숫자 뒤에 '+'가 붙을 수 있다
+#  (SPF50+ 는 'SPF 50 이상'이라는 뜻). 둘 사이 구분자는 공백·슬래시·쉼표가
+#  섞여 나오고 아예 붙어 있기도 하다.
+SPF_NOTATION_RE = re.compile(
+    r"SPF\s*\d+\s*\+?(?:\s*[/,]?\s*PA\s*\+{1,4})?|PA\s*\+{1,4}", re.I)
 
 
 def is_set_by_plus(text: str) -> bool:
