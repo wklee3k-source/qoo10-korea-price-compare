@@ -26,6 +26,28 @@ COMPARISON = BASE / "comparison"
 # 계속 채워나간다. 예: La'dor(사전표기 "라도르")를 네이버는 "아도르"로 표기.
 BRAND_ALIASES = {
     "라도르": ["아도르"],
+    # [v7.33.0] 브랜드 사전은 한글 표기만 갖고 있는데, 로컬 수집(collected_pages)
+    #  브랜드칸은 실제 페이지에서 읽은 영문·로마자 표기다. 한글끼리만 비교하면
+    #  둘이 만날 일이 없어 D(브랜드 불일치)로 떨어졌다. 실측: D등급 브랜드
+    #  불일치 72건 중 17종 26건이 이 유형이었다 — 전부 실제 검증 데이터에서
+    #  직접 관찰된 영문 표기만 등록한다(추측 등록 금지, 1-4 원칙과 같은 이유).
+    "넘버즈인": ["numbuzin"],
+    "네이처리퍼블릭": ["NATUREREPUBLIC"],
+    "닥터지": ["DR.G"],
+    "리얼베리어": ["REAL BARRIER"],
+    "메디큐브": ["Medicube"],
+    "무인양품": ["MUJI"],
+    "믹순": ["MIXSOON"],
+    "바이오힐보": ["BIOHEAL BOH"],
+    "브리스킨": ["briskin"],
+    "센텔리안24": ["CENTELLIAN24"],
+    "셀퓨전씨": ["CELL FUSION C"],
+    "스킨1004": ["SKIN1004"],
+    "스킨푸드": ["SKINFOOD"],
+    "알리": ["ALLIE"],
+    "엘릭서": ["Elixir"],
+    "입사": ["IPSA"],
+    "코스알엑스": ["COSRX", "CosRx"],
 }
 
 
@@ -1069,7 +1091,15 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict,
         # [v5.2.0] 양방향으로 본다. 사전값이 판매처명 표기라 더 길 수 있고
         # (Purito -> '퓨리토서울'), 반대로 판매처가 짧게 쓸 수도 있다.
         # 한 방향만 보면 '퓨리토서울'과 '퓨리토'가 서로 남남이 된다.
+        # [v7.34.0] 공백 유무 차이도 같이 본다. 로컬 수집 브랜드칸은
+        #  실제 페이지 표기를 그대로 가져오는데 '키시닝 뷰티'처럼 중간에
+        #  공백이 들어간다 — 사전값 '키시닝뷰티'(공백 없음)와 글자는
+        #  같은데 단순 substring 비교로는 서로 남남이 된다. 실측: D등급
+        #  브랜드 불일치 중 이 유형이 3종(오지오토·바비브라운·키시닝뷰티,
+        #  브랜드 사전 자체 표기차인 나머지는 별개)이었다.
+        kr_nospace = re.sub(r"\s+", "", kr_brand_lower)
         if any(c.lower() in kr_brand_lower or kr_brand_lower in c.lower()
+               or re.sub(r"\s+", "", c.lower()) in kr_nospace
                for c in candidates if c):
             return "match"
         # [v5.3.0] 브랜드 칸에 판매처명이 들어오는 경우가 많다.
@@ -1078,7 +1108,10 @@ def check_brand(orig_brand: str, kr_brand_text: str, brand_dict: dict,
         # 브랜드 칸만 보면 같은 제품인데도 '브랜드가 다릅니다'가 된다.
         # 상품명에 브랜드가 들어있으면 맞은 것으로 본다.
         name_lower = (kr_product_name or "").lower()
-        if name_lower and any(c.lower() in name_lower for c in candidates if c and len(c) >= 2):
+        name_nospace = re.sub(r"\s+", "", name_lower)
+        if name_lower and any(
+                c.lower() in name_lower or re.sub(r"\s+", "", c.lower()) in name_nospace
+                for c in candidates if c and len(c) >= 2):
             return "match"
         return "mismatch"
     orig_alnum = re.sub(r"[^a-z0-9]", "", orig_brand.lower())

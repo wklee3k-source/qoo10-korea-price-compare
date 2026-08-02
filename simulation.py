@@ -1133,7 +1133,7 @@ def t64_brand_in_product_name():
     fn = src.split("def check_brand(")[1].split("\ndef ")[0]
 
     accepts_name = "kr_product_name" in src.split("def check_brand(")[1][:200]
-    name_path = "in name_lower for c in candidates" in fn
+    name_path = "in name_lower or re.sub" in fn
     # 사전 대응(expected)이 있을 때만 쓰는 경로여야 한다.
     only_with_dict = fn.index("name_lower") > fn.index("expected = brand_dict.get")
     # [v7.11.0] 사전에 없어도 큐텐 브랜드가 상품명에 그대로 있으면 같은
@@ -1888,6 +1888,74 @@ def t82_gift_volume_not_misread():
               f"용량없음{fallback_ok} 연결{wired}")
     except Exception as e:  # noqa: BLE001
         check("82 증정구간 용량 오추출 방지", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
+# --------------------- #83 브랜드 사전의 영문 별칭 (v7.33.0)
+#  브랜드 사전은 한글 표기만 갖고 있는데, 로컬 수집(collected_pages)
+#  브랜드칸은 실제 페이지에서 읽은 영문·로마자 표기다. 한글끼리만
+#  비교하면 둘이 만날 일이 없어 D(브랜드 불일치)로 떨어졌다.
+#  실측: D등급 브랜드 불일치 72건 중 17종 26건이 이 유형이었다.
+def t83_brand_aliases_latin():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        cases = [
+            ("ドクタージー", "닥터지", "DR.G"),
+            ("", "코스알엑스", "COSRX"),
+            ("", "스킨1004", "SKIN1004"),
+            ("", "메디큐브", "Medicube"),
+        ]
+        # BRAND_ALIASES에 등록된 영문 표기로 실제 매칭되는지
+        ok = all(
+            _br.check_brand("X", kr_text, {"X": expected}, "") == "match"
+            for _, expected, kr_text in cases
+        )
+        # 최소 17종 등록돼 있어야 한다(실측 근거 없는 추측 등록 금지 —
+        #  전부 collected_pages.json 실데이터에서 관찰된 표기만)
+        enough = len(_br.BRAND_ALIASES) >= 17
+
+        ok = ok and enough
+        check("83 브랜드 영문 별칭", ok,
+              f"매칭{ok} 등록수{len(_br.BRAND_ALIASES)}")
+    except Exception as e:  # noqa: BLE001
+        check("83 브랜드 영문 별칭", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
+# --------------------- #84 브랜드 비교 시 공백 무시 (v7.34.0)
+#  로컬 수집 브랜드칸은 실제 페이지 표기를 그대로 가져오는데 '키시닝
+#  뷰티'처럼 중간에 공백이 들어간다. 사전값 '키시닝뷰티'(공백 없음)와
+#  글자는 같은데 단순 substring 비교로는 서로 남남이 됐다.
+def t84_brand_whitespace_insensitive():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        cases_ok = all(_br.check_brand("X", kb, {"X": exp}, kn) == "match" for exp, kb, kn in [
+            ("키시닝뷰티", "키시닝뷰티 (kisyningbeauty)", "키시닝 뷰티(KISYNING BEAUTY) 시카 듀 케어링 토너 150ml"),
+            ("바비브라운", "바비 브라운 (BOBBI BROWN)", "[바비 브라운] NEW 비타민 인리치드 페이스 베이스+ 50ml"),
+            ("오지오토", "올큐어 (ALLCURE)", "oggi otto 오지 오토 세럼 CMC 밀키 200g"),
+        ])
+        # 진짜 다른 브랜드는 여전히 불일치여야 한다(공백 무시가 과도하게
+        #  느슨해지면 안 됨)
+        still_catches = _br.check_brand(
+            "X", "설화수 (SULWHASOO)", {"X": "이니스프리"}, "설화수 자음생크림") == "mismatch"
+
+        ok = cases_ok and still_catches
+        check("84 브랜드 공백 무시", ok,
+              f"매칭{cases_ok} 오탐방지{still_catches}")
+    except Exception as e:  # noqa: BLE001
+        check("84 브랜드 공백 무시", False, f"{type(e).__name__}: {e}")
     finally:
         sys.path[:] = _sp
 
