@@ -1617,6 +1617,85 @@ def t77_count_mismatch_demotes_to_b():
         sys.path[:] = _sp
 
 
+# --------------------- #78 '본품 + α' 3분류 (v7.26.0)
+#  큐텐은 본품 단품인데 한국 판매처는 기획 구성인 건이 42건 있었다.
+#  전부 세트로 묶으면 멀쩡한 매칭이 S로 사라지고, 전부 무시하면 실제로
+#  두 배를 사는 건이 A로 남는다. α를 증정/본품추가/다른제품으로 가른다.
+#
+#  두 가지 함정이 실측으로 확인됐다.
+#  (1) 판정 순서 — 용량 비율을 제형보다 먼저 보면 '토너 350ml + 크림
+#      20ml'(다른 제품)이 소량이라는 이유로 증정이 된다. 순서를 뒤집자
+#      다른제품 검출이 13건 -> 39건으로 늘고 오분류가 사라졌다.
+#  (2) 비대칭 — 증정을 무시하는 건 한국측(사는 쪽)만이다. 큐텐측은 내가
+#      파는 구성이라 '크림 50ml + 미니 15ml' 로 올려놨으면 미니도 사서
+#      보내야 한다. 양쪽에서 지우면 못 맞추는 구성이 A로 남는다.
+def t78_bonus_classification():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        def _kind(seg, mv=50.0, ms=None, mf=frozenset({"크림"})):
+            return _br.classify_bonus(seg, mv, ms, set(mf))
+
+        gift_ok = all(_kind(s) == "gift" for s in
+                      ["휴대용 미니 15ml", "파우치", "쇼핑백)", "미니거울",
+                       "픽서 50ml 증정)", "4ml)", "약통"])
+        main_ok = (_kind("리필250ml") == "main"
+                   and _kind("리필 100ml 기획상품 탈모 두피에센스") == "main"
+                   and _kind("50ml") == "main"
+                   and _br.classify_bonus("리필 60매", None, 60, set()) == "main")
+        # 제형이 다르면 소량이어도 다른 제품이다(판정 순서 고정)
+        other_ok = (_kind("포어 리파이너 크림 30ml", 200.0, None, frozenset({"로션"})) == "other"
+                    and _kind("크림 20ml 기획세트", 350.0, None, frozenset({"토너"})) == "other")
+
+        # 증정은 잘라내고, 본품 추가는 배수로 센다
+        _, m1, o1 = _br.split_bonus("마데카 크림 50ml + 휴대용 미니 15ml")
+        _, m2, o2 = _br.split_bonus("트리트먼트 250ml+리필250ml")
+        _, m3, o3 = _br.split_bonus("세비엄 로션 200ml+포어 리파이너 크림 30ml")
+        split_ok = (m1, o1, m2, o2, m3, o3) == (1, False, 2, False, 1, True)
+
+        # 등급 결과: 증정 -> 그대로, 동량 리필 -> 수량 불일치, 다른제품 -> 세트
+        gift_keeps = not _br.counts_mismatch(
+            "마데카 크림 리뉴 PDRN 50ml",
+            "센텔리안24 마데카 크림 리뉴 PDRN 50ml + 휴대용 미니 15ml")
+        refill_catches = _br.counts_mismatch(
+            "노워시 트리트먼트 250ml",
+            "그로우어스 노워시 트리트먼트 250ml+리필250ml")
+        other_is_set = _br.is_set_product(
+            "토너 350ml", "아누아 어성초 토너 350ml+크림 20ml 기획세트")
+        gift_not_set = not _br.is_set_product(
+            "마데카 크림 50ml", "센텔리안24 마데카 크림 50ml + 휴대용 미니 15ml")
+
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        # 세트 판정 입력은 표시명이어야 한다(승자 name 이 아니라)
+        # 비대칭: 증정 제거는 한국측 인자에만 적용해야 한다. 큐텐측은 내가
+        #  파는 구성이라 지우면 안 된다(큐텐측 구성 불일치 검출 자체는
+        #  별도 규칙 — 여기서는 지우지 않는다는 것만 고정한다).
+        cm = src.split("def counts_mismatch(")[1].split("\ndef ")[0]
+        st = src.split("def is_set_product(")[1].split("\ndef ")[0]
+        asymmetric = ("split_bonus(kr_name)" in cm
+                      and "split_bonus(qoo10_name_kr)" not in cm
+                      and "split_bonus(kr_name)" in st
+                      and "split_bonus(qoo10_name)" not in st)
+
+        display_input = "is_set_tier = is_set_product(translated_kr, kr_name_display)" in src
+
+        ok = all([gift_ok, main_ok, other_ok, split_ok, gift_keeps,
+                  refill_catches, other_is_set, gift_not_set, asymmetric,
+                  display_input])
+        check("78 본품+증정 3분류", ok,
+              f"증정{gift_ok} 본품추가{main_ok} 다른제품{other_ok} 분리{split_ok} "
+              f"증정유지{gift_keeps} 리필검출{refill_catches} 세트{other_is_set} "
+              f"증정비세트{gift_not_set} 비대칭{asymmetric} 표시명입력{display_input}")
+    except Exception as e:  # noqa: BLE001
+        check("78 본품+증정 3분류", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")

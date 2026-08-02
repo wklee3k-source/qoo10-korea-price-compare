@@ -145,6 +145,82 @@ def total_count(text: str) -> int:
     return sheets
 
 
+# [v7.26.0] '본품 + α' 구성에서 α가 무엇인지 가른다.
+#  큐텐은 본품 단품인데 한국 판매처는 기획 구성인 경우가 많다. 이걸
+#  전부 세트로 묶으면 멀쩡한 매칭이 S로 사라지고, 전부 무시하면 실제로
+#  두 배를 사는 건이 A로 남는다. α를 세 갈래로 나눠야 한다.
+#
+#      증정(gift)   파우치·미니·샘플 등. 가격에 거의 영향 없다 -> 무시
+#      본품추가(main) 동량 리필·1+1 등. 실제 수량이 늘어난다   -> 총량 합산
+#      다른제품(other) 토너+크림 같은 구성. 비교 자체가 안 된다 -> 세트(S)
+#
+#  판정 순서가 중요하다. 용량 비율을 제형보다 먼저 보면 '토너 350ml +
+#  크림 20ml'(다른 제품)이 소량이라는 이유로 증정이 된다 — 실측에서
+#  이 순서를 뒤집자 other 13건 -> 39건으로 늘고 오분류가 사라졌다.
+GIFT_NONPRODUCT_RE = re.compile(
+    r"파우치|쇼핑백|가방|브러[시쉬]|미니거울|거울|약통|화장솜|스파[츄출]러|"
+    r"케이스|포토카드|밴드|치약|퍼프|헤어밴드|텀블러|키링|스티커")
+GIFT_WORD_RE = re.compile(r"증정|사은품|샘플|체험분|미니어처")
+REFILL_RE = re.compile(r"리필")
+
+# 부가 용량이 본품의 절반 이상이면 증정이 아니라 본품 추가로 본다.
+#  실측: 절반 미만은 '휴대용 미니 15ml'·'기획(+4ml)' 처럼 맛보기였고,
+#  절반 이상은 '250ml+리필250ml'·'60매+리필60매' 처럼 실제 두 배였다.
+BONUS_MAIN_RATIO = 0.5
+
+
+def classify_bonus(seg: str, main_vol, main_sheets, main_forms) -> str:
+    """'+' 뒤 한 조각이 증정인지 본품인지 다른 제품인지 가른다."""
+    s = (seg or "").strip()
+    if not s or re.fullmatch(r"\s*\d+\s*\W*", s):
+        return "empty"          # '1+1' 처럼 수량 표기가 쪼개진 것
+    if GIFT_NONPRODUCT_RE.search(s) or GIFT_WORD_RE.search(s):
+        return "gift"
+    # '리필'은 제형어가 뒤에 붙어 있어도 본품 추가다 — 실측 오분류:
+    #  '그로우턴 앰플 100ml + 리필 100ml 기획상품 탈모 두피에센스'가
+    #  뒤의 '에센스' 때문에 다른 제품으로 읽혔다.
+    if REFILL_RE.search(s):
+        return "main"
+    forms = _narrow_forms(extract_forms(s))
+    if forms and main_forms and forms != main_forms:
+        return "other"
+    vol, sheets = extract_volume_ml(s), extract_sheet_count(s)
+    if vol is not None and main_vol:
+        return "main" if vol / main_vol >= BONUS_MAIN_RATIO else "gift"
+    if sheets is not None and main_sheets:
+        return "main" if sheets / main_sheets >= BONUS_MAIN_RATIO else "gift"
+    return "unknown"            # 판단 근거 없음 -> 현행 유지
+
+
+def split_bonus(name: str) -> tuple[str, int, bool]:
+    """상품명을 (증정 뺀 본품 이름, 본품 배수, 다른제품 포함 여부)로 나눈다.
+
+    사장님 방침: 증정은 가격에 사실상 영향이 없으니 무시하고 본품끼리만
+    비교한다. 따라서 증정 조각은 이름에서 잘라내고, 본품 추가만 배수로
+    센다. 다른 제품이 섞여 있으면 애초에 비교가 성립하지 않으므로
+    세트로 넘긴다.
+    """
+    text = SPF_NOTATION_RE.sub(" ", name or "")
+    if "+" not in text and "＋" not in text:
+        return (name or "", 1, False)
+    parts = re.split(r"[+＋]", text)
+    main = parts[0]
+    m_vol, m_sheets = extract_volume_ml(main), extract_sheet_count(main)
+    m_forms = _narrow_forms(extract_forms(main))
+    kept, extra, has_other = [main], 0, False
+    for seg in parts[1:]:
+        kind = classify_bonus(seg, m_vol, m_sheets, m_forms)
+        if kind == "gift":
+            continue                       # 잘라낸다
+        if kind == "main":
+            extra += 1
+            continue
+        if kind == "other":
+            has_other = True
+        kept.append(seg)                   # other/unknown/empty 는 그대로 둔다
+    return ("+".join(kept), 1 + extra, has_other)
+
+
 def counts_mismatch(qoo10_name_kr: str, kr_name: str, is_set: bool = False) -> bool:
     """[v7.25.0] 총 매수·개수가 다르면 가격 비교에 환산이 필요하다 -> B.
 
@@ -160,7 +236,12 @@ def counts_mismatch(qoo10_name_kr: str, kr_name: str, is_set: bool = False) -> b
     """
     if is_set:
         return False
-    return total_count(qoo10_name_kr) != total_count(kr_name)
+    # [v7.26.0] 증정을 무시하는 건 **한국측(사는 쪽)만**이다. 큐텐측은
+    #  내가 파는 구성이라 '크림 50ml + 미니 15ml' 로 올려놨으면 미니도
+    #  사서 보내야 한다 — 여기서 지우면 못 맞추는 구성이 A로 남는다.
+    #  한국 판매처가 끼워주는 사은품은 반대로 더 받는 것이라 무시해도 된다.
+    k_name, k_mult, _ = split_bonus(kr_name)
+    return total_count(qoo10_name_kr) != total_count(k_name) * k_mult
 
 
 # [v4.3.0] 브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
@@ -715,10 +796,21 @@ def is_set_by_plus(text: str) -> bool:
 def is_set_product(qoo10_name: str, kr_name: str) -> bool:
     # SPF/PA 표기를 먼저 지운다. 'SPF50+ PA++++ 50ml' 에서 마지막 '+'와
     # 용량이 붙어 '+ 50ml' 로 읽히면서 멀쩡한 선크림이 세트로 잡혔다.
-    combined = SPF_NOTATION_RE.sub(" ", f"{qoo10_name} {kr_name}")
+    # [v7.26.0] 증정 조각을 먼저 떼고 판정한다(사장님 방침: 증정은
+    #  가격에 사실상 영향이 없으니 본품끼리만 비교한다). 떼지 않으면
+    #  '크림 50ml + 휴대용 미니 15ml' 같은 단품이 세트로 사라진다.
+    # [v7.26.0] 증정 조각을 떼고 판정한다(사장님 방침: 증정은 가격에
+    #  사실상 영향이 없으니 본품끼리만 비교한다). 떼지 않으면 '크림 50ml
+    #  + 휴대용 미니 15ml' 같은 단품이 세트로 사라진다.
+    #  단, 떼는 건 **한국측만**이다. 큐텐측은 내가 파는 구성이라 증정도
+    #  준비해야 하고, 구성이 다르면 그건 실제로 문제가 되는 차이다.
+    k_main, _, k_other = split_bonus(kr_name)
+    combined = SPF_NOTATION_RE.sub(" ", f"{qoo10_name} {k_main}")
     if SET_PATTERN.search(combined):
         return True
-    return is_set_by_plus(qoo10_name) or is_set_by_plus(kr_name)
+    if k_other:
+        return True             # '+' 뒤가 다른 제품이면 비교가 성립 안 함
+    return is_set_by_plus(qoo10_name) or is_set_by_plus(k_main)
 
 
 def confidence_tier(confidence: int, brand_status: str = "match",
@@ -1121,6 +1213,11 @@ def build_pairs():
             re.search(r"\[SET\]|\[세트\]", q["title"], re.I)
             or re.search(r"세트|SET", kr_name_display, re.I)
         )
+        # [v7.26.0] 등급 판정용 세트 여부는 '검수 화면에 보이는 이름'으로
+        #  낸다. 예전엔 검증 승자의 name 을 넣었는데, 로컬 수집(v7.10.0)으로
+        #  갱신된 정확한 상품명에 '더블기획'·'기획(+10ml)' 이 적혀 있어도
+        #  판정이 그걸 못 봤다 — 실측 38건이 이 이유로 세트를 놓쳤다.
+        is_set_tier = is_set_product(translated_kr, kr_name_display)
 
         # [자동수정] 실제로 소싱하는 물건은 한국쪽 구매처 상품이므로, 큐텐
         # 원본과 용량이 다르면 큐텐 쪽 업로드용 상품명을 한국쪽(실제 소싱)
@@ -1278,16 +1375,14 @@ def build_pairs():
                 bool(_sim_token(translated_kr, x.get("name") or "") >= 0.8
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85),
                 color_status(translated_kr, x.get("name") or ""),
-                is_set_product(translated_kr, x.get("name") or ""),
+                is_set_tier,
                 ingredient_conflict(translated_kr, x.get("name") or ""),
                 # [v7.25.0] 총 매수·개수 불일치 -> B. 용량과 마찬가지로
                 #  검수 화면에 보이는 이름(kr_name_display)으로 판정한다.
                 count_mismatch=counts_mismatch(
-                    translated_kr, kr_name_display,
-                    is_set_product(translated_kr, x.get("name") or ""))),
+                    translated_kr, kr_name_display, is_set_tier)),
             "count_mismatch": counts_mismatch(
-                translated_kr, kr_name_display,
-                is_set_product(translated_kr, x.get("name") or "")),
+                translated_kr, kr_name_display, is_set_tier),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "
