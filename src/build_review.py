@@ -73,7 +73,14 @@ def extract_sheet_count(text: str) -> int | None:
     안 됐었음 — 枚/매 개수를 대신 비교하면 정확히 일치를 판정할 수 있다)."""
     if not text:
         return None
-    m = re.search(r"(\d+)\s*(枚|매)\b", text)
+    # [v7.25.0] '매\b' 만으로는 "10매입"(뒤가 단어문자라 \b 실패)과
+    #  "70장"을 아예 못 읽었다 — 미스드래곤 매수 오매칭이 그동안 안 잡힌
+    #  실제 원인. 실측: A등급에서 '5장 vs 5매' 같은 표기차 6건이 매수
+    #  비교 불가로 남아 있었다.
+    #  뒤에 한글이 이어지면 다른 단어다("장짜리" 등). 라틴문자는 허용해야
+    #  "60장x2개" 같은 배수 표기가 읽힌다. 실측 오탐으로 추가된 표기:
+    #  "6장입"(장+들이 입), "10EA"(시트류 개수 표기).
+    m = re.search(r"(\d+)\s*(?:枚|매입|매|장입|장|EA\b)(?![가-힣])", text)
     return int(m.group(1)) if m else None
 
 
@@ -93,9 +100,67 @@ def extract_quantity(text: str) -> int:
     m = re.search(r"(\d+)\s*(個|개|입|병|本)\b", text_wo_choice)
     if m:
         return int(m.group(1))
+    # [v7.25.0] "2PACK"·"2팩" 묶음 표기. 실측: '[2pack] 인테카 수딩 패드
+    #  70매'가 큐텐 단품(70장)에 A등급으로 붙어 있었다. 숫자가 앞에 붙은
+    #  경우만 잡으므로 '마스크팩' 같은 제품명은 걸리지 않는다.
+    m = re.search(r"(\d+)\s*(?:PACK|팩)\b", text_wo_choice, re.I)
+    if m:
+        return int(m.group(1))
     if re.search(r"세트|SET|Set|1\+1", text_wo_choice):
         return 2
     return 1
+
+
+def total_count(text: str) -> int:
+    """상품명에서 '총 매수·개수'를 환산한다.
+
+    [v7.25.0] 매수(매/장/枚)와 묶음개수(個/개/팩)가 양쪽에 교차 표기되는
+    경우가 있어 단순 비교로는 오탐이 난다 — 실측 A등급 273건 대조에서:
+        "다이브인 마스크 10개"      vs "마스크 10매, 1개"     같은 상품
+        "페이스 필름 (3+1)"         vs "페이스필름 4매"        같은 상품
+        "60장x2개"                  vs "[1+1] 60매"           같은 상품(120매)
+    표기 조합을 총량으로 환산하면 측정 사례 36건이 전부 올바르게 갈린다.
+
+    환산 규칙:
+    - 매수 표기가 없으면 묶음개수(extract_quantity, 무표기=1)가 총량이다.
+    - 매수 + 묶음단위(個/개/병/本/팩)가 함께 있으면 곱한다("70매 (2개)"=140).
+    - 매수 + "N+M" 표기는 숫자가 매수와 이어지면 매수 합산("9매입 (9+1)"=10),
+      안 이어지면 묶음 배수("[1+1] ... 60매"=120)다. N+M의 뜻이 문맥에 따라
+      정반대라 이 구분이 없으면 어느 한쪽이 반드시 오탐난다.
+    """
+    if not text:
+        return 1
+    sheets = extract_sheet_count(text)
+    qty = extract_quantity(text)
+    if sheets is None:
+        return qty
+    m = re.search(r"(\d+)\s*\+\s*(\d+)", text)
+    if m:
+        a, b = int(m.group(1)), int(m.group(2))
+        if a == sheets or a + b == sheets:
+            return max(sheets, a + b)          # 매수 합산 표기 (9매입 9+1)
+        return sheets * (a + b)                # 묶음 배수 표기 (1+1 60매)
+    if re.search(r"(\d+)\s*(?:個|개|병|本|PACK|팩)\b", text, re.I):
+        return sheets * max(qty, 1)            # 60매 x 2개 = 120
+    return sheets
+
+
+def counts_mismatch(qoo10_name_kr: str, kr_name: str, is_set: bool = False) -> bool:
+    """[v7.25.0] 총 매수·개수가 다르면 가격 비교에 환산이 필요하다 -> B.
+
+    confidence_tier 주석의 설계("B = 용량/수량만 다름")에 수량이 처음부터
+    포함돼 있었는데 구현은 용량만 보고 있었다. 실측: A등급(완전일치) 273건
+    중 24건이 '1+1 vs 단품', '10매 vs 1매' 같은 수량 불일치였고, 그중
+    뉴클리드 마스크팩은 10매 가격(2,500円)과 1매 가격(2,000원)이 나란히
+    놓여 있었다 — 그대로 쓰면 원가 계산이 10배 틀어진다.
+
+    무표기는 단품(1)으로 본다. 성분 판정(v7.16.0)과 달리 수량은 상거래
+    관행상 표기가 없으면 실제로 1개다. 세트는 S등급에서 따로 처리하므로
+    여기서 보지 않는다. 제외가 아니라 등급 강등만 한다(설계이력 1-1).
+    """
+    if is_set:
+        return False
+    return total_count(qoo10_name_kr) != total_count(kr_name)
 
 
 # [v4.3.0] 브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
@@ -660,7 +725,8 @@ def confidence_tier(confidence: int, brand_status: str = "match",
                     vol_mismatch: bool = False, name_ok: bool = True,
                     single_source: bool = False, form: str = "match",
                     name_exact: bool = True, color: str = "unknown",
-                    is_set: bool = False, ingredient_mismatch: bool = False) -> str:
+                    is_set: bool = False, ingredient_mismatch: bool = False,
+                    count_mismatch: bool = False) -> str:
     """등급을 '무엇이 어긋났는가'로 나눈다.
 
     [v7.0.0 개편] 비교 요소를 브랜드 -> 제형 -> 이름 -> 용량 순으로 본다.
@@ -702,7 +768,11 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     #  확인하면 된다. 어느 쪽을 봐야 하는지가 등급으로 갈려야 한다.
     if not name_exact:
         return "B" if vol_mismatch else "C"
-    if vol_mismatch:
+    # [v7.25.0] 총 매수·개수 불일치도 용량 불일치와 같이 B로 내린다
+    #  (가격 비교 시 환산 필요). 이름이 일치하는 구간(A 후보)만 적용한다 —
+    #  실측한 범위가 여기까지다. C 구간(이름 불일치)까지 넓히는 건 영향을
+    #  측정한 뒤에 한다(설계이력 1-2).
+    if vol_mismatch or count_mismatch:
         return "B"
     return "A"
 
@@ -1209,7 +1279,15 @@ def build_pairs():
                      or _sim_bigram(translated_kr, x.get("name") or "") >= 0.85),
                 color_status(translated_kr, x.get("name") or ""),
                 is_set_product(translated_kr, x.get("name") or ""),
-                ingredient_conflict(translated_kr, x.get("name") or "")),
+                ingredient_conflict(translated_kr, x.get("name") or ""),
+                # [v7.25.0] 총 매수·개수 불일치 -> B. 용량과 마찬가지로
+                #  검수 화면에 보이는 이름(kr_name_display)으로 판정한다.
+                count_mismatch=counts_mismatch(
+                    translated_kr, kr_name_display,
+                    is_set_product(translated_kr, x.get("name") or ""))),
+            "count_mismatch": counts_mismatch(
+                translated_kr, kr_name_display,
+                is_set_product(translated_kr, x.get("name") or "")),
         })
 
     print(f"[통계] 구매링크없음={stats['no_link']} 품절={stats['sold_out']} 단종={stats['obsolete']} "

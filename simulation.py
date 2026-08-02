@@ -887,8 +887,10 @@ def t59_confidence_tiers():
     # 정한다. 예전엔 이름에서 걸리면 바로 C로 보내 용량을 아예 안 봤고,
     # 그 탓에 '같은 제품인데 용량만 다른' 건 41건이 C에 숨어 있었다.
     # C 는 '이름이 왜 다른지'를 볼 구간, B 는 '용량만' 확인할 구간이다.
+    # [v7.25.0] 이름 일치 구간의 B 판정은 용량뿐 아니라 수량·매수 불일치도
+    # 본다(상세 검사는 t77). 여기서는 두 조건이 함께 걸려 있는지만 본다.
     b_only_notation = ('return "B" if vol_mismatch else "C"' in tfn
-                       and "if vol_mismatch:" in tfn)
+                       and "if vol_mismatch or count_mismatch:" in tfn)
     # 네 조합이 실제로 맞게 나오는지 직접 돌려 확인한다.
     tier_cases_ok = False
     _sp = sys.path[:]
@@ -1551,6 +1553,70 @@ def t75_design_history_doc():
 #  검증 입력을 만들 때 걸러낸다. 검수페이지 생성 때만 빼면 검증이 그대로
 #  다 돌고 나서 버려진다 — 해외브랜드에서 이미 겪은 낭비다(490건이 헛돌았다).
 #  발굴·수확은 건드리지 않는다. 상품 자체는 계속 수집하되 검수 대상에서만 뺀다.
+# --------------------- #77 수량·매수 불일치는 B등급 (v7.25.0)
+#  confidence_tier 주석의 설계("B = 용량/수량만 다름")에 수량이 처음부터
+#  있었는데 구현은 용량만 보고 있었다. 실측: A등급 273건 중 30건이
+#  '1+1 vs 단품', '10매 vs 1매' 같은 수량 불일치였고, 뉴클리드 마스크팩은
+#  10매 가격과 1매 가격이 A(완전일치)로 나란히 놓여 있었다.
+#  함정: 매수(매/장/枚/EA)와 묶음개수(個/개/팩)가 양쪽에 교차 표기된다 —
+#  "10개"="10매, 1개", "(3+1)"="4매", "60장x2개"="[1+1] 60매". 총량으로
+#  환산하지 않으면 같은 상품이 오탐된다(실측 오탐 4건을 이 검사가 고정).
+def t77_count_mismatch_demotes_to_b():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        # 정규식이 실측 표기를 전부 읽는가 ('매\b'로는 "10매입"·"70장"을 못 읽었다)
+        sheet_ok = all(_br.extract_sheet_count(t) == e for t, e in [
+            ("10매입", 10), ("70장", 70), ("6장입", 6), ("10枚", 10),
+            ("(10EA)", 10), ("60장x2개", 60), ("마스크팩", None), ("장짜리", None)])
+        pack_ok = _br.extract_quantity("[2pack] 수딩 패드 70매") == 2
+
+        # 총량 환산이 교차 표기를 흡수하는가 (같은 상품 = 오탐 금지)
+        same = [("다이브인 마스크 10개", "마스크 10매, 1개"),
+                ("페이스 필름 (3+1)", "페이스필름 4매"),
+                ("앰플 패드 60장x2개", "[1+1] 앰플 패드 60매"),
+                ("코팩 6장입", "코팩 6매입"),
+                ("마스크 (10매입)", "마스크 25 ml (10EA)"),
+                ("펩타이드 샷 앰플 2X 100ml", "펩타이드 샷 앰플 투엑스 100ml, 1개")]
+        no_false_pos = all(not _br.counts_mismatch(q, k) for q, k in same)
+
+        # 진짜 불일치는 잡는가
+        diff = [("마스크팩 9매입 (9+1)", "마스크팩 23g"),        # 10 vs 1
+                ("와사비 수딩 마스크 30g", "마스크팩 10매입"),    # 1 vs 10
+                ("[1+1] 필링 젤 100g", "필링 젤 100g"),          # 2 vs 1
+                ("수딩 패드 70장 입", "[2pack] 수딩 패드 70매")]  # 70 vs 140
+        catches = all(_br.counts_mismatch(q, k) for q, k in diff)
+
+        # 세트는 여기서 보지 않는다(S등급에서 처리)
+        set_exempt = not _br.counts_mismatch("토너 세트", "토너 2종세트", is_set=True)
+
+        # 등급: 이름 일치 + 수량 불일치 -> B, 일치 -> A (자동 제외 금지, 강등만)
+        def _t(cm):
+            return _br.confidence_tier(4, "match", False, True, False, "match",
+                                       True, "unknown", False, False,
+                                       count_mismatch=cm)
+        tier_ok = _t(True) == "B" and _t(False) == "A"
+
+        # 판정에 실제로 연결돼 있는가 (extract_sheet_count가 함수만 있고
+        # confidence_tier에 안 이어져 있던 것이 원래 사고 원인)
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        wired = "count_mismatch=counts_mismatch(" in src
+
+        ok = all([sheet_ok, pack_ok, no_false_pos, catches, set_exempt,
+                  tier_ok, wired])
+        check("77 수량·매수 불일치 B등급", ok,
+              f"매수정규식{sheet_ok} 팩{pack_ok} 오탐없음{no_false_pos} "
+              f"검출{catches} 세트예외{set_exempt} 등급{tier_ok} 연결{wired}")
+    except Exception as e:  # noqa: BLE001
+        check("77 수량·매수 불일치 B등급", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
