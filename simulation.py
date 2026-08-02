@@ -1113,6 +1113,15 @@ def t65_translation_term_fixes():
     safe = not any(f'("{w}"' in src for w in ("두피", "미백", "모공", "히알루론산"))
     # 앞으로의 번역에도 반영돼야 한다 — 요청서 지시문에 용어표가 있어야 한다.
     in_request = "美容液 → 에센스" in req and "붙여 쓰는 말" in req
+    # [v7.17.0] 매칭된 한국 상품명을 기준으로 번역 표기를 고친다. 1,277쌍을
+    # 대조해 3회 이상 반복된 차이만 뽑았다(프레시->프레쉬, 배리어->베리어,
+    # 에멀전->에멀젼 등). 고친 흔적을 남겨야 잘못 고친 것을 알아볼 수 있다.
+    korean_spelling = "KOREAN_SPELLING_FIXES" in src and "KOREAN_SPELLING_FIXES" in \
+        src.split("ALL_FIXES =")[1].split("\n")[0]
+    leaves_trace = 'p["term_fixed"]' in src
+    shown_in_review = ('"term_fixed": x.get("term_fixed")' in
+                       (SRC / "build_review.py").read_text(encoding="utf-8")
+                       and "표기 교정" in (SRC / "build_review_batches.py").read_text(encoding="utf-8"))
     # [v6.1.0] 번역 결과가 검색어로 쓰인다는 사실을 지시문이 먼저 알려야
     # 한다. 이걸 모르면 '매끄러운 번역'을 하게 되고, 실제 상품 표기와
     # 멀어져 검색이 빗나간다.
@@ -1126,10 +1135,12 @@ def t65_translation_term_fixes():
                   and "洗顔料 / 洗顔フォーム | 클렌징폼" in req)
 
     ok = (has_terms and has_spacing and safe and in_request
-          and explains_purpose and warns_variants and form_table)
+          and explains_purpose and warns_variants and form_table
+          and korean_spelling and leaves_trace and shown_in_review)
     check("65 번역 용어 한국표기", ok,
           f"용어표{has_terms} 띄어쓰기{has_spacing} 한국어보호{safe} 요청서반영{in_request} "
-          f"용도설명{explains_purpose} 변형경고{warns_variants} 제형대응표{form_table}")
+          f"용도설명{explains_purpose} 변형경고{warns_variants} 제형대응표{form_table} "
+          f"한국표기{korean_spelling} 교정흔적{leaves_trace} 화면표시{shown_in_review}")
 
 
 # --------------------- #66 제형 일치를 A등급 조건으로

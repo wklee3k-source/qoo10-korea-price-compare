@@ -1115,6 +1115,9 @@ def build_pairs():
             "color_status": color_status(translated_kr, x.get("name") or ""),
             # [v7.4.0] 검수 화면에 제형을 직접 보여준다. 등급만으로는 무엇이
             # 어긋났는지 알 수 없어, 사람이 다시 상품명을 읽어야 했다.
+            # [v7.17.0] 번역본을 한국 표기로 고친 흔적. 무엇이 바뀌었는지
+            #  안 보이면 잘못 고쳐도 알 수 없다.
+            "term_fixed": x.get("term_fixed") or "",
             "qoo10_forms": sorted(extract_forms(translated_kr)),
             "kr_forms": sorted(extract_forms(x.get("name") or "")),
             "tier": confidence_tier(
@@ -1280,6 +1283,11 @@ def build_html(pairs: list[dict]):
                     f'<strong style="color:{_fcolor};">{esc(_kf)}</strong>'
                     f' <span class="badge tier-{"A" if _fs == "match" else "D" if _fs == "mismatch" else "B"}">'
                     f'{_fmark}</span>')
+        # [v7.17.0] 번역본이 한국 표기로 교정됐으면 그 사실을 보여준다.
+        fix_note = ""
+        if p.get("term_fixed"):
+            fix_note = (f'<span class="badge" style="background:#eef3fb;color:#3a5a8c;'
+                        f'border:1px solid #b9cbe6;">표기 교정 {esc(p["term_fixed"])}</span>')
         _tier = p.get("tier") or "B"
         _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
         brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
@@ -1348,7 +1356,7 @@ def build_html(pairs: list[dict]):
     </tr>
     <tr>
       <td class="label">제형</td>
-      <td>{form_row}</td>
+      <td>{form_row} {fix_note}</td>
     </tr>
     <tr>
       <td class="label">상품명</td>

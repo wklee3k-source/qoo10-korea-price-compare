@@ -73,6 +73,11 @@ def render_cards(pairs: list[dict]) -> str:
                     f'<strong style="color:{_fcolor};">{esc(_kf)}</strong>'
                     f' <span class="badge tier-{"A" if _fs == "match" else "D" if _fs == "mismatch" else "B"}">'
                     f'{_fmark}</span>')
+        # [v7.17.0] 번역본이 한국 표기로 교정됐으면 그 사실을 보여준다.
+        fix_note = ""
+        if p.get("term_fixed"):
+            fix_note = (f'<span class="badge" style="background:#eef3fb;color:#3a5a8c;'
+                        f'border:1px solid #b9cbe6;">표기 교정 {esc(p["term_fixed"])}</span>')
         _tier = p.get("tier") or "B"
         _tname, _tdesc = CONFIDENCE_TIERS.get(_tier, ("", ""))
         brand_badge = (f'<span class="badge tier-{_tier}">{_tier} · {_tname}</span>'
@@ -138,7 +143,7 @@ def render_cards(pairs: list[dict]) -> str:
     </tr>
     <tr>
       <td class="label">제형</td>
-      <td>{form_row}</td>
+      <td>{form_row} {fix_note}</td>
     </tr>
     <tr>
       <td class="label">상품명</td>
