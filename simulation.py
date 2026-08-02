@@ -878,9 +878,35 @@ def t59_confidence_tiers():
     # (오매칭 다수)가 한 등급이었다. 브랜드 확인 여부를 1차 기준으로 삼는다.
     tfn = src.split("def confidence_tier(")[1].split("\ndef ")[0]
     # [v7.0.0] 브랜드/제형을 확인 못 하면 D. 등급은 브랜드->제형->이름->용량 순.
+    # 브랜드·제형 확인 실패는 이름/용량보다 먼저 봐야 한다(D 가 우선).
+    # (v7.24.0 부터 C 는 'return "B" if vol_mismatch else "C"' 안에 있어
+    #  단독 문자열로는 못 찾는다. 이름 판정 지점과 비교한다.)
     brand_first = 'if brand_status != "match" or form != "match":' in tfn \
-        and tfn.index('return "D"') < tfn.index('return "C"')
-    b_only_notation = "if not name_exact:" in tfn and "if vol_mismatch:" in tfn
+        and tfn.index('return "D"') < tfn.index('if not name_exact:')
+    # [v7.24.0] 이름을 먼저 보되, 이름이 애매하면 용량까지 확인하고 등급을
+    # 정한다. 예전엔 이름에서 걸리면 바로 C로 보내 용량을 아예 안 봤고,
+    # 그 탓에 '같은 제품인데 용량만 다른' 건 41건이 C에 숨어 있었다.
+    # C 는 '이름이 왜 다른지'를 볼 구간, B 는 '용량만' 확인할 구간이다.
+    b_only_notation = ('return "B" if vol_mismatch else "C"' in tfn
+                       and "if vol_mismatch:" in tfn)
+    # 네 조합이 실제로 맞게 나오는지 직접 돌려 확인한다.
+    tier_cases_ok = False
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import importlib
+        import build_review as _br
+        importlib.reload(_br)
+        def _t(vol, exact):
+            return _br.confidence_tier(4, "match", vol, True, False, "match",
+                                       exact, "unknown", False, False)
+        tier_cases_ok = (_t(True, False) == "B" and _t(False, False) == "C"
+                         and _t(True, True) == "B" and _t(False, True) == "A")
+    except Exception:  # noqa: BLE001
+        tier_cases_ok = False
+    finally:
+        sys.path[:] = _sp
+    b_only_notation = b_only_notation and tier_cases_ok
     attached = '"tier": confidence_tier(' in src
     badged = 'tier-{_tier}' in src and 'tier-{_tier}' in batches
     styled = ".badge.tier-A" in tmpl and ".badge.tier-C" in tmpl

@@ -690,8 +690,18 @@ def confidence_tier(confidence: int, brand_status: str = "match",
     # 색이 서로 다르면 같은 제품의 다른 색이다 — 별개 상품으로 본다.
     if color == "mismatch":
         return "D"
+    # [v7.24.0] 이름을 먼저 보되, 이름이 애매하면 용량까지 확인하고 나서
+    #  등급을 정한다. 예전엔 이름에서 걸리면 바로 C로 보내고 용량을 아예
+    #  안 봤다. 그 탓에 '같은 제품인데 용량만 다른' 건이 C에 숨었다.
+    #      라보에이치 두피강화 탈모샴푸 700ml -> 400ml   (이름 유사도 0.33)
+    #      스킨1004 마다가스카르 센텔라 앰플 55ml -> 100ml
+    #      닥터지 레드블레미쉬 수딩 토너 300ml -> 500ml
+    #  실측 41건이 이 경우였고 전부 '용량만 다른 같은 제품'이었다.
+    #
+    #  C 에 있으면 '이름이 왜 다른지'를 봐야 하고, B 에 있으면 '용량만'
+    #  확인하면 된다. 어느 쪽을 봐야 하는지가 등급으로 갈려야 한다.
     if not name_exact:
-        return "C"
+        return "B" if vol_mismatch else "C"
     if vol_mismatch:
         return "B"
     return "A"
