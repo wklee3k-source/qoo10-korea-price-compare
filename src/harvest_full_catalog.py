@@ -26,6 +26,26 @@ from qoo10_shop_full_catalog import fetch_shop_full_catalog, ShopCatalogFailed
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 
 COLOR_COSMETIC_CATEGORIES = {"120000013", "120000014", "120000016"}
+
+
+def _load_discovery_blocklist() -> set:
+    """발굴·수확 단계에서 아예 저장하지 않을 상품번호.
+
+    발굴 쪽과 같은 파일을 본다. 한쪽만 막으면 다른 경로로 계속 들어온다.
+    목록이 없거나 깨져도 수확은 계속돼야 한다.
+    """
+    path = Path(__file__).resolve().parent.parent / "data" / "discovery_blocklist.json"
+    if not path.exists():
+        return set()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        print(f"[경고] discovery_blocklist.json 읽기 실패: {e}", file=sys.stderr)
+        return set()
+    return {str(b.get("goods_no")) for b in data.get("blocked", []) if b.get("goods_no")}
+
+
+DISCOVERY_BLOCKLIST = _load_discovery_blocklist()
 COSMETIC_ALLOWED_CATEGORIES = {
     "120000012",  # 스킨케어
     "120000017",  # UV케어
@@ -96,6 +116,8 @@ def harvest(shop_ids: list[str], suffix: str) -> None:
         kept = 0
         for it in items:
             cat = it.get("category_gdlc_cd")
+            if str(it.get("goods_no")) in DISCOVERY_BLOCKLIST:
+                continue
             if cat in COLOR_COSMETIC_CATEGORIES:
                 continue
             if cat not in COSMETIC_ALLOWED_CATEGORIES:

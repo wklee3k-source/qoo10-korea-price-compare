@@ -1515,6 +1515,42 @@ def t75_design_history_doc():
           f"함정{has_pitfalls} 점검표{has_checklist}")
 
 
+# --------------------- #76 발굴 제외 목록
+#  카테고리·리뷰수 같은 일반 조건으로는 거를 수 없는 개별 사유가 있다.
+#  실측: 'エイシカ365 水分鎮静トナー, [25ml*10] 250ml' 는 소분 표기가 앞에
+#  와서 용량이 25ml 로 잘못 읽히고, 그 탓에 200ml 상품과 8배 차이로 판정돼
+#  매번 오매칭된다. 검수에서 빼도 다음 발굴에 또 들어오므로 발굴 단계에서
+#  막는다.
+#
+#  발굴·수확 양쪽에서 막아야 한다. 한쪽만 고치면 다른 경로로 계속 들어온다
+#  (네일·향수 제외 때 겪은 것과 같은 문제다).
+def t76_discovery_blocklist():
+    path = ROOT / "data" / "discovery_blocklist.json"
+    disc = (SRC / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    harvest = (SRC / "harvest_full_catalog.py").read_text(encoding="utf-8")
+
+    exists = path.exists()
+    data = {}
+    if exists:
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            data = None
+    valid = isinstance(data, dict) and isinstance(data.get("blocked"), list)
+    # 사유가 적혀 있어야 한다. 없으면 나중에 왜 막았는지 알 수 없다.
+    has_reason = valid and all(b.get("goods_no") and b.get("reason")
+                               for b in data["blocked"])
+    both = all("DISCOVERY_BLOCKLIST" in t for t in (disc, harvest))
+    applied = ('in DISCOVERY_BLOCKLIST' in disc and 'in DISCOVERY_BLOCKLIST' in harvest)
+    # 파일이 없거나 깨져도 발굴이 멈추면 안 된다.
+    safe = all("except (OSError, ValueError)" in t for t in (disc, harvest))
+
+    ok = exists and valid and has_reason and both and applied and safe
+    check("76 발굴 제외 목록", ok,
+          f"파일{exists}({len(data.get('blocked', [])) if valid else '깨짐'}건) 형식{valid} "
+          f"사유기록{has_reason} 발굴·수확양쪽{both} 적용{applied} 안전처리{safe}")
+
+
 # --------------------- #42 번역 엑셀 왕복 방식(API 번역 완전 제거)
 #  Claude API 자동번역을 파이프라인에서 전부 걷어내고, 미번역 상품을
 #  엑셀로 뽑아 사용자가 직접 번역해 되돌리는 방식으로 전환했다.
