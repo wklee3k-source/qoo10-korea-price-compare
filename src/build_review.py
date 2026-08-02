@@ -1312,7 +1312,19 @@ def build_pairs():
         kr_name_display = _real or naver_original_name or x.get("name") or ""
 
         qoo10_vol = extract_volume_ml(q["title"])
-        kr_vol = extract_volume_ml(kr_name_display) or extract_volume_ml(x.get("volume") or "")
+        # [v7.32.0] '+' 뒤 증정 구간에 있는 숫자를 본품 용량으로 잘못
+        #  집는 문제를 막는다. 실측: '마녀공장 ... [+세럼 1.5ml 7일키트
+        #  증정]'에서 본품 용량은 30ml인데 증정의 '1.5ml'을 집어, 큐텐
+        #  30ml과 6배 차이인데도 vol_mismatch가 5ml 미만 판단보류
+        #  기준(MIN_TRUSTED_VOLUME_ML)에 걸려 무시됐다.
+        #  본품 구간(split_bonus)에서 먼저 찾고, 없으면 검증 단계에서
+        #  받은 volume 필드, 그래도 없으면 전체 텍스트 순으로 본다 —
+        #  본품 구간에 용량이 아예 없는 상품(예: '350ml (+350ml 추가)'
+        #  처럼 본품에도 용량이 적힌 경우는 그대로 본품값을 쓴다.
+        _kr_main_for_vol, _, _ = split_bonus(kr_name_display)
+        kr_vol = (extract_volume_ml(_kr_main_for_vol)
+                 or extract_volume_ml(x.get("volume") or "")
+                 or extract_volume_ml(kr_name_display))
         vol_match = qoo10_vol is not None and kr_vol is not None and abs(qoo10_vol - kr_vol) < 0.1
         vol_status = "match" if vol_match else ("unknown" if qoo10_vol is None or kr_vol is None else "mismatch")
 

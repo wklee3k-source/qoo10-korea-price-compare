@@ -1845,6 +1845,53 @@ def t81_double_pack_notation():
         sys.path[:] = _sp
 
 
+# --------------------- #82 증정 구간 숫자를 본품 용량으로 오추출 방지 (v7.32.0)
+#  '+' 뒤 증정 구간에 있는 숫자를 본품 용량으로 잘못 집는 문제. 실측:
+#  '마녀공장 ... [+세럼 1.5ml 7일키트 증정]'에서 본품은 30ml인데 증정의
+#  '1.5ml'을 집어, 검수 카드에 '용량 불일치'로 잘못 표시됐다(등급 자체는
+#  5ml 미만 판단보류 기준에 걸려 우연히 안 틀렸지만, 화면 표시가 틀려
+#  있었다 — 사장님이 카드를 보고 판단하는 근거 자체가 잘못됐던 것).
+def t82_gift_volume_not_misread():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        def _kr_vol(name, vf=""):
+            main, _, _ = _br.split_bonus(name)
+            return (_br.extract_volume_ml(main)
+                    or _br.extract_volume_ml(vf)
+                    or _br.extract_volume_ml(name))
+
+        fixed = _kr_vol("마녀공장 글루타치온7 다크스팟 잡티세럼&미백패치 "
+                        "[+세럼 1.5ml 7일키트 증정]", "30ml") == 30.0
+        fixed2 = _kr_vol("[+에센스8ml증정] 마녀공장 갈락 나이아신 3.0 "
+                         "스킨부스터 미백에센스 60ml, 2개", "60ml") == 60.0
+        # 본품 구간 자체에 용량이 있으면 그대로 쓴다(회귀 방지)
+        normal_ok = _kr_vol("아누아 어성초 77 히알루론 수분 진정 토너 350ml "
+                            "(+350ml 추가) 기획") == 350.0
+        # volume 필드도 없고 본품에도 용량이 없으면 None(무리하게 전체
+        #  텍스트에서 억지로 뽑지 않는다 — 아래 케이스는 예외적으로 전체
+        #  텍스트 최후순위 사용을 확인)
+        fallback_ok = _kr_vol("셀리맥스 듀얼배리어 퓨리파잉 클렌징 밤 "
+                              "본품+리필 / 갈아쓰는 클렌징밤") is None
+
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        wired = ("_kr_main_for_vol, _, _ = split_bonus(kr_name_display)" in src
+                 and "kr_vol = (extract_volume_ml(_kr_main_for_vol)" in src)
+
+        ok = all([fixed, fixed2, normal_ok, fallback_ok, wired])
+        check("82 증정구간 용량 오추출 방지", ok,
+              f"사례1{fixed} 사례2{fixed2} 정상케이스{normal_ok} "
+              f"용량없음{fallback_ok} 연결{wired}")
+    except Exception as e:  # noqa: BLE001
+        check("82 증정구간 용량 오추출 방지", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
