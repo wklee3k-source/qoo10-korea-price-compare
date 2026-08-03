@@ -4705,5 +4705,73 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1209950715",
+    "translated_kr": "약용 스킨 컨디셔너 에센셜 N 55ml×6개 미니사이즈 메일배송",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC",
+      "naver_web": "추천 산양유츄어블 10종 필수 구매 지금 인기 상품"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1108522489",
+    "translated_kr": "【국내정규품】로레알 케라스타즈 BL 반 블론드 압솔루 샴푸 ((하이톤 쿨 블론드 그레이 헤어용)) 1000ml 펌프 포함",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "수엥 크로마 압솔뤼",
+      "naver_web": "케라스타즈 수엥 크로마 압솔뤼"
+    },
+    "brand": "케라스타즈 (KERASTASE)",
+    "name": "수엥 크로마 압솔뤼",
+    "volume": "210ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 59000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1205488486",
+    "translated_kr": "샴푸 & 트리트먼트 2매 세트 딥 리페어 손상 보수 지질 보수 본체 저수 에센스",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "https://cert.k"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
