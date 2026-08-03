@@ -4630,5 +4630,80 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204729284",
+    "translated_kr": "【2개 세트】 서블리믹 원더 실드 h 110ml 리필 리필 리필 헤어 트리트먼트 씻어내지 않는 프로페셔널 아웃바스 리뉴얼",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1151616310",
+    "translated_kr": "【DAY6 우원필 포토카드 포함】 오드 파르팜 (전 2종 · 1종 선택)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오드 퍼퓸 핸드크림 [웨딩베일]",
+      "daum": "ijwmc0842님의 블로그",
+      "naver_web": "샤넬 코코오드파르팜"
+    },
+    "brand": "팜스테이 (Farmstay)",
+    "name": "오드 퍼퓸 핸드크림 [웨딩베일]",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 7000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172012952",
+    "translated_kr": "밀크스킨 150ml",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "밀크 스킨 150ml (+말차토너 20ml 증정)",
+      "daum": "헤일리 비버가 다시 불붙인 밀크 스킨 열풍",
+      "naver_web": "스킨밀크"
+    },
+    "brand": "티르티르",
+    "name": "밀크 스킨 150ml (+말차토너 20ml 증정)",
+    "volume": "",
+    "source": "musinsa",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 17800,
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.musinsa.com/products/6507068",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
   }
 ]
