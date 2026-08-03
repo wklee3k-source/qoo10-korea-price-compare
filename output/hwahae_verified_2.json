@@ -4688,5 +4688,80 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1194714725",
+    "translated_kr": "【모다모다】블루 바이오틴 스칼프 두피(동피)가글 스케일러 90ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "daum": "모다모다, 다이소서 ‘블루비오틴 스칼프’ 흥행…탈모 케어, MZ·여성의 데일리 뷰티로",
+      "naver_web": "모다모다 블루비오틴 스칼프두피가글스케일러 제품의 정보 및"
+    },
+    "brand": "려 (Ryo)",
+    "name": "모다모다, 다이소서 ‘블루비오틴 스칼프’ 흥행…탈모 케어, MZ·여성의 데일리 뷰티로",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1143688238",
+    "translated_kr": "PDRN 20% 바이알 앰플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 20% 바이알 앰플",
+      "musinsa": "PDRN 20% 바이알 앰플",
+      "daum": "에클리스 PDRN 20% 바이알 앰플",
+      "naver_web": "PDRN 20% 바이알 앰플 MTS앰플 연어DNA"
+    },
+    "brand": "에클리스 (ecliss)",
+    "name": "PDRN 20% 바이알 앰플",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 45000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204034203",
+    "translated_kr": "보습 토너 315ml 대용량 저자극 데일리 스킨케어 수분 케어 촉촉 토너",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "제니&로제처럼 화잘먹 피부! 마스크팩·수분크림·클렌징·모공토너 스킨케어",
+      "naver_web": "듀이트리 픽앤퀵 뜯어쓰는 더블 패드 100매 토너패드 대용량패드 데일리 저자극 수분 진정 ...."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
