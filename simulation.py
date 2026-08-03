@@ -1960,6 +1960,20 @@ def t84_brand_whitespace_insensitive():
         sys.path[:] = _sp
 
 
+# --------------------- #85 playwright 버전 고정 (v7.35.0)
+#  캐시 키가 requirements.txt 해시라서, playwright 버전을 >=로 열어두면
+#  pip는 매번 최신을 새로 받아도 캐시 키는 그대로다. 캐시엔 옛날 버전용
+#  브라우저만 남아 있어 새 playwright가 못 찾고 code=1로 죽는다 — 화해·
+#  무신사 서브프로세스가 전멸해서 전체 재검증이 막힌 실제 사고.
+def t85_playwright_version_pinned():
+    req = (ROOT / "requirements.txt").read_text(encoding="utf-8")
+    m = re.search(r"^playwright\s*==\s*[\d.]+\s*$", req, re.M)
+    pinned = m is not None
+    no_open_range = not re.search(r"^playwright\s*(>=|>|~=)", req, re.M)
+    check("85 playwright 버전 고정", pinned and no_open_range,
+          f"고정{pinned} 열린범위없음{no_open_range}")
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
