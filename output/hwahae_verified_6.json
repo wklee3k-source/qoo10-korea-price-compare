@@ -4917,5 +4917,82 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1213488052",
+    "translated_kr": "슈퍼 볼카닉 모공 클레이 마스크 100ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "이니스프리X쿠로미 비타C 그린티 엔자임 세럼",
+      "daum": "이니스프리 화산송이 모공팩 블랙헤드 제거에 좋다던데 저렴하게 구매할 수 있는 곳 알려주세요...",
+      "naver_web": "Innisfree _슈퍼 볼카닉 포어 클레이 마스크 /"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "이니스프리 화산송이 모공팩 블랙헤드 제거에 좋다던데 저렴하게 구매할 수 있는 곳 알려주세요...",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210760524",
+    "translated_kr": "호랑이 피부 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "호랑이 스킨토너",
+      "daum": "예민 피부를 위한 진정 관련 성분들 종류랑 특징",
+      "naver_web": "VTCOSMETICS CICA 마일드 토너 패드 호랑이 에디션 100매"
+    },
+    "brand": "고원 (GOWON)",
+    "name": "호랑이 스킨토너",
+    "volume": "200ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195949300",
+    "translated_kr": "[에센스 풍부] 듀얼 젯 마스크 #02 피부 트러블&보습 베리어 케어 수량 선택 세트 저자극 PDRN 센텔라 보습 팩 한국 팩 마스크팩 페이스 팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TPO 팩 [운동]",
+      "naver_web": "닥터자르트 세라마이딘 스킨 베리어 모이스처라이징 크림 +세럼 토너 (+크림 15mlx2+세럼 토너 +미...."
+    },
+    "brand": "리플라이미 (reply:me)",
+    "name": "TPO 팩 [운동]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
