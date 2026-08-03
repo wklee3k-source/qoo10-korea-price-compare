@@ -5524,5 +5524,56 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1205216557",
+    "translated_kr": "[공식] 네오 솔리드 퍼퓸 샬롯 / 3.6g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "샬롯 솔리드퍼퓸",
+      "daum": "KARRA KARRA 2022 봄신상&BEST인기상품 총집합 기획전",
+      "naver_web": "책임판매업자명단_221118.xlsx"
+    },
+    "brand": "엘리자베스 (ELBT)",
+    "name": "샬롯 솔리드퍼퓸",
+    "volume": "7.5g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204442515",
+    "translated_kr": "알티 모이스트 필 로션 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "허그 유어 스킨 모이스처 로션",
+      "naver_web": "시슬리 수프리미아 안티에이징 스킨 케어 로션"
+    },
+    "brand": "셀레피덤 (celepiderme)",
+    "name": "허그 유어 스킨 모이스처 로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
