@@ -4592,5 +4592,101 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1165134839",
+    "translated_kr": "소라콩 부드러운 약산성 클렌징폼 80ml 촉촉한 맨살로",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "월7,000원으로 홈페이지와 그룹웨어를 한번에 사용하세요.",
+      "naver_web": "약산성 클렌징폼 촉촉하고 순한 화장품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208553911",
+    "translated_kr": "【입술용】포호+ UV 립 밤 SPF50+PA++++ 입술 전용 자외선 차단제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "립앤스킨 수딩 선크림 [SPF50+/PA++++]",
+      "daum": "휴가 전에 살펴보는 여행 마니아들의 파우치"
+    },
+    "brand": "선스테이지 (SunStage)",
+    "name": "립앤스킨 수딩 선크림 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1171696930",
+    "translated_kr": "바셀린 마스크팩 시리즈 3종 23ml*30매(1상자 10매입)/보습 케어/수분/시카/탄력 3종 선택",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "세이프 칼마디K 2 X",
+      "daum": "뷰티 힐링쇼핑",
+      "naver_web": "라로제 너리싱 립밤 본품 x 2 + 너리싱 립밤 리필 x 2 + 기프트 세트"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1088064613",
+    "translated_kr": "피치홀릭 화이트 바디 톤업 세럼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 바디 톤업 세럼",
+      "musinsa": "[SET] 화이트 바디 톤업 세럼 250ml x 2개입",
+      "daum": "피치홀릭 비건 바디미백크림 화이트닝 바디세럼 웨딩촬영 색소침착 바디톤업크림, 1개, 화이트",
+      "naver_web": "화이트 바디 톤업 세럼"
+    },
+    "brand": "피치홀릭 (peacholic)",
+    "name": "화이트 바디 톤업 세럼",
+    "volume": "250ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
