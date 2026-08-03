@@ -8154,5 +8154,111 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1100108500",
+    "translated_kr": "[1분에 정해지는 헤어밤!] ymme BALM NEW 패키지 48g 묶음머리도 앞머리 손질도 립케어도 이것 하나!",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1106587131",
+    "translated_kr": "스파옥시 듀얼 젤 VC 플러스 100g [스프레이식 탄산팩]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "듀얼 슬림컷",
+      "daum": "홈캉스 핫픽!",
+      "naver_web": "듀얼소닉 이펙트 집중초음파미용기기 + 콜라겐젤 3p"
+    },
+    "brand": "아일로 (ILO)",
+    "name": "듀얼 슬림컷",
+    "volume": "48g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 34900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1097625068",
+    "translated_kr": "스파옥시 포밍 워시 [농밀 탄산거품 세안] 150g 3본 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "데톨 항균 비누 오리지널, , 12개입"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200195801",
+    "translated_kr": "[대미지케어] 바이 야르덴 바이야르덴 대미지케어 대미지헤어 보수 샴푸 & 트리트먼트",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185779928",
+    "translated_kr": "[공식] 어드밴스드젤 150ml 남성 올인원젤 PDRN배합 토너 에센스 로션 크림 에프터셰이브 대응",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "발효미 에센스 글로우 토너 패드"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
