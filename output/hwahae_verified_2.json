@@ -4502,5 +4502,95 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190993916",
+    "translated_kr": "【민감성 피부용 마스크】애주렌 수딩 콜라겐 겔마스크 42g(3매입) 진정 보습 수분 탄력 윤기 저자극 민감성 피부 겔마스크 홈케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "더페이스샵/제품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1123382012",
+    "translated_kr": "아크틱 브리즈 레스큐 마스크(1상자 5매입) 홍조 화끈거림 진정 자외선 화상",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "피부비만관리사팁 스토리채널"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172755901",
+    "translated_kr": "레드 엘에이징 크림 2.0 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레드 이레이징 크림 2.0",
+      "daum": "프로레슬러/목록",
+      "naver_web": "트러블 후 남은 흔적을 관리하는 진정 케어"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "레드 이레이징 크림 2.0",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211655439",
+    "translated_kr": "컴포트 스트레치 워시 II 55g 택배배송",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "나이키 우먼스 루나커맨드 II 880121",
+      "naver_web": "가네보 컴포트 스트레치 워시 / 본체 / / 과일 꽃의 향기"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
