@@ -5136,5 +5136,53 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1208521595",
+    "translated_kr": "2개 세트 두피 앰플 30ml/헤어케어/탈모/두피진정/어성초/헤어라인",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "프로틴 인텐시브 트리트먼트",
+      "daum": "애터미 프로틴 인텐시브 헤어케어 세트",
+      "naver_web": "바로티나 탈모증상완화 두피 기능성 토닉 앰플, , 3개"
+    },
+    "brand": "애터미 (ATOMY)",
+    "name": "애터미 프로틴 인텐시브 헤어케어 세트",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15300,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208936380",
+    "translated_kr": "칙칙함·기미 케어 비타민 C 부스터 샷 30ml 데일리 고농도 비타민 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "피부톤 칙칙함"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
