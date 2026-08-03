@@ -5209,5 +5209,31 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1094657609",
+    "translated_kr": "2+1 슈퍼푸드 390ml/바디로션 (복숭아)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "슈퍼푸드 바디로션 [피치]",
+      "daum": "은혁",
+      "naver_web": "바세린 슈퍼푸드 피치 바디로션, , 1개"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "슈퍼푸드 바디로션 [피치]",
+    "volume": "390ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 10900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
