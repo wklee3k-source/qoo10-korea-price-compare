@@ -5645,5 +5645,31 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "981578058",
+    "translated_kr": "내추럴 스킨 베일 색칠 자외선 차단제 30g UV 크림",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드",
+      "daum": "선크림인데 ‘N잡러’입니다",
+      "naver_web": "자외선 차단제"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "VT X BTS 본 내추럴 워터링 핏 크림 플루이드",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
