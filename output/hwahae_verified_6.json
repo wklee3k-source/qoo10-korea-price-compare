@@ -4994,5 +4994,74 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1139814284",
+    "translated_kr": "[정품] 엑스폴리에이팅 폴리시 65g / 지오스킨헬스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엑스폴리에이팅 폴리시",
+      "daum": "지오스킨헬스",
+      "naver_web": "엑스폴리에이팅 폴리시"
+    },
+    "brand": "지오스킨헬스 (ZOSKINHEALTH)",
+    "name": "엑스폴리에이팅 폴리시",
+    "volume": "65g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 118000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1160567733",
+    "translated_kr": "나비졸 DR TA 화이트 에멀젼n 120ml 약용 미백 로션 선택 가능 2가지 타입",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "TA 앰플",
+      "daum": "Cosme"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210333469",
+    "translated_kr": "공식 바디로션 300g/아로마 마사지/등 여드름/각질케어/피지·보습케어/진정/대용량/8종 천연오일 배합",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "더페이스샵/제품",
+      "naver_web": "동백오일 ~ 동백기름 카멜리아 식물성보습오일 바디 페이스 헤어마사지 자연의"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
