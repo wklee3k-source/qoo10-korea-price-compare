@@ -5063,5 +5063,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1191312885",
+    "translated_kr": "공식 녹차 세럼 스페셜 세트 녹차 세럼 50ml+펩타 시카 세럼패드 60매입/저분자 펩타이드/탄력케어/보습케어/고순도/각질케어/피부손상 방지",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "세럼",
+      "naver_web": "이니스프리 그린티 씨드 히알루론산 세럼 수분 진정 앰플"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183876745",
+    "translated_kr": "글로우 앰플 히알루론산 마스크 (10매입)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 앰플 마스크 [히알루론]",
+      "daum": "요즘 사람들이 얼굴에 젤리를 뿌리는 이유?",
+      "naver_web": "마몽드 플로라글로우 로즈 앰플 마스크팩 , 1개입, 5개"
+    },
+    "brand": "텐제로 (tenzero)",
+    "name": "글로우 앰플 마스크 [히알루론]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
