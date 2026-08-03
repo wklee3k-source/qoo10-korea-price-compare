@@ -4832,5 +4832,73 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200999438",
+    "translated_kr": "폴라 폴라 다이브 브라이트 세럼 100ml 에센스 다이브 다이브 무료 배송 당일 발송",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "슬림핏 사무실 머슬핏 캐주얼 반소매 목폴라 니트 출근룩 가을 정장 오피스 스웨터"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1189101149",
+    "translated_kr": "닥터 주니어 토키오 시스템 4M 시스템 트리트먼트 250g (리뉴얼 닥터주니어 토키오 응집 결합형 트리트먼트 살롱 상품 미용실 미용실 전매품 수선)",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "naver_web": "2009년의약품등생산실적표"
+    },
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211213188",
+    "translated_kr": "본드 550 세트 샴푸&550ml 트리트먼트 550g 파이버 플렉스",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "NO.3 헤어 퍼펙터",
+      "daum": "신제품관",
+      "naver_web": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너"
+    },
+    "brand": "올라플렉스 (OLAPLEX)",
+    "name": "헨켈 슈바르츠코프 파이버플렉스 No.3 본드 메인테이너",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 43000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
