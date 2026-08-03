@@ -5476,5 +5476,53 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1126308598",
+    "translated_kr": "박치올 리포솜 앰플 토너 150ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 베스트 오브 뷰티의 위너 ‘스킨케어’ ‘베이스’ ‘맨’",
+      "naver_web": "Face"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1131536056",
+    "translated_kr": "제로포어 핏 모공 패드 (80장) / 제로 모공 패드 / 모공 타이트닝 / 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 포어 핏 패드",
+      "daum": "토소웅",
+      "naver_web": "마데카 더블 타이트닝 앰플 패드 60매"
+    },
+    "brand": "와이즐리 (wisely)",
+    "name": "제로 포어 핏 패드",
+    "volume": "215ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 17890,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
