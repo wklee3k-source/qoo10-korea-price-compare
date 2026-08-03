@@ -5133,5 +5133,30 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1164768276",
+    "translated_kr": "데오나투레 약용 사라사라 크림 45g 겨드랑이용",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사라사라 크림",
+      "naver_web": "데오나츄레 사라사라 크림"
+    },
+    "brand": "데오나츄레 (Deonatulle)",
+    "name": "사라사라 크림",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
