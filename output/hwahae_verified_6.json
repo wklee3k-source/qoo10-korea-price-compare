@@ -4773,5 +4773,83 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1086220705",
+    "translated_kr": "모로칸 아르간 오일 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+      "musinsa": "인텐시브 모로칸 아르간 헤어에센스 오일",
+      "daum": "닥터오가닉 퓨어 오일",
+      "naver_web": "argan oil"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 11800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202542070",
+    "translated_kr": "더마팜 수딩 리페어 크림 R4 보습 크림 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그클리닉 콜라보 수딩 글로우 크림",
+      "naver_web": "더마펌 수딩 리페어 토닝 크림 R4 |"
+    },
+    "brand": "블루 씨피알 (Blue CPR)",
+    "name": "에그클리닉 콜라보 수딩 글로우 크림",
+    "volume": "40ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1138039205",
+    "translated_kr": "베리 페리 모공 클렌징 무스 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베리페리 포어 클렌징 무스",
+      "daum": "여름의 활력을 채워줄 뷰티 아이템 리스트",
+      "naver_web": "베리페리 포어 클렌징 무스"
+    },
+    "brand": "네오젠더마로지 (NEOGENDERMALOGY)",
+    "name": "베리페리 포어 클렌징 무스",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
