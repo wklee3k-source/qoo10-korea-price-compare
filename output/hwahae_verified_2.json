@@ -5040,5 +5040,54 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1190405436",
+    "translated_kr": "시롤 크리스탈 휩 블랙 120g 세안 세안후 폼 거품 보습 탄산 숯 모공 시롤 시롤 블랙",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "토소웅",
+      "naver_web": "거품 세안 클레이 탄산 모공 사슴 니아신 아미드 세안 폼 뜨게한다"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1014254100",
+    "translated_kr": "클렌징밤 2개 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트위티 에디션 클린잇제로 클렌징밤 [오리지널]",
+      "musinsa": "[SET] 고쿠쥰 클렌징 오일 200ml + 리필 180ml 2개",
+      "daum": "마몽드 클렌징밤 라방에서 샀는데 취소할까",
+      "naver_web": "클린잇제로 오리지널 클렌징밤 2개 세트"
+    },
+    "brand": "바닐라코 (banilaco)",
+    "name": "트위티 에디션 클린잇제로 클렌징밤 [오리지널]",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
