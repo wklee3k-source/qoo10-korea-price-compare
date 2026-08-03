@@ -4966,5 +4966,79 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1130941646",
+    "translated_kr": "랑방 / 모던 프린세스 오드 파르팜 90ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모던 프린세스 오 센슈얼 EDT",
+      "daum": "애프터 명절 뷰티 프로젝트",
+      "naver_web": "랑방 모던프린세스 오 센슈얼 오드뚜왈렛"
+    },
+    "brand": "랑방 (LANVIN)",
+    "name": "모던 프린세스 오 센슈얼 EDT",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 55000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188288008",
+    "translated_kr": "프로바이오틱 하이드로겔 아이패치 60매 (고농축 100% 에센스겔)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "골드 하이드로겔 아이패치",
+      "musinsa": "프로바이오틱스 하이드로겔 아이패치 60매",
+      "daum": "골드 하이드로겔 아이패치 60매",
+      "naver_web": "린제이 프로바이오틱스 하이드로겔 아이패치 60매 -"
+    },
+    "brand": "바찌 (vacci)",
+    "name": "골드 하이드로겔 아이패치",
+    "volume": "90g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1083543606",
+    "translated_kr": "더 세럼 E-XO 80ml 에센스 엑소좀 NMN 에이징케어 유니섹스 보습에센스 잔주름 칙칙함 건조 피부손상 닥터스 코스메 닥터 ERI",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "더 님"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
