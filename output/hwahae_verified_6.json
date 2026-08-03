@@ -5179,5 +5179,31 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208115061",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트 100ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "daum": "9월 주목해야 할 신상 뷰티",
+      "naver_web": "아누아 PDRN 히알루론산 수분 캡슐 미스트, , 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
