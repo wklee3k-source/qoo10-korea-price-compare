@@ -4763,5 +4763,74 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211319372",
+    "translated_kr": "[국내 배송] 인셀덤 모이스처 클렌징오일 145ml 정품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "딥 모이스처 스무딩 바디 미스트 기획세트",
+      "naver_web": "[정품 안심구매"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175879403",
+    "translated_kr": "SAN. 슬리핑 마스크 나이트 크림 나이아신아마이드 시카 히알루론산 팩 나이트 팩",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "인텐스 모이스처라이징 마스크",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "모이스처라이징 마스크 나이아신아마이드 스팟 슬리핑 마스크 워시 마스크 젤 마스크"
+    },
+    "brand": "엠브리올리스 (EMBRYOLISSE)",
+    "name": "모이스처라이징 마스크 나이아신아마이드 스팟 슬리핑 마스크 워시 마스크 젤 마스크",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1188906909",
+    "translated_kr": "나나 코스터 LEA 메이크 밤 45g 스타일링제 왁스 시어 버터 보습 젖은 머리 오렌지 베르가못 향 살롱 품질 헤어 밤 남성 여성",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "모카 밤"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
