@@ -5089,5 +5089,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1209466795",
+    "translated_kr": "10매 마스크팩 1번~5번 전 5종류에서 선택 (5매씩 선택가능 조합세트) 한국정규품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "K뷰티킹규정.pdf",
+      "naver_web": "천연 허브 쑥 경추 패치 경추/어깨/목 근육통완화 배출 습담제거 효도선물 티류으스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209063735",
+    "translated_kr": "공식 스피큘 아젤라산 PDRN 크림 15g/CICA/여드름케어/피부손상/예민한피부/트러블피부/피부의 붉음/진정/칙칙함케어/각질케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "daum": "스킨 케어"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
