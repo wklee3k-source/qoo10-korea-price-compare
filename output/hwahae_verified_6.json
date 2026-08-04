@@ -4614,5 +4614,296 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1085862938",
+    "translated_kr": "11 보툴리누스 멀티 리커버리 앰플 30ml / 피부 코어 탄력 / 탄력 케어 / 튼튼한 피부 베리어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "아모레퍼시픽 연혁과 역사] 2006년 6월1일 태평양 인적분할, 아모레퍼시픽 설립"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168664763",
+    "translated_kr": "[공식] [4장] 3X 비타 오로라 오버나이트 젤 마스크 (3시간 후 변화하는 온도 반응 마스크) 시미 케어 / 쿨링 / 주름 / 콜라겐 / 보습 / 고밀착 / 홈 에스테 / 촉촉함 / 팩 마스크 / 페이스",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "스킨부스터 이데베논 세럼 시트 마스크",
+      "naver": "게스통 스킨부스터 이데베논 세럼 시트 마스크 7종 히알루론산 함유 집중수분 피부보습 마스크팩"
+    },
+    "brand": "게스통",
+    "name": "게스통 스킨부스터 이데베논 세럼 시트 마스크 7종 히알루론산 함유 집중수분 피부보습 마스크팩",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 3000,
+    "mall": "gaston",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13341625538",
+    "image_url": "https://shop-phinf.pstatic.net/20260402_102/1775101920653tmKOe_JPEG/109234768802228264_1101243191.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088613/90886135870.jpg",
+        "mall": "gaston",
+        "link": "https://smartstore.naver.com/main/products/13341625538"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9088613/90886135870.jpg",
+    "page_collected_at": "2026-08-01T16:20:33",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:33:40",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1131788387",
+    "translated_kr": "코우지산 비타 나이아신아마이드 세럼 30ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "#나이아신"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209860241",
+    "translated_kr": "[NEW] 올데이 메이크업 세팅 픽스 미스트 75ml세트 / 메이크 키프 / 무너짐 방지 / 메이크 키프",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올데이 타이트 메이크업 픽서",
+      "daum": "네이버 인플루언서",
+      "naver_web": "메이크업픽서"
+    },
+    "brand": "쏘내추럴 (SO'NATURAL)",
+    "name": "올데이 타이트 메이크업 픽서",
+    "volume": "75ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1168915716",
+    "translated_kr": "[팩 툴 증정] 프리미엄 모델링 마스크팩 1kg / 석고 팩 [10종]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TYPE1 콜라겐 100™ 프리미엄",
+      "daum": "팩",
+      "naver_web": "메디플라워 프리미엄 모델링팩 콜라겐 1kg, 1개입, 1개"
+    },
+    "brand": "닥터큐먼 (Drquman)",
+    "name": "TYPE1 콜라겐 100™ 프리미엄",
+    "volume": "30g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207330609",
+    "translated_kr": "[남성용 올인원 한정기획 3종 세트] 아쿠아파워 올인원 200ml 세트 + 클렌저 40ml / 올인원 20ml 증정",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아쿠아파워 올인원 200ml 세트 (+아쿠아파워 클렌저 40ml, 젤PRO 20ml 증정)",
+      "daum": "아쿠아파워 올인원 세트 큰 이미지보기",
+      "naver_web": "선물샵 : 네이버+ 스토어 : 아쿠아파워 올인원 세트"
+    },
+    "brand": "비오템",
+    "name": "아쿠아파워 올인원 200ml 세트 (+아쿠아파워 클렌저 40ml, 젤PRO 20ml 증정)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 47600,
+    "mall": "비오템",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/11359942337",
+    "image_url": "https://shop-phinf.pstatic.net/20260728_185/1785206381545LRalh_JPEG/34358737684155636_1866521705.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890445/88904452688.24.jpg",
+        "mall": "비오템",
+        "link": "https://smartstore.naver.com/main/products/11359942337"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097622/90976225485.8.jpg",
+        "mall": "OC-몰",
+        "link": "https://smartstore.naver.com/main/products/13431715148"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 56000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8890445/88904452688.24.jpg",
+    "page_collected_at": "2026-08-01T16:20:42",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:35:56",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1163288585",
+    "translated_kr": "타미텐젤 500ml / 진정젤 / 수분젤 / 민감피부 / 붉음증 케어 / 열감 케어 / 홈케어 / 수분 공급 / 이스젤",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "원픽플렉스 알로에 수딩젤 300ml 대용량 민감 피부 진정 보습 열감케어 수분젤 히알루론산",
+      "daum": "열 받은 피부 손상 & 노화 징후 개선"
+    },
+    "brand": "원픽플렉스",
+    "name": "원픽플렉스 알로에 수딩젤 300ml 대용량 민감 피부 진정 보습 열감케어 수분젤 히알루론산",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 8800,
+    "mall": "ONE PICK FLEX",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13655722726",
+    "image_url": "https://shop-phinf.pstatic.net/20260707_230/1783409860714niTQS_PNG/130375161728678270_335759012.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120023/91200233511.jpg",
+        "mall": "ONE PICK FLEX",
+        "link": "https://smartstore.naver.com/main/products/13655722726"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9075561/90755619401.jpg",
+        "mall": "더채움 스토어",
+        "link": "https://smartstore.naver.com/main/products/13211108304"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 9800,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9120023/91200233511.jpg",
+    "page_collected_at": "2026-08-01T16:20:44",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:36:25",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1159600473",
+    "translated_kr": "모모 70% 나이아신세럼 30ml 한국화장품 나이아신아마이드 세럼 보습 다크스팟 케어 시미 케어 에센스",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "SBA 패션뷰티관",
+      "naver_web": "식욕억제제 주의사항, 부작용"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161540935",
+    "translated_kr": "바이오 EX셀펩타이드 링클퍼펙터마스크 30g×10개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "글로벌 힐링 뷰티 코스메틱 시크릿키",
+      "naver_web": "토니모리 바이오 EX 셀 펩타이드 링클 퍼펙터+아이크림+마스크 12종 세트"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190324743",
+    "translated_kr": "제로 클렌징밤 브라이트닝 100ml 3개 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클린 잇 제로 클렌징밤 [브라이트닝]",
+      "daum": "전소미 유툽에서 공개된 트와이스 나연의 찐템 53가지 정리",
+      "naver_web": "바닐라코 클린 잇 제로 클렌징 밤 브라이트닝 x 3개"
+    },
+    "brand": "바닐라코 (banilaco)",
+    "name": "클린 잇 제로 클렌징밤 [브라이트닝]",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
