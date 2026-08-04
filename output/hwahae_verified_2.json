@@ -1270,5 +1270,344 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1181384570",
+    "translated_kr": "[갤러리아] MADET LEN 레드 머스크 오드파르팜 RED MUSC",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "머스크 케이",
+      "naver_web": "Red Musc Mad et Len 향수"
+    },
+    "brand": "엘라케이 (ELLAK)",
+    "name": "머스크 케이",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 485000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204449323",
+    "translated_kr": "마스크 세트 (적소두 모공 정화 마스크 140ml + 씻어내는 쌀&허니 클레이 팩 150ml) 팥 팩 적소두 모공 정화 마스크 씻어내기 팩 모공 케어 보습 촉촉 투명감 윤기",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "일본 뷰티 제품",
+      "naver_web": "계단 꿈 해몽 오르는 내려가는 떨어지는 등 28개."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1023263418",
+    "translated_kr": "【즉납】【정품】【최신 제조일】 1개째 2개째 퍼스피렉스 오리지널 데오도란트 롤온 겨드랑이 땀 땀 냄새 제한 제한제 20ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "Perspirex 퍼스피렉스 데오드란트 롤온 오리지널 20ml",
+      "naver_web": "콜게이트 레이디 스피드 스틱 샤워 후레쉬"
+    },
+    "brand": null,
+    "name": "Perspirex 퍼스피렉스 데오드란트 롤온 오리지널 20ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 53800,
+    "mall": "리이드",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10669548237",
+    "image_url": "https://shop-phinf.pstatic.net/20240730_15/1722328323918z65FE_JPEG/10812744729974970_1284469514.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821405/88214054151.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669548237"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821406/88214061412.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669555498"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8821405/88214058414.jpg",
+        "mall": "리이드",
+        "link": "https://smartstore.naver.com/main/products/10669552500"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8821405/88214054151.jpg",
+    "page_collected_at": "2026-08-01T15:25:38",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:25:35",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1020884710",
+    "translated_kr": "【즉납】【정품】【최신 제조일】 1개째 퍼스피렉스 컴포트 데오드란트 롤온 겨드랑이 땀 땀 냄새 제한 제한제 20ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "콜게이트 레이디 스피드 스틱 샤워 후레쉬"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194538537",
+    "translated_kr": "안티 퍼스피란트 롤온 스트롱, 20ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "안티 퍼스파이런트 데오도란트 롤온 N 의약부외품 통상"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210626709",
+    "translated_kr": "나이아신아마이드 에센스 칙칙함 케어 글루타치온 뽕 흰색 나이아신 야쿠탄 에센스 30ml 기미 케어 보습 민감성 피부 미백 에센스 색소 침착 건성 피부",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "아쿠아 스쿠알란 미스트",
+      "naver": "[청자몽 기미 잡티 세럼] 미백 순한 세럼 비타민C 앰플 톤업에센스",
+      "daum": "미스트"
+    },
+    "brand": "딸로",
+    "name": "[청자몽 기미 잡티 세럼] 미백 순한 세럼 비타민C 앰플 톤업에센스",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 32900,
+    "mall": "딸로",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5522267778",
+    "image_url": "https://shop-phinf.pstatic.net/20250612_154/1749714023715NLChh_JPEG/78617905732714002_186491756.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8306676/83066763241.12.jpg",
+        "mall": "딸로",
+        "link": "https://smartstore.naver.com/main/products/5522267778"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8674941/86749410554.7.jpg",
+        "mall": "딸로",
+        "link": "https://shopping.naver.com/outlink/itemdetail/9204910231"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 44900,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8306676/83066763241.12.jpg",
+    "page_collected_at": "2026-08-01T15:25:41",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:27:11",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1209271213",
+    "translated_kr": "홀리 바질 버블 딥 마스크 90g, 1개 탄산 거품 모공 케어 각질 진흙 팩 스킨 케어 한국 화장품",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "20170303111608_2017_03.04_judanhak_web_PDF11.compressed.pdf",
+      "naver_web": "피부를위한 관대 한 사용된 점토 마스크",
+      "naver_rematch": "스킨티픽 지성용 알래스카 화산 점토 팩 Volcano Clay Mask Stick 40g"
+    },
+    "brand": null,
+    "name": "스킨티픽 지성용 알래스카 화산 점토 팩 Volcano Clay Mask Stick 40g",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 15200,
+    "mall": "말리몰 말레이시아 구매대행",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13656430982",
+    "image_url": "https://shop-phinf.pstatic.net/20260708_226/1783486367962c2Odk_JPEG/117619217081288028_1542064959.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120094/91200941767.jpg",
+        "mall": "말리몰 말레이시아 구매대행",
+        "link": "https://smartstore.naver.com/main/products/13656430982"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100356/91003568009.jpg",
+        "mall": "스마일그로브마켓",
+        "link": "https://smartstore.naver.com/main/products/13459057657"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "피부를위한 관대 한 사용된 점토 마스크",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9120094/91200941767.jpg",
+    "page_collected_at": "2026-08-01T15:25:44",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:27:47",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1193642954",
+    "translated_kr": "【정품】 [라이스 시리즈] 7 라이스 세라마이드 글로우 세럼 /라이스 70 인텐스 모이스처 밀크 /라이스 브라이트닝 효소 세안 파우더 /라이스 70 글로우 밀키 토너",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "COSMETIC",
+      "naver_web": "네오젠 더마로지 리얼 프레쉬 폼 크렌베리, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1159703255",
+    "translated_kr": "【1+1 한국인기 두피케어 샴푸】프로페셔널 리페어링 스칼프 세럼샴푸 275ml × 2본 세트 헤어케어 / 두피영양 / 탈모증상완화샴푸 / 모발케어 / 모발",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로페셔널 리페어링 스칼프 테라피 세럼 샴푸",
+      "naver": "[달바] 프로페셔널 리페어링 스칼프 테라피 세럼 샴푸 275ml 2개 세트",
+      "daum": "뷰티쁠 크루가 먼저 써본 #5월뷰티신상",
+      "naver_web": "달바 프로페셔널 리페어링 스칼프 테라피 세럼 샴푸, , 1개"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "[달바] 프로페셔널 리페어링 스칼프 테라피 세럼 샴푸 275ml 2개 세트",
+    "volume": "275ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 33900,
+    "mall": "컬리N마트",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12274701539",
+    "image_url": "https://shop-phinf.pstatic.net/20250820_96/1755659752488CATdQ_JPEG/8374690626891461_319611228.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8981921/89819212255.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/12274701539"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "프로페셔널 리페어링 스칼프 테라피 세럼 샴푸",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8981921/89819212255.jpg",
+    "page_collected_at": "2026-08-01T15:25:46",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T14:29:05",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1150322959",
+    "translated_kr": "스템셀 코코넛밤 100ml + 앰플에센스 150ml 2종",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "로나스 스템셀 코코넛 앰플 에센스 150ml+로나스팩 3장",
+      "daum": "SHOP",
+      "naver_web": "두피밤 두피 보습제 비듬제거 앰플 에센스, , 2개"
+    },
+    "brand": "로나스",
+    "name": "로나스 스템셀 코코넛 앰플 에센스 150ml+로나스팩 3장",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 59000,
+    "mall": "스킨셀러",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9303999544",
+    "image_url": "https://shop-phinf.pstatic.net/20231001_198/1696164233568EpXSA_JPEG/6327081396153475_701552953.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8684849/86848499867.jpg",
+        "mall": "스킨셀러",
+        "link": "https://smartstore.naver.com/main/products/9303999544"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8844425/88444255318.jpg",
+        "mall": "에스테일리",
+        "link": "https://smartstore.naver.com/main/products/10899749283"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8933268/89332680051.jpg",
+        "mall": "캐치스킨",
+        "link": "https://smartstore.naver.com/main/products/11788169464"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8684849/86848499867.jpg",
+    "page_collected_at": "2026-08-01T15:25:49",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:29:42",
+    "reverify_note": "합의부족(0곳)"
   }
 ]
