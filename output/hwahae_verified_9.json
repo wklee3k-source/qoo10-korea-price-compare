@@ -11788,5 +11788,125 @@
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
     ]
+  },
+  {
+    "goods_no": "1211535958",
+    "translated_kr": "바이오 인텐시브 리페어 앰플 500ml 에센스 보습 에스테틱 살롱 업소용 한국 PDRN",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스",
+      "daum": "연혁과 역사] 1985년 4월25일 애경산업 설립",
+      "naver_web": "한독화장품 스펠라 내츄럴 촉촉 크림 [사은품증정"
+    },
+    "brand": "라비앙 (LAVIEN)",
+    "name": "D.N.A. 인퓨전 리페어 에센스",
+    "volume": "50g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 63000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1105262703",
+    "translated_kr": "마이트온 10% 나이아신아마이드 인텐시브 크림 50g / 맑은 피부 / 탄력 / 주름 / 영양 / 매끄러운 피부",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "뜨거운 태양에 맞서는 7월의 신상 뷰티템",
+      "naver_web": "나이아신아마이드 주의사항",
+      "naver_rematch": "살림백서 제로 나이아신아마이드 21% 세럼 30ml 비타민B3 모공세럼 화이트닝 잡티"
+    },
+    "brand": "살림백서",
+    "name": "살림백서 제로 나이아신아마이드 21% 세럼 30ml 비타민B3 모공세럼 화이트닝 잡티",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 6200,
+    "mall": "살림백서",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12564995257",
+    "image_url": "https://shop-phinf.pstatic.net/20251103_85/1762132979036ds8KG_JPEG/96265942177914141_868629438.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9010950/90109506110.5.jpg",
+        "mall": "살림백서",
+        "link": "https://smartstore.naver.com/main/products/12564995257"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9029872/90298722051.1.jpg",
+        "mall": "인별프리",
+        "link": "https://smartstore.naver.com/main/products/12754211102"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8968967/89689672859.7.jpg",
+        "mall": "알엑스더마",
+        "link": "https://smartstore.naver.com/main/products/12145162154"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "나이아신아마이드 주의사항",
+    "list_price": 10300,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9010950/90109506110.5.jpg",
+    "page_collected_at": "2026-08-01T17:04:07",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:58:12",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "917884684",
+    "translated_kr": "쿠오레 AXI 약용 사이토프라인 MX 200ml 무료배송 탄력·힘 탈모 방지 비듬 가려움 육모",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "963806129",
+    "translated_kr": "SELLA 클래식 내추럴 클렌징바 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "옥시젠 물티슈 [클래식]",
+      "daum": "바닐라코",
+      "naver_web": "SELLA 미니 클렌징 비누, , 2개"
+    },
+    "brand": "아토앤오투 (ATONO2)",
+    "name": "옥시젠 물티슈 [클래식]",
+    "volume": "70g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 2800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
