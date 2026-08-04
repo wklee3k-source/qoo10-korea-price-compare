@@ -10728,5 +10728,294 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1110551308",
+    "translated_kr": "시카 두 케어링 앰플 (50ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 듀 케어링 앰플",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "키시닝 뷰티 시카 듀 케어링 앰플 -"
+    },
+    "brand": "키시닝뷰티 (kisyningbeauty)",
+    "name": "시카 듀 케어링 앰플",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1158333234",
+    "translated_kr": "【2박스 세트】보습 케어 마스크 28ml * 5장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "한 장 솔루션 봉 앤 마스크 보습 키트",
+      "musinsa": "아이소이 브라이트닝 겔 마스크 29g(낱장) 5매",
+      "daum": "동국제약 센텔리안24 마데카랩 겔 마스크",
+      "naver_web": "앰플엔 NEW 고보습 세라마이드샷 마스크팩 5장"
+    },
+    "brand": "에뛰드 (ETUDE)",
+    "name": "한 장 솔루션 봉 앤 마스크 보습 키트",
+    "volume": "3ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 3900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1122941494",
+    "translated_kr": "O2 버블 산소 펩타이드 에센스 50ml 고농축 펩타이드 에센스 디엠셀 버블 세럼 탄력 · 탄성 · 수분 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver": "디엠쎌 산소 버블 펩타이드 오투 에센스, EGF 펩타이드 판테놀 탄력 보습 항산화 케어",
+      "daum": "새로운 성분으로 무장한 5월 신상 #스킨케어"
+    },
+    "brand": "디엠쎌",
+    "name": "디엠쎌 산소 버블 펩타이드 오투 에센스, EGF 펩타이드 판테놀 탄력 보습 항산화 케어",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 56000,
+    "mall": "디엠쎌코스메틱",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9631228488",
+    "image_url": "https://shop-phinf.pstatic.net/20260126_271/1769403875017UWOgj_PNG/76161239174473011_581653567.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8717573/87175730758.1.jpg",
+        "mall": "디엠쎌코스메틱",
+        "link": "https://smartstore.naver.com/main/products/9631228488"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047073/90470732084.jpg",
+        "mall": "Ecoflower",
+        "link": "https://smartstore.naver.com/main/products/12926221092"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9047069/90470699601.jpg",
+        "mall": "J.W Mall",
+        "link": "https://smartstore.naver.com/main/products/12926188609"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8717573/87175730758.1.jpg",
+    "page_collected_at": "2026-08-01T15:34:37",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:17:46",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1211242483",
+    "translated_kr": "디 웨더 레스큐 쿨 아이 씨 크림",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "나이스웨더 콜라보 선 에센스 팩트 무기자차 카밍 [SPF50+/PA++++]",
+      "daum": "열혈바보",
+      "naver_web": "에이지투웨니스 나이스웨더 카밍 롱프로텍션 선팩트 본품"
+    },
+    "brand": "에이지투웨니스 (AGE20's)",
+    "name": "에이지투웨니스 나이스웨더 카밍 롱프로텍션 선팩트 본품",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1174516764",
+    "translated_kr": "【공식】슬릭 바이 살롱 나이트 케어 세럼 샴푸 나이트 케어 세럼 트리트먼트 3웨이 오일 미스트 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기타 : 헤어 / 바디 / 툴> 부문"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1176068465",
+    "translated_kr": "[한국 프리미엄] 럭키! 핸드 솝 & 핸드 타올 선물 세트 선물로 딱 좋아!",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "포장 하나하나 모두 러쉬스러워요",
+      "naver_web": "해피데이판촉물>타올,",
+      "naver_rematch": "폭스러시 32PCS 핑크 보우 포장지 세트, 12매 코켓 예쁜 보우 포장지 발렌타인, 총학생회 파티 선물, 소녀 생일 선물 포장, DIY 공예 파티 용품"
+    },
+    "brand": null,
+    "name": "폭스러시 32PCS 핑크 보우 포장지 세트, 12매 코켓 예쁜 보우 포장지 발렌타인, 총학생회 파티 선물, 소녀 생일 선물 포장, DIY 공예 파티 용품",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 54700,
+    "mall": "ㅇ모두상점ㅇ",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12440339377",
+    "image_url": "https://shop-phinf.pstatic.net/20250921_14/17584618515660k4me_JPEG/8041007462482616_1352003640.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8998485/89984850124.jpg",
+        "mall": "ㅇ모두상점ㅇ",
+        "link": "https://smartstore.naver.com/main/products/12440339377"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "해피데이판촉물>타올,",
+    "list_price": 109400,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8998485/89984850124.jpg",
+    "page_collected_at": "2026-08-01T15:34:42",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:19:26",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1202200235",
+    "translated_kr": "티 + 에스 + 씨 (이프레미) 하이드라셀 3종 세트 (토너 + 세럼 + 크림)",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2026.06.08 패션 홍보대행사 에이전시커넥션 데일리 뉴스",
+      "naver_web": "포스티"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209204007",
+    "translated_kr": "김소현원장/발효 국균/클렌징/세안 비누 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "발효녹두 더 깨끗한 폼클렌징",
+      "naver_web": "코리아나 발효녹두 더 깨끗한 폼클렌징"
+    },
+    "brand": "코리아나 (Coréana)",
+    "name": "발효녹두 더 깨끗한 폼클렌징",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1212947295",
+    "translated_kr": "【공식】세럼 크림 2점 세트 나노 침투 기술 페이스라인 케어 보습 한국 스킨케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨케어 비건 쿠션 [SPF38/PA++] [21호]",
+      "daum": "록시땅",
+      "naver_web": "스킨케어"
+    },
+    "brand": "아이소이 (ISOI)",
+    "name": "스킨케어 비건 쿠션 [SPF38/PA++] [21호]",
+    "volume": "13g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 28800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1185488290",
+    "translated_kr": "PDRN 리주 판테놀 크림 15ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "daum": "EGF 재생크림 vs 시카크림 완벽 비교: 피부 재생 원리, 진정 성분 차이, 시너지 효과 및 피부 타입별...",
+      "naver_web": "리쥬메디크림 Rejumedi Cream 의약품 정보"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
