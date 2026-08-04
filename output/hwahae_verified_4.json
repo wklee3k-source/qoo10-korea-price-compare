@@ -7908,5 +7908,320 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1208501555",
+    "translated_kr": "살롱급 단시간 헤어 케어 특가 세트 (10 프리미엄 리페어 헤어 마스크 300ml 8초 타임 헤어 마스크 350ml 프로틴 실크 에센스 (스위트 러브) 200ml CMC 샴푸 500ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "데미지 케어 2 in 1 오일 미스트",
+      "naver_web": "헤어 스칼프 케어 2종 세트",
+      "naver_rematch": "Moroccanoil Brumes DU Maroc 모로칸오일 프래그런스 미스트 헤어 앤 바디 100ml 2팩"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "Moroccanoil Brumes DU Maroc 모로칸오일 프래그런스 미스트 헤어 앤 바디 100ml 2팩",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 133760,
+    "mall": "바이조이2",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8723633260",
+    "image_url": "https://shop-phinf.pstatic.net/20230617_55/1686939235015oYGPO_JPEG/88075062847254380_678960378.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8626813/86268133583.jpg",
+        "mall": "바이조이2",
+        "link": "https://smartstore.naver.com/main/products/8723633260"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8961489/89614890345.jpg",
+        "mall": "이노텍컴",
+        "link": "https://smartstore.naver.com/main/products/12070379646"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "데미지 케어 2 in 1 오일 미스트",
+    "list_price": 137900,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8626813/86268133583.jpg",
+    "page_collected_at": "2026-08-01T15:57:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:24:47",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1195074904",
+    "translated_kr": "[정품] 피욜레 쿠오르시아 컬러 샴푸 자주색 purple 1000ml [살롱 전문가용 제품] [브리치 케어] [컬러 케어] [무라샨] [최저가 업데이트 중] [정품] [색 빠짐 케어]",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "7무 피토에너지 약산성 샴푸",
+      "naver": "피요레 피오레 FIOLE 쿼르시아 쿠오르시아 컬러 샴푸 보색샴푸 퍼플, 250ml, 1개"
+    },
+    "brand": "피오레",
+    "name": "피요레 피오레 FIOLE 쿼르시아 쿠오르시아 컬러 샴푸 보색샴푸 퍼플, 250ml, 1개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 15000,
+    "mall": "오하요재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12706227126",
+    "image_url": "https://shop-phinf.pstatic.net/20251119_86/1763528600958DVupB_JPEG/90168692482383148_445740379.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025073/90250738050.jpg",
+        "mall": "오하요재팬",
+        "link": "https://smartstore.naver.com/main/products/12706227126"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9068548/90685484508.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/13140973416"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051775/90517756171.jpg",
+        "mall": "일본화장품스토어",
+        "link": "https://smartstore.naver.com/main/products/12973245161"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9004158/90041589319.jpg",
+        "mall": "재팬투코리아",
+        "link": "https://smartstore.naver.com/main/products/12497078466"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011079/90110792853.jpg",
+        "mall": "도쿄루아",
+        "link": "https://smartstore.naver.com/main/products/12566282000"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9025073/90250738050.jpg",
+    "page_collected_at": "2026-08-01T15:57:55",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:25:09",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "766675914",
+    "translated_kr": "P013 아이보리 베이지 4g 파라 젤 컬러 젤 시라카와 마리 프로듀스 젤 네일 파라젤",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1182955879",
+    "translated_kr": "[국내 배송] [50장 세트] 부스터 마스크 25ml 인기의 전 5종 / 보습 / 영양 / 건조 / 마스크팩 / 페이스팩 / 더말 / Dermal / 렛츠 스킨",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "EP 세럼",
+      "daum": "EP.72 새해, 일상 속 아름다움을 선물하고 싶은 너에게"
+    },
+    "reject_reason": "점수미달(-6.0)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197119024",
+    "translated_kr": "CO UV 스프레이 자외선 차단제 스프레이 SPF50+ PA++++ 얼굴 머리 전신 산뜻한 사용감 하얀 뜨는 느낌 없음 워터 프루프 비누 오프 무향료 에탄올 프리 산화 아연",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클래식 화이트 UV 젤 [SPF50+/PA++++]",
+      "naver_web": "머리가 지끈지끈 찌릿찌릿해요"
+    },
+    "brand": "세이키세 (SEKKISEI)",
+    "name": "클래식 화이트 UV 젤 [SPF50+/PA++++]",
+    "volume": "80g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206372419",
+    "translated_kr": "색 하이라이트 쉐이딩 팔레트 코 쉐도우 펄 파우더 쉐이딩 아시아인을 위해 개발 페이스 메이크 용 윤곽 입체 메이크 밀착 자연 발색 일상 메이크 선물",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "breeze_201701.pdf",
+      "naver_web": "식욕억제제 주의사항, 부작용"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183278805",
+    "translated_kr": "[공식점 / P10배 / 국내 배송] \"리필용 450ml\" 뷰 BIO 집중 보수 실키 리페어 퍼퓨 트리트먼트 450ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "D.N.A. 인퓨전 리페어 에센스"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205678472",
+    "translated_kr": "두피 브러시 두피 브러시 샴푸 브러시 두피 마사지 두피 케어 실리콘 브러시 혈액 순환 촉진 목욕탕",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "두피 모공까지 시원해지는, 일본식 머리 감기!",
+      "naver_web": "디아켈리 괄사 프리미엄 은괄사 99.9% 은파우더 두피 전신 관리 원적외선 방사, 디아켈리은괄사, 1개",
+      "naver_rematch": "남성 머리감기 두피마사지 샴푸 브러쉬 비듬 피지 모공세척 여성"
+    },
+    "brand": "제이엠",
+    "name": "남성 머리감기 두피마사지 샴푸 브러쉬 비듬 피지 모공세척 여성",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 17470,
+    "mall": "지니마켓2010",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13155285583",
+    "image_url": "https://shop-phinf.pstatic.net/20221123_171/1669209167715RRBMB_JPEG/30170113922673631_1230421625.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069979/90699796675.jpg",
+        "mall": "지니마켓2010",
+        "link": "https://smartstore.naver.com/main/products/13155285583"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9110451/91104518413.jpg",
+        "mall": "itemhive",
+        "link": "https://smartstore.naver.com/main/products/13560008046"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090087/90900879584.jpg",
+        "mall": "트루쓰추천샵",
+        "link": "https://smartstore.naver.com/main/products/13356369252"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "두피 모공까지 시원해지는, 일본식 머리 감기!",
+    "list_price": 18200,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9069979/90699796675.jpg",
+    "page_collected_at": "2026-08-01T15:58:00",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:28:12",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1028711285",
+    "translated_kr": "1+1 미쟝센 퍼펙트 노워시 트리트먼트 크림팩 230ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "퍼펙트 노워시크림팩",
+      "daum": "스킨푸드",
+      "naver_web": "미쟝센 퍼펙트 노워시 크림팩 230ML+230ML"
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "퍼펙트 노워시크림팩",
+    "volume": "230ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 16000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "967844434",
+    "translated_kr": "의약부외품 D-바 디-바 15g 데오드란트 데오드란트 크림 제한 D 시리즈",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "D&D 디그리저 샴푸",
+      "daum": "향수",
+      "naver_web": "식욕억제제 주의사항, 부작용"
+    },
+    "reject_reason": "점수미달(-6.0)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
