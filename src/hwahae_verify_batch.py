@@ -117,16 +117,60 @@ def _normalize_volume_ml(text: str) -> float | None:
     return num * 1000 if unit == "l" else num
 
 
+# [v7.39.0] Exa 무료 티어는 매월 $10 크레딧이고 검색 단가가 1,000회당
+#  $7 이라 **월 약 1,430회**가 한도다(크레딧은 이월 안 되고 월말 소멸).
+#  검증 대상이 4,455건이라 전체 재검증 한 번이면 한도를 훨씬 넘는다 —
+#  실제로 재검증 도중 크레딧이 소진돼 402 NO_MORE_CREDITS 가 났다.
+#  그래서 호출 수를 월 단위로 세서 상한에 닿으면 스스로 멈춘다.
+#  '영구장애'로 소스를 끄는 기존 장치는 실행 단위라 다음 실행에서 또
+#  호출해버린다. 카운터는 파일에 남겨야 회차를 넘어 유지된다.
+EXA_MONTHLY_LIMIT = int(os.environ.get("EXA_MONTHLY_LIMIT", "1400"))
+EXA_USAGE_PATH = Path(os.environ.get(
+    "EXA_USAGE_PATH", str(Path(__file__).resolve().parent.parent / "output" / "exa_usage.json")))
+
+
+def _exa_usage_load() -> dict:
+    month = time.strftime("%Y-%m")
+    try:
+        data = json.loads(EXA_USAGE_PATH.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        data = {}
+    if data.get("month") != month:      # 달이 바뀌면 크레딧이 새로 들어온다
+        data = {"month": month, "count": 0}
+    return data
+
+
+def _exa_budget_left() -> int:
+    return max(0, EXA_MONTHLY_LIMIT - _exa_usage_load().get("count", 0))
+
+
+def _exa_usage_bump() -> None:
+    data = _exa_usage_load()
+    data["count"] = data.get("count", 0) + 1
+    try:
+        EXA_USAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        EXA_USAGE_PATH.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        print(f"    [경고] Exa 사용량 기록 실패: {e}", file=sys.stderr)
+
+
 def _search_exa(keyword: str) -> dict | None:
     """후보1: Exa 의미기반검색(원본 번역 그대로 검색).
 
     [실패구분] import/네트워크/파싱 오류는 SearchTechnicalFailure로
-    올리고, '검색은 됐는데 결과가 0건'만 None(진짜 무결과)으로 본다."""
+    올리고, '검색은 됐는데 결과가 0건'만 None(진짜 무결과)으로 본다.
+
+    [v7.39.0] 무료 티어 월 한도(약 1,430회) 안에서만 쓴다. 한도에 닿으면
+    호출하지 않고 None 을 돌려준다 — 기술적 실패가 아니라 '이번엔 안
+    쓴다'이므로 상품이 보류로 쌓이지 않는다."""
+    if _exa_budget_left() <= 0:
+        return None
     try:
         from exa_search import search as exa_search
     except Exception as e:  # noqa: BLE001
         raise SearchTechnicalFailure(f"exa_search 임포트 실패: {e}") from e
 
+    _exa_usage_bump()
     try:
         items = exa_search(keyword, num_results=5)
     except Exception as e:  # noqa: BLE001
@@ -607,6 +651,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     for _x in results:
         if _x.get("product_url"):
             previous_by_goods[_x["goods_no"]] = _x
+    _exa_left = _exa_budget_left()
+    print(f"[INFO] Exa 이번 달 남은 호출 {_exa_left}/{EXA_MONTHLY_LIMIT}회"
+          + ("" if _exa_left else " — 한도 소진, 이번 달은 Exa 없이 진행"))
     print(f"[INFO] 이전 검증 결과 {len(previous_by_goods)}건 확보 "
           f"(못 찾아도 이 값들은 덮지 않는다)")
 

@@ -2103,6 +2103,60 @@ def t88_naver_web_apihub_ready():
         sys.path[:] = _sp
 
 
+# --------------------- #89 Exa 무료 티어 월 한도 준수 (v7.39.0)
+#  Exa 무료 티어는 월 $10 크레딧이고 검색이 1,000회당 $7 이라 월 약
+#  1,430회가 한도다(크레딧 이월 없음). 검증 대상 4,455건이라 전체
+#  재검증 한 번이면 한도를 훨씬 넘는다 — 실제로 재검증 도중 소진돼
+#  402 NO_MORE_CREDITS 가 났고, 그게 데이터 전멸 사고의 한 원인이었다.
+#  '영구장애로 소스 끄기'는 실행 단위라 다음 실행에서 또 호출한다.
+#  카운터를 파일에 남겨야 회차를 넘어 유지된다.
+def t89_exa_monthly_budget():
+    import importlib
+    import tempfile
+    _sp = sys.path[:]
+    _env_backup = {k: os.environ.get(k) for k in ("EXA_MONTHLY_LIMIT", "EXA_USAGE_PATH")}
+    sys.path.insert(0, str(SRC))
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            usage = Path(td) / "usage.json"
+            os.environ["EXA_MONTHLY_LIMIT"] = "3"
+            os.environ["EXA_USAGE_PATH"] = str(usage)
+            import hwahae_verify_batch as _h
+            importlib.reload(_h)
+
+            start_ok = _h._exa_budget_left() == 3
+            for _ in range(3):
+                _h._exa_usage_bump()
+            spent_ok = _h._exa_budget_left() == 0
+            # 한도 소진 시 호출하지 않고 None(기술적 실패 아님 — 상품이
+            #  '보류'로 쌓이면 검증이 멈춘다)
+            blocked = _h._search_exa("아무거나") is None
+
+            # 달이 바뀌면 크레딧이 새로 들어오므로 카운터가 리셋돼야 한다
+            usage.write_text('{"month":"2020-01","count":999}', encoding="utf-8")
+            reset_ok = _h._exa_budget_left() == 3
+
+        # 워커가 10개라 샤드당 한도를 나누지 않으면 합계가 한도를 넘는다
+        wf = (ROOT / ".github/workflows/qoo10-pipeline.yml").read_text(encoding="utf-8")
+        per_shard = 'EXA_MONTHLY_LIMIT: "140"' in wf
+        # 사용량 파일은 샤드별로 분리해야 워커끼리 커밋 충돌이 없다
+        sharded = "exa_usage_${{ matrix.shard }}.json" in wf and "exa_usage_${S}.json" in wf
+
+        ok = all([start_ok, spent_ok, blocked, reset_ok, per_shard, sharded])
+        check("89 Exa 월 한도 준수", ok,
+              f"시작{start_ok} 소진{spent_ok} 차단{blocked} 월리셋{reset_ok} "
+              f"샤드당한도{per_shard} 파일분리{sharded}")
+    except Exception as e:  # noqa: BLE001
+        check("89 Exa 월 한도 준수", False, f"{type(e).__name__}: {e}")
+    finally:
+        for k, v in _env_backup.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
