@@ -5871,5 +5871,351 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1086220705",
+    "translated_kr": "모로칸 아르간 오일 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+      "musinsa": "인텐시브 모로칸 아르간 헤어에센스 오일",
+      "daum": "닥터오가닉 퓨어 오일",
+      "naver_web": "argan oil"
+    },
+    "brand": "디오디너리 (TheOrdinary)",
+    "name": "100% 오가닉 콜드-프레스드 모로칸 아르간 오일",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 11800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1202542070",
+    "translated_kr": "더마팜 수딩 리페어 크림 R4 보습 크림 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에그클리닉 콜라보 수딩 글로우 크림",
+      "naver_web": "더마펌 수딩 리페어 토닝 크림 R4 |"
+    },
+    "brand": "블루 씨피알 (Blue CPR)",
+    "name": "에그클리닉 콜라보 수딩 글로우 크림",
+    "volume": "40ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1138039205",
+    "translated_kr": "베리 페리 모공 클렌징 무스 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "베리페리 포어 클렌징 무스",
+      "daum": "여름의 활력을 채워줄 뷰티 아이템 리스트",
+      "naver_web": "베리페리 포어 클렌징 무스"
+    },
+    "brand": "네오젠더마로지 (NEOGENDERMALOGY)",
+    "name": "베리페리 포어 클렌징 무스",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1162849187",
+    "translated_kr": "화이트 앤 아프리코트 30ml 복숭아 향수",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "naver": "아닉구딸 뉘 에 컨피던스 오 드 퍼퓸 100ml",
+      "daum": "28살 여자 향린이 추천 좀 해줄 수 있어?",
+      "naver_web": "봄맞이 DIY용품전"
+    },
+    "brand": null,
+    "name": "아닉구딸 뉘 에 컨피던스 오 드 퍼퓸 100ml",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 321800,
+    "mall": "하로우빈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11871673912",
+    "image_url": "https://shop-phinf.pstatic.net/20250522_281/1747873352639pk2LU_JPEG/12675951764119859_1446000136.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8941618/89416184506.jpg",
+        "mall": "하로우빈",
+        "link": "https://smartstore.naver.com/main/products/11871673912"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009210/90092106891.jpg",
+        "mall": "인핸쓰토어",
+        "link": "https://smartstore.naver.com/main/products/12547596038"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9005683/90056833178.jpg",
+        "mall": "THEPERFUMES",
+        "link": "https://smartstore.naver.com/main/products/12512322325"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079866/90798663604.jpg",
+        "mall": "다크마트",
+        "link": "https://smartstore.naver.com/main/products/13254153272"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "28살 여자 향린이 추천 좀 해줄 수 있어?",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8941618/89416184506.jpg",
+    "page_collected_at": "2026-08-01T16:21:38",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:03:57",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1205747538",
+    "translated_kr": "눈가 팩 시카 니들 패치 6회분/12매 히알루론산 패치 눈가팩 눈가 케어 눈 밑 처짐 제거 마이크로 니들 눈 밑 패치 눈 밑 팩 눈가 팩시트 눈 처짐",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "피부과 시술에 대한 궁금증의 해답",
+      "naver_web": "필미 마이크로 니들패치 눈밑 팔자 미간 주름 다크써클 패치 3박스",
+      "naver_rematch": "필미 마이크로 니들패치 눈밑 팔자 미간 주름 다크써클 패치 3박스 2박스+1박스(12팩)"
+    },
+    "brand": "UNKNOWN",
+    "name": "필미 마이크로 니들패치 눈밑 팔자 미간 주름 다크써클 패치 3박스 2박스+1박스(12팩)",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 99200,
+    "mall": "비유니",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12656549178",
+    "image_url": "https://shop-phinf.pstatic.net/20251109_216/1762650221944YhCwH_JPEG/37420188762736143_616700056.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9020106/90201060084.jpg",
+        "mall": "비유니",
+        "link": "https://smartstore.naver.com/main/products/12656549178"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9020342/90203422692.jpg",
+        "mall": "비유니",
+        "link": "https://smartstore.naver.com/main/products/12658911786"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106159/91061595911.jpg",
+        "mall": "내추럴블룸",
+        "link": "https://smartstore.naver.com/main/products/13517085559"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "필미 마이크로 니들패치 눈밑 팔자 미간 주름 다크써클 패치 3박스",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9020106/90201060084.jpg",
+    "page_collected_at": "2026-08-01T16:21:41",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:04:34",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1211319370",
+    "translated_kr": "[국내 배송] 인셀덤 래디언 솜100 토너 100ml 정품",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "본사QR제품직송 인셀덤 ICD 래디언솜100 마이크로플루다이저 에센셜 토너 50ml",
+      "daum": "말소 일자로부터 거의 나간 많이 내렸습니다",
+      "naver_web": "인셀덤 래디언솜 100 앰플 쿠션 SPF50+ PA++++/본품 23호 내추럴 라이트, 1개"
+    },
+    "brand": "인셀덤",
+    "name": "본사QR제품직송 인셀덤 ICD 래디언솜100 마이크로플루다이저 에센셜 토너 100ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 85000,
+    "mall": "인셀덤보타랩100프로정품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12826285290",
+    "image_url": "https://shop-phinf.pstatic.net/20251215_47/1765774791447EcXUA_PNG/7684798253599770_1699725939.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9037079/90370796239.jpg",
+        "mall": "인셀덤보타랩100프로정품",
+        "link": "https://smartstore.naver.com/main/products/12826285290"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052723/90527230305.jpg",
+        "mall": "인셀덤보타랩 정품몰",
+        "link": "https://smartstore.naver.com/main/products/12982719295"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9037710/90377104269.jpg",
+        "mall": "인셀덤 정품몰",
+        "link": "https://smartstore.naver.com/main/products/12832593277"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8892374/88923748792.jpg",
+        "mall": "보보앤",
+        "link": "https://smartstore.naver.com/main/products/11379238427"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9041004/90410047619.2.jpg",
+        "mall": "ckstore",
+        "link": "https://smartstore.naver.com/main/products/12865536627"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "본사QR제품직송 인셀덤 ICD 래디언솜100 마이크로플루다이저 에센셜 토너 50ml",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9037079/90370796239.jpg",
+    "page_collected_at": "2026-08-01T16:21:43",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:05:13",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1213488052",
+    "translated_kr": "슈퍼 볼카닉 모공 클레이 마스크 100ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "이니스프리X쿠로미 비타C 그린티 엔자임 세럼",
+      "daum": "이니스프리 화산송이 모공팩 블랙헤드 제거에 좋다던데 저렴하게 구매할 수 있는 곳 알려주세요...",
+      "naver_web": "Innisfree _슈퍼 볼카닉 포어 클레이 마스크 /"
+    },
+    "brand": "이니스프리 (INNISFREE)",
+    "name": "이니스프리 화산송이 모공팩 블랙헤드 제거에 좋다던데 저렴하게 구매할 수 있는 곳 알려주세요...",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1210760524",
+    "translated_kr": "호랑이 피부 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "호랑이 스킨토너",
+      "daum": "예민 피부를 위한 진정 관련 성분들 종류랑 특징",
+      "naver_web": "VTCOSMETICS CICA 마일드 토너 패드 호랑이 에디션 100매"
+    },
+    "brand": "고원 (GOWON)",
+    "name": "호랑이 스킨토너",
+    "volume": "200ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195949300",
+    "translated_kr": "[에센스 풍부] 듀얼 젯 마스크 #02 피부 트러블&보습 베리어 케어 수량 선택 세트 저자극 PDRN 센텔라 보습 팩 한국 팩 마스크팩 페이스 팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "TPO 팩 [운동]",
+      "naver_web": "닥터자르트 세라마이딘 스킨 베리어 모이스처라이징 크림 +세럼 토너 (+크림 15mlx2+세럼 토너 +미...."
+    },
+    "brand": "리플라이미 (reply:me)",
+    "name": "TPO 팩 [운동]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1139814284",
+    "translated_kr": "[정품] 엑스폴리에이팅 폴리시 65g / 지오스킨헬스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "엑스폴리에이팅 폴리시",
+      "daum": "지오스킨헬스",
+      "naver_web": "엑스폴리에이팅 폴리시"
+    },
+    "brand": "지오스킨헬스 (ZOSKINHEALTH)",
+    "name": "엑스폴리에이팅 폴리시",
+    "volume": "65g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 118000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
