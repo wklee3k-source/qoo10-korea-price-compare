@@ -6217,5 +6217,277 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1160567733",
+    "translated_kr": "나비졸 DR TA 화이트 에멀젼n 120ml 약용 미백 로션 선택 가능 2가지 타입",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "TA 앰플",
+      "naver": "케어셀라 바이오케이 TA",
+      "daum": "Cosme"
+    },
+    "brand": "지쿱",
+    "name": "케어셀라 바이오케이 TA",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 199000,
+    "mall": "하라힐즈서울역점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11590983386",
+    "image_url": "https://shop-phinf.pstatic.net/20250314_273/1741938166366M0zzk_JPEG/14257305172231743_925153266.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8913549/89135493792.jpg",
+        "mall": "하라힐즈서울역점",
+        "link": "https://smartstore.naver.com/main/products/11590983386"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105615/91056150916.jpg",
+        "mall": "재팬럭키셀렉트",
+        "link": "https://smartstore.naver.com/main/products/13511640564"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9051856/90518568105.jpg",
+        "mall": "유어굿파트너",
+        "link": "https://smartstore.naver.com/main/products/12974057095"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834045/88340458475.1.jpg",
+        "mall": "하라힐즈샵",
+        "link": "https://smartstore.naver.com/main/products/10795952485"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 299000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8913549/89135493792.jpg",
+    "page_collected_at": "2026-08-01T16:21:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:07:40",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1210333469",
+    "translated_kr": "공식 바디로션 300g/아로마 마사지/등 여드름/각질케어/피지·보습케어/진정/대용량/8종 천연오일 배합",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "더페이스샵/제품",
+      "naver_web": "동백오일 ~ 동백기름 카멜리아 식물성보습오일 바디 페이스 헤어마사지 자연의"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191312885",
+    "translated_kr": "공식 녹차 세럼 스페셜 세트 녹차 세럼 50ml+펩타 시카 세럼패드 60매입/저분자 펩타이드/탄력케어/보습케어/고순도/각질케어/피부손상 방지",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "세럼",
+      "naver_web": "THE DERMA 더 더마 마스크 5매입 베스트VC100 플러스 레티놀, 5개입, 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1056915401",
+    "translated_kr": "공식 2개 세트 스킨케어 케어크림 빈 박티올 세라마이드 크림 30g (박티올+CICA+나이아신아마이드) 일본제 주름 기미 모공개짐 광택피부 수광피부 도자기피부 에이징케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183876745",
+    "translated_kr": "글로우 앰플 히알루론산 마스크 (10매입)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 앰플 마스크 [히알루론]",
+      "daum": "아누아",
+      "naver_web": "마몽드 플로라글로우 로즈 앰플 마스크팩 , 1개입, 5개"
+    },
+    "brand": "텐제로 (tenzero)",
+    "name": "글로우 앰플 마스크 [히알루론]",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1143398530",
+    "translated_kr": "클렌징패드+워터 2점 세트 30초 클렌징 딥 클렌징 촉촉 데일리더마 클렌징패드 마일드 + 클렌징 워터 1팩 (70매)",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "a1",
+      "naver_web": "나이팅게일 데일리 더마 클렌징 패드 마일드 100매 x 3개",
+      "naver_rematch": "나이팅게일 데일리 더마 클렌징 패드 마일드 100매 x 2개"
+    },
+    "brand": "나이팅게일",
+    "name": "나이팅게일 데일리 더마 클렌징 패드 마일드 100매 x 2개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 50620,
+    "mall": "마이트문 가성비 가심비 몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13427534843",
+    "image_url": "https://shop-phinf.pstatic.net/20260402_283/1775077369224bFaE9_JPEG/109210217369632138_543882266.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097204/90972045179.jpg",
+        "mall": "마이트문 가성비 가심비 몰",
+        "link": "https://smartstore.naver.com/main/products/13427534843"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "나이팅게일 데일리 더마 클렌징 패드 마일드 100매 x 3개",
+    "list_price": 67500,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9097204/90972045179.jpg",
+    "page_collected_at": "2026-08-01T16:21:58",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T16:10:29",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1194181730",
+    "translated_kr": "공식숍 제모크림 의약부외품 어린이 탈모 무성모 무성모처리 제모제 수베코 약용 제모 밀크 (스프레이 타입)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1164768276",
+    "translated_kr": "데오나투레 약용 사라사라 크림 45g 겨드랑이용",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사라사라 크림",
+      "naver_web": "데오나츄레 사라사라 크림"
+    },
+    "brand": "데오나츄레 (Deonatulle)",
+    "name": "사라사라 크림",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1198398134",
+    "translated_kr": "LPP 트리트먼트 150ml 1개 살롱 전매품 대미지 케어 단백질 보수",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "향까지 사로잡는 워시특집!"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208115061",
+    "translated_kr": "PDRN 히알루론산 하이드레이팅 미스트 100ml 2개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 수분 캡슐 미스트",
+      "daum": "9월 주목해야 할 신상 뷰티",
+      "naver_web": "아누아 PDRN 히알루론산 수분 캡슐 미스트, , 1개"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 수분 캡슐 미스트",
+    "volume": "100mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
