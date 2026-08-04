@@ -8245,5 +8245,269 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1169644916",
+    "translated_kr": "[공식] 탄산 버블 두피 클렌징 30g 대용량 스칼프 스케일러",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[티트리 쿨링 두피스케일러] 각질피지두피관리 스케일링 스크럽 두피클리닉 클렌징홈케어",
+      "daum": "스파클링 스칼프 스케일러 , 1개",
+      "naver_web": "탄산버블 두피 스케일러"
+    },
+    "brand": "닥터시드",
+    "name": "[티트리 쿨링 두피스케일러] 각질피지두피관리 스케일링 스크럽 두피클리닉 클렌징홈케어",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 18500,
+    "mall": "닥터시드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/10235936388",
+    "image_url": "https://shop-phinf.pstatic.net/20240429_34/1714355249310zzn7l_JPEG/115491137998747217_237586514.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8778043/87780439957.jpg",
+        "mall": "닥터시드",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10235936388"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8776210/87762107232.jpg",
+        "mall": "닥터시드",
+        "link": "https://smartstore.naver.com/main/products/10217603705"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9092105/90921054108.jpg",
+        "mall": "모 두 모 아",
+        "link": "https://smartstore.naver.com/main/products/13376543772"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8778043/87780439957.jpg",
+    "page_collected_at": "2026-08-01T16:48:34",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T16:40:18",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1176242836",
+    "translated_kr": "[공식] 살롱 케어 · 씨솔트 엑스폴리에이팅 스칼프 샴푸 270g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "씨솔트 엑스폴리에이팅 스칼프 샴푸",
+      "daum": "2021 얼루어 베스트 오브 뷰티 어워드 헤어 & 보디 부문 위너",
+      "naver_web": "씨솔트 테라피 두피 스케일러"
+    },
+    "brand": "핑크고스트 (PINKGHOST)",
+    "name": "씨솔트 엑스폴리에이팅 스칼프 샴푸",
+    "volume": "270ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 43000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190474087",
+    "translated_kr": "코스메 데코르테 고세 기모노 유이 오드뜨왈렛 15mL",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "코스메 데코르테"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1163067127",
+    "translated_kr": "[공식] 퍼퓨마 핸드 크림 50ml × 3본(028 언드레스드 / 057 웨이크 업 9 / 카키)",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "더마비 내러티브 핸드크림 3종 택 1"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1202024454",
+    "translated_kr": "토키와 야쿠힌 코교 사나 부드러운 혼마모토 두유 이소플라본 링클 아이크림 N 20g 단품",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "컨디셔너 N (컨디셔너엔)"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1185518031",
+    "translated_kr": "더 타임 R 아쿠아 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 더 타임 리셋 아쿠아",
+      "daum": "악어/대규모 콘텐츠/해신 R/아이템",
+      "naver_web": "더 타임 R 아쿠아"
+    },
+    "brand": "입사 (IPSA)",
+    "name": "(해외) 더 타임 리셋 아쿠아",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1152179633",
+    "translated_kr": "더마파워 X 스템 샤프 아이 20g 고기능 아이크림",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "데일리 하이드로 드롭스",
+      "daum": "제 149 호 2018년 1월",
+      "naver_web": "Obagi 더마파워X 스템샤프아이"
+    },
+    "brand": "오바지 (OBAGI)",
+    "name": "Obagi 더마파워X 스템샤프아이",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 149000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1200337123",
+    "translated_kr": "【공식】율무 PDRN 결 윤기 버블 부스터 85ml 도입액",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "7일, 결 진정 미스트",
+      "daum": "뷰티",
+      "naver_web": "율무 PDRN 버블 부스터팩"
+    },
+    "brand": "네츄럴샤인 (NaturalShine)",
+    "name": "율무 PDRN 버블 부스터팩",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 22000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1090489296",
+    "translated_kr": "셀메디스 인텐시브 멀티 케어 마스크팩 28g * 5EA 병원 피부과 여러 피부 고민을 한 번에 - 한국 생산",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "daum": "셀메딕스 인텐시브 멀티 케어 마스크"
+    },
+    "brand": "려 (Ryo)",
+    "name": "함빛 손상 고영양 케어 컨디셔너",
+    "volume": "400ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 12500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1172728510",
+    "translated_kr": "보습 마스크팩_제품 10개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "팩",
+      "naver_web": "기능성 주름개선 탄력 마스크팩 영양공급 보습 탄력저하 개선 천연시트지 무파라벤제품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
