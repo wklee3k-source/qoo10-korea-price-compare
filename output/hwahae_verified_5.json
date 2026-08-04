@@ -3323,5 +3323,307 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1131394723",
+    "translated_kr": "무드 페블 하드너 7ml 4종 매니큐어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "무드 페블 하드너 [01 코팅밀크]",
+      "daum": "투명매니큐어 추천!!",
+      "naver_web": "롬앤 무드 페블 하드너X2 #네일하드너"
+    },
+    "brand": "롬앤 (ROMAND)",
+    "name": "무드 페블 하드너 [01 코팅밀크]",
+    "volume": "7ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 8000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1213238429",
+    "translated_kr": "딥 다메이지 트리트먼트 EX 100ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "8초살롱 헤어 마스크 트리트먼트",
+      "daum": "이시즈카 운쇼/출연 작품",
+      "naver_web": "フクスケ 満足 美温活 はらまき丈レギンス 10分丈 M〜L 2個"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199247944",
+    "translated_kr": "DMT 페이셜 크림 100ml + 100ml 더블 기획",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "DMT 이너클렌저",
+      "daum": "하루 매출 49배↑! 네오팜, 아마존 프라임데이 ‘MLE 크림’ 대박",
+      "naver_web": "피지오겔 DMT 페이셜크림 + 더블기획"
+    },
+    "brand": "피지오겔 (PHYSIOGEL)",
+    "name": "피지오겔 DMT 페이셜크림 + 더블기획",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208038050",
+    "translated_kr": "모이스처라이징 크림 566g 2개 세트 / 보습 크림 나이아신아마이드 크림 바디 크림 무향 저자극 건성 피부 민감한 피부 보습 건조 피부 트러블 얼굴 전신 대용량",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "(해외) 레드니스 릴리빙 나이트 모이스처라이저",
+      "naver": "세타필 세라마이드 피부장벽 리페어 로션 473ml 2개+크림 50g+워시 29ml",
+      "daum": "뷰티쁠 크루가 먼저 써본 #5월뷰티신상",
+      "naver_web": "세타필 모이스춰라이징 로션, , 2개"
+    },
+    "brand": "세타필",
+    "name": "세타필 세라마이드 피부장벽 리페어 바디로션 473ml 2개+크림 50g+워시 29ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 40500,
+    "mall": "세타필 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10759128952",
+    "image_url": "https://shop-phinf.pstatic.net/20260625_35/17823564303476QIfu_JPEG/52864467497361727_281469620.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8830363/88303634874.81.jpg",
+        "mall": "세타필 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/10759128952"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8895921/88959215270.jpg",
+        "mall": "글로벌슈퍼마켓.",
+        "link": "https://smartstore.naver.com/main/products/11414704905"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9004610/90046103286.jpg",
+        "mall": "글로벌 건기식 직구마켓",
+        "link": "https://smartstore.naver.com/main/products/12501592433"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8095409/80954099029.4.jpg",
+        "mall": "해즈홀릭",
+        "link": "https://smartstore.naver.com/main/products/3409581933"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "세타필 세라마이드 피부장벽 리페어 로션 473ml 2개+크림 50g+워시 29ml",
+    "list_price": 56000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8830363/88303634874.81.jpg",
+    "page_collected_at": "2026-08-01T16:06:05",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:59:51",
+    "reverify_note": "점수미달(-2.5)"
+  },
+  {
+    "goods_no": "1190295644",
+    "translated_kr": "더마 힐러 모공 인상 앰플 30ml 【도자기 피부 / 모공 쏙 PDRN】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마 힐러 포어 타이트닝 앰플",
+      "daum": "💜리쥬란 코스메틱💜 NEW 더마 힐러 포어 타이트닝 앰플",
+      "naver_web": "더쿠"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "더마 힐러 포어 타이트닝 앰플",
+    "volume": "30mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 47000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1189560667",
+    "translated_kr": "데일리 소프트 터치 선케어, 60ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "데일리 소프트 터치 선스틱 [SPF50+/PA++++]",
+      "musinsa": "[철벽방어 아웃도어 선크림]데일리 소프트 터치 선크림 60ml",
+      "daum": "여름을 제대로 즐길 수 있는 8월의 신상 뷰티템",
+      "naver_web": "데일리 소프트 터치 선스틱 SPF50+ PA++++"
+    },
+    "brand": "퓨리토서울 (PuritoSEOUL)",
+    "name": "데일리 소프트 터치 선스틱 [SPF50+/PA++++]",
+    "volume": "20g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1204731893",
+    "translated_kr": "【공식】 귀리 인 카밍 젤크림 100ml 천연 성분 함유·홍조 케어·가볍고 산뜻한 사용감",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "오트 젤 수분크림",
+      "daum": "편안한 피부 상태를 위한 스킨케어 모음",
+      "naver_web": "오트 젤 수분크림"
+    },
+    "brand": "아비노 (Aveeno)",
+    "name": "오트 젤 수분크림",
+    "volume": "50mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1211116460",
+    "translated_kr": "닥터자르트 시카페어 젠틀 클렌징폼 150ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카페어™ 젠틀 클렌징 폼",
+      "daum": "닥터자르트 시카페어 젠틀 클렌징 폼, , 1개",
+      "naver_web": "시카페어™ 젠틀 클렌징 폼"
+    },
+    "brand": "닥터자르트 (Dr.Jart+)",
+    "name": "시카페어™ 젠틀 클렌징 폼",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1168758541",
+    "translated_kr": "프레쉬온 선쿠션 + 오로라 핑 파우치 + 패프 5p / 티니핑 Tiniping",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "클리오 프레쉬 온 선쿠션 + 퍼프 5P / 캐치 티니핑",
+      "naver_rematch": "클리오 프레쉬 온 선쿠션 (+오로라핑 파우치) + 퍼프 5P / 캐치 티니핑"
+    },
+    "brand": "클리오",
+    "name": "클리오 프레쉬 온 선쿠션 (+오로라핑 파우치) + 퍼프 5P / 캐치 티니핑",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 46750,
+    "mall": "세르앤 seranne",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12215950556",
+    "image_url": "https://shop-phinf.pstatic.net/20250807_274/1754555125027aTQbR_JPEG/133509979513503_1024038674.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8976046/89760461261.jpg",
+        "mall": "세르앤 seranne",
+        "link": "https://smartstore.naver.com/main/products/12215950556"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "클리오 프레쉬 온 선쿠션 + 퍼프 5P / 캐치 티니핑",
+    "list_price": 58900,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8976046/89760461261.jpg",
+    "page_collected_at": "2026-08-01T16:06:18",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:02:13",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1160446651",
+    "translated_kr": "클린티 트리 리포소옴 시카 카밍 마스크 10매",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클린 티트리 리포좀 시카 카밍 마스크",
+      "naver_web": "리브이셀 시카 카밍 랩핑 마스크"
+    },
+    "brand": "달바 (d'Alba)",
+    "name": "클린 티트리 리포좀 시카 카밍 마스크",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
