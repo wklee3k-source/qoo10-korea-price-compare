@@ -320,12 +320,29 @@ def _extract_quantity(text: str) -> int:
 
 
 def _search_naver(keyword: str, known_brand: str) -> dict | None:
-    """후보3: 네이버쇼핑 검색(원본 번역 그대로). 나중에 별도 "구매정보"
-    재호출을 안 해도 되도록, 이 1번의 호출에서 가격/링크/사진후보까지
-    전부 뽑아둔다.
+    """후보3: 네이버쇼핑 검색 — **2026-07-31 서비스 종료로 영구 비활성.**
 
-    [실패구분] import/네트워크 오류는 SearchTechnicalFailure, 정상
-    조회+결과0건만 None(진짜 무결과)."""
+    네이버가 검색 API를 NAVER API HUB로 이관하면서 '쇼핑·책·전문자료'는
+    이관 대상에서 제외하고 2026년 7월 31일에 종료했다. 유예 기간이 없고
+    기존 발급 키로도 호출이 불가하며, 대체 API도 제공되지 않는다.
+    (공지: developers.naver.com/notice/article/32564)
+
+    그래서 지금은 모든 요청이 404다. 그냥 두면 두 가지가 문제가 된다.
+      1. 매 건마다 무의미한 호출 + 재시도로 시간을 버린다
+      2. 실패가 '기술적 실패'로 잡혀 재검증 시 기존 값을 빈 값으로
+         덮는다 — 실제로 이것 때문에 4,455건이 전부 null 이 됐다
+    호출부(재검색·수량재검색 등)는 그대로 두고 여기서 무결과로 끊는다.
+    None 은 '진짜 무결과'라 기술적 실패로 집계되지 않는다.
+
+    영향 측정(실측): 승자가 네이버쇼핑이던 615건(검수 대상 296건)과
+    합의 2곳 충족 342건(검수 대상 49건)을 잃는다. 화해(1,570건)가
+    최대 소스라 파이프라인은 계속 돈다.
+    """
+    return None
+
+
+def _search_naver_disabled_2026(keyword: str, known_brand: str) -> dict | None:
+    """네이버쇼핑 API 종료 전 구현. 대체 소스를 붙일 때 참고용으로 남긴다."""
     try:
         from naver_shop_search import search as naver_search
     except Exception as e:  # noqa: BLE001
@@ -572,6 +589,27 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     results = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else []
     done = {r["goods_no"] for r in results}
 
+    # [안전장치] '이전에 찾아둔 결과'를 따로 들고 있는다. 재검증은 결과
+    #  파일을 비우고 시작하므로 results 만으로는 이전 값을 알 수 없다.
+    #  통합본(hwahae_verified_39.json)에서 읽어온다.
+    #  실제 사고: 소스가 전부 죽은 상태에서 전체 재검증을 돌렸더니
+    #  4,455건이 빈 값으로 덮여 검수 대상이 1,138 -> 3건이 됐다.
+    previous_by_goods: dict = {}
+    for _prev_name in ("hwahae_verified_39.json",):
+        _p = out_path.with_name(_prev_name)
+        if _p.exists() and _p != out_path:
+            try:
+                for _x in json.loads(_p.read_text(encoding="utf-8")):
+                    if _x.get("product_url"):
+                        previous_by_goods[_x["goods_no"]] = _x
+            except Exception as _e:  # noqa: BLE001
+                print(f"[경고] 이전 검증본 읽기 실패({_prev_name}): {_e}")
+    for _x in results:
+        if _x.get("product_url"):
+            previous_by_goods[_x["goods_no"]] = _x
+    print(f"[INFO] 이전 검증 결과 {len(previous_by_goods)}건 확보 "
+          f"(못 찾아도 이 값들은 덮지 않는다)")
+
     # [재시도 추적] 기술적 실패로 확정을 보류한 상품의 시도횟수를 별도
     # 파일에 저장한다(results는 '완료'만 담는 리스트라 재시도 대기건을
     # 넣을 자리가 없다). MAX_VERIFY_RETRIES에 도달하면 그때 포기하고
@@ -737,6 +775,18 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 "sale": None, "price": None, "mall": None, "seller_trust": None,
                 "product_url": None, "image_url": None, "image_candidates": [],
             }
+            # [안전장치] 이미 채워져 있던 결과를 빈 값으로 덮지 않는다.
+            #  실제 사고: 소스가 전부 죽은 상태(Exa 크레딧 소진, 네이버쇼핑
+            #  종료, playwright 오류)에서 전체 재검증을 돌렸더니 4,455건이
+            #  모두 이 빈 entry 로 덮여 검수 대상이 1,138 -> 3건이 됐다.
+            #  '못 찾았다'는 결과는 '전에 찾았던 걸 지운다'는 뜻이 아니다.
+            #  기존에 구매링크가 있었다면 그걸 남기고, 확인 시각만 갱신한다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이번엔 못 찾았지만 이전 검증 결과가 "
+                      "있어 덮어쓰지 않는다")
+                entry = dict(prev)
+                entry["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
             retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -805,6 +855,16 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
                 "product_url": None, "image_url": None, "image_candidates": [],
             }
+            # [안전장치] 이전에 찾아둔 결과는 덮지 않는다(위 '무결과' 경로와
+            #  같은 이유). 이번에 합의가 안 됐다고 해서 전에 확인해둔
+            #  구매링크를 지울 이유는 없다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이전 검증 결과가 있어 덮어쓰지 않는다")
+                _keep = dict(prev)
+                _keep["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+                _keep["reverify_note"] = entry.get("reject_reason") or "재검증 미채택"
+                entry = _keep
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
             if retry_counts.pop(item["goods_no"], None) is not None:
@@ -817,10 +877,21 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             entry = {
                 "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
                 "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "reject_reason": f"점수미달({best_score:.1f})",
                 "brand": None, "name": None, "volume": "", "source": None,
                 "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
                 "product_url": None, "image_url": None, "image_candidates": [],
             }
+            # [안전장치] 이전에 찾아둔 결과는 덮지 않는다(위 '무결과' 경로와
+            #  같은 이유). 이번에 합의가 안 됐다고 해서 전에 확인해둔
+            #  구매링크를 지울 이유는 없다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이전 검증 결과가 있어 덮어쓰지 않는다")
+                _keep = dict(prev)
+                _keep["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+                _keep["reverify_note"] = entry.get("reject_reason") or "재검증 미채택"
+                entry = _keep
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
             processed_this_call += 1

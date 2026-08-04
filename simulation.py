@@ -2017,6 +2017,33 @@ def t86_makeup_fixer_excluded():
         sys.path[:] = _sp
 
 
+# --------------------- #87 네이버쇼핑 종료 + 기존값 보호 (v7.37.0)
+#  네이버가 검색 API를 NAVER API HUB로 이관하면서 '쇼핑·책·전문자료'는
+#  이관 대상에서 제외하고 2026-07-31 에 종료했다. 유예 없고 기존 키로도
+#  호출 불가, 대체 API도 없다. 지금은 전 요청이 404 다.
+#  그냥 두면 매 건 무의미한 호출을 하고, 그 실패가 '기술적 실패'로 잡혀
+#  재검증 때 기존 값을 빈 값으로 덮는다 — 실제로 4,455건이 전부 null 이
+#  되어 검수 대상이 1,138 -> 3건이 된 사고가 있었다.
+def t87_naver_shop_disabled_and_prev_kept():
+    src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+
+    # 네이버쇼핑은 호출 자체를 하지 않고 무결과로 끊어야 한다.
+    fn = src.split("def _search_naver(")[1].split("\ndef ")[0]
+    disabled = "return None" in fn and "naver_shop_search" not in fn
+
+    # 기존값 보호: 이전 검증본을 로드하고, 빈 결과로 덮기 전에 확인한다.
+    loads_prev = "previous_by_goods" in src and "hwahae_verified_39.json" in src
+    # 실패 경로 세 곳(무결과·합의부족·점수미달) 전부에 걸려 있어야 한다
+    guard_count = src.count("prev = previous_by_goods.get(")
+    keeps = src.count("[기존값유지]")
+    all_paths = guard_count >= 3 and keeps >= 3
+
+    ok = disabled and loads_prev and all_paths
+    check("87 네이버쇼핑 종료·기존값 보호", ok,
+          f"쇼핑비활성{disabled} 이전본로드{loads_prev} "
+          f"보호경로{guard_count}곳")
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
