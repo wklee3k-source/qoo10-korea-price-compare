@@ -638,8 +638,14 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     #  통합본(hwahae_verified_39.json)에서 읽어온다.
     #  실제 사고: 소스가 전부 죽은 상태에서 전체 재검증을 돌렸더니
     #  4,455건이 빈 값으로 덮여 검수 대상이 1,138 -> 3건이 됐다.
+    #
+    #  파일이 둘인 이유: 워크플로는 통합본(39)을 '이미 처리된 것'으로
+    #  승계하므로, 재검증 때 39를 남겨두면 전부 승계돼서 아무것도 다시
+    #  안 본다(실측: 1분 만에 0건 처리로 종료). 그래서 재검증 시엔 39를
+    #  비우고 내용을 prev 로 옮긴다 — 승계 대상에서는 빠지고 안전망
+    #  역할만 한다.
     previous_by_goods: dict = {}
-    for _prev_name in ("hwahae_verified_39.json",):
+    for _prev_name in ("hwahae_verified_prev.json", "hwahae_verified_39.json"):
         _p = out_path.with_name(_prev_name)
         if _p.exists() and _p != out_path:
             try:
