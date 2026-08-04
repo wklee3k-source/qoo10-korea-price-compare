@@ -10278,5 +10278,335 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1193707401",
+    "translated_kr": "생 비타민 C5+생 레티놀 에센스 TRUEM-트루엠- 생 에센스 미 피부 비타민 B 비타민 E 비타민 D 비타민 C 유도체 비타민 A 유도체",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) Vitamin C Advanced Plus Brightening & Antiageing Night Cream",
+      "naver": "[태국] 부츠 비타민C 어드밴스드 플러스 브라이트닝 &amp; 안티에이징 나이트 크림 50ml"
+    },
+    "brand": "부츠 (Boots)",
+    "name": "[태국] 부츠 비타민C 어드밴스드 플러스 브라이트닝 & 안티에이징 나이트 크림 50ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 34980,
+    "mall": "코브상사",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9500078311",
+    "image_url": "https://shop-phinf.pstatic.net/20231108_249/1699407622982267N3_JPEG/13260488878538957_822308987.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8704457/87044578941.1.jpg",
+        "mall": "코브상사",
+        "link": "https://smartstore.naver.com/main/products/9500078311"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "(해외) Vitamin C Advanced Plus Brightening & Antiageing Night Cream",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8704457/87044578941.1.jpg",
+    "page_collected_at": "2026-08-01T16:25:23",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:27:50",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1151166112",
+    "translated_kr": "[핸드크림세트] 향 선택 가능 핸드크림 6종 세트",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "은근히 취향 드러내는 아이템, 여름에 쓰기 좋은 핸드워시 추천 8",
+      "naver_web": "퍼퓸 핸드크림 6종 택1",
+      "naver_rematch": "1+1 시그니처 퍼퓸 핸드크림 50ml(6종 택2)"
+    },
+    "brand": "더프트앤도프트",
+    "name": "1+1 시그니처 퍼퓸 핸드크림 50ml(6종 택2)",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 13900,
+    "mall": "더프트앤도프트직영샵",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://duftndoft.com/product/detail.html?product_no=1388&cate_no=99&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://duftndoft.com/web/product/big/202211/52ebe5184bfc80cda0448c542be44240.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_2351847/23518471244.19.jpg",
+        "mall": "더프트앤도프트직영샵",
+        "link": "https://duftndoft.com/product/detail.html?product_no=1388&cate_no=99&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5973603/59736032226.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/6187246?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5253408/52534087089.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=156511211&shop_id=50166&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "real_page_title": "1+1 시그니처 퍼퓸 핸드크림 50ml(6종 택2)",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "퍼퓸 핸드크림 6종 택1",
+    "api_price": "11900",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_2351847/23518471244.19.jpg",
+    "page_collected_at": "2026-08-01T16:25:28",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T17:28:37",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1194251873",
+    "translated_kr": "모이스트 베리어 마스크(7매입) 5개 세트 시카팩 시카 마스크 일본제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "더마플러스 마스크 [시카]",
+      "daum": "아모레퍼시픽 연혁과 역사] 2006년 6월1일 태평양 인적분할, 아모레퍼시픽 설립",
+      "naver_web": "메디힐 더마플러스 시카 마스크팩"
+    },
+    "brand": "메디힐 (MEDIHEAL)",
+    "name": "더마플러스 마스크 [시카]",
+    "volume": "22ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1194251827",
+    "translated_kr": "클리어 필 케어 마스크 7매입 시카팩 시카 마스크 일본제",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "네추럴 마일드 클리어 노우즈 팩",
+      "daum": "일본 화장품",
+      "naver_web": "일소 네추럴 마일드 클리어 노우즈 팩 5매"
+    },
+    "brand": "일소 (ilso)",
+    "name": "네추럴 마일드 클리어 노우즈 팩",
+    "volume": "3g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 17000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1159676293",
+    "translated_kr": "(2개) 바세린 SPF50+ 자외선차단제 170ml (데일리 프로텍트&브라이트닝)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(유니레버) 데일리 선크림 [SPF50+/PA+++]",
+      "daum": "자외선 차단제",
+      "naver_web": "바세린 에센스 선크림 자외선차단제 썬크림 SPF50+ PA++++ 2개"
+    },
+    "brand": "바세린 (Vaseline)",
+    "name": "(유니레버) 데일리 선크림 [SPF50+/PA+++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 13900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "992040207",
+    "translated_kr": "네롤리 가든 샤인 밤 크림 80ml / 영양 크림 / 촉촉 탄력 탄력 / 윤기 피부",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "네롤리 오란티움 인텐스 로션",
+      "naver": "유리드 네롤리가든 샤인 밤 크림 80ml",
+      "daum": "뜨거운 태양에 맞서는 7월의 신상 뷰티템",
+      "naver_web": "캐롤프리스트 네롤리 오란티움 인텐스 로션"
+    },
+    "brand": "유리드",
+    "name": "유리드 네롤리가든 샤인 밤 크림 80ml",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 29400,
+    "mall": "유리드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5997563806",
+    "image_url": "https://shop-phinf.pstatic.net/20230915_195/1694759026810W74gz_JPEG/11049118637053292_148920653.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8354206/83542063294.2.jpg",
+        "mall": "유리드",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5997563806"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9009846/90098465959.jpg",
+        "mall": "젠트글로벌",
+        "link": "https://smartstore.naver.com/main/products/12553955106"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8354206/83542063294.2.jpg",
+    "page_collected_at": "2026-08-01T16:25:40",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T17:31:09",
+    "reverify_note": "점수미달(-4.5)"
+  },
+  {
+    "goods_no": "984467802",
+    "translated_kr": "네롤리 가든 클렌징폼 150ml / 천연 딥 클렌저 / 저자극 각질 모공 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "글로우 비타 오일 인 젤 클렌저 오렌지 & 네롤리",
+      "daum": "미세먼지에 노출된 피부 고민별 클렌저 처방전",
+      "naver_web": "아로마티카 글로우 비타 오일 인 젤 클렌저 오렌지&네롤리"
+    },
+    "brand": "아로마티카 (AROMATICA)",
+    "name": "글로우 비타 오일 인 젤 클렌저 오렌지 & 네롤리",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 30000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "984451353",
+    "translated_kr": "네롤리 가든 프레시 마스크 5매 / 진정 팩 / 앰플 마스크팩 / 보습 팩",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "네롤리 가든 슬리핑 마스크",
+      "naver": "유리드 네롤리가든 슬리핑 마스크 50ml",
+      "daum": "뉴 시즌 신상 뷰티 리스트",
+      "naver_web": "유리드 네롤리 가든 슬리핑 마스크"
+    },
+    "brand": "유리드 (URIID)",
+    "name": "유리드 네롤리가든 슬리핑 마스크 50ml",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 26600,
+    "mall": "유리드",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/5997559389",
+    "image_url": "https://shop-phinf.pstatic.net/20241118_92/1731891329272XSjqi_JPEG/66024237405404369_923654730.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8354205/83542058877.4.jpg",
+        "mall": "유리드",
+        "link": "https://shopping.naver.com/outlink/itemdetail/5997559389"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "네롤리 가든 슬리핑 마스크",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8354205/83542058877.4.jpg",
+    "page_collected_at": "2026-08-01T16:25:47",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T17:32:26",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1140246125",
+    "translated_kr": "【시험용】아카스리 일본제 실크 아카스리 미용 성형으로도 안 된 무릎·팔꿈치의 검은 점 모공의 까칠거림 등의 고민이 해결 게다가 전신 매끄러워지는 '명주 윤기 공주 실크 아카스리 미트 바디용 2장'",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "vocab.txt · monologg/koelectra"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1101579770",
+    "translated_kr": "레티놀라겐 세안 폼 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀라겐 앰플 샷 폼클렌저",
+      "daum": "50의 은혜 오일 in 養潤液 ｜ 도코데모",
+      "naver_web": "피캄 피캄 레티놀라겐 앰플 샷 폼클렌저"
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "레티놀라겐 앰플 샷 폼클렌저",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
