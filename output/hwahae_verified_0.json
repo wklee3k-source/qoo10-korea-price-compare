@@ -5467,5 +5467,318 @@
     "page_via": "API",
     "reverify_missed_at": "2026-08-04T15:47:42",
     "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1085152294",
+    "translated_kr": "루나메아 AC 스킨 컨디셔너 (노멀 타입) 120ml [의약부외품] 아크네 케어 로션 아크네 슈터 아크네 케어 토너 니키비 케어 니키비 예방 피부 거칠음 논코메도",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "함빛 손상 고영양 케어 컨디셔너",
+      "naver": "려 함빛 극손상 영양 컨디셔너 592ml"
+    },
+    "brand": "려 (Ryo)",
+    "name": "려 함빛 극손상 영양 컨디셔너 592ml",
+    "volume": "400ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 10900,
+    "mall": "MIDSHOP",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12939608359",
+    "image_url": "https://shop-phinf.pstatic.net/20260303_183/1772528269092yRJUE_JPEG/106661090226348034_692342042.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048411/90484119369.1.jpg",
+        "mall": "MIDSHOP",
+        "link": "https://smartstore.naver.com/main/products/12939608359"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064421/90644213478.jpg",
+        "mall": "로샵",
+        "link": "https://smartstore.naver.com/main/products/13099702387"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8910727/89107271183.1.jpg",
+        "mall": "아모레25",
+        "link": "https://smartstore.naver.com/main/products/11562760777"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8944026/89440263287.jpg",
+        "mall": "비해피mall",
+        "link": "https://smartstore.naver.com/main/products/11895752678"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "함빛 손상 고영양 케어 컨디셔너",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9048411/90484119369.1.jpg",
+    "page_collected_at": "2026-08-01T15:06:00",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:48:27",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1170385647",
+    "translated_kr": "스킨케어 3점 세트 인간 줄기세포 보습 엑소좀 인간 줄기세포 배양액 무첨가 탄력 안티에이징 케어 고보습 민감피부 건조피부 모공 보습 에센스 미피부 윤기 건조 토너 크림",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 세럼",
+      "daum": "세럼",
+      "naver_web": "피부비만관리사팁 스토리채널"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1152008581",
+    "translated_kr": "(공식) 톤 업 자외선 차단제 50ml [UV 컷 / SPF50+ PA++++ / PDRN / 로즈 컬러의 톤 업 / 화장 베이스 / 프라이머 / 자외선 대책 / 한국화장품]",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "musinsa": "[4종 택1] 구달 어성초 진정/수분/톤업/무기자차 선크림 50ml",
+      "daum": "자외선 차단제",
+      "naver_web": "너구나! 신상 톤업 자외선차단제"
+    },
+    "brand": "구달",
+    "name": "자외선 차단제",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 18700,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1073380168",
+    "translated_kr": "정규품 셀만 5종 오리지널 기능성 세트 (토너 150ml + 세럼 30ml + 크림 50ml + 비타민C 세럼 30ml + 워시 파우더 70g) + / 관세 없음",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "(해외)딥 릴리프 아크네 트리트먼트",
+      "daum": "2026.01.28 CONNECTION DAILY NEWS",
+      "naver_web": "Murad 뮤라드 딥 릴리프 트리트먼트"
+    },
+    "reject_reason": "점수미달(-4.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1114435648",
+    "translated_kr": "마저전스 멀티 컨디셔닝 젤 (120mL) 남성 토너 남성 코스메 【국내 정규품】 토너 아버지날 선물",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172012979",
+    "translated_kr": "밀크스킨 150ml 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "이자녹스 에이지포커스 옴므 스킨밀크 올인원, , 2개",
+      "naver_web": "우르오스 남성용 스킨밀크, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211242118",
+    "translated_kr": "사봉 바디 스크럽 젠틀맨 600g(7290114049511)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디스크럽 [젠틀맨]",
+      "daum": "갤러리형으로 보기",
+      "naver_web": "바디스크럽 젠틀맨"
+    },
+    "brand": "사봉 (SABON)",
+    "name": "바디스크럽 [젠틀맨]",
+    "volume": "600g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 79000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1195652722",
+    "translated_kr": "【신제품】앰플엔 하이퍼 샷 시카 PDRN 앰플 50ml 시술 후 진정 케어 피부 트러블 케어 민감성 피부 NMN 진정 부스터 시카 PDRN 함유",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "N배송 : 네이버+ 스토어 : 앰플엔 하이퍼샷 시카 PDRN 앰플 , 1개",
+      "naver_rematch": "[진정부스터] 앰플엔 하이퍼샷 시카 PDRN 앰플 50ml, 1개"
+    },
+    "brand": "앰플엔",
+    "name": "[진정부스터] 앰플엔 하이퍼샷 시카 PDRN 앰플 50ml, 1개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 17900,
+    "mall": "앰플엔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://shopping.naver.com/outlink/itemdetail/13098364547",
+    "image_url": "https://shop-phinf.pstatic.net/20260701_92/1782895346510O6kNN_JPEG/117028204610796100_240824255.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064287/90642875639.3.jpg",
+        "mall": "앰플엔",
+        "link": "https://shopping.naver.com/outlink/itemdetail/13098364547"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058660/90586606959.12.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/13042095867"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9064287/90642875638.4.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/13098364546"
+      }
+    ],
+    "real_page_title": "에러 페이지",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "N배송 : 네이버+ 스토어 : 앰플엔 하이퍼샷 시카 PDRN 앰플 , 1개",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9064287/90642875639.3.jpg",
+    "page_collected_at": "2026-08-01T15:06:12",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-04T15:52:43",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1147622715",
+    "translated_kr": "PPT 에센스 스프레이 N 120g 린스 프리 트리트먼트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PPT",
+      "daum": "<머릿결 홈케어하는 방법> 전문적으로 글 팠다.",
+      "naver_web": "헤어쿨"
+    },
+    "brand": "오로라 (AURORA)",
+    "name": "PPT",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1096221902",
+    "translated_kr": "나노 클렌징 젤 민감성 피부용 310ml x 2개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "ph6.9 위치하젤 프레쉬 젤 클렌저",
+      "naver": "일본 코스트코 신데렐라 타임 나노클렌징겔 민감성피부용 310mlx2개",
+      "daum": "유리아쥬 쉬르그라 리끼드",
+      "naver_web": "피지오겔 DMT 클렌징젤 150ML X 2개"
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "일본 코스트코 신데렐라 타임 나노클렌징겔 민감성피부용 310mlx2개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 40000,
+    "mall": "도쿄 하루 마켓 2호점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11360642771",
+    "image_url": "https://shop-phinf.pstatic.net/20250115_94/1736925078560Gz9S4_PNG/71058057680227708_547996479.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8890515/88905153122.jpg",
+        "mall": "도쿄 하루 마켓 2호점",
+        "link": "https://smartstore.naver.com/main/products/11360642771"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121938/91219386137.1.jpg",
+        "mall": "연약",
+        "link": "https://smartstore.naver.com/main/products/13674875118"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8890515/88905153122.jpg",
+    "page_collected_at": "2026-08-01T15:06:18",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:53:40",
+    "reverify_note": "점수미달(-5.5)"
   }
 ]
