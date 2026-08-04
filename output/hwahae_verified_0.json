@@ -11245,5 +11245,148 @@
     "page_collected_at": "2026-08-01T15:12:14",
     "page_via": "API",
     "reverify_missed_at": "2026-08-04T17:47:30"
+  },
+  {
+    "goods_no": "1211996797",
+    "translated_kr": "【공식】그린문 클렌징폼 100ml[세안 화장품 클렌징폼 무첨가 어성초 추출물 포도씨 오일 젤 클렌저 모공 부드러운 피부",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "hwahae": "이브닝케어 필링 젤",
+      "daum": "애터미 이브닝케어",
+      "naver_rematch": "애터미 이브닝 케어 딥 클렌저 150ml"
+    },
+    "brand": "애터미 (ATOMY)",
+    "name": "애터미 이브닝 케어 딥 클렌저 150ml",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 6790,
+    "mall": "글로벌탑01",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/9354169097",
+    "image_url": "https://shop-phinf.pstatic.net/20250319_182/1742364083440ncyKS_JPEG/14062204741507935_578315977.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8689866/86898669420.1.jpg",
+        "mall": "글로벌탑01",
+        "link": "https://smartstore.naver.com/main/products/9354169097"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8689866/86898669420.1.jpg",
+    "page_collected_at": "2026-08-01T15:12:16",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:48:05",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1205625456",
+    "translated_kr": "화이테스 VC 워시(150g) 클렌징 카르노신 비타민C 에스터 플라센타 추출물 세라마이드 글리시리진 【오니시 닥터스 코스메】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "폼 워시",
+      "naver_rematch": "센카퍼펙트휩 페이셜 워시 시세이도 일본 클린징폼 포밍 세안제 세트"
+    },
+    "brand": "장생도라지",
+    "name": "센카퍼펙트휩 페이셜 워시 시세이도 일본 클린징폼 포밍 세안제 세트",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 18500,
+    "mall": "코스트코이케아",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10570199403",
+    "image_url": "https://shop-phinf.pstatic.net/20250217_155/1739799577835APj77_JPEG/72433614424165041_712237607.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+        "mall": "코스트코이케아",
+        "link": "https://smartstore.naver.com/main/products/10570199403"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "폼 워시",
+    "list_price": 21000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+    "page_collected_at": "2026-08-01T15:12:19",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:48:34",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "602887874",
+    "translated_kr": "약용 미백 젤크림 1주일분 샘플",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "이니스프리",
+      "naver_web": "SOLEO Development product"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1118845361",
+    "translated_kr": "【공식】부스팅 에센스·스킨(토너)·에센스가 하나로 합쳐진 3in1 에센스! 부스트 미 업 마이 프리 세럼 37ml×2개 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "naver_web": "베트남·태국·인도네시아 말레이시아"
+    },
+    "brand": "피토버플러스 (PHYTOVER)",
+    "name": "매끈 모공 에센스",
+    "volume": "235ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1173576799",
+    "translated_kr": "공식【반려견·반려묘와 함께 사는 사람을 위한 핸드크림 기프트】정품 핸드크림 우편 발송 60g 강아지 고양이 반려동물 무첨가 프티 기프트 선물 생일 고양이 집사 고양이 애호가 오가닉",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
