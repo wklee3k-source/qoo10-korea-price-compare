@@ -2035,7 +2035,9 @@ def t87_naver_shop_disabled_and_prev_kept():
     disabled = "return None" in fn and "naver_shop_search" not in fn
 
     # 기존값 보호: 이전 검증본을 로드하고, 빈 결과로 덮기 전에 확인한다.
-    loads_prev = "previous_by_goods" in src and "hwahae_verified_39.json" in src
+    loads_prev = ("previous_by_goods" in src
+                  and "hwahae_verified_prev.json" in src
+                  and "hwahae_verified_39.json" in src)
     # 실패 경로 세 곳(무결과·합의부족·점수미달) 전부에 걸려 있어야 한다
     guard_count = src.count("prev = previous_by_goods.get(")
     keeps = src.count("[기존값유지]")
