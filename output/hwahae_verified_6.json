@@ -461,5 +461,329 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1194335721",
+    "translated_kr": "타임 레볼루션 프라임 스템 100 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타임 레볼루션 프라임스템100 크림",
+      "musinsa": "타임 레볼루션 프라임스템100 크림 50ml",
+      "daum": "미샤 타임 레볼루션 프라임스템100 아이크림",
+      "naver_web": "타임 레볼루션 프라임스템100 크림"
+    },
+    "brand": "미샤 (MISSHA)",
+    "name": "타임 레볼루션 프라임스템100 크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 55000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209978694",
+    "translated_kr": "원 레이어 톤 업 바디 미스트 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "한겹 톤업 바디 미스트",
+      "daum": "메디큐브",
+      "naver_web": "낫포유 퍼스널 톤업 바디 미스트 블루바이올렛"
+    },
+    "brand": "가히 (KAHI)",
+    "name": "한겹 톤업 바디 미스트",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1138225289",
+    "translated_kr": "시그니처 파르팜, 50ml, 1개",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "파르팜 드 쿠르의 바디 판타지 시그니처 코코넛 판타지 바디 스프레이 8oz (여성용)",
+      "naver_web": "파르팜 제주 자색 고구마빵 20개입 아침 식사대용 모닝 빵 아이스팩, , 1개"
+    },
+    "brand": "바디판타지",
+    "name": "파르팜 드 쿠르의 바디 판타지 시그니처 코코넛 판타지 바디 스프레이 8oz (여성용)",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 20100,
+    "mall": "천조국상점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13522212986",
+    "image_url": "https://shop-phinf.pstatic.net/20260513_249/1778642646175998Bt_JPEG/2124171610541376_249037661.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9106672/91066723339.jpg",
+        "mall": "천조국상점",
+        "link": "https://smartstore.naver.com/main/products/13522212986"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9106672/91066723339.jpg",
+    "page_collected_at": "2026-08-01T16:15:48",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:09:01",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1193632664",
+    "translated_kr": "브링 그린 공식 브링 그린 티 트리 C 토너 500ml 브링그린 토너",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "티트리 시카 수딩 토너",
+      "daum": "브레이브걸스",
+      "naver_web": "브링그린 티트리 시카 트러블 수딩 토너 패드 90매+90매 리필기획"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "티트리 시카 수딩 토너",
+    "volume": "250mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190361804",
+    "translated_kr": "【대용량 100ml】 CNP 차앤박 공식 프로폴리스 에너지 액티브 앰플 50ml+50ml cnp 에센스 프로폴리스 세럼 프로폴리스 에너지 앰플",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "CNP차앤박 프로폴리스 에너지 액티브 앰플 플러스",
+      "naver_web": "CNP 차앤박 프로폴리스 에너지 액티브 앰플"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1191474301",
+    "translated_kr": "리쥬란 공식 리쥬란 PDRN (c-PDRN) 모공 타이트닝 토너패드 60장 토너패드 팩",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "모공PDRN 리쥬란 더마 힐러 포어 타이트닝 토너패드 60매 정+토너패드 2매5단품",
+      "daum": "IN MARIE’S CARRY",
+      "naver_web": "리쥬란 더마 힐러 포어 타이트닝 토너 패드 / 60매 + 리필팩 1개"
+    },
+    "brand": "리쥬란",
+    "name": "모공PDRN 리쥬란 더마 힐러 포어 타이트닝 토너패드 60매 정+토너패드 2매5단품",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 47520,
+    "mall": "에어비티",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13110249022",
+    "image_url": "https://shop-phinf.pstatic.net/20260213_177/1770959586025kyKvH_JPEG/38706012866481795_589354002.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065476/90654760114.jpg",
+        "mall": "에어비티",
+        "link": "https://smartstore.naver.com/main/products/13110249022"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065475/90654750672.jpg",
+        "mall": "에어비티",
+        "link": "https://smartstore.naver.com/main/products/13110239580"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9050777/90507775275.jpg",
+        "mall": "오늘의초록a",
+        "link": "https://smartstore.naver.com/main/products/12963264265"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9052090/90520909177.jpg",
+        "mall": "오늘의초록a",
+        "link": "https://smartstore.naver.com/main/products/12976398167"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 59400,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9065476/90654760114.jpg",
+    "page_collected_at": "2026-08-01T16:15:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:10:47",
+    "reverify_note": "점수미달(-3.0)"
+  },
+  {
+    "goods_no": "1162170897",
+    "translated_kr": "[25SS/New] PDRN 히알루론산 캡슐100 세럼마스크 10매입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN 히알루론산 캡슐 100 세럼 마스크",
+      "daum": "2025 베스트 오브 뷰티의 위너 ‘스킨케어’ ‘베이스’ ‘맨’",
+      "naver_web": "PDRN 히알루론산 캡슐 100 세럼 기획세트"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "PDRN 히알루론산 캡슐 100 세럼 마스크",
+    "volume": "23mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1190200956",
+    "translated_kr": "크림슨 스카이(폴리시) 8ml #샴페인스파클 #이브닝파티",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "폴리쉬 오일 [화이트유자]",
+      "naver_web": "폴리쉬"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196939883",
+    "translated_kr": "레티날 아이세럼 리프팅롤러 15ml #카페인 #박치올 #안티에이징 어플리케이터",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 에센셜"
+    },
+    "brand": "아비브",
+    "name": "아비브 레티날 세럼 팅 롤러 0.5 Fl Oz 15ml | 주름 다크서클에 카페인과 바쿠치올을 함유한 안티에이징 어플리케이터 여행용 사이즈 스킨케어 에센셜",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": true,
+    "obsolete": null,
+    "sale": null,
+    "price": 33040,
+    "mall": "이음스토리닷컴",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13349954415",
+    "image_url": "https://shop-phinf.pstatic.net/20260404_205/1775239499244vPYeE_JPEG/29850505189925461_524864393.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9089446/90894464747.jpg",
+        "mall": "이음스토리닷컴",
+        "link": "https://smartstore.naver.com/main/products/13349954415"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9087662/90876625882.jpg",
+        "mall": "비바체바이지",
+        "link": "https://smartstore.naver.com/main/products/13332115550"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9084499/90844994536.jpg",
+        "mall": "더코코샵",
+        "link": "https://smartstore.naver.com/main/products/13300484204"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9065106/90651069679.jpg",
+        "mall": "글로바픽Globapick",
+        "link": "https://smartstore.naver.com/main/products/13106558586"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9050343/90503432754.jpg",
+        "mall": "아마네스트",
+        "link": "https://smartstore.naver.com/main/products/12958921744"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 47200,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9089446/90894464747.jpg",
+    "page_collected_at": "2026-08-01T16:15:58",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T14:12:02"
+  },
+  {
+    "goods_no": "1110755534",
+    "translated_kr": "MT 메타트론 화장품 콘투어 에멀젼 로션 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드로 레이저 아이 콘투어 로션",
+      "naver_web": "하이드로 레이저 아이 콘투어 로션"
+    },
+    "brand": "아바랩 (AvaLABORATORIUM)",
+    "name": "하이드로 레이저 아이 콘투어 로션",
+    "volume": "15ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
