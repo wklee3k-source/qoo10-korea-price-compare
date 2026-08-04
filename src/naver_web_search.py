@@ -10,7 +10,8 @@
 제외돼 2026-07-31 영구 종료됐다 — naver_shop_search.py 참고).
 
     구분        기존(개발자센터)                  신규(API HUB)
-    엔드포인트  openapi.naver.com/v1/search/...   naverapihub.apigw.ntruss.com/...
+    엔드포인트  openapi.naver.com/v1/search/webkr.json
+                -> naverapihub.apigw.ntruss.com/search/v1/webkr (경로 순서가 다름)
     인증헤더    X-Naver-Client-Id / -Secret       X-NCP-APIGW-API-KEY-ID / -KEY
     계정        네이버 계정                       NCP 계정
     호출한도    앱당 하루 25,000회                검색 카테고리 통합 월 775,000회
@@ -46,7 +47,10 @@ LEGACY_BASE = "https://openapi.naver.com"
 def _endpoint() -> tuple[str, dict] | None:
     """쓸 수 있는 (URL, 헤더)를 고른다. 자격증명이 없으면 None."""
     if APIHUB_ID and APIHUB_SECRET:
-        return (f"{APIHUB_BASE}/v1/search/webkr.json",
+        # 경로 형태가 기존과 다르다. 기존은 '/v1/search/webkr.json' 인데
+        #  API HUB 는 '/search/v1/webkr' 로 순서가 뒤집히고 확장자가 없다.
+        #  (실측: '/v1/search/webkr.json' 은 404 "URL not found")
+        return (f"{APIHUB_BASE}/search/v1/webkr",
                 {"X-NCP-APIGW-API-KEY-ID": APIHUB_ID,
                  "X-NCP-APIGW-API-KEY": APIHUB_SECRET})
     if CLIENT_ID and CLIENT_SECRET:
