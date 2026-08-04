@@ -3859,5 +3859,289 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1190410398",
+    "translated_kr": "【공식】【1개 선택】 투르리 토너패드 시리즈 5종 (각 60매입) / 닦아내는 패드 / 부분 팩 / 피부고민별 토너패드 / 글루타치온 / 판테놀 / 센텔라 / 레티놀 / 시간단축 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC",
+      "naver_web": "히알루론산 효능"
+    },
+    "reject_reason": "점수미달(-6.0)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193888835",
+    "translated_kr": "PDRN TX1 퍼펙트 핏 리주알 줄기세포 크림 30g / 로즈 PDRN 21% 배합 식물성 수분크림 / 결 케어 탄력 보습 / 한국코스메 (민감성피부/건성피부) / 차세대 스킨케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN TX1 콜라겐 캡슐 크림 300",
+      "naver": "프리티스킨 PDRN TX1 콜라겐 캡슐 크림 300 62g"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "프리티스킨 PDRN TX1 콜라겐 캡슐 크림 300 62g",
+    "volume": "62g",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": "프리티스킨",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13426295547",
+    "image_url": "https://shop-phinf.pstatic.net/20260420_208/1776661647565XMFw4_JPEG/110794499681286423_1227131173.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+        "mall": "프리티스킨",
+        "link": "https://smartstore.naver.com/main/products/13426295547"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122350/91223501505.jpg",
+        "mall": "라이프라운드",
+        "link": "https://smartstore.naver.com/main/products/13678990414"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "PDRN TX1 콜라겐 캡슐 크림 300",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9097080/90970805883.jpg",
+    "page_collected_at": "2026-08-01T15:04:29",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:17:48",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1198793023",
+    "translated_kr": "그린 딥 모공 클렌징 밤 100mL 1+1",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린 딥 포어 클렌징 밤",
+      "daum": "닥터지 그린 딥 포어 클렌징 밤, , 1",
+      "naver_web": "닥터지 그린 딥 포어 클렌징 밤, , 1개"
+    },
+    "brand": "닥터지 (Dr.G)",
+    "name": "그린 딥 포어 클렌징 밤",
+    "volume": "100mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1169403395",
+    "translated_kr": "에이시카 365 수딩 리페어 크림 [10ml*6] 60ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "에이시카365 수딩 리페어 마스크 pH4.5",
+      "daum": "여름철 수딩크림 추천한다.",
+      "naver_web": "ALL"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "여름철 수딩크림 추천한다.",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 4000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1117341840",
+    "translated_kr": "메종 마르질라 레플리카 버블 바스 EDT 오드톨렛 SP 30ml 향수 MAISON MARGIELA",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레이지 선데이 모닝 EDT",
+      "naver": "메종 마르제라 레플리카 오 드 뚜왈렛 레이지 선데이 모닝 EDT SP 30ml"
+    },
+    "brand": "메종 마르지엘라 (Maison Margiela)",
+    "name": "메종 마르제라 레플리카 오 드 뚜왈렛 레이지 선데이 모닝 EDT SP 30ml",
+    "volume": "30ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 88770,
+    "mall": "Smile-JP-Store",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12940599286",
+    "image_url": "https://shop-phinf.pstatic.net/20260108_286/1767848636797BNC99_JPEG/30832208909171983_1203378288.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048511/90485110296.jpg",
+        "mall": "Smile-JP-Store",
+        "link": "https://smartstore.naver.com/main/products/12940599286"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "레이지 선데이 모닝 EDT",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9048511/90485110296.jpg",
+    "page_collected_at": "2026-08-01T15:04:39",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:19:17",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1174945980",
+    "translated_kr": "나이아신아마이드 10 TXA 4 다크스팟 컬렉션 세럼 30mL",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "daum": "피부 노화 원인 80%는 햇빛, 자외선 손상 피부를 되돌리는 방법",
+      "naver_web": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1137329434",
+    "translated_kr": "다크스팟 세럼 30ml (나이아신아마이드 10%, 트라넥삼산 4%)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "daum": "프랑스가 사랑한 안티 다크 스팟 세럼",
+      "naver_web": "글루타치온 7 다크스팟 세럼 패치 30매"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1012462457",
+    "translated_kr": "【공식】 라이트 다이브 톤업 바디 크림 (120ml) 피부를 미피부로 하면서 윤기도 주는 곰딸기 추출물과 나이아신아마이드가 배합 미백 효과가 기대됩니다",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "블랑센"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204022304",
+    "translated_kr": "스테이 프레쉬 톤업 선크림 퍼플 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+      "musinsa": "스테이프레쉬 톤업 선크림 50ml (퍼플/그린) SPF 50+ PA++++",
+      "daum": "A BETTER BASEー더 정교해진 베이스의 세계",
+      "naver_web": "조선미녀 스테이프레쉬 톤업 선크림"
+    },
+    "brand": "조선미녀 (BeautyofJoseon)",
+    "name": "스테이프레쉬 톤업 선크림 [SPF50+/PA++++] [퍼플]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1021859567",
+    "translated_kr": "어성초70% 수딩 크림 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "어성초 70 수딩 크림",
+      "daum": "20년 전 유행이 재현되는 더마 코스메틱",
+      "naver_web": "ANUA Heartleaf 70% Soothing Cream 아누아 어성초 70 수딩 크림"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "어성초 70 수딩 크림",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
