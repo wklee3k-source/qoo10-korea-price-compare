@@ -11017,5 +11017,263 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1206166293",
+    "translated_kr": "【본품+리필】울트라 스포츠 선쿠션 15g 본품+선쿠션 15g 리필 UV 세트 SPF50+PA++++ 자외선 차단 UV케어 내수성·땀 대응 UV케어 비건 처방",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "피부 타입별로 골라 쓰는 ‘",
+      "naver_web": "피부가 갑자기 너무 가려워요"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204346776",
+    "translated_kr": "【공식】스킨 튠 클렌징 젤 150g 1개 클렌징 클렌징 젤 메이크 낙지 모공 케어 검은 표정 각질 민감한 피부 보습 무 첨가 스킨케어",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "Cosme",
+      "naver_web": "피부에 좋은 천연 재료 5가지",
+      "naver_rematch": "라끄베르 콜라겐 플러스 바이탈 에멀전 로션 220ml"
+    },
+    "brand": null,
+    "name": "라끄베르 콜라겐 플러스 바이탈 에멀전 로션 220ml",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 15250,
+    "mall": "코스미스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13665802363",
+    "image_url": "https://shop-phinf.pstatic.net/20260715_21/17841211082988Knds_JPEG/22464649794947498_459397523.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121031/91210313271.jpg",
+        "mall": "코스미스토어",
+        "link": "https://smartstore.naver.com/main/products/13665802363"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121031/91210313210.jpg",
+        "mall": "코스미스토어",
+        "link": "https://smartstore.naver.com/main/products/13665802302"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8556044/85560443991.jpg",
+        "mall": "YS COSME",
+        "link": "https://smartstore.naver.com/main/products/8015943668"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8558451/85584517898.jpg",
+        "mall": "YS COSME",
+        "link": "https://smartstore.naver.com/main/products/8040017575"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9067708/90677081903.jpg",
+        "mall": "YS COSME",
+        "link": "https://smartstore.naver.com/main/products/13132570811"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "피부에 좋은 천연 재료 5가지",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9121031/91210313271.jpg",
+    "page_collected_at": "2026-08-01T15:34:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:22:59",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1112773913",
+    "translated_kr": "시카 레티 A 에센스 0.3 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 레티-에이 에센스 [0.3]",
+      "daum": "시카 레티",
+      "naver_web": "시카 레티"
+    },
+    "brand": "브이티코스메틱 (VTCOSMETICS)",
+    "name": "시카 레티-에이 에센스 [0.3]",
+    "volume": "30mL",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1192893922",
+    "translated_kr": "【공식】멀티 선니 밤 10g SPF50+ PA++++",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "히알 베리어 멀티밤 [SPF50+/PA++++]",
+      "daum": "르브레 아동용 로로 멀티밤 쏠레 SPF50+ PA++++",
+      "naver_web": "더마쉐어 콜라겐 모이스처 선 멀티밤 SPF50+ PA++++, , 3개"
+    },
+    "brand": "벨프리모 (BELPRIMO)",
+    "name": "히알 베리어 멀티밤 [SPF50+/PA++++]",
+    "volume": "19.5g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1207551990",
+    "translated_kr": "1,000엔딱! 【선택 3시트】엘립스 카카오프렌즈 헤어 비타민 시트 타입 8립 헤어오일 헹굼 없는 트리트먼트 손상 케어 보습 컬러 케어 애피치 라이언 춘",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180302383",
+    "translated_kr": "【공식】코어 프리미엄 케어 밀크 100g 건성모 손상 케어 보습 헤어케어 미용실 긴자 살롱 전용 로션",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "아모레퍼시픽 연혁과 역사] 2006년 6월1일 태평양 인적분할, 아모레퍼시픽 설립"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "992039279",
+    "translated_kr": "네롤리 가든 에펙터 120ml / 유분 수분 밸런스 케어 / 천연 화장품 / 네롤리 에센스 99% 배합",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뷰티누리11월합본.pdf"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210885518",
+    "translated_kr": "【NEW】【세트】투르린초 샴푸&트리트먼트_레귤러 (업무용)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196815742",
+    "translated_kr": "모델링 크림 마스크 71g 스파츌라 포함 / 어성초 부활초 보습팩 밀착팩 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "사업보고서.pdf",
+      "naver_web": "뷰티어워드1위 프리미엄 쿨 티트리 모델링팩 1kg"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1093734916",
+    "translated_kr": "【1+1】스피큘 세럼 (니들 액션 100) 30ml / 바르는 모공 세럼 바늘 / 니들 샷 / 부스팅 세럼 / 피부 결 개선 / 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "시카 스피큘 앰플 3000",
+      "daum": "스피큘 세럼 초강력 모공케어 탄력부스팅 피부결개선",
+      "naver_web": "더마팩토리 시카 스피큘 앰플 3000"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "시카 스피큘 앰플 3000",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
