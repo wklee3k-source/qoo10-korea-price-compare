@@ -4125,5 +4125,308 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1172134432",
+    "translated_kr": "추적 있음 디세스 에스트쿠알 SL 120ml 트리트먼트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "백섬 SL",
+      "naver": "Milbon Estqual SL 밀본 디세스 에스트쿠알 SL 헤어 트리트먼트 120ml 2팩",
+      "naver_web": "sunglow"
+    },
+    "brand": "디에스래보래토리즈 (DSLABORATORIES)",
+    "name": "Milbon Estqual SL 밀본 디세스 에스트쿠알 SL 헤어 트리트먼트 120ml 2팩",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 72900,
+    "mall": "buyjoy",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7024597577",
+    "image_url": "https://shop-phinf.pstatic.net/20220810_263/1660112903563wAwse_JPEG/61248749278874739_148220652.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8456909/84569097899.jpg",
+        "mall": "buyjoy",
+        "link": "https://smartstore.naver.com/main/products/7024597577"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "백섬 SL",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8456909/84569097899.jpg",
+    "page_collected_at": "2026-08-01T15:54:07",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:18:42",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1191723236",
+    "translated_kr": "화이트티 진저릴리 바디크림 400ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림",
+      "daum": "퓨어피지 바디버터 화이트진저릴리 꽃향",
+      "naver_web": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림"
+    },
+    "brand": "엘리자베스아덴 (ElizabethArden)",
+    "name": "화이트 티 진저 릴리 퓨어 인덜젼스 바디크림",
+    "volume": "400ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 60000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1163881732",
+    "translated_kr": "로레알 세리에 블론디파이어 마스크 500ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "(해외) 블론디파이어 마스크",
+      "daum": "제품설명",
+      "naver_web": "로레알 블론디파이어 아사이 마스크"
+    },
+    "brand": "로레알프로페셔널파리 (LOREALPROFESSIONNELPARIS)",
+    "name": "(해외) 블론디파이어 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1131933510",
+    "translated_kr": "셀맨 비타민C 세럼 30ml Vitamin C Serum 에스테살롱 전용 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "씨토닝 비타민 C 세럼",
+      "naver": "나이팅게일 씨토닝 비타민C세럼 미백광채 피부톤 탄력보습 브라이트닝 앰플"
+    },
+    "brand": "나이팅게일 (Nightingale)",
+    "name": "나이팅게일 씨토닝 비타민C세럼 미백광채 피부톤 탄력보습 브라이트닝 앰플",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": "원페이스몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12679066357",
+    "image_url": "https://shop-phinf.pstatic.net/20251113_22/1763013830750JmloJ_JPEG/314567021510747_2037300987.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9022357/90223577281.jpg",
+        "mall": "원페이스몰",
+        "link": "https://smartstore.naver.com/main/products/12679066357"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116253/91162538027.jpg",
+        "mall": "메이드온셀",
+        "link": "https://smartstore.naver.com/main/products/13618027610"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116216/91162169358.jpg",
+        "mall": "메이드온셀",
+        "link": "https://smartstore.naver.com/main/products/13617658941"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9059894/90598941267.jpg",
+        "mall": "원챌린지",
+        "link": "https://smartstore.naver.com/main/products/13054430175"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "씨토닝 비타민 C 세럼",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9022357/90223577281.jpg",
+    "page_collected_at": "2026-08-01T15:54:15",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:19:56",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1162958747",
+    "translated_kr": "리얼 매트 메이크업 세팅 픽스 미스트 75ml 픽서 메이크키프 미스트 메이크키프 스프레이 / 한국코스메 한국스킨케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "픽스+ 스테이 오버",
+      "naver_web": "피부에 좋은 천연 재료 5가지"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209222941",
+    "translated_kr": "엑소좀 보습 토너 150ml 한국스킨케어 한국코스메 스킨케어 PDRN CICA 히알루론산 수분케어 건성피부 로션 토너 정수성분 매일의 케어 약산성 한국상품 고보습",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "유기농 모링가 토너",
+      "daum": "뷰티"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1113959443",
+    "translated_kr": "콜라겐 롤온 아이크림 30ml 한국화장품 눈가케어 하리 윤기 보습 스테인레스제3연 롤러 눈가에센스",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "다색 옵션 없는 향기 염색약 염색약 자연건강/흰머리커버 티류으스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210848436",
+    "translated_kr": "프란츠 네이키드 스팟 패치 듀오 얼리 & 다크 72매입",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "네이키드 스팟 패치 [다크]",
+      "naver": "프란츠 네이키드 스팟패치 듀오 얼리&amp;다크 72매입",
+      "naver_web": "네이키드 다크 스팟 패치"
+    },
+    "brand": "프란츠 (FRANZ)",
+    "name": "프란츠 네이키드 스팟패치 듀오 얼리&다크 72매입",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 14000,
+    "mall": "예쁜글",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13685490987",
+    "image_url": "https://shop-phinf.pstatic.net/20260728_164/1785223660309kcUOF_JPEG/34376016440885207_313233416.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9123000/91230002230.jpg",
+        "mall": "예쁜글",
+        "link": "https://smartstore.naver.com/main/products/13685490987"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "네이키드 스팟 패치 [다크]",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9123000/91230002230.jpg",
+    "page_collected_at": "2026-08-01T15:54:17",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:21:52",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1200469480",
+    "translated_kr": "섀도우 팔레트 02 로즈페탈 데이지크 섀도우 팔레트 02 로즈페탈",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "섀도우 팔레트 [02 로즈페탈]",
+      "daum": "데이지크 섀도우 팔레트 로즈 페탈",
+      "naver_web": "섀도우 팔레트 02 로즈 페탈"
+    },
+    "brand": "데이지크 (dasique)",
+    "name": "섀도우 팔레트 [02 로즈페탈]",
+    "volume": "7g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1198571989",
+    "translated_kr": "빅토리아 시크릿 프래그런스 미스트 러브 스펠 250ml VICTORIAS SECRET",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "프래그런스 미스트 [러브스펠]",
+      "daum": "victoria secret 빅토리아 시크릿 수영복",
+      "naver_web": "Victorias Secret Fragrance Mist Love Spell 8.4Oz 빅토리아 시크릿 프래그런스 미스트 러브 스펠"
+    },
+    "brand": "빅토리아시크릿 (VICTORIA'SSECRET)",
+    "name": "Victorias Secret Fragrance Mist Love Spell 8.4Oz 빅토리아 시크릿 프래그런스 미스트 러브 스펠",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
