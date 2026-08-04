@@ -1974,6 +1974,49 @@ def t85_playwright_version_pinned():
           f"고정{pinned} 열린범위없음{no_open_range}")
 
 
+# --------------------- #86 메이크업 픽서 제외 (v7.36.0)
+#  색조 제외는 카테고리 코드로만 걸렀는데, 큐텐 셀러가 세팅 스프레이를
+#  스킨케어 카테고리(120000012)에 등록해두면 그물을 그대로 빠져나온다 —
+#  실측: 어반디케이 올나이터가 '매트'와 '글로우'(마감이 정반대인 별개
+#  제품)로 매칭돼 C등급에 있었다.
+#  카테고리로는 못 거른다: 120000012 는 검수 대상 838건 대부분이 정상
+#  스킨케어(크림·세럼·앰플)라 통째로 뺄 수 없다. 제형으로 거르되 헤어
+#  픽서·스프레이는 헤어케어라 남긴다.
+def t86_makeup_fixer_excluded():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import build_review as _br
+        importlib.reload(_br)
+
+        catches = all(_br.is_makeup_fixer(q, k) for q, k in [
+            ("올나이터 롱라스팅 메이크업 세팅 스프레이 내추럴 매트 118ml",
+             "어반디케이 올 나이터 메이크업 세팅 스프레이 글로우 118ml"),
+            ("메이크업 픽서 80ml", "헤라 메이크업 픽서 80ml"),
+            ("픽스온 프라이머 하이드로 30ml", "코드글로컬러 엘 픽스온 프라이머 30ml"),
+        ])
+        # 헤어류는 남긴다. '컬'만 넣으면 '코드글로컬러' 브랜드명에 걸려
+        #  메이크업 프라이머가 헤어로 새어나간다(실측 오탐 1건).
+        hair_kept = not any(_br.is_makeup_fixer(q, k) for q, k in [
+            ("픽스 볼륨 헤어 스프레이 150ml", "차홍 픽스 볼륨 스프레이 150ml"),
+            ("픽스 디테일 헤어 마스카라 15ml", "차홍 픽스 디테일 헤어 마스카라"),
+        ])
+        # 픽서가 아닌 일반 스킨케어는 건드리지 않는다
+        skincare_safe = not _br.is_makeup_fixer("어성초 토너 250ml", "아누아 어성초 토너 250ml")
+
+        src = (SRC / "build_review.py").read_text(encoding="utf-8")
+        wired = "if is_makeup_fixer(translated_kr" in src
+
+        ok = all([catches, hair_kept, skincare_safe, wired])
+        check("86 메이크업 픽서 제외", ok,
+              f"검출{catches} 헤어유지{hair_kept} 스킨케어안전{skincare_safe} 연결{wired}")
+    except Exception as e:  # noqa: BLE001
+        check("86 메이크업 픽서 제외", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
