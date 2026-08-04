@@ -9915,5 +9915,52 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1105262703",
+    "translated_kr": "마이트온 10% 나이아신아마이드 인텐시브 크림 50g / 맑은 피부 / 탄력 / 주름 / 영양 / 매끄러운 피부",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뜨거운 태양에 맞서는 7월의 신상 뷰티템"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "963806129",
+    "translated_kr": "SELLA 클래식 내추럴 클렌징바 100g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "옥시젠 물티슈 [클래식]",
+      "daum": "바닐라코",
+      "naver_web": "SELLA 미니 클렌징 비누, , 2개"
+    },
+    "brand": "아토앤오투 (ATONO2)",
+    "name": "옥시젠 물티슈 [클래식]",
+    "volume": "70g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 2800,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
