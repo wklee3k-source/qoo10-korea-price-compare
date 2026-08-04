@@ -400,6 +400,26 @@ def strip_excess_gifts(jp_title: str, translated_kr: str,
     return "+".join(kept).strip(), removed
 
 
+# [v7.36.0] 헤어 픽서·스프레이는 헤어케어라 색조 제외 대상이 아니다.
+#  '컬'만 넣으면 '코드글로컬러' 같은 브랜드명에 걸려 메이크업 프라이머가
+#  헤어로 새어나간다 — 실측 오탐 1건. '컬 고정'·'컬링'으로 좁힌다.
+HAIR_FIXER_RE = re.compile(
+    r"헤어|두피|스칼프|스타일링|마스카라|샴푸|트리트먼트|컬\s*고정|컬링")
+
+
+def is_makeup_fixer(qoo10_name: str, kr_name: str) -> bool:
+    """메이크업 픽서·세팅스프레이인가(= 색조 부속이라 검수 대상 아님).
+
+    제형이 '픽서'로 잡히고 헤어 관련어가 없으면 메이크업 픽서로 본다.
+    실측 16건이 메이크업 11 / 헤어 5 로 정확히 갈렸다.
+    """
+    forms = (_narrow_forms(extract_forms(qoo10_name))
+             | _narrow_forms(extract_forms(kr_name)))
+    if "픽서" not in forms:
+        return False
+    return not HAIR_FIXER_RE.search(f"{qoo10_name} {kr_name}")
+
+
 # [v4.3.0] 브랜드가 다르고 이름까지 안 맞으면 오매칭으로 보고 검수에서 뺀다.
 #  실측: 브랜드 불일치 569건 중 184건이 이 유형이었고, 표본 6건을 눈으로
 #  확인한 결과 6건 모두 실제 오매칭이었다(선크림→파운데이션, 크림→컨디셔너,
@@ -1248,7 +1268,7 @@ def build_pairs():
 
     pairs = []
     stats = {"no_link": 0, "sold_out": 0, "obsolete": 0, "no_qoo10_match": 0,
-             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "generic": 0, "excluded_category": 0, "ok": 0}
+             "select_type": 0, "collab": 0, "brand_name_mismatch": 0, "manual": 0, "article": 0, "foreign": 0, "generic": 0, "excluded_category": 0, "excluded_makeup_fixer": 0, "ok": 0}
     for x in kr:
         if not x.get("product_url"):
             stats["no_link"] += 1
@@ -1292,6 +1312,20 @@ def build_pairs():
         #  빼도록 고쳤지만, 이미 쌓인 238건은 여기서 거른다.
         if str(q.get("category_gdlc_cd")) in EXCLUDED_CATEGORIES:
             stats["excluded_category"] += 1
+            continue
+
+        # [v7.36.0] 메이크업 픽서·세팅스프레이는 색조 부속이라 대상이 아니다.
+        #  색조 제외는 카테고리 코드로만 걸렀는데, 큐텐 셀러가 세팅
+        #  스프레이를 스킨케어 카테고리(120000012)에 등록해두면 그물을
+        #  그대로 빠져나온다 — 실측: 어반디케이 올나이터가 '매트'와
+        #  '글로우'(마감이 정반대인 별개 제품)로 매칭돼 C에 있었다.
+        #  카테고리로는 못 거른다. 120000012 는 검수 대상 838건 대부분이
+        #  정상 스킨케어(크림·세럼·앰플)라 통째로 뺄 수 없기 때문이다.
+        #  그래서 제형('픽서')으로 거르되, 헤어 픽서·스프레이는 헤어케어라
+        #  성격이 다르므로 남긴다. 실측 16건이 메이크업 11 / 헤어 5 로
+        #  정확히 갈렸다.
+        if is_makeup_fixer(translated_kr, x.get("name") or ""):
+            stats["excluded_makeup_fixer"] += 1
             continue
 
         if (q.get("brand") or "").strip() in foreign_brands:
@@ -1610,6 +1644,7 @@ def build_pairs():
           f"브랜드+이름불일치제외={stats['brand_name_mismatch']} 수동제외={stats['manual']} "
           f"광고글제외={stats['article']} 해외브랜드제외={stats['foreign']} 일반명제외={stats['generic']} "
           f"제외카테고리={stats['excluded_category']} "
+          f"메이크업픽서제외={stats['excluded_makeup_fixer']} "
           f"최종={stats['ok']}건")
     pairs = _drop_search_blackholes(pairs, excluded_mismatch)
     if excluded_mismatch:
