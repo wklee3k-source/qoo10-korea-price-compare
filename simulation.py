@@ -9,6 +9,7 @@
 import ast
 import io
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -451,8 +452,10 @@ def t48_web_only_sources_cannot_form_consensus():
 
     # 키가 없을 때 예외를 던지지 않고 빈 리스트를 돌려주는지.
     key_safe = []
+    # [v7.38.0] naver_web_search 는 APIHUB/기존 키를 _endpoint() 로 고르므로
+    #  가드가 'if not picked:' 로 바뀌었다(둘 다 없으면 None -> 빈 리스트).
     for name, guard_line in (("daum_search.py", "if not API_KEY:"),
-                             ("naver_web_search.py", "if not CLIENT_ID or not CLIENT_SECRET:")):
+                             ("naver_web_search.py", "if not picked:")):
         f = SRC / name
         if not f.exists():
             key_safe.append(f"{name} 없음"); continue
@@ -2042,6 +2045,62 @@ def t87_naver_shop_disabled_and_prev_kept():
     check("87 네이버쇼핑 종료·기존값 보호", ok,
           f"쇼핑비활성{disabled} 이전본로드{loads_prev} "
           f"보호경로{guard_count}곳")
+
+
+# --------------------- #88 네이버 웹문서 API HUB 이관 대응 (v7.38.0)
+#  네이버가 검색 API를 NAVER API HUB로 이관했다. 웹문서 검색은 이관
+#  대상이라 계속 쓸 수 있다(쇼핑 검색은 이관 제외로 영구 종료 — t87).
+#  기존 키는 2027-06-30 까지만 동작하므로 그 전에 옮겨야 한다.
+#  신규 키가 있으면 그걸 쓰고 없으면 기존 키로 떨어지게 해서, 사장님이
+#  NCP 콘솔에서 키를 발급해 Secrets 에 넣기만 하면 코드 수정 없이
+#  전환되도록 했다.
+def t88_naver_web_apihub_ready():
+    import importlib
+    _sp = sys.path[:]
+    _env_backup = {k: os.environ.get(k) for k in (
+        "NAVER_APIHUB_CLIENT_ID", "NAVER_APIHUB_CLIENT_SECRET",
+        "NAVER_CLIENT_ID", "NAVER_CLIENT_SECRET")}
+    sys.path.insert(0, str(SRC))
+    try:
+        for k in _env_backup:
+            os.environ.pop(k, None)
+        import naver_web_search as _n
+        importlib.reload(_n)
+        # 자격증명이 없으면 빈 결과(예외를 던지면 검증이 '보류'로 멈춘다)
+        no_key_ok = _n._endpoint() is None and _n.search("테스트") == []
+
+        os.environ["NAVER_CLIENT_ID"] = "x"
+        os.environ["NAVER_CLIENT_SECRET"] = "y"
+        importlib.reload(_n)
+        legacy_url, legacy_hdr = _n._endpoint()
+        legacy_ok = ("openapi.naver.com" in legacy_url
+                     and "X-Naver-Client-Id" in legacy_hdr)
+
+        os.environ["NAVER_APIHUB_CLIENT_ID"] = "a"
+        os.environ["NAVER_APIHUB_CLIENT_SECRET"] = "b"
+        importlib.reload(_n)
+        hub_url, hub_hdr = _n._endpoint()
+        # 신규 키가 있으면 그쪽이 우선이어야 한다
+        hub_ok = ("naverapihub.apigw.ntruss.com" in hub_url
+                  and "X-NCP-APIGW-API-KEY-ID" in hub_hdr
+                  and "X-NCP-APIGW-API-KEY" in hub_hdr)
+
+        # 워크플로에서 신규 시크릿을 넘겨야 실제로 전환된다
+        wf = (ROOT / ".github/workflows/qoo10-pipeline.yml").read_text(encoding="utf-8")
+        wired = wf.count("NAVER_APIHUB_CLIENT_ID") >= 3
+
+        ok = all([no_key_ok, legacy_ok, hub_ok, wired])
+        check("88 네이버 웹문서 APIHUB 대응", ok,
+              f"키없음{no_key_ok} 기존{legacy_ok} 신규우선{hub_ok} 워크플로{wired}")
+    except Exception as e:  # noqa: BLE001
+        check("88 네이버 웹문서 APIHUB 대응", False, f"{type(e).__name__}: {e}")
+    finally:
+        for k, v in _env_backup.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+        sys.path[:] = _sp
 
 
 def t76_discovery_blocklist():

@@ -1159,6 +1159,10 @@ jobs:
       - name: Run hwahae verification in chunks (checkable mid-run)
         working-directory: src
         env:
+          # [v7.38.0] NAVER API HUB 이관 대응. 신규 키가 있으면 코드가
+          #  자동으로 그쪽을 쓰고, 없으면 기존 키로 떨어진다.
+          NAVER_APIHUB_CLIENT_ID: ${{ secrets.NAVER_APIHUB_CLIENT_ID }}
+          NAVER_APIHUB_CLIENT_SECRET: ${{ secrets.NAVER_APIHUB_CLIENT_SECRET }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
@@ -1451,6 +1455,10 @@ jobs:
       - name: Test Naver Shopping Search API
         working-directory: src
         env:
+          # [v7.38.0] NAVER API HUB 이관 대응. 신규 키가 있으면 코드가
+          #  자동으로 그쪽을 쓰고, 없으면 기존 키로 떨어진다.
+          NAVER_APIHUB_CLIENT_ID: ${{ secrets.NAVER_APIHUB_CLIENT_ID }}
+          NAVER_APIHUB_CLIENT_SECRET: ${{ secrets.NAVER_APIHUB_CLIENT_SECRET }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
@@ -1654,6 +1662,10 @@ jobs:
       - name: Probe recovery rate
         working-directory: src
         env:
+          # [v7.38.0] NAVER API HUB 이관 대응. 신규 키가 있으면 코드가
+          #  자동으로 그쪽을 쓰고, 없으면 기존 키로 떨어진다.
+          NAVER_APIHUB_CLIENT_ID: ${{ secrets.NAVER_APIHUB_CLIENT_ID }}
+          NAVER_APIHUB_CLIENT_SECRET: ${{ secrets.NAVER_APIHUB_CLIENT_SECRET }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           REQUEST_DELAY: "1"
