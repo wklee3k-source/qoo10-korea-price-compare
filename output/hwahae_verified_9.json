@@ -5517,5 +5517,273 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1206113823",
+    "translated_kr": "【대용량 1.5L×2개】데일리 스칼프 케어 샴푸 한국 미용실 품질 윤기·두피 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "애터미 스칼프케어 세트",
+      "naver_web": "더마비 프레쉬 스칼프 클리어 샴푸"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195651255",
+    "translated_kr": "【신제품】앰플엔 하이퍼 샷 세라마이드 앰플 50ml 고보습 밀도 배리어 케어 5종 세라마이드 함유 보습 메이크업 유지 에센스",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이퍼샷 세라마이드 앰플",
+      "naver": "(N단독+10%슈퍼적립) [밀도장벽] 앰플엔 하이퍼샷 세라마이드 앰플 80ml, 1개",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "앰플엔 하이퍼샷 세라마이드 앰플, , 1개"
+    },
+    "brand": "앰플엔 (AMPLE:N)",
+    "name": "(N단독+10%슈퍼적립) [밀도장벽] 앰플엔 하이퍼샷 세라마이드 앰플 80ml, 1개",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 26000,
+    "mall": "코리아나화장품",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13042092553",
+    "image_url": "https://shop-phinf.pstatic.net/20260701_296/1782885406984HK0Do_JPEG/22904190834783132_2142476652.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9058660/90586603645.10.jpg",
+        "mall": "코리아나화장품",
+        "link": "https://smartstore.naver.com/main/products/13042092553"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9090335/90903356511.jpg",
+        "mall": "컬리N마트",
+        "link": "https://smartstore.naver.com/main/products/13358846179"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "하이퍼샷 세라마이드 앰플",
+    "list_price": 45000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9058660/90586603645.10.jpg",
+    "page_collected_at": "2026-08-01T16:57:48",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T15:55:40",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1209821586",
+    "translated_kr": "다크스팟 케어 글로우 토너 125ml 【투명감 케어 / 각질 케어 / 피부 결 정돈 / 촉촉 보습】",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "비건 콜라겐 아이 세럼",
+      "daum": "각질 제거는 밤에 자기 전에만! 남자 초보 스킨케어 루틴",
+      "naver_web": "Axis"
+    },
+    "brand": "엑시스와이 (AXIS-Y)",
+    "name": "각질 제거는 밤에 자기 전에만! 남자 초보 스킨케어 루틴",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1209762812",
+    "translated_kr": "다크스팟 케어 글로우 세럼 50ml 【잡티 케어 / 투명감 케어 / 나이아신아마이드 / 수분 윤기 피부】",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "hwahae": "비건 콜라겐 아이 세럼",
+      "musinsa": "잡티케어 글로우 세럼 50ml",
+      "daum": "프랑스가 사랑한 안티 다크 스팟 세럼",
+      "naver_web": "Axis"
+    },
+    "brand": "엑시스와이",
+    "name": "잡티케어 글로우 세럼 50ml",
+    "volume": "",
+    "source": "musinsa",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 26000,
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.musinsa.com/products/1946512",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1177160758",
+    "translated_kr": "MTS 스칼프 부스트 앰플 300·500·1000· 스칼프 케어· 탈모· 두피 케어· 수분 공급· 헤어케어· 두피 컨디션 지원· 건강한 두피 환경으로· (",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "스피큘 콤플렉스 앰플",
+      "daum": "머리카락 사수 프로젝트 – 지금, 탈모 신호를 점검할 때",
+      "naver_web": "닥터스칼프 스피큘 앰플 , , 1개"
+    },
+    "brand": "닥터스칼프 (DR.SCALP)",
+    "name": "닥터스칼프 스피큘 앰플 , , 1개",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1206648051",
+    "translated_kr": "【공식】워터 퍼퓸 핸드크림 [3종] / 50ml / 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로폴리스 더마모이스처 핸드크림",
+      "daum": "니치어 씨엘로가든 퍼퓸 밤 핸드크림",
+      "naver_web": "한국화장품 더샘 빈티지 워터 어반 브리즈 핸드크림"
+    },
+    "brand": "차앤박화장품 (CNPLaboratory)",
+    "name": "프로폴리스 더마모이스처 핸드크림",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 10000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1154233546",
+    "translated_kr": "다크스팟 세럼 (나이아신아마이드 10%, 트라넥삼산 4%) 30ml/한국화장품/앰플",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "피부 노화 원인 80%는 햇빛, 자외선 손상 피부를 되돌리는 방법",
+      "naver_web": "비타민c 30 앰플/다크스팟/미백기능성/화장품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205986768",
+    "translated_kr": "콜라겐 글로우 부스터 세럼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "콜라겐 글로우 부스터 세럼",
+      "daum": "Part 1. 불나는 피부를 다스리는 쿨 다운 아이템",
+      "naver_web": "저분자 콜라겐 속볼륨 광채 세럼"
+    },
+    "brand": "메디큐브 (medicube)",
+    "name": "콜라겐 글로우 부스터 세럼",
+    "volume": "15ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 52000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208716391",
+    "translated_kr": "미백 에멀젼 110ml×3개 세트",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "추석 2025 언제? 럭셔리한 무드의 추석선물세트 Best4",
+      "naver_web": "코리아나 바이탈 플러스 탄력강화 스킨 토너 +에멀젼 , , 2개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208715910",
+    "translated_kr": "젤 메이크업 제거제 130g",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "퍼플랙시티로 제품 추천 리스트업 해봤는데 평가좀",
+      "naver_web": "네일 바르기 전 알아야 할 상식"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
