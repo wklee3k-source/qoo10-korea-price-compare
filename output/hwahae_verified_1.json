@@ -9842,5 +9842,302 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1011312191",
+    "translated_kr": "New Big Event [공식] [5개 세트] 민감한 피부 SDM CICA 피토 케어 토너, 세럼, 크림 3종 민감한 피부 해결 / 피부 홍조 개선 / pH 밸런스 / 피부 보습",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "naver_rematch": "인진쑥 진정 보습 세럼 30ml"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "인진쑥 진정 보습 세럼 30ml",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 26970,
+    "mall": "바이베스트몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10539632561",
+    "image_url": "https://shop-phinf.pstatic.net/20240704_152/1720097880446aL1mN_JPEG/1229261443753362_878952563.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8808413/88084138044.jpg",
+        "mall": "바이베스트몰",
+        "link": "https://smartstore.naver.com/main/products/10539632561"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019540/90195406089.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650895183"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019539/90195397286.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650886380"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "인진쑥 진정 보습 세럼",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8808413/88084138044.jpg",
+    "page_collected_at": "2026-08-01T15:21:19",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:08:50",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1208815714",
+    "translated_kr": "SRS 글루타 시카 워터 선세럼 트래블 사이즈 10ml 2+1 (계 3개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "SRS 앰플 [세린]",
+      "naver_web": "시카 카밍 선세럼"
+    },
+    "brand": "메트리젠 (MATRIGEN)",
+    "name": "SRS 앰플 [세린]",
+    "volume": "10ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 66000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1149428474",
+    "translated_kr": "그린 룸 비타민 K3 플러스 에멀젼 & 크림 25ml / 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "그린 룸 비타민 케이3 플러스 에멀젼 & 크림",
+      "naver_web": "637_img"
+    },
+    "brand": "닥터오프쇼어® (DR.OFFSHORE®)",
+    "name": "그린 룸 비타민 케이3 플러스 에멀젼 & 크림",
+    "volume": "25ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1208300080",
+    "translated_kr": "스킨 코튼 타올 100 (100장 입) 6개 세트",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "naver": "Flasoo 모슬린 후드 목욕 타월 6개 세트 - 2팩 100% 면 및 수건 4팩 81.3 x 81.3cm(32 32인치) 면, , 필수품",
+      "daum": "블랑루스 퓨어 코튼 페이스 타올 10매 순면 100% 저자극 클렌징 수건대용 스킨케어 비건인증, 1개",
+      "naver_web": "블랑루스 퓨어 코튼 페이스 타올 10매 순면 100% 저자극 클렌징 수건대용 스킨케어 비건인증"
+    },
+    "brand": null,
+    "name": "Flasoo 모슬린 후드 목욕 타월 6개 세트 - 2팩 100% 면 및 수건 4팩 81.3 x 81.3cm(32 32인치) 면, , 필수품",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 48230,
+    "mall": "구대동오",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13513033148",
+    "image_url": "https://shop-phinf.pstatic.net/20260511_113/1778468524159ETHHJ_JPEG/492076610201769_1751494327.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9105754/91057543500.jpg",
+        "mall": "구대동오",
+        "link": "https://smartstore.naver.com/main/products/13513033148"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9069776/90697768137.jpg",
+        "mall": "퍼플제2",
+        "link": "https://smartstore.naver.com/main/products/13153257045"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "블랑루스 퓨어 코튼 페이스 타올 10매 순면 100% 저자극 클렌징 수건대용 스킨케어 비건인증, 1개",
+    "list_price": 68900,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9105754/91057543500.jpg",
+    "page_collected_at": "2026-08-01T15:21:28",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:10:18",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1188455621",
+    "translated_kr": "peau de Reve (포드레브) 트리플 VC 로션 100ml 일본 제조 토너 비타민C 유도체 나이아신아마이드 알란토인 촉촉함",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1203571495",
+    "translated_kr": "[마법 여신 공식] 레티날 샷 타이트닝 부스터 20g PDRN 스피큘 바늘 에센스 윤기 모공 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스",
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "브이티코스메틱 리들샷 1000 에센스"
+    },
+    "brand": "피토버플러스 (PHYTOVER)",
+    "name": "매끈 모공 에센스",
+    "volume": "235ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1104769890",
+    "translated_kr": "인텐스 브라이트 W 부스터 앰플 30ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "인텐스 브라이트닝 W부스터 앰플",
+      "musinsa": "인텐스 브라이트 W 부스터 앰플 30ml",
+      "daum": "전승화/출연작",
+      "naver_web": "인텐스 브라이트 W 부스터 앰플"
+    },
+    "brand": "케이부스터 (KBOOSTER)",
+    "name": "인텐스 브라이트닝 W부스터 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 115000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "778876716",
+    "translated_kr": "[공식] 건성 피부 트러블 하는 피부에 고보습 올인원 젤 전용 펌프 세트 (민감한 피부 / 피부 트러블 / 저자극 / 기초 화장품) 히토형 세라마이드 미지 균 유산균 건성",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC"
+    },
+    "brand": "내추럴아린메디 (NATYRALARINMEDI)",
+    "name": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 14500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1197329012",
+    "translated_kr": "[30명 리뷰 캠페인] Allora 집중 케어 세트 / 이마용 8장 + 팔자주름용 16장 + 미스트 60ml / 한국화장품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194265783",
+    "translated_kr": "[30명 리뷰 캠페인] 제주도 탄제린 X PDRN 폼 클렌저 200ml / 한국화장품 / 세안",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "hwahae": "폼 워시",
+      "naver_web": "아이페셔널 브라이트닝 탄제린 아이패치",
+      "naver_rematch": "센카퍼펙트휩 페이셜 워시 시세이도 일본 클린징폼 포밍 세안제 세트"
+    },
+    "brand": "센카",
+    "name": "센카퍼펙트휩 페이셜 워시 시세이도 일본 클린징폼 포밍 세안제 세트",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 18500,
+    "mall": "코스트코이케아",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10570199403",
+    "image_url": "https://shop-phinf.pstatic.net/20250217_155/1739799577835APj77_JPEG/72433614424165041_712237607.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+        "mall": "코스트코이케아",
+        "link": "https://smartstore.naver.com/main/products/10570199403"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 21000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8811470/88114704928.2.jpg",
+    "page_collected_at": "2026-08-01T15:21:40",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-04T17:12:53",
+    "reverify_note": "점수미달(-5.5)"
   }
 ]
