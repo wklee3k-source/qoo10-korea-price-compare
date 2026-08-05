@@ -6791,5 +6791,281 @@
     "in_stock": null,
     "stock_evidence": [],
     "url_from_web": true
+  },
+  {
+    "goods_no": "1083543606",
+    "translated_kr": "더 세럼 E-XO 80ml 에센스 엑소좀 NMN 에이징케어 유니섹스 보습에센스 잔주름 칙칙함 건조 피부손상 닥터스 코스메 닥터 ERI",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "더 님"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1160831840",
+    "translated_kr": "국내정규품 스무딩 리파이너 본품 120ml (닦아내는 에센스)",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190405436",
+    "translated_kr": "시롤 크리스탈 휩 블랙 120g 세안 세안후 폼 거품 보습 탄산 숯 모공 시롤 시롤 블랙",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "토소웅",
+      "naver_web": "거품 세안 클레이 탄산 모공 사슴 니아신 아미드 세안 폼 뜨게한다",
+      "naver_rematch": "1+1 시카클리닉 흔적크림 50g 대용량 상처연고 센텔라스카 의약외품 마데케어연고"
+    },
+    "brand": "토소웅",
+    "name": "1+1 시카클리닉 흔적크림 50g 대용량 상처연고 센텔라스카 의약외품 마데케어연고",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 39200,
+    "mall": "토소웅화장품",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "http://www.tosowoong.com/index.html?branduid=1026169&ref=naver_open",
+    "image_url": "http://www.tosowoong.com/shopimages/tosowoong/0040000002642.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1031483/10314839239.5.jpg",
+        "mall": "토소웅화장품",
+        "link": "http://www.tosowoong.com/index.html?branduid=1026169&ref=naver_open"
+      }
+    ],
+    "real_page_title": "()ҿ - 1+1 īŬ ũ 50g 뷮 ó ڶī Ǿǰ ɾ",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "거품 세안 클레이 탄산 모공 사슴 니아신 아미드 세안 폼 뜨게한다",
+    "api_price": "38000",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_1031483/10314839239.5.jpg",
+    "page_collected_at": "2026-08-01T15:30:37",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-05T05:31:10",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1014254100",
+    "translated_kr": "클렌징밤 2개 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "트위티 에디션 클린잇제로 클렌징밤 [오리지널]",
+      "musinsa": "[SET] 참마 비건 밀크 클렌저 220ml 2개 (증정: 어니언 패드 리필 20매)",
+      "daum": "마몽드 클렌징밤 라방에서 샀는데 취소할까",
+      "naver_web": "클린잇제로 오리지널 클렌징밤 2개 세트"
+    },
+    "brand": "바닐라코 (banilaco)",
+    "name": "트위티 에디션 클린잇제로 클렌징밤 [오리지널]",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000234058",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1209466795",
+    "translated_kr": "10매 마스크팩 1번~5번 전 5종류에서 선택 (5매씩 선택가능 조합세트) 한국정규품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "K뷰티킹규정.pdf",
+      "naver_web": "천연 허브 쑥 경추 패치 경추/어깨/목 근육통완화 배출 습담제거 효도선물 티류으스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209063735",
+    "translated_kr": "공식 스피큘 아젤라산 PDRN 크림 15g/CICA/여드름케어/피부손상/예민한피부/트러블피부/피부의 붉음/진정/칙칙함케어/각질케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "daum": "스킨 케어"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "리코테카 진정 수분 크림",
+    "volume": "75ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": "더리즈 TheLeeds",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11610315195",
+    "image_url": "https://shop-phinf.pstatic.net/20260109_122/1767922876631wYISu_JPEG/47508794060712946_1655453596.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8915482/89154825601.5.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/11610315195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822998/88229980095.6.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/10685474173"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1208521595",
+    "translated_kr": "2개 세트 두피 앰플 30ml/헤어케어/탈모/두피진정/어성초/헤어라인",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "프로틴 인텐시브 트리트먼트",
+      "daum": "애터미 프로틴 인텐시브 헤어케어 세트",
+      "naver_web": "바로티나 탈모증상완화 두피 기능성 토닉 앰플, , 3개"
+    },
+    "brand": "애터미 (ATOMY)",
+    "name": "애터미 프로틴 인텐시브 헤어케어 세트",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15300,
+    "mall": "모도루 프로페셔널",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5433426045",
+    "image_url": "https://shop-phinf.pstatic.net/20260609_185/1780962673271ebmX1_JPEG/57187647141019925_598527380.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8297792/82977920122.15.jpg",
+        "mall": "모도루 프로페셔널",
+        "link": "https://smartstore.naver.com/main/products/5433426045"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8852573/88525732542.jpg",
+        "mall": "온깃마켓",
+        "link": "https://smartstore.naver.com/main/products/10981226489"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1208936380",
+    "translated_kr": "칙칙함·기미 케어 비타민 C 부스터 샷 30ml 데일리 고농도 비타민 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "똑똑한 소비를 위해 필수로 알아야 할 뷰티 성분 15",
+      "naver_web": "피부톤 칙칙함"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1167480923",
+    "translated_kr": "한국정규품 피어싱·홀 청소 이어스틱 60개입/피어싱홀 클리너/이어 홀 클렌징/아이템 올리브영",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1206186579",
+    "translated_kr": "하니바나 BDRN 크림 미스트/미스트 PDRN 보습 미스트 콜라겐 한국화장품 스킨케어 탄력 모공 광택피부 탄력 주름대책 펩타이드",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "1조 앰플 미스트",
+      "daum": "화장품"
+    },
+    "brand": "큐옴 (CUOME)",
+    "name": "화장품",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 40000,
+    "mall": "스윗비타",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11832291470",
+    "image_url": "https://shop-phinf.pstatic.net/20250512_262/1747054442090eTUn4_JPEG/93688225297807077_2143542012.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8937680/89376802057.jpg",
+        "mall": "스윗비타",
+        "link": "https://smartstore.naver.com/main/products/11832291470"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
   }
 ]
