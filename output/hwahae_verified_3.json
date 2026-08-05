@@ -13149,5 +13149,93 @@
     "in_stock": null,
     "stock_evidence": [],
     "url_from_previous": true
+  },
+  {
+    "goods_no": "949509489",
+    "translated_kr": "[공식] 젤크림 믹서 / 50g / 끈적이지 않고 가벼운 사용감! 산뜻하게 사용하는 보습 크림으로 지성 피부에 추천",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "피부 노화 원인 80%는 햇빛, 자외선 손상 피부를 되돌리는 방법",
+      "naver_web": "피부 속까지 촉촉하게 케어하는 한방 수분 크림",
+      "naver_rematch": "피부 건강하고 촉촉하게 케어하는 한방 여성용 크림 50g"
+    },
+    "brand": null,
+    "name": "피부 건강하고 촉촉하게 케어하는 한방 여성용 크림 50g",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 9800,
+    "mall": "팜트리엔",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12940528305",
+    "image_url": "https://shop-phinf.pstatic.net/20260108_258/1767847346041Bo4NG_JPEG/5105541882930438_1478560703.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048503/90485039315.jpg",
+        "mall": "팜트리엔",
+        "link": "https://smartstore.naver.com/main/products/12940528305"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8548786/85487862883.4.jpg",
+        "mall": "매일보습",
+        "link": "https://smartstore.naver.com/main/products/7943362560"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "피부 속까지 촉촉하게 케어하는 한방 수분 크림",
+    "list_price": 11000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9048503/90485039315.jpg",
+    "page_collected_at": "2026-08-01T15:49:30",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T07:17:54",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1209848358",
+    "translated_kr": "아이스 쿨 미니 바디 시트 6매입×8개 쿨링 시트 미니 물티슈 휴대용 두꺼운 메쉬 시원함 쿨 시트 냉각 땀 닦기 스포츠 이벤트 레저 여름 더위 대비 UNIFREE 유니프리",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스킨부스터 이데베논 세럼 시트 마스크",
+      "naver_web": "편리하고 부드러운 편리한 물수건, 매일 필요한 위생 용품"
+    },
+    "brand": "게스통 (GASTON)",
+    "name": "스킨부스터 이데베논 세럼 시트 마스크",
+    "volume": "25g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 3000,
+    "mall": "gaston",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13341625538",
+    "image_url": "https://shop-phinf.pstatic.net/20260402_102/1775101920653tmKOe_JPEG/109234768802228264_1101243191.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088613/90886135870.jpg",
+        "mall": "gaston",
+        "link": "https://smartstore.naver.com/main/products/13341625538"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9012980/90129803179.jpg",
+        "mall": "더디버트",
+        "link": "https://smartstore.naver.com/main/products/12585292323"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8710939/87109391223.4.jpg",
+        "mall": "바이지애",
+        "link": "https://smartstore.naver.com/main/products/9564888953"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
   }
 ]
