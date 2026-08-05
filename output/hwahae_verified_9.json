@@ -10728,5 +10728,258 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1173936565",
+    "translated_kr": "Eki 스킨 베일 프라이머 30g 미용 크림 지노픽스 데이 크리스탈 라이드 SPF35 PA+++UV 컷 자외선 세라마이드 글리시르린산 2K 스킨케어 베이스 메이크",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "UV 컬러코렉터 [SPF35/PA++] [2호 뉴트럴라이즈]",
+      "naver_rematch": "VDL 아이샤인 컬러모드 아이 팔레트 (﻿SPF 35 / PA++) [코지 뉴트럴] 7.2g, 1개"
+    },
+    "brand": "에스쁘아 (espoir)",
+    "name": "VDL 아이샤인 컬러모드 아이 팔레트 (﻿SPF 35 / PA++) [코지 뉴트럴] 7.2g, 1개",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 39600,
+    "mall": "륀느스토",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12367274157",
+    "image_url": "https://shop-phinf.pstatic.net/20250908_11/1757262346396UNT6I_JPEG/39694417517844788_634185194.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8991178/89911784874.jpg",
+        "mall": "륀느스토",
+        "link": "https://smartstore.naver.com/main/products/12367274157"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "UV 컬러코렉터 [SPF35/PA++] [2호 뉴트럴라이즈]",
+    "list_price": 44000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8991178/89911784874.jpg",
+    "page_collected_at": "2026-08-01T17:01:38",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:37:18",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1204938721",
+    "translated_kr": "닥터 에픽 콤부차 팝핑 팩",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "닥터에픽 콤부차 팝핑팩 50ml, 1개",
+      "daum": "닥터에픽 콤부차 팝핑팩",
+      "naver_web": "닥터에픽 콤부차 팝핑팩"
+    },
+    "brand": "디디에즈 (DIDIESE)",
+    "name": "닥터에픽 콤부차 팝핑팩 50ml, 1개",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 24800,
+    "mall": "어썸웰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13413235317",
+    "image_url": "https://shop-phinf.pstatic.net/20260417_158/1776405353348gOk8X_JPEG/804967154352428_169476634.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9095774/90957745653.jpg",
+        "mall": "어썸웰",
+        "link": "https://smartstore.naver.com/main/products/13413235317"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9095774/90957745653.jpg",
+    "page_collected_at": "2026-08-01T17:01:41",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:37:52",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1142345349",
+    "translated_kr": "레티 셀 도입 세럼 에센스 토너 크림 각종 레티놀 에센스 공식 레티놀 선물 모공 주름 탄력 부족 탄력 보습 각질",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "에센스",
+      "naver_web": "9903FE4E5F278DDE08"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1126950155",
+    "translated_kr": "부스터 에멀젼 150ml 도입 로션 보습 에이징 케어 밀크 상태 부스터 도입액",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "클래식 옴므 토너",
+      "daum": "뉴 시즌 신상 뷰티 리스트",
+      "naver_web": "더샘 클래식 옴므 토너 촉촉함"
+    },
+    "reject_reason": "점수미달(-6.0)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1180620843",
+    "translated_kr": "【공식】CONC PC 리치 샷 2.5ml 2개 세트 CONC LABO 콩크 랍 마이크로 니들 에센스 주입형 에센스 니들 에센스 주름 보습 콜라겐 펩타이드",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "매끈 모공 에센스"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1208508944",
+    "translated_kr": "【공식】VIOTERAS on:re 보태니칼 스킨 필 박리 없음 필링 천연 허브 각질 케어 모공 리스 칙칙함 대책 개별 포장 발효 로즈 꿀 함유 만델산 고 보습",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1110173646",
+    "translated_kr": "【프리미엄】아호 머리 바로잡기 팍팍하지 않은 아호 머리 마스카라 스틱 앞 머리 늦은 머리 정유로 좋은 향기 무 첨가 오르가닉 처방 포인트 리페어 세럼 클리어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205876980",
+    "translated_kr": "[한국 화장품]EM 세안 비누 4종 비누 세트 파프리카 비누 110g 진주 비누 110g 홍조류 비누 110g 귀리 스크럽 바 110g 제로 웨이스트 노 뉘메기 수제 비누 총 440g",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207645599",
+    "translated_kr": "【수량 한정】약용 화이트 닝 CC C2 200g 신나모롤 한정 디자인/CC 크림 전신용 얼굴용 자몽 향기 보습 톤업 의약외품",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1036248295",
+    "translated_kr": "【배송 무료】남녀 미 에피 테 샴푸 트리트먼트 E파이어 린스 700ml 오르가닉 단조비 다연조비 고려 인삼",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "6년근 고려 홍삼액 진",
+      "naver_rematch": "[서울약사신협] 6년근 고려홍삼액 진 70ml 30포 1+1"
+    },
+    "brand": "서울약사신협",
+    "name": "[서울약사신협] 6년근 고려홍삼액 진 70ml 30포 1+1",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 44900,
+    "mall": "락토온",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12338022177",
+    "image_url": "https://shop-phinf.pstatic.net/20250902_231/1756789243172w3VSn_PNG/22887606245902588_587416472.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8988253/89882532894.jpg",
+        "mall": "락토온",
+        "link": "https://smartstore.naver.com/main/products/12338022177"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "6년근 고려 홍삼액 진",
+    "list_price": 49900,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8988253/89882532894.jpg",
+    "page_collected_at": "2026-08-01T17:01:44",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:41:13",
+    "reverify_note": "합의부족(1곳)"
   }
 ]
