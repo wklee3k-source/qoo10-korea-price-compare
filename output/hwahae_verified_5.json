@@ -5502,5 +5502,311 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1163660756",
+    "translated_kr": "비건 옐로우미스트세럼 100ml 윤기+촉촉함+진정 케어! 오일층×에센스층의 2층식 미스트 / 메이크업 수정에도 / 민감피부 OK / 비건 인증",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "에센스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190625107",
+    "translated_kr": "클리니칼 1% 레티놀 트리트먼트 - 고농도 에이징 케어 모공리스 (30ml)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리니컬 1% 레티놀 트리트먼트",
+      "daum": "저자극 고기능 시대에 맞춘 하이퍼포먼스 스킨케어 루틴",
+      "naver_web": "폴라초이스 클리니컬 1% 레티놀 트리트먼트 |"
+    },
+    "brand": "폴라초이스 (PAULA'SCHOICE)",
+    "name": "클리니컬 1% 레티놀 트리트먼트",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 99000,
+    "mall": "폴라초이스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/333450115",
+    "image_url": "https://shop-phinf.pstatic.net/20250528_200/1748423091610fCHjW_JPEG/82555925735465907_1994440425.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1163465/11634658594.44.jpg",
+        "mall": "폴라초이스",
+        "link": "https://smartstore.naver.com/main/products/333450115"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_1163465/11634658719.44.jpg",
+        "mall": "폴라초이스",
+        "link": "https://shopping.naver.com/outlink/itemdetail/1000480020"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1198969593",
+    "translated_kr": "나이아신 히알루론산 21% 세럼 80ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신 히알루론 21%세럼",
+      "daum": "장벽 무너진 민감건성 나이아신아마이드 용량 골라줘",
+      "naver_web": "비건인증 나이아신 히알루론 21%세럼"
+    },
+    "brand": "더마팩토리 (DERMAFACTORY)",
+    "name": "나이아신 히알루론 21%세럼",
+    "volume": "80ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.11st.co.kr/products/8636768585",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1213317740",
+    "translated_kr": "[우니온 착용/여름 신작] 데싱디바 매직프레스 프리미엄 로즈멜트 쿨링 접촉 냉감 붙이기만 하면 되는 젤네일칩 한국네일",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "돈 들이지 않고 최상의 피부를 만드는 비법 10가지"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1163916738",
+    "translated_kr": "[1단계/2단계/3단계] 어린이용 파스투르 위드맘 750g 1개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "콜롬비아",
+      "naver_web": "파스퇴르 키즈 생 유산균, 60회분, 1개",
+      "naver_rematch": "컬럼비아 방수 등산화 크레스트우드 미드컷 남성 여성 발목 트레킹화 하이킹화 BKI0652"
+    },
+    "brand": "컬럼비아",
+    "name": "컬럼비아 방수 등산화 크레스트우드 미드컷 남성 여성 발목 트레킹화 하이킹화 BKI0652",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 127200,
+    "mall": "컬럼비아건대점",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/5124330449",
+    "image_url": "https://shop-phinf.pstatic.net/20251023_181/1761192953024ntGRE_PNG/9062446777397438_598072893.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8266885/82668850938.28.jpg",
+        "mall": "컬럼비아건대점",
+        "link": "https://smartstore.naver.com/main/products/5124330449"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8436672/84366721849.8.jpg",
+        "mall": "어제보다 나은 오늘",
+        "link": "https://smartstore.naver.com/main/products/6822221527"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "파스퇴르 키즈 생 유산균, 60회분, 1개",
+    "list_price": 159000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8266885/82668850938.28.jpg",
+    "page_collected_at": "2026-08-01T16:07:50",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T05:01:44",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1204155956",
+    "translated_kr": "스킨밸런스 컴플렉션 올인원 (1개)",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "컴플렉션 밸런스 크림",
+      "daum": "LG생활건강 연혁과 역사] 2001년 4월3일 LG화학에서 분할 신설 및 설립",
+      "naver_web": "컴플렉션 밸런스 크림"
+    },
+    "reject_reason": "점수미달(-4.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183740173",
+    "translated_kr": "[정규품·병행 수입품] 이젠시아 크림 50g 민감피부용 고보습 수분크림 진정 케어 피부 베리어 촉촉한 마무리",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "솔아토24 진정 보습크림",
+      "daum": "올리브영, 화해가 인정한 겨울철 수분크림 & 보습크림 Best5",
+      "naver_web": "살림백서 세라 히알루론산 수분크림 X 2개 진정 보습 세라마이드 저자극 수딩크림 수분젤 촉촉한"
+    },
+    "brand": "솔포그 (SOLFOG)",
+    "name": "솔아토24 진정 보습크림",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 77000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/8462818327",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1161466741",
+    "translated_kr": "【한국 공식 정품】[더마젠] 에스테틱 콜라겐 수딩 마스크 수분 집중 케어 10장입",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "1일1팩 영양 보습 진정 리프팅 미소시트팩",
+      "daum": "더페이스샵/제품",
+      "naver_web": "비타민 시트팩 마스크팩 에스테틱 생기 보습 영양팩"
+    },
+    "brand": "문정에스테틱 (MJAESTHETIC)",
+    "name": "비타민 시트팩 마스크팩 에스테틱 생기 보습 영양팩",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 64000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.11st.co.kr/products/3423982098",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "983100050",
+    "translated_kr": "에스테 소피 MS 밸런스 셀라이트 바디 마사지 오일 1개 1000ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "MS밸런스 바디 마사지 오일",
+      "naver_web": "M.S밸런스 셀루 오일"
+    },
+    "brand": "에스테소피 (ES+ESOPHY)",
+    "name": "MS밸런스 바디 마사지 오일",
+    "volume": "1000ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 24000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://m.danawa.com/product/product.html?code=57192335",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1184721348",
+    "translated_kr": "【2개 / 3개 세트 특가 · 1개당 ~1,400엔】PDRN 데일리 듀얼 UV 실드 선 스크린 50ml / PDRN · 펩타이드 · 글루타치온 · 박치올 / 주름 · 기미 개선 / 자외선 차단",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "PDRN UV 쉴드 골프패치",
+      "naver_rematch": "스포츠 유브이 쉴드 썬 패치 1박스 (4회분)"
+    },
+    "brand": "제나벨 (Genabelle)",
+    "name": "스포츠 유브이 쉴드 썬 패치 1박스 (4회분)",
+    "volume": "3.8g",
+    "source": "hwahae",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 11900,
+    "mall": "원바이오젠",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/7004684190",
+    "image_url": "https://shop-phinf.pstatic.net/20250219_82/1739923449558SpMp4_JPEG/24085463362288954_1111570337.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8454918/84549184512.15.jpg",
+        "mall": "원바이오젠",
+        "link": "https://smartstore.naver.com/main/products/7004684190"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_4948127/49481279090.jpg",
+        "mall": "무신사",
+        "link": "https://link.musinsa.com/app/goods/3318558?utm_source=naver_jisicshopping&utm_medium=sh&source=NVSH&utm_term={keyword}&utm_content={ad_group}"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9115997/91159978216.jpg",
+        "mall": "MERBEI",
+        "link": "https://smartstore.naver.com/main/products/13615467804"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "PDRN UV 쉴드 골프패치",
+    "list_price": 12500,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8454918/84549184512.15.jpg",
+    "page_collected_at": "2026-08-01T16:08:02",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T05:04:04",
+    "reverify_note": "합의부족(1곳)"
   }
 ]
