@@ -4823,5 +4823,346 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1119012312",
+    "translated_kr": "압소버 히알루로닉 세럼 30ml 추천 상품 한국 코스메",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터뱅크 블루 히알루로닉 세럼",
+      "naver": "라네즈 워터뱅크 블루 히알루로닉 세럼",
+      "daum": "/Data/20253/13/menu01/ratingKW_835957.pdf",
+      "naver_web": "라네즈 워터뱅크 블루히알루로닉 세럼 기획"
+    },
+    "brand": "라네즈 (LANEIGE)",
+    "name": "워터뱅크 블루 히알루로닉 토너",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "36000",
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=50850&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=laneige",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5424072/54240729245.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5424072/54240729245.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=50850&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=laneige"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8396827/83968272980.49.jpg",
+        "mall": "라네즈 스토어",
+        "link": "https://smartstore.naver.com/main/products/6423772647"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "워터뱅크 블루 히알루로닉 세럼",
+    "page_collected_at": "2026-08-01T16:56:56",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-05T04:55:18",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1185925532",
+    "translated_kr": "자인수 EX 150ml (리뉴얼 신판)",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "환상체"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197590797",
+    "translated_kr": "[흔들리는 피부 대책] 마이퍼스트에센서 100ml 2개 J.Y. Park 프로듀스 / 녹차에센스 / 진정부스터 / 오가닉 인증",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161937139",
+    "translated_kr": "80ml 베일크림미스트 미스트 분사 콜라겐미스트 물광미스트 수분+영양 미스트 분사 + 마스크팩 증정",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "열판이 움직이는 가정용 쿠션매직기 NEW YB-3100",
+      "daum": "NEW SEASON, NEW BEAUTY!",
+      "naver_web": "여신코스메틱 스토리채널"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1173918884",
+    "translated_kr": "도브 크리미 스크럽 석류&시어버터 298g [정규품] 도브 바디스크럽 도브 바디스크럽 도브 스크럽 도브 바디스크럽 도브 바디스크럽",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "바디 스크럽 [석류 & 시어버터향]",
+      "daum": "🫧도브X미피🐰 포밍 바디워시, 바디스크럽",
+      "naver_web": "도브 바디 스크럽 석류 앤드 시어버터, , 1개"
+    },
+    "brand": "도브 (Dove)",
+    "name": "바디 스크럽 [석류 & 시어버터향]",
+    "volume": "298g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 17900,
+    "mall": "오하요재팬",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/12736919483",
+    "image_url": "https://shop-phinf.pstatic.net/20251126_121/17641312802603fCOx_JPEG/33247162368246937_130603006.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9028143/90281430424.jpg",
+        "mall": "오하요재팬",
+        "link": "https://smartstore.naver.com/main/products/12736919483"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8866566/88665663390.5.jpg",
+        "mall": "일본직구 엔핍",
+        "link": "https://smartstore.naver.com/main/products/11121153068"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9071580/90715805756.1.jpg",
+        "mall": "스즈야",
+        "link": "https://smartstore.naver.com/main/products/13171294659"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9088158/90881585432.1.jpg",
+        "mall": "1초재팬",
+        "link": "https://smartstore.naver.com/main/products/13337075088"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8938441/89384419261.1.jpg",
+        "mall": "뷰앤베리",
+        "link": "https://smartstore.naver.com/main/products/11839908667"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1159078786",
+    "translated_kr": "AQ 부스팅 트리트먼트 헤어세럼 리필 (헤어에센스) 200ml",
+    "winner_source": "naver_rematch",
+    "candidates_summary": {
+      "daum": "2026의 시작, 지금 주목할 신상 뷰티 리스트 28",
+      "naver_web": "데코르테 AQ 부스팅 트리트먼트 헤어 세럼 추천",
+      "naver_rematch": "KOSE 코스메데코르테 AQ 부스팅 트리트먼트 헤어 세럼 200ml"
+    },
+    "brand": "데코르테",
+    "name": "KOSE 코스메데코르테 AQ 부스팅 트리트먼트 헤어 세럼 200ml",
+    "volume": "",
+    "source": "naver_rematch",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 66150,
+    "mall": "동경픽크닉",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13283877469",
+    "image_url": "https://shop-phinf.pstatic.net/20260321_33/1774070500854pW4DR_JPEG/97531755885728061_950854403.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082838/90828387801.jpg",
+        "mall": "동경픽크닉",
+        "link": "https://smartstore.naver.com/main/products/13283877469"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9082838/90828387801.jpg",
+    "page_collected_at": "2026-08-01T16:57:01",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:57:37",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1206694409",
+    "translated_kr": "[50ml] 투페이스 오일미스트 / 미스트타입·토너",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "인셀덤 투페이스 오일 미스트 50ml / N",
+      "daum": "태닝부터 쿨링까지, 건강한 여름 피부를 위한 그루밍 아이템 추천",
+      "naver_web": "인셀덤화장품 투페이스 오일 미스트 1개"
+    },
+    "brand": "인셀덤",
+    "name": "인셀덤 투페이스 오일 미스트 50ml / N",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 66900,
+    "mall": "디아-펠리즈",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13663004535",
+    "image_url": "https://shop-phinf.pstatic.net/20260714_235/1784006350506pyWBi_JPEG/7083294561036920_1831039583.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120751/91207515443.jpg",
+        "mall": "디아-펠리즈",
+        "link": "https://smartstore.naver.com/main/products/13663004535"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063251/90632516032.jpg",
+        "mall": "W쇼핑 LIVE",
+        "link": "https://smartstore.naver.com/main/products/13088004940"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9063386/90633860730.jpg",
+        "mall": "W쇼핑 LIVE",
+        "link": "https://smartstore.naver.com/main/products/13089349638"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9120751/91207515443.jpg",
+    "page_collected_at": "2026-08-01T16:57:03",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:58:14",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1142718952",
+    "translated_kr": "[누보셀]누보셀 이데베논 더블샷 앰플 11ml × 3개 + 선물 메디힐 마스크팩 1개",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "센스있는 추석 뷰티 선물",
+      "naver_rematch": "[국내백화점 선물포장]디올 미스디올, 자도르 샤워젤 + 바디밀크 바디워시 로션 세트"
+    },
+    "brand": "디올뷰티",
+    "name": "[국내백화점 선물포장]디올 미스디올, 자도르 샤워젤 + 바디밀크 바디워시 로션 세트",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 185000,
+    "mall": "NOPQ",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10802789929",
+    "image_url": "https://shop-phinf.pstatic.net/20240828_199/17248358046321g4mW_JPEG/48700089611131822_1983544753.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8834729/88347295919.jpg",
+        "mall": "NOPQ",
+        "link": "https://smartstore.naver.com/main/products/10802789929"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "센스있는 추석 뷰티 선물",
+    "list_price": 192000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8834729/88347295919.jpg",
+    "page_collected_at": "2026-08-01T16:57:06",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:58:41",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1207905977",
+    "translated_kr": "신발매 [의약부외품] 트라넥삼산 로션 40g 미인피부 시미 주근깨 멜라닌 민감피부 고농도 트라네화이트닝밀크",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "100% 천연 수제 폼 클렌징 마이 페이스 비타 [COSMETIC]",
+      "daum": "COSMETIC"
+    },
+    "reject_reason": "점수미달(-6.0)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1197360658",
+    "translated_kr": "다크스팟 5 IN 1 보습 크림 100g 대용량 미강 PDRN 배합 칙칙함 케어 톤업 투명감 촉촉함 탄력 탄력 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "daum": "스킨 케어"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": "닥터슈 크리에이티브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10831785692",
+    "image_url": "https://shop-phinf.pstatic.net/20260127_233/1769495969319HGtqd_JPEG/42482822468192796_220599434.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+        "mall": "닥터슈 크리에이티브",
+        "link": "https://smartstore.naver.com/main/products/10831785692"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
   }
 ]
