@@ -2323,5 +2323,306 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1199482761",
+    "translated_kr": "[영양] 올리브영 대두 에센스 50ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뷰티 업계 종사자가 사용해 보고 추천하는 다이소 화장품 5",
+      "naver_web": "포맨트 시그니처 올인원 에센스"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1210395714",
+    "translated_kr": "클렌징 파우더 워시 80g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[최신제조] 인셀덤 엑티브 클린업 파우더 폼 클렌징 가루 효소 워시 세안제",
+      "daum": "인셀덤 기초 화장품 클렌징 파우더 워시 2개 + 사은품 증정",
+      "naver_web": "수이사이 파우더 워시 효소 세안제 5종 뷰티 클리어 32개입 suisai 일본 가루 클렌징"
+    },
+    "brand": "인셀덤",
+    "name": "[최신제조] 인셀덤 엑티브 클린업 파우더 폼 클렌징 가루 효소 워시 세안제",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 32300,
+    "mall": "skin pick",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6236483445",
+    "image_url": "https://shop-phinf.pstatic.net/20251226_163/1766737014115E1fsh_JPEG/100213565161079419_1384441415.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8378098/83780985934.4.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/6236483445"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_price": "34900",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8378098/83780985934.4.jpg",
+    "page_collected_at": "2026-08-01T15:51:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:11:24",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1171638753",
+    "translated_kr": "서울 1988 세럼 : 레티날 리포솜 2% + 블랙 진센 30ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "K",
+      "naver": "K-Secret Seoul 1988 세럼 레티날 리포솜 2 흑삼 30ml 1.01fl oz",
+      "naver_web": "호주에서 K"
+    },
+    "brand": "케이시크릿",
+    "name": "K-Secret Seoul 1988 세럼 레티날 리포솜 2 흑삼 30ml 1.01fl oz",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 21830,
+    "mall": "아비트라몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13683139688",
+    "image_url": "https://shop-phinf.pstatic.net/20260726_235/17850426633845pbOd_JPEG/35764800117811935_1603376117.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122765/91227650930.jpg",
+        "mall": "아비트라몰",
+        "link": "https://smartstore.naver.com/main/products/13683139688"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9123021/91230217833.jpg",
+        "mall": "아비트라3호점",
+        "link": "https://smartstore.naver.com/main/products/13685706590"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8757543/87575431286.2.jpg",
+        "mall": "K-SECRET",
+        "link": "https://smartstore.naver.com/main/products/10030928796"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9122765/91227650930.jpg",
+    "page_collected_at": "2026-08-01T15:51:56",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:11:54",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1203329038",
+    "translated_kr": "【신작】 스무스&퓨어 아이스 쿨링 데오 스프레이 150ml 2종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스무스 앤 퓨어 아이스 쿨링 데오 스프레이 [클라우드 우디]",
+      "daum": "COSMETIC",
+      "naver_web": "[8월 올영픽 /"
+    },
+    "brand": "아리얼 (Ariul)",
+    "name": "스무스 앤 퓨어 아이스 쿨링 데오 스프레이 [클라우드 우디]",
+    "volume": "150ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 15900,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.ssgdfs.com/kr/goos/view/ariul/beauty/body/270878001570",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1146499682",
+    "translated_kr": "【한국화장품】【정규품 취급점】 타임 에너지 리셋팅 에멀젼 120ml - 시간을 초월하는 미피부의 비결!",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "타임 에너지 리셋팅 에멀전",
+      "daum": "메스암페타민",
+      "naver_web": "숨 37도 타임에너지 리셋팅 에멀젼 120ml_Y"
+    },
+    "brand": "숨37도 (SUM37)",
+    "name": "타임 에너지 리셋팅 에멀전",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 52000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://prod.danawa.com/info/?pcode=51803939",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1107704379",
+    "translated_kr": "에센셜 물 울트라 셋팅 픽서 55ml/120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "에센셜 물 울트라 세팅 픽서",
+      "daum": "정샘물 에센셜 울트라 세팅 픽서"
+    },
+    "brand": "정샘물뷰티 (JUNGSAEMMOOL)",
+    "name": "에센셜 물 울트라 세팅 픽서",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 33000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://prod.danawa.com/info/?pcode=96259382",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1190175438",
+    "translated_kr": "노 세밤 선쿠션 EX SPF50+ PA++++ 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "빙하유/방송 일화/2024년",
+      "naver_web": "스킨 터치 하이드라 글로우 선쿠션 SPF50+ PA++++"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1097995675",
+    "translated_kr": "[바닐라코] 피니싱 파우더 퍼프 5P",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "[바닐라코] 피니쉬 파우더 퍼프 5P",
+      "naver_web": "파우더블루 소프트 피니싱 브러시"
+    },
+    "brand": "바닐라코",
+    "name": "[바닐라코] 피니쉬 파우더 퍼프 5P",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 8000,
+    "mall": "바닐라코 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/10026784798",
+    "image_url": "https://shop-phinf.pstatic.net/20260527_273/1779860676160DFh7u_JPEG/32561250303787494_286446712.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8757128/87571287234.1.jpg",
+        "mall": "바닐라코 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/10026784798"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8757128/87571287233.1.jpg",
+        "mall": "바닐라코",
+        "link": "https://shopping.naver.com/outlink/itemdetail/10026784797"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 10000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8757128/87571287234.1.jpg",
+    "page_collected_at": "2026-08-01T15:52:07",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T04:14:31",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1164282566",
+    "translated_kr": "프로텍션 마일드 선 밀크 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "프로텍션 마일드 선 밀크 [SPF50+/PA++++]",
+      "daum": "루비셀 프로텍션 마일드 선 밀크",
+      "naver_web": "루비셀 프로텍션 마일드 선 밀크"
+    },
+    "brand": "루비셀 (Ruby-Cell)",
+    "name": "프로텍션 마일드 선 밀크 [SPF50+/PA++++]",
+    "volume": "50ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://m.danawa.com/product/product.html?code=95126624",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1204965253",
+    "translated_kr": "【공식】 여름 추천 솜 30ml 오드 파르팡 그레이프프루트 민트 아쿠아 솔트 상큼한 여름 밤의 바다를 이미지한 퍼퓨메이션 프래그런스 향수",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
