@@ -2159,6 +2159,55 @@ def t89_exa_monthly_budget():
         sys.path[:] = _sp
 
 
+# --------------------- #90 구매링크 대체 확보 (v7.40.0)
+#  구매링크는 사실상 네이버쇼핑에서만 나왔는데(코드 주석: 링크 확보
+#  885건 중 867건=98%) 그 API가 2026-07-31 종료됐다. 그 결과 화해가
+#  승자인 건들이 상품명은 맞게 찾고도 링크를 못 얻는다 — 실측: 화해
+#  승자 1,711건 중 1,469건 링크 없음(이전엔 전부 있었다). 검수 화면은
+#  구매링크가 있어야 목록에 오르므로 1,638건이 통째로 사라진다.
+#  대책 둘: (1) 네이버 웹문서 검색에서 쇼핑몰 URL을 뽑는다(실측 회수율
+#  75%) (2) 그래도 없으면 이전 검증에서 확보한 링크를 쓴다.
+def t90_purchase_url_fallback():
+    import importlib
+    _sp = sys.path[:]
+    sys.path.insert(0, str(SRC))
+    try:
+        import hwahae_verify_batch as _h
+        importlib.reload(_h)
+
+        # 쇼핑몰 도메인만 골라야 한다(블로그·뉴스 링크는 구매링크가 아니다)
+        dom = _h.SHOP_DOMAIN_RE
+        picks_shop = all(dom.search(u) for u in [
+            "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A1",
+            "https://www.11st.co.kr/products/123", "https://www.coupang.com/vp/products/1",
+            "https://prod.danawa.com/info/?pcode=1", "https://www.musinsa.com/products/1",
+            "https://smartstore.naver.com/x/products/1"])
+        skips_blog = not any(dom.search(u) for u in [
+            "https://blog.naver.com/x/223", "https://cafe.naver.com/x",
+            "https://news.example.com/article/1"])
+
+        # 이름이 없거나 너무 짧으면 검색하지 않는다(무의미한 호출 방지)
+        no_name = _h._find_shop_url("") is None and _h._find_shop_url("가") is None
+
+        src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+        # 웹문서 우선, 그 다음 이전 링크 — 순서가 중요하다(이전 링크는
+        #  시간이 지나면 단종·품절로 죽을 수 있다)
+        i_web = src.find('entry["url_from_web"] = True')
+        i_prev = src.find('entry["url_from_previous"] = True')
+        order_ok = 0 < i_web < i_prev
+        # 성공 경로에도 붙어 있어야 한다(v7.37.0은 실패 경로에만 있었다)
+        in_success = "[웹문서링크]" in src and "[이전링크보완]" in src
+
+        ok = all([picks_shop, skips_blog, no_name, order_ok, in_success])
+        check("90 구매링크 대체 확보", ok,
+              f"쇼핑몰선별{picks_shop} 블로그제외{skips_blog} 빈이름{no_name} "
+              f"순서{order_ok} 성공경로{in_success}")
+    except Exception as e:  # noqa: BLE001
+        check("90 구매링크 대체 확보", False, f"{type(e).__name__}: {e}")
+    finally:
+        sys.path[:] = _sp
+
+
 def t76_discovery_blocklist():
     path = ROOT / "data" / "discovery_blocklist.json"
     wf = WF.read_text(encoding="utf-8")
