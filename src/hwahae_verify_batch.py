@@ -463,6 +463,40 @@ _PRODUCT_CATEGORY_GROUPS = [
 ]
 
 
+# [v7.40.0] 구매 가능한 쇼핑몰 도메인. 네이버쇼핑 API 종료 후 구매링크를
+#  네이버 웹문서 검색으로 대신 찾을 때, 검색 결과 중 실제 판매 페이지만
+#  고르는 데 쓴다(블로그·뉴스·카페 글은 링크로 쓸 수 없다).
+#  실측 회수율 75%(잃은 링크 20건 중 15건 복구).
+SHOP_DOMAIN_RE = re.compile(
+    r"(oliveyoung|11st|coupang|danawa|enuri|zigzag|gmarket|auction|ssg|"
+    r"lotteon|musinsa|smartstore\.naver|brand\.naver|kurly|hmall|akmall|"
+    r"wconcept|29cm|aritaum|chicor|lalavla)", re.I)
+
+
+def _find_shop_url(product_name: str) -> str | None:
+    """상품명으로 네이버 웹문서를 검색해 쇼핑몰 구매링크를 찾는다.
+
+    네이버쇼핑 API가 종료돼(2026-07-31) 구매링크를 얻을 길이 사실상
+    막혔다. 웹문서 검색은 이관 대상이라 계속 쓸 수 있고, 결과에 올리브영·
+    11번가·쿠팡·다나와 같은 판매 페이지 URL이 그대로 들어온다.
+
+    가격까지는 못 얻는다(사이트마다 구조가 다르고 올리브영은 403). 가격은
+    이전 검증값이나 로컬 수집기(collected_pages.json)로 보완한다.
+    """
+    if not product_name or len(product_name.strip()) < 3:
+        return None
+    try:
+        from naver_web_search import search as naver_web
+        items = naver_web(product_name, num_results=5)
+    except Exception:  # noqa: BLE001
+        return None      # 링크 보완은 부가 기능이라 실패해도 조용히 넘긴다
+    for it in items or []:
+        url = it.get("url") or ""
+        if SHOP_DOMAIN_RE.search(url):
+            return url
+    return None
+
+
 def _search_naver_rematch(keyword: str, known_brand: str) -> dict | None:
     """[v4.0.0] 다른 소스가 알려준 '정확한 한국 상품명'으로 네이버를 다시 검색.
 
@@ -1061,6 +1095,40 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         else:
             entry["in_stock"] = None
             entry["stock_evidence"] = []
+
+        # [v7.40.0] 검증엔 성공했는데 구매링크만 못 얻은 경우, 이전에
+        #  확보해둔 링크·가격을 살려 붙인다.
+        #  구매링크는 사실상 네이버쇼핑에서만 나왔는데(위 주석: 링크 확보
+        #  885건 중 867건=98%) 그 API가 2026-07-31 종료됐다. 그래서 화해가
+        #  승자인 건들이 상품명은 맞게 찾고도 링크를 못 얻는다 — 실측:
+        #  화해 승자 1,711건 중 1,469건이 링크 없음(이전엔 전부 있었다).
+        #  검수 화면은 구매링크가 있어야 목록에 오르므로 이대로면 1,638건이
+        #  통째로 사라진다.
+        #  기존 안전장치(v7.37.0)는 '검증 실패' 경로에만 있어서 이 경우를
+        #  못 잡았다. 성공했지만 링크만 빈 경우도 같은 이유로 보완한다.
+        #  이름·브랜드는 이번에 찾은 새 값을 쓰고 링크·가격·판매처만
+        #  이전 값에서 가져온다(같은 상품이므로 링크는 그대로 유효하다).
+        # [v7.40.0] 먼저 웹문서 검색으로 구매링크를 찾아본다. 승자가
+        #  확인해준 정확한 상품명으로 치는 것이라 적중률이 높다(실측 75%).
+        #  이전 값 보완보다 이걸 먼저 하는 이유: 이전 링크는 시간이 지나면
+        #  단종·품절로 죽을 수 있어 새로 찾은 게 더 정확하다.
+        if not entry.get("product_url"):
+            _shop_url = _find_shop_url(entry.get("name") or "")
+            if _shop_url:
+                print(f"    [웹문서링크] 구매링크 확보 — {_shop_url[:60]}")
+                entry["product_url"] = _shop_url
+                entry["url_from_web"] = True
+
+        if not entry.get("product_url"):
+            _prev = previous_by_goods.get(item["goods_no"])
+            if _prev and _prev.get("product_url"):
+                print("    [이전링크보완] 이번엔 구매링크를 못 얻어 "
+                      "이전 검증에서 확보한 링크를 쓴다")
+                for _f in ("product_url", "price", "mall", "seller_trust",
+                           "image_url", "image_candidates"):
+                    if not entry.get(_f) and _prev.get(_f):
+                        entry[_f] = _prev[_f]
+                entry["url_from_previous"] = True
 
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
