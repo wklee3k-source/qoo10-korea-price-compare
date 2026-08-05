@@ -7134,5 +7134,295 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1133948597",
+    "translated_kr": "[1+@ 세일] 대전 레몬 브레드 30ml (레몬+마들렌느) / 30만 개 판매 돌파! 한국에서 인기 많은 드레스 향수! [533]",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "샤넬",
+      "naver_web": "클래스 리스트 .xlsx"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211284889",
+    "translated_kr": "쿠마노유지 마유 샴푸 리필 1000ml + 마유 컨디셔너 리필 1000ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "구마노 유지마 유샴푸 리필",
+      "naver_web": "마유 샴푸/컨디셔너 리필용",
+      "naver_rematch": "구마노유지 마유 샴푸 리필 1000ml B"
+    },
+    "brand": null,
+    "name": "구마노유지 마유 샴푸 리필 1000ml B",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 13000,
+    "mall": "코이코이쇼핑",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/7971354974",
+    "image_url": "https://shop-phinf.pstatic.net/20230125_214/1674626818906ALJQo_JPEG/75762653720846296_1006312046.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8551585/85515855297.jpg",
+        "mall": "코이코이쇼핑",
+        "link": "https://smartstore.naver.com/main/products/7971354974"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9039787/90397878526.jpg",
+        "mall": "노카메 샵",
+        "link": "https://smartstore.naver.com/main/products/12853367534"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082445/90824457642.jpg",
+        "mall": "buyjoy",
+        "link": "https://smartstore.naver.com/main/products/13279947310"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9082445/90824458678.jpg",
+        "mall": "buyjoy",
+        "link": "https://smartstore.naver.com/main/products/13279948347"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "마유 샴푸/컨디셔너 리필용",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8551585/85515855297.jpg",
+    "page_collected_at": "2026-08-01T16:58:47",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T05:37:55",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1185095025",
+    "translated_kr": "[2점 세트] 타마리스 솔티에르 케어 마스크 크림 자스민 80g",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "이유몰"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1175369881",
+    "translated_kr": "미스트 토너 3본 세트 인간 줄기세포 배양액 시카 배합 보습 스프레이 진정 건조 대책 메이크 위에서 OK 고보습",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "daum": "Coreana Colour",
+      "naver_web": "https://cert.k"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "https://cert.k",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
+  },
+  {
+    "goods_no": "1126308598",
+    "translated_kr": "박치올 리포솜 앰플 토너 150ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 베스트 오브 뷰티의 위너 ‘스킨케어’ ‘베이스’ ‘맨’"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1131536056",
+    "translated_kr": "제로포어 핏 모공 패드 (80장) / 제로 모공 패드 / 모공 타이트닝 / 한국 화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "제로 포어 핏 패드",
+      "daum": "토소웅",
+      "naver_web": "마데카 더블 타이트닝 앰플 패드 60매"
+    },
+    "brand": "와이즐리 (wisely)",
+    "name": "제로 포어 핏 패드",
+    "volume": "215ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 17890,
+    "mall": "k-photocard",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13675277979",
+    "image_url": "https://shop-phinf.pstatic.net/20260721_149/1784625873594O48CJ_JPEG/41041102732069771_191639409.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121978/91219788998.jpg",
+        "mall": "k-photocard",
+        "link": "https://smartstore.naver.com/main/products/13675277979"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9117299/91172998554.2.jpg",
+        "mall": "컴피데이스",
+        "link": "https://smartstore.naver.com/main/products/13628487945"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120043/91200431133.jpg",
+        "mall": "주식회사학수",
+        "link": "https://smartstore.naver.com/main/products/13655920348"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9120043/91200431112.jpg",
+        "mall": "주식회사학수",
+        "link": "https://smartstore.naver.com/main/products/13655920327"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1205216557",
+    "translated_kr": "[공식] 네오 솔리드 퍼퓸 샬롯 / 3.6g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "샬롯 솔리드퍼퓸",
+      "daum": "KARRA KARRA 2022 봄신상&BEST인기상품 총집합 기획전",
+      "naver_web": "책임판매업자명단_221118.xlsx"
+    },
+    "brand": "엘리자베스 (ELBT)",
+    "name": "샬롯 솔리드퍼퓸",
+    "volume": "7.5g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 37000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://zigzag.kr/catalog/products/142107662",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1204442515",
+    "translated_kr": "알티 모이스트 필 로션 150ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "허그 유어 스킨 모이스처 로션",
+      "naver_web": "시슬리 수프리미아 안티에이징 스킨 케어 로션"
+    },
+    "brand": "셀레피덤 (celepiderme)",
+    "name": "허그 유어 스킨 모이스처 로션",
+    "volume": "200ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 20000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/2303502995",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1192838559",
+    "translated_kr": "어드밴스드 레티노 멜라 세럼 50ml 한국 세럼 레티놀 케어 페이스 케어 보습 세럼 데일리 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티노타이트닝® 비타민A 레티놀 앰플",
+      "daum": "전 세계 뷰티 에디터들이 선정한 최고의 화장품, 프리덱셀랑스 드 라 보테 2021",
+      "naver_web": "닥터오라클 레티노타이트닝 레티놀 앰플 1개 / 탄력 주름 비타민A"
+    },
+    "brand": "닥터오라클 (Dr.Oracle)",
+    "name": "레티노타이트닝® 비타민A 레티놀 앰플",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 34000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000186997",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1203740798",
+    "translated_kr": "향수 세트 신등장 기사 유니콘/딸기 큐피드/여성용/딸기 큐피드 프레그런스/향수/아토마이저/높은 향기 강도/매력적인 향기/새해 선물/중국",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
