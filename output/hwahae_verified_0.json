@@ -10931,5 +10931,318 @@
     "in_stock": null,
     "stock_evidence": [],
     "url_from_web": true
+  },
+  {
+    "goods_no": "1205811086",
+    "translated_kr": "BRING GREEN 공식 브링그린 티트리씨 토너 500ml BRINGGREEN 토너",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "사철쑥 카밍밸런스 토너",
+      "daum": "브링그린 제품 ‘왜’ 쓰세요? 브링그린 홈페이지 분석 한 번 해볼께요!",
+      "naver_web": "브링그린 사철쑥 카밍 밸런스 토너"
+    },
+    "brand": "브링그린 (BRINGGREEN)",
+    "name": "사철쑥 카밍밸런스 토너",
+    "volume": "270ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 15000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://m.danawa.com/product/product.html?code=7618006",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1204561188",
+    "translated_kr": "골드 콜라겐 퍼펙션 아이팩 60장",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "골드 콜라겐 퍼펙션 아이패치",
+      "naver_web": "3W 콜라겐 럭셔리 골드 아이 스팟패치 60장 30일분"
+    },
+    "brand": "Snp (에스엔피)",
+    "name": "골드 콜라겐 퍼펙션 아이패치",
+    "volume": "1.2g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 25000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.11st.co.kr/products/8144256886",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1187571477",
+    "translated_kr": "데미지 테라피 헤어오일 65ml",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "musinsa": "데미지드 헤어 테라피 미스트 200ml",
+      "daum": "2024 베스트 오브 뷰티의 위너 ‘헤어’",
+      "naver_web": "데미지 테라피 헤어 오일"
+    },
+    "brand": "미샤",
+    "name": "데미지드 헤어 테라피 미스트 200ml",
+    "volume": "",
+    "source": "musinsa",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 9000,
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.musinsa.com/products/4058743",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1102038044",
+    "translated_kr": "어드밴스드 스네일 92 올인원 크림 100ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스네일 92 올인원 크림",
+      "daum": "코스알엑스 어드벤스드 스네일 92 올인원 크림, , 6개",
+      "naver_web": "코스알엑스 어드벤스드 스네일 92 올인원 크림"
+    },
+    "brand": "코스알엑스 (COSRX)",
+    "name": "스네일 92 올인원 크림",
+    "volume": "100g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 19000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.enuri.com/detail.jsp?modelno=17197809",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1151371296",
+    "translated_kr": "아토 베리어 365 하이드로 에센스 200ml (2개)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "아토베리어365 하이드로 에센스",
+      "musinsa": "아토베리어365 하이드로 에센스 200ml",
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "아토베리어365 하이드로 에센스"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "아토베리어365 하이드로 에센스",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222837",
+    "image_url": "https://shopping-phinf.pstatic.net/main_5950399/59503998282.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5950399/59503998282.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000222837"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9048550/90485509958.2.jpg",
+        "mall": "The 나누다",
+        "link": "https://smartstore.naver.com/main/products/12940998948"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1212350471",
+    "translated_kr": "[1+1] 메디올가 브라이트닝 크림 30ml 2개 / 기미 제거 크림 피부톤 업",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "7무 화이트듀 익스트림 세럼",
+      "daum": "7일만의 효과! EELHOE 검버섯제거 잡티 미백 세럼",
+      "naver_web": "메디올가 기미 잡티 반점 제거 에센스 미백 화이트닝 톤업 데일리 크림 수분 보습 브라이트닝 크림 , , ...."
+    },
+    "brand": "듀이트리 (DEWYTREE)",
+    "name": "메디올가 기미 잡티 반점 제거 에센스 미백 화이트닝 톤업 데일리 크림 수분 보습 브라이트닝 크림 , , ....",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.cjgmarket.co.kr/shop/item.php?it_id=20211206220023081111",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1210877861",
+    "translated_kr": "【NEW·화장 노리 UP 미스트】셰이킹 시너지 미스트 50ml 3종",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "쉐이킹 시너지 미스트 [파우더 픽싱]",
+      "naver": "퓌 쉐이킹 시너지 미스트 3종",
+      "naver_web": "퓌 쉐이킹 시너지 미스트 3종"
+    },
+    "brand": "퓌 (fwee)",
+    "name": "퓌 쉐이킹 시너지 미스트 3종",
+    "volume": "50ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 16900,
+    "mall": "fwee퓌 공식스토어",
+    "seller_trust": "공식몰",
+    "product_url": "https://smartstore.naver.com/main/products/13675082968",
+    "image_url": "https://shop-phinf.pstatic.net/20260721_142/1784617435854qabRu_JPEG/118750245798082479_1049081549.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121959/91219593986.jpg",
+        "mall": "fwee퓌 공식스토어",
+        "link": "https://smartstore.naver.com/main/products/13675082968"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6095138/60951382208.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=170864022&shop_id=19523&utm_source=shopping_naver_all&tab=recommendation"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "쉐이킹 시너지 미스트 [파우더 픽싱]",
+    "list_price": 22000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9121959/91219593986.jpg",
+    "page_collected_at": "2026-08-01T15:10:53",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:46:57",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1154827017",
+    "translated_kr": "맨 하드 밤 60g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "포 맨 밤부 포레스트 메가 하드 스프레이",
+      "musinsa": "[SET] 세미 오버핏 반팔/하드 쮸리 코팅 반바지(오트밀)",
+      "daum": "좀비맨",
+      "naver_web": "아리미노 맨 하드 밤 왁스 x 2개"
+    },
+    "brand": "다슈 (DASHU)",
+    "name": "포 맨 밤부 포레스트 메가 하드 스프레이",
+    "volume": "180ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 15000,
+    "mall": "도어스 헤어그루밍",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/9159915414",
+    "image_url": "https://shop-phinf.pstatic.net/20240730_88/1722327286075QgnFY_JPEG/1911047946194979_1372430282.JPG",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8670441/86704415737.2.jpg",
+        "mall": "도어스 헤어그루밍",
+        "link": "https://smartstore.naver.com/main/products/9159915414"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8893967/88939671305.jpg",
+        "mall": "오승재팬",
+        "link": "https://smartstore.naver.com/main/products/11395160940"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1205132300",
+    "translated_kr": "[1개] 다크스팟 세럼 30ml (나이아신아마이드 10% 트라넥삼산 4%)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+      "daum": "프랑스가 사랑한 안티 다크 스팟 세럼",
+      "naver_web": "비타 다크 스팟 세럼"
+    },
+    "brand": "아누아 (Anua)",
+    "name": "나이아신아마이드 10 TXA 4 다크 스팟 코렉팅 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 32000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/8615279210",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1141019983",
+    "translated_kr": "로에베 001 우먼 EDP SP 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "스페치알레 SP 크림",
+      "daum": "LOEWE 로에베 디스커버리 6종 세트 3가지 옵션 공용/남성/여성",
+      "naver_web": "로에베 001 우먼 EDP"
+    },
+    "brand": "노에비아 (NOEVIR)",
+    "name": "스페치알레 SP 크림",
+    "volume": "50g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 1150000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/263672612",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
   }
 ]
