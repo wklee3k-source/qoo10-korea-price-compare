@@ -7511,5 +7511,289 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1200994718",
+    "translated_kr": "럭셔리 24K 골드 앰플 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "럭셔리 24K 골드 앰플",
+      "daum": "닥터씨피유 24K 골드 럭셔리 앰플, 1개,",
+      "naver_web": "메디필 럭셔리 24k 골드 앰플, , 3개"
+    },
+    "brand": "메디필 (MEDIPEEL)",
+    "name": "럭셔리 24K 골드 앰플",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 95000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/1951275570",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1206187502",
+    "translated_kr": "울 필 폼 180g 클렌저 민감성 피부 건성 피부 글리콜산 세라마이드 필링 세안",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "민감성 모공 관리법",
+      "naver_web": "건성/중성/지성/민감성 피부타입별 각질관리법",
+      "naver_rematch": "피부완정법 2단계 관리 Full Set (파우더 스킨 세럼 로션 비누 수더 크림)"
+    },
+    "brand": null,
+    "name": "피부완정법 2단계 관리 Full Set (파우더 스킨 세럼 로션 비누 수더 크림)",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 232000,
+    "mall": "피부완정연구소",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10232691338",
+    "image_url": "https://shop-phinf.pstatic.net/20260105_288/1767615704499rdrOk_JPEG/25241445561980872_1210898682.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8777719/87777194905.2.jpg",
+        "mall": "피부완정연구소",
+        "link": "https://smartstore.naver.com/main/products/10232691338"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8764423/87644230513.jpg",
+        "mall": "바르오랩",
+        "link": "https://smartstore.naver.com/main/products/10099727809"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8500933/85009335732.jpg",
+        "mall": "스킨파우더룸더치스.주얼리",
+        "link": "https://smartstore.naver.com/main/products/7464835410"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8752929/87529291045.16.jpg",
+        "mall": "여신코스메틱",
+        "link": "https://smartstore.naver.com/main/products/9984788761"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "민감성 모공 관리법",
+    "list_price": 248000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8777719/87777194905.2.jpg",
+    "page_collected_at": "2026-08-01T16:22:27",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T05:37:58",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1199687551",
+    "translated_kr": "우편 투함 U・V락 프리미엄 브라이트 30입(30일분) 마시는 자외선 차단제/자외선 대책/서플리먼트/비타민C/유브락",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190157601",
+    "translated_kr": "하이드로 오일 마스크 5장입×2박스 (10장입) 팩 고보습 / 윤기 피부 / 탄력·탄력 / 모공 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "열판이 움직이는 가정용 쿠션매직기 NEW YB-3100",
+      "daum": "NEW SEASON, NEW BEAUTY!",
+      "naver_web": "히말라야 님 허브 페이스 진정 워시오프 팩"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1093603826",
+    "translated_kr": "솔리드 볼륨 베이스 토너 100ml 밀크 세라마이드 60% 배합 피부 베리어 강화 밀키 텍스처",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2월의 뷰티 신상 파헤치기 #잇츠온세일",
+      "naver_web": "https://cert.k"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195042792",
+    "translated_kr": "아이 윌 미 백 뱀파이어 톤 업 스프레이",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "뱀파이어 톤업 스프레이",
+      "naver": "[백옥 톤업/아이돌 백설기 피부] 아윌미백 뱀파이어 톤업 스프레이",
+      "daum": "페이크 최종 보스&진 최종 보스/캐릭터",
+      "naver_web": "아윌미백 뱀파이어 톤업 스프레이"
+    },
+    "brand": "아윌미백 (iwillme:back)",
+    "name": "뱀파이어 톤업 스프레이",
+    "volume": "100ml",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": "14900",
+    "mall": "올리브영",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000226594",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6059823/60598238231.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6059823/60598238231.jpg",
+        "mall": "올리브영",
+        "link": "https://www.oliveyoung.co.kr/store/common/partner.do?chlNo=1&chlDtlNo=1&utm_source=naver&utm_medium=shopping_ep&utm_campaign=onpro_ep_product_0101_1231&utm_content=pc_price&sndType=goods&sndVal=A000000226594"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8975657/89756577293.6.jpg",
+        "mall": "자미라",
+        "link": "https://smartstore.naver.com/main/products/12212066588"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9111012/91110125000.jpg",
+        "mall": "오레알 스토어",
+        "link": "https://smartstore.naver.com/main/products/13565614603"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9122678/91226781888.jpg",
+        "mall": "원라이브:브랜드",
+        "link": "https://smartstore.naver.com/main/products/13682270646"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "reverify_missed_at": "2026-08-05T05:40:02",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1199631508",
+    "translated_kr": "No.5 본드 메인터넌스 컨디셔너 250ml 데일리 트리트먼트 표백 대미지 케어",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "NO.4 본드 메인터넌스 샴푸",
+      "daum": "HAIR AVENGERS",
+      "naver_web": "올라플렉스 본드 메인터넌스 No.4 샴푸 No.5 컨디셔너"
+    },
+    "brand": "올라플렉스 (OLAPLEX)",
+    "name": "NO.4 본드 메인터넌스 샴푸",
+    "volume": "250ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 53000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/7580746142",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1184848447",
+    "translated_kr": "오주아 모이스트칼 샴푸 1000ml 2개 세트 리필 레필 오주아 모이스트칼 살롱 전매품 대용량 정규품 대인기 최저가 갱신 중 밀본",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1133929335",
+    "translated_kr": "글로벌 밀본 리페어 리스트라티브 블로우 아웃 프라이머 파인 헤어 120g 살롱 전매품 아웃 배스 트리트먼트 씻어내지 않는 트리트먼트",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "879622385",
+    "translated_kr": "마일드 솔트 워시 150g 소금 세안 클렌저",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "올바디 파우더 클렌저 소금 41% 샴푸",
+      "daum": "뉴 시즌 신상 뷰티 리스트",
+      "naver_web": "소금세안법 :: 솔트반전클렌저"
+    },
+    "brand": "에브리톡톡 (EVERYTOKTOK)",
+    "name": "올바디 파우더 클렌저 소금 41% 샴푸",
+    "volume": "110g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
