@@ -1237,5 +1237,272 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1209825068",
+    "translated_kr": "【공식】【리뉴얼】메차이 EGF 버블 에센스 더블 세트 (2개입)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "EGF 버블 에센스",
+      "daum": "Nevermine",
+      "naver_web": "미차이 EGF 버블에센스 미개봉"
+    },
+    "brand": "미차이 (MECHAI)",
+    "name": "EGF 버블 에센스",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39500,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://prod.danawa.com/info/?pcode=70067021",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1211388494",
+    "translated_kr": "워터 캡슐 선세럼 SPF50+ / PA+++ 40ml × 2개 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "워터 캡슐 선세럼  [SPF50+/PA+++]",
+      "daum": "무더위 정복을 위한 여름맛 신상 모음집",
+      "naver_web": "에스쁘아 워터 스플래쉬 선세럼 SPF50+ PA+++, , 2개"
+    },
+    "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
+    "name": "워터 캡슐 선세럼  [SPF50+/PA+++]",
+    "volume": "40ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 35000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.11st.co.kr/products/6913360164",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1210932470",
+    "translated_kr": "블루 EGF 카밍 미스트 100ml 한국 페이스 미스트 토너 미스트 촉촉함 케어 피부 컨디션 케어",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "제이엠솔루션 스킨 부스트 레티놀 토너 엑스라지 1, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1211960584",
+    "translated_kr": "다이브 인 글로우 미스트 120ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "다이브인 저분자 히알루론산 글로우 미스트",
+      "daum": "카드파이트!! 뱅가드/등장 유닛",
+      "naver_web": "다이브인 저분자 히알루론산 글로우 미스트"
+    },
+    "brand": "토리든 (Torriden)",
+    "name": "다이브인 저분자 히알루론산 글로우 미스트",
+    "volume": "120ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 20000,
+    "mall": "토리든",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/13493682113",
+    "image_url": "https://shop-phinf.pstatic.net/20260506_64/177803135789183tA9_JPEG/112164141734593367_1157037734.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9103819/91038192465.jpg",
+        "mall": "토리든",
+        "link": "https://smartstore.naver.com/main/products/13493682113"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1207928286",
+    "translated_kr": "【공식】테카 솔루션 수딩 스팟 젤 15ml / 센텔라 / 여드름 / 저자극 / 진정 / 키미 / 개선",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "아쿠아 스쿠알란 미스트",
+      "daum": "미스트",
+      "naver_web": "아시아 등 여러 나라에서 발생합니다. 태그: 마이코플라즈마"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1209266440",
+    "translated_kr": "【PDRN 배합 / 리피트 아이템】 펩타 시카 세럼 패드 더블 세트 (60매 + 60매)",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "펩타시카 세럼 패드",
+      "daum": "혹한에도 끄떡없는 2월 뷰티 신상 28",
+      "naver_web": "톤28 펩타시카 무농약 해남병풀 세럼 특대용량 3개"
+    },
+    "brand": "톤28 (TOUN28)",
+    "name": "펩타시카 세럼 패드",
+    "volume": "130g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 28000,
+    "mall": "봄봄할인마켓",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13455651207",
+    "image_url": "https://shop-phinf.pstatic.net/20260426_107/1777211572642rCi6q_JPEG/480035779971716_863886514.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9100016/91000161559.jpg",
+        "mall": "봄봄할인마켓",
+        "link": "https://smartstore.naver.com/main/products/13455651207"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9099856/90998564749.jpg",
+        "mall": "GSSHOP TV쇼핑",
+        "link": "https://smartstore.naver.com/main/products/13454054397"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1211858497",
+    "translated_kr": "[대용량 2개 조합] 리쥬란 토너패드 포어 타이트닝 리필용 60매입 2개 세트 모공 핀홀 각질 스킨 케어 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "SBA 식품관",
+      "naver_web": "윌슨병의 치료방법 2_약물요법"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207273381",
+    "translated_kr": "PDRN 핑크 콜라겐 밤 세럼 95ml 탄산 거품 에센스 수광 피부 탄력 팔자 주름 건성 피부 에이징 케어 한국 화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "화장품",
+      "naver_web": "https://cert.k"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1169930563",
+    "translated_kr": "테라 크네 365 나이아신아마이드 5% 블레미쉬 바디 미스트 기획 세트 【본품 200ml + 리필 100ml】",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "테라크네365 나이아신아마이드 5% 흔적 바디 미스트",
+      "naver_web": "파파레서피 블레미쉬 효소 클렌징 파우더, , 1개"
+    },
+    "brand": "에스트라 (AESTURA)",
+    "name": "테라크네365 나이아신아마이드 5% 흔적 바디 미스트",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://zigzag.kr/catalog/products/161494616",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1209241128",
+    "translated_kr": "선 어웨이 쿨링 선 CC EX SPF50+PA+++ 스페셜 기획 세트 [본품+리필 2개]",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "선-어웨이 쿨링 선 CC EX [SPF50+/PA+++]",
+      "daum": "선케어",
+      "naver_web": "숨37 선 어웨이 쿨링 선 CC EX 스페셜 기획세트"
+    },
+    "brand": "숨37도 (SUM37)",
+    "name": "선-어웨이 쿨링 선 CC EX [SPF50+/PA+++]",
+    "volume": "15g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 55000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.coupang.com/vp/products/81557607",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
   }
 ]
