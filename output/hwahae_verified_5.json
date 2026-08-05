@@ -10825,5 +10825,326 @@
     "in_stock": null,
     "stock_evidence": [],
     "url_from_web": true
+  },
+  {
+    "goods_no": "1122438535",
+    "translated_kr": "[공식] 셀라 인텐시브 케어 인 세럼 30ml 주름 / 세럼 / 보습 / 영양 / 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "봄을 기다리는 3월의 신상 뷰티템",
+      "naver_web": "흑진주 아이크림 블랙펄 한국화장품 선물, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1005392041",
+    "translated_kr": "3개 세트 스칼프 토너 180g 두피용 토너",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "스칼프 인텐시브 샴푸",
+      "naver": "현대약품 마이녹셀 스칼프 인텐시브 샴푸 960ml, 3개",
+      "daum": "마이녹셀 스칼프 인텐시브 샴푸 3개",
+      "naver_web": "우디브 저자극 식물성 두피 토너 두피 가려움 붉은기 뾰루지 각질 개선 토닉, , 1개"
+    },
+    "brand": "마이녹셀 (MINOXELL)",
+    "name": "현대약품 마이녹셀 스칼프 인텐시브 샴푸 960ml, 3개",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 50900,
+    "mall": "현대약품 마이녹셀",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12570916730",
+    "image_url": "https://shop-phinf.pstatic.net/20251021_102/1761033193778STiaT_JPEG/8902687533634677_186349634.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011542/90115427583.2.jpg",
+        "mall": "현대약품 마이녹셀",
+        "link": "https://smartstore.naver.com/main/products/12570916730"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9011542/90115427582.2.jpg",
+        "mall": "마이녹셀",
+        "link": "https://shopping.naver.com/outlink/itemdetail/12570916729"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9025682/90256824482.1.jpg",
+        "mall": "현대약품 마이녹셀",
+        "link": "https://smartstore.naver.com/main/products/12712313558"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8347230/83472304406.10.jpg",
+        "mall": "skin pick",
+        "link": "https://smartstore.naver.com/main/products/5927804918"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "우디브 저자극 식물성 두피 토너 두피 가려움 붉은기 뾰루지 각질 개선 토닉, , 1개",
+    "list_price": 180000,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9011542/90115427583.2.jpg",
+    "page_collected_at": "2026-08-01T16:12:35",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:28:55",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1199374983",
+    "translated_kr": "【신상】비타민 C 액티브 캡슐 4박스 (24캡슐) + 트리트먼트 에센스 120ml 1개",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "(해외) Vitamin C Advanced Plus Brightening & Antiageing Night Cream",
+      "daum": "리뷰 ♥ 베스트",
+      "naver_web": "베이지크 비타민 C 액티브 캡슐 1박스 + 트리트먼트 에센스 -"
+    },
+    "brand": "부츠 (Boots)",
+    "name": "베이지크 비타민 C 액티브 캡슐 1박스 + 트리트먼트 에센스 -",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.musinsa.com/products/6246621",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1164993050",
+    "translated_kr": "칼민 우디 포레스트 향수 우디 파르팜 20ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "naver": "톰포드 오우드 미네랄 OUD MINERALE 오드퍼퓸 100ml",
+      "naver_web": "Addiction Absolu Vivamor Parfums 향수"
+    },
+    "brand": "톰포드",
+    "name": "톰포드 오우드 미네랄 OUD MINERALE 오드퍼퓸 100ml",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 290000,
+    "mall": "럭셔리파리",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11417144026",
+    "image_url": "https://shop-phinf.pstatic.net/20250201_228/1738363251927yD8L0_PNG/72496110064336741_321661128.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8896165/88961654391.jpg",
+        "mall": "럭셔리파리",
+        "link": "https://smartstore.naver.com/main/products/11417144026"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8896165/88961650581.jpg",
+        "mall": "럭셔리파리",
+        "link": "https://smartstore.naver.com/main/products/11417140216"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "Addiction Absolu Vivamor Parfums 향수",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8896165/88961654391.jpg",
+    "page_collected_at": "2026-08-01T16:12:41",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:29:48",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1199342464",
+    "translated_kr": "밀라노 컬렉션 2022 바디 프레시 파우더 30g",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "밀라노 컬렉션 바디 프레시 파우더 2022",
+      "daum": "밀라노 콜렉션 바디 파우더 품절 안내",
+      "naver_web": "바디 프레쉬 파우더 밀라노 컬렉션 2017"
+    },
+    "brand": null,
+    "name": "밀라노 컬렉션 바디 프레시 파우더 2022",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 177760,
+    "mall": "몰패스스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6752741112",
+    "image_url": "https://shop-phinf.pstatic.net/20220603_117/1654242356930COci5_JPEG/61707053036531938_1096803188.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8429724/84297241434.1.jpg",
+        "mall": "몰패스스토어",
+        "link": "https://smartstore.naver.com/main/products/6752741112"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9000452/90004520178.jpg",
+        "mall": "보다 BODA",
+        "link": "https://smartstore.naver.com/main/products/12460009431"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9022494/90224944390.jpg",
+        "mall": "도로동스토어",
+        "link": "https://smartstore.naver.com/main/products/12680433466"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9023391/90233915680.jpg",
+        "mall": "우주빌직구대행",
+        "link": "https://smartstore.naver.com/main/products/12689404756"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8429724/84297241434.1.jpg",
+    "page_collected_at": "2026-08-01T16:12:43",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:30:29",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1207114980",
+    "translated_kr": "【센시티브 소】유솔라보 바이오 센시티브 퓨리파잉 앰플 50ml 소 앰플 민감 피부 진정 정피부",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1193574166",
+    "translated_kr": "라쿠텐 1위 제한제 오드레미스트 【스프레이 보틀 또는 리필 보틀】약국의 제한제 의약외품 [약사 감수 / 오드레미 / 데오드란트 스프레이]",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172199061",
+    "translated_kr": "데리케이트 존 솝 【약용 이비사 솝 140ml 리필 파우치 135ml 세트】의약외품 이비사 공식 거품 무첨가 약산성 냄새 냄새 흐릿함 검은 얼룩 냄새 케어",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1161261989",
+    "translated_kr": "【눈 밑의 다크서클】아이크림 할록실 2% 레티놀 눈 밑의 다크서클 눈 밑 처짐 색소 침착 다크서클 눈 밑 케어 아이크림 18g 눈 밑 에센스 파란 다크서클 갈색 다크서클 검은 다크서클 여성 남성",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "daum": "시니어 다크서클 개선을 위한 아이크림 성분 탐구",
+      "naver_rematch": "산 언더 밤 스틱 - 다크서클과 주름 및 잔주름을 위한 보습 크림 세럼 대신 가벼운 대체 성분 나이아신아마이드 비타민 E 함유 피부 관리 Under Eye Balm Stick"
+    },
+    "brand": null,
+    "name": "산 언더 밤 스틱 - 다크서클과 주름 및 잔주름을 위한 보습 크림 세럼 대신 가벼운 대체 성분 나이아신아마이드 비타민 E 함유 피부 관리 Under Eye Balm Stick",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 64700,
+    "mall": "에어 다이렉트 샵",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13253879522",
+    "image_url": "https://shop-phinf.pstatic.net/20260315_251/17735668744491cpET_JPEG/36480963584132587_2029646216.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079838/90798389853.jpg",
+        "mall": "에어 다이렉트 샵",
+        "link": "https://smartstore.naver.com/main/products/13253879522"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9079839/90798390142.jpg",
+        "mall": "에어 초이스 샵",
+        "link": "https://smartstore.naver.com/main/products/13253879810"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "시니어 다크서클 개선을 위한 아이크림 성분 탐구",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9079838/90798389853.jpg",
+    "page_collected_at": "2026-08-01T16:12:46",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:32:11",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1154848123",
+    "translated_kr": "【공식】청 귤 마일드 듀얼 필링 패드(50매) 제주도 청귤/어성초/나이아신아마이드/구연산/AHA/BHA/PHA/LHA/피부 결/톤업/각질/브라이트닝",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "월7,000원으로 홈페이지와 그룹웨어를 한번에 사용하세요.",
+      "naver_web": "달래 효능 부작용 손질"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
