@@ -10244,5 +10244,365 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1204229455",
+    "translated_kr": "멜트 & 모이스처 세트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "모이스처 멜트 스노우볼",
+      "daum": "마스크로 자극받은 피부에 필요한 제품은?_ 신상 화장품 리스트",
+      "naver_web": "멜트 앤 모이스처 세트"
+    },
+    "brand": "라엘뷰티 (RaelBEAUTY)",
+    "name": "모이스처 멜트 스노우볼",
+    "volume": "0.1g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 18000,
+    "mall": "스노우볼마켓스토어",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13476527819",
+    "image_url": "https://shop-phinf.pstatic.net/20240816_98/1723794595337h2dsV_JPEG/8751295246784766_89781688.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9102103/91021038171.jpg",
+        "mall": "스노우볼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13476527819"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9098736/90987361896.jpg",
+        "mall": "스노우볼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13442851544"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9114378/91143784680.jpg",
+        "mall": "스노우볼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13599274269"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9114636/91146367364.jpg",
+        "mall": "스노우볼마켓스토어",
+        "link": "https://smartstore.naver.com/main/products/13601856952"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1075097423",
+    "translated_kr": "【도입 에센스】라라이프 3나노 침투 부스터 세럼 50ml 1개 부기 케어·이중턱·팔뚝 지방 분해 라인 개선【공식】",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뮤즈클리닉 안양점",
+      "naver_web": "9903FE4E5F278DDE08"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1178513171",
+    "translated_kr": "키세라 C 큐어 파인 노 파운데 PDRN 재생 크림 50ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "하이드라 PDRN 맥스 크림",
+      "naver_web": "키세라씨 큐어파인 PDRN 재생 앰플"
+    },
+    "brand": "프리티스킨 (Prettyskin)",
+    "name": "하이드라 PDRN 맥스 크림",
+    "volume": "60ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 39000,
+    "mall": "닥터슈 크리에이티브",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10831785692",
+    "image_url": "https://shop-phinf.pstatic.net/20260127_233/1769495969319HGtqd_JPEG/42482822468192796_220599434.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8837629/88376291705.5.jpg",
+        "mall": "닥터슈 크리에이티브",
+        "link": "https://smartstore.naver.com/main/products/10831785692"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1159509885",
+    "translated_kr": "【celqne】모이스처 트리트먼트 마스크 25g×5매입 마스크팩 고 보습 촉촉함 배리어 케어 민감한 피부 흔들리는 피부 한국 스킨케어",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "breeze_201701.pdf",
+      "naver_web": "피부에 좋은 천연 재료 5가지",
+      "naver_rematch": "캐모마일 워터 1L 천연 화장품 스킨 미스트 만들기"
+    },
+    "brand": null,
+    "name": "캐모마일 워터 1L 천연 화장품 스킨 미스트 만들기",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 10200,
+    "mall": "에코문",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/8568793816",
+    "image_url": "https://shop-phinf.pstatic.net/20260405_137/1775371552009UhJk0_PNG/109504479073830134_2117872331.png",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8611329/86113294138.1.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8568793816"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8605562/86055627234.2.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8511126911"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8605567/86055674019.2.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8511173696"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8611337/86113377022.1.jpg",
+        "mall": "에코문",
+        "link": "https://smartstore.naver.com/main/products/8568876699"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "피부에 좋은 천연 재료 5가지",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8611329/86113294138.1.jpg",
+    "page_collected_at": "2026-08-01T15:10:03",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:34:55",
+    "reverify_note": "점수미달(-4.5)"
+  },
+  {
+    "goods_no": "1204347660",
+    "translated_kr": "【공식】스킨 튠 워시 100g 1개 세안 폼 효소 세안 클레이 세안 모공 케어 검은 표정 각질 여드름 보습 무 첨가 스킨케어 민감한 피부 저 자극",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "daum": "일본직구 No.1 코스믹 COSMIK 맨즈 맨즈",
+      "naver_web": "여드름 압출 후 간지러움과 뾰루지 원인은?",
+      "naver_rematch": "염색후샴푸 두피 여드름 뾰루지 샴푸 머리간지러움 비듬없애는 샴푸"
+    },
+    "brand": null,
+    "name": "염색후샴푸 두피 여드름 뾰루지 샴푸 머리간지러움 비듬없애는 샴푸",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 14800,
+    "mall": "만능보따리",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10608634049",
+    "image_url": "https://shop-phinf.pstatic.net/20240718_280/17212746479194bxCx_JPEG/6836163771512639_1162270500.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8815313/88153139639.jpg",
+        "mall": "만능보따리",
+        "link": "https://smartstore.naver.com/main/products/10608634049"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "여드름 압출 후 간지러움과 뾰루지 원인은?",
+    "list_price": 19800,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8815313/88153139639.jpg",
+    "page_collected_at": "2026-08-01T15:10:05",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:35:31",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1162205276",
+    "translated_kr": "[전 30개입] 프로그로스 슬리핑 마스크 4ml 6개입 X 5 set_SNS인기 품절 대란 _보습 영양 윤기",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "VT X BTS 본 내추럴 스페셜 캡슐 마스크 [피부진정]",
+      "daum": "글로벌 힐링 뷰티 코스메틱 시크릿키"
+    },
+    "reject_reason": "점수미달(-2.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1128069672",
+    "translated_kr": "【공식】피토 테라피 트리트먼트 500ml",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "피토테라피 헤어트리트먼트",
+      "daum": "닥터포헤어 피토테라피 트리트먼트",
+      "naver_web": "피토테라피 샴푸 *2+피토테라피 트리트먼트"
+    },
+    "brand": "닥터포헤어 (Dr.FORHAIR)",
+    "name": "닥터포헤어 피토테라피 트리트먼트",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 28000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000163622",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1165195693",
+    "translated_kr": "쿠올시아 컬러 샴푸 벚꽃 250ml",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "naver": "피오레 쿠올시아 컬러샴푸 브라운 1000ml",
+      "daum": "고양이귀"
+    },
+    "brand": null,
+    "name": "피오레 쿠올시아 컬러샴푸 브라운 1000ml",
+    "volume": "",
+    "source": "naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": null,
+    "sale": null,
+    "price": 61900,
+    "mall": "어니스트불",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/13673536247",
+    "image_url": "https://shop-phinf.pstatic.net/20260720_240/17845285569379KHaW_JPEG/22872098437105446_2124175473.jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121804/91218047266.jpg",
+        "mall": "어니스트불",
+        "link": "https://smartstore.naver.com/main/products/13673536247"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9121804/91218046375.jpg",
+        "mall": "어니스트불",
+        "link": "https://smartstore.naver.com/main/products/13673535356"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "list_price": 68700,
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_9121804/91218047266.jpg",
+    "page_collected_at": "2026-08-01T15:10:11",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-05T06:36:55",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1125968799",
+    "translated_kr": "BF 로션 150ml 토너 민감한 피부 고 보습 타조 항체",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "daum": "진화하는 피부 과학의 리포트",
+      "naver_web": "피지오겔"
+    },
+    "brand": "오믹셀 (OMICEL)",
+    "name": "진화하는 피부 과학의 리포트",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 26970,
+    "mall": "바이베스트몰",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/10539632561",
+    "image_url": "https://shop-phinf.pstatic.net/20240704_152/1720097880446aL1mN_JPEG/1229261443753362_878952563.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8808413/88084138044.jpg",
+        "mall": "바이베스트몰",
+        "link": "https://smartstore.naver.com/main/products/10539632561"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019540/90195406089.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650895183"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9019539/90195397286.jpg",
+        "mall": "GRAYMELIN",
+        "link": "https://smartstore.naver.com/main/products/12650886380"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1136019167",
+    "translated_kr": "허브 나이아신아마이드 27ml 마스크팩(10매) 비건 마이드 제주 페퍼민트",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "비건 허브 나이아신아마이드 5% 제주 페퍼민트 마스크",
+      "daum": "나이트케어 뷰티템으로 자는 동안 어려지는 안티에이징!",
+      "naver_web": "Korea Agency of Vegan Certification and Services Inc."
+    },
+    "brand": "초록초롱 (CHOROK CHORONG)",
+    "name": "비건 허브 나이아신아마이드 5% 제주 페퍼민트 마스크",
+    "volume": "",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 29000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
