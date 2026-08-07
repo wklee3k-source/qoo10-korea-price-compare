@@ -1595,6 +1595,11 @@ def build_pairs():
             #  네이버 검색 API 는 최저가만 주고 정가를 안 줘서 할인율을 알 수 없었다.
             "kr_list_price": x.get("list_price"),
             "kr_mall": x.get("mall"), "kr_seller_trust": x.get("seller_trust"),
+            # [v7.43.0] 로컬 검색으로 확보한 링크의 공식 스토어 여부.
+            #  brand.naver.com 이거나 판매처명==브랜드명이면 공식이다.
+            #  공식이 아니면 재고·가격이 들쭉날쭉하고 가품 위험도 있어
+            #  검수 때 판단 근거가 된다.
+            "official_store": x.get("official_store"),
             "kr_source": x.get("winner_source"), "vol_match": vol_match, "brand_status": brand_status, "qoo10_brand": orig_brand,
             "obsolete": x.get("obsolete"),
             "naver_rematched": x.get("naver_rematched"),
@@ -1818,6 +1823,14 @@ def build_html(pairs: list[dict]):
             f'<span class="badge {"match" if trust in ("공식몰", "브랜드직영추정", "신뢰채널", "스마트스토어") else "unknown"}">{trust or "판매처미확인"}</span>'
             if trust else ""
         )
+
+        # [v7.43.0] 공식 스토어면 배지를 하나 더 붙인다. seller_trust 는
+        #  검증 소스가 준 값이고, 이건 로컬 검색이 실제 페이지에서 확인한
+        #  것이라 근거가 다르다. 둘 다 보여준다.
+        if p.get("official_store"):
+            trust_badge += '<span class="badge match">공식스토어</span>'
+        elif p.get("official_store") is False:
+            trust_badge += '<span class="badge unknown">일반판매자</span>'
 
         kr_site_text = p["kr_source"]
         if p.get("kr_mall"):
