@@ -467,10 +467,26 @@ _PRODUCT_CATEGORY_GROUPS = [
 #  네이버 웹문서 검색으로 대신 찾을 때, 검색 결과 중 실제 판매 페이지만
 #  고르는 데 쓴다(블로그·뉴스·카페 글은 링크로 쓸 수 없다).
 #  실측 회수율 75%(잃은 링크 20건 중 15건 복구).
+# [v7.42.0] 사장님 방침: 오픈마켓·가격비교는 쓰지 않는다.
+#  병행수입·재판매가 섞여 재고와 가격이 들쭉날쭉하고 가품 위험도 있다.
+#  정품이 보장되는 채널(브랜드 직영·공식 유통·편집숍)만 남긴다.
+#
+#  네이버 자사 스토어(smartstore·brand)는 여기 적혀 있어도 웹문서
+#  검색으로는 **한 건도 안 나온다** — 검색어를 '스마트스토어'·'네이버
+#  쇼핑'·'공식몰'로 바꿔가며 시험해도 전부 0건이었고, 실제 확보 1,019건
+#  중 네이버는 0건이었다. 웹문서 인덱스가 자사 쇼핑을 빼기 때문이다.
+#  그래서 네이버 링크는 로컬 크롬 검색(수집기 v2.3.x 검색 모드)으로만
+#  얻는다. 목록에 남겨두는 건 혹시 나올 때를 대비한 것이다.
 SHOP_DOMAIN_RE = re.compile(
-    r"(oliveyoung|11st|coupang|danawa|enuri|zigzag|gmarket|auction|ssg|"
-    r"lotteon|musinsa|smartstore\.naver|brand\.naver|kurly|hmall|akmall|"
-    r"wconcept|29cm|aritaum|chicor|lalavla)", re.I)
+    r"(smartstore\.naver|brand\.naver|oliveyoung|musinsa|zigzag|"
+    r"aritaum|chicor|lalavla|kurly|29cm|wconcept|amoremall)", re.I)
+
+# 쓰지 않는 곳. 걸러낸 이유를 남겨 다음에 다시 넣지 않도록 한다.
+#  실측(웹문서 확보 1,019건): 아래가 892건으로 대부분이었다.
+#    쿠팡 227 · 다나와 294 · 에누리 183 · 11번가 129 · 롯데온 20 · SSG 10
+EXCLUDED_SHOP_RE = re.compile(
+    r"(11st|coupang|danawa|enuri|gmarket|auction|ssg|lotteon|hmall|akmall|"
+    r"interpark|tmon|wemakeprice)", re.I)
 
 
 def _find_shop_url(product_name: str) -> str | None:
@@ -482,6 +498,10 @@ def _find_shop_url(product_name: str) -> str | None:
 
     가격까지는 못 얻는다(사이트마다 구조가 다르고 올리브영은 403). 가격은
     이전 검증값이나 로컬 수집기(collected_pages.json)로 보완한다.
+
+    [v7.42.0] 정품 채널만 쓴다. 오픈마켓·가격비교는 제외한다 — 확보량은
+    1,019 -> 127건으로 줄지만, 병행수입이 섞인 링크를 검수에 올리는 것보다
+    낫다. 나머지는 로컬 크롬 검색으로 스마트스토어 공식몰을 찾는다.
     """
     if not product_name or len(product_name.strip()) < 3:
         return None
@@ -492,6 +512,9 @@ def _find_shop_url(product_name: str) -> str | None:
         return None      # 링크 보완은 부가 기능이라 실패해도 조용히 넘긴다
     for it in items or []:
         url = it.get("url") or ""
+        # 오픈마켓·가격비교가 먼저 걸리는 일이 많아 제외를 먼저 본다.
+        if EXCLUDED_SHOP_RE.search(url):
+            continue
         if SHOP_DOMAIN_RE.search(url):
             return url
     return None

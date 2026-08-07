@@ -12,7 +12,7 @@ GitHub Actions 는 네이버가 IP 대역째 막아(HTTP 429) 페이지를 못 �
 그래서 수집은 로컬 PC에서 실제 크롬으로 하고(상품정보수집기), 그 결과를
 여기서 검증본에 넣는다.
 
-[반영하는 값] 상품명 · 정가 · 판매가 · 제품사진
+[반영하는 값] 상품명 · 정가 · 판매가 · 제품사진 · 구매링크(검색 모드)
 그 밖의 값(평점·리뷰수·재고·카테고리)도 수집돼 있지만 검수 화면에 쓸 자리가
 없어 넣지 않는다. 필요해지면 그때 붙인다.
 
@@ -47,7 +47,7 @@ def apply(verified_path: str, collected_path: str, dry_run: bool = False) -> int
     print(f"[입력] 검증본 {len(rows):,}건 · 수집분 {len(collected):,}건"
           f"(이름 있는 것 {len(by_goods):,}건)")
 
-    n_name = n_price = n_image = 0
+    n_name = n_price = n_image = n_url = 0
     for r in rows:
         c = by_goods.get(str(r.get("goods_no")))
         if not c:
@@ -77,10 +77,27 @@ def apply(verified_path: str, collected_path: str, dry_run: bool = False) -> int
             r["image_url"] = img
             n_image += 1
 
+        # [v7.41.0] 검색 모드(수집기 v2.3.x) 결과에는 구매링크가 들어 있다.
+        #  네이버쇼핑 API 종료로 링크를 못 얻는 건이 생겼는데, 로컬 크롬으로
+        #  네이버를 검색해 스마트스토어·브랜드스토어 링크를 직접 찾아온다.
+        #  기존 수집 모드에는 이 값이 없으므로(원래 링크를 알고 시작한다)
+        #  있을 때만 넣는다.
+        url = (c.get("final_url") or c.get("url") or "").strip()
+        if url and not r.get("product_url"):
+            r["product_url"] = url
+            r["url_from_local_search"] = True
+            # 공식 스토어 여부는 검수 때 판단 근거가 된다. 공식이 아니면
+            #  재고·가격이 들쭉날쭉하고 가품 위험도 있다.
+            if c.get("official") is not None:
+                r["official_store"] = bool(c.get("official"))
+            if c.get("seller"):
+                r["mall"] = c.get("seller")
+            n_url += 1
+
         r["page_collected_at"] = c.get("collected_at")
         r["page_via"] = c.get("via")
 
-    print(f"[반영] 상품명 {n_name:,} · 가격 {n_price:,} · 사진 {n_image:,}")
+    print(f"[반영] 상품명 {n_name:,} · 가격 {n_price:,} · 사진 {n_image:,} · 구매링크 {n_url:,}")
     if dry_run:
         print("[모의실행] 파일을 쓰지 않았다")
         return 0
