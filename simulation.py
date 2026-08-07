@@ -2179,9 +2179,20 @@ def t90_purchase_url_fallback():
         dom = _h.SHOP_DOMAIN_RE
         picks_shop = all(dom.search(u) for u in [
             "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A1",
+            "https://www.musinsa.com/products/1", "https://zigzag.kr/catalog/products/1",
+            "https://smartstore.naver.com/x/products/1",
+            "https://brand.naver.com/x/products/1"])
+        # [v7.42.0] 오픈마켓·가격비교는 쓰지 않는다(병행수입·가품 위험).
+        #  실측: 웹문서 확보 1,019건 중 892건이 여기였다.
+        excl = _h.EXCLUDED_SHOP_RE
+        drops_open_market = all(excl.search(u) for u in [
             "https://www.11st.co.kr/products/123", "https://www.coupang.com/vp/products/1",
-            "https://prod.danawa.com/info/?pcode=1", "https://www.musinsa.com/products/1",
-            "https://smartstore.naver.com/x/products/1"])
+            "https://prod.danawa.com/info/?pcode=1", "https://www.enuri.com/detail.jsp?x=1",
+            "https://item.gmarket.co.kr/1", "https://www.lotteon.com/p/1"])
+        # 제외가 우선이어야 한다 — 오픈마켓이 먼저 걸리는 일이 많다
+        src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+        src_fn = src.split("def _find_shop_url(")[1].split("\ndef ")[0]
+        excl_first = src_fn.find("EXCLUDED_SHOP_RE") < src_fn.find("SHOP_DOMAIN_RE")
         skips_blog = not any(dom.search(u) for u in [
             "https://blog.naver.com/x/223", "https://cafe.naver.com/x",
             "https://news.example.com/article/1"])
@@ -2189,7 +2200,6 @@ def t90_purchase_url_fallback():
         # 이름이 없거나 너무 짧으면 검색하지 않는다(무의미한 호출 방지)
         no_name = _h._find_shop_url("") is None and _h._find_shop_url("가") is None
 
-        src = (SRC / "hwahae_verify_batch.py").read_text(encoding="utf-8")
         # 웹문서 우선, 그 다음 이전 링크 — 순서가 중요하다(이전 링크는
         #  시간이 지나면 단종·품절로 죽을 수 있다)
         i_web = src.find('entry["url_from_web"] = True')
@@ -2198,9 +2208,11 @@ def t90_purchase_url_fallback():
         # 성공 경로에도 붙어 있어야 한다(v7.37.0은 실패 경로에만 있었다)
         in_success = "[웹문서링크]" in src and "[이전링크보완]" in src
 
-        ok = all([picks_shop, skips_blog, no_name, order_ok, in_success])
+        ok = all([picks_shop, drops_open_market, excl_first, skips_blog,
+                  no_name, order_ok, in_success])
         check("90 구매링크 대체 확보", ok,
-              f"쇼핑몰선별{picks_shop} 블로그제외{skips_blog} 빈이름{no_name} "
+              f"정품채널{picks_shop} 오픈마켓제외{drops_open_market} "
+              f"제외우선{excl_first} 블로그제외{skips_blog} 빈이름{no_name} "
               f"순서{order_ok} 성공경로{in_success}")
     except Exception as e:  # noqa: BLE001
         check("90 구매링크 대체 확보", False, f"{type(e).__name__}: {e}")
