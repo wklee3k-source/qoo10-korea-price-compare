@@ -191,7 +191,7 @@
       "naver_web": "이즈앤트리 김 PDRN 하이드로 바운시 앰플"
     },
     "brand": "이즈앤트리 (IsNtree)",
-    "name": "김 PDRN 하이드로 바운시 앰플",
+    "name": "이즈앤트리 이즈앤트리 김 PDRN 하이드로 바운시 앰플 50ml",
     "volume": "50ml",
     "source": "hwahae",
     "naver_rematched": false,
@@ -202,11 +202,15 @@
     "mall": null,
     "seller_trust": null,
     "product_url": "https://zigzag.kr/catalog/products/161644075",
-    "image_url": null,
+    "image_url": "https://cf.product-image.s.zigzag.kr/original/d/2025/7/2/17924_202507021726360658_94638.jpeg?width=720&amp;height=720&amp;quality=80&amp;format=jpeg",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_name": "김 PDRN 하이드로 바운시 앰플",
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:49:36",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1158858031",
@@ -582,14 +586,14 @@
       "naver_web": "동국제약 센텔리안24 마데카 멜라 캡처 앰플 패드 2개"
     },
     "brand": "센텔리안24 (CENTELLIAN24)",
-    "name": "마데카 프라임",
+    "name": "[1+1] 센텔리안24 마데카 멜라 캡처 앰플 패드 60매",
     "volume": "122g",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 309000,
+    "price": 16500,
     "mall": "skin pick",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/10182226766",
@@ -603,7 +607,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "마데카 프라임",
+    "api_price": 309000,
+    "page_collected_at": "2026-08-11T22:49:38",
+    "page_via": "API"
   },
   {
     "goods_no": "1199087370",
@@ -615,18 +623,18 @@
       "naver_web": "퍼플부스터 양파샴푸"
     },
     "brand": "프루티드 (prooted)",
-    "name": "퍼플부스터 양파샴푸",
+    "name": "프루티드 양파 탈모 샴푸 케어 두피 탄력 퍼플부스터 에센스 안티에이징 500ml, 1개",
     "volume": "500mL",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 33800,
+    "price": 27700,
     "mall": "프루티드",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/13526811795",
-    "image_url": "https://shop-phinf.pstatic.net/20260731_37/1785482218993KO07a_PNG/10774452022994701_1900347144.png",
+    "image_url": "https://shop-phinf.pstatic.net/20260807_115/1786079331497BNGMe_PNG/13832841989743601_1172104839.png",
     "image_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9107132/91071322148.1.jpg",
@@ -636,7 +644,13 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "퍼플부스터 양파샴푸",
+    "api_price": 33800,
+    "list_price": 33800,
+    "api_image_url": "https://shop-phinf.pstatic.net/20260731_37/1785482218993KO07a_PNG/10774452022994701_1900347144.png",
+    "page_collected_at": "2026-08-11T22:49:41",
+    "page_via": "API"
   },
   {
     "goods_no": "1202040262",
@@ -717,14 +731,14 @@
       "naver_web": "셀퓨전씨"
     },
     "brand": "셀퓨전씨 (CellFusionC)",
-    "name": "워터핏 리커버 비비크림 [SPF40/PA+++] [라이트]",
+    "name": "셀퓨전씨 워터핏 리커버 비비크림 30ml SPF 40 PA+++ / 수분 밀착 스킨케어 비비",
     "volume": "30ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 27000,
+    "price": 18000,
     "mall": "셀퓨전씨",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/13471619925",
@@ -748,7 +762,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "워터핏 리커버 비비크림 [SPF40/PA+++] [라이트]",
+    "api_price": 27000,
+    "list_price": 27000,
+    "page_collected_at": "2026-08-11T22:49:44",
+    "page_via": "API"
   },
   {
     "goods_no": "1194311832",
@@ -2963,14 +2982,14 @@
       "naver_web": "비타C 엔자임 잡티 토닝 크림"
     },
     "brand": "이니스프리 (INNISFREE)",
-    "name": "비타민C 엔자임 크림",
+    "name": "이니스프리 비타C그린티 엔자임브라이트닝 크림 50mL",
     "volume": "50mL",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 32000,
+    "price": 17920,
     "mall": "영이 몰",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/11602304146",
@@ -2984,7 +3003,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "비타민C 엔자임 크림",
+    "api_price": 32000,
+    "page_collected_at": "2026-08-11T22:49:55",
+    "page_via": "API"
   },
   {
     "goods_no": "1190506283",
@@ -3056,14 +3079,14 @@
       "naver_web": "토리든 밸런스풀 시카 토너 패드 60매+"
     },
     "brand": "토리든 (Torriden)",
-    "name": "밸런스풀 시카 토너 패드",
+    "name": "토리든 밸런스풀 시카 진정 토너 패드 60매, 1개",
     "volume": "180ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 23000,
+    "price": 17500,
     "mall": "토리든",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/7421048788",
@@ -3087,7 +3110,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "밸런스풀 시카 토너 패드",
+    "api_price": 23000,
+    "list_price": 23000,
+    "page_collected_at": "2026-08-11T22:49:58",
+    "page_via": "API"
   },
   {
     "goods_no": "1193739495",
@@ -3569,14 +3597,14 @@
       "naver_web": "리쥬란클리닉 컨센트레이트 앰플"
     },
     "brand": "리쥬란코스메틱 (REJURANCOSMETICS)",
-    "name": "클리닉 컨센트레이트 앰플",
+    "name": "리쥬란 컨센트레이트 30ml 클리닉라인 재생 탄력 앰플 세럼",
     "volume": "30ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 100000,
+    "price": 90000,
     "mall": "쉬즈 몰",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/5984313817",
@@ -3595,7 +3623,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "클리닉 컨센트레이트 앰플",
+    "api_price": 100000,
+    "page_collected_at": "2026-08-11T22:50:00",
+    "page_via": "API"
   },
   {
     "goods_no": "1203711466",
@@ -4034,18 +4066,18 @@
       "naver_web": "아이오페 레티놀 슈퍼 바운스 세럼 주름개선 위해 사용해본"
     },
     "brand": "아이오페 (IOPE)",
-    "name": "아이오페 레티놀 슈퍼 바운스 세럼 주름개선 위해 사용해본",
+    "name": "아이오페 레티놀 슈퍼 바운스 세럼 (모공탄력 / 자극도 0.0) 50ml, 1개",
     "volume": "",
     "source": "naver_web",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 83000,
+    "price": 65570,
     "mall": "아이오페",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/8390872165",
-    "image_url": "https://shop-phinf.pstatic.net/20260728_272/1785215813214O84qo_JPEG/34368169345837663_1241501187.jpg",
+    "image_url": "https://shop-phinf.pstatic.net/20260803_17/17857372997702w3bu_JPEG/119870282891873905_831475555.jpg",
     "image_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8593537/85935372488.40.jpg",
@@ -4065,7 +4097,13 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "아이오페 레티놀 슈퍼 바운스 세럼 주름개선 위해 사용해본",
+    "api_price": 83000,
+    "list_price": 83000,
+    "api_image_url": "https://shop-phinf.pstatic.net/20260728_272/1785215813214O84qo_JPEG/34368169345837663_1241501187.jpg",
+    "page_collected_at": "2026-08-11T22:50:12",
+    "page_via": "API"
   },
   {
     "goods_no": "1212029919",
@@ -4197,7 +4235,7 @@
       "naver_web": "RX24 RX24 딥글로우 버블토너"
     },
     "brand": "RX24 (알엑스투웨니포)",
-    "name": "딥글로우 버블토너",
+    "name": "RX24 RX24 딥글로우 버블토너",
     "volume": "140ml",
     "source": "hwahae",
     "naver_rematched": false,
@@ -4208,11 +4246,15 @@
     "mall": null,
     "seller_trust": null,
     "product_url": "https://zigzag.kr/catalog/products/166193246",
-    "image_url": null,
+    "image_url": "https://cf.product-image.s.zigzag.kr/original/d/2025/10/15/57175_202510151603180497_77873.jpeg?width=720&amp;height=720&amp;quality=80&amp;format=jpeg",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_name": "딥글로우 버블토너",
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:50:16",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1203697652",
@@ -4424,22 +4466,27 @@
       "naver_web": "연작 스킨 퍼펙팅 프로텍티브 베이스프렙 -"
     },
     "brand": "연작 (YUNJAC)",
-    "name": "스킨 퍼펙팅 프로텍티브 베이스 프렙",
+    "name": "스킨 퍼펙팅 프로텍티브 베이스프렙 40ml",
     "volume": "40ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 45000,
+    "price": 40500,
     "mall": null,
     "seller_trust": null,
     "product_url": "https://www.musinsa.com/products/1802190",
-    "image_url": null,
+    "image_url": "https://image.msscdn.net/images/goods_img/20210218/1802190/1802190_17757870151569_500.jpg",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_name": "스킨 퍼펙팅 프로텍티브 베이스 프렙",
+    "api_price": 45000,
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:50:20",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1208354543",
@@ -4450,14 +4497,14 @@
       "naver_web": "뉴프라이스 피부엔 초저분자 피쉬콜라겐 90포 1박스"
     },
     "brand": "에스테픽 (AestheFic)",
-    "name": "콜라겐 7X 하이드로겔 마스크",
+    "name": "프롬리에 EGF 피지 마스크팩 하이퍼 액티브 모공 피지 마스크 (4+1매) x2개",
     "volume": "32g",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 6500,
+    "price": 46720,
     "mall": "그린다트",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13648904339",
@@ -4471,7 +4518,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "콜라겐 7X 하이드로겔 마스크",
+    "api_price": 6500,
+    "page_collected_at": "2026-08-11T22:50:23",
+    "page_via": "API"
   },
   {
     "goods_no": "1204411271",
@@ -4787,11 +4838,14 @@
     "mall": null,
     "seller_trust": null,
     "product_url": "https://www.aritaum.com/shop/pr/productView/P0000000000000065369.do",
-    "image_url": null,
+    "image_url": "https://cdn.aritaum.com/UPLOAD/UPLOAD_IMAGE/C020/202411/IMG1732aPT603775566.png",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:50:27",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1143161627",
@@ -5075,14 +5129,14 @@
       "naver_web": "큐리페어 더마 앰플"
     },
     "brand": "코페르 (KOPHER)",
-    "name": "큐리페어 더마앰플",
+    "name": "코페르 큐리페어 더마 앰플 피부진정 여드름 미백 에센스 100ml",
     "volume": "100ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 98000,
+    "price": 50200,
     "mall": "코페르",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/6114251155",
@@ -5101,7 +5155,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "큐리페어 더마앰플",
+    "api_price": 98000,
+    "list_price": 68000,
+    "page_collected_at": "2026-08-11T22:50:30",
+    "page_via": "API"
   },
   {
     "goods_no": "1129191908",
@@ -5315,14 +5374,14 @@
       "naver_web": "도브 바디 스크럽 석류 앤드 시어버터, , 1개"
     },
     "brand": "도브 (Dove)",
-    "name": "바디 스크럽 [석류 & 시어버터향]",
+    "name": "일본 도브 바디 크리미 스크럽 석류시어버터, 298g, 1개",
     "volume": "298g",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 17900,
+    "price": 12500,
     "mall": "오하요재팬",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/12736919483",
@@ -5356,7 +5415,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "바디 스크럽 [석류 & 시어버터향]",
+    "api_price": 17900,
+    "page_collected_at": "2026-08-11T22:50:33",
+    "page_via": "API"
   },
   {
     "goods_no": "1159078786",
@@ -5517,14 +5580,14 @@
       "daum": "스킨 케어"
     },
     "brand": "프리티스킨 (Prettyskin)",
-    "name": "하이드라 PDRN 맥스 크림",
+    "name": "[닥터슈 크리에이티브] PDRN 모이스처 맥스 크림 고기능 연어DNA성분 피부진정 장벽강화",
     "volume": "60ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 39000,
+    "price": 26000,
     "mall": "닥터슈 크리에이티브",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/10831785692",
@@ -5538,7 +5601,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "하이드라 PDRN 맥스 크림",
+    "api_price": 39000,
+    "page_collected_at": "2026-08-11T22:50:36",
+    "page_via": "API"
   },
   {
     "goods_no": "1203711872",
@@ -5833,14 +5900,14 @@
       "naver_web": "리페론 퍼펙신 GF 크림"
     },
     "brand": "리페론 (REPAIRON)",
-    "name": "퍼펙신 지에프 크림",
+    "name": "리페론 퍼펙신 지에프 리페어 크림 회복 장벽 진정 수분 광채 40ml, 3개",
     "volume": "40ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 98000,
+    "price": 196000,
     "mall": "스킨원",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13412697842",
@@ -5854,7 +5921,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "퍼펙신 지에프 크림",
+    "api_price": 98000,
+    "list_price": 294000,
+    "page_collected_at": "2026-08-11T22:50:38",
+    "page_via": "API"
   },
   {
     "goods_no": "1173641307",
@@ -6206,14 +6278,14 @@
       "naver_web": "마이 사이트"
     },
     "brand": "뉴스킨 (NUSKIN)",
-    "name": "얼티밋 마스크 [타임리버스]",
+    "name": "얼티밋 마스크 타임리버스 15ea /1박스",
     "volume": "25g",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 4000,
+    "price": 47600,
     "mall": "나나뷰",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13600530075",
@@ -6227,7 +6299,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "얼티밋 마스크 [타임리버스]",
+    "api_price": 4000,
+    "list_price": 56000,
+    "page_collected_at": "2026-08-11T22:50:41",
+    "page_via": "API"
   },
   {
     "goods_no": "1193977143",
@@ -6502,16 +6579,20 @@
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 26000,
+    "price": 23750,
     "mall": "무신사",
     "seller_trust": "신뢰채널",
     "product_url": "https://www.musinsa.com/products/1946512",
-    "image_url": null,
+    "image_url": "https://image.msscdn.net/images/goods_img/20210512/1946512/1946512_17774407687536_500.png",
     "image_candidates": [],
     "in_stock": true,
     "stock_evidence": [
       "품절 관련 요소 중 화면에 보이는 것 없음"
-    ]
+    ],
+    "api_price": 26000,
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:50:45",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1177160758",
@@ -6614,7 +6695,7 @@
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 52000,
+    "price": 39400,
     "mall": "메디큐브",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://themedicube.co.kr/product/detail.html?product_no=1517&cate_no=308&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
@@ -6633,7 +6714,10 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_price": 52000,
+    "page_collected_at": "2026-08-11T22:50:51",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1208716391",
@@ -7050,14 +7134,14 @@
       "naver_web": "에셀라이트 센텔라 포어리스 패치 모공관리 SLLIGHT"
     },
     "brand": "에슬 (essl)",
-    "name": "센텔라 포어리스 패치",
+    "name": "에슬 에셀라이트 센텔라 포어리스 나비존 모공 블러 패치 1개",
     "volume": "",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 32000,
+    "price": 52050,
     "mall": "가심비 가성비 대용량",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13440514836",
@@ -7071,7 +7155,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "센텔라 포어리스 패치",
+    "api_price": 32000,
+    "list_price": 69400,
+    "page_collected_at": "2026-08-11T22:50:55",
+    "page_via": "API"
   },
   {
     "goods_no": "1210180500",
@@ -7749,14 +7838,14 @@
       "naver_web": "마데카 더블 타이트닝 앰플 패드 60매"
     },
     "brand": "와이즐리 (wisely)",
-    "name": "제로 포어 핏 패드",
+    "name": "제로 포어 핏 모공피지 클렌징 토너패드 80매 여드름",
     "volume": "215ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 17890,
+    "price": 11160,
     "mall": "k-photocard",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13675277979",
@@ -7785,7 +7874,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "제로 포어 핏 패드",
+    "api_price": 17890,
+    "page_collected_at": "2026-08-11T22:50:58",
+    "page_via": "API"
   },
   {
     "goods_no": "1205216557",
@@ -8102,14 +8195,14 @@
       "naver_web": "뮤드 인스파이어 스키니 컬링 & 멀티 픽서 마스카라 -"
     },
     "brand": "뮤드 (mude)",
-    "name": "스키니 컬링 마스카라 [01 블랙]",
+    "name": "뮤드 인스파이어 스키니 컬링 마스카라 01 블랙 X2개",
     "volume": "3ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 14000,
+    "price": 49590,
     "mall": "하이하이글로벌",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/12678619569",
@@ -8123,7 +8216,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "스키니 컬링 마스카라 [01 블랙]",
+    "api_price": 14000,
+    "list_price": 55110,
+    "page_collected_at": "2026-08-11T22:51:00",
+    "page_via": "API"
   },
   {
     "goods_no": "1073542651",
@@ -8982,14 +9080,14 @@
       "naver_web": "히알루론산 속보습 토너패드 100매"
     },
     "brand": "메디힐 (MEDIHEAL)",
-    "name": "히알루론산 속보습 패드",
+    "name": "메디힐 워터마이드 속보습 토너 패드 100매 히알루론산 수분보습",
     "volume": "160ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 26000,
+    "price": 19800,
     "mall": "데일리케어샵",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/12547075955",
@@ -9003,7 +9101,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "히알루론산 속보습 패드",
+    "api_price": 26000,
+    "list_price": 22000,
+    "page_collected_at": "2026-08-11T22:51:03",
+    "page_via": "API"
   },
   {
     "goods_no": "1206154374",
@@ -9364,14 +9467,14 @@
       "naver_web": "돈 들이지 않고 최상의 피부를 만드는 비법 10가지"
     },
     "brand": "닥터페이스리더 (Dr.PaceLeader)",
-    "name": "CO2 카복시겔",
+    "name": "닥터페이스리더 CO2 카복겔 키트",
     "volume": "",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 100000,
+    "price": 180000,
     "mall": "닥터페이스리더",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/12491611718",
@@ -9400,7 +9503,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "CO2 카복시겔",
+    "api_price": 100000,
+    "page_collected_at": "2026-08-11T22:51:08",
+    "page_via": "API"
   },
   {
     "goods_no": "1201891483",
@@ -9827,7 +9934,7 @@
       "daum": "제 134 호 2016년 10월"
     },
     "brand": "이다야 (IIDAYA)",
-    "name": "1800억 퍼 엠엘 원액",
+    "name": "이다야 쿨닥 1800억 퍼 엠엘 원액",
     "volume": "30ml",
     "source": "hwahae",
     "naver_rematched": false,
@@ -9863,7 +9970,10 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "1800억 퍼 엠엘 원액",
+    "page_collected_at": "2026-08-11T22:51:10",
+    "page_via": "API"
   },
   {
     "goods_no": "993042473",
@@ -11160,14 +11270,14 @@
       "daum": "헤어 케어의 새로운 키워드, 슈퍼푸드"
     },
     "brand": "마잘 (MAZAL)",
-    "name": "PPT 트리트먼트 아미노 카카오 극손상 케어",
+    "name": "곱슬머리용 컨템포라 헤어 슈퍼푸드 벨벳 오일 75ml",
     "volume": "1000g",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 122000,
+    "price": 135500,
     "mall": "에어 월드 몰",
     "seller_trust": "스마트스토어",
     "product_url": "https://smartstore.naver.com/main/products/13541613297",
@@ -11201,7 +11311,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "PPT 트리트먼트 아미노 카카오 극손상 케어",
+    "api_price": 122000,
+    "page_collected_at": "2026-08-11T22:51:13",
+    "page_via": "API"
   },
   {
     "goods_no": "1172391077",
@@ -11830,7 +11944,7 @@
       "naver_web": "N배송 : 네이버+ 스토어 : 바이유어 세럼핏 UV프로텍터 01 클리어"
     },
     "brand": "바이유어 (BYUR)",
-    "name": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+    "name": "바이유어 [직진배송]💙83% 스킨케어성분 함유💙 세럼핏 UV프로텍터 01 클리어 50mlSPF50+/PA++++",
     "volume": "50ml",
     "source": "hwahae",
     "naver_rematched": false,
@@ -11841,11 +11955,15 @@
     "mall": null,
     "seller_trust": null,
     "product_url": "https://zigzag.kr/catalog/products/169822048",
-    "image_url": null,
+    "image_url": "https://cf.product-image.s.zigzag.kr/original/d/2026/4/22/17577_202604221402540685_78283.jpeg?width=720&amp;height=720&amp;quality=80&amp;format=jpeg",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_name": "세럼핏 UV프로텍터 01 클리어 [SPF50+/PA++++]",
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:51:16",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1149096041",
@@ -11858,14 +11976,14 @@
       "naver_web": "소프트리셋 그린 클렌징 밤"
     },
     "brand": "휘게 (HYGGEE)",
-    "name": "소프트리셋 그린 클렌징 밤",
+    "name": "휘게 소프트리셋 그린 클렌징밤 100ml (티트리/셔벗/딥클렌징)",
     "volume": "",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 32000,
+    "price": 27200,
     "mall": "HYGGEE",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/5652181286",
@@ -11884,7 +12002,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "소프트리셋 그린 클렌징 밤",
+    "api_price": 32000,
+    "list_price": 32000,
+    "page_collected_at": "2026-08-11T22:51:18",
+    "page_via": "API"
   },
   {
     "goods_no": "1209153891",
@@ -12091,14 +12214,14 @@
       "naver_web": "헤라 UV 프로텍터 톤업 선크림 1개 /SPF50+PA++++"
     },
     "brand": "헤라 (HERA)",
-    "name": "UV프로텍터 톤업 라벤더 [SPF50+/PA++++]",
+    "name": "[헤라] UV 프로텍터 톤업피치 라벤더 프레쉬 디펜스 CC 50ml SPF50+/PA++++",
     "volume": "50mL",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 47000,
+    "price": 37600,
     "mall": "헤라",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://shopping.naver.com/outlink/itemdetail/4837567182",
@@ -12122,7 +12245,11 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "UV프로텍터 톤업 라벤더 [SPF50+/PA++++]",
+    "api_price": 47000,
+    "page_collected_at": "2026-08-11T22:51:23",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1168692108",
@@ -12170,18 +12297,18 @@
       "naver_web": "포스트 알파 시카 쿨링 패드 70매"
     },
     "brand": "셀퓨전씨 (CellFusionC)",
-    "name": "포스트 알파 시카 쿨링 패드",
+    "name": "[리필기획] 셀퓨전씨 포스트알파 시카 쿨링 패드 70매 + 70매 리필 / 저자극 진정 쿨링 데일리 토너 패드",
     "volume": "",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": false,
-    "price": 23000,
+    "price": 26900,
     "mall": "셀퓨전씨",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/12491289284",
-    "image_url": "https://shop-phinf.pstatic.net/20260723_29/1784794505965oBDCi_JPEG/7789419110758488_288100209.jpeg",
+    "image_url": "https://shop-phinf.pstatic.net/20260804_233/1785826328285C54Ng_JPEG/24656570478440834_167682035.jpg",
     "image_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_9003580/90035800128.3.jpg",
@@ -12196,7 +12323,13 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "포스트 알파 시카 쿨링 패드",
+    "api_price": 23000,
+    "list_price": 46000,
+    "api_image_url": "https://shop-phinf.pstatic.net/20260723_29/1784794505965oBDCi_JPEG/7789419110758488_288100209.jpeg",
+    "page_collected_at": "2026-08-11T22:51:26",
+    "page_via": "API"
   },
   {
     "goods_no": "1213547055",
@@ -12208,7 +12341,7 @@
       "naver_web": "포렌코즈 트리플 쉴드 하이드로 락 선세럼 SPF50+ PA++++ 1개 최저가 검색, 역대 최저가 21,000원"
     },
     "brand": "포렌코즈 (FORENCOS)",
-    "name": "트리플 쉴드 하이드로 락 선세럼 [SPF50+/PA++++]",
+    "name": "포렌코즈 트리플 쉴드 하이드로 락 선세럼",
     "volume": "50ml",
     "source": "hwahae",
     "naver_rematched": false,
@@ -12219,11 +12352,15 @@
     "mall": null,
     "seller_trust": null,
     "product_url": "https://zigzag.kr/catalog/products/170042878",
-    "image_url": null,
+    "image_url": "https://cf.product-image.s.zigzag.kr/original/d/2026/5/20/12484_202605201446480076_27952.gif?width=720&amp;height=720&amp;quality=80&amp;format=jpeg",
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_web": true
+    "url_from_web": true,
+    "api_name": "트리플 쉴드 하이드로 락 선세럼 [SPF50+/PA++++]",
+    "api_image_url": null,
+    "page_collected_at": "2026-08-11T22:51:29",
+    "page_via": "ld+json"
   },
   {
     "goods_no": "1156238215",
@@ -12367,14 +12504,14 @@
       "naver_web": "이즈앤트리 어니언 뉴페어 클리어 패드 , 60매입, 1개"
     },
     "brand": "이즈앤트리 (IsNtree)",
-    "name": "어니언 뉴페어 클리어 패드",
+    "name": "[화해1등] 이즈앤트리 어니언 뉴페어 클리어 패드 60매",
     "volume": "250ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 28000,
+    "price": 21900,
     "mall": "이즈앤트리",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/6780630985",
@@ -12398,7 +12535,12 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "어니언 뉴페어 클리어 패드",
+    "api_price": 28000,
+    "list_price": 28000,
+    "page_collected_at": "2026-08-11T22:51:31",
+    "page_via": "API"
   },
   {
     "goods_no": "1135385776",
@@ -12437,18 +12579,18 @@
       "naver_web": "운동 부족"
     },
     "brand": "아토팜 (ATOPALM)",
-    "name": "MLE 로션",
+    "name": "아토팜 MLE 로션 300ml, 1개",
     "volume": "300ml",
     "source": "hwahae",
     "naver_rematched": false,
     "single_source_naver": false,
     "obsolete": false,
     "sale": true,
-    "price": 50000,
+    "price": 35000,
     "mall": "아토팜 본사 스토어",
     "seller_trust": "브랜드직영추정",
     "product_url": "https://smartstore.naver.com/main/products/5784982371",
-    "image_url": "https://shop-phinf.pstatic.net/20250312_225/17417366986752vmmE_JPEG/12298950070225431_874315854.jpg",
+    "image_url": "https://shop-phinf.pstatic.net/20260805_20/1785916718047HoHln_JPEG/120049666725634808_438498042.jpg",
     "image_candidates": [
       {
         "url": "https://shopping-phinf.pstatic.net/main_8332948/83329481785.33.jpg",
@@ -12458,7 +12600,13 @@
     ],
     "in_stock": null,
     "stock_evidence": [],
-    "url_from_previous": true
+    "url_from_previous": true,
+    "api_name": "MLE 로션",
+    "api_price": 50000,
+    "list_price": 50000,
+    "api_image_url": "https://shop-phinf.pstatic.net/20250312_225/17417366986752vmmE_JPEG/12298950070225431_874315854.jpg",
+    "page_collected_at": "2026-08-11T22:51:42",
+    "page_via": "API"
   },
   {
     "goods_no": "1188026399",
