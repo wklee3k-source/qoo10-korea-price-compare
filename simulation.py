@@ -2140,7 +2140,7 @@ def t89_exa_monthly_budget():
 
         # 워커가 10개라 샤드당 한도를 나누지 않으면 합계가 한도를 넘는다
         wf = (ROOT / ".github/workflows/qoo10-pipeline.yml").read_text(encoding="utf-8")
-        per_shard = 'EXA_MONTHLY_LIMIT: "140"' in wf
+        per_shard = 'EXA_MONTHLY_LIMIT: "700"' in wf
         # 사용량 파일은 샤드별로 분리해야 워커끼리 커밋 충돌이 없다
         sharded = "exa_usage_${{ matrix.shard }}.json" in wf and "exa_usage_${S}.json" in wf
 
