@@ -293,6 +293,22 @@ def _load_state(suffix: str | None = None) -> dict:
     if path.exists():
         state = json.loads(path.read_text(encoding="utf-8"))
         state.setdefault("failed_shops", {})  # 하위호환: 예전 상태파일엔 없음
+        # [v3.7.0] 실측 사고: 메인 통합본과 새로 만든 샤드 파일 전부에서
+        #  shop_urls 가 리스트가 아니라 빈 딕셔너리({})로 저장돼 있었다.
+        #  코드는 항상 리스트로 취급한다(.append(), [-5:] 슬라이스) — 이
+        #  전제가 깨지면 방문한 상점이 0곳일 땐 마지막 print의 슬라이스에서,
+        #  1곳이라도 있으면 그보다 먼저 .append()에서 죽는다
+        #  (TypeError: unhashable type: 'slice' / AttributeError 'dict'
+        #  object has no attribute 'append').
+        #  왜 딕셔너리로 저장됐는지는 이 상태파일들의 이력(더 예전 스키마)
+        #  까지 거슬러야 알 수 있어 원인 규명은 보류하고, 여기서 로드
+        #  시점에 항상 리스트로 맞춘다 — 매번 호출하는 곳마다 방어하는
+        #  것보다 한 곳에서 정규화하는 게 재발을 막는다.
+        su = state.get("shop_urls")
+        if isinstance(su, dict):
+            state["shop_urls"] = list(su.values()) if su else []
+        elif not isinstance(su, list):
+            state["shop_urls"] = []
         return state
     return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": [], "failed_shops": {}}
 
