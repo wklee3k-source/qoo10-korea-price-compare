@@ -29,7 +29,13 @@ def merge(output_dir: str):
 
     visited = set(merged["visited_shops"])
     products = {p["goods_no"]: p for p in merged["all_products"]}
-    urls = set(merged["shop_urls"])
+    # [v3.7.0] shop_urls 가 리스트가 아니라 빈 딕셔너리({})로 저장돼 있던
+    #  실측 사고(iterative_low_review_discovery.py 의 _load_state 참고).
+    #  set(dict) 는 에러 없이 딕셔너리의 **키만** 취한다 — 값이 있는
+    #  딕셔너리가 들어오면 조용히 잘못된 값을 만든다(크래시가 안 나서
+    #  더 위험하다). 여기서도 로드 시점에 리스트로 맞춘다.
+    _su = merged["shop_urls"]
+    urls = set(_su.values()) if isinstance(_su, dict) else set(_su)
     seen_kw = set(merged.get("seen_keywords") or [])
 
     for f in partial_files:

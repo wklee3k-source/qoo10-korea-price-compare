@@ -22,6 +22,8 @@ GitHub Actions 백그라운드 실행을 염두에 두고 매 건마다 즉시 �
     python hwahae_verify_batch.py <input.json> <output.json> [max_new]
 """
 
+import os
+import time
 import difflib
 import json
 import re
@@ -49,6 +51,55 @@ NEWS_DOMAIN_RE = re.compile(
 HEADLINE_SENTENCE_RE = re.compile(r"[다요]\s*,|[다요][!?]|하면|한다면")
 
 
+# [v3.1.1] 소스가 "일시적으로 실패"한 게 아니라 "아예 못 쓰는 상태"인 경우가
+# 있다. 실측 2026-07-28: Exa 크레딧이 소진돼 모든 호출이 HTTP 402(Payment
+# Required)로 떨어졌는데, 이게 기술적실패로 분류돼 상품마다 3회씩 재시도된
+# 뒤 '보류'로 쌓였다 — 검증이 통째로 멈춘 것과 같았다. 화해/네이버/무신사가
+# 멀쩡하고 채택 기준도 2곳 합의라 Exa 없이도 검증은 정상 진행 가능하므로,
+# 이런 오류는 그 소스만 꺼버리고 나머지로 계속 간다.
+PERMANENT_FAILURE_PATTERNS = (
+    "402",              # Payment Required — 크레딧 소진
+    "Payment Required",
+    "401",              # Unauthorized — 키 만료/오타
+    "Unauthorized",
+    "403",              # Forbidden — 권한 없음
+)
+DISABLED_SOURCES: set[str] = set()
+
+
+def _is_permanent_failure(message: str) -> bool:
+    return any(pat in message for pat in PERMANENT_FAILURE_PATTERNS)
+
+
+# [v4.9.0] 상품이 아니라 블로그·추천글이 후보로 잡히는 경우를 검증
+#  단계에서 걸러낸다. 검수페이지에서 빼는 것만으로는 부족했다 — 광고글이
+#  '승자'가 되면 진짜 상품을 찾을 기회 자체가 사라지고, 그 상품은 링크
+#  없음으로 버려진다. 실측: '2026 상반기 스킨케어 트렌드' 14건,
+#  '추천글루타치온필름팩 10종 인기 제품 지금 바로!' 12건이 구매링크로
+#  잡혀 있었다. 이런 페이지는 검색어와 느슨하게 맞아 여러 상품을 빨아들인다.
+AD_TITLE_RE = re.compile(
+    r"(추천\s*(글|템|제품|순위)|인기\s*(제품|템|순위)|트렌드|지금\s*바로|"
+    # [v5.7.0] 영문 BEST와 '비교 분석'도 추가. 실측: '각질 제거기 추천
+    # BEST 5, 비교 분석'이라는 블로그 글이 구매링크로 잡혀 있었다.
+    r"베스트\s*\d|BEST\s*\d|TOP\s*\d|\d+\s*종\s*(인기|추천)|후기\s*모음|"
+    r"비교\s*(정리|분석)|이것만|알아보기|총정리|모집)"
+)
+
+
+def looks_like_article(title: str) -> bool:
+    return bool(AD_TITLE_RE.search(title or ""))
+
+
+class SearchTechnicalFailure(Exception):
+    """[9번 수정과 동일 원칙] 검색 자체가 기술적으로 실패한 경우(타임아웃,
+    네트워크 오류, 서브프로세스 비정상종료, JSON 파싱실패 등)에만
+    발생시킨다. '정상적으로 조회했는데 결과가 없음'(진짜 무매칭)과는
+    반드시 구분해야 한다 — 예전엔 둘 다 그냥 None을 반환해서, 화해 서버가
+    30초 안에 안 열리거나 네트워크가 잠깐 끊겨도 '이 상품은 한국에
+    없다'고 영구 확정해버렸다. 실제로 찾을 수 있었던 상품이 일시적
+    오류 때문에 영영 실패로 묻히는 사고였다."""
+
+
 def _clean_query(text: str) -> str:
     t = VOLUME_IN_QUERY_RE.sub("", text)
     t = BRACKET_RE.sub("", t)
@@ -66,41 +117,149 @@ def _normalize_volume_ml(text: str) -> float | None:
     return num * 1000 if unit == "l" else num
 
 
+# [v7.39.0] Exa 무료 티어는 매월 $10 크레딧이고 검색 단가가 1,000회당
+#  $7 이라 **월 약 1,430회**가 한도다(크레딧은 이월 안 되고 월말 소멸).
+#  검증 대상이 4,455건이라 전체 재검증 한 번이면 한도를 훨씬 넘는다 —
+#  실제로 재검증 도중 크레딧이 소진돼 402 NO_MORE_CREDITS 가 났다.
+#  그래서 호출 수를 월 단위로 세서 상한에 닿으면 스스로 멈춘다.
+#  '영구장애'로 소스를 끄는 기존 장치는 실행 단위라 다음 실행에서 또
+#  호출해버린다. 카운터는 파일에 남겨야 회차를 넘어 유지된다.
+EXA_MONTHLY_LIMIT = int(os.environ.get("EXA_MONTHLY_LIMIT", "1400"))
+EXA_USAGE_PATH = Path(os.environ.get(
+    "EXA_USAGE_PATH", str(Path(__file__).resolve().parent.parent / "output" / "exa_usage.json")))
+
+
+def _exa_usage_load() -> dict:
+    month = time.strftime("%Y-%m")
+    try:
+        data = json.loads(EXA_USAGE_PATH.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        data = {}
+    if data.get("month") != month:      # 달이 바뀌면 크레딧이 새로 들어온다
+        data = {"month": month, "count": 0}
+    return data
+
+
+def _exa_budget_left() -> int:
+    return max(0, EXA_MONTHLY_LIMIT - _exa_usage_load().get("count", 0))
+
+
+def _exa_usage_bump() -> None:
+    data = _exa_usage_load()
+    data["count"] = data.get("count", 0) + 1
+    try:
+        EXA_USAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        EXA_USAGE_PATH.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        print(f"    [경고] Exa 사용량 기록 실패: {e}", file=sys.stderr)
+
+
 def _search_exa(keyword: str) -> dict | None:
-    """후보1: Exa 의미기반검색(원본 번역 그대로 검색)."""
+    """후보1: Exa 의미기반검색(원본 번역 그대로 검색).
+
+    [실패구분] import/네트워크/파싱 오류는 SearchTechnicalFailure로
+    올리고, '검색은 됐는데 결과가 0건'만 None(진짜 무결과)으로 본다.
+
+    [v7.39.0] 무료 티어 월 한도(약 1,430회) 안에서만 쓴다. 한도에 닿으면
+    호출하지 않고 None 을 돌려준다 — 기술적 실패가 아니라 '이번엔 안
+    쓴다'이므로 상품이 보류로 쌓이지 않는다."""
+    if _exa_budget_left() <= 0:
+        return None
     try:
         from exa_search import search as exa_search
-
-        items = exa_search(keyword, num_results=5)
-        if not items:
-            return None
-
-        def _is_bad(it: dict) -> bool:
-            url = it.get("url") or ""
-            title = it["title"]
-            return bool(
-                GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
-            )
-
-        candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
-        if not candidates:
-            candidates = [it for it in items if not _is_bad(it)]
-        if not candidates:
-            candidates = items
-        title = candidates[0]["title"]
-        cleaned = EXA_REVIEW_RE.sub("", title)
-        cleaned = EXA_TAIL_RE.sub("", cleaned)
-        cleaned = _clean_query(cleaned)
-        return {"source": "exa", "name": cleaned, "brand": None, "volume": None, "raw_title": title}
     except Exception as e:  # noqa: BLE001
-        print(f"    [Exa 실패] {type(e).__name__}: {e}", file=sys.stderr)
+        raise SearchTechnicalFailure(f"exa_search 임포트 실패: {e}") from e
+
+    _exa_usage_bump()
+    try:
+        items = exa_search(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"Exa 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None  # 진짜 무결과 — 기술적 실패 아님
+
+    def _is_bad(it: dict) -> bool:
+        url = it.get("url") or ""
+        title = it["title"]
+        return bool(
+            GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
+        )
+
+    return _pick_title_candidate(items, "exa")
+
+
+# [v3.3.0] 제목만 주는 검색소스(Exa/다음/네이버웹문서)가 셋으로 늘어서,
+# '쇼핑성 URL 우선 -> 잡음 제거 -> 제목 정리' 로직을 한 곳으로 모았다.
+# 소스마다 따로 구현하면 규칙이 갈라져서, 같은 상품인데 소스별로 다른
+# 이름이 나오고 투표가 엉킨다.
+def _pick_title_candidate(items: list[dict], source: str) -> dict | None:
+    def _is_bad(it: dict) -> bool:
+        url = it.get("url") or ""
+        title = it.get("title") or ""
+        return bool(
+            GENERIC_TITLE_RE.match(title) or NEWS_DOMAIN_RE.search(url) or HEADLINE_SENTENCE_RE.search(title)
+        )
+
+    items = [it for it in items if not looks_like_article(it.get("title") or "")]
+    candidates = [it for it in items if PRODUCT_URL_PATTERNS.search(it.get("url") or "") and not _is_bad(it)]
+    if not candidates:
+        candidates = [it for it in items if not _is_bad(it)]
+    if not candidates:
+        candidates = items
+    if not candidates:
         return None
+    title = candidates[0]["title"]
+    cleaned = EXA_REVIEW_RE.sub("", title)
+    cleaned = EXA_TAIL_RE.sub("", cleaned)
+    cleaned = _clean_query(cleaned)
+    if not cleaned:
+        return None
+    return {"source": source, "name": cleaned, "brand": None, "volume": None, "raw_title": title}
+
+
+def _search_daum(keyword: str) -> dict | None:
+    """후보5: 다음(Daum) 웹문서 검색. 무료 일 30,000건이라 사실상 무제한."""
+    try:
+        from daum_search import search as daum_search
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"daum_search 임포트 실패: {e}") from e
+
+    try:
+        items = daum_search(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"다음 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None
+    return _pick_title_candidate(items, "daum")
+
+
+def _search_naver_web(keyword: str) -> dict | None:
+    """후보6: 네이버 웹문서 검색(쇼핑 DB에 없는 상품을 잡기 위한 보완)."""
+    try:
+        from naver_web_search import search as naver_web
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"naver_web_search 임포트 실패: {e}") from e
+
+    try:
+        items = naver_web(keyword, num_results=5)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"네이버웹문서 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None
+    return _pick_title_candidate(items, "naver_web")
 
 
 def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | None:
     """후보2: 화해 검색(원본 번역 그대로, 격리된 서브프로세스). 나중에
     재확인 호출을 안 해도 되도록, 필요한 정보(단종여부/가격/사진/링크)를
-    이 1번의 호출에서 전부 뽑아둔다."""
+    이 1번의 호출에서 전부 뽑아둔다.
+
+    [실패구분] 서브프로세스 타임아웃/비정상종료/JSON파싱실패는
+    SearchTechnicalFailure로 올린다. 정상 실행됐는데 화해가 못 찾은
+    경우("corrected" 없음)만 None(진짜 무결과)으로 본다."""
     try:
         proc = subprocess.run(
             [sys.executable, str(SCRIPT_DIR / "hwahae_name_corrector.py"), keyword, known_volume, known_brand],
@@ -108,29 +267,40 @@ def _search_hwahae(keyword: str, known_volume: str, known_brand: str) -> dict | 
             text=True,
             timeout=30,
         )
+    except subprocess.TimeoutExpired as e:
+        raise SearchTechnicalFailure(f"화해 서브프로세스 타임아웃(30초)") from e
+
+    if proc.returncode != 0:
+        raise SearchTechnicalFailure(f"화해 서브프로세스 비정상종료(code={proc.returncode}): {proc.stderr[-300:]}")
+
+    try:
         r = json.loads(proc.stdout)
-        if not r.get("corrected"):
-            return None
-        return {
-            "source": "hwahae",
-            "name": r.get("corrected"),
-            "brand": r.get("brand"),
-            "volume": r.get("volume"),
-            "obsolete": r.get("obsolete"),
-            "sale": r.get("sale"),
-            "price": r.get("price"),
-            "image_url": r.get("image_url"),
-            "product_url": r.get("product_url"),
-        }
-    except Exception as e:  # noqa: BLE001
-        print(f"    [화해 실패] {type(e).__name__}: {e}", file=sys.stderr)
-        return None
+    except json.JSONDecodeError as e:
+        raise SearchTechnicalFailure(f"화해 결과 파싱 실패: {proc.stdout[-300:]}") from e
+
+    if not r.get("corrected"):
+        return None  # 정상 실행됐지만 화해가 못 찾음 — 진짜 무결과
+
+    return {
+        "source": "hwahae",
+        "name": r.get("corrected"),
+        "brand": r.get("brand"),
+        "volume": r.get("volume"),
+        "obsolete": r.get("obsolete"),
+        "sale": r.get("sale"),
+        "price": r.get("price"),
+        "image_url": r.get("image_url"),
+        "product_url": r.get("product_url"),
+    }
 
 
 def _search_musinsa(keyword: str, known_volume: str, known_brand: str) -> dict | None:
     """후보4: 무신사 검색(격리된 서브프로세스) — 화해와 같은 역할(브랜드/
     상품명 확인)을 하면서, 자체적으로 구매 가능한 쇼핑몰이라 실제 구매링크도
-    바로 제공한다(goods_no로 상품페이지 URL 구성)."""
+    바로 제공한다(goods_no로 상품페이지 URL 구성).
+
+    [실패구분] 화해와 동일 원칙 — 서브프로세스 기술적 실패는
+    SearchTechnicalFailure, 정상실행+무매칭만 None."""
     try:
         proc = subprocess.run(
             [sys.executable, str(SCRIPT_DIR / "musinsa_name_corrector.py"), keyword, known_volume, known_brand],
@@ -138,24 +308,32 @@ def _search_musinsa(keyword: str, known_volume: str, known_brand: str) -> dict |
             text=True,
             timeout=30,
         )
+    except subprocess.TimeoutExpired as e:
+        raise SearchTechnicalFailure("무신사 서브프로세스 타임아웃(30초)") from e
+
+    if proc.returncode != 0:
+        raise SearchTechnicalFailure(f"무신사 서브프로세스 비정상종료(code={proc.returncode}): {proc.stderr[-300:]}")
+
+    try:
         r = json.loads(proc.stdout)
-        if not r.get("corrected"):
-            return None
-        top = (r.get("all_candidates") or [{}])[0]
-        goods_no = top.get("goods_no")
-        return {
-            "source": "musinsa",
-            "name": r.get("corrected"),
-            "brand": r.get("brand"),
-            "volume": None,
-            "price": top.get("price"),
-            "product_url": f"https://www.musinsa.com/products/{goods_no}" if goods_no else None,
-            "image": None,
-            "mallName": "무신사",
-        }
-    except Exception as e:  # noqa: BLE001
-        print(f"    [무신사오류] {type(e).__name__}: {e}")
-        return None
+    except json.JSONDecodeError as e:
+        raise SearchTechnicalFailure(f"무신사 결과 파싱 실패: {proc.stdout[-300:]}") from e
+
+    if not r.get("corrected"):
+        return None  # 정상 실행됐지만 무신사가 못 찾음 — 진짜 무결과
+
+    top = (r.get("all_candidates") or [{}])[0]
+    goods_no = top.get("goods_no")
+    return {
+        "source": "musinsa",
+        "name": r.get("corrected"),
+        "brand": r.get("brand"),
+        "volume": None,
+        "price": top.get("price"),
+        "product_url": f"https://www.musinsa.com/products/{goods_no}" if goods_no else None,
+        "image": None,
+        "mallName": "무신사",
+    }
 
 
 def _extract_quantity(text: str) -> int:
@@ -186,38 +364,72 @@ def _extract_quantity(text: str) -> int:
 
 
 def _search_naver(keyword: str, known_brand: str) -> dict | None:
-    """후보3: 네이버쇼핑 검색(원본 번역 그대로). 나중에 별도 "구매정보"
-    재호출을 안 해도 되도록, 이 1번의 호출에서 가격/링크/사진후보까지
-    전부 뽑아둔다."""
+    """후보3: 네이버쇼핑 검색 — **2026-07-31 서비스 종료로 영구 비활성.**
+
+    네이버가 검색 API를 NAVER API HUB로 이관하면서 '쇼핑·책·전문자료'는
+    이관 대상에서 제외하고 2026년 7월 31일에 종료했다. 유예 기간이 없고
+    기존 발급 키로도 호출이 불가하며, 대체 API도 제공되지 않는다.
+    (공지: developers.naver.com/notice/article/32564)
+
+    그래서 지금은 모든 요청이 404다. 그냥 두면 두 가지가 문제가 된다.
+      1. 매 건마다 무의미한 호출 + 재시도로 시간을 버린다
+      2. 실패가 '기술적 실패'로 잡혀 재검증 시 기존 값을 빈 값으로
+         덮는다 — 실제로 이것 때문에 4,455건이 전부 null 이 됐다
+    호출부(재검색·수량재검색 등)는 그대로 두고 여기서 무결과로 끊는다.
+    None 은 '진짜 무결과'라 기술적 실패로 집계되지 않는다.
+
+    영향 측정(실측): 승자가 네이버쇼핑이던 615건(검수 대상 296건)과
+    합의 2곳 충족 342건(검수 대상 49건)을 잃는다. 화해(1,570건)가
+    최대 소스라 파이프라인은 계속 돈다.
+    """
+    return None
+
+
+def _search_naver_disabled_2026(keyword: str, known_brand: str) -> dict | None:
+    """네이버쇼핑 API 종료 전 구현. 대체 소스를 붙일 때 참고용으로 남긴다."""
     try:
         from naver_shop_search import search as naver_search
-
-        items = naver_search(keyword, display=5, known_brand=known_brand)
-        if not items:
-            return None
-        top = items[0]
-        seen = set()
-        image_candidates = []
-        for it in items:
-            img = it.get("image")
-            if img and img not in seen:
-                seen.add(img)
-                image_candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
-        return {
-            "source": "naver",
-            "name": top["title"],
-            "brand": top.get("brand"),
-            "volume": None,
-            "price": top.get("lprice"),
-            "mall": top.get("mallName"),
-            "seller_trust": top.get("seller_trust"),
-            "product_url": top.get("link"),
-            "image_url": top.get("image"),
-            "image_candidates": image_candidates,
-        }
     except Exception as e:  # noqa: BLE001
-        print(f"    [네이버 실패] {type(e).__name__}: {e}", file=sys.stderr)
+        raise SearchTechnicalFailure(f"naver_shop_search 임포트 실패: {e}") from e
+
+    try:
+        items = naver_search(keyword, display=5, known_brand=known_brand)
+    except Exception as e:  # noqa: BLE001
+        raise SearchTechnicalFailure(f"네이버 호출 실패: {type(e).__name__}: {e}") from e
+
+    if not items:
+        return None  # 진짜 무결과
+
+    # [v4.9.0] 광고/추천글은 후보에서 뺀다. 이게 1위로 잡히면 진짜 상품을
+    # 찾을 기회 자체가 사라진다. 전부 광고글이면 무결과로 본다 —
+    # 억지로 하나 고르느니 다른 소스에 맡기는 편이 낫다.
+    filtered = [it for it in items if not looks_like_article(it.get("title") or "")]
+    if len(filtered) != len(items):
+        print(f"    [광고글제외] 네이버 후보 {len(items) - len(filtered)}건 제거", file=sys.stderr)
+    if not filtered:
         return None
+    items = filtered
+
+    top = items[0]
+    seen = set()
+    image_candidates = []
+    for it in items:
+        img = it.get("image")
+        if img and img not in seen:
+            seen.add(img)
+            image_candidates.append({"url": img, "mall": it.get("mallName"), "link": it.get("link")})
+    return {
+        "source": "naver",
+        "name": top["title"],
+        "brand": top.get("brand"),
+        "volume": None,
+        "price": top.get("lprice"),
+        "mall": top.get("mallName"),
+        "seller_trust": top.get("seller_trust"),
+        "product_url": top.get("link"),
+        "image_url": top.get("image"),
+        "image_candidates": image_candidates,
+    }
 
 
 # 브랜드/카테고리성 흔한 화장품 용어 — 이런 단어들은 원본과 후보 둘 다에
@@ -249,6 +461,92 @@ _PRODUCT_CATEGORY_GROUPS = [
     {"샴푸"},
     {"트리트먼트", "헤어팩"},
 ]
+
+
+# [v7.40.0] 구매 가능한 쇼핑몰 도메인. 네이버쇼핑 API 종료 후 구매링크를
+#  네이버 웹문서 검색으로 대신 찾을 때, 검색 결과 중 실제 판매 페이지만
+#  고르는 데 쓴다(블로그·뉴스·카페 글은 링크로 쓸 수 없다).
+#  실측 회수율 75%(잃은 링크 20건 중 15건 복구).
+# [v7.42.0] 사장님 방침: 오픈마켓·가격비교는 쓰지 않는다.
+#  병행수입·재판매가 섞여 재고와 가격이 들쭉날쭉하고 가품 위험도 있다.
+#  정품이 보장되는 채널(브랜드 직영·공식 유통·편집숍)만 남긴다.
+#
+#  네이버 자사 스토어(smartstore·brand)는 여기 적혀 있어도 웹문서
+#  검색으로는 **한 건도 안 나온다** — 검색어를 '스마트스토어'·'네이버
+#  쇼핑'·'공식몰'로 바꿔가며 시험해도 전부 0건이었고, 실제 확보 1,019건
+#  중 네이버는 0건이었다. 웹문서 인덱스가 자사 쇼핑을 빼기 때문이다.
+#  그래서 네이버 링크는 로컬 크롬 검색(수집기 v2.3.x 검색 모드)으로만
+#  얻는다. 목록에 남겨두는 건 혹시 나올 때를 대비한 것이다.
+SHOP_DOMAIN_RE = re.compile(
+    r"(smartstore\.naver|brand\.naver|oliveyoung|musinsa|zigzag|"
+    r"aritaum|chicor|lalavla|kurly|29cm|wconcept|amoremall)", re.I)
+
+# 쓰지 않는 곳. 걸러낸 이유를 남겨 다음에 다시 넣지 않도록 한다.
+#  실측(웹문서 확보 1,019건): 아래가 892건으로 대부분이었다.
+#    쿠팡 227 · 다나와 294 · 에누리 183 · 11번가 129 · 롯데온 20 · SSG 10
+EXCLUDED_SHOP_RE = re.compile(
+    r"(11st|coupang|danawa|enuri|gmarket|auction|ssg|lotteon|hmall|akmall|"
+    r"interpark|tmon|wemakeprice)", re.I)
+
+
+def _find_shop_url(product_name: str) -> str | None:
+    """상품명으로 네이버 웹문서를 검색해 쇼핑몰 구매링크를 찾는다.
+
+    네이버쇼핑 API가 종료돼(2026-07-31) 구매링크를 얻을 길이 사실상
+    막혔다. 웹문서 검색은 이관 대상이라 계속 쓸 수 있고, 결과에 올리브영·
+    11번가·쿠팡·다나와 같은 판매 페이지 URL이 그대로 들어온다.
+
+    가격까지는 못 얻는다(사이트마다 구조가 다르고 올리브영은 403). 가격은
+    이전 검증값이나 로컬 수집기(collected_pages.json)로 보완한다.
+
+    [v7.42.0] 정품 채널만 쓴다. 오픈마켓·가격비교는 제외한다 — 확보량은
+    1,019 -> 127건으로 줄지만, 병행수입이 섞인 링크를 검수에 올리는 것보다
+    낫다. 나머지는 로컬 크롬 검색으로 스마트스토어 공식몰을 찾는다.
+    """
+    if not product_name or len(product_name.strip()) < 3:
+        return None
+    try:
+        from naver_web_search import search as naver_web
+        items = naver_web(product_name, num_results=5)
+    except Exception:  # noqa: BLE001
+        return None      # 링크 보완은 부가 기능이라 실패해도 조용히 넘긴다
+    for it in items or []:
+        url = it.get("url") or ""
+        # 오픈마켓·가격비교가 먼저 걸리는 일이 많아 제외를 먼저 본다.
+        if EXCLUDED_SHOP_RE.search(url):
+            continue
+        if SHOP_DOMAIN_RE.search(url):
+            return url
+    return None
+
+
+def _search_naver_rematch(keyword: str, known_brand: str) -> dict | None:
+    """[v4.0.0] 다른 소스가 알려준 '정확한 한국 상품명'으로 네이버를 다시 검색.
+
+    구매링크는 사실상 네이버쇼핑에서만 나온다(실측: 링크 확보 885건 중
+    867건 = 98%). 그래서 네이버가 못 찾으면 화해가 정확히 찾아낸 상품도
+    통째로 버려졌다 — 링크 실패 651건 중 367건(56%)이 이 유형이다.
+
+    원인은 검색어다. 큐텐 번역본은 실제 한국 상품명과 자주 어긋난다.
+        큐텐 번역: 케라시스 그린프로폴리스 스칼프 클렌징 헤어트리트먼트
+        실제 이름: 케라시스 그린 프로폴리스 스칼프 클렌징 샴푸
+    화해가 알려준 이름으로 다시 치면 바로 찾힌다.
+
+    표본 100건 실측 회수율 71%(신뢰필터에 걸린 19건 별도, 완전 실패 10건).
+
+    ⚠️ 이 결과는 '독립적으로 같은 답을 낸' 소스가 아니라 '남의 답으로
+    조회한 것'이다. 그래서 source를 naver_rematch로 따로 두고 결과에
+    naver_rematched 표시를 남긴다 — 합의의 성격이 다르다는 걸 검수 때
+    구분할 수 있어야 한다.
+    """
+    return _rename_source(_search_naver(keyword, known_brand), "naver_rematch")
+
+
+def _rename_source(cand: dict | None, source: str) -> dict | None:
+    if cand:
+        cand = dict(cand)
+        cand["source"] = source
+    return cand
 
 
 def _detect_categories(text: str) -> set[str]:
@@ -337,6 +635,52 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
 
 
 REJECT_SCORE_THRESHOLD = -2.0  # 이 밑으로 떨어지면 "틀린 매칭을 억지로 채택"보다 아예 실패 처리가 낫다
+# [품질 강화] 서로 독립된 소스 몇 곳 이상이 찾아내야 채택할지. 1이면
+# 예전처럼 한 곳만 찾아도 통과(오매칭 위험), 2면 두 곳 이상이 같은
+# 상품을 찾았을 때만 채택한다. 환경변수로 조절 가능.
+MIN_CONSENSUS_SOURCES = int(os.environ.get("MIN_CONSENSUS_SOURCES", "2"))
+
+# 상품DB 소스 — 브랜드/용량/가격/구매링크까지 주는 곳. 제목만 주는
+# 웹문서 소스(exa/daum/naver_web)와 구분한다.
+PRODUCT_SOURCES = {"hwahae", "musinsa", "naver", "naver_rematch"}
+
+
+REQUEST_DELAY = float(os.environ.get("VERIFY_REQUEST_DELAY", "1.0"))
+
+
+def _safe_search(fn, *args, failures: list, label: str, **kwargs):
+    """4개 검색함수를 감싸서, SearchTechnicalFailure가 나면 failures
+    리스트에 기록하고 None을 돌려준다 — 호출부의 'if not cand_X: ...'
+    로직은 그대로 두면서, 이게 '진짜 무결과'인지 '기술적 실패'인지를
+    별도로 추적할 수 있게 한다.
+
+    [지연 추가] 예전엔 상품 하나당 4곳(Exa/화해/무신사/네이버)을 지연
+    없이 연달아 때렸다. 워커 1개일 땐 티가 안 났지만, 병렬 워커를 여러
+    개 띄우면 그 패턴이 워커 수만큼 겹쳐서 대상 사이트에 부담이 된다.
+    특히 화해/무신사는 공식 API가 아니라 브라우저 스크래핑이라 더
+    조심해야 한다. 매 요청 뒤 REQUEST_DELAY초 쉰다(기본 1초, 환경변수로
+    조절 가능)."""
+    # [v3.1.1] 이미 꺼진 소스는 호출조차 하지 않는다(지연시간도 아낀다).
+    if label in DISABLED_SOURCES:
+        return None
+    try:
+        return fn(*args, **kwargs)
+    except SearchTechnicalFailure as e:
+        msg = str(e)
+        if _is_permanent_failure(msg):
+            # 결제/인증 문제는 몇 번을 재시도해도 그대로다. 이 소스만 끄고
+            # 나머지 소스로 계속 간다 — failures에 넣지 않으므로 상품이
+            # '보류'로 쌓이지 않는다.
+            DISABLED_SOURCES.add(label)
+            print(f"    [{label}-영구장애] {msg} — 이번 실행에서 {label}를 끄고 나머지 소스로 진행",
+                  file=sys.stderr)
+            return None
+        print(f"    [{label}-기술적실패-재시도대상] {msg}", file=sys.stderr)
+        failures.append(label)
+        return None
+    finally:
+        if REQUEST_DELAY > 0 and label not in DISABLED_SOURCES:
+            time.sleep(REQUEST_DELAY)
 
 
 def run_batch(input_path: str, output_path: str, max_new: int | None = None):
@@ -345,7 +689,46 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
     out_path = Path(output_path)
     results = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else []
     done = {r["goods_no"] for r in results}
-    print(f"[INFO] 전체 {len(items)}건 중 이미 처리된 {len(done)}건부터 이어서 진행")
+
+    # [안전장치] '이전에 찾아둔 결과'를 따로 들고 있는다. 재검증은 결과
+    #  파일을 비우고 시작하므로 results 만으로는 이전 값을 알 수 없다.
+    #  통합본(hwahae_verified_39.json)에서 읽어온다.
+    #  실제 사고: 소스가 전부 죽은 상태에서 전체 재검증을 돌렸더니
+    #  4,455건이 빈 값으로 덮여 검수 대상이 1,138 -> 3건이 됐다.
+    #
+    #  파일이 둘인 이유: 워크플로는 통합본(39)을 '이미 처리된 것'으로
+    #  승계하므로, 재검증 때 39를 남겨두면 전부 승계돼서 아무것도 다시
+    #  안 본다(실측: 1분 만에 0건 처리로 종료). 그래서 재검증 시엔 39를
+    #  비우고 내용을 prev 로 옮긴다 — 승계 대상에서는 빠지고 안전망
+    #  역할만 한다.
+    previous_by_goods: dict = {}
+    for _prev_name in ("hwahae_verified_prev.json", "hwahae_verified_39.json"):
+        _p = out_path.with_name(_prev_name)
+        if _p.exists() and _p != out_path:
+            try:
+                for _x in json.loads(_p.read_text(encoding="utf-8")):
+                    if _x.get("product_url"):
+                        previous_by_goods[_x["goods_no"]] = _x
+            except Exception as _e:  # noqa: BLE001
+                print(f"[경고] 이전 검증본 읽기 실패({_prev_name}): {_e}")
+    for _x in results:
+        if _x.get("product_url"):
+            previous_by_goods[_x["goods_no"]] = _x
+    _exa_left = _exa_budget_left()
+    print(f"[INFO] Exa 이번 달 남은 호출 {_exa_left}/{EXA_MONTHLY_LIMIT}회"
+          + ("" if _exa_left else " — 한도 소진, 이번 달은 Exa 없이 진행"))
+    print(f"[INFO] 이전 검증 결과 {len(previous_by_goods)}건 확보 "
+          f"(못 찾아도 이 값들은 덮지 않는다)")
+
+    # [재시도 추적] 기술적 실패로 확정을 보류한 상품의 시도횟수를 별도
+    # 파일에 저장한다(results는 '완료'만 담는 리스트라 재시도 대기건을
+    # 넣을 자리가 없다). MAX_VERIFY_RETRIES에 도달하면 그때 포기하고
+    # results에 실패로 기록한다(과거 실패 패턴과 동일한 상한 원칙).
+    retry_state_path = out_path.with_name(out_path.stem + ".retry_state.json")
+    retry_counts = json.loads(retry_state_path.read_text(encoding="utf-8")) if retry_state_path.exists() else {}
+    MAX_VERIFY_RETRIES = 3
+
+    print(f"[INFO] 전체 {len(items)}건 중 이미 처리된 {len(done)}건부터 이어서 진행 (재시도대기 {len(retry_counts)}건)")
 
     processed_this_call = 0
     for item in items:
@@ -361,12 +744,38 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         kw_cleaned = _clean_query(kw_raw)
 
         print(f"[상품] {item['goods_no']}: {kw_raw}")
+        tech_failures: list[str] = []  # 이번 상품 처리중 기술적으로 실패한 소스 이름들
 
-        # 2차: 4곳에 각각 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
-        cand_exa = _search_exa(kw_raw)
-        cand_hwahae = _search_hwahae(kw_cleaned, known_volume, known_brand)
-        cand_musinsa = _search_musinsa(kw_cleaned, known_volume, known_brand)
-        cand_naver = _search_naver(kw_cleaned, known_brand)
+        # 2차: 각 소스에 독립 검색(순차 호출이지만 서로 결과에 의존하지 않음 = 병렬 개념)
+        #
+        # [v3.2.0 — Exa를 '보조 호출'로 전환] Exa는 무료 월 크레딧($10 =
+        # 약 1,428건)이 정해져 있어서, 상품마다 무조건 부르면 한 달 물량을
+        # 며칠 만에 소진한다(실측 2026-07-28: 1,507건 검증하고 402로 정지).
+        # 무료 3곳(화해/무신사/네이버)을 먼저 돌리고, 이미 채택 조건을
+        # 만족했으면 Exa는 부르지 않는다.
+        cand_hwahae = _safe_search(_search_hwahae, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="화해")
+        cand_musinsa = _safe_search(_search_musinsa, kw_cleaned, known_volume, known_brand, failures=tech_failures, label="무신사")
+        cand_naver = _safe_search(_search_naver, kw_cleaned, known_brand, failures=tech_failures, label="네이버")
+
+        # [Exa를 부르는 조건]
+        #  ① 무료 3곳이 합의 정족수(MIN_CONSENSUS_SOURCES)를 못 채웠거나,
+        #  ② 화해를 못 찾았을 때. 화해가 없으면 브랜드정보가 통째로 빠지는데,
+        #     바로 아래 '[근본수정]' 블록이 Exa가 찾아준 정확한 이름으로 화해를
+        #     재검색해서 그걸 되살리는 유일한 경로다.
+        # 실측 1,507건 기준 21.6%에서 Exa 호출이 생략된다.
+        # [v3.3.0] 다음 웹문서(일 30,000건 무료) / 네이버 웹문서(일 25,000건,
+        # 쇼핑과 쿼터 공유)를 무료 소스로 추가한다. Exa와 달리 사실상 물량
+        # 제한이 없어서 매 상품 호출해도 된다.
+        cand_daum = _safe_search(_search_daum, kw_cleaned, failures=tech_failures, label="다음")
+        cand_naver_web = _safe_search(_search_naver_web, kw_cleaned, failures=tech_failures, label="네이버웹문서")
+
+        _free_sources = {c["source"] for c in
+                         (cand_hwahae, cand_musinsa, cand_naver, cand_daum, cand_naver_web) if c}
+        if len(_free_sources) >= MIN_CONSENSUS_SOURCES and cand_hwahae:
+            cand_exa = None
+            print(f"    [Exa생략] 무료 {len(_free_sources)}곳이 이미 합의 — Exa 크레딧 절약")
+        else:
+            cand_exa = _safe_search(_search_exa, kw_raw, failures=tech_failures, label="Exa")
 
         # [근본수정] Exa는 상품명은 정확히 찾아줘도 브랜드정보를 절대 안 준다
         # (구조적 한계). 화해 초벌검색(kw_cleaned)이 실패해서 cand_hwahae가
@@ -375,11 +784,18 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 실측: 같은 상품인데 검색어가 조금만 달라도 화해 1차검색이 실패하는
         # 경우가 있었고, 그때 브랜드정보가 통째로 빠지면서 정상 매칭도
         # "브랜드판단불가/불일치"로 잘못 보이는 문제가 있었다.
-        if not cand_hwahae and cand_exa and cand_exa.get("name"):
-            print(f"    [Exa이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> Exa확인명 '{cand_exa['name']}'로 재검색")
-            cand_hwahae_retry = _search_hwahae(cand_exa["name"], known_volume, known_brand)
-            if cand_hwahae_retry:
-                cand_hwahae = cand_hwahae_retry
+        # [v3.3.0] Exa뿐 아니라 다음/네이버웹문서가 찾아준 이름으로도 시도한다
+        # (Exa는 무료 크레딧 때문에 자주 생략되므로, 그때 이 경로가 통째로
+        # 죽지 않도록). 먼저 성공하는 이름 하나로 끝낸다.
+        if not cand_hwahae:
+            for helper in (cand_exa, cand_daum, cand_naver_web):
+                if not (helper and helper.get("name")):
+                    continue
+                print(f"    [{helper['source']}이름으로 화해 재검색] '{kw_cleaned}' 화해검색 실패 -> 확인명 '{helper['name']}'로 재검색")
+                cand_hwahae_retry = _safe_search(_search_hwahae, helper["name"], known_volume, known_brand, failures=tech_failures, label="화해재검색")
+                if cand_hwahae_retry:
+                    cand_hwahae = cand_hwahae_retry
+                    break
 
         # [개선] 초벌번역어(kw_cleaned)로 네이버검색이 실패했는데, 화해 또는
         # 무신사가 정확한 브랜드+상품명을 확인해줬다면, 그 정확한 이름으로
@@ -392,7 +808,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 if helper and helper.get("name"):
                     retry_query = f"{helper.get('brand') or ''} {helper['name']}".strip()
                     print(f"    [{helper['source']}이름 재검색] '{kw_cleaned}' 실패 -> 확인명 '{retry_query}'로 재검색")
-                    cand_naver_retry = _search_naver(retry_query, known_brand)
+                    cand_naver_retry = _safe_search(_search_naver, retry_query, known_brand, failures=tech_failures, label="네이버재검색")
                     if cand_naver_retry:
                         cand_naver = cand_naver_retry
                         break
@@ -408,25 +824,82 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             if qoo10_qty != naver_qty:
                 print(f"    [수량불일치] 큐텐={qoo10_qty}개 vs 네이버={naver_qty}개 -> 1개 기준으로 재검색")
                 requery = f"{known_brand or cand_hwahae and cand_hwahae.get('brand') or ''} {kw_cleaned} 1개".strip()
-                cand_naver_retry = _search_naver(requery, known_brand)
+                cand_naver_retry = _safe_search(_search_naver, requery, known_brand, failures=tech_failures, label="네이버수량재검색")
                 if cand_naver_retry and _extract_quantity(cand_naver_retry.get("name") or "") == qoo10_qty:
                     cand_naver = cand_naver_retry
                 else:
                     print(f"    [수량불일치] 재검색해도 안 맞음 -> 네이버 후보 폐기(잘못된 수량 매칭 방지)")
                     cand_naver = None
 
-        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver] if c]
+        # [v4.0.0] 네이버가 구매링크를 못 준 경우, 다른 소스가 알려준 정확한
+        # 이름으로 네이버를 한 번 더 친다. 반드시 합의 판정 '전에' 해야
+        # 한다 — '화해만 찾음(1곳)'으로 거부된 뒤에 하면 이미 늦다.
+        # 상품DB 쪽 이름을 먼저 쓴다(제목만 주는 소스보다 정확).
+        cand_naver_rematch = None
+        if not (cand_naver and cand_naver.get("product_url")):
+            for helper in (cand_hwahae, cand_musinsa, cand_daum, cand_naver_web, cand_exa):
+                hint = (helper or {}).get("name")
+                if not hint:
+                    continue
+                print(f"    [네이버 재검색] '{helper['source']}'가 확인한 이름 '{hint[:40]}'로 재조회")
+                cand_naver_rematch = _safe_search(_search_naver_rematch, hint, known_brand,
+                                                  failures=tech_failures, label="네이버재검색")
+                if cand_naver_rematch and cand_naver_rematch.get("product_url"):
+                    break
+                cand_naver_rematch = None
+
+        candidates = [c for c in [cand_exa, cand_hwahae, cand_musinsa, cand_naver,
+                                  cand_daum, cand_naver_web, cand_naver_rematch] if c]
 
         if not candidates:
-            print("    [전체실패] 4곳 다 못 찾음")
+            if tech_failures:
+                # [9번 수정과 동일 원칙] 4곳 다 못 찾았어도, 그중 일부가
+                # 기술적으로 실패한 거라면 아직 '진짜 무결과'라고 확정할
+                # 수 없다. results/done에 안 넣고 보류해서 다음 실행에
+                # 다시 시도한다. MAX_VERIFY_RETRIES에 도달하면 그때 포기.
+                n = retry_counts.get(item["goods_no"], 0) + 1
+                if n < MAX_VERIFY_RETRIES:
+                    retry_counts[item["goods_no"]] = n
+                    retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
+                    print(f"    [보류-재시도대상] 기술적실패({','.join(tech_failures)})로 인해 확정 보류 ({n}/{MAX_VERIFY_RETRIES}회)")
+                    # [설계허점 수정 - 재확인중 발견] 이 continue가 processed_
+                    # this_call을 안 늘리면, CHUNK(max_new) 상한이 무력화된다
+                    # — 기술적실패가 대량으로 겹치는 상황(예: Exa/네이버가
+                    # 동시에 다운)에서는 이 for문이 max_new를 넘어 items
+                    # 전체를 한 호출 안에서 다 훑어버릴 수 있다(각 상품마다
+                    # 실제 API 호출 4번씩 하면서). '완료'는 아니어도 '이번
+                    # 호출에서 실제로 API를 썼다'는 사실은 똑같으므로,
+                    # processed_this_call을 여기서도 늘려서 CHUNK 상한이
+                    # 실제 API 소비량을 제대로 제한하게 한다.
+                    processed_this_call += 1
+                    continue
+                print(f"    [포기] {MAX_VERIFY_RETRIES}회 연속 기술적실패 — 실패로 확정 처리")
+                retry_counts.pop(item["goods_no"], None)
+            else:
+                print("    [전체실패] 4곳 다 정상조회했지만 못 찾음(진짜 무결과)")
+                retry_counts.pop(item["goods_no"], None)
+
             entry = {
                 "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
                 "brand": None, "name": None, "volume": "", "source": None, "obsolete": None,
                 "sale": None, "price": None, "mall": None, "seller_trust": None,
                 "product_url": None, "image_url": None, "image_candidates": [],
             }
+            # [안전장치] 이미 채워져 있던 결과를 빈 값으로 덮지 않는다.
+            #  실제 사고: 소스가 전부 죽은 상태(Exa 크레딧 소진, 네이버쇼핑
+            #  종료, playwright 오류)에서 전체 재검증을 돌렸더니 4,455건이
+            #  모두 이 빈 entry 로 덮여 검수 대상이 1,138 -> 3건이 됐다.
+            #  '못 찾았다'는 결과는 '전에 찾았던 걸 지운다'는 뜻이 아니다.
+            #  기존에 구매링크가 있었다면 그걸 남기고, 확인 시각만 갱신한다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이번엔 못 찾았지만 이전 검증 결과가 "
+                      "있어 덮어쓰지 않는다")
+                entry = dict(prev)
+                entry["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
             processed_this_call += 1
             continue
 
@@ -440,15 +913,95 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         best_score, winner = scored[0]
         print(f"    [투표결과] " + " / ".join(f"{c['source']}={s:.1f}" for s, c in scored) + f" -> 승자: {winner['source']}")
 
+        # [품질 강화 - 2곳 이상 합의 요건] 예전엔 4곳 중 한 곳만 찾아도
+        # 통과시켰다. 그러면 그 한 곳이 엉뚱한 상품을 물어와도 검증할
+        # 방법이 없다(실측: 화해가 'ph6.9 위치하젤 클렌저'를 찾았는데
+        # 네이버는 전혀 다른 '뉴트로지나 리무버'를 가져온 사례).
+        # 서로 독립된 소스 2곳 이상이 같은 상품을 찾아냈을 때만 채택하면
+        # 오매칭이 크게 준다 — 물량은 줄지만 '양보다 질' 방침에 맞다.
+        # (실측: 실제 검증분 442건 중 2곳 이상 합의는 310건 = 70.1%)
+        n_sources = len({c["source"] for c in candidates})
+
+        # [v3.3.0 — 소스 추가에 따른 기준 보정] 소스가 4곳에서 6곳으로
+        # 늘면서, 제목만 주는 웹문서 소스(exa/daum/naver_web) 둘이 서로
+        # 다른 엉뚱한 페이지를 물어와도 '2곳 합의'가 기계적으로 성립하는
+        # 구멍이 생겼다. 예전엔 제목전용 소스가 Exa 하나뿐이라 2곳을
+        # 채우려면 반드시 상품DB(화해/무신사/네이버쇼핑) 하나가 끼어야
+        # 했다 — 그 불변조건을 명시적으로 지킨다. 정족수 자체는 2 그대로다.
+        _found_sources = {c["source"] for c in candidates}
+        if _found_sources and not (_found_sources & PRODUCT_SOURCES):
+            print(f"    [거부-상품DB없음] 웹문서 소스만 찾음({sorted(_found_sources)}) — "
+                  f"브랜드/가격/구매링크를 확인할 수 없어 채택하지 않음")
+            n_sources = 0
+
+        # [v4.1.0] 네이버가 직접 찾았고 구매링크까지 확보했으면 단독으로도
+        # 통과시킨다.
+        #
+        # 실측: 링크 실패 651건 중 205건(31%)이 '네이버는 찾았고 링크도
+        # 있는데 다른 소스가 확인해주지 않아' 버려진 건이다. 링크를 손에
+        # 쥐고도 못 쓰는 상태였다.
+        #
+        # ⚠️ 대가는 분명하다. 2곳 합의는 오매칭을 거르려고 넣은 기준이고
+        # (실측 사례: 화해 'ph6.9 위치하젤 클렌저' vs 네이버 '뉴트로지나
+        # 리무버'), 단독 통과는 그 안전망을 끈다는 뜻이다. 그래서 버리는
+        # 대신 '표시하고 사람이 본다'로 간다 — 결과에 single_source_naver를
+        # 남기고, 검수페이지에서 경고와 함께 뒤쪽에 배치한다.
+        single_source_naver = False
+        if n_sources < MIN_CONSENSUS_SOURCES and n_sources > 0:
+            _nv = cand_naver if (cand_naver and cand_naver.get("product_url")) else None
+            if _nv:
+                single_source_naver = True
+                print("    [단독통과] 네이버가 직접 찾고 구매링크까지 확보 — "
+                      "합의 없이 통과(검수에서 사진 대조 필요)")
+                n_sources = MIN_CONSENSUS_SOURCES
+
+        if n_sources < MIN_CONSENSUS_SOURCES:
+            print(f"    [거부-합의부족] {n_sources}곳만 찾음(최소 {MIN_CONSENSUS_SOURCES}곳 필요) — 오매칭 방지를 위해 채택하지 않음")
+            entry = {
+                "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
+                "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "reject_reason": f"합의부족({n_sources}곳)",
+                "brand": None, "name": None, "volume": "", "source": None,
+                "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
+                "product_url": None, "image_url": None, "image_candidates": [],
+            }
+            # [안전장치] 이전에 찾아둔 결과는 덮지 않는다(위 '무결과' 경로와
+            #  같은 이유). 이번에 합의가 안 됐다고 해서 전에 확인해둔
+            #  구매링크를 지울 이유는 없다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이전 검증 결과가 있어 덮어쓰지 않는다")
+                _keep = dict(prev)
+                _keep["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+                _keep["reverify_note"] = entry.get("reject_reason") or "재검증 미채택"
+                entry = _keep
+            results.append(entry)
+            out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+            if retry_counts.pop(item["goods_no"], None) is not None:
+                retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
+            processed_this_call += 1
+            continue
+
         if best_score < REJECT_SCORE_THRESHOLD:
             print(f"    [거부] 최고점수({best_score:.1f})가 임계값({REJECT_SCORE_THRESHOLD}) 미만 — 틀린 매칭을 억지로 채택하지 않고 실패 처리")
             entry = {
                 "goods_no": item["goods_no"], "translated_kr": kw_raw, "winner_source": None,
                 "candidates_summary": {c["source"]: c.get("name") for c in candidates},
+                "reject_reason": f"점수미달({best_score:.1f})",
                 "brand": None, "name": None, "volume": "", "source": None,
                 "obsolete": None, "sale": None, "price": None, "mall": None, "seller_trust": None,
                 "product_url": None, "image_url": None, "image_candidates": [],
             }
+            # [안전장치] 이전에 찾아둔 결과는 덮지 않는다(위 '무결과' 경로와
+            #  같은 이유). 이번에 합의가 안 됐다고 해서 전에 확인해둔
+            #  구매링크를 지울 이유는 없다.
+            prev = previous_by_goods.get(item["goods_no"])
+            if prev and prev.get("product_url"):
+                print("    [기존값유지] 이전 검증 결과가 있어 덮어쓰지 않는다")
+                _keep = dict(prev)
+                _keep["reverify_missed_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+                _keep["reverify_note"] = entry.get("reject_reason") or "재검증 미채택"
+                entry = _keep
             results.append(entry)
             out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
             processed_this_call += 1
@@ -461,7 +1014,9 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 호출하면서 필요한 정보를 전부 뽑아뒀으므로, 그 결과를 그대로 쓴다.
         # API 호출 수: Exa(1) + 화해(1) + 네이버(1) = 3회로 절감.)
         hwahae_data = cand_hwahae or {}
-        naver_data = cand_naver or {}
+        # 원래 네이버 결과에 링크가 있으면 그걸 쓰고, 없을 때만 재검색분을 쓴다.
+        naver_data = cand_naver if (cand_naver and cand_naver.get("product_url")) else (
+            cand_naver_rematch or cand_naver or {})
 
         musinsa_data = cand_musinsa or {}
 
@@ -476,7 +1031,7 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 이 문제로 브랜드정보 없이 나가고 있었다).
         if not entry_brand and winner_name and winner["source"] != "hwahae":
             print(f"    [승자이름으로 화해 최종재검색] 브랜드정보 없음 -> '{winner_name}'로 화해 재검색")
-            hwahae_final_retry = _search_hwahae(winner_name, known_volume, known_brand)
+            hwahae_final_retry = _safe_search(_search_hwahae, winner_name, known_volume, known_brand, failures=tech_failures, label="화해최종재검색")
             if hwahae_final_retry and hwahae_final_retry.get("brand"):
                 entry_brand = hwahae_final_retry["brand"]
                 hwahae_data = hwahae_final_retry
@@ -490,6 +1045,12 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             "name": winner_name or hwahae_data.get("name"),
             "volume": winner.get("volume") or (hwahae_data.get("volume") if winner["source"] == "hwahae" else "") or "",
             "source": "hwahae+naver" if (cand_hwahae and cand_naver) else (winner["source"]),
+            # [v4.0.0] 이 건의 링크가 '독립 검색'이 아니라 '남의 답으로 재조회'해서
+            # 나온 것인지 표시한다. 합의의 성격이 다르므로 검수 때 구분해야 한다.
+            "naver_rematched": bool(cand_naver_rematch and naver_data is cand_naver_rematch),
+            # [v4.1.0] 합의 없이 네이버 단독으로 통과한 건. 오매칭을 거를
+            # 자동 수단이 없으므로 검수에서 반드시 사진을 대조해야 한다.
+            "single_source_naver": single_source_naver,
             "obsolete": hwahae_data.get("obsolete"),
             "sale": hwahae_data.get("sale"),
             "price": naver_data.get("price") or hwahae_data.get("price") or musinsa_data.get("price"),
@@ -509,7 +1070,23 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
         # 사이트가 막혀있거나(차단/JS필요) 응답이 느려도 전체 배치가
         # 멈추지 않고, 실패하면 조용히 기존 방식(네이버 title)으로
         # 돌아간다("가능하면 정확하게, 안 되면 원래대로").
-        if entry.get("product_url"):
+        # [v7.9.0 중단] 판매페이지에서 상품명을 직접 가져오는 기능을 껐다.
+        #  확보율이 10.1%(2,572건 중 260건)였고 그중 93건은 오류 페이지
+        #  제목이었다. 실제 유효분은 6% 남짓이다.
+        #
+        #  못 가져오는 대부분이 스마트스토어(링크의 85%)인데, 네 가지를
+        #  전부 시험해도 뚫리지 않았다.
+        #      GitHub Actions           HTTP 429  (데이터센터 IP 대역 차단)
+        #      국내 가정용 PC + 스크립트  HTTP 490  (자동화 접근 거부)
+        #      국내 가정용 PC + 브라우저  로그인 페이지로 이동
+        #      로그인한 브라우저          HTTP 429
+        #  로그인 여부와 무관하게 막히므로 IP가 아니라 접근 패턴을 보는
+        #  것으로 판단했다. 더 밀어붙이면 사람 흉내 수준이 되는데
+        #  2,400건에 현실적이지 않고 이용약관에도 걸린다.
+        #
+        #  매 건 실패할 요청을 보내던 비용(검증 4,400건 × 1회)만 남으므로
+        #  중단한다. 한국 상품명은 네이버 검색 API의 title을 쓴다.
+        if False and entry.get("product_url"):
             try:
                 page_title_proc = subprocess.run(
                     [sys.executable, "fetch_page_title.py", entry["product_url"]],
@@ -542,8 +1119,44 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
             entry["in_stock"] = None
             entry["stock_evidence"] = []
 
+        # [v7.40.0] 검증엔 성공했는데 구매링크만 못 얻은 경우, 이전에
+        #  확보해둔 링크·가격을 살려 붙인다.
+        #  구매링크는 사실상 네이버쇼핑에서만 나왔는데(위 주석: 링크 확보
+        #  885건 중 867건=98%) 그 API가 2026-07-31 종료됐다. 그래서 화해가
+        #  승자인 건들이 상품명은 맞게 찾고도 링크를 못 얻는다 — 실측:
+        #  화해 승자 1,711건 중 1,469건이 링크 없음(이전엔 전부 있었다).
+        #  검수 화면은 구매링크가 있어야 목록에 오르므로 이대로면 1,638건이
+        #  통째로 사라진다.
+        #  기존 안전장치(v7.37.0)는 '검증 실패' 경로에만 있어서 이 경우를
+        #  못 잡았다. 성공했지만 링크만 빈 경우도 같은 이유로 보완한다.
+        #  이름·브랜드는 이번에 찾은 새 값을 쓰고 링크·가격·판매처만
+        #  이전 값에서 가져온다(같은 상품이므로 링크는 그대로 유효하다).
+        # [v7.40.0] 먼저 웹문서 검색으로 구매링크를 찾아본다. 승자가
+        #  확인해준 정확한 상품명으로 치는 것이라 적중률이 높다(실측 75%).
+        #  이전 값 보완보다 이걸 먼저 하는 이유: 이전 링크는 시간이 지나면
+        #  단종·품절로 죽을 수 있어 새로 찾은 게 더 정확하다.
+        if not entry.get("product_url"):
+            _shop_url = _find_shop_url(entry.get("name") or "")
+            if _shop_url:
+                print(f"    [웹문서링크] 구매링크 확보 — {_shop_url[:60]}")
+                entry["product_url"] = _shop_url
+                entry["url_from_web"] = True
+
+        if not entry.get("product_url"):
+            _prev = previous_by_goods.get(item["goods_no"])
+            if _prev and _prev.get("product_url"):
+                print("    [이전링크보완] 이번엔 구매링크를 못 얻어 "
+                      "이전 검증에서 확보한 링크를 쓴다")
+                for _f in ("product_url", "price", "mall", "seller_trust",
+                           "image_url", "image_candidates"):
+                    if not entry.get(_f) and _prev.get(_f):
+                        entry[_f] = _prev[_f]
+                entry["url_from_previous"] = True
+
         results.append(entry)
         out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+        if retry_counts.pop(item["goods_no"], None) is not None:
+            retry_state_path.write_text(json.dumps(retry_counts, ensure_ascii=False, indent=2), encoding="utf-8")
         processed_this_call += 1
 
         status = entry["name"] or "매칭실패"

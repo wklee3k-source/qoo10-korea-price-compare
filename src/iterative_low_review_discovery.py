@@ -44,9 +44,13 @@ COSMETIC_ALLOWED_CATEGORIES = {
     "120000018",  # 바디・핸드・풋케어
     "120000019",  # 제모
     "120000020",  # 헤어
-    "120000021",  # 네일
-    "120000022",  # 향수
     "120000023",  # 맨즈뷰티
+    # [v7.1.0 제외] 네일(120000021)·향수(120000022)는 색조와 같은 이유로 뺀다.
+    #  색상·호수·향으로 갈리는 상품군이라 이름만으로는 같은 제품인지 알 수
+    #  없다. 실측 오매칭: '앰버바닐라 세럼 바디크림' -> '로즈 바디크림',
+    #  '파워네일 마그넷' -> '파워 마그넷 세팅 스프레이',
+    #  '서울 시크릿 블로썸 30ml' -> '소울 시크릿 블라썸'.
+    #  이런 건 사진으로도 구분이 어렵고, 색상 하나 틀리면 반품 사유가 된다.
 }
 # [10으로 완화] 이 값은 두 군데에 쓰인다: (1) 검색결과에서 탐색대상 샵을
 # 고를 때 (2) 크롤한 상품을 채택할 때. 상품 쪽 효과는 작지만(실측 +107건),
@@ -54,7 +58,7 @@ COSMETIC_ALLOWED_CATEGORIES = {
 # 키워드 큐 고갈의 직접 원인이었다.
 REVIEW_THRESHOLD = 10  # [v1.9.1부터 미사용] 상점선별 필터 해지됨. 과거 기록용으로만 남김
 MIN_PRICE_JPY = 1500  # [v1.9.0부터 미사용] 상품저장 가격필터 해지됨. 과거 기록용으로만 남김
-PRODUCT_SAVE_REVIEW_THRESHOLD = 20  # 20 미만(0~19)만 최종 상품목록에 저장. 상점선별 단계와는 별개(그쪽은 리뷰수 무관하게 전부 방문)
+PRODUCT_SAVE_REVIEW_THRESHOLD = 10  # 20 -> 10 하향(품질 우선). 실측: 통합본 4,586건 중 리뷰<10이 4,355건(95%)이라 물량 손실은 5%뿐
 
 STOPWORDS = ["選べる", "NEW", "セット", "公式", "限定", "特価", "お得", r"全\d+種", r"\bor\b", "×"]
 
@@ -289,6 +293,22 @@ def _load_state(suffix: str | None = None) -> dict:
     if path.exists():
         state = json.loads(path.read_text(encoding="utf-8"))
         state.setdefault("failed_shops", {})  # 하위호환: 예전 상태파일엔 없음
+        # [v3.7.0] 실측 사고: 메인 통합본과 새로 만든 샤드 파일 전부에서
+        #  shop_urls 가 리스트가 아니라 빈 딕셔너리({})로 저장돼 있었다.
+        #  코드는 항상 리스트로 취급한다(.append(), [-5:] 슬라이스) — 이
+        #  전제가 깨지면 방문한 상점이 0곳일 땐 마지막 print의 슬라이스에서,
+        #  1곳이라도 있으면 그보다 먼저 .append()에서 죽는다
+        #  (TypeError: unhashable type: 'slice' / AttributeError 'dict'
+        #  object has no attribute 'append').
+        #  왜 딕셔너리로 저장됐는지는 이 상태파일들의 이력(더 예전 스키마)
+        #  까지 거슬러야 알 수 있어 원인 규명은 보류하고, 여기서 로드
+        #  시점에 항상 리스트로 맞춘다 — 매번 호출하는 곳마다 방어하는
+        #  것보다 한 곳에서 정규화하는 게 재발을 막는다.
+        su = state.get("shop_urls")
+        if isinstance(su, dict):
+            state["shop_urls"] = list(su.values()) if su else []
+        elif not isinstance(su, list):
+            state["shop_urls"] = []
         return state
     return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": [], "failed_shops": {}}
 
@@ -369,10 +389,33 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
                 "shop_urls": shop_urls,
                 "pending_keywords": pending_keywords,
                 "seen_keywords": list(seen_keywords),
+                "keyword_stats": keyword_stats,
                 "failed_shops": failed_shops,
             },
             state_suffix,
         )
+
+    # [v4.2.0] 검색어 길이별 성과 측정.
+    #  생성되는 검색어의 23.2%가 단어 하나짜리(パウダー 등)인데, 이게
+    #  유리한지(넓게 걸려 다양한 상점 노출) 불리한지(대형 상점만 떠서
+    #  한 사이클 낭비) 측정된 적이 없다. 발굴은 상점 1곳당 검색어 5.4개를
+    #  쓴다 — 5개 중 4개는 새 상점을 못 만든다는 뜻이고, 그 낭비가 어디서
+    #  오는지 알아야 큐 순서를 손댈지 판단할 수 있다.
+    #
+    #  파일이 커지지 않도록 개별 로그가 아니라 '토큰 수 구간별 누적'만
+    #  담는다(구간 4개 x 숫자 3개).
+    keyword_stats = state.get("keyword_stats") or {}
+
+    def _kw_bucket(text: str) -> str:
+        n = len(text.split())
+        return "1" if n <= 1 else ("2" if n == 2 else ("3-4" if n <= 4 else "5+"))
+
+    def _record_kw(text: str, shops_found: int, saved: int) -> None:
+        b = _kw_bucket(text)
+        cur = keyword_stats.setdefault(b, {"keywords": 0, "shops": 0, "saved": 0})
+        cur["keywords"] += 1
+        cur["shops"] += shops_found
+        cur["saved"] += saved
 
     while pending_keywords and len(all_products) < target_products:
         if max_shops and len(visited_shops) >= max_shops:
@@ -386,6 +429,7 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             continue
 
         print(f"\n[검색] {kw}")
+        products_before = len(all_products)
         # 내 방문기록 + 다른 워커 방문기록을 합쳐서 제외한다(중복 크롤 방지).
         peer_visited = load_peer_visited(state_suffix)
         shops = find_low_review_shops(kw, visited_shops | peer_visited)
@@ -460,6 +504,7 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
             save()
             break
 
+        _record_kw(kw, len(shops), len(all_products) - products_before)
         seen_keywords.add(kw)
         pending_keywords.pop(0)
         save()
