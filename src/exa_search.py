@@ -20,8 +20,22 @@ def search(query: str, num_results: int = 5) -> list[dict]:
     req = urllib.request.Request(url, data=payload, method="POST")
     req.add_header("x-api-key", API_KEY)
     req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=15) as res:
-        data = json.loads(res.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=15) as res:
+            data = json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # [v3.1.3] 예전엔 "HTTP Error 402: Payment Required"만 남아서 원인을
+        # 알 수 없었다(키가 틀린 건지, 무료 크레딧이 떨어진 건지, 요금제
+        # 문제인지). Exa는 응답 본문에 이유를 담아 보내므로 그것까지 붙인다.
+        # 실측 2026-07-28: 402가 떠서 검증이 통째로 멈췄는데, 원인 파악에
+        # 로그가 전혀 도움이 안 됐다.
+        try:
+            body = e.read().decode("utf-8", "replace")[:300]
+        except Exception:  # noqa: BLE001
+            body = "(본문 읽기 실패)"
+        raise urllib.error.HTTPError(
+            e.url, e.code, f"{e.reason} | 응답본문: {body}", e.headers, None
+        ) from None
     return [
         {"title": r.get("title"), "url": r.get("url")}
         for r in data.get("results", [])
