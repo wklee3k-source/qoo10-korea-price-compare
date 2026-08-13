@@ -495,22 +495,22 @@ jobs:
             THRESHOLD="${{ inputs.merge_threshold || '500' }}"
             if [ "$THRESHOLD" != "0" ]; then
               NEW_COUNT=$(python3 -c "
-            import json, pathlib, glob
-            total = 0
-            for f in glob.glob('../output/discovery_state_*.json'):
-                try:
-                    total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
-                except Exception:
-                    pass
-            base = 0
-            bp = pathlib.Path('../output/merge_baseline.json')
-            if bp.exists():
-                try:
-                    base = json.loads(bp.read_text()).get('shard_total_at_merge', 0)
-                except Exception:
-                    base = 0
-            print(max(total - base, 0))
-            ")
+          import json, pathlib, glob
+          total = 0
+          for f in glob.glob('../output/discovery_state_*.json'):
+              try:
+                  total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+              except Exception:
+                  pass
+          base = 0
+          bp = pathlib.Path('../output/merge_baseline.json')
+          if bp.exists():
+              try:
+                  base = json.loads(bp.read_text()).get('shard_total_at_merge', 0)
+              except Exception:
+                  base = 0
+          print(max(total - base, 0))
+          ")
               echo "[자동통합] 지난 통합 이후 신규 $NEW_COUNT건 / 임계 $THRESHOLD건"
               if [ "$NEW_COUNT" -ge "$THRESHOLD" ]; then
                 # 이미 통합이 돌고 있으면 부르지 않는다 — 워커 2개가 거의
@@ -937,17 +937,17 @@ jobs:
             # 몇 건이 새로 쌓였는지"를 알려면 통합 시점의 샤드 합계를
             # 남겨둬야 한다. 통합 자체가 샤드 파일을 비우지 않기 때문이다.
             python3 -c "
-            import json, pathlib, glob
-            total = 0
-            for f in glob.glob('../output/discovery_state_*.json'):
-                try:
-                    total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
-                except Exception:
-                    pass
-            pathlib.Path('../output/merge_baseline.json').write_text(
-                json.dumps({'shard_total_at_merge': total}), encoding='utf-8')
-            print(f'[기준선] 통합 시점 샤드 합계 {total}건')
-            "
+          import json, pathlib, glob
+          total = 0
+          for f in glob.glob('../output/discovery_state_*.json'):
+              try:
+                  total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+              except Exception:
+                  pass
+          pathlib.Path('../output/merge_baseline.json').write_text(
+              json.dumps({'shard_total_at_merge': total}), encoding='utf-8')
+          print(f'[기준선] 통합 시점 샤드 합계 {total}건')
+          "
             git add ../output/discovery_state.json ../output/progress_history.json ../output/merge_baseline.json 2>/dev/null || true
             [ -d ../output/archive ] && git add ../output/archive/ 2>/dev/null || true
             git diff --cached --quiet && { echo "합칠 변경사항 없음"; break; }
@@ -1440,7 +1440,8 @@ jobs:
                   merged[x['goods_no']] = x; n_shard += 1
           rows = list(merged.values())
           p.write_text(json.dumps(rows, ensure_ascii=False, indent=2))
-          print(f'[검증통합] 샤드에서 {n_shard}건 -> 통합본 {len(rows)}건 (구매링크 {sum(1 for x in rows if x.get(\"product_url\"))}건)')
+          n_purchase = sum(1 for x in rows if x.get('product_url'))
+          print(f'[검증통합] 샤드에서 {n_shard}건 -> 통합본 {len(rows)}건 (구매링크 {n_purchase}건)')
           "
 
           git add ../output/hwahae_verified_39.json 2>/dev/null || true
