@@ -586,6 +586,15 @@ jobs:
             if [ "$STALL_COUNT" -ge "$MAX_STALL" ]; then
               if [ "$STALL_COUNT" -eq "$MAX_STALL" ]; then
                 echo "[정체 감지] 검색어 재보충을 한 번 시도한다"
+                # [v7.48.2 — 실측 사고 대응] --threshold 0 이면 "대기
+                # 검색어가 0개일 때만" 재보충한다. 그런데 실제 정체는
+                # 대기 검색어가 수천 개 남아있는데도 그것들을 검색하면
+                # 전부 이미 아는 상점만 나오는 경우였다(2026-08-14 실측:
+                # pending 4,000개인데 방문 상점 수가 전혀 안 늘어남).
+                # --threshold 0 조건 때문에 "보충 불필요"로 스킵돼서
+                # 정작 정체 상황에서 재보충이 한 번도 안 걸렸다. 정체
+                # 감지 시점에는 대기량과 무관하게 항상 새 후보(특히
+                # 브랜드명, v7.48.1)를 섞어 넣는다.
                 python3 refill_discovery_keywords.py \
                   --state "../output/discovery_state_${B}.json" \
                   --worker "$B" \
@@ -593,7 +602,7 @@ jobs:
                   --pool /tmp/fcpool \
                   --peer-dir ../output \
                   --limit 4000 \
-                  --threshold 0 || echo "[경고] 재보충 실패"
+                  --threshold 999999 || echo "[경고] 재보충 실패"
               else
                 echo "[정체 확정] 재보충해도 진행 없음 — 이 워커는 정상 종료한다(다음 재기동에서 이어감)"
                 break

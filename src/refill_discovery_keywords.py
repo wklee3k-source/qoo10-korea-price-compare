@@ -195,13 +195,20 @@ def refill(state_path: str, worker: int, workers: int, pool_dir: str,
         print(f"[모의실행] {len(added):,}개를 넣었을 것 (샘플: {added[:3]})")
         return 0
 
-    # pending 끝에 붙인다(앞에 넣으면 재개 중이던 검색어가 밀린다).
-    state["pending_keywords"] = list(pending) + added
+    # [v7.48.2] pending이 비어있을 때(정상 최초보충)는 순서가 의미없다.
+    # 문제는 pending이 아직 많이 남아있는데도 정체가 감지된 경우(2026-08-14
+    # 실측: pending 4,000개인데 방문 상점이 하나도 안 늘어남) — 이때
+    # 새로 뽑은 후보를 기존 pending "뒤"에 붙이면, 이미 안 먹히던
+    # 검색어 수천 개를 다 써야 새 후보 차례가 온다. 이 while 루프는
+    # 무진전 5회면 그냥 종료해버리므로(v7.47.3), 뒤에 붙이면 사실상
+    # 이번 실행에서 새 후보를 단 하나도 못 써보고 끝난다. 새로 뽑은
+    # 것을 앞에 놓아서 재보충 직후 바로 시도되게 한다.
+    state["pending_keywords"] = added + list(pending)
     tmp_path = state_path + ".tmp"
     with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
     os.replace(tmp_path, state_path)  # 원자적 교체 — 중간에 죽어도 원본 안 깨짐
-    print(f"[보충 완료] {len(added):,}개 추가 → pending {len(state['pending_keywords']):,}개")
+    print(f"[보충 완료] {len(added):,}개 추가(앞쪽 우선) → pending {len(state['pending_keywords']):,}개")
     print(f"  샘플: {added[:3]}")
     return 0
 
