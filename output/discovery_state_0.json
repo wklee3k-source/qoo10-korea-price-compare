@@ -1,7 +1,9 @@
 {
   "visited_shops": [
+    "Asteroid",
+    "daisyyoung",
     "K-Blush",
-    "Asteroid"
+    "hokkorikorea"
   ],
   "all_products": [
     {
@@ -93,11 +95,43 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1214910945",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/388/963/8415963388.g_300-w-st_g.jpg",
+      "title": "【毛穴・弾力ケア】PDRN ダーマセラム 50ml×2 美容液 毛穴ケア ハリ キメ ツヤ肌 保湿 ナイアシンアミド ペプチド 韓国コスメ",
+      "brand": "メディヒール",
+      "price_jpy": 3970,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1214910945",
+      "shop_id": "hokkorikorea",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1214207895",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/759/183/8404183759.g_300-w-st_g.jpg",
+      "title": "【皮脂・毛穴ケア】RX ザナイアシンアミド15セラム, 20ml Niacinamide15% 毛穴美容液 キメ 保湿 ハリ ツヤ 韓国コスメ",
+      "brand": "COSRX",
+      "price_jpy": 2641,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1214207895",
+      "shop_id": "hokkorikorea",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
     "https://m.qoo10.jp/shop/Asteroid",
-    "https://m.qoo10.jp/shop/K-Blush"
+    "https://m.qoo10.jp/shop/K-Blush",
+    "https://m.qoo10.jp/shop/daisyyoung",
+    "https://m.qoo10.jp/shop/hokkorikorea"
   ],
   "pending_keywords": [
     "メディヒール エッセンシャルマスクパック",
@@ -110,7 +144,12 @@
     "エガ割コラボ ポアタイトニング トナーパッド 2 毛穴ケア 角質ケア 保湿 クーリング接触冷感拭き取りパッドAHA BHA PHA 韓国スキンケア オリ",
     "メディヒールマスクパック贈呈 コスパAHA BHA ピーリング ＋グリコール酸 トーニング",
     "ARIH モダンヌードル BTS コラボ カップ麺 4種 BIGカップ 韓国ラーメン 人気インスタント麺 キムチチャーハン ボンゴレ トリュフプルコギ 胡椒ラッポッキ",
-    "1+1SNS話題ヒマラヤ パーティースマート ソフトチュー マンゴー ベリー 入り 飲み会サポート インド二日酔い対策ゼリー 低糖 ウコン配合 チュアブル人気グミ 持ち運び便利 ソフトキャンディ"
+    "1+1SNS話題ヒマラヤ パーティースマート ソフトチュー マンゴー ベリー 入り 飲み会サポート インド二日酔い対策ゼリー 低糖 ウコン配合 チュアブル人気グミ 持ち運び便利 ソフトキャンディ",
+    "焼きとうもろこし味アーモンド 香ばしいコーン 甘じょっぱいスナック ナッツ おつまみ 子供 大人 韓国お菓子",
+    "PDRN ダーマセラム 2 美容液 毛穴ケア ハリ キメ ツヤ肌 保湿 ナイアシンアミド ペプチド 韓国コスメ",
+    "RX ザナイアシンアミド ラム Niacinamide 毛穴美容液 キメ 保湿 ハリ ツヤ 韓国コスメ",
+    "キャロットカロテン バニバニ当たり箱 6種 ショッピングバッグ付き パッド デイリーマスク クレンジングフォーム クリーム 美容液 韓国コスメ",
+    "ダーマカバーブレミッシュバーム 2色 パンテノール 高密着ツヤ肌 敏感肌OK 韓国コスメ"
   ],
   "seen_keywords": [],
   "keyword_stats": {},
