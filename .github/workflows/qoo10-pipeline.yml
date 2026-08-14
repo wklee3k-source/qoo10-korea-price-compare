@@ -264,34 +264,86 @@ jobs:
     # 대기줄(pending)에서 15분 넘게 못 움직였다(2026-08-14). 사람이 매번
     # run id를 찾아서 수동으로 취소해줘야 했다.
     #
-    # discovery_parallel 이나 run_harvest_catalog 가 켜질 때마다, 발굴/수확
-    # job을 포함한 "완료 안 된" 다른 실행을 전부 찾아서 먼저 취소하고 30초
-    # 기다린 다음 시작한다 — 수집크론이 사람 없이 자동으로 돌 때도 이
-    # 사고가 반복되지 않게 하기 위함이다.
+    # [v7.47.1 — 건강한 실행까지 죽이던 버그 수정] 처음 버전은 "완료 안
+    # 됨"이면 무조건 취소했다. 수집크론이 2시간마다 이 job을 통해서
+    # discovery_parallel/run_harvest_catalog를 호출하는데, 발굴·수확은
+    # 정상일 때 5시간까지 계속 도는 게 정상이라 — 그러면 매 2시간마다
+    # 멀쩡히 도는 워커까지 죽이고 처음부터 다시 켜는 꼴이 된다. 이전에
+    # "병합이 20~30분마다 워커를 껐다 켜서 일하는 시간보다 재시작하는
+    # 시간이 더 컸던" 문제를 그대로 재현하게 된다.
+    #
+    # 그래서 무조건 취소 대신, discovery-live/fullcatalog-live의 **최근
+    # 커밋 시각**을 먼저 본다. STALE_MIN(기본 20분) 안에 커밋이 있으면
+    # "정상 진행중"으로 보고 그 워커는 그대로 둔다(취소하지 않음) —
+    # 새로 대기중인 중복 트리거는 concurrency group에 안전하게 큐잉될
+    # 뿐이라 해가 없다(2026-08-13 실측 확인된 동작). 커밋이 STALE_MIN
+    # 넘게 없으면 그때만 좀비로 보고 취소한다.
     if: github.event_name == 'workflow_dispatch' && (inputs.discovery_parallel || inputs.run_harvest_catalog)
     runs-on: ubuntu-latest
     permissions:
       actions: write
+      contents: read
     steps:
-      - name: Cancel any leftover discovery/harvest runs before starting fresh
+      - name: Cancel only genuinely stuck discovery/harvest runs
+        env:
+          STALE_MIN: "20"
         run: |
-          echo "[재기동 준비] 이전 발굴·수확 실행을 전부 정리한다"
+          echo "[재기동 준비] 정체된(좀비) 발굴·수확 실행만 골라서 정리한다"
+
+          is_stale() {
+            # $1 = 브랜치명. 최근 커밋이 STALE_MIN분보다 오래됐으면 0(참).
+            local branch="$1"
+            local last_iso
+            last_iso=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/commits/${branch}?per_page=1" \
+              | jq -r '.commit.committer.date // empty')
+            if [ -z "$last_iso" ]; then
+              echo "  [경고] ${branch} 커밋 시각을 못 읽음 — 안전하게 '정상'으로 간주"
+              return 1
+            fi
+            python3 -c "
+          import sys, datetime
+          branch_name = '$branch'
+          last = datetime.datetime.fromisoformat('$last_iso'.replace('Z','+00:00'))
+          now = datetime.datetime.now(datetime.timezone.utc)
+          mins = (now - last).total_seconds() / 60
+          print(f'  {branch_name} 최근 커밋 {mins:.1f}분 전')
+          sys.exit(0 if mins > ${STALE_MIN} else 1)
+          "
+          }
+
+          DISCOVERY_STALE=1
+          HARVEST_STALE=1
+          if is_stale "discovery-live"; then DISCOVERY_STALE=0; fi
+          if is_stale "fullcatalog-live"; then HARVEST_STALE=0; fi
+
           RUNS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=30")
           IDS=$(echo "$RUNS_JSON" | jq -r --argjson me "${{ github.run_id }}" \
             '.workflow_runs[] | select(.id != $me) | select(.name=="Qoo10 Pipeline") | select(.status!="completed") | .id')
+
           for RID in $IDS; do
             JOBS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/jobs?per_page=30")
-            HAS_DH=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status!="completed") | select(.name | test("discover_low_review_shops_parallel|harvest_full_catalog_parallel"))] | length')
-            if [ "$HAS_DH" != "0" ]; then
-              echo "[취소] run $RID (이전 발굴/수확 실행, 좀비 가능성)"
+            HAS_DISCOVERY=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status!="completed") | select(.name | test("discover_low_review_shops_parallel"))] | length')
+            HAS_HARVEST=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status!="completed") | select(.name | test("harvest_full_catalog_parallel"))] | length')
+
+            SHOULD_CANCEL=0
+            if [ "$HAS_DISCOVERY" != "0" ] && [ "$DISCOVERY_STALE" = "1" ]; then SHOULD_CANCEL=1; fi
+            if [ "$HAS_HARVEST" != "0" ] && [ "$HARVEST_STALE" = "1" ]; then SHOULD_CANCEL=1; fi
+            # 발굴/수확 둘 다 아니면(다른 종류 job만 있는 run) 건드리지 않는다.
+            if [ "$HAS_DISCOVERY" = "0" ] && [ "$HAS_HARVEST" = "0" ]; then SHOULD_CANCEL=0; fi
+
+            if [ "$SHOULD_CANCEL" = "1" ]; then
+              echo "[취소] run $RID (좀비 — 커밋 정체 ${STALE_MIN}분 초과)"
               curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                 "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/cancel"
+            else
+              echo "[유지] run $RID — 정상 진행중으로 판단, 취소하지 않음"
             fi
           done
-          echo "[대기] 취소된 실행이 실제로 멈출 시간을 준다"
-          sleep 30
+          echo "[대기] 취소된 실행이 있다면 실제로 멈출 시간을 준다"
+          sleep 15
 
   discover_low_review_shops_parallel:
     # 병렬 버전 — 4개 브랜치(matrix)가 동시에 각자 다른 시드를 처리한다.
