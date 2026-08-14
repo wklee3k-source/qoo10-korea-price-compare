@@ -110,7 +110,9 @@ def build(state_path: str, verified_dir: str, blocklist_path: str, out_dir: str)
             continue
         if not p.get("translated_kr"):
             continue  # 아직 번역 안 된 건 대상 아님(export_untranslated.py 담당)
-        v = verified.get(gno, {})
+        v = verified.get(gno)
+        if v is None:
+            continue  # 아직 검증 자체를 안 받은 건 대상 아님(검증 먼저 끝나야 함)
 
         if v.get("product_url"):
             collect_targets.append({"goods_no": gno, "url": v["product_url"]})
@@ -121,15 +123,11 @@ def build(state_path: str, verified_dir: str, blocklist_path: str, out_dir: str)
                                     "brand": v.get("brand") or ""})
             continue
 
-        cs = v.get("candidates_summary", {}) or {}
-        picked = _pick_candidate(cs)
-        if picked:
-            search_targets.append({"goods_no": gno, "query": picked,
-                                    "brand": v.get("brand") or ""})
-        else:
-            cleaned = _clean_query(p["translated_kr"]) or p["translated_kr"]
-            search_targets.append({"goods_no": gno, "query": cleaned, "brand": ""})
-            fallback_count += 1
+        # [정책, 2026-08-14] 합의부족(product_url도 name도 없음)은 폐기
+        # 대상으로 확정됐다 — 더 이상 재검증·복구 시도 안 함. 수집기
+        # 대상에도 안 넣는다(candidates_summary 기반 추측 검색어를
+        # 만들어봐야 어차피 버릴 항목이라 낭비).
+        continue
 
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
