@@ -33,7 +33,7 @@ on:
         type: string
         default: "100"
       discovery_target_products:
-        description: "목표 상품 수(이번 실행 기준 상한)"
+        description: "목표 상품 수(순차버전 discover_low_review_shops 전용 — 병렬버전은 무제한 고정)"
         required: false
         type: string
         default: "500"
@@ -536,7 +536,18 @@ jobs:
       - name: Run discovery in small increments (own file only)
         working-directory: src
         env:
-          TARGET: ${{ inputs.discovery_target_products || '999999' }}
+          # [v7.48.4 — 실측 사고 수정] inputs.discovery_target_products의
+          # 선언된 기본값이 "500"이라, 트리거할 때 안 정해도 GitHub이
+          # 항상 "500"을 채워 넣는다. `|| '999999'`는 입력값이 진짜
+          # 비어있을 때만 발동하는데 위 이유로 절대 안 비므로 죽은
+          # 코드였다 — 그 결과 all_products가 500에 딱 도달한 순간
+          # while 루프 조건(all_products < target)이 거짓이 되어
+          # 검색을 단 한 번도 시도 못 하고 즉시 끝나는 사고가 있었다
+          # (2026-08-14 실측: 상점 948개에서 몇 시간째 정체, 로그에
+          # "[검색]" 줄이 단 하나도 없었음). 병렬버전은 STEP 기반
+          # visited_shops CAP으로 이미 스스로 제어되므로 상품수
+          # 상한은 이 job에서 의미가 없다 — 이 입력값 자체를 안 쓴다.
+          TARGET: "999999"
           SHOPS_PER_KEYWORD: ${{ inputs.discovery_shops_per_keyword || '' }}
         run: |
           git config user.name "github-actions[bot]"
