@@ -1,21 +1,23 @@
 {
   "visited_shops": [
-    "Luminomarket",
     "Asteroid",
     "hokkorikorea",
     "dokomi",
-    "oreumpick",
-    "keto88",
-    "kocolu",
     "yunimaru",
-    "topkorea",
-    "bkyul",
-    "GlowMee",
-    "medihealofficial",
-    "charmang",
     "tovic",
     "daisyyoung",
-    "K-Blush"
+    "kocolu",
+    "K-Blush",
+    "pandacosmetics",
+    "keto88",
+    "GlowMee",
+    "charmang",
+    "oreumpick",
+    "topkorea",
+    "bkyul",
+    "medihealofficial",
+    "Luminomarket",
+    "CooAnCoo"
   ],
   "all_products": [
     {
@@ -407,6 +409,66 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1204754033",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/190/763/8427763190.g_300-w-st_g.jpg",
+      "title": "ソウル1988レチナール 黒参 セラム 30ml(レチナール リポソーム 2% + ブラックジンセン) / デイリーケア / 年齢に応じたケア / ハリ感ケア / 保湿ケア",
+      "brand": "K-SECRET",
+      "price_jpy": 2170,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204754033",
+      "shop_id": "CooAnCoo",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 1,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1214580184",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/130/763/8427763130.g_300-w-st_g.jpg",
+      "title": "ホホバ モチベーションクリームマスク 90g( ホホババリアモチベーションクリームマスク90g)",
+      "brand": "PINKWONDER",
+      "price_jpy": 4220,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1214580184",
+      "shop_id": "CooAnCoo",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1213452633",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/427/763/8427763427.g_300-w-st_g.jpg",
+      "title": "ダーマRX Vモード 120ml( カーミングアップ / ハイドレートアップ)",
+      "brand": "OGANACELL",
+      "price_jpy": 4290,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213452633",
+      "shop_id": "CooAnCoo",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1213013731",
+      "rank": 5,
+      "image_url": "https://gd.image-qoo10.jp/li/227/763/8427763227.g_300-w-st_g.jpg",
+      "title": "[1+1]レチナールブースターショット30g/色素沈着/美白/クリーム/ツヤ/グルタチオン/レチノール/美容液/韓国コスメ/韓国薬局",
+      "brand": "アレンシア",
+      "price_jpy": 3500,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1213013731",
+      "shop_id": "CooAnCoo",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -425,10 +487,11 @@
     "https://m.qoo10.jp/shop/keto88",
     "https://m.qoo10.jp/shop/tovic",
     "https://m.qoo10.jp/shop/Luminomarket",
-    "https://m.qoo10.jp/shop/kocolu"
+    "https://m.qoo10.jp/shop/kocolu",
+    "https://m.qoo10.jp/shop/pandacosmetics",
+    "https://m.qoo10.jp/shop/CooAnCoo"
   ],
   "pending_keywords": [
-    "メディヒール エッセンシャルマスクパック",
     "緑豆弱酸性 クレンジングフォーム",
     "シュガービームハイライター 01.Heart berry",
     "マダガスカル センテラ ヒアル シカ シルキーフィット サンスティック SPF50+ PA++++",
@@ -498,9 +561,27 @@
     "CICA デイリースージングマスク",
     "5番 白玉グルタチオンcメラゼロクリーム",
     "CICA スキン",
-    "5番 白玉グルタチオンcふりかけマスク"
+    "5番 白玉グルタチオンcふりかけマスク",
+    "THEVITAレチナールショットタイトニングブースター",
+    "CICA デイリースージングマスク",
+    "アイシャドウパレット",
+    "ベターザンパレット",
+    "アトバリア365 クリーム",
+    "オードパパン パフューム 11種",
+    "ソウル1988レチナール 黒参 セラム",
+    "ホホバ モチベーションクリームマスク",
+    "ダーマRX Vモード",
+    "レチナールブースターショット"
   ],
-  "seen_keywords": [],
-  "keyword_stats": {},
+  "seen_keywords": [
+    "メディヒール エッセンシャルマスクパック"
+  ],
+  "keyword_stats": {
+    "2": {
+      "keywords": 1,
+      "shops": 1,
+      "saved": 0
+    }
+  },
   "failed_shops": {}
 }
