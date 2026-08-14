@@ -545,6 +545,8 @@ jobs:
           # 진행 가시성과 유실 방지가 우선이다.
           STEP=2
           ITER=0
+          STALL_COUNT=0
+          MAX_STALL=3
           while true; do
             ITER=$((ITER + 1))
             # [중요] max_shops는 "이번 호출에서 몇 개 방문할지"가 아니라
@@ -565,6 +567,38 @@ jobs:
               "$SHOPS_PER_KEYWORD" \
               "$B"
             echo "::endgroup::"
+
+            # [v7.47.3 — 무한루프 사고 대응, 2026-08-14 실측] 이 스크립트가
+            # 검색어가 고갈되는 등의 이유로 CAP까지 못 채우고 조기 종료하면,
+            # visited_shops가 전혀 안 늘어난 채로 이 while문이 초당 5~6회씩
+            # 영원히 헛돈다(취소 신호도 못 받을 만큼 CPU를 소진한 사례
+            # 있음). 방문 상점 수가 안 늘어난 반복이 MAX_STALL번 연속되면,
+            # 검색어를 한 번 더 채워보고(refill) 그래도 안 늘면 이 워커는
+            # 여기서 정상 종료한다 — 커밋된 진행분은 이미 안전하고, 다음
+            # 수집크론 주기에 새 워커가 이어서 시작한다.
+            NEW_VISITED=$(python3 -c "import json, pathlib; p = pathlib.Path('../output/discovery_state_${B}.json'); print(len(json.loads(p.read_text())['visited_shops']) if p.exists() else 0)")
+            if [ "$NEW_VISITED" -eq "$CURRENT_VISITED" ]; then
+              STALL_COUNT=$((STALL_COUNT + 1))
+              echo "[정체] 방문 상점 안 늘어남 ($STALL_COUNT/$MAX_STALL)"
+            else
+              STALL_COUNT=0
+            fi
+            if [ "$STALL_COUNT" -ge "$MAX_STALL" ]; then
+              if [ "$STALL_COUNT" -eq "$MAX_STALL" ]; then
+                echo "[정체 감지] 검색어 재보충을 한 번 시도한다"
+                python3 refill_discovery_keywords.py \
+                  --state "../output/discovery_state_${B}.json" \
+                  --worker "$B" \
+                  --workers 6 \
+                  --pool /tmp/fcpool \
+                  --peer-dir ../output \
+                  --limit 4000 \
+                  --threshold 0 || echo "[경고] 재보충 실패"
+              else
+                echo "[정체 확정] 재보충해도 진행 없음 — 이 워커는 정상 종료한다(다음 재기동에서 이어감)"
+                break
+              fi
+            fi
 
             # [경합/느려짐 방지] 4개 워커 전부 똑같이, 오직 자기 전용 파일만
             # 커밋/push한다. discovery_state.json(공유파일)은 절대 안 건드린다
