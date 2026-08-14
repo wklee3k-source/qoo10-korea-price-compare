@@ -1,11 +1,13 @@
 {
   "visited_shops": [
-    "Asteroid",
     "topkorea",
-    "hokkorikorea",
     "daisyyoung",
+    "yunimaru",
     "K-Blush",
-    "yunimaru"
+    "bkyul",
+    "oreumpick",
+    "hokkorikorea",
+    "Asteroid"
   ],
   "all_products": [
     {
@@ -277,6 +279,51 @@
       "review_count": 3,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1130370056",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/116/652/6445652116.g_300-w-st_g.jpg",
+      "title": "ヘアケア マルチペプチド セーラムフォー ヘアデンシティ 60ml /韓国コスメ",
+      "brand": "ジオーディナリー",
+      "price_jpy": 6150,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1130370056",
+      "shop_id": "bkyul",
+      "category_gdlc_cd": "120000020",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1156287595",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/736/514/7291514736.g_300-w-st_g.jpg",
+      "title": "ドクダミ シカ クーリング 水分 クリーム 100ml スリーピング マスク兼用 鎮静 韓国コスメ",
+      "brand": "トニーモリー",
+      "price_jpy": 2630,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1156287595",
+      "shop_id": "oreumpick",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 2,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1204732515",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/361/175/8262175361.g_300-w-st_g.jpg",
+      "title": "ブルービーン B5-PDRN マイルドクリーム 100ml(+ブルービーン ローション 10ml プレゼント) 韓国コスメ",
+      "brand": "bring green",
+      "price_jpy": 3730,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1204732515",
+      "shop_id": "oreumpick",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -285,7 +332,9 @@
     "https://m.qoo10.jp/shop/daisyyoung",
     "https://m.qoo10.jp/shop/hokkorikorea",
     "https://m.qoo10.jp/shop/yunimaru",
-    "https://m.qoo10.jp/shop/topkorea"
+    "https://m.qoo10.jp/shop/topkorea",
+    "https://m.qoo10.jp/shop/bkyul",
+    "https://m.qoo10.jp/shop/oreumpick"
   ],
   "pending_keywords": [
     "メディヒール エッセンシャルマスクパック",
@@ -313,7 +362,17 @@
     "ガラクナイアシン3.0エッセンス",
     "ドクダミポアコントロールクレンジングオイル",
     "リアルマットメイクアップセッティングフィックスミスト フィクサー メイクキープミスト メイクキープスプレー",
-    "アトバリア365 ハイドロエッセンス 保湿 インナードライ 化粧水"
+    "アトバリア365 ハイドロエッセンス 保湿 インナードライ 化粧水",
+    "イン ハイドサイト オードパルファム 韓国香水",
+    "アイシャドウ プライマー ポーション",
+    "ヘアケア マルチペプチド セーラムフォー ヘアデンシティ",
+    "ミニハイライター 9種 択1 韓国コスメ",
+    "ピュ メロウ デュアル チーク 12カラー 韓国コスメ",
+    "ARIHモダンヌードル BTSアリラーメン 6種から2種 韓国ラーメン プレミアム 炒め麺",
+    "bts オレオ ホワイトクリーム 登場 ホットク味 期間 韓国お菓子 OREOxBTS",
+    "ドクダミ シカ クーリング 水分 クリーム スリーピング マスク兼用 鎮静 韓国コスメ",
+    "ブルービーン B5-PDRN マイルドクリーム 韓国コスメ",
+    "キシリトール キャンディ オリジナル ジッパーバッグ キシリトール飴 子供 虫歯 ノンシュガー"
   ],
   "seen_keywords": [],
   "keyword_stats": {},
