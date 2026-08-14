@@ -51,6 +51,11 @@ on:
         required: false
         type: boolean
         default: false
+      run_shop_related_probe:
+        description: "실험: 큐텐 상점페이지에 다른 상점으로 가는 링크가 있는지 조사(읽기 전용)"
+        required: false
+        type: boolean
+        default: false
       run_naver_probe:
         description: "실험: 승자 이름으로 네이버 재검색했을 때 구매링크 회수율 측정(읽기 전용)"
         required: false
@@ -1845,3 +1850,53 @@ jobs:
       - name: Probe smartstore access
         working-directory: src
         run: python smartstore_probe.py ../output/probe_input.json 10
+
+  shop_related_probe:
+    # [측정 전용, v7.48.3] 아무것도 바꾸지 않는다. 큐텐 상점페이지에
+    # 다른 상점으로 가는 링크가 실제로 있는지, 있다면 어떤 구조인지만
+    # 조사한다 — 이게 있으면 수확이 발굴 없이도 새 상점을 찾는 완전히
+    # 새로운 경로가 될 수 있다(§4.8 검색어 고갈 문제의 근본 해결책
+    # 후보). 이 대화 환경에서는 데이터센터 IP 차단으로 직접 못 봤다 —
+    # harvest_full_catalog가 이미 정상 접속하는 GitHub Actions에서
+    # 대신 확인한다.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_shop_related_probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Pick sample shop_ids from harvest pool
+        run: |
+          mkdir -p output
+          git fetch --depth 1 origin fullcatalog-live
+          git show FETCH_HEAD:output/fullcatalog_state_0.json > output/probe_shops.json 2>/dev/null \
+            || echo '{"all_products":{}}' > output/probe_shops.json
+          python3 -c "
+          import json
+          d = json.load(open('output/probe_shops.json'))
+          ap = d.get('all_products', {})
+          items = ap.values() if isinstance(ap, dict) else ap
+          ids = sorted({(x or {}).get('shop_id') for x in items if (x or {}).get('shop_id')})[:5]
+          open('output/probe_shop_ids.txt', 'w').write(' '.join(ids))
+          print('[샘플 상점]', ids)
+          "
+
+      - name: Probe shop page for related-shop links
+        working-directory: src
+        run: python shop_related_probe.py $(cat ../output/probe_shop_ids.txt)
+
+      - name: Show result
+        run: cat output/shop_related_probe_result.json
+
