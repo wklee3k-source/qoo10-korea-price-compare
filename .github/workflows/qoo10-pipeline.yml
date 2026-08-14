@@ -257,6 +257,42 @@ jobs:
             current=$next
           done
 
+  wake_reset:
+    # [v7.47.0] 재기동시 좀비 실행 자동정리 — 실측사고: 발굴·수확을 새로
+    # 트리거해도, 이미 죽은 것처럼 보이지만 실제로는 안 끝난 채로 남아있는
+    # 예전 실행이 concurrency group(브랜치별)을 붙잡고 있으면 새 트리거가
+    # 대기줄(pending)에서 15분 넘게 못 움직였다(2026-08-14). 사람이 매번
+    # run id를 찾아서 수동으로 취소해줘야 했다.
+    #
+    # discovery_parallel 이나 run_harvest_catalog 가 켜질 때마다, 발굴/수확
+    # job을 포함한 "완료 안 된" 다른 실행을 전부 찾아서 먼저 취소하고 30초
+    # 기다린 다음 시작한다 — 수집크론이 사람 없이 자동으로 돌 때도 이
+    # 사고가 반복되지 않게 하기 위함이다.
+    if: github.event_name == 'workflow_dispatch' && (inputs.discovery_parallel || inputs.run_harvest_catalog)
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Cancel any leftover discovery/harvest runs before starting fresh
+        run: |
+          echo "[재기동 준비] 이전 발굴·수확 실행을 전부 정리한다"
+          RUNS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=30")
+          IDS=$(echo "$RUNS_JSON" | jq -r --argjson me "${{ github.run_id }}" \
+            '.workflow_runs[] | select(.id != $me) | select(.name=="Qoo10 Pipeline") | select(.status!="completed") | .id')
+          for RID in $IDS; do
+            JOBS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/jobs?per_page=30")
+            HAS_DH=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.status!="completed") | select(.name | test("discover_low_review_shops_parallel|harvest_full_catalog_parallel"))] | length')
+            if [ "$HAS_DH" != "0" ]; then
+              echo "[취소] run $RID (이전 발굴/수확 실행, 좀비 가능성)"
+              curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RID/cancel"
+            fi
+          done
+          echo "[대기] 취소된 실행이 실제로 멈출 시간을 준다"
+          sleep 30
+
   discover_low_review_shops_parallel:
     # 병렬 버전 — 4개 브랜치(matrix)가 동시에 각자 다른 시드를 처리한다.
     # [실시간 병합] 예전엔 각자 아티팩트에만 저장하고 4개가 "전부" 끝나야
@@ -267,7 +303,10 @@ jobs:
     # discovery-live의 최신본을 받아와서 병합 + 즉시 커밋/push한다. 서로
     # 다른 파일(discovery_state_<branch>.json)에 쓰므로 병합 자체는 안전하고,
     # 메인 파일 push 경합은 재시도+지터로 흡수한다.
-    if: github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
+    needs: wake_reset
+    if: |
+      always() &&
+      github.event_name == 'workflow_dispatch' && inputs.discovery_parallel
     runs-on: ubuntu-latest
     timeout-minutes: 300
     permissions:
@@ -557,7 +596,10 @@ jobs:
     # 분리된 fullcatalog-live 브랜치에 저장한다 — discovery-live를
     # 건드리면 발굴 워커와 push 경합이 생기고(과거실패 #2·#4 재발위험),
     # 이 job은 discovery-live를 읽기만 하고 절대 쓰지 않는다.
-    if: github.event_name == 'workflow_dispatch' && inputs.run_harvest_catalog
+    needs: wake_reset
+    if: |
+      always() &&
+      github.event_name == 'workflow_dispatch' && inputs.run_harvest_catalog
     runs-on: ubuntu-latest
     timeout-minutes: 300
     permissions:
