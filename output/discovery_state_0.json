@@ -1,41 +1,43 @@
 {
   "visited_shops": [
-    "happyclover",
-    "jaenypick",
-    "lindalinda",
     "topkorea",
-    "enseoul",
-    "Luminomarket",
-    "tovic",
-    "pandacosmetics",
-    "keto88",
-    "GlowMee",
-    "kocolu",
-    "osondoson7",
-    "K-Blush",
-    "daisyyoung",
-    "KAWAIBEAUTY",
-    "10by",
     "lee0608",
+    "kocolu",
+    "tiaramall",
+    "jaenypick",
+    "tovic",
+    "leewoostore",
+    "daisyyoung",
+    "keto88",
+    "osondoson7",
+    "hanbikosupa",
+    "dgrm",
+    "CooAnCoo",
+    "bkyul",
+    "KAWAIBEAUTY",
+    "K-Blush",
+    "pandacosmetics",
+    "kim701016",
+    "Luminomarket",
+    "medihealofficial",
+    "yoo_k1120",
+    "lupio",
+    "yunimaru",
+    "Pashutani_Market",
+    "10by",
+    "dokomi",
+    "GlowMee",
+    "hokkorikorea",
+    "radiantmood",
+    "happyclover",
+    "K-BEAUTYBOX",
+    "Asteroid",
     "charmang",
     "oreumpick",
-    "bkyul",
-    "dokomi",
-    "radiantmood",
-    "medihealofficial",
-    "Asteroid",
-    "yunimaru",
-    "hokkorikorea",
-    "hanbikosupa",
-    "leewoostore",
-    "CooAnCoo",
-    "kim701016",
+    "lindalinda",
+    "enseoul",
     "kkcosme",
-    "Beautiful_KKK",
-    "tiaramall",
-    "K-BEAUTYBOX",
-    "Pashutani_Market",
-    "dgrm"
+    "Beautiful_KKK"
   ],
   "all_products": [
     {
@@ -1102,6 +1104,36 @@
       "review_count": 1,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1215197436",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/027/923/8421923027.g_300-w-st_g.jpg",
+      "title": "ゆずグロウ ボディエマルジョン 250mlビーガン·ボディローション",
+      "brand": "アルベ",
+      "price_jpy": 3677,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1215197436",
+      "shop_id": "yoo_k1120",
+      "category_gdlc_cd": "120000018",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1206841624",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/467/974/8277974467.g_300-w-st_g.jpg",
+      "title": "キャロット カロチン カーミング ウォーターパッド,マスクパック, 60枚",
+      "brand": "スキンフード",
+      "price_jpy": 3330,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1206841624",
+      "shop_id": "yoo_k1120",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -1140,12 +1172,11 @@
     "https://m.qoo10.jp/shop/KAWAIBEAUTY",
     "https://m.qoo10.jp/shop/radiantmood",
     "https://m.qoo10.jp/shop/dgrm",
-    "https://m.qoo10.jp/shop/kkcosme"
+    "https://m.qoo10.jp/shop/kkcosme",
+    "https://m.qoo10.jp/shop/yoo_k1120",
+    "https://m.qoo10.jp/shop/lupio"
   ],
   "pending_keywords": [
-    "シュガービームハイライター 01.Heart berry",
-    "マダガスカル センテラ ヒアル シカ シルキーフィット サンスティック SPF50+ PA++++",
-    "デイリーダマクレンジングパッドマイルド +",
     "マスターズ プロパッチ 2ステップ UVパッチ",
     "プレミアム コラーゲン ナイテ スレッド ネッククリーム3.0 + 1000ショット ネックスティック2.0 首元ケア 首しわ ハリ 弾力 保湿 韓国",
     "エガ割コラボ ポアタイトニング トナーパッド 2 毛穴ケア 角質ケア 保湿 クーリング接触冷感拭き取りパッドAHA BHA PHA 韓国スキンケア オリ",
@@ -1298,16 +1329,34 @@
     "ゼロ毛穴クレイパック",
     "センテラTECAアンプル",
     "トーン&amp;スポットコレクターアンプル",
-    "トーン&amp;スポットコレクターアンプル"
+    "トーン&amp;スポットコレクターアンプル",
+    "アラミス 香水アラミスマンオードトワレットEDT",
+    "プロアイパレットエアー 20 メファリボン",
+    "ゆずグロウ ボディエマルジョン ビーガン·ボディローション",
+    "キャロット カロチン カーミング ウォーターパッド マスクパック",
+    "眉毛脱色 イージーブロウトーン チェンジャー 分"
   ],
   "seen_keywords": [
+    "シュガービームハイライター 01.Heart berry",
+    "マダガスカル センテラ ヒアル シカ シルキーフィット サンスティック SPF50+ PA++++",
+    "メディヒール エッセンシャルマスクパック",
     "緑豆弱酸性 クレンジングフォーム",
-    "メディヒール エッセンシャルマスクパック"
+    "デイリーダマクレンジングパッドマイルド +"
   ],
   "keyword_stats": {
     "2": {
-      "keywords": 2,
+      "keywords": 3,
       "shops": 3,
+      "saved": 0
+    },
+    "3-4": {
+      "keywords": 1,
+      "shops": 1,
+      "saved": 2
+    },
+    "5+": {
+      "keywords": 1,
+      "shops": 0,
       "saved": 0
     }
   },
