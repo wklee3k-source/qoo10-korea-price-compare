@@ -185,23 +185,18 @@ def t18_no_optional_path_mixed_in_git_add():
     check("18 git add 경로 혼합 금지(archive/ 등)", not bad, f"{bad}")
 
 
-# --------------------- #20 시간기반 안전망(ensure_discovery_alive) 존재
-#  merge job 내부의 재기동이 5회 재시도 다 실패해도, 매시 정각 크론이
-#  올 때마다 독립적으로 "발굴이 실제로 살아있는지" 재확인해서 죽어있으면
-#  다시 켜는 별도 job이 있어야 한다. 그래야 이번 시간 복구가 실패해도
-#  다음 정각에는 반드시 정상화된다.
-def t20_hourly_safety_net_exists():
-    wf = WF.read_text(encoding="utf-8")
-    ok_job_exists = "  ensure_discovery_alive:" in wf
-    block = wf.split("  ensure_discovery_alive:")[1].split("\n  auto_translate:")[0] if ok_job_exists else ""
-    needs_merge = bool(re.search(r"needs:\s*merge_discovery_shards", block))
-    always_regardless = bool(re.search(r"if:\s*always\(\)\s*&&", block))
-    checks_current_state = "status=in_progress" in block and "discover_low_review_shops" in block
-    revives_if_dead = "alive == '0'" in block or 'alive == "0"' in block
-    ok = ok_job_exists and needs_merge and always_regardless and checks_current_state and revives_if_dead
-    check("20 시간기반 안전망(ensure_discovery_alive)", ok,
-          f"job존재{ok_job_exists} merge후실행{needs_merge} always(){always_regardless} "
-          f"생존확인{checks_current_state} 복구조건{revives_if_dead}")
+# --------------------- #20 [폐기됨, v7.46.0] 시간기반 안전망
+#  (ensure_discovery_alive) — 예전엔 이 job이 있어야 한다고 검사했다.
+#  실측으로 이 전제 자체가 틀렸다는 게 드러났다: 이 job은 merge job
+#  안에서만 실행되는데(needs: merge_discovery_shards), 병합은 발굴이
+#  살아있어야 걸리는 임계치 트리거로만 열린다. 발굴이 완전히 멈추면
+#  병합도 안 걸리고, 병합이 안 걸리면 이 "안전망"도 같이 죽는다 —
+#  "죽었는지 확인해주는 장치"가 정작 죽어야 하는 순간에 자기도 같이
+#  죽는 모순이다(2026-08-13 실측: 발굴·수확 둘 다 완전정지, 아무것도
+#  못 깨움). 그래서 ensure_discovery_alive/ensure_harvest_alive 둘 다
+#  걷어내고, 내부 상태와 무관하게 무조건 주기적으로 발굴·수확을 켜는
+#  외부 크론(크론A, discovery_parallel+run_harvest_catalog)으로
+#  대체했다. 이 검사 항목은 더 이상 유효하지 않아 제거한다.
 
 
 # --------------------- #19 병합 전후 발굴 일시정지/재기동 (push경합 방지)
