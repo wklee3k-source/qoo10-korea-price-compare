@@ -43,13 +43,35 @@ def apply(verified_path: str, collected_path: str, dry_run: bool = False) -> int
 
     rows = json.loads(vpath.read_text(encoding="utf-8"))
     collected = json.loads(cpath.read_text(encoding="utf-8"))
+    # [v7.48.8] 예전엔 이름 있는 것만 by_goods에 담아서, 수집기를 돌렸지만
+    # 이름을 못 가져온 건(실측 2,696건 중 107건)은 흔적이 전혀 안 남았다.
+    # 그러면 나중에 "아직 안 돌린 것"과 "돌렸는데 실패한 것"을 구분할 수
+    # 없어서 보완 잔여 건수를 정확히 셀 수 없다(실측 2026-08-14: 잔여를
+    # api_name 유무로 역추적하다가 숫자가 안 맞았음). 시도 자체를 기록하는
+    # attempted와, 실제 값 반영용 by_goods를 분리한다.
+    attempted = {str(c.get("goods_no")): c for c in collected if c.get("goods_no")}
     by_goods = {str(c.get("goods_no")): c for c in collected if c.get("name")}
     print(f"[입력] 검증본 {len(rows):,}건 · 수집분 {len(collected):,}건"
-          f"(이름 있는 것 {len(by_goods):,}건)")
+          f"(이름 있는 것 {len(by_goods):,}건, 시도 {len(attempted):,}건)")
 
-    n_name = n_price = n_image = n_url = 0
+    n_name = n_price = n_image = n_url = n_attempt = 0
     for r in rows:
-        c = by_goods.get(str(r.get("goods_no")))
+        gno = str(r.get("goods_no"))
+        # [v7.48.8] 수집기가 이 상품을 시도했다는 사실은 성공/실패와
+        # 무관하게 먼저 기록한다 — 이게 "보완 잔여 건수"를 세는 유일한
+        # 정확한 근거다.
+        a = attempted.get(gno)
+        if a:
+            r["page_collect_attempted_at"] = a.get("collected_at")
+            if not (a.get("name") or "").strip():
+                r["page_collect_failed"] = True
+                r["page_collect_error"] = a.get("error") or "이름 없음"
+            else:
+                r.pop("page_collect_failed", None)
+                r.pop("page_collect_error", None)
+            n_attempt += 1
+
+        c = by_goods.get(gno)
         if not c:
             continue
 
@@ -98,6 +120,8 @@ def apply(verified_path: str, collected_path: str, dry_run: bool = False) -> int
         r["page_via"] = c.get("via")
 
     print(f"[반영] 상품명 {n_name:,} · 가격 {n_price:,} · 사진 {n_image:,} · 구매링크 {n_url:,}")
+    print(f"[수집시도 기록] {n_attempt:,}건 — 이 값(page_collect_attempted_at)으로 "
+          f"'아직 수집기 안 돌린 건'을 정확히 셀 수 있다")
     if dry_run:
         print("[모의실행] 파일을 쓰지 않았다")
         return 0
