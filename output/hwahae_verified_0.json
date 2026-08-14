@@ -52753,5 +52753,261 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1136047239",
+    "translated_kr": "【1+1】【한국화장품】【정규품 취급점】 액씨 크림 AACI 크림 20ml+20ml - 팔자주름 대책에 최적!",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "리코테카 진정 수분 크림",
+      "naver_web": "악시크림 팔자 주름에 좋다고해서 써보려구요^^ 상품 사용",
+      "naver_rematch": "[더리즈] ✨스쿠알란 180,000ppm✨ 리코테카 진정 수분 크림 75ml"
+    },
+    "brand": "더리즈 (TheLeeds)",
+    "name": "더리즈 ✨스쿠알란 180,000ppm✨ 리코테카 진정 수분 크림 75ml",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": "23000",
+    "mall": "지그재그",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://zigzag.kr/link/bridge?product_id=155420751&shop_id=49560&utm_source=shopping_naver_all&tab=recommendation",
+    "image_url": "https://cf.product-image.s.zigzag.kr/original/d/2025/7/14/49560_202507141348450630_93068.jpeg?width=720&amp;height=720&amp;quality=80&amp;format=jpeg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5200079/52000790351.2.jpg",
+        "mall": "지그재그",
+        "link": "https://zigzag.kr/link/bridge?product_id=155420751&shop_id=49560&utm_source=shopping_naver_all&tab=recommendation"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8915482/89154825601.5.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/11610315195"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8822998/88229980095.6.jpg",
+        "mall": "더리즈 TheLeeds",
+        "link": "https://smartstore.naver.com/main/products/10685474173"
+      }
+    ],
+    "real_page_title": "지그재그 스토어",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "악시크림 팔자 주름에 좋다고해서 써보려구요^^ 상품 사용",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_5200079/52000790351.2.jpg",
+    "page_collected_at": "2026-08-01T15:26:03",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-14T06:20:04",
+    "reverify_note": "합의부족(1곳)"
+  },
+  {
+    "goods_no": "1179005673",
+    "translated_kr": "1025 독도 워터 젤 10장 보습 마스크 수광 피부 민감 피부 한국 인기",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "PRESS"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1204219236",
+    "translated_kr": "【NEW】 워터 뱅크 블루 톤업 선스크린 SPF50+ 50ml【선크림 20ml 증정】 붉기 커버/보습 베리어 보호/자연스러운 톤업",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "피부 타입별 완벽한 최신 선크림 가이드",
+      "naver_web": "코스알엑스 알로에 54.2 아쿠아 톤업 선스크린 SPF50+ PA++++, , 1개"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190175438",
+    "translated_kr": "노 세밤 선쿠션 EX SPF50+ PA++++ 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "빙하유/방송 일화/2024년"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1171638346",
+    "translated_kr": "입사 ME n 의약부외품 175ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "탭 미 팔레트 듀오 [N°2 그루비]",
+      "daum": "고졸 채용정보",
+      "naver_web": "ipsa"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1148269996",
+    "translated_kr": "사봉 리페어 컨디셔너 190ml 섬세한·재스민 2025년 05월 01일부터 순차 발송",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1199289175",
+    "translated_kr": "셀 퍼퓨메이션 핸드 이브닝 글로우 15ml/30ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "부가통신사업자현황"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1213426114",
+    "translated_kr": "실키 벨벳 브라이트 부스팅 바디워시 750ml / 색소침착 케어 / 윤기 피부 / 약산성 /톤 케어",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "열판이 움직이는 가정용 쿠션매직기 NEW YB-3100",
+      "naver": "바디언스 실키벨벳 브라이트 부스팅 향좋은 바디워시 750ml 피부톤케어 칙칙한 피부용",
+      "daum": "NEW SEASON, NEW BEAUTY!",
+      "naver_web": "뷰티 : 네이버+ 스토어 : 상품상세 : 바디언스 퍼펙트바디 전신 반 톤업 미백 크림 겨드랑이 팔꿈치 사타구니 착...."
+    },
+    "brand": "바디언스",
+    "name": "바디언스 실키벨벳 브라이트 부스팅 향좋은 바디워시 750ml 피부톤케어 칙칙한 피부용",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 24800,
+    "mall": "바디언스",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://bodiance.net/product/detail.html?product_no=86&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open",
+    "image_url": "https://bodiance.net/web/product/big/202606/f1313cea1fb179f518316561340490fa.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6019226/60192262057.2.jpg",
+        "mall": "바디언스",
+        "link": "https://bodiance.net/product/detail.html?product_no=86&cate_no=24&display_group=1&utm_source=naver&utm_medium=shopping&utm_campaign=knowledge_shopping&mkt_in=Y&ghost_mall_id=naver&ref=naver_open"
+      }
+    ],
+    "real_page_title": "바디언스 실키벨벳 브라이트 부스팅 향좋은 바디워시 750ml 피부톤케어 칙칙한 피부용",
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_6019226/60192262057.2.jpg",
+    "page_collected_at": "2026-08-01T16:18:00",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-14T06:23:27",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1211372508",
+    "translated_kr": "[NEW] c-PDRN 부스터 샷 젤 마스크 5장 1개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "뉴 시즌 신상 뷰티 리스트",
+      "naver_web": "N배송 : 네이버+ 스토어 : 리쥬란 c"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1205223118",
+    "translated_kr": "【공식】 플로랄·머스크향 추천 베란다 30ml 오드 파르팡 라일락 그린 플로랄 머스크 정원 가득한 꽃들과 그린한 풀의 향기의 퍼퓨메이션 프래그런스 향수",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
