@@ -495,11 +495,18 @@ jobs:
             THRESHOLD="${{ inputs.merge_threshold || '500' }}"
             if [ "$THRESHOLD" != "0" ]; then
               NEW_COUNT=$(python3 -c "
-          import json, pathlib, glob
+          import json, pathlib
+          # [v7.46.1] glob('discovery_state_*.json')이었을 때, 워커수를
+          # 10->6으로 줄이면서 안 지운 유령 샤드(6~9번)까지 같이 세서
+          # 기준선이 1,829건 부풀었던 실측 사고가 있었다. 지금 워커수(6)
+          # 만큼만 범위를 고정해서 센다 — 워커수 또 바뀌면 이 숫자(6)도
+          # 같이 고칠 것(simulation.py가 검사한다).
+          WORKERS = 6
           total = 0
-          for f in glob.glob('../output/discovery_state_*.json'):
+          for i in range(WORKERS):
+              f = pathlib.Path(f'../output/discovery_state_{i}.json')
               try:
-                  total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+                  total += len(json.loads(f.read_text())['all_products'])
               except Exception:
                   pass
           base = 0
@@ -939,12 +946,16 @@ jobs:
             # [v3.5.0] 자동통합 기준선 기록 — 발굴 워커가 "지난 통합 이후
             # 몇 건이 새로 쌓였는지"를 알려면 통합 시점의 샤드 합계를
             # 남겨둬야 한다. 통합 자체가 샤드 파일을 비우지 않기 때문이다.
+            # [v7.46.1] 여기도 워커수(6)로 고정 — 위 NEW_COUNT 계산과
+            # 반드시 같은 범위를 세어야 기준선이 안 어긋난다.
             python3 -c "
-          import json, pathlib, glob
+          import json, pathlib
+          WORKERS = 6
           total = 0
-          for f in glob.glob('../output/discovery_state_*.json'):
+          for i in range(WORKERS):
+              f = pathlib.Path(f'../output/discovery_state_{i}.json')
               try:
-                  total += len(json.loads(pathlib.Path(f).read_text())['all_products'])
+                  total += len(json.loads(f.read_text())['all_products'])
               except Exception:
                   pass
           pathlib.Path('../output/merge_baseline.json').write_text(
