@@ -69189,5 +69189,296 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1211677072",
+    "translated_kr": "부케가르니 바디워시 베이비 파우더 520ml BGA-FGBWBABYPOWDER-520",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1183992449",
+    "translated_kr": "[몬치치 콜라보] 세라마이드 아트 로션 (+몬치치 파우치) 【한국 올리브영 구매대행】",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "이창섭이 공개한 인 마이 트래블 백.jpg",
+      "naver_web": "세라마이딘™ 스킨 베리어 모이스처라이징 밀키로션"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1099426302",
+    "translated_kr": "스킨 트러블 케어 마스크 3장 세트",
+    "winner_source": "naver",
+    "candidates_summary": {
+      "hwahae": "굿바이트러블 플러스 라이트 크림",
+      "naver": "[신제품 3장세트]페이셀 스킨리프팅 엑소좀 겔마스크 영양 보습 탄력케어 인체제대혈겔마스크 베이비콜라겐마스크",
+      "daum": "서브제로",
+      "naver_web": "닥터3 굿바이트러블 플러스 라이트 크림"
+    },
+    "brand": "닥터3 (DOCTOR.3)",
+    "name": "[신제품 3장세트]페이셀 스킨리프팅 엑소좀 겔마스크 영양 보습 탄력케어 인체제대혈겔마스크 베이비콜라겐마스크",
+    "volume": "",
+    "source": "hwahae+naver",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 30000,
+    "mall": "델라루즈 코스메틱",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/11433223743",
+    "image_url": "https://shop-phinf.pstatic.net/20250205_223/1738734968916N03dO_JPEG/18683733548462893_39654972.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8897773/88977734108.jpg",
+        "mall": "델라루즈 코스메틱",
+        "link": "https://smartstore.naver.com/main/products/11433223743"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8829027/88290272045.4.jpg",
+        "mall": "더뷰티파마씨",
+        "link": "https://smartstore.naver.com/main/products/10745766123"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_8897773/88977734108.jpg",
+    "page_collected_at": "2026-08-01T15:22:34",
+    "page_via": "API",
+    "reverify_missed_at": "2026-08-14T13:12:39",
+    "reverify_note": "합의부족(0곳)"
+  },
+  {
+    "goods_no": "1145594718",
+    "translated_kr": "【한국 화장품】【정품 취급점】실크 펩타이드 인텐시브 리프팅 앰플 35ML",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+      "daum": "성분에디터 실크 펩타이드 인텐시브 리프팅 앰플, 1개,",
+      "naver_web": "호주에서 성분 에디터 실크 펩타이드 인텐시브 리프팅 앰플 구매"
+    },
+    "brand": "성분에디터 (SUNGBOONeditor)",
+    "name": "실크 펩타이드 인텐시브 리프팅 앰플 쿠션 [SPF50+/PA++++] [21호 라이트]",
+    "volume": "13g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 42000,
+    "mall": "성분에디터",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://smartstore.naver.com/main/products/12483228203",
+    "image_url": "https://shop-phinf.pstatic.net/20260624_68/17822852288742MLqb_JPEG/111646846400072556_855207552.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9002773/90027739028.6.jpg",
+        "mall": "성분에디터",
+        "link": "https://smartstore.naver.com/main/products/12483228203"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9116768/91167684255.1.jpg",
+        "mall": "성분에디터",
+        "link": "https://smartstore.naver.com/main/products/13623173838"
+      },
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_9123261/91232610234.jpg",
+        "mall": "A-O Company",
+        "link": "https://smartstore.naver.com/main/products/13688098949"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1202835213",
+    "translated_kr": "쑥 쿨링 커밍 젤 100ml / 알로에베라 / 열감 진정 / 나이트팩 / 진정팩 / 민감성 피부 / 트러블 / 열감 진정",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195110594",
+    "translated_kr": "비타 C 플러스 스팟 코렉팅&파밍 앰플 40ml 2개",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "2025 뷰티방 어워즈 <기초템> 부문",
+      "naver_web": "메디큐브 TXA 흔적 토닝 세럼"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1196714483",
+    "translated_kr": "[정품] 레티놀 레티제션 세럼 30ml 1개",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "레티놀 레티젝션 세럼",
+      "daum": "아 노 마 아 로 마 올 – 1led 스탠드 충전 가능 폴 더 스탠드 기타 피아노 악보 등, 1개",
+      "naver_web": "아이오페 레티놀 레티제션 세럼"
+    },
+    "brand": "아이오페 (IOPE)",
+    "name": "레티놀 레티젝션 세럼",
+    "volume": "30ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 59000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.aritaum.com/mweb/shop/product/productView/P0000000000000065864.do?i_sMobileCheck=Y",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1110101930",
+    "translated_kr": "포리젠 샴푸 500ml",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "폴리젠 플러스 탈모 완화 샴푸",
+      "musinsa": "저자극 볼륨강화 탈모샴푸 폴리젠 씨크닝 샴푸 500ml",
+      "daum": "26세 유전성 탈모 선배님들 도움 간절합니다 ㅠㅠ",
+      "naver_web": "포리젠 샴푸"
+    },
+    "brand": "닥터포헤어 (Dr.FORHAIR)",
+    "name": "포리젠 샴푸",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 5000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.musinsa.com/search/goods?keyword=%ED%8F%AC%EB%A6%AC%EC%A0%A0+%EC%83%B4%ED%91%B8",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1132572987",
+    "translated_kr": "살롱10 앰플헤어미스트 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "살롱 플러스 클리닉 10 글로우 앰플 트리트먼트",
+      "daum": "다이소 #신상헤어 케어💧부터 스타일링까지💫 #헤어오일 #헤어에센스 #헤어미스트 #헤어카라 #드라이샴푸패드",
+      "naver_web": "아모레퍼시픽헤어바디 🤍10초물미역템🤍 \"뿌리는 트리트먼트\" 살롱10 펩타이...."
+    },
+    "brand": "미쟝센 (miseenscene)",
+    "name": "살롱 플러스 클리닉 10 글로우 앰플 트리트먼트",
+    "volume": "200ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 12900,
+    "mall": "아모레퍼시픽공식몰",
+    "seller_trust": "공식몰",
+    "product_url": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70587&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=miseenscene",
+    "image_url": "https://shopping-phinf.pstatic.net/main_6083078/60830780596.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_6083078/60830780596.jpg",
+        "mall": "아모레퍼시픽공식몰",
+        "link": "https://www.amoremall.com/kr/ko/product/detail?onlineProdSn=70587&utm_source=naver&utm_medium=sa&utm_campaign=ao_naver_shopping&utm_content=miseenscene"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "958808136",
+    "translated_kr": "클리어스킨 8% AHA 에센스 100ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "클리어 스킨 8% 아하 에센스",
+      "daum": "안 맞는 화장품으로 생긴 이마 좁쌀여드름 진정에 효과적인 스킨케어 추천 부탁드려요",
+      "naver_web": "구매하다 Isntree 밤나무 AHA 8% 클리어 에센스 in Australia"
+    },
+    "brand": "이즈앤트리 (IsNtree)",
+    "name": "클리어 스킨 8% 아하 에센스",
+    "volume": "100ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 12000,
+    "mall": "대구백화점",
+    "seller_trust": "스마트스토어",
+    "product_url": "https://smartstore.naver.com/main/products/6663775541",
+    "image_url": "https://shop-phinf.pstatic.net/20230204_218/16755036761555vx7Q_JPEG/873221795855_35658_01.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_8420827/84208275863.1.jpg",
+        "mall": "대구백화점",
+        "link": "https://smartstore.naver.com/main/products/6663775541"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
   }
 ]
