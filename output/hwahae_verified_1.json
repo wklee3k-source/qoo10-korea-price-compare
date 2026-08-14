@@ -67117,5 +67117,246 @@
     "product_url": null,
     "image_url": null,
     "image_candidates": []
+  },
+  {
+    "goods_no": "1120927911",
+    "translated_kr": "아일린뷰티크림 바디크림 보습 건성피부 민감피부 손거칠음 크림 보습크림 촉촉함 윤기 탄력 알로에 대용량 215g 핸드크림 남성 여성 페이스크림",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "더페이스샵/제품"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1168987055",
+    "translated_kr": "EX-PDRN 글로우크림 100ml 1+1",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "PDRN+ 1% 딥 글로우 토너",
+      "daum": "에스쁘아",
+      "naver_web": "프롬제로 EX PDRN 글로우 크림 / 식물성 PDRN x 엑소좀"
+    },
+    "brand": "리더스 (LEADERS)",
+    "name": "프롬제로 EX PDRN 글로우 크림 / 식물성 PDRN x 엑소좀",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 45000,
+    "mall": "프리비아호텔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://hotel.priviatravel.com/nview?htlMasterId=156309&occupancies=1~2~0&checkIn=2026-08-03&checkOut=2026-08-04&utm_id=phdsel2301ss00369&utm_campaign=hotel_dom_seoul&utm_medium=ss&utm_source=naver&utm_content=156309",
+    "image_url": "https://yaimg.yanolja.com/v5/2026/02/09/06/69897ad873a9f7.04310176.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5146420/51464201755.1.jpg",
+        "mall": "프리비아호텔",
+        "link": "https://hotel.priviatravel.com/nview?htlMasterId=156309&occupancies=1~2~0&checkIn=2026-08-03&checkOut=2026-08-04&utm_id=phdsel2301ss00369&utm_campaign=hotel_dom_seoul&utm_medium=ss&utm_source=naver&utm_content=156309"
+      }
+    ],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_previous": true
+  },
+  {
+    "goods_no": "1168945820",
+    "translated_kr": "EX-PDRN 글로우세럼 100ml 1+1",
+    "winner_source": "naver_web",
+    "candidates_summary": {
+      "hwahae": "PDRN+ 1% 딥 글로우 토너",
+      "daum": "서울에서 K",
+      "naver_web": "프롬제로 프롬제로 EX",
+      "naver_rematch": "[서울특별시] 건대 호텔 K World / 광진구 호텔"
+    },
+    "brand": "리더스 (LEADERS)",
+    "name": "건대 호텔 K World",
+    "volume": "",
+    "source": "naver_web",
+    "naver_rematched": true,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 150000,
+    "mall": "프리비아호텔",
+    "seller_trust": "브랜드직영추정",
+    "product_url": "https://hotel.priviatravel.com/nview?htlMasterId=156309&occupancies=1~2~0&checkIn=2026-08-03&checkOut=2026-08-04&utm_id=phdsel2301ss00369&utm_campaign=hotel_dom_seoul&utm_medium=ss&utm_source=naver&utm_content=156309",
+    "image_url": "https://yaimg.yanolja.com/v5/2026/02/09/06/69897ad873a9f7.04310176.jpg",
+    "image_candidates": [
+      {
+        "url": "https://shopping-phinf.pstatic.net/main_5146420/51464201755.1.jpg",
+        "mall": "프리비아호텔",
+        "link": "https://hotel.priviatravel.com/nview?htlMasterId=156309&occupancies=1~2~0&checkIn=2026-08-03&checkOut=2026-08-04&utm_id=phdsel2301ss00369&utm_campaign=hotel_dom_seoul&utm_medium=ss&utm_source=naver&utm_content=156309"
+      }
+    ],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ],
+    "api_name": "프롬제로 프롬제로 EX",
+    "api_price": "70840",
+    "api_image_url": "https://shopping-phinf.pstatic.net/main_5146420/51464201755.1.jpg",
+    "page_collected_at": "2026-08-01T16:36:35",
+    "page_via": "ld+json",
+    "reverify_missed_at": "2026-08-14T12:24:22",
+    "reverify_note": "점수미달(-5.5)"
+  },
+  {
+    "goods_no": "1207750361",
+    "translated_kr": "한국의 피부과·병의원전용 핑크S-PDRN앰플 200ml 미용피부과 대용량 연어주사 수광피부 에센스 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "엑셀다운로드"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207748131",
+    "translated_kr": "한국의 피부과·병의원전용 PDRN할라마이드크림 200ml 닥터스코스메 피부과 보습 피부베리어 탄력 페이스크림",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "인진쑥 진정 보습 세럼",
+      "daum": "[2019"
+    },
+    "reject_reason": "점수미달(-5.5)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1195134429",
+    "translated_kr": "[공식 / Qoo10한정] IAM 헤어밀크기획세트 / 헤어밀크 / 헤어케어 / 한국헤어케어 / 대미지케어 / 헹궈내지않는트리트먼트 / 헤어에센스 / 특전 포함",
+    "winner_source": null,
+    "candidates_summary": {
+      "hwahae": "IAM 스칼프 샷"
+    },
+    "reject_reason": "합의부족(1곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1207548893",
+    "translated_kr": "BN&K 마스크팩 1종류 20장 세트 마스크팩 스킨케어 개별포장 팩 페이스마스크 페이스팩 한국화장품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "해외시장뉴스_러시아 화장품시장동향과 우리기업진출전략_KOTRA_2017.PDF"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1200726065",
+    "translated_kr": "10개세트 미용 비누 허브비누 85g 한국화장품 한방 비누 고형비누 클렌징 어린이 데오드란트 홍삼 모공 건조 피부트러블",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "제 134 호 2016년 10월",
+      "naver_web": "엑셀다운로드"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1194262911",
+    "translated_kr": "[공식] 토너 재건탄력세트 수분폭탄세트 윤미백세트 토너 클렌징 보습크림스킨케어 젤텍스처 로션하니 히아로텐 도마리노크림 라티닉스",
+    "winner_source": null,
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1172442548",
+    "translated_kr": "[공식] 로션 보습크림 히아로텐크림 50g 건조 수분공급 고보습 윤기피부 모공 탄력 탄력윤 한국화장품 살롱전용품",
+    "winner_source": null,
+    "candidates_summary": {
+      "daum": "20170303111608_2017_03.04_judanhak_web_PDF11.compressed.pdf"
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
   }
 ]
