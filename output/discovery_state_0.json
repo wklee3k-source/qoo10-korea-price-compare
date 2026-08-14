@@ -1,15 +1,17 @@
 {
   "visited_shops": [
+    "topkorea",
+    "charmang",
     "bkyul",
-    "GlowMee",
-    "oreumpick",
-    "Asteroid",
+    "K-Blush",
+    "medihealofficial",
     "yunimaru",
     "hokkorikorea",
-    "topkorea",
+    "dokomi",
+    "GlowMee",
     "daisyyoung",
-    "K-Blush",
-    "charmang"
+    "oreumpick",
+    "Asteroid"
   ],
   "all_products": [
     {
@@ -386,6 +388,21 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1215099041",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/796/424/8431424796.g_300-w-st_g.jpg",
+      "title": "【公式】【ダーマライン限定200円クーポン配布中！】【NEW】ダーマドナー250mL (PDRN/マデカッソシド/ティーツリ)",
+      "brand": "メディヒール",
+      "price_jpy": 2130,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1215099041",
+      "shop_id": "medihealofficial",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -398,7 +415,9 @@
     "https://m.qoo10.jp/shop/bkyul",
     "https://m.qoo10.jp/shop/oreumpick",
     "https://m.qoo10.jp/shop/GlowMee",
-    "https://m.qoo10.jp/shop/charmang"
+    "https://m.qoo10.jp/shop/charmang",
+    "https://m.qoo10.jp/shop/dokomi",
+    "https://m.qoo10.jp/shop/medihealofficial"
   ],
   "pending_keywords": [
     "メディヒール エッセンシャルマスクパック",
@@ -446,7 +465,12 @@
     "オールデイブラーメイクアップセッティングフィックスミスト",
     "ミニメイクアップセッティングフィックスミスト",
     "ハンミ薬品 プロカム パンテノールリップエッセンス チューブタイプ",
-    "オールデイ フェイス プレップ フィクサー 2種"
+    "オールデイ フェイス プレップ フィクサー 2種",
+    "マスク ( ミルクブライトニング",
+    "マデカッソシドモイスチャーサンセラム",
+    "ダーマドナー",
+    "3ミニッツマスク",
+    "ホワイトミルクブライトニング クリーム"
   ],
   "seen_keywords": [],
   "keyword_stats": {},
