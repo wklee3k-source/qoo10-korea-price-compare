@@ -606,8 +606,23 @@ def _score_candidate(cand: dict, known_brand: str, known_volume: str, others: li
         # 도 서로 다른 제품으로 오판해서, 정상적으로 맞는 매칭에까지 잘못
         # 페널티를 줄 위험이 있다(실측으로 확인됨). 편집거리 기반 유사도로
         # 완화해서, 꽤 비슷한 단어면 "겹침"으로 인정한다.
+        #
+        # [v7.48.6 — 실측 사고 수정] "token in c or c in token" 부분문자열
+        # 체크가 짧은 토큰에서 오작동했다. 원본 특이토큰 "hyaluronic"이
+        # 후보 토큰 "on"을 부분문자열로 포함한다(hyalur-ON-ic)는 이유만으로
+        # "겹친다"고 오판해서, "Alpha Arbutin...Hyaluronic Acid..."라는
+        # 원본이 완전히 무관한 영어 블로그 글("We Spotted The Solution...")
+        # 과 매칭 통과된 사고가 있었다(2026-08-14). 짧은 토큰(4자 미만)은
+        # 아무 단어에나 우연히 부분문자열로 들어가기 쉬우므로, 부분문자열
+        # 체크는 둘 다 4자 이상일 때만 적용한다. difflib 유사도 체크도
+        # 같은 이유로 짧은 문자열에서 비율이 쉽게 튀므로 동일한 길이
+        # 제한을 건다.
         def _similar_to_any(token, candidates):
             for c in candidates:
+                if len(token) < 4 or len(c) < 4:
+                    if token == c:
+                        return True
+                    continue
                 if token in c or c in token:
                     return True
                 if difflib.SequenceMatcher(None, token, c).ratio() >= 0.75:
