@@ -1,13 +1,15 @@
 {
   "visited_shops": [
+    "bkyul",
+    "GlowMee",
+    "oreumpick",
+    "Asteroid",
+    "yunimaru",
+    "hokkorikorea",
     "topkorea",
     "daisyyoung",
-    "yunimaru",
     "K-Blush",
-    "bkyul",
-    "oreumpick",
-    "hokkorikorea",
-    "Asteroid"
+    "charmang"
   ],
   "all_products": [
     {
@@ -324,6 +326,66 @@
       "review_count": 0,
       "passes_filter": true,
       "skip_reason": null
+    },
+    {
+      "goods_no": "1211960584",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/832/257/8376257832.g_300-w-st_g.jpg",
+      "title": "ダイブイングロウミスト, 120ml",
+      "brand": "トリデン",
+      "price_jpy": 1850,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1211960584",
+      "shop_id": "GlowMee",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 5,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1200827735",
+      "rank": 3,
+      "image_url": "https://gd.image-qoo10.jp/li/546/974/8260974546.g_300-w-st_g.jpg",
+      "title": "5番 白玉グルタチオン100xTXA10集中トーニング美容液",
+      "brand": "ナンバーズイン",
+      "price_jpy": 1900,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1200827735",
+      "shop_id": "GlowMee",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 2,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1199430782",
+      "rank": 2,
+      "image_url": "https://gd.image-qoo10.jp/li/259/677/8139677259.g_300-w-st_g.jpg",
+      "title": "[NEW]オールデイブラーメイクアップセッティングフィックスミスト75ml/ふんわり密着/メイクキープスプレー",
+      "brand": "ソーナチュラル",
+      "price_jpy": 2280,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1199430782",
+      "shop_id": "charmang",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 4,
+      "passes_filter": true,
+      "skip_reason": null
+    },
+    {
+      "goods_no": "1214806760",
+      "rank": 4,
+      "image_url": "https://gd.image-qoo10.jp/li/500/638/8412638500.g_300-w-st_g.jpg",
+      "title": "【正規品】ハンミ薬品 プロカム パンテノールリップエッセンス チューブタイプ,12g/proclam",
+      "brand": "Hanmi PRO-CALM",
+      "price_jpy": 779,
+      "item_url": "https://m.qoo10.jp/gmkt.inc/Mobile/Goods/goods.aspx?goodscode=1214806760",
+      "shop_id": "charmang",
+      "category_gdlc_cd": "120000012",
+      "has_options": false,
+      "review_count": 0,
+      "passes_filter": true,
+      "skip_reason": null
     }
   ],
   "shop_urls": [
@@ -334,7 +396,9 @@
     "https://m.qoo10.jp/shop/yunimaru",
     "https://m.qoo10.jp/shop/topkorea",
     "https://m.qoo10.jp/shop/bkyul",
-    "https://m.qoo10.jp/shop/oreumpick"
+    "https://m.qoo10.jp/shop/oreumpick",
+    "https://m.qoo10.jp/shop/GlowMee",
+    "https://m.qoo10.jp/shop/charmang"
   ],
   "pending_keywords": [
     "メディヒール エッセンシャルマスクパック",
@@ -372,7 +436,17 @@
     "bts オレオ ホワイトクリーム 登場 ホットク味 期間 韓国お菓子 OREOxBTS",
     "ドクダミ シカ クーリング 水分 クリーム スリーピング マスク兼用 鎮静 韓国コスメ",
     "ブルービーン B5-PDRN マイルドクリーム 韓国コスメ",
-    "キシリトール キャンディ オリジナル ジッパーバッグ キシリトール飴 子供 虫歯 ノンシュガー"
+    "キシリトール キャンディ オリジナル ジッパーバッグ キシリトール飴 子供 虫歯 ノンシュガー",
+    "イージーダム ニキビパッチ４種",
+    "ダイブイングロウミスト",
+    "5番 白玉グルタチオン100xTXA10集中トーニング美容液",
+    "ブースタープロミニプラス",
+    "アゼライン酸CICAスキンスージングモイスチャライザー",
+    "オールデイメイクフィクサー",
+    "オールデイブラーメイクアップセッティングフィックスミスト",
+    "ミニメイクアップセッティングフィックスミスト",
+    "ハンミ薬品 プロカム パンテノールリップエッセンス チューブタイプ",
+    "オールデイ フェイス プレップ フィクサー 2種"
   ],
   "seen_keywords": [],
   "keyword_stats": {},
