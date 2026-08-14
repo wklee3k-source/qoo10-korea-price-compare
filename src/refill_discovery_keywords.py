@@ -109,9 +109,19 @@ def collect_used_keywords(state_path: str, peer_dir: str | None) -> set[str]:
     return used
 
 
-def collect_pool_titles(pool_dir: str) -> set[str]:
-    """수확본 샤드에서 상품명만 모은다(읽기 전용 — 절대 수정하지 않는다)."""
+def collect_pool_titles(pool_dir: str) -> tuple[set[str], set[str]]:
+    """수확본 샤드에서 상품명과 브랜드명을 모은다(읽기 전용 — 절대 수정 안 함).
+
+    [v7.48.1 추가] 브랜드명도 별도로 모은다. 상품명에서 뽑은 핵심어는
+    이미 훑은 상점의 상품들이라 발굴이 예전에 써본 검색어와 점점 겹치는
+    구조적 문제가 있었다(실측 2026-08-14: 수확이 계속 늘어도 상품명
+    기반 신규 검색어는 0개). 브랜드명은 상품명보다 훨씬 작고 응집된
+    공간이라, 같은 상점 안에서만 도는 상품명 검색과 달리 "이 브랜드를
+    파는 다른 상점"으로 발굴을 유도할 가능성이 높다 — 상품명 검색과는
+    다른 새로운 검색 표면이다.
+    """
     titles: set[str] = set()
+    brands: set[str] = set()
     files = sorted(glob.glob(os.path.join(pool_dir, "fullcatalog_state*.json")))
     if not files:
         print(f"  [경고] 수확본을 못 찾음: {pool_dir}/fullcatalog_state*.json")
@@ -122,17 +132,32 @@ def collect_pool_titles(pool_dir: str) -> set[str]:
         products = data.get("all_products") or []
         items = products.values() if isinstance(products, dict) else products
         for item in items:
-            title = (item or {}).get("title")
+            item = item or {}
+            title = item.get("title")
             if title:
                 titles.add(title)
+            brand = item.get("brand")
+            if brand:
+                brands.add(brand)
         print(f"  [수확본] {os.path.basename(path)} 상품 {len(products):,}건")
-    return titles
+    return titles, brands
 
 
-def build_fresh_keywords(titles: set[str], used: set[str], worker: int, workers: int) -> list[str]:
+def build_fresh_keywords(titles: set[str], brands: set[str], used: set[str],
+                          worker: int, workers: int) -> list[str]:
     fresh: set[str] = set()
     for title in titles:
         keyword = shorten_keyword(extract_core_keyword(title))
+        if not keyword or keyword in used:
+            continue
+        if assign_worker(keyword, workers) != worker:
+            continue
+        fresh.add(keyword)
+    # [v7.48.1] 브랜드명도 후보에 추가. 상품명 파이프라인과 정제 방식이
+    # 다르다(핵심어 추출 불필요 — 브랜드명 자체가 이미 검색어로 적합한
+    # 길이) — 그냥 길이 정리만 하고 그대로 쓴다.
+    for brand in brands:
+        keyword = shorten_keyword(brand)
         if not keyword or keyword in used:
             continue
         if assign_worker(keyword, workers) != worker:
@@ -156,10 +181,10 @@ def refill(state_path: str, worker: int, workers: int, pool_dir: str,
     print(f"[보충 시작] 워커 {worker}/{workers}, 현재 pending {len(pending)}개")
     used = collect_used_keywords(state_path, peer_dir)
     print(f"  [제외집합] 이미 쓴/대기 검색어 {len(used):,}개")
-    titles = collect_pool_titles(pool_dir)
-    print(f"  [재료] 수확 상품명 {len(titles):,}건(고유)")
+    titles, brands = collect_pool_titles(pool_dir)
+    print(f"  [재료] 수확 상품명 {len(titles):,}건(고유), 브랜드 {len(brands):,}개(고유)")
 
-    fresh = build_fresh_keywords(titles, used, worker, workers)
+    fresh = build_fresh_keywords(titles, brands, used, worker, workers)
     print(f"  [신규] 이 워커 몫 {len(fresh):,}개")
     if not fresh:
         print("[보충 실패] 새 검색어가 0개 — 수확을 더 돌려야 한다")
