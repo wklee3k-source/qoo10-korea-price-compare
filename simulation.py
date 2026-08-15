@@ -2653,6 +2653,60 @@ def t17_unsellable_excluded():
     check("17-3 제외 건수 보고", "unsellable_count" in src)
 
 
+# ---------- #18 브랜드 확정 후 공식몰 구매링크 조회 (v7.52.0)
+def t18_brand_store_link():
+    """확정된 브랜드로 공식몰을 조회해 링크를 보완하는지, 그리고 그
+    판정이 다른 상품을 잡지 않는지.
+
+    [왜 검사하는가] 실측 2026-08-15: 이름은 확정됐고 지금도 팔리는데
+    링크만 없는 건이 182건이었다. 브랜드를 이미 알면서 판매몰에
+    물어보지 않아서다. 다만 링크는 한 번 잘못 붙으면 검수에서
+    걸러지지 않으므로, 오매칭 방지 쪽을 더 촘촘히 고정한다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from oliveyoung_link_finder import pick
+        from brand_store_router import learn_brand_stores, find_link  # noqa: F401
+    except Exception as e:  # noqa: BLE001
+        check("18 공식몰 조회 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    # 같은 라인의 다른 제품을 잡으면 안 된다(플러스 vs 라이트)
+    other = [{"goods_no": "A1",
+              "name": "[무기자차]스킨1004 마다가스카르 센텔라 에어핏 선크림 라이트 50ml"}]
+    check("18-1 라인 변종 오매칭 차단",
+          pick(other, "스킨1004",
+               "마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++]") is None)
+
+    # 대괄호 프로모션·용량이 붙어도 같은 상품이면 잡아야 한다
+    same = [{"goods_no": "A2",
+             "name": "[더블/4년연속1등] 라운드랩 자작나무 수분 선크림 50ml 더블 기획"}]
+    got = pick(same, "라운드랩", "자작나무 수분 선크림 [SPF50+/PA++++]")
+    check("18-2 프로모션 문구 무시하고 매칭", bool(got) and got["match_score"] >= 0.7)
+
+    # 브랜드가 다르면 무조건 거부
+    wrong = [{"goods_no": "A3", "name": "닥터지 밸런스풀 시카 진정 크림 80ml"}]
+    check("18-3 브랜드 불일치 거부",
+          pick(wrong, "토리든", "밸런스풀 시카 진정 크림") is None)
+
+    # 오픈마켓은 학습 대상에서 빠져야 한다(운영 방침: 공식 채널만)
+    rows = [
+        {"brand": "테스트 (TEST)", "product_url": "https://www.coupang.com/vp/products/1"},
+        {"brand": "테스트 (TEST)", "product_url": "https://www.oliveyoung.co.kr/store/goods/x"},
+    ]
+    learned = learn_brand_stores(rows)
+    hosts = learned.get("테스트", [])
+    check("18-4 오픈마켓 제외", "www.coupang.com" not in hosts and hosts)
+
+    # 검증 본체가 실제로 이 경로를 부르는지(연결 누락 방지)
+    src = (ROOT / "src" / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    check("18-5 검증이 공식몰 조회를 호출", "_find_brand_store_link" in src)
+    # 안 팔리는 건에는 조회하지 않아야 한다(무의미한 호출·차단 위험)
+    check("18-6 판매중지 건은 조회 안 함",
+          'entry.get("sale") is not False' in src
+          and 'entry.get("obsolete") is not True' in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

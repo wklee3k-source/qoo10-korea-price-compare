@@ -497,6 +497,29 @@ EXCLUDED_SHOP_RE = re.compile(
     r"interpark|tmon|wemakeprice)", re.I)
 
 
+_BRAND_STORE_MAP = None
+
+
+def _load_brand_store_map() -> dict:
+    """브랜드→몰 맵을 한 번만 읽는다. 없으면 빈 맵(올리브영만 조회)."""
+    global _BRAND_STORE_MAP
+    if _BRAND_STORE_MAP is None:
+        try:
+            _BRAND_STORE_MAP = json.loads(
+                (SCRIPT_DIR.parent / "data" / "brand_store_map.json")
+                .read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _BRAND_STORE_MAP = {}
+    return _BRAND_STORE_MAP
+
+
+def _find_brand_store_link(brand: str, name: str) -> dict | None:
+    """확정된 브랜드로 공식몰에서 구매링크를 찾는다."""
+    from brand_store_router import find_link
+
+    return find_link(brand, name, _load_brand_store_map())
+
+
 def _find_shop_url(product_name: str) -> str | None:
     """상품명으로 네이버 웹문서를 검색해 쇼핑몰 구매링크를 찾는다.
 
@@ -1164,6 +1187,31 @@ def run_batch(input_path: str, output_path: str, max_new: int | None = None):
                 print(f"    [웹문서링크] 구매링크 확보 — {_shop_url[:60]}")
                 entry["product_url"] = _shop_url
                 entry["url_from_web"] = True
+
+        # [v7.52.0] 웹문서로도 못 찾았으면, 확정된 브랜드로 공식몰에 직접
+        #  물어본다. 여기까지 왔다는 건 이름과 브랜드는 이미 정확히
+        #  알아냈다는 뜻인데, 그 정보를 들고도 판매몰에 물어보지 않아
+        #  링크 없이 끝나는 건이 많았다.
+        #  실측 2026-08-15: 이름확정·판매중인데 링크만 없는 건이 182건.
+        #  브랜드+상품명으로 공식몰을 조회하니 45%가 링크를 얻었다.
+        #  브랜드별로 어느 몰에서 나왔는지는 검증 결과에서 자동으로 배운다
+        #  (에스트라->아모레몰, 디오디너리->시코르 식).
+        #  단종·판매중지 건에는 하지 않는다 — 어차피 살 수 없다.
+        if (not entry.get("product_url")
+                and entry.get("name") and entry.get("brand")
+                and entry.get("sale") is not False
+                and entry.get("obsolete") is not True):
+            try:
+                _hit = _find_brand_store_link(entry.get("brand") or "",
+                                              entry.get("name") or "")
+            except Exception as _e:  # noqa: BLE001
+                print(f"    [공식몰조회 오류] {type(_e).__name__}: {_e}")
+                _hit = None
+            if _hit:
+                print(f"    [공식몰링크] {_hit['source']} — {_hit['product_url'][:60]}")
+                entry["product_url"] = _hit["product_url"]
+                entry["mall"] = _hit["source"]
+                entry["url_from_brand_store"] = True
 
         if not entry.get("product_url"):
             _prev = previous_by_goods.get(item["goods_no"])
