@@ -2791,6 +2791,46 @@ def t20_harvest_timeout_under_cron():
           bool(conc.get("group")) and conc.get("cancel-in-progress") is False)
 
 
+# ----- #21 한국 미판매 브랜드는 검증 대상에서 뺀다 (v7.55.0)
+def t21_foreign_brands_excluded():
+    """일본 브랜드가 검증 대상에 남아 시간을 잡아먹지 않는지.
+
+    [왜 검사하는가 — 실측 2026-08-15]
+    한국에서 사서 일본에 되파는 사업이므로 일본 브랜드는 애초에
+    대상이 아니다. 그런데 해외브랜드 목록이 34개뿐이라 엘쥬다·
+    시세이도·슈바르츠코프 같은 것들이 검증 대상에 그대로 들어가
+    화해·네이버를 계속 치고 있었다.
+
+    이 브랜드 상품 104건의 이름확정률은 21.2%로 전체 평균 46.2%의
+    절반도 안 됐다 — 한국에서 안 파니 어느 소스에서도 안 잡힌다.
+    목록을 300개로 늘려 830건을 검증 대상에서 뺐다.
+    """
+    fp = ROOT / "data" / "foreign_brands.json"
+    try:
+        foreign = set(json.loads(fp.read_text(encoding="utf-8")))
+    except Exception as e:  # noqa: BLE001
+        check("21 해외브랜드 목록 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    check("21-1 해외브랜드 목록이 채워져 있음", len(foreign) >= 200,
+          f"{len(foreign)}개 — 34개 수준이면 일본 브랜드가 그대로 통과한다")
+
+    # 실측에서 확인된 대표 일본 브랜드가 빠져 있으면 안 된다
+    must = ["エルジューダ", "資生堂", "シュワルツコフ", "ナプラ", "ケアセラ"]
+    missing = [b for b in must if b not in foreign]
+    check("21-2 대표 일본 브랜드 등록됨", not missing, f"누락: {missing}")
+
+    # 반대로 한국 브랜드가 잘못 들어가면 매출원을 통째로 버린다
+    korean = ["アヌア", "メディキューブ", "COSRX", "SKIN1004", "トリデン",
+              "ラウンドラボ", "ビープレーン"]
+    wrong = [b for b in korean if b in foreign]
+    check("21-3 한국 브랜드 오등록 없음", not wrong, f"잘못 등록: {wrong}")
+
+    # 검증 대상 산출이 이 목록을 실제로 쓰는지
+    src = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    check("21-4 검증 대상 산출이 목록 사용", "foreign_brands.json" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
