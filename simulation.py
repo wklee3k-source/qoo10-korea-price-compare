@@ -2924,6 +2924,30 @@ def t23_query_noise_stripped():
     check("23-5 길이 상한 적용", len(longq) <= 46, f"{len(longq)}자")
 
 
+# ------------- #24 검증 순서 무작위화 (v7.58.0)
+def t24_verify_order_shuffled():
+    """검증 대상 순서를 섞어 중간 점검이 전체를 대표하게 하는지.
+
+    [왜 필요한가] 통합본은 발굴된 순서로 쌓여 있어 앞뒤 성격이 다르다.
+    같은 상점 상품이 몰려 있고 오래된 것과 최근 것도 갈린다. 순서대로
+    처리하면 앞쪽 100건이 한쪽에 치우쳐 통과율을 잘못 읽는다.
+    섞어 두면 100건만으로도 전체의 축소판이 되어, 남은 수천 건을
+    헛돌리기 전에 방식이 통하는지 판단할 수 있다.
+
+    [시드 고정이 중요한 이유] 중간에 끊겼다 이어받을 때 순서가 바뀌면
+    이미 한 것과 남은 것이 뒤섞인다. 같은 대상 집합이면 항상 같은
+    순서가 나와야 한다.
+    """
+    wf = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    check("24-1 검증 입력 순서 섞음", "shuffle(mine)" in wf)
+    check("24-2 시드 고정", bool(re.search(r"Random\(\d+\)\.shuffle", wf)),
+          "시드 없이 섞으면 이어받을 때 순서가 달라진다")
+    # 섞기가 샤딩 뒤에 와야 한다 — 앞이면 샤드 배정이 흔들린다
+    i_shard = wf.find("mine = [r for r in rows if zlib.crc32")
+    i_shuf = wf.find("shuffle(mine)")
+    check("24-3 샤딩 이후에 섞음", i_shard != -1 and i_shuf > i_shard)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
