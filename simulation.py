@@ -3120,6 +3120,43 @@ def t26_mismatch_blocked():
           "포함관계 확인이 없으면 VT/브이티코스메틱을 다른 회사로 본다")
 
 
+# ------ #27 무거운 fetch가 루프 안에 있으면 안 된다 (v7.65.0)
+def t27_no_heavy_fetch_in_loop():
+    """수확 루프가 매 반복마다 다른 브랜치를 통째로 받아오지 않는지.
+
+    [실측 사고 2026-08-16] 수확이 계속 진전 없이 도는 원인을 찾다가,
+    루프 첫머리의 `git fetch origin discovery-live`가 병목임을 확인했다.
+    발굴 브랜치는 워커 6개가 10분마다 커밋해 히스토리가 방대하고
+    통합본만 11MB다. 얕기 지정 없는 fetch라 **첫 호출 132초, 저장소가
+    1.9GB까지 불어난다**(직접 재현).
+
+    상점 하나 수확은 9~31초인데 배치 8개가 45분간 안 끝났다. 시간은
+    전부 fetch에 갔다. 배치를 50->20->8로 줄인 조치는 오히려 이
+    fetch 횟수를 늘려 상황을 악화시켰다.
+
+    [교훈] 느린 원인을 짐작으로 고치지 말 것. 이번엔 세 번을 헛짚었다.
+    """
+    wf = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+
+    # 수확 루프 구간만 떼어 본다
+    try:
+        s = wf.index("- name: Harvest full catalog for this shard's shops")
+        e = wf.index("HARVESTED_AFTER=", s)
+        loop = wf[s:e]
+    except ValueError:
+        check("27 수확 루프 구간 확인", False, "구간을 못 찾음")
+        return
+
+    # 루프 안의 fetch는 전부 --depth 1 이어야 한다
+    bad = [ln.strip() for ln in loop.split("\n")
+           if "git fetch" in ln and "--depth" not in ln and not ln.strip().startswith("#")]
+    check("27-1 루프 안 fetch는 얕게", not bad, f"얕지 않은 fetch: {bad}")
+
+    # 상점 목록은 캐시해서 매 반복 받지 않아야 한다
+    check("27-2 상점 목록 캐시", "SHOPS_TS" in loop,
+          "매 반복 발굴 브랜치를 받으면 그게 병목이 된다")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

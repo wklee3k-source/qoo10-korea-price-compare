@@ -661,7 +661,7 @@ jobs:
               # 확실함 — 내 파일은 나만 쓰니 항상 최신이 곧 정답).
               cp "../output/discovery_state_${B}.json" "/tmp/dstate_${B}_backup.json" 2>/dev/null || true
               cp "../output/discovery_result_${B}.xlsx" "/tmp/dresult_${B}_backup.xlsx" 2>/dev/null || true
-              git fetch origin discovery-live 2>/dev/null
+              git fetch --depth 1 origin discovery-live 2>/dev/null
               git reset --hard origin/discovery-live -q 2>/dev/null || true
               # reset이 최신코드까지 되돌리므로 다시 맞춘다(안 하면 다음
               # 반복부터 낡은 스크립트로 발굴하게 된다).
@@ -815,22 +815,16 @@ jobs:
           B="${{ matrix.branch }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # [v7.63.0 20 -> 8] 커밋 주기를 짧게 가져간다.
+          # [v7.65.0 8 -> 20 되돌림] 배치를 잘게 쪼갤 이유가 없어졌다.
           #
-          # 배치를 다 끝내야 커밋하는 구조라, 배치가 길면 그동안 진전이
-          # 하나도 안 남는다. 상점당 상한 75초 x 8개 = 최악 10분이면
-          # 반드시 커밋이 나온다.
+          # 50->20->8로 줄여온 건 "배치가 길면 커밋 없이 죽는다"는
+          # 판단이었는데, 진짜 병목은 배치가 아니라 매 반복의
+          # git fetch였다(실측: 첫 fetch 132초, 저장소 1.9GB).
+          # 배치를 줄일수록 그 fetch를 더 자주 하게 돼 오히려 느려졌다.
           #
-          # [왜 또 줄였나 — 실측 2026-08-16] 20개로도 부족했다.
-          # 22:30·22:40에는 9분 간격으로 잘 나오다가, 00:13 시작분은
-          # 39분간 커밋이 0건이었다. 느린 상점이 몇 개 겹치면 배치
-          # 하나가 통째로 늘어진다. 커밋이 없으면 다음 실행이 같은 자리를
-          # 다시 훑으므로 그 시간은 통째로 버려진다.
-          #
-          # 배치를 줄이면 fetch/push 오버헤드가 늘지만, 진전이 확실히
-          # 남는 쪽이 낫다 — 수확은 10,370개 상점을 며칠에 걸쳐 훑는
-          # 작업이라 중간에 끊기는 게 정상이다.
-          BATCH=8
+          # fetch를 20분 간격으로 캐시한 지금은 상점당 9~31초(실측)
+          # 기준으로 20개면 3~10분이면 끝난다. 커밋 주기도 충분히 짧다.
+          BATCH=20
           NO_PROGRESS=0
           MAX_NO_PROGRESS=3  # 연속 무진전 허용 횟수(harvest의 MAX_RETRIES=3과 맞춤)
           ITER=0
@@ -850,8 +844,29 @@ jobs:
             # object name" 이었는데, 'git show FETCH_HEAD:...'는 정상
             # 작동함을 확인). 그래서 origin/discovery-live 대신
             # FETCH_HEAD를 참조한다.
-            git fetch origin discovery-live 2>/dev/null
-            SHOPS=$(git show FETCH_HEAD:output/discovery_state.json 2>/dev/null | \
+            # [v7.65.0] 상점 목록은 매 반복이 아니라 처음 한 번과
+            # 20분마다만 새로 받는다.
+            #
+            # [실측 사고 2026-08-16] 여기가 진짜 병목이었다. 발굴 브랜치는
+            # 워커 6개가 10분마다 커밋해 히스토리가 방대하고 통합본만
+            # 11MB다. 얕기 지정 없는 fetch라 **첫 호출에 132초, 저장소가
+            # 1.9GB까지 불어난다**(직접 재현 확인). 그런데 이걸 배치마다
+            # 불렀다. 배치를 50->20->8로 줄인 게 오히려 독이 됐다 —
+            # 반복이 잦아질수록 이 fetch를 더 자주 하게 된다.
+            #
+            # 상점 하나 수확은 9~31초다(실측). 배치 8개면 4분이면 끝나는데
+            # 실제로는 45분간 진전이 없었다. 시간은 전부 fetch에 갔다.
+            #
+            # 발굴이 새 상점을 찾는 속도는 시간당 수십 개 수준이라 매
+            # 배치마다 최신 목록을 받을 이유가 없다. 20분 간격이면 충분하다.
+            NOW_TS=$(date +%s)
+            if [ -z "$SHOPS_TS" ] || [ $((NOW_TS - SHOPS_TS)) -ge 1200 ]; then
+              git fetch --depth 1 origin discovery-live 2>/dev/null
+              git show FETCH_HEAD:output/discovery_state.json > /tmp/ds_shops.json 2>/dev/null
+              SHOPS_TS=$NOW_TS
+              echo "[상점목록] 갱신함"
+            fi
+            SHOPS=$(cat /tmp/ds_shops.json 2>/dev/null | \
               python3 -c "
           import json, sys, zlib
           raw = sys.stdin.read()
@@ -909,7 +924,7 @@ jobs:
               sleep_time=$((RANDOM % 5 + 1))
               sleep "$sleep_time"
               cp "../output/fullcatalog_state_${B}.json" "/tmp/fcstate_${B}_backup.json" 2>/dev/null || true
-              git fetch origin fullcatalog-live 2>/dev/null
+              git fetch --depth 1 origin fullcatalog-live 2>/dev/null
               git reset --hard origin/fullcatalog-live -q 2>/dev/null || true
               git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
               cp "/tmp/fcstate_${B}_backup.json" "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
