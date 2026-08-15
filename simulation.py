@@ -2633,6 +2633,26 @@ def t16_nonbeauty_filter():
     check("16-5 재보충이 필터를 사용", "filter_keywords" in src)
 
 
+# ------------- #17 판매중지·단종은 보완(수집기) 대상에서 제외 (v7.51.0)
+def t17_unsellable_excluded():
+    """화해가 '안 팔린다'고 알려준 건을 수집기로 보내지 않는지.
+
+    [왜 검사하는가] 실측 2026-08-15: 이름은 확정됐는데 구매링크가 없는
+    652건 중 470건이 판매중지·단종이었다. 이걸 전부 수집기로 보내면
+    사장님이 PC에서 찾아도 나올 수 없는 것을 찾게 된다. 반대로 화해가
+    판단을 못 한 경우(sale=None)까지 빼버리면 멀쩡한 건을 놓친다 —
+    양쪽을 다 고정한다.
+    """
+    src = (ROOT / "src" / "export_collector_targets.py").read_text(encoding="utf-8")
+    check("17-1 판매중지 제외 로직 존재",
+          'v.get("sale") is False' in src and 'v.get("obsolete") is True' in src)
+    # sale=None(판단불가)까지 제외하면 안 된다
+    check("17-2 판단불가는 제외 안 함",
+          'v.get("sale") is False' in src and 'if not v.get("sale")' not in src,
+          "sale이 falsy면 제외하는 형태는 None까지 버린다")
+    check("17-3 제외 건수 보고", "unsellable_count" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
