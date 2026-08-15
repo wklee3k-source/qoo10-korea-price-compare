@@ -2923,6 +2923,16 @@ def t23_query_noise_stripped():
     longq = clean("브랜드 " + "가나다라마바사 " * 12)
     check("23-5 길이 상한 적용", len(longq) <= 46, f"{len(longq)}자")
 
+    # [08회차 번역 피드백] 큐텐 자체 행사명은 상품명이 아니다.
+    # "메가와리"는 큐텐재팬 프로모션명(메가할인)인데 상품명처럼 붙어
+    # 있어서, 검색어에 들어가면 어느 쇼핑몰에서도 안 잡힌다.
+    ev = clean("Redence 톤앤스팟 퍼펙트글로우마스크 10매 /물광피부/미백/메가와리")
+    check("23-6 큐텐 행사명 제거",
+          "메가와리" not in ev and "톤앤스팟" in ev, ev)
+    ev2 = clean("Merry skin [30명 리뷰캠페인] 제주 탄제린 PDRN 쿨링토너패드 60매")
+    check("23-7 리뷰캠페인 문구 제거",
+          "리뷰캠페인" not in ev2 and "탄제린" in ev2, ev2)
+
 
 # ------------- #24 검증 순서 무작위화 (v7.58.0)
 def t24_verify_order_shuffled():
