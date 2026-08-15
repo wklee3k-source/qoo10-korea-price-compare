@@ -2871,6 +2871,59 @@ def t22_harvest_makes_progress():
           f"(상점당 {shop_limit}초 x 배치 {batch}) — 커밋 없이 죽을 수 있다")
 
 
+# ------------- #23 검색어에서 판매자 군더더기 제거 (v7.57.0)
+def t23_query_noise_stripped():
+    """검색어에서 연예인·홍보 문구를 빼되 제품명은 건드리지 않는지.
+
+    [왜 검사하는가 — 실측 2026-08-15, 재검증 2,006건 중간 점검]
+    버려진 건과 성공한 건을 갈라 보니 검색어의 잡스러움이 갈랐다.
+      · 군더더기 2개 이상: 버려진 건 12.1% / 성공한 건 4.4% (3배)
+      · 평균 길이:        버려진 건 57자   / 성공한 건 39자
+    "달바 ... 소녀시대 태연 걸스데이 혜리" 같은 건 아무 소스도 응답을
+    못 했다 — 우리가 팔아야 할 물건인데 검색어 때문에 버려졌다.
+
+    [반대 위험] 너무 지우면 제품명이 깎여 오히려 못 찾는다. 제형·구성
+    표현("세트", "쿠션", "기획")은 실제 상품명에 흔히 들어가므로
+    지우면 안 된다. 양쪽을 다 고정한다.
+    """
+    src = (ROOT / "src" / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    ns = {"re": re}
+    for pat in [r"VOLUME_IN_QUERY_RE = .*", r"BRACKET_RE = .*"]:
+        m = re.search(pat, src)
+        if m:
+            exec(m.group(0), ns)  # noqa: S102
+    try:
+        start = src.index("_PROMO_WORDS = [")
+        end = src.index("def _normalize_volume_ml")
+        exec(src[start:end], ns)  # noqa: S102
+        clean = ns["_clean_query"]
+    except Exception as e:  # noqa: BLE001
+        check("23 검색어 정제 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    # 군더더기는 빠져야 한다
+    out = clean("달바 워터풀 톤업 자외선 차단제 그린 50ml 소녀시대 태연 걸스데이 혜리")
+    check("23-1 연예인 이름 제거",
+          "소녀시대" not in out and "태연" not in out and "달바" in out, out)
+
+    out2 = clean("센텔리안24 [정품] [구] 센텔리안 MD 크림 80g / [신] 마데카 MD 크림 / 한국")
+    check("23-2 슬래시 나열 정리", "/" not in out2 and "센텔리안" in out2, out2)
+
+    # 제품명은 살아야 한다 — 지나친 삭제 방지
+    keep = clean("아누아 PDRN 히알루론산 하이드레이팅 미스트 100ml")
+    check("23-3 정상 상품명 보존",
+          all(w in keep for w in ["아누아", "PDRN", "히알루론산", "미스트"]), keep)
+
+    keep2 = clean("마녀공장 비피다 바이옴 3종 세트 앰플 토너 크림")
+    check("23-4 구성 표현은 남김",
+          "세트" in keep2 and "마녀공장" in keep2,
+          f"'세트'는 실제 상품명에 흔히 들어간다: {keep2}")
+
+    # 길이 상한이 걸려 있어야 한다
+    longq = clean("브랜드 " + "가나다라마바사 " * 12)
+    check("23-5 길이 상한 적용", len(longq) <= 46, f"{len(longq)}자")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
