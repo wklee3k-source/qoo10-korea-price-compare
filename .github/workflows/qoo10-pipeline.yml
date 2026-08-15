@@ -1226,8 +1226,14 @@ jobs:
         continue-on-error: true
         timeout-minutes: 25
         run: |
-          # [v7.53.0] 한글 브랜드명을 모르는 큐텐 브랜드를 화해에 물어
-          # 사전을 채운다.
+          # [v7.53.0 -> v7.64.0 보조로 격하] 한글 브랜드명을 모르는 큐텐
+          # 브랜드를 화해에 물어 사전을 채운다.
+          #
+          # [주의] 이 단계는 이제 **보조**다. 병합은 신규 500건이 쌓여야
+          # 도는데 발굴이 시간당 20건 안팎이라 15시간에 한 번 꼴이었고,
+          # 그래서 학습이 523개에서 하루 넘게 멈춰 있었다(실측 2026-08-16).
+          # 주력은 검증 단계로 옮겼다(v7.64.0). 여기서 또 돌아도 진행기록
+          # (brand_lookup_done.json)이 있어 이미 조회한 브랜드는 건너뛴다.
           #
           # [왜 병합 단계에 붙였나]
           #  · 워커 동시 실행 한도(10개)가 이미 발굴6+수확1+병합1+검증2로
@@ -1437,6 +1443,102 @@ jobs:
       - name: Install Playwright system deps (캐시 hit여도 필요)
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: playwright install-deps chromium
+
+      - name: Learn Korean brand names from Hwahae
+        working-directory: src
+        continue-on-error: true
+        timeout-minutes: 12
+        run: |
+          # [v7.64.0] 한글 브랜드명 학습을 검증 단계로 옮긴다.
+          #
+          # [왜 옮겼나 — 실측 2026-08-16]
+          # v7.53.0에서 병합 단계에 붙였는데, 병합은 신규 상품 500건이
+          # 쌓여야 돈다. 발굴이 시간당 20건 안팎이라 **15시간에 한 번**
+          # 꼴이었다. 그래서 조회한 브랜드가 523개에서 하루 넘게 멈춰
+          # 있었고, 미확인 2,206건이 한 건도 안 줄었다.
+          #
+          # 검증은 크론이 4시간마다 부르고 실제로 계속 돈다. 여기 붙이면
+          # 확실히 진행된다.
+          #
+          # [화해 부하] 검증도 화해를 쓴다. 같은 소스에 겹치므로 배치를
+          # 작게(120개) 잡고 검증 시작 전에 한 번만 돌린다. 검증 루프는
+          # 몇 시간씩 도는데 그 뒤에 두면 끝을 못 보고 job이 죽는다.
+          #
+          # [사전은 main에도 쓴다] 워커는 시작할 때 main의 data/를 덮어쓴다.
+          # 브랜치에만 저장하면 다음 재기동에서 통째로 사라진다
+          # (v7.53.0에서 사전이 1,352 -> 1,112개로 되돌아간 실측 사고).
+          set +e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 발굴 브랜치에서 최신 통합본과 사전을 가져온다(읽기만).
+          git fetch origin discovery-live 2>/dev/null
+          git show FETCH_HEAD:output/discovery_state.json > /tmp/ds_for_brand.json 2>/dev/null
+          git show FETCH_HEAD:data/brand_translations_learned.json > /tmp/bt.json 2>/dev/null
+          git show FETCH_HEAD:data/brand_lookup_done.json > /tmp/bdone.json 2>/dev/null || echo '[]' > /tmp/bdone.json
+          if [ ! -s /tmp/ds_for_brand.json ] || [ ! -s /tmp/bt.json ]; then
+            echo "[건너뜀] 발굴 브랜치를 못 읽었다"
+            exit 0
+          fi
+
+          python - <<'PY'
+          import json, re, sys
+          from collections import Counter
+          sys.path.insert(0, '.')
+          from brand_korean_lookup import HwahaeSession, load_jp_to_en, run
+
+          state = json.load(open('/tmp/ds_for_brand.json', encoding='utf-8'))
+          full = json.load(open('/tmp/bt.json', encoding='utf-8'))
+          known = {k: v for k, v in full.items() if not k.startswith('_')}
+
+          def norm(s):
+              return re.sub(r'[\s\-_]+', '', (s or '')).lower()
+          known_norm = {norm(k) for k in known}
+
+          need = Counter()
+          for p in state['all_products']:
+              if not p.get('translated_kr'):
+                  continue
+              if (p.get('known_brand') or '').strip():
+                  continue
+              b = (p.get('brand') or '').strip()
+              if not b or b in known or norm(b) in known_norm:
+                  continue
+              need[b] += 1
+          brands = [b for b, _ in need.most_common()]
+          print(f'한글 브랜드 미확인: 상품 {sum(need.values()):,}건 / 브랜드 {len(brands):,}개')
+          if not brands:
+              print('처리할 브랜드 없음')
+              raise SystemExit(0)
+
+          jp_to_en = load_jp_to_en('../data/brand_list.csv')
+          with HwahaeSession(wait=0.5) as session:
+              learned = run(brands, jp_to_en, set(known), 120, 0.4,
+                            '/tmp/bdone.json', '/tmp/bt.json', session)
+          print(f'이번에 알아낸 브랜드 {len(learned)}개')
+          PY
+
+          # 학습 결과를 main과 discovery-live 양쪽에 반영한다.
+          for BR in main discovery-live; do
+            for i in $(seq 1 6); do
+              git fetch origin $BR 2>/dev/null
+              rm -rf /tmp/bpush && git clone --depth 1 --branch $BR \
+                "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+                /tmp/bpush -q 2>/dev/null || break
+              cp /tmp/bt.json /tmp/bpush/data/brand_translations_learned.json
+              cp /tmp/bdone.json /tmp/bpush/data/brand_lookup_done.json
+              cd /tmp/bpush
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add data/brand_translations_learned.json data/brand_lookup_done.json
+              if git diff --cached --quiet; then cd - >/dev/null; break; fi
+              git commit -q -m "Auto: 화해에서 한글 브랜드명 학습"
+              if git push origin $BR -q 2>/dev/null; then cd - >/dev/null; break; fi
+              cd - >/dev/null
+              sleep $((RANDOM % 5 + 2))
+            done
+          done
+          set -e
 
       - name: Run hwahae verification in chunks (checkable mid-run)
         working-directory: src

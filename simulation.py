@@ -2733,8 +2733,31 @@ def t19_brand_learning_wired():
     jobs = data.get("jobs", {})
     merge = jobs.get("merge_discovery_shards", {})
     names = [s.get("name") or "" for s in merge.get("steps", [])]
-    check("19-1 브랜드 학습이 병합 단계에 포함",
+    check("19-1 브랜드 학습이 병합 단계에 포함(보조)",
           any("Learn Korean brand" in n for n in names), f"단계: {names}")
+
+    # [v7.64.0] 주력은 검증 단계다. 병합은 신규 500건이 쌓여야 도는데
+    # 발굴이 시간당 20건 안팎이라 15시간에 한 번 꼴이었고, 학습이 523개에서
+    # 하루 넘게 멈춰 있었다(실측 2026-08-16). 검증은 4시간마다 실제로 돈다.
+    ver = jobs.get("hwahae_verify", {})
+    vnames = [s.get("name") or "" for s in ver.get("steps", [])]
+    check("19-1b 브랜드 학습이 검증 단계에 포함(주력)",
+          any("Learn Korean brand" in n for n in vnames), f"단계: {vnames}")
+
+    # 검증 루프는 몇 시간씩 돈다. 학습을 그 뒤에 두면 끝을 못 보고 죽는다.
+    try:
+        i_learn = next(i for i, n in enumerate(vnames) if "Learn Korean brand" in n)
+        i_verify = next(i for i, n in enumerate(vnames) if "hwahae verification" in n)
+        check("19-1c 학습이 검증 루프보다 먼저", i_learn < i_verify,
+              "검증 루프 뒤에 두면 끝을 못 보고 job이 죽는다")
+    except StopIteration:
+        check("19-1c 학습이 검증 루프보다 먼저", False, "단계를 못 찾음")
+
+    # 사전은 main에도 써야 한다 - 워커가 시작할 때 main의 data/를 덮어쓴다
+    _wf = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    check("19-1d 학습 결과를 main에도 반영",
+          "for BR in main discovery-live" in _wf,
+          "브랜치에만 쓰면 다음 재기동에서 사라진다")
     check("19-2 브랜드 부착이 병합 단계에 포함",
           any("Attach Korean brand" in n for n in names), f"단계: {names}")
 
