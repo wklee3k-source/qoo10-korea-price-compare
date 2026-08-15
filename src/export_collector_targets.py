@@ -104,6 +104,7 @@ def build(state_path: str, verified_dir: str, blocklist_path: str, out_dir: str)
     collect_targets = []
     search_targets = []
     fallback_count = 0
+    unsellable_count = 0
 
     for gno, p in products.items():
         if gno in blocked_ids:
@@ -119,6 +120,20 @@ def build(state_path: str, verified_dir: str, blocklist_path: str, out_dir: str)
             continue
 
         if v.get("name"):
+            # [v7.51.0] 화해가 "지금 안 팔린다"고 알려준 건 수집기로 보내지
+            # 않는다. sale=False(판매중지) 또는 obsolete=True(단종)이면
+            # 사장님이 PC에서 아무리 찾아도 살 수 있는 링크가 안 나온다.
+            #
+            # 실측 2026-08-15(재검증 절반 시점): 이름은 확정됐는데 구매링크가
+            # 없는 652건 중 470건(72%)이 여기 해당했다. 이 정보를 안 쓰고
+            # 전부 수집기로 보내고 있었다 — 사람 시간을 3.6배 낭비하는 구조.
+            # 걸러내면 실제 보완 대상은 652건 -> 182건이 된다.
+            #
+            # 화해가 판단을 못 한 경우(sale=None)는 보낸다 — 모르는 것과
+            # 안 팔리는 것은 다르다.
+            if v.get("sale") is False or v.get("obsolete") is True:
+                unsellable_count += 1
+                continue
             search_targets.append({"goods_no": gno, "query": v["name"],
                                     "brand": v.get("brand") or ""})
             continue
@@ -142,6 +157,8 @@ def build(state_path: str, verified_dir: str, blocklist_path: str, out_dir: str)
 
     print(f"[완료] 수집대상 {len(collect_targets)}건 / 검색대상 {len(search_targets)}건 "
           f"(원문정제 대체 {fallback_count}건) -> {out}")
+    if unsellable_count:
+        print(f"[제외] 판매중지·단종으로 확인돼 수집기에 안 보낸 건 {unsellable_count}건")
 
 
 if __name__ == "__main__":
