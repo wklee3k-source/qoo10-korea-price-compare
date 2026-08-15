@@ -2754,6 +2754,43 @@ def t19_brand_learning_wired():
     check("19-6 진행 기록 파일 사용", "brand_lookup_done.json" in body)
 
 
+# ------ #20 수확 시간 상한이 수집크론 주기보다 짧은가 (v7.54.0)
+def t20_harvest_timeout_under_cron():
+    """수확 job의 시간 상한이 수집크론 주기(2시간)보다 짧은지.
+
+    [왜 검사하는가 — 실측 사고 2026-08-15]
+    수확은 concurrency group으로 하나만 돌게 묶여 있고
+    cancel-in-progress도 false다. 그래서 좀비가 되면 상한에 걸릴
+    때까지 자리를 통째로 막고, 그동안 새 수확은 전부 대기한다.
+    상한이 300분이면 5시간을 막는다 — 실제로 10:02 좀비가
+    14:17까지 막았고 사람이 force-cancel을 걸고서야 풀렸다.
+
+    상한을 크론 주기보다 짧게 두면 좀비가 다음 주기 전에 스스로
+    죽어 자리를 비운다. 수확은 진행 상태를 파일에 계속 저장하므로
+    중간에 끊겨도 다음 실행이 이어받는다 — 줄여도 잃는 게 없다.
+    """
+    wf = ROOT / ".github" / "workflows" / "qoo10-pipeline.yml"
+    try:
+        import yaml
+        data = yaml.safe_load(wf.read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        check("20 워크플로 파싱", False, f"{type(e).__name__}: {e}")
+        return
+
+    job = data.get("jobs", {}).get("harvest_full_catalog_parallel", {})
+    limit = job.get("timeout-minutes")
+    CRON_MINUTES = 120  # 수집크론 주기
+    check("20-1 수확 시간 상한 존재", bool(limit))
+    check("20-2 수확 상한 < 수집크론 주기",
+          bool(limit) and limit < CRON_MINUTES,
+          f"상한 {limit}분 / 크론 {CRON_MINUTES}분 — 좀비가 다음 주기를 막는다")
+
+    # 이 검사가 의미를 갖는 전제: 수확이 하나만 도는 구조라는 것
+    conc = job.get("concurrency") or {}
+    check("20-3 수확이 단일 실행으로 묶여 있음",
+          bool(conc.get("group")) and conc.get("cancel-in-progress") is False)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
