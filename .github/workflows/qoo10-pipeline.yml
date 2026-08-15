@@ -1191,6 +1191,114 @@ jobs:
           fi
 
 
+      - name: Learn Korean brand names from Hwahae
+        working-directory: src
+        continue-on-error: true
+        timeout-minutes: 25
+        run: |
+          # [v7.53.0] 한글 브랜드명을 모르는 큐텐 브랜드를 화해에 물어
+          # 사전을 채운다.
+          #
+          # [왜 병합 단계에 붙였나]
+          #  · 워커 동시 실행 한도(10개)가 이미 발굴6+수확1+병합1+검증2로
+          #    꽉 차 있다. 별도 job으로 만들면 대기줄에 막혀 아무것도 못 한다.
+          #  · 병합은 발굴 워커를 세워둔 상태에서 돌고 화해를 쓰지 않는다.
+          #    검증(화해 사용)과 시간이 겹치지 않아 차단 위험이 낮다.
+          #  · discovery-live 브랜치에서 돌기 때문에 사전 파일이 바로 옆에 있다.
+          #
+          # [왜 필요한가 — 실측 2026-08-15]
+          # 한글 브랜드를 모르면 상품명 앞에 브랜드를 못 붙이고, 브랜드 없는
+          # 검색어는 소스마다 다른 제품을 물어와 합의부족으로 버려진다.
+          # 이름확정 통과율이 39.6%까지 떨어진 주원인이었다.
+          #
+          # 한 번에 다 하지 않고 매 병합마다 조금씩 한다. 진행 기록을 남겨
+          # 다음 실행이 이어받으므로, 몇 번 돌면 전부 채워지고 그 뒤로는
+          # 새로 들어온 브랜드만 처리하게 된다.
+          python - <<'PY'
+          import json, re, sys
+          sys.path.insert(0, '.')
+          from brand_korean_lookup import (HwahaeSession, load_jp_to_en, run)
+
+          state = json.load(open('../output/discovery_state.json', encoding='utf-8'))
+          dict_path = '../data/brand_translations_learned.json'
+          full = json.load(open(dict_path, encoding='utf-8'))
+          known = {k: v for k, v in full.items() if not k.startswith('_')}
+
+          def norm(s):
+              return re.sub(r'[\s\-_]+', '', (s or '')).lower()
+          known_norm = {norm(k) for k in known}
+
+          # 한글 브랜드를 모르는 상품이 많은 브랜드부터 처리한다
+          from collections import Counter
+          need = Counter()
+          for p in state['all_products']:
+              if not p.get('translated_kr'):
+                  continue
+              if (p.get('known_brand') or '').strip():
+                  continue
+              b = (p.get('brand') or '').strip()
+              if not b or b in known or norm(b) in known_norm:
+                  continue
+              need[b] += 1
+          brands = [b for b, _ in need.most_common()]
+          print(f'한글 브랜드 미확인: 상품 {sum(need.values()):,}건 / 브랜드 {len(brands):,}개')
+          if not brands:
+              print('처리할 브랜드 없음')
+              raise SystemExit(0)
+
+          jp_to_en = load_jp_to_en('../data/brand_list.csv')
+          with HwahaeSession(wait=0.5) as session:
+              learned = run(brands, jp_to_en, set(known), 400, 0.4,
+                            '../data/brand_lookup_done.json', dict_path, session)
+          print(f'이번에 알아낸 브랜드 {len(learned)}개')
+          PY
+          git add ../data/brand_translations_learned.json ../data/brand_lookup_done.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto: 화해에서 한글 브랜드명 학습"
+            for i in $(seq 1 10); do
+              git push origin discovery-live && break
+              sleep $((RANDOM % 5 + 1))
+              git fetch origin discovery-live 2>/dev/null
+              git stash -q 2>/dev/null || true
+              git reset --hard origin/discovery-live -q 2>/dev/null || true
+              # reset --hard는 브랜치 스냅샷으로 되돌리므로 main의 최신 코드가
+              # 사라진다. 재동기화하지 않으면 옛 코드로 재시도하게 된다.
+              git checkout origin/main -- src/ data/brand_list.csv VERSION 2>/dev/null || true
+              git stash pop -q 2>/dev/null || true
+              git add ../data/brand_translations_learned.json ../data/brand_lookup_done.json 2>/dev/null || true
+              git diff --cached --quiet || git commit -m "Auto: 화해에서 한글 브랜드명 학습 (재시도)"
+            done
+          fi
+
+      - name: Attach Korean brand to translated names
+        working-directory: src
+        continue-on-error: true
+        run: |
+          # [v7.53.0] 사전이 채워진 만큼 상품명 앞에 브랜드를 붙인다.
+          # 브랜드 학습 바로 뒤에 두는 이유: 이번에 새로 알아낸 브랜드가
+          # 다음 검증 회차부터 바로 검색어에 반영되게 하기 위해서다.
+          python attach_brand_to_name.py \
+            --state ../output/discovery_state.json \
+            --dict ../data/brand_translations_learned.json \
+            --apply
+          git add ../output/discovery_state.json ../data/brand_translations_learned.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto: 번역 상품명에 한글 브랜드 부착"
+            for i in $(seq 1 10); do
+              git push origin discovery-live && break
+              sleep $((RANDOM % 5 + 1))
+              git fetch origin discovery-live 2>/dev/null
+              git reset --hard origin/discovery-live -q 2>/dev/null || true
+              git checkout origin/main -- src/ data/brand_list.csv VERSION 2>/dev/null || true
+              python attach_brand_to_name.py \
+                --state ../output/discovery_state.json \
+                --dict ../data/brand_translations_learned.json \
+                --apply
+              git add ../output/discovery_state.json ../data/brand_translations_learned.json 2>/dev/null || true
+              git diff --cached --quiet || git commit -m "Auto: 번역 상품명에 한글 브랜드 부착 (재시도)"
+            done
+          fi
+
       - name: Resume discovery workers after merge+translate
         if: always() && inputs.hold_discovery != true
         run: |

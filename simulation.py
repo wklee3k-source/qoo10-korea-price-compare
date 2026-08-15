@@ -2707,6 +2707,53 @@ def t18_brand_store_link():
           and 'entry.get("obsolete") is not True' in src)
 
 
+# --------- #19 한글 브랜드 학습이 파이프라인에 붙어 있는지 (v7.53.0)
+def t19_brand_learning_wired():
+    """브랜드 학습·부착이 워크플로에 실제로 연결돼 있는지.
+
+    [왜 검사하는가] 이 두 단계는 사람이 안 봐도 돌아야 의미가 있다.
+    스크립트만 만들어두고 워크플로에 안 붙이면, 새 브랜드가 들어와도
+    영영 사전이 안 채워져서 이름확정 통과율이 다시 떨어진다.
+
+    또 하나: 워커 동시 실행 한도(10개)가 이미 꽉 차 있어서, 이걸
+    별도 job으로 만들면 대기줄에 막혀 아무것도 못 한다. 병합 job의
+    단계로 들어가 있어야 한다.
+    """
+    wf = ROOT / ".github" / "workflows" / "qoo10-pipeline.yml"
+    if not wf.exists():
+        check("19 워크플로 파일", False, "파일 없음")
+        return
+    try:
+        import yaml
+        data = yaml.safe_load(wf.read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        check("19 워크플로 파싱", False, f"{type(e).__name__}: {e}")
+        return
+
+    jobs = data.get("jobs", {})
+    merge = jobs.get("merge_discovery_shards", {})
+    names = [s.get("name") or "" for s in merge.get("steps", [])]
+    check("19-1 브랜드 학습이 병합 단계에 포함",
+          any("Learn Korean brand" in n for n in names), f"단계: {names}")
+    check("19-2 브랜드 부착이 병합 단계에 포함",
+          any("Attach Korean brand" in n for n in names), f"단계: {names}")
+
+    # 별도 job으로 새로 만들면 워커 한도를 넘긴다
+    check("19-3 별도 job으로 만들지 않음",
+          "brand_lookup" not in jobs and "learn_brand" not in jobs)
+
+    # 실패해도 병합 자체를 죽이면 안 된다(화해가 막히는 날이 있다)
+    steps = merge.get("steps", [])
+    learn = next((s for s in steps if "Learn Korean brand" in (s.get("name") or "")), {})
+    check("19-4 학습 실패가 병합을 죽이지 않음",
+          learn.get("continue-on-error") is True)
+    check("19-5 학습 단계에 시간 상한", bool(learn.get("timeout-minutes")))
+
+    # 이어서 돌리기 기록을 쓰는지 — 없으면 매번 처음부터 다시 훑는다
+    body = wf.read_text(encoding="utf-8")
+    check("19-6 진행 기록 파일 사용", "brand_lookup_done.json" in body)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
