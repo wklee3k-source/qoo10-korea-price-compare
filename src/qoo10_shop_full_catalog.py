@@ -55,7 +55,7 @@ class ShopCatalogFailed(Exception):
 # 가져와도 그 상점은 완료 처리되는데, 이게 맞다 — 수확본은 발굴
 # 검색어의 재료일 뿐이고, 한 상점에서 몇 개를 놓치는 것보다 배치가
 # 통째로 멈추는 쪽이 훨씬 손해다.
-SHOP_TIME_LIMIT = 90  # 초
+SHOP_TIME_LIMIT = 75  # 초 (브라우저 기동·페이지 로드까지 포함)
 
 
 def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: int = 3,
@@ -71,13 +71,24 @@ def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: in
             ignore_https_errors=True,
         )
         page = context.new_page()
+        # [v7.63.0] 페이지 로드 대기도 상한 안에 넣는다.
+        #
+        # 예전엔 goto의 timeout(20초)이 상한과 별개로 돌았다. 상점 하나에
+        # 브라우저 기동 + 로드 20초 + 대기 3초가 상한 밖에서 먼저 쓰이고,
+        # 그 뒤부터 90초를 다시 세는 구조라 실제로는 상점당 2분 가까이
+        # 걸렸다. 배치 20개면 40분 — job 상한(110분)은 안 넘지만 커밋
+        # 주기가 그만큼 늘어진다(실측 2026-08-16: 00:13 시작 후 39분간
+        # 커밋 0건).
+        _remain = max(5.0, time_limit - (time.monotonic() - started))
         try:
-            page.goto(url, timeout=20000, wait_until="load")
+            page.goto(url, timeout=min(20000, int(_remain * 1000)),
+                      wait_until="domcontentloaded")
         except Exception as e:  # noqa: BLE001
             browser.close()
             raise ShopCatalogFailed(f"{shop_id} 페이지 로드 실패: {e}") from e
 
-        time.sleep(wait_seconds)
+        # 로드 직후 고정 대기도 남은 시간을 넘지 않게 자른다.
+        time.sleep(min(wait_seconds, max(0.0, time_limit - (time.monotonic() - started))))
 
         # "더보기" 버튼을 JS로 직접 클릭(요소가 로딩 오버레이에 가려 일반
         # click()은 실패할 수 있어 evaluate로 우회 — 실측 확인된 방식).
@@ -99,6 +110,8 @@ def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: in
                     'document.querySelector("#btn_more_item").click()'
                 )
             except Exception:  # noqa: BLE001
+                break
+            if time.monotonic() - started > time_limit:
                 break
             time.sleep(1.5)
             # 로딩 스피너가 끝날 때까지 잠깐 더 기다린다(최대 5초).
