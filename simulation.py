@@ -2870,6 +2870,20 @@ def t22_harvest_makes_progress():
           f"최악 {worst_minutes:.0f}분 / job 상한 {job_limit}분 "
           f"(상점당 {shop_limit}초 x 배치 {batch}) — 커밋 없이 죽을 수 있다")
 
+    # [v7.63.0] 커밋 주기 자체가 짧아야 한다. job 상한 안에 들어가는
+    # 것만으로는 부족했다 — 실측 2026-08-16에 39분간 커밋 0건이었다.
+    # 커밋이 없으면 다음 실행이 같은 자리를 다시 훑어 그 시간이 통째로
+    # 버려진다.
+    check("22-5 최악 배치시간 15분 이내",
+          worst_minutes <= 15,
+          f"최악 {worst_minutes:.0f}분 — 이 시간만큼 진전이 안 남는다")
+
+    # 페이지 로드도 상한 안에서 세야 한다. 밖에 두면 상점당 실제
+    # 소요가 상한보다 훨씬 커진다(브라우저 기동 + 로드 20초 + 대기 3초).
+    check("22-6 페이지 로드도 상한 안",
+          "time_limit - (time.monotonic() - started)" in src,
+          "goto timeout이 상한과 별개로 돌면 상점당 2분 가까이 걸린다")
+
 
 # ------------- #23 검색어에서 판매자 군더더기 제거 (v7.57.0)
 def t23_query_noise_stripped():
