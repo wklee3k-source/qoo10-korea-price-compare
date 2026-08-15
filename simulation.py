@@ -3018,6 +3018,71 @@ def t25_translation_feedback_safe():
           f"{names}")
 
 
+# ---- #26 제형·브랜드 오매칭 차단 (v7.62.0)
+def t26_mismatch_blocked():
+    """제형이 다르거나 브랜드가 다른 후보를 걸러내는지.
+
+    [왜 검사하는가 — 실측 2026-08-16, 재검증 360건 중간점검]
+    카테고리 검사가 이미 있었는데도 오매칭이 175건 중 10건(5.7%)
+    나왔다. 목록에 없는 제형(젤·밤·오일·파운데이션·스틱)이 들어간
+    후보는 "카테고리 없음"으로 판정돼 검사를 그냥 통과했다.
+
+    [반대 위험] 같은 회사를 다르게 적는 경우가 많다 — 실측 175건 중
+    7건(VT/브이티코스메틱, 정샘물/정샘물뷰티, 클레어스/디어클레어스,
+    리쥬란/리쥬란코스메틱). 이걸 다른 회사로 보면 멀쩡한 걸 버린다.
+    양쪽을 다 고정한다.
+    """
+    src = (ROOT / "src" / "hwahae_verify_batch.py").read_text(encoding="utf-8")
+    ns = {"re": re}
+    try:
+        s = src.index("_PRODUCT_CATEGORY_GROUPS = [")
+        e = src.index("# [v7.40.0] 구매 가능한 쇼핑몰")
+        exec(src[s:e], ns)  # noqa: S102
+        groups = ns["_PRODUCT_CATEGORY_GROUPS"]
+    except Exception as ex:  # noqa: BLE001
+        check("26 카테고리 그룹 로드", False, f"{type(ex).__name__}: {ex}")
+        return
+
+    def det(text):
+        return {frozenset(g) for g in groups if any(w in text for w in g)}
+
+    def blocked(a, b):
+        ca, cb = det(a.lower()), det(b.lower())
+        return bool(ca and cb and not (ca & cb))
+
+    # 실제로 뚫렸던 조합 — 전부 막혀야 한다
+    must_block = [
+        ("파티온 노스카 나인 트러블 세럼 30ml", "노스카나인 트러블 크림"),
+        ("프롬더스킨 글로우 선 젤 윤기", "글로우 미라클선밤 SPF50+"),
+        ("앤허니 픽시 실키 샴푸 트리트먼트 리필", "딥 모이스처 헤어 오일"),
+        ("메디큐브 제로 모공 원데이 세럼 30ml", "메디큐브 모공 앰플 슈퍼시카"),
+    ]
+    leaked = [f"{a[:20]}->{b[:18]}" for a, b in must_block if not blocked(a, b)]
+    check("26-1 제형 불일치 차단", not leaked, f"뚫림: {leaked}")
+
+    # 정상 매칭은 막히면 안 된다
+    must_pass = [
+        ("아누아 어성초 토너 250ml", "어성초 77 수딩 토너"),
+        ("토리든 다이브인 저분자 히알루론산 세럼", "다이브인 저분자 히알루론산 세럼"),
+        ("마녀공장 딥클리어 클렌징밤 100ml", "딥 클리어 클렌징 밤"),
+        ("라운드랩 자작나무 수분 선크림 50ml", "자작나무 수분 선크림"),
+    ]
+    wrong = [f"{a[:20]}->{b[:18]}" for a, b in must_pass if blocked(a, b)]
+    check("26-2 정상 매칭은 통과", not wrong, f"잘못 막힘: {wrong}")
+
+    # 목록에 새 제형이 실제로 들어갔는지
+    flat = {w for g in groups for w in g}
+    missing = [w for w in ["젤", "밤", "오일", "파운데이션", "미스트", "파우더"]
+               if w not in flat]
+    check("26-3 빠졌던 제형 보강됨", not missing, f"아직 없음: {missing}")
+
+    # 브랜드 교차검사가 붙어 있고, 같은 회사 다른 표기는 살려야 한다
+    check("26-4 브랜드 교차검사 존재", "브랜드 교차검사" in src)
+    check("26-5 같은 회사 다른 표기 보호",
+          "_ob not in _cb and _cb not in _ob" in src,
+          "포함관계 확인이 없으면 VT/브이티코스메틱을 다른 회사로 본다")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
