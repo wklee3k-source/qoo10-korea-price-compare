@@ -2960,7 +2960,18 @@ def t25_translation_feedback_safe():
     """
     req = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
     check("25-1 지시문이 피드백을 요청", "---피드백---" in req)
-    check("25-2 비운 이유를 묻는다", "왜 비웠는지" in req)
+    check("25-2 비운 줄마다 이유를 묻는다",
+          "비운 줄은 하나하나 이유를" in req)
+    # 조사하며 알아낸 것을 남기게 하는 항목들. 이게 빠지면 번역만
+    # 받고 도메인 지식은 창이 닫힐 때 사라진다.
+    for key, label in [
+        ("알아낸 브랜드 표기", "25-2a 브랜드 표기 수집"),
+        ("라인명", "25-2b 라인·시리즈 체계 수집"),
+        ("한국에서 어떤 상태", "25-2c 한국 판매 상태 수집"),
+        ("망설인 지점", "25-2d 망설인 지점 수집"),
+        ("여러 번 나온 패턴", "25-2e 반복 패턴 수집"),
+    ]:
+        check(label, key in req)
 
     imp = (ROOT / "src" / "import_translation_response.py").read_text(encoding="utf-8")
     # 반영 스크립트는 '숫자|내용' 형태만 잡아야 한다
