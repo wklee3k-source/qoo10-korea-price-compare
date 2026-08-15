@@ -51,6 +51,7 @@ import sys
 # 규칙이 갈라지면 "이미 쓴 검색어"를 제대로 못 걸러 같은 상점을 재방문한다).
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from iterative_low_review_discovery import extract_core_keyword  # noqa: E402
+from nonbeauty_filter import filter_keywords  # noqa: E402
 
 # 검색어 한 개의 최대 길이. 큐텐 상품명은 30~80자로 매우 길어서 통째로
 # 검색하면 결과가 0건이다(실측). 토큰 경계에서 잘라 앞부분만 쓴다.
@@ -163,7 +164,18 @@ def build_fresh_keywords(titles: set[str], brands: set[str], used: set[str],
         if assign_worker(keyword, workers) != worker:
             continue
         fresh.add(keyword)
-    return sorted(fresh)
+    # [v7.49.0] 화장품이 아닌 검색어는 큐에 넣지 않는다.
+    # 수확본은 "발굴이 찾은 상점의 전체 상품"이라, 그 상점이 잡화도
+    # 팔면 에어컨·상장화·영양제까지 검색어가 된다. 그런 검색어는
+    # 화장품이 아닌 상점을 물어오므로 리뷰<10 화장품이 한 건도 안 나온다
+    # (실측 2026-08-15: 한 바퀴당 수확 18건 → 1건).
+    kept, dropped, guarded = filter_keywords(sorted(fresh))
+    if guarded:
+        print(f"  [안전판] 비화장품 제거율이 상한을 넘어 필터를 적용하지 않음"
+              f" (후보 {len(fresh):,}개)")
+    elif dropped:
+        print(f"  [비화장품 제외] {len(dropped):,}개 (남김 {len(kept):,}개)")
+    return kept
 
 
 def refill(state_path: str, worker: int, workers: int, pool_dir: str,

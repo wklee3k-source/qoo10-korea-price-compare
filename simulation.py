@@ -2572,6 +2572,67 @@ def t15_cron_body_documented():
     check("15 크론 주의사항 문서화", "run_discovery" in readme or True)  # 문서는 경고만
 
 
+# ------------------------- #16 비화장품 검색어 필터 (v7.49.0)
+def t16_nonbeauty_filter():
+    """검색어 필터가 화장품을 잘못 지우지 않고, 비화장품은 확실히 지우는지.
+
+    [왜 검사하는가] 이 필터를 넓게 잡으면 검색어 큐가 통째로 말라
+    워커가 완전정지한다(과거 실측: 워커1 pending 0 → 처리량 50% 손실).
+    반대로 좁게 잡으면 넣은 의미가 없다. 양쪽을 다 고정한다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from nonbeauty_filter import is_non_beauty, filter_keywords
+    except Exception as e:  # noqa: BLE001
+        check("16 비화장품 필터 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    # 화장품인데 지워지면 안 되는 것 (과거 오탐 사례 그대로 고정)
+    must_keep = [
+        "ホワイトパウダー 透明パウダーノートレース フィニッシュパウダー",
+        "ELASTINEエラスティン プロテインリペア",
+        "シルクケラチンプロテイン ピーチエディション",
+        "uka カラーベースコート ゼロ",
+        "テカ ソリューション スージング カプセル",
+        "PDRN カプセル クリーム 100",
+        "シカ マイルドトナーパッド",
+        "マダガスカル センテラ プロバイオシカ エッセンス トナー",
+    ]
+    bad_keep = [k for k in must_keep if is_non_beauty(k)]
+    check("16-1 화장품 검색어 오탐 없음", not bad_keep, f"잘못 제거: {bad_keep}")
+
+    # 비화장품이라 지워져야 하는 것
+    must_drop = [
+        "AY-S28DG-W ルームエアコン DGシリーズ 10畳用",
+        "ムーンスター 子供 上履き バレーシューズ 小学校",
+        "お腹 内臓脂肪ダイエット コレステロール 血糖",
+        "PMジュース パワーカクテル 30包 サプリメント",
+        "フレア 柔軟剤 詰め替え 2袋 大容量",
+        "3in1 充電ケーブル 急速 USBケーブル",
+        "ペットフード 猫 ささみ おやつ",
+    ]
+    bad_drop = [k for k in must_drop if not is_non_beauty(k)]
+    check("16-2 비화장품 검색어 정탐", not bad_drop, f"못 거름: {bad_drop}")
+
+    # 안전판: 제거율이 상한을 넘으면 원본을 그대로 돌려줘야 한다
+    junk = ["ルームエアコン 10畳用"] * 8 + ["シカ クリーム"] * 2
+    kept, dropped, guarded = filter_keywords(junk)
+    check("16-3 과다제거 안전판 작동", guarded and len(kept) == len(junk) and not dropped,
+          f"guarded={guarded} kept={len(kept)} dropped={len(dropped)}")
+
+    # 빈 입력에서 터지지 않아야 한다
+    try:
+        k, d, g = filter_keywords([])
+        ok = (k == [] and d == [] and g is False)
+    except Exception as e:  # noqa: BLE001
+        ok = False
+    check("16-4 빈 입력 안전", ok)
+
+    # 재보충 스크립트가 실제로 이 필터를 통과시키는지 (연결 누락 방지)
+    src = (ROOT / "src" / "refill_discovery_keywords.py").read_text(encoding="utf-8")
+    check("16-5 재보충이 필터를 사용", "filter_keywords" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
