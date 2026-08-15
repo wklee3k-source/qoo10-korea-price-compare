@@ -2948,6 +2948,55 @@ def t24_verify_order_shuffled():
     check("24-3 샤딩 이후에 섞음", i_shard != -1 and i_shuf > i_shard)
 
 
+# ------------- #25 번역 회신의 피드백이 파싱을 깨지 않는가 (v7.59.0)
+def t25_translation_feedback_safe():
+    """번역 요청서가 피드백을 요구하고, 그 피드백이 섞여도 반영이
+    멀쩡한지.
+
+    [왜 검사하는가] 번역은 다른 창에서 사람이 한다. 그때 겪은 고민을
+    돌려받지 못하면 같은 실수가 회차마다 반복된다. 그래서 지시문에
+    피드백을 요청한다 — 다만 응답 파일에 목록 아닌 글이 섞이므로,
+    반영 스크립트가 그걸 상품명으로 잘못 읽으면 안 된다.
+    """
+    req = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
+    check("25-1 지시문이 피드백을 요청", "---피드백---" in req)
+    check("25-2 비운 이유를 묻는다", "왜 비웠는지" in req)
+
+    imp = (ROOT / "src" / "import_translation_response.py").read_text(encoding="utf-8")
+    # 반영 스크립트는 '숫자|내용' 형태만 잡아야 한다
+    check("25-3 상품번호 패턴으로만 파싱",
+          bool(re.search(r"\\d\{4,\}", imp)) or bool(re.search(r"\\d\{7,\}", imp)),
+          "자유 서술이 상품명으로 들어갈 수 있다")
+
+    # 실제로 피드백을 붙여 파싱해 본다
+    import tempfile, subprocess, json as _json, pathlib as _pl
+    sample = {"all_products": [
+        {"goods_no": "1234567890", "translated_kr": "", "brand": "テスト"},
+        {"goods_no": "1234567891", "translated_kr": "", "brand": "テスト"},
+    ]}
+    with tempfile.TemporaryDirectory() as d:
+        sp = _pl.Path(d) / "state.json"
+        rp = _pl.Path(d) / "resp.txt"
+        sp.write_text(_json.dumps(sample), encoding="utf-8")
+        rp.write_text(
+            "1234567890|아누아 어성초 토너 250ml\n"
+            "1234567891|\n"
+            "\n---피드백---\n"
+            "- 医薬部外品은 그대로 옮겼습니다. 한국엔 없는 제도라 망설였습니다.\n"
+            "- 1234567890 같은 번호가 본문에 나와 헷갈렸습니다.\n",
+            encoding="utf-8")
+        r = subprocess.run(
+            [sys.executable, str(ROOT / "src" / "import_translation_response.py"),
+             str(sp), str(rp)],
+            capture_output=True, text=True)
+        after = _json.loads(sp.read_text(encoding="utf-8"))
+    names = {p["goods_no"]: p.get("translated_kr", "") for p in after["all_products"]}
+    check("25-4 피드백이 상품명으로 안 들어감",
+          names.get("1234567890") == "아누아 어성초 토너 250ml"
+          and not names.get("1234567891"),
+          f"{names}")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
