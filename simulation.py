@@ -2831,6 +2831,46 @@ def t21_foreign_brands_excluded():
     check("21-4 검증 대상 산출이 목록 사용", "foreign_brands.json" in src)
 
 
+# --------- #22 수확이 반드시 진전을 남기는가 (v7.56.0)
+def t22_harvest_makes_progress():
+    """수확이 job 시간 상한 안에 반드시 커밋을 남기는 구조인지.
+
+    [왜 검사하는가 — 실측 사고 2026-08-15]
+    수확은 상점 배치를 **전부 끝내야** 커밋한다. 그런데 상점 하나에
+    시간 상한이 없어서, 느린 상점을 만나면 배치가 job 상한(110분)을
+    넘겨 죽었다. 다음 실행도 같은 자리에서 시작해 또 죽는다 —
+    영원히 진전이 없다. 실제로 15:26 이후 344분간 커밋이 0건이었다.
+
+    두 값의 곱이 job 상한보다 확실히 작아야 한다:
+        상점당 상한 × 배치크기 < job 상한
+    """
+    src = (ROOT / "src" / "qoo10_shop_full_catalog.py").read_text(encoding="utf-8")
+    check("22-1 상점당 시간 상한 존재", "SHOP_TIME_LIMIT" in src and "time_limit" in src)
+    check("22-2 상한 도달 시 루프 탈출",
+          "time.monotonic() - started > time_limit" in src)
+
+    m = re.search(r"SHOP_TIME_LIMIT\s*=\s*(\d+)", src)
+    shop_limit = int(m.group(1)) if m else 0
+
+    wf = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    mb = re.search(r"^\s*BATCH=(\d+)", wf, re.M)
+    batch = int(mb.group(1)) if mb else 0
+    check("22-3 배치 크기 확인", batch > 0, f"BATCH={batch}")
+
+    try:
+        import yaml
+        data = yaml.safe_load(wf)
+        job_limit = data["jobs"]["harvest_full_catalog_parallel"]["timeout-minutes"]
+    except Exception:  # noqa: BLE001
+        job_limit = 0
+
+    worst_minutes = shop_limit * batch / 60
+    check("22-4 최악 배치시간 < job 상한의 절반",
+          bool(job_limit) and worst_minutes < job_limit / 2,
+          f"최악 {worst_minutes:.0f}분 / job 상한 {job_limit}분 "
+          f"(상점당 {shop_limit}초 x 배치 {batch}) — 커밋 없이 죽을 수 있다")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

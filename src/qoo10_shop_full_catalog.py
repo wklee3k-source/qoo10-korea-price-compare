@@ -41,8 +41,27 @@ class ShopCatalogFailed(Exception):
     '진짜 빈 상점'과 '크롤 실패'를 구분해야 재시도가 제대로 된다)."""
 
 
-def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: int = 3) -> list[dict]:
+# [v7.56.0] 상점 하나에 쓸 수 있는 시간의 상한.
+#
+# [실측 사고 2026-08-15] 상한이 없어서 상점 하나에 무한정 머물렀다.
+# "더보기"를 최대 40번 누르고 매번 최대 6.5초를 기다리므로, 페이지가
+# 느려지면 한 상점에 4분 이상 걸린다. 수확은 상점 50개 배치를 전부
+# 끝내야 커밋하는 구조라, 배치가 job 시간 상한(110분)을 넘기면
+# **커밋을 한 번도 못 하고 죽는다.** 다음 실행도 같은 자리에서 시작해
+# 또 죽는다 — 영원히 진전이 없다.
+# 실제로 15:26 이후 344분간 커밋이 한 건도 없었다.
+#
+# 상한에 걸리면 그때까지 모은 상품을 그대로 돌려준다. 상품을 다 못
+# 가져와도 그 상점은 완료 처리되는데, 이게 맞다 — 수확본은 발굴
+# 검색어의 재료일 뿐이고, 한 상점에서 몇 개를 놓치는 것보다 배치가
+# 통째로 멈추는 쪽이 훨씬 손해다.
+SHOP_TIME_LIMIT = 90  # 초
+
+
+def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: int = 3,
+                            time_limit: int = SHOP_TIME_LIMIT) -> list[dict]:
     url = f"https://www.qoo10.jp/shop/{shop_id}?search_mode=basic"
+    started = time.monotonic()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -64,6 +83,9 @@ def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: in
         # click()은 실패할 수 있어 evaluate로 우회 — 실측 확인된 방식).
         prev_count = -1
         for _ in range(max_clicks):
+            if time.monotonic() - started > time_limit:
+                print(f"  [시간상한] {shop_id} {time_limit}초 초과 — 여기까지만 수집")
+                break
             try:
                 cur_count = page.eval_on_selector_all('li[id^="g_"]', "els => els.length")
             except Exception:  # noqa: BLE001
@@ -81,6 +103,8 @@ def fetch_shop_full_catalog(shop_id: str, max_clicks: int = 40, wait_seconds: in
             time.sleep(1.5)
             # 로딩 스피너가 끝날 때까지 잠깐 더 기다린다(최대 5초).
             for _ in range(10):
+                if time.monotonic() - started > time_limit:
+                    break
                 try:
                     hidden = page.eval_on_selector(
                         "#append_loading_span", "el => el.style.display"

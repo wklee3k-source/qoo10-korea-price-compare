@@ -815,7 +815,12 @@ jobs:
           B="${{ matrix.branch }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          BATCH=50
+          # [v7.56.0 50 -> 20] 배치를 다 끝내야 커밋하는 구조라, 배치가
+          # job 시간 상한(110분)을 못 넘겨야 한다. 상점당 상한이 90초이므로
+          # 20개면 최악의 경우에도 30분이면 끝나 반드시 커밋이 남는다.
+          # 50개로 두면 최악 75분 + 재시도까지 겹쳐 커밋 없이 죽을 수 있다
+          # (실측 2026-08-15: 15:26 이후 344분간 커밋 0건).
+          BATCH=20
           NO_PROGRESS=0
           MAX_NO_PROGRESS=3  # 연속 무진전 허용 횟수(harvest의 MAX_RETRIES=3과 맞춤)
           ITER=0
