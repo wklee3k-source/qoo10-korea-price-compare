@@ -110,6 +110,7 @@ CSS = """
   .c2{background:rgba(167,139,250,.09); border:1px solid rgba(167,139,250,.22);}
   .c3{background:rgba(62,207,142,.09); border:1px solid rgba(62,207,142,.22);}
   .c4{background:rgba(245,195,68,.09); border:1px solid rgba(245,195,68,.22);}
+  .lv.sub{background:rgba(255,255,255,.03); border:1px dashed var(--border); margin-left:6px;}
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -152,6 +153,29 @@ def leaf(t: str, v, p: str = "") -> str:
     ex = f'<span class="p">{esc(p)}</span>' if p else ""
     return (f'<span class="leaf"><span class="t">{esc(t)}</span>'
             f'<span class="v">{num(v)}</span>{ex}</span>')
+
+
+def sub(head: str, leafs: list, inner: str = "") -> str:
+    """중첩 박스 안의 한 단계 더 얕은 층.
+
+    [왜 필요한가 — 사장님 지적 2026-08-17]
+    검증 결과를 `구매링크 920 / 링크없음 1,420 / 합의부족 2,406 /
+    남음 1,475`처럼 한 줄에 늘어놓았더니 관계가 안 보였다. 실제로는
+    3층이고, 중간 단계인 `이름확정 2,340`이 아예 빠져 있었다.
+
+        검증대상 6,221
+        ├─ 완료 4,746
+        │  ├─ 이름확정 2,340
+        │  │  ├─ 구매링크 920
+        │  │  └─ 링크없음 1,420
+        │  └─ 합의부족 2,406
+        └─ 남음 1,475
+
+    **합이 맞는지 반드시 확인하고 리포트에 적는다.** 형제끼리 더하면
+    부모가 나와야 한다. 안 맞으면 어딘가 빠뜨린 것이다.
+    """
+    body = f'<div class="leafs">{"".join(leafs)}</div>' if leafs else ""
+    return (f'<div class="lv sub"><div class="hd">{head}</div>{body}{inner}</div>')
 
 
 def level(cls: str, head: str, leafs: list, inner: str = "") -> str:
