@@ -3157,6 +3157,31 @@ def t27_no_heavy_fetch_in_loop():
           "매 반복 발굴 브랜치를 받으면 그게 병목이 된다")
 
 
+# ---- #28 수확 상태파일이 커져도 저장이 싸야 한다 (v7.66.0)
+def t28_harvest_state_stays_small():
+    """상점마다 저장하는 파일이 무한정 커지지 않는지.
+
+    [실측 사고 2026-08-16] 수확이 계속 진전 없이 도는 진짜 원인이었다.
+    상태파일이 99MB(상품 31만 건)까지 커졌는데 **상점 하나 끝날 때마다
+    그 99MB를 통째로 다시 썼다.** 읽고 쓰는 데만 3초, 배치 20개면 60초.
+    워크플로도 매 반복 이 파일을 두 번 더 읽었다(2초씩).
+
+    게다가 파일은 계속 커진다 - 그때그때 줄여봐야 시간이 지나면 또
+    느려진다. 그래서 구조를 바꿨다: 진행 상태(상점 목록)만 json에 두고,
+    상품은 jsonl에 덧붙이기만 한다. 덧붙이기는 파일이 아무리 커져도
+    비용이 일정하다.
+    """
+    src = (ROOT / "src" / "harvest_full_catalog.py").read_text(encoding="utf-8")
+    check("28-1 상태파일에 상품 미포함",
+          '"all_products"' not in src,
+          "상품을 상태에 넣으면 상점마다 전체를 다시 쓰게 된다")
+    check("28-2 상품은 덧붙이기로 저장",
+          "_append_items" in src and '"a", encoding' in src)
+    ref = (ROOT / "src" / "refill_discovery_keywords.py").read_text(encoding="utf-8")
+    check("28-3 재보충이 jsonl을 읽음", "fullcatalog_items_" in ref)
+    check("28-4 옛 형식도 계속 읽음", "fullcatalog_state*.json" in ref)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

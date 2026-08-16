@@ -123,9 +123,30 @@ def collect_pool_titles(pool_dir: str) -> tuple[set[str], set[str]]:
     """
     titles: set[str] = set()
     brands: set[str] = set()
+    # [v7.66.0] 상품은 jsonl(덧붙이기 전용)로 옮겼다. 옛 형식(state 안에
+    # all_products)도 당분간 함께 읽는다 — 예전 워커가 남긴 파일에 아직
+    # 상품이 들어 있고, 그게 검색어 재료로 값어치가 있기 때문이다(§4.2).
+    for path in sorted(glob.glob(os.path.join(pool_dir, "fullcatalog_items_*.jsonl"))):
+        n = 0
+        try:
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    try:
+                        item = json.loads(line)
+                    except ValueError:
+                        continue
+                    if item.get("title"):
+                        titles.add(item["title"])
+                    if item.get("brand"):
+                        brands.add(item["brand"])
+                    n += 1
+        except OSError:
+            continue
+        print(f"  [수확본] {os.path.basename(path)} 상품 {n:,}건")
+
     files = sorted(glob.glob(os.path.join(pool_dir, "fullcatalog_state*.json")))
     if not files:
-        print(f"  [경고] 수확본을 못 찾음: {pool_dir}/fullcatalog_state*.json")
+        print(f"  [경고] 수확본 state 파일 없음: {pool_dir}/fullcatalog_state*.json")
     for path in files:
         data = _load_json(path)
         if not isinstance(data, dict):
