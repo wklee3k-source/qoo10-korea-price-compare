@@ -106,29 +106,44 @@ CSS = """
   .leaf .t{color:var(--sub);}
   .leaf .v{font-weight:700; font-variant-numeric:tabular-nums;}
   .leaf .p{color:var(--sub); font-size:9.5px;}
-  /* 단계별 색 — 반투명 대신 **불투명 색**을 쓴다.
-     어두운 바탕(#0f1115)에 알파 20% 정도로는 거의 안 보인다(실측).
-     머리글을 색 띠로 깔고 흰 글자를 얹으면 확실히 갈린다. */
-  .lv{border:none; padding:0; overflow:hidden; border-radius:7px; margin-top:0;}
-  .lv > .hd{margin:0; padding:6px 10px; font-size:12.5px; font-weight:700;}
-  .lv > .leafs{padding:7px 9px; gap:4px;}
-  .lv > .lv, .lv > .lv.sub{margin:0 7px 7px;}
+  /* ── 중첩 박스: 안으로 들어갈수록 밝아진다 ─────────────
+     [실패했던 방식 — 2026-08-17] 층마다 다른 색(파랑/보라/초록)을
+     주고 여백을 7px로 좁혔더니, 색이 서로 대등해 보여 "나란한 것"으로
+     읽혔다. 사장님이 "상하 관계가 명확히 보이지 않는다"고 지적.
 
-  .c1{background:#12233a;} .c1 > .hd{background:#2b6cb0; color:#fff;}
-  .c2{background:#1e1836;} .c2 > .hd{background:#6b46c1; color:#fff;}
-  .c3{background:#0f2a20;} .c3 > .hd{background:#1f8f5f; color:#fff;}
-  .c4{background:#2b2413;} .c4 > .hd{background:#b8860b; color:#fff;}
-  .c5{background:#2e1d12;} .c5 > .hd{background:#c05621; color:#fff;}
-  .lv > .hd .v{color:#fff; font-size:14.5px;}
-  .lv > .hd .dd{color:rgba(255,255,255,.78); font-weight:500; font-size:10.5px;}
+     고친 방향: **색으로 층을 나누지 않는다.** 같은 색 계열에서
+     안으로 갈수록 배경을 밝게 하고, 부모 여백을 넉넉히 줘서
+     자식 둘레에 부모 색이 보이게 한다. 그러면 "안에 들어있다"가
+     눈으로 읽힌다. 색은 결과(초록/노랑/파랑/회색)에만 쓴다. */
+  .lv{border-radius:8px; overflow:hidden; margin-top:7px;}
+  .lv:first-child{margin-top:0;}
+  .lv > .hd{margin:0; padding:8px 12px; font-size:12.5px; font-weight:700;
+    display:flex; align-items:center; gap:8px;}
+  .lv > .hd .v{font-size:15px; font-weight:800;}
+  .lv > .hd .dd{font-size:10.5px; font-weight:500; opacity:.75;}
+  .lv > .leafs{padding:8px 12px 10px;}
+  /* 자식 박스는 부모 안쪽으로 들여쓴다 — 좌우 12px, 아래 10px */
+  .lv > .lv{margin:0 12px 10px;}
 
-  .lv.sub{background:#20242e; border-radius:6px;}
-  .lv.sub > .hd{background:#333a48; color:#e6e8ec; font-size:11.5px; padding:5px 9px;}
-  .lv.sub > .hd .v{color:#fff; font-size:13px;}
-  .lv.sub > .hd .dd{color:#b6bcc7;}
+  /* 깊이별 배경: 바깥이 어둡고 안이 밝다 */
+  .d1{background:#1b1f28; border:1px solid #3a4152;}
+  .d1 > .hd{background:#2b3242; color:#cfd6e4;}
+  .d2{background:#232936;} .d2 > .hd{background:#333c4e; color:#dce3f0;}
+  .d3{background:#2b3241;} .d3 > .hd{background:#3d475b; color:#e6ebf5;}
+  .d4{background:#333b4c;} .d4 > .hd{background:#4a5568; color:#eff3fa;}
+  .d5{background:#3c4557;} .d5 > .hd{background:#586274; color:#fff;}
+  .d6{background:#464f63;} .d6 > .hd{background:#66718a; color:#fff;}
+  .lv > .hd .v{color:#fff;}
 
-  /* 잎사귀 — 불투명 배경 + 진한 글자 */
-  .leaf{border:none; padding:4px 8px; font-size:10.5px; border-radius:5px; gap:4px;}
+  /* 단계 번호에 색 점을 찍어 어느 단계인지 표시 */
+  .step{display:inline-block; width:9px; height:9px; border-radius:50%;
+    flex:0 0 9px;}
+  .s1{background:#5fa8f5;} .s2{background:#a78bfa;} .s3{background:#3ecf8e;}
+  .s4{background:#f5c344;} .s5{background:#f48c50;}
+
+  /* 잎사귀 — 결과에 따라 색이 다르다 */
+  .leaf{border:none; padding:5px 9px; font-size:10.5px; border-radius:5px;
+    gap:5px;}
   .leaf .v{font-size:12px; font-weight:800;}
   .leaf.go{background:#1f8f5f;} .leaf.go .t{color:#d6fbe9;}
   .leaf.go .v{color:#fff;} .leaf.go .p{color:#bff0da;}
@@ -136,12 +151,13 @@ CSS = """
   .leaf.todo .v{color:#fff;} .leaf.todo .p{color:#ffeab8;}
   .leaf.wait{background:#2b6cb0;} .leaf.wait .t{color:#dceafd;}
   .leaf.wait .v{color:#fff;} .leaf.wait .p{color:#c3dcfa;}
-  .leaf.drop{background:#3a3f4a;} .leaf.drop .t{color:#9aa1ad;}
-  .leaf.drop .v{color:#c7ccd5;} .leaf.drop .p{color:#8d94a0;}
-  .leaf:not(.go):not(.todo):not(.wait):not(.drop){background:#2a2f3a;}
+  .leaf.drop{background:#454b58;} .leaf.drop .t{color:#a3aab6;}
+  .leaf.drop .v{color:#ccd2dc;} .leaf.drop .p{color:#939aa6;}
+  .leaf:not(.go):not(.todo):not(.wait):not(.drop){background:#4a5262;}
 
   .nest{background:var(--card); border:1px solid var(--border);
-    border-radius:9px; padding:8px;}
+    border-radius:9px; padding:9px;}
+
   /* ── 트리: 상하관계를 선으로 그린다 ──────────────────────
      [왜 — 사장님 지적 2026-08-17] 중첩 박스를 색으로 구분했더니
      오히려 "나란한 것"처럼 읽혔다. 층이 다른데 색만 다를 뿐
@@ -298,6 +314,23 @@ def branch(head: str, children: list = None) -> str:
 
 def tree(root: str) -> str:
     return f'<div class="tree"><ul><li>{root}</li></ul></div>'
+
+
+
+def box(depth: int, step: str, head: str, value=None, note: str = "",
+        leafs: list = None, inner: str = "") -> str:
+    """중첩 박스 한 겹.
+
+    depth: 1~5 — 안으로 갈수록 배경이 밝아진다
+    step:  s1~s5 또는 "" — 단계를 나타내는 색 점
+    """
+    dot = f'<span class="step {step}"></span>' if step else ""
+    v = f'<span class="v">{num(value)}</span>' if value is not None else ""
+    nt = f'<span class="dd">{esc(note)}</span>' if note else ""
+    body = f'<div class="leafs">{"".join(leafs)}</div>' if leafs else ""
+    return (f'<div class="lv d{depth}">'
+            f'<div class="hd">{dot}{esc(head)}{v}{nt}</div>'
+            f'{body}{inner}</div>')
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
