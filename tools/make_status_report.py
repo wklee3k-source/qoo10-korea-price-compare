@@ -324,9 +324,20 @@ CSS = """
   .bg{background:#1e7a5a; border:1px solid #2fa87c;}   /* 된 것 */
   .bt{background:#a8761f; border:1px solid #d09a35;}   /* 할 것 */
   .bw{background:#2a5b8f; border:1px solid #3f7cbd;}   /* 아직 */
-  .bx{background:#333a47; border:1px solid #454e5f;}   /* 버림 */
-  .bx .ttl .nmx, .bx .ttl .qx{color:#a8b0bd;}
-  .bx .note{color:#7f8798;}
+  /* 버려지는 것 — 작고 흐리게.
+     [사장님 요청 2026-08-17] "제외 버림 등은 더 작게".
+     숫자는 남기되 살아있는 것과 크기를 나란히 두면 눈이 그쪽으로
+     간다. 배경을 어둡게, 글씨를 작게, 최소 폭도 절반으로 줄인다. */
+  .bx{background:#242932; border:1px solid #333b48; padding:8px;}
+  .bx .ttl{margin-bottom:5px;}
+  .bx .ttl .nmx{color:#7d8492; font-size:10.5px; font-weight:600;}
+  .bx .ttl .qx{color:#98a0ae; font-size:12px;}
+  .bx .ttl .qx em{font-size:8.5px;}
+  .bx .note{color:#6b7280; font-size:9px; margin-top:4px;}
+  .bmap .kids > .bmap.bx{flex-basis:80px; min-width:80px;}
+  .bx .bline{font-size:9.5px; padding:3px 6px; background:rgba(0,0,0,.3);
+    color:#8b93a1;}
+  .bx .bline .q{font-size:10.5px; color:#a2aab8;}
 
   /* 상자 사이 화살표 — 방향만 보여준다.
      [사장님 요청 2026-08-17] "글을 쓰지 말고 화살표만 겹치게".
