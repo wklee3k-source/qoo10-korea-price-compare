@@ -290,6 +290,27 @@ INSTRUCTION = """아래는 큐텐재팬에 올라온 **한국 화장품**의 일
 
 
 
+def _now_kst() -> str:
+    from datetime import datetime, timedelta, timezone
+    return (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y-%m-%d %H:%M")
+
+
+def _version() -> str:
+    """규칙 판 번호. 요청서에 박아 두면 옛 파일을 쓰고 있는지 알 수 있다.
+
+    [실측 2026-08-16] 09회차에서 규칙을 여러 번 고쳤는데, 사장님 손에
+    있던 파일은 고치기 전에 뽑은 것이었다. 그래서 '음차하지 말라',
+    '브랜드 한글을 함께 준다' 같은 개선이 네 장 동안 전달되지 않았다.
+    """
+    for candidate in (Path(__file__).resolve().parent.parent / "VERSION",
+                      Path("VERSION"), Path("../VERSION")):
+        try:
+            return candidate.read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+    return "?"
+
+
 def _norm_brand(s: str) -> str:
     return re.sub(r"[\s\-_.]+", "", (s or "")).lower()
 
@@ -499,6 +520,10 @@ def export(state_path: str, out_path: str, limit: int | None = None,
             "",
             f"미번역 {total_pending}건 중 이 장은 {len(part)}건. "
             "**이 파일 전체를 복사해서 다른 Claude 창에 붙여넣으세요.**",
+            "",
+            f"> 생성 시각 {_now_kst()} · 규칙 v{_version()}",
+            "> 더 최근에 받은 파일이 있으면 그것을 쓰세요. 규칙이 개선되면",
+            "> 요청서를 새로 뽑아 드립니다. 옛 파일에는 옛 규칙이 박혀 있습니다.",
             "",
             "---",
             "",
