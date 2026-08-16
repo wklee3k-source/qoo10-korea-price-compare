@@ -106,39 +106,42 @@ CSS = """
   .leaf .t{color:var(--sub);}
   .leaf .v{font-weight:700; font-variant-numeric:tabular-nums;}
   .leaf .p{color:var(--sub); font-size:10px;}
-  /* 단계별 색 — 파이프라인 순서대로 파랑→보라→초록→노랑→주황.
-     왼쪽 굵은 띠로 단계를 구분하고, 머리글에 색을 칠해 눈에 띄게 한다. */
-  .lv{border-left-width:5px; border-left-style:solid;}
-  .c1{background:rgba(95,168,245,.16); border:1px solid rgba(95,168,245,.45);
-      border-left-color:#5fa8f5;}
-  .c2{background:rgba(167,139,250,.16); border:1px solid rgba(167,139,250,.45);
-      border-left-color:#a78bfa;}
-  .c3{background:rgba(62,207,142,.16); border:1px solid rgba(62,207,142,.45);
-      border-left-color:#3ecf8e;}
-  .c4{background:rgba(245,195,68,.16); border:1px solid rgba(245,195,68,.45);
-      border-left-color:#f5c344;}
-  .c5{background:rgba(244,140,80,.16); border:1px solid rgba(244,140,80,.45);
-      border-left-color:#f48c50;}
-  .c1>.hd{color:#9ecbff;} .c2>.hd{color:#c9b6ff;}
-  .c3>.hd{color:#7ce0b0;} .c4>.hd{color:#ffd970;} .c5>.hd{color:#ffab7a;}
-  .c1>.hd .v{color:#5fa8f5;} .c2>.hd .v{color:#a78bfa;}
-  .c3>.hd .v{color:#3ecf8e;} .c4>.hd .v{color:#f5c344;} .c5>.hd .v{color:#f48c50;}
-  .lv .hd .v{font-size:15px;}
-  .lv.sub{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
-    margin-left:10px; border-left:4px solid rgba(255,255,255,.3);}
-  .lv.sub>.hd{color:var(--text);}
-  .lv.sub>.hd .v{color:#fff;}
+  /* 단계별 색 — 반투명 대신 **불투명 색**을 쓴다.
+     어두운 바탕(#0f1115)에 알파 20% 정도로는 거의 안 보인다(실측).
+     머리글을 색 띠로 깔고 흰 글자를 얹으면 확실히 갈린다. */
+  .lv{border:none; padding:0; overflow:hidden; border-radius:9px;}
+  .lv > .hd{margin:0; padding:9px 13px; font-size:13.5px; font-weight:700;}
+  .lv > .leafs{padding:11px 13px;}
+  .lv > .lv, .lv > .lv.sub{margin:0 11px 11px;}
 
-  /* 잎사귀 — 결과에 따라 색이 다르다. 배경을 진하게 해 한눈에 갈린다. */
-  .leaf{border:1px solid transparent;}
-  .leaf.go{background:rgba(62,207,142,.28); border-color:#3ecf8e;}
-  .leaf.go .t{color:#c9f5e0;} .leaf.go .v{color:#6ff0b8; font-size:12.5px;}
-  .leaf.todo{background:rgba(245,195,68,.28); border-color:#f5c344;}
-  .leaf.todo .t{color:#ffeab8;} .leaf.todo .v{color:#ffd970; font-size:12.5px;}
-  .leaf.drop{background:rgba(150,158,170,.16); border-color:rgba(150,158,170,.45);}
-  .leaf.drop .t, .leaf.drop .p{color:#8d94a0;} .leaf.drop .v{color:#aab1bd;}
-  .leaf.wait{background:rgba(95,168,245,.26); border-color:#5fa8f5;}
-  .leaf.wait .t{color:#cfe4ff;} .leaf.wait .v{color:#87c1ff; font-size:12.5px;}
+  .c1{background:#12233a;} .c1 > .hd{background:#2b6cb0; color:#fff;}
+  .c2{background:#1e1836;} .c2 > .hd{background:#6b46c1; color:#fff;}
+  .c3{background:#0f2a20;} .c3 > .hd{background:#1f8f5f; color:#fff;}
+  .c4{background:#2b2413;} .c4 > .hd{background:#b8860b; color:#fff;}
+  .c5{background:#2e1d12;} .c5 > .hd{background:#c05621; color:#fff;}
+  .lv > .hd .v{color:#fff; font-size:16px;}
+  .lv > .hd .dd{color:rgba(255,255,255,.8); font-weight:500; font-size:11.5px;}
+
+  .lv.sub{background:#20242e; border-radius:8px;}
+  .lv.sub > .hd{background:#333a48; color:#e6e8ec; font-size:12.5px; padding:8px 12px;}
+  .lv.sub > .hd .v{color:#fff; font-size:14px;}
+  .lv.sub > .hd .dd{color:#b6bcc7;}
+
+  /* 잎사귀 — 불투명 배경 + 진한 글자 */
+  .leaf{border:none; padding:7px 11px; font-size:11.5px; border-radius:7px;}
+  .leaf .v{font-size:13px; font-weight:800;}
+  .leaf.go{background:#1f8f5f;} .leaf.go .t{color:#d6fbe9;}
+  .leaf.go .v{color:#fff;} .leaf.go .p{color:#bff0da;}
+  .leaf.todo{background:#b8860b;} .leaf.todo .t{color:#fff4d6;}
+  .leaf.todo .v{color:#fff;} .leaf.todo .p{color:#ffeab8;}
+  .leaf.wait{background:#2b6cb0;} .leaf.wait .t{color:#dceafd;}
+  .leaf.wait .v{color:#fff;} .leaf.wait .p{color:#c3dcfa;}
+  .leaf.drop{background:#3a3f4a;} .leaf.drop .t{color:#9aa1ad;}
+  .leaf.drop .v{color:#c7ccd5;} .leaf.drop .p{color:#8d94a0;}
+  .leaf:not(.go):not(.todo):not(.wait):not(.drop){background:#2a2f3a;}
+
+  .nest{background:var(--card); border:1px solid var(--border);
+    border-radius:10px; padding:12px;}
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
