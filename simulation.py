@@ -3654,6 +3654,13 @@ def t46_harvest_vs_merged():
     """
     doc = (ROOT / "tools" / "make_status_report.py").read_text(encoding="utf-8")
     check("46-1 리포트 생성기 존재", "def ntable" in doc)
+    # [실측 2026-08-17] CSS content에 유니코드 이스케이프(\25B6)를 쓰면
+    # 파이썬 문자열에서 \x15B6으로 잘못 해석돼 화면에 "B6"이 뜬다.
+    # 사장님이 "이상한 기호로 뜸"이라고 지적. 문자를 직접 넣는다.
+    import re as _re
+    esc_in_css = _re.findall(r'content:"\\[0-9A-Fa-f]{2,6}"', doc)
+    check("46-3 CSS에 유니코드 이스케이프 없음", not esc_in_css,
+          f"직접 문자를 넣을 것: {esc_in_css}")
     # 규칙 문서에 이 관계가 적혀 있는지 (스킬은 저장소 밖이라 생성기 주석으로 확인)
     check("46-2 표 안의 표 함수", "def nrow" in doc and "holder" in doc)
 

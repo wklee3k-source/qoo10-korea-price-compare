@@ -337,7 +337,7 @@ CSS = """
     z-index:5; pointer-events:none;}
   /* 화살표를 상자 위에 올려 놓는다. 원판을 깔고 그 안에 삼각형을
      넣어, 상자 색 위에서도 또렷하게 보이게 한다. */
-  .arw::before{content:"\25B6"; position:absolute; left:-13px; top:-13px;
+  .arw::before{content:"▶"; position:absolute; left:-13px; top:-13px;
     width:26px; height:26px; border-radius:50%;
     background:#0d1117; border:2px solid #8fa0bb; color:#dbe4f0;
     font-size:12px; display:flex; align-items:center;
