@@ -3421,8 +3421,16 @@ def t34_single_file_request():
     src = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
     check("34-1 한 파일 방식이 기본", "single_file: bool = True" in src)
     check("34-2 묶음으로 나눠 적음", '"## 묶음 ' in src or "## 묶음 {idx}" in src)
-    check("34-3 한 묶음씩 답하라는 안내",
-          "한 번에 전부 하려고 하지 마세요" in src)
+    check("34-3 두 묶음씩 합치라는 안내",
+          "두 묶음을 합쳐서" in src)
+    # [v7.72.1] 사장님이 결과를 받아 저장하는데 묶음마다 따로 주면
+    # 복사할 게 많고 빠뜨리기 쉽다. 그렇다고 전부 모으면 답변이 잘린다.
+    # 실측: 한 줄 평균 33자 x 2,000건 = 약 33k 토큰. 한 번에 낼 수
+    # 있는 건 400건(두 묶음) 수준이다.
+    check("34-3b 과욕 방지 경고",
+          "세 묶음 이상을 합치면" in src,
+          "더 모으려다 답변이 잘리면 그때까지 한 것도 못 받는다")
+    check("34-3c 끝냈는지 확인 목록", "다 끝냈는지 확인" in src)
 
     import tempfile, json as _json, pathlib as _pl, subprocess, re
     with tempfile.TemporaryDirectory() as d:
@@ -3447,6 +3455,8 @@ def t34_single_file_request():
           f"묶음 {body.count('## 묶음 ')}개")
     check("34-6 상품이 전부 들어감",
           all(f"{1000000+i}|" in body for i in range(5)))
+    check("34-7 확인 목록이 짝으로 묶임",
+          "묶음 1~2" in body, "두 묶음씩 합치라 했으니 목록도 짝이어야 한다")
 
 
 def main():
