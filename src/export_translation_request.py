@@ -243,7 +243,7 @@ def _load_foreign_brands(state_path: Path) -> set:
 
 
 def export(state_path: str, out_path: str, limit: int | None = None,
-           single_file: bool = True,
+           single_file: bool = False,
            chunk: int = 200) -> int:
     """미번역 목록을 요청서로 뽑는다.
 
@@ -459,5 +459,9 @@ if __name__ == "__main__":
         raise SystemExit(1)
     lim = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].strip() else None
     ch = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4].strip() else 200
-    single = "--split" not in sys.argv
+    # [사장님 방침 2026-08-16] 기본은 200건씩 여러 장.
+    # 한 파일에 묶음으로 담는 방식(v7.72.0)도 만들어 봤지만,
+    # 실제로 써 보니 장마다 따로 받는 쪽이 편하다고 하셨다.
+    # 한 파일 방식이 필요하면 --single 을 준다.
+    single = "--single" in sys.argv
     export(sys.argv[1], sys.argv[2], lim, single, ch)

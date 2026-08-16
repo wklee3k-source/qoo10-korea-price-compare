@@ -3433,7 +3433,11 @@ def t34_single_file_request():
     누르면 된다.
     """
     src = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
-    check("34-1 한 파일 방식이 기본", "single_file: bool = True" in src)
+    # [사장님 방침 2026-08-16] 기본은 200건씩 여러 장이다.
+    # 한 파일 묶음 방식(v7.72.0)도 만들었지만 써 보니 장마다 따로
+    # 받는 쪽이 편하다고 하셨다. 한 파일이 필요하면 --single.
+    check("34-1 여러 장이 기본", "single_file: bool = False" in src)
+    check("34-1b 한 파일 방식도 남아 있음", "--single" in src)
     check("34-2 묶음으로 나눠 적음", '"## 묶음 ' in src or "## 묶음 {idx}" in src)
     check("34-3 두 묶음씩 합치라는 안내",
           "두 묶음을 합쳐서" in src)
@@ -3459,7 +3463,7 @@ def t34_single_file_request():
         ]}, ensure_ascii=False), encoding="utf-8")
         subprocess.run(
             [sys.executable, str(ROOT / "src" / "export_translation_request.py"),
-             str(sp), str(root / "req.md"), "", "2"],
+             str(sp), str(root / "req.md"), "", "2", "--single"],
             capture_output=True, text=True)
         files = sorted(root.glob("req*.md"))
         body = files[0].read_text(encoding="utf-8") if files else ""
