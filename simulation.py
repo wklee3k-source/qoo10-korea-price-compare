@@ -3658,6 +3658,42 @@ def t46_harvest_vs_merged():
     check("46-2 표 안의 표 함수", "def nrow" in doc and "holder" in doc)
 
 
+# ---- #47 수확본 편입 성과 측정 (v7.89.0)
+def t47_promotion_report():
+    """회차마다 편입 성과를 재서 계속할지 판단할 근거를 만드는지.
+
+    [사장님 방침 2026-08-17] 수확본에 옮길 수 있는 상품이 171,365건
+    있는데 다 옮기려면 번역 요청서 856장, 85일이 걸린다. 그래서
+    "회차마다 2,000건씩 옮기고 성과를 보며 조절한다"로 정했다.
+
+    조절하려면 근거가 있어야 한다. 이 도구가 그 근거를 만든다:
+      · 편입분이 발굴분보다 잘 되는가
+      · 남은 물량이 얼마나 되는가
+      · 어느 브랜드가 잘 되는가
+
+    [실측 2026-08-17] 편입분 이름확정 67.8% vs 발굴분 48.6%.
+    19.2%p 낫다 — 계속 옮겨도 된다.
+
+    [멈출 때] 편입분이 발굴분보다 낮아지면 좋은 것을 다 퍼낸 것이다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from harvest_promotion_report import measure, report  # noqa: F401
+    except Exception as e:  # noqa: BLE001
+        check("47 성과 측정 도구 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    src = (ROOT / "src" / "harvest_promotion_report.py").read_text(encoding="utf-8")
+    check("47-1 편입분·발굴분 비교", "발굴분_이름확정" in src and "편입분_이름확정" in src)
+    check("47-2 남은 물량 계산", "남은물량" in src)
+    check("47-3 계속할지 판단까지 적음",
+          "계속 옮겨도 됩니다" in src and "물량을 줄이십시오" in src,
+          "숫자만 주면 사장님이 매번 해석해야 한다")
+    # 편입 도구가 브랜드 실적을 받는지
+    prom = (ROOT / "src" / "promote_harvest_to_discovery.py").read_text(encoding="utf-8")
+    check("47-4 편입 시 브랜드 실적 반영", "verified_dir" in prom)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
