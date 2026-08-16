@@ -106,11 +106,27 @@ CSS = """
   .leaf .t{color:var(--sub);}
   .leaf .v{font-weight:700; font-variant-numeric:tabular-nums;}
   .leaf .p{color:var(--sub); font-size:10px;}
-  .c1{background:rgba(95,168,245,.09); border:1px solid rgba(95,168,245,.22);}
-  .c2{background:rgba(167,139,250,.09); border:1px solid rgba(167,139,250,.22);}
-  .c3{background:rgba(62,207,142,.09); border:1px solid rgba(62,207,142,.22);}
-  .c4{background:rgba(245,195,68,.09); border:1px solid rgba(245,195,68,.22);}
-  .lv.sub{background:rgba(255,255,255,.03); border:1px dashed var(--border); margin-left:6px;}
+  /* 단계별 색 — 파이프라인 순서대로 파랑→보라→초록→노랑→주황 */
+  .c1{background:rgba(95,168,245,.10); border:1px solid rgba(95,168,245,.30);}
+  .c2{background:rgba(167,139,250,.10); border:1px solid rgba(167,139,250,.30);}
+  .c3{background:rgba(62,207,142,.10); border:1px solid rgba(62,207,142,.30);}
+  .c4{background:rgba(245,195,68,.10); border:1px solid rgba(245,195,68,.30);}
+  .c5{background:rgba(244,140,80,.10); border:1px solid rgba(244,140,80,.30);}
+  .c1>.hd .v{color:#5fa8f5;} .c2>.hd .v{color:#a78bfa;}
+  .c3>.hd .v{color:#3ecf8e;} .c4>.hd .v{color:#f5c344;} .c5>.hd .v{color:#f48c50;}
+  .lv.sub{background:rgba(255,255,255,.035); border:1px dashed rgba(255,255,255,.14);
+    margin-left:8px; border-left:2px solid rgba(255,255,255,.18);}
+  .lv.sub>.hd .v{color:var(--text);}
+
+  /* 잎사귀 — 결과에 따라 색이 다르다 */
+  .leaf.go{background:rgba(62,207,142,.14); border:1px solid rgba(62,207,142,.3);}
+  .leaf.go .v{color:var(--ok);}
+  .leaf.todo{background:rgba(245,195,68,.14); border:1px solid rgba(245,195,68,.3);}
+  .leaf.todo .v{color:var(--warn);}
+  .leaf.drop{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);}
+  .leaf.drop .t, .leaf.drop .v, .leaf.drop .p{color:var(--sub);}
+  .leaf.wait{background:rgba(95,168,245,.12); border:1px solid rgba(95,168,245,.28);}
+  .leaf.wait .v{color:var(--info);}
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -149,13 +165,22 @@ def unit(name: str, count: str, state: str, lamps: list, tone: str = "") -> str:
             f'<div class="st">{state}</div><div class="lamps">{ls}</div></div>')
 
 
-def leaf(t: str, v, p: str = "") -> str:
+def leaf(t: str, v, p: str = "", tone: str = "") -> str:
+    """중첩 박스 안의 잎사귀.
+
+    tone으로 색을 준다(사장님 요청 2026-08-17):
+      go   초록 — 다음 단계로 넘어가는 것 (검수페이지 등)
+      todo 노랑 — 사람이 손대야 하는 것 (보완·번역)
+      wait 파랑 — 아직 처리 전인 것 (남은 분량)
+      drop 회색 — 버려지는 것 (판매중지·합의부족)
+    """
     ex = f'<span class="p">{esc(p)}</span>' if p else ""
-    return (f'<span class="leaf"><span class="t">{esc(t)}</span>'
+    cls = f"leaf {tone}".strip()
+    return (f'<span class="{cls}"><span class="t">{esc(t)}</span>'
             f'<span class="v">{num(v)}</span>{ex}</span>')
 
 
-def sub(head: str, leafs: list, inner: str = "") -> str:
+def sub(head: str, leafs: list, inner: str = "", tone: str = "") -> str:
     """중첩 박스 안의 한 단계 더 얕은 층.
 
     [왜 필요한가 — 사장님 지적 2026-08-17]
@@ -175,7 +200,9 @@ def sub(head: str, leafs: list, inner: str = "") -> str:
     부모가 나와야 한다. 안 맞으면 어딘가 빠뜨린 것이다.
     """
     body = f'<div class="leafs">{"".join(leafs)}</div>' if leafs else ""
-    return (f'<div class="lv sub"><div class="hd">{head}</div>{body}{inner}</div>')
+    return (f'<div class="lv sub {tone}"><div class="hd">{head}</div>{body}{inner}</div>'
+            if tone else
+            f'<div class="lv sub"><div class="hd">{head}</div>{body}{inner}</div>')
 
 
 def level(cls: str, head: str, leafs: list, inner: str = "") -> str:
