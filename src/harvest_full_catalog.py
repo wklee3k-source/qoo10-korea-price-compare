@@ -50,7 +50,41 @@ def _load_state(suffix: str) -> dict:
         state = json.loads(p.read_text(encoding="utf-8"))
         state.setdefault("failed_shops", {})
         return state
-    return {"harvested_shops": [], "all_products": {}, "failed_shops": {}}
+    return {"harvested_shops": [], "failed_shops": {}}
+
+
+# [v7.66.0] 상품은 상태파일과 분리해서 "덧붙이기"로만 쌓는다.
+#
+# [실측 사고 2026-08-16] 수확이 계속 진전 없이 도는 진짜 원인.
+# 상태파일이 99MB(상품 31만 건)까지 커졌는데, **상점 하나 끝날 때마다
+# 그 99MB를 통째로 다시 썼다.** 읽고 쓰는 데만 3초, 배치 20개면
+# 그것만 60초다. 워크플로도 매 반복 이 파일을 두 번 더 읽는다(2초씩).
+#
+# 게다가 파일은 계속 커진다. 지금 고쳐도 상품이 쌓이면 또 느려진다.
+#
+# 그래서 나눈다:
+#   fullcatalog_state_N.json   진행 상태만 (수확한 상점 목록·실패 기록)
+#                              -> 몇 MB 수준으로 유지, 매 상점마다 저장해도 싸다
+#   fullcatalog_items_N.jsonl  상품 (한 줄에 한 건, 덧붙이기만)
+#                              -> 아무리 커져도 쓰는 비용이 일정하다
+#
+# 검색어 재보충은 상품명과 브랜드명만 쓰므로(refill_discovery_keywords.py)
+# 그 두 개만 남긴다. 전체 필드를 들고 있을 이유가 없다.
+def _items_path(suffix: str) -> Path:
+    return _state_path(suffix).with_name(f"fullcatalog_items_{suffix}.jsonl")
+
+
+def _append_items(items: list[dict], suffix: str) -> None:
+    """상품을 한 줄에 하나씩 덧붙인다. 파일이 커져도 비용이 안 늘어난다."""
+    if not items:
+        return
+    with open(_items_path(suffix), "a", encoding="utf-8") as f:
+        for it in items:
+            f.write(json.dumps(
+                {"goods_no": it.get("goods_no"),
+                 "title": it.get("title"),
+                 "brand": it.get("brand")},
+                ensure_ascii=False) + "\n")
 
 
 def _save_state(state: dict, suffix: str) -> None:
@@ -63,8 +97,18 @@ def _save_state(state: dict, suffix: str) -> None:
 def harvest(shop_ids: list[str], suffix: str) -> None:
     state = _load_state(suffix)
     harvested = set(state["harvested_shops"])
-    all_products = state["all_products"]  # goods_no -> item
     failed_shops = state["failed_shops"]
+    # 이미 담은 상품번호. jsonl을 한 번만 훑어 중복만 거른다.
+    seen_goods = set()
+    ip = _items_path(suffix)
+    if ip.exists():
+        with open(ip, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    seen_goods.add(json.loads(line).get("goods_no"))
+                except ValueError:
+                    continue
+    total_kept = 0
 
     for shop_id in shop_ids:
         if shop_id in harvested:
@@ -87,13 +131,12 @@ def harvest(shop_ids: list[str], suffix: str) -> None:
                 print(f"  [포기] {shop_id} {MAX_RETRIES}회 연속 실패 — 완료 처리")
                 harvested.add(shop_id)
             _save_state(
-                {"harvested_shops": list(harvested), "all_products": all_products,
-                 "failed_shops": failed_shops},
+                {"harvested_shops": list(harvested), "failed_shops": failed_shops},
                 suffix,
             )
             continue
 
-        kept = 0
+        keep_items = []
         for it in items:
             cat = it.get("category_gdlc_cd")
             if cat in COLOR_COSMETIC_CATEGORIES:
@@ -102,20 +145,24 @@ def harvest(shop_ids: list[str], suffix: str) -> None:
                 continue
             if it.get("review_count", 0) > REVIEW_MAX:
                 continue
-            all_products[it["goods_no"]] = it
-            kept += 1
+            if it.get("goods_no") in seen_goods:
+                continue
+            seen_goods.add(it.get("goods_no"))
+            keep_items.append(it)
 
-        print(f"  [완료] {shop_id}: 전체{len(items)}건 중 {kept}건 저장(누적 {len(all_products)}건)")
+        _append_items(keep_items, suffix)
+        total_kept += len(keep_items)
+        print(f"  [완료] {shop_id}: 전체{len(items)}건 중 {len(keep_items)}건 저장"
+              f"(이번 실행 누적 {total_kept}건)")
         harvested.add(shop_id)
         failed_shops.pop(shop_id, None)
         _save_state(
-            {"harvested_shops": list(harvested), "all_products": all_products,
-             "failed_shops": failed_shops},
+            {"harvested_shops": list(harvested), "failed_shops": failed_shops},
             suffix,
         )
         time.sleep(0.5)
 
-    print(f"\n[DONE] 이번 실행 대상 {len(shop_ids)}개 중 처리완료 누적 {len(harvested)}개, 상품 누적 {len(all_products)}건")
+    print(f"\n[DONE] 이번 실행 대상 {len(shop_ids)}개 중 처리완료 누적 {len(harvested)}개, 이번 실행 상품 {total_kept}건(전체 누적 {len(seen_goods)}건)")
 
 
 if __name__ == "__main__":
