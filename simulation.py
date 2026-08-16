@@ -3324,6 +3324,35 @@ def t31_nonbeauty_filters_products():
     check("31-4 필터 없어도 발굴은 계속", "except ImportError" in src)
 
 
+# ------ #32 짧은 검색어를 먼저 쓴다 (v7.70.0)
+def t32_short_keywords_first():
+    """발굴이 짧은 검색어부터 소비하는지.
+
+    [실측 2026-08-16] 검색어 길이별 효율이 4배까지 벌어진다(천개당):
+        1단어 29.9건 / 2단어 29.5건 / 3-4단어 16.7건 / 5+단어 7.6건
+    긴 검색어는 상품명을 통째로 옮겨온 것이라 그 상품 하나만 걸리고
+    이미 방문한 상점으로 이어진다. 짧아야 새 상점이 나온다.
+
+    그런데 대기열은 3-4단어와 5+단어가 67%를 차지하고 있었다. 그래서
+    검색어를 641개 소진하는 동안 상품이 1건 늘었다.
+
+    [버리지는 않는다] 정렬만 바꾼다. 짧은 것이 떨어지면 자연히 긴 것
+    차례가 오고, 그때는 그것도 쓸모가 있다.
+    """
+    disc = (ROOT / "src" / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    check("32-1 발굴이 짧은 순으로 정렬",
+          "pending_keywords.sort(key=lambda k: len(k.split()))" in disc)
+
+    ref = (ROOT / "src" / "refill_discovery_keywords.py").read_text(encoding="utf-8")
+    check("32-2 보충도 짧은 순으로 정렬",
+          "fresh.sort(key=lambda k: len(k.split()))" in ref)
+
+    # 긴 검색어를 아예 버리면 안 된다 — 짧은 게 떨어지면 쓸 게 없어진다
+    check("32-3 긴 검색어를 버리지 않음",
+          "len(k.split()) <= " not in disc and "len(k.split()) < " not in disc,
+          "길이로 걸러내면 검색어가 고갈된다")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

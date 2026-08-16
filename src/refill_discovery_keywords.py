@@ -223,6 +223,16 @@ def refill(state_path: str, worker: int, workers: int, pool_dir: str,
         print("[보충 실패] 새 검색어가 0개 — 수확을 더 돌려야 한다")
         return 2
 
+    # [v7.70.0] 짧은 검색어를 먼저 넣는다.
+    #
+    # [실측 2026-08-16] 검색어 길이별 효율이 4배 차이 난다(천개당):
+    #   1단어 29.9건 / 2단어 29.5건 / 3-4단어 16.7건 / 5+단어 7.6건
+    # 긴 검색어는 상품명을 통째로 옮겨온 것이라 그 상품 하나만 걸리고
+    # 이미 가본 상점으로 이어진다. 짧아야 새 상점이 나온다.
+    #
+    # 후보를 뽑을 때부터 짧은 순으로 정렬하면, limit로 자를 때 짧은
+    # 것이 우선 남는다. 긴 것을 버리는 게 아니라 순서만 바꾼다.
+    fresh.sort(key=lambda k: len(k.split()))
     added = fresh[:limit]
     if dry_run:
         print(f"[모의실행] {len(added):,}개를 넣었을 것 (샘플: {added[:3]})")
