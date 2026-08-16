@@ -313,6 +313,13 @@ def _load_state(suffix: str | None = None) -> dict:
     return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": [], "failed_shops": {}}
 
 
+try:
+    from nonbeauty_filter import is_non_beauty as _is_non_beauty
+except ImportError:  # 필터를 못 읽으면 아무것도 안 거른다(안전한 쪽)
+    def _is_non_beauty(_text: str) -> bool:
+        return False
+
+
 def _save_state(state: dict, suffix: str | None = None):
     path = _state_path(suffix)
     path.parent.mkdir(exist_ok=True, parents=True)
@@ -493,7 +500,20 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
                         }
                     )
                 # 최종 상품목록에는 필터 통과한 것만 넣는다
+                #
+                # [v7.69.0] 화장품이 아닌 상품도 여기서 뺀다.
+                #
+                # 비화장품 필터는 검색어에만 쓰고 있었다(v7.49.0). 그래서
+                # 화장품 상점이 곁다리로 파는 물건이 그대로 들어왔다.
+                # 실측 2026-08-16: 브랜드 미확인 139건을 열어보니 세븐틴
+                # 티셔츠, 옥수수차, 아사히 음료, 커피믹스, 요구르트,
+                # 코스트코 팝콘이 섞여 있었다.
+                #
+                # 이런 건 번역·검증을 거쳐도 결국 버려지는데, 그 전까지
+                # 사람과 기계 시간을 다 쓴다. 들어오는 자리에서 막는 게 싸다.
                 if item.get("passes_filter") and len(all_products) < target_products:
+                    if _is_non_beauty(item.get("title") or ""):
+                        continue
                     all_products[item["goods_no"]] = item
             if seed_entries:
                 _append_seed_log(seed_entries)

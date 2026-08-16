@@ -3272,6 +3272,58 @@ def t30_translation_skips_foreign():
           f"출력: {r.stdout[-200:]}")
 
 
+# ---- #31 비화장품을 상품 단계에서도 거른다 (v7.69.0)
+def t31_nonbeauty_filters_products():
+    """화장품이 아닌 상품이 통합본에 들어오지 않는지.
+
+    [실측 2026-08-16] 비화장품 필터는 검색어에만 쓰고 있었다(v7.49.0).
+    그래서 화장품 상점이 곁다리로 파는 물건이 그대로 들어왔다.
+    브랜드 미확인 139건을 열어보니 세븐틴 티셔츠·옥수수차·아사히 음료·
+    커피믹스·요구르트·코스트코 팝콘이 섞여 있었다.
+
+    이런 건 번역·검증을 거쳐도 결국 버려지는데 그 전까지 사람과 기계
+    시간을 다 쓴다. 들어오는 자리에서 막는 게 싸다.
+
+    [반대 위험] 화장품을 잘못 거르면 매출원을 버린다. 양쪽을 다 고정한다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from nonbeauty_filter import is_non_beauty
+    except Exception as e:  # noqa: BLE001
+        check("31 비화장품 필터 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    # 실제로 통합본에 들어와 있던 것들 — 전부 걸러야 한다
+    must_block = [
+        "[세븐틴 민규 착용]반소매 T셔츠 몰티즈 그래픽 프린트",
+        "옥수수 수염 차 50개입 x4개 / 옥수수 차 / 한국 차",
+        "바야리스 아사히 음료 상큼함 매일 맛있는 토마토 350g",
+        "에스프레소 초콜릿 라떼 커피 믹스 24본 x 4박스",
+        "어린이용 파스투르 위드맘 750g",
+        "코스트코 팝콘 8봉 세트 KIRKLAND 스낵 과자",
+    ]
+    leaked = [s[:26] for s in must_block if not is_non_beauty(s)]
+    check("31-1 비화장품 차단", not leaked, f"통과됨: {leaked}")
+
+    # 화장품은 절대 걸리면 안 된다
+    must_pass = [
+        "아누아 어성초 77 수딩 토너 250ml",
+        "메디큐브 제로모공패드 2.0 70매 각질케어",
+        "컨달 퍼퓸 바디미스트 100ml 향수대신",
+        "라네즈 립슬리핑마스크 EX 20g BERRY",
+        "달바 워터풀 톤업선크림 SPF50+",
+        "조선미녀 맑은쌀 선크림 50ml",
+    ]
+    wrong = [s[:26] for s in must_pass if is_non_beauty(s)]
+    check("31-2 화장품은 통과", not wrong, f"잘못 걸림: {wrong}")
+
+    # 발굴이 실제로 이 필터를 쓰는지
+    src = (ROOT / "src" / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
+    check("31-3 발굴 저장 시 필터 적용", "_is_non_beauty(item.get" in src)
+    # 필터를 못 읽어도 발굴이 멈추면 안 된다
+    check("31-4 필터 없어도 발굴은 계속", "except ImportError" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
