@@ -293,6 +293,35 @@ CSS = """
   .k2 td.holder{border-left-color:#4d5c8a;}
   .k3 td.holder{border-left-color:#6070ab;}
 
+  /* ── 상자 지도 ─────────────────────────────────────────
+     사장님이 그림으로 보여준 방식(2026-08-17).
+     형제는 **가로로 나란히**, 자식은 **부모 상자 안에**.
+     세로로 쌓지 않는다 — 가로로 놓아야 "같은 층"이 보인다. */
+  .bmap{border-radius:6px; padding:14px;}
+  .bmap .ttl{font-size:12.5px; font-weight:800; color:#fff;
+    margin-bottom:10px; display:flex; align-items:baseline; gap:8px;}
+  .bmap .ttl .q{font-size:15px;}
+  .bmap .ttl .u{font-size:10px; font-weight:500; opacity:.75;}
+  .bmap .kids{display:flex; gap:10px; align-items:stretch;}
+  .bmap .kids > *{min-width:0;}
+  /* 층 색 */
+  .b0{background:#1b5e7e;}
+  .b1{background:#d4661f;}
+  .b2{background:#4fb477;}
+  .b3{background:#2f7d52;}
+  .bx{background:#6b7280;}          /* 버려지는 것 */
+  .bw{background:#2f6fb5;}          /* 아직 처리 전 */
+  .bt{background:#c8901a;}          /* 사람이 할 것 */
+  .bg{background:#1f9d63;}          /* 된 것 */
+  .bmap .note{font-size:10px; color:rgba(255,255,255,.8); margin-top:7px;}
+  .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:8px;}
+  .bline{display:flex; align-items:center; gap:7px; border-radius:4px;
+    padding:4px 8px; font-size:10.5px; background:rgba(0,0,0,.22); color:#fff;}
+  .bline .nm{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis;
+    white-space:nowrap;}
+  .bline .q{font-weight:800; font-size:12px; white-space:nowrap;}
+  .bline .ar{font-size:9.5px; opacity:.85; white-space:nowrap;}
+
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -518,6 +547,35 @@ def ntable(depth: int, title: str, qty, unit: str = "",
             f'<tr><th>{mark}{esc(title)}'
             f'<span class="q">{num(qty)}{u}</span></th></tr>'
             f'{body}{kid}</tbody></table>')
+
+
+
+def bline(name: str, qty, arrow: str = "") -> str:
+    """상자 안의 한 줄(자식 상자를 만들 만큼 크지 않은 항목)."""
+    ar = f'<span class="ar">{esc(arrow)}</span>' if arrow else ""
+    return (f'<div class="bline"><span class="nm">{esc(name)}</span>'
+            f'<span class="q">{num(qty)}</span>{ar}</div>')
+
+
+def bbox(cls: str, title: str, qty=None, unit: str = "",
+         kids: list = None, lines: list = None, note: str = "",
+         grow: float = None) -> str:
+    """상자 하나. 자식(kids)은 **가로로 나란히** 놓인다.
+
+    [사장님이 그림으로 지정한 방식 2026-08-17]
+    형제는 가로, 자식은 부모 안에. 세로로 쌓으면 같은 층인지
+    아래 층인지 헷갈린다.
+
+    grow: 가로 폭 비율. 건수에 비례시키고 싶을 때 넘긴다.
+    """
+    q = (f'<span class="q">{num(qty)}</span>'
+         f'<span class="u">{esc(unit)}</span>' if qty is not None else "")
+    body = (f'<div class="kids">{"".join(kids)}</div>' if kids else "")
+    ln = (f'<div class="lines">{"".join(lines)}</div>' if lines else "")
+    nt = f'<div class="note">{note}</div>' if note else ""
+    style = f' style="flex:{grow} 1 0;"' if grow is not None else ""
+    return (f'<div class="bmap {cls}"{style}>'
+            f'<div class="ttl">{esc(title)}{q}</div>{body}{ln}{nt}</div>')
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
