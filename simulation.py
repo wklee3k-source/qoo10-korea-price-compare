@@ -3181,6 +3181,17 @@ def t28_harvest_state_stays_small():
     check("28-3 재보충이 jsonl을 읽음", "fullcatalog_items_" in ref)
     check("28-4 옛 형식도 계속 읽음", "fullcatalog_state*.json" in ref)
 
+    # [실측 사고 2026-08-16] 파일을 새로 만들면 커밋 대상에도 넣어야 한다.
+    # v7.66.0에서 상품을 jsonl로 뺐는데 워크플로의 git add는 state만
+    # 지정하고 있었다. 수확 상점은 120개 늘었는데 상품이 한 건도 안 늘어
+    # 그제야 알았다 — 워커 안에만 쌓이고 저장이 안 되고 있었다.
+    wf2 = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    adds = [ln for ln in wf2.split("\n")
+            if "git add" in ln and "fullcatalog_state_${B}" in ln]
+    missing = [ln.strip()[:60] for ln in adds if "fullcatalog_items_${B}" not in ln]
+    check("28-5 상품 파일도 커밋 대상", adds and not missing,
+          f"jsonl이 빠진 git add: {missing}")
+
 
 def main():
     for fn in sorted(

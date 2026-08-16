@@ -915,7 +915,7 @@ jobs:
             python harvest_full_catalog.py "$B" $TODO
             echo "::endgroup::"
 
-            git add "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
+            git add "../output/fullcatalog_state_${B}.json" "../output/fullcatalog_items_${B}.jsonl" 2>/dev/null || true
             git diff --cached --quiet || git commit -m "Auto: full-catalog harvest branch $B progress (반복 $ITER)"
 
             PUSHED=0
@@ -928,7 +928,7 @@ jobs:
               git reset --hard origin/fullcatalog-live -q 2>/dev/null || true
               git checkout origin/main -- src/ data/ VERSION 2>/dev/null || true
               cp "/tmp/fcstate_${B}_backup.json" "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
-              git add "../output/fullcatalog_state_${B}.json" 2>/dev/null || true
+              git add "../output/fullcatalog_state_${B}.json" "../output/fullcatalog_items_${B}.jsonl" 2>/dev/null || true
               git diff --cached --quiet || git commit -m "Auto: full-catalog harvest branch $B progress (반복 $ITER, 재시도)"
             done
             if [ "$PUSHED" != "1" ]; then
