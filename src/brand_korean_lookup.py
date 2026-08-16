@@ -138,6 +138,21 @@ def ask_hwahae(english: str, session) -> str:
     return ""
 
 
+def _flush_foreign(brands: list, foreign_path: str) -> None:
+    """화해에 없던 브랜드를 해외브랜드 목록에 적는다."""
+    try:
+        fp = Path(foreign_path)
+        cur = set(json.loads(fp.read_text(encoding="utf-8"))) if fp.exists() else set()
+        merged = sorted(cur | set(brands))
+        if len(merged) > len(cur):
+            fp.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
+                          encoding="utf-8")
+            print(f"[해외브랜드 등록] {len(merged) - len(cur)}개 추가 "
+                  f"(화해에 없음 = 한국 미판매)")
+    except (OSError, ValueError) as exc:
+        print(f"[경고] 해외브랜드 목록 갱신 실패: {exc}")
+
+
 def run(brands, jp_to_en, existing, limit, delay, done_path=None,
         dict_path=None, session=None, foreign_path=None) -> dict:
     """한 번에 다 돌기엔 오래 걸려서(브랜드당 3~4초) 나눠 돌린다.
@@ -199,6 +214,13 @@ def run(brands, jp_to_en, existing, limit, delay, done_path=None,
             full.update(learned)
             Path(dict_path).write_text(
                 json.dumps(full, ensure_ascii=False, indent=2), encoding="utf-8")
+        # [v7.68.1] 해외브랜드도 매 건 저장한다.
+        # 끝에서만 저장했더니 중간에 끊길 때 그때까지 판정한 게 전부
+        # 날아갔다(실측: 143개 조회했는데 해외브랜드 목록이 그대로).
+        # done·dict는 이미 매 건 저장하고 있어서 이것만 안 맞았다.
+        if not_in_korea and foreign_path:
+            _flush_foreign(not_in_korea, foreign_path)
+            not_in_korea = []
         time.sleep(delay)
     if skipped_no_en:
         print(f"[건너뜀] 영문 표기를 못 구한 브랜드 {skipped_no_en}개")
@@ -206,17 +228,7 @@ def run(brands, jp_to_en, existing, limit, delay, done_path=None,
         Path(done_path).write_text(
             json.dumps(sorted(done), ensure_ascii=False), encoding="utf-8")
     if not_in_korea and foreign_path:
-        try:
-            fp = Path(foreign_path)
-            cur = set(json.loads(fp.read_text(encoding="utf-8"))) if fp.exists() else set()
-            merged = sorted(cur | set(not_in_korea))
-            if len(merged) > len(cur):
-                fp.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
-                              encoding="utf-8")
-                print(f"[해외브랜드 등록] {len(merged) - len(cur)}개 추가 "
-                      f"(화해에 없음 = 한국 미판매)")
-        except (OSError, ValueError) as exc:
-            print(f"[경고] 해외브랜드 목록 갱신 실패: {exc}")
+        _flush_foreign(not_in_korea, foreign_path)
     return learned
 
 

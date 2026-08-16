@@ -225,6 +225,23 @@ INSTRUCTION = """아래는 큐텐재팬에 올라온 **한국 화장품**의 일
 
 
 
+def _load_foreign_brands(state_path: Path) -> set:
+    """해외브랜드 목록을 읽는다. 못 읽으면 빈 집합(=아무것도 안 뺀다).
+
+    목록을 못 읽었을 때 전부 번역 대상으로 두는 쪽이 안전하다.
+    반대로 하면 파일 하나 없어졌다고 번역이 통째로 멈춘다.
+    """
+    for candidate in (state_path.parent.parent / "data" / "foreign_brands.json",
+                      Path("data/foreign_brands.json"),
+                      Path("../data/foreign_brands.json")):
+        try:
+            return set(json.loads(candidate.read_text(encoding="utf-8")))
+        except (OSError, ValueError):
+            continue
+    print("[경고] 해외브랜드 목록을 못 읽음 — 전부 번역 대상으로 둔다")
+    return set()
+
+
 def export(state_path: str, out_path: str, limit: int | None = None,
            chunk: int = 200) -> int:
     """미번역 목록을 chunk건씩 잘라 여러 장으로 뽑는다.
@@ -242,11 +259,37 @@ def export(state_path: str, out_path: str, limit: int | None = None,
     state = json.loads(path.read_text(encoding="utf-8"))
     products = state.get("all_products", [])
     pending = [p for p in products if not p.get("translated_kr")]
+
+    # [v7.68.0] 한국에서 안 파는 브랜드는 번역 요청서에서 뺀다.
+    #
+    # [왜 — 실측 2026-08-16] 지금까지 번역한 6,168건 중 1,340건(21.7%)이
+    # 해외브랜드였다. 사장님이 번역한 다섯 건 중 하나는 애초에 쓸 데가
+    # 없는 것이었다. 이들은 번역해도 검증 대상에서 빠지므로 검수페이지에
+    # 오르지 않는다 — 한국에서 사서 일본에 파는 사업이기 때문이다.
+    #
+    # 08회차 회신을 보면 번역하는 쪽도 이미 눈치채고 있었다:
+    # "菊星는 일본 미용실 전용, 한국 판매 흔적이 전혀 없어 비웠음".
+    # 그 판단을 사람이 매번 할 게 아니라 애초에 목록에서 빼는 게 맞다.
+    #
+    # [뺀 것을 되돌릴 수 있어야 한다] 해외브랜드 판정이 틀렸을 때
+    # 그 상품이 영영 번역되지 않으면 손해다. 그래서 지우지 않고
+    # 건너뛰기만 하며, 몇 건을 왜 뺐는지 로그에 남긴다.
+    # 해외브랜드 목록에서 빼면 다음 회차에 자동으로 다시 올라온다.
+    foreign = _load_foreign_brands(path)
+    if foreign:
+        before = len(pending)
+        pending = [p for p in pending
+                   if (p.get("brand") or "").strip() not in foreign]
+        skipped = before - len(pending)
+        if skipped:
+            print(f"[제외] 한국 미판매 브랜드 {skipped}건 — 번역 대상 아님 "
+                  f"(해외브랜드 목록 {len(foreign)}개 기준)")
+
     total_pending = len(pending)
     if limit:
         pending = pending[:limit]
 
-    print(f"[INFO] 전체 {len(products)}건 중 미번역 {total_pending}건")
+    print(f"[INFO] 전체 {len(products)}건 중 번역 대상 {total_pending}건")
 
     out = Path(out_path)
     stem, suffix = out.stem, out.suffix or ".md"
