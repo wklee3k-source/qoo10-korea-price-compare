@@ -294,33 +294,47 @@ CSS = """
   .k3 td.holder{border-left-color:#6070ab;}
 
   /* ── 상자 지도 ─────────────────────────────────────────
-     사장님이 그림으로 보여준 방식(2026-08-17).
-     형제는 **가로로 나란히**, 자식은 **부모 상자 안에**.
-     세로로 쌓지 않는다 — 가로로 놓아야 "같은 층"이 보인다. */
-  .bmap{border-radius:6px; padding:14px;}
-  .bmap .ttl{font-size:12.5px; font-weight:800; color:#fff;
-    margin-bottom:10px; display:flex; align-items:baseline; gap:8px;}
-  .bmap .ttl .q{font-size:15px;}
-  .bmap .ttl .u{font-size:10px; font-weight:500; opacity:.75;}
-  .bmap .kids{display:flex; gap:10px; align-items:stretch;}
-  .bmap .kids > *{min-width:0;}
-  /* 층 색 */
-  .b0{background:#1b5e7e;}
-  .b1{background:#d4661f;}
-  .b2{background:#4fb477;}
-  .b3{background:#2f7d52;}
-  .bx{background:#6b7280;}          /* 버려지는 것 */
-  .bw{background:#2f6fb5;}          /* 아직 처리 전 */
-  .bt{background:#c8901a;}          /* 사람이 할 것 */
-  .bg{background:#1f9d63;}          /* 된 것 */
-  .bmap .note{font-size:10px; color:rgba(255,255,255,.8); margin-top:7px;}
-  .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:8px;}
-  .bline{display:flex; align-items:center; gap:7px; border-radius:4px;
-    padding:4px 8px; font-size:10.5px; background:rgba(0,0,0,.22); color:#fff;}
-  .bline .nm{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis;
+     형제는 가로로, 자식은 부모 안에(사장님 그림 2026-08-17).
+
+     [고친 것 — 실측] 처음엔 상자 너비를 건수에 그대로 비례시켰더니
+     좁은 상자에서 글씨가 한 글자씩 세로로 늘어졌다. 단위("건")도
+     flex 틈에 끼어 커다란 빈 상자로 보였다.
+       · 최소 너비를 주고, 넘치면 줄바꿈(wrap)한다
+       · 제목은 한 줄로 고정(nowrap), 넘치면 말줄임
+       · 숫자와 단위는 한 덩어리로 묶는다 */
+  .bmap{border-radius:10px; padding:12px; min-width:0;}
+  .bmap .ttl{display:flex; align-items:baseline; gap:6px; margin-bottom:9px;
+    white-space:nowrap; overflow:hidden;}
+  .bmap .ttl .nmx{font-size:12px; font-weight:700; color:#fff;
+    overflow:hidden; text-overflow:ellipsis; min-width:0; letter-spacing:-.01em;}
+  .bmap .ttl .qx{font-size:15px; font-weight:800; color:#fff;
+    margin-left:auto; white-space:nowrap;}
+  .bmap .ttl .qx em{font-style:normal; font-size:9.5px; font-weight:500;
+    opacity:.7; margin-left:2px;}
+  .bmap .kids{display:flex; gap:8px; align-items:stretch; flex-wrap:wrap;}
+  .bmap .kids > .bmap{flex:1 1 130px; min-width:130px;}
+  .bmap .note{font-size:10px; color:rgba(255,255,255,.72); margin-top:7px;
+    line-height:1.45;}
+
+  /* 색 — 남색 바탕에 채도 낮은 포인트 */
+  .b0{background:#161b26; border:1px solid #2c3444;}
+  .b1{background:#1e2635; border:1px solid #364258;}
+  .b2{background:#243046; border:1px solid #3d4d6b;}
+  .b3{background:#2a3852; border:1px solid #46587b;}
+  .bg{background:#1e7a5a; border:1px solid #2fa87c;}   /* 된 것 */
+  .bt{background:#a8761f; border:1px solid #d09a35;}   /* 할 것 */
+  .bw{background:#2a5b8f; border:1px solid #3f7cbd;}   /* 아직 */
+  .bx{background:#333a47; border:1px solid #454e5f;}   /* 버림 */
+  .bx .ttl .nmx, .bx .ttl .qx{color:#a8b0bd;}
+  .bx .note{color:#7f8798;}
+
+  .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
+  .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
+    padding:5px 8px; font-size:10.5px; background:rgba(0,0,0,.24); color:#fff;
     white-space:nowrap;}
-  .bline .q{font-weight:800; font-size:12px; white-space:nowrap;}
-  .bline .ar{font-size:9.5px; opacity:.85; white-space:nowrap;}
+  .bline .nm{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis;}
+  .bline .q{font-weight:800; font-size:12px;}
+  .bline .ar{font-size:9.5px; opacity:.8;}
 
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
@@ -568,14 +582,16 @@ def bbox(cls: str, title: str, qty=None, unit: str = "",
 
     grow: 가로 폭 비율. 건수에 비례시키고 싶을 때 넘긴다.
     """
-    q = (f'<span class="q">{num(qty)}</span>'
-         f'<span class="u">{esc(unit)}</span>' if qty is not None else "")
+    u = f'<em>{esc(unit)}</em>' if unit else ""
+    q = f'<span class="qx">{num(qty)}{u}</span>' if qty is not None else ""
     body = (f'<div class="kids">{"".join(kids)}</div>' if kids else "")
     ln = (f'<div class="lines">{"".join(lines)}</div>' if lines else "")
     nt = f'<div class="note">{note}</div>' if note else ""
-    style = f' style="flex:{grow} 1 0;"' if grow is not None else ""
+    # 너비 비례는 쓰되 최소 폭을 지켜 글씨가 세로로 늘어지지 않게 한다
+    style = f' style="flex:{grow} 1 130px;"' if grow is not None else ""
     return (f'<div class="bmap {cls}"{style}>'
-            f'<div class="ttl">{esc(title)}{q}</div>{body}{ln}{nt}</div>')
+            f'<div class="ttl"><span class="nmx">{esc(title)}</span>{q}</div>'
+            f'{body}{ln}{nt}</div>')
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
