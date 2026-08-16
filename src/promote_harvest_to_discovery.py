@@ -68,20 +68,38 @@ def load_harvest(items_dir: Path) -> list[dict]:
 #
 # 짧은 것을 먼저 쓰는 원칙 자체는 맞다(판매자 홍보 문구가 적어 검증이
 # 잘 된다). 다만 "짧은 것"과 "잘린 것"은 다르다.
-MIN_TITLE_LEN = 8
+# 상품명 길이 구간.
+#
+# [실측 2026-08-16] 검증 3,986건을 원본 이름 길이별로 갈라 통과율을 쟀다:
+#     ~15자   57.1%   정보가 부족하다
+#   16~25자   67.5%   <- 가장 좋다
+#   26~40자   58.8%
+#   41~60자   44.3%
+#   61~90자   34.3%   홍보 문구가 검색을 방해한다
+#     91자+   34.5%
+#
+# 처음엔 "짧은 것부터"로만 뽑았다가 사장님이 "번역이 너무 짧다"고
+# 지적하셨다. 확인해보니 수확본 전체 평균은 47자인데 하위 7%(11~20자)
+# 에서만 뽑고 있었다. 그 구간에는 이런 것들이 있다:
+#     子音生2種セット      (브랜드 없이는 무슨 제품인지 모른다)
+#     音の数125ml         (潤燥가 깨져서 들어온 것)
+# 짧은 게 좋은 이유는 "홍보 문구가 적어서"이지 "정보가 없어서"가 아니다.
+MIN_TITLE_LEN = 16
+MAX_TITLE_LEN = 40
 
 # 상품이 아직 준비 중이거나 판매를 안 하는 상태를 나타내는 말.
 # 번역해봐야 살 수 없으므로 옮기지 않는다.
 _NOT_FOR_SALE = re.compile(r"準備中|準備 中|販売終了|品切|在庫なし|SOLD\s*OUT", re.IGNORECASE)
 
 
-def pick(candidates: list[dict], known_brands: set, limit: int) -> list[dict]:
+def pick(candidates: list[dict], known_brands: set, limit: int,
+         scores: dict | None = None) -> list[dict]:
     """옮길 것을 고른다. 브랜드를 아는 것과 이름이 짧은 것이 먼저."""
     scored = []
     seen_title = set()
     for it in candidates:
         title = (it.get("title") or "").strip()
-        if len(title) < MIN_TITLE_LEN:
+        if not (MIN_TITLE_LEN <= len(title) <= MAX_TITLE_LEN):
             continue
         if _NOT_FOR_SALE.search(title):
             continue
@@ -96,14 +114,65 @@ def pick(candidates: list[dict], known_brands: set, limit: int) -> list[dict]:
         seen_title.add(key)
         has_brand = bool(brand) and (brand in known_brands
                                      or _norm(brand) in known_brands)
-        # 브랜드를 아는 것이 먼저, 그다음 이름이 짧은 것
-        scored.append((0 if has_brand else 1, len(title), it))
-    scored.sort(key=lambda x: (x[0], x[1]))
-    return [it for _, _, it in scored[:limit]]
+        # 순위 기준(앞에서부터):
+        #  1) 검증 실적이 나쁜 브랜드는 뒤로 (통과율 20% 미만)
+        #  2) 브랜드를 아는 것 먼저 (통과율 52.2% vs 20.5%)
+        #  3) 통과율이 가장 높은 길이(16~25자)에 가까운 것
+        rate = (scores or {}).get(brand)
+        weak = 1 if (rate is not None and rate < 0.2) else 0
+        scored.append((weak, 0 if has_brand else 1, abs(len(title) - 22), it))
+    scored.sort(key=lambda x: (x[0], x[1], x[2]))
+    return [it for *_, it in scored[:limit]]
+
+
+
+
+
+def brand_scores(verified_dir: Path, state: dict) -> dict:
+    """브랜드별 검증 통과율을 낸다. 실적이 쌓인 브랜드만 대상.
+
+    [왜 — 09-03 번역 피드백] "소형·신생 브랜드가 배치마다 20~30건씩
+    꾸준히 나옵니다. 국내 판매 흔적이 희박해 검증 통과율도 낮을 것으로
+    예상되니, 발굴 단계에서 브랜드 인지도로 1차 필터링하는 것도
+    고려해볼 만합니다."
+
+    맞는 지적이다. 다만 "인지도"는 재기 어렵고, 우리에게는 더 나은 것이
+    있다 — **실제 검증 통과율**이다. 실측 2026-08-16 (검증 4,516건):
+      검증 5건 이상 쌓인 브랜드 196개 중
+        통과율 20% 미만: 36개 (상품 359건)
+        통과율 60% 이상: 92개 (상품 1,361건)
+    통과율 낮은 쪽에는 밀본·큐렐·케라스타즈·바세린처럼 한국에서 굳이
+    살 이유가 없는 브랜드가 몰려 있다.
+
+    이 실적을 편입 순서에 반영하면, 잘 되는 브랜드가 먼저 올라오고
+    안 되는 브랜드는 뒤로 밀린다. 버리지는 않는다 — 표본이 적어
+    잘못 판단했을 수 있고, 나중에 사정이 바뀔 수도 있다.
+    """
+    import glob as _glob
+    by = {str(p.get("goods_no")): p for p in state["all_products"]}
+    tally = {}
+    for path in sorted(_glob.glob(str(verified_dir / "hwahae_verified_[0-9].json"))):
+        try:
+            rows = json.loads(Path(path).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for x in rows:
+            src = by.get(str(x.get("goods_no")))
+            if not src:
+                continue
+            b = (src.get("brand") or "").strip()
+            if not b:
+                continue
+            cur = tally.setdefault(b, [0, 0])
+            cur[0] += 1
+            if x.get("name"):
+                cur[1] += 1
+    # 표본 5건 이상인 것만 신뢰한다
+    return {b: ok / tot for b, (tot, ok) in tally.items() if tot >= 5}
 
 
 def promote(state_path: Path, items_dir: Path, dict_path: Path,
-            limit: int, apply: bool) -> dict:
+            limit: int, apply: bool, verified_dir: Path | None = None) -> dict:
     state = json.loads(state_path.read_text(encoding="utf-8"))
     existing = {str(p.get("goods_no")) for p in state["all_products"]}
 
@@ -115,7 +184,11 @@ def promote(state_path: Path, items_dir: Path, dict_path: Path,
     fresh = [it for it in harvest
              if str(it.get("goods_no")) not in existing]
 
-    chosen = pick(fresh, known_brands, limit)
+    scores = brand_scores(verified_dir, state) if verified_dir else {}
+    if scores:
+        weak = sum(1 for v in scores.values() if v < 0.2)
+        print(f"  브랜드 실적 {len(scores)}개 반영 (통과율 20% 미만 {weak}개는 뒤로)")
+    chosen = pick(fresh, known_brands, limit, scores)
     for it in chosen:
         state["all_products"].append({
             "goods_no": it.get("goods_no"),
@@ -145,10 +218,12 @@ if __name__ == "__main__":
     ap.add_argument("--items-dir", required=True)
     ap.add_argument("--dict", required=True)
     ap.add_argument("--limit", type=int, default=2000)
+    ap.add_argument("--verified-dir", help="검증 결과 폴더 (브랜드 실적 반영용)")
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
 
-    s = promote(Path(a.state), Path(a.items_dir), Path(a.dict), a.limit, a.apply)
+    s = promote(Path(a.state), Path(a.items_dir), Path(a.dict), a.limit, a.apply,
+                Path(a.verified_dir) if a.verified_dir else None)
     for k, v in s.items():
         print(f"  {k}: {v:,}")
     if not a.apply:
