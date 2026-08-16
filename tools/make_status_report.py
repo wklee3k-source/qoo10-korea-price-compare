@@ -237,6 +237,42 @@ CSS = """
   .cell.bad{background:#c0392b;}
   .tm.grp{background:rgba(255,255,255,.05);}
 
+  /* ── 표 안의 표 ─────────────────────────────────────────
+     사장님 요청 2026-08-17: "수확본 아래 통합본 아래 검증대상이
+     들어가게 표인표로".
+     바깥 표의 칸 하나가 통째로 다음 표를 품는다. 물리적으로 안에
+     들어가 있으므로 상하관계를 의심할 여지가 없다. */
+  .nt{width:100%; border-collapse:separate; border-spacing:0;
+    border-radius:8px; overflow:hidden;}
+  .nt > tbody > tr > th{background:#2b3242; color:#fff; text-align:left;
+    font-size:12.5px; font-weight:800; padding:8px 12px; border:none;}
+  .nt > tbody > tr > th .q{float:right; font-size:14px;}
+  .nt > tbody > tr > th .u{font-size:10px; font-weight:500; opacity:.7;
+    margin-left:5px;}
+  .nt > tbody > tr > td{padding:0; border:none;}
+  .nt .pad{padding:9px 11px;}
+  /* 깊이별 배경 — 안으로 갈수록 밝다 */
+  .nt.k1{background:#171b23;} .nt.k1 > tbody > tr > th{background:#2b3242;}
+  .nt.k2{background:#1e2430;} .nt.k2 > tbody > tr > th{background:#37415a;}
+  .nt.k3{background:#252c3b;} .nt.k3 > tbody > tr > th{background:#455174;}
+  .nt.k4{background:#2d3546;} .nt.k4 > tbody > tr > th{background:#54628c;}
+  /* 안쪽 표는 여백을 두고 놓아 '들어있음'이 보이게 */
+  .nt .inner{padding:0 11px 11px;}
+  /* 잎 줄 */
+  .rows{display:flex; flex-direction:column; gap:4px;}
+  .row1{display:flex; align-items:center; gap:8px; border-radius:5px;
+    padding:6px 10px; font-size:11.5px;}
+  .row1 .nm{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis;
+    white-space:nowrap;}
+  .row1 .q{font-size:14px; font-weight:800; white-space:nowrap;}
+  .row1 .ar{font-size:10px; opacity:.85; white-space:nowrap;}
+  .row1.go{background:#1f9d63; color:#fff;}
+  .row1.todo{background:#c8901a; color:#fff;}
+  .row1.wait{background:#2f6fb5; color:#fff;}
+  .row1.drop{background:#3a3f4a; color:#9aa1ad;}
+  .row1.drop .q{color:#bcc2cc;}
+  .row1.plain{background:rgba(255,255,255,.06); color:#cfd6e4;}
+
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -431,6 +467,30 @@ def treemap(nodes: list, height: int = 330) -> str:
     """
     return (f'<div class="tmap row" style="height:{height}px;">'
             f'{_tm_render(nodes, True)}</div>')
+
+
+
+def nrow(name: str, qty, tone: str = "plain", arrow: str = "") -> str:
+    """표 안의 한 줄."""
+    ar = f'<span class="ar">{esc(arrow)}</span>' if arrow else ""
+    return (f'<div class="row1 {tone}"><span class="nm">{esc(name)}</span>'
+            f'<span class="q">{num(qty)}</span>{ar}</div>')
+
+
+def ntable(depth: int, title: str, qty, unit: str = "",
+           rows: list = None, inner: str = "") -> str:
+    """표 안의 표 한 겹.
+
+    바깥 표의 칸 하나가 통째로 안쪽 표를 품는다. 물리적으로 안에
+    들어가 있으므로 상하관계가 분명하다(사장님 요청 2026-08-17).
+    """
+    u = f'<span class="u">{esc(unit)}</span>' if unit else ""
+    body = (f'<tr><td><div class="pad"><div class="rows">'
+            f'{"".join(rows)}</div></div></td></tr>') if rows else ""
+    kid = f'<tr><td><div class="inner">{inner}</div></td></tr>' if inner else ""
+    return (f'<table class="nt k{depth}"><tbody>'
+            f'<tr><th>{esc(title)}<span class="q">{num(qty)}{u}</span></th></tr>'
+            f'{body}{kid}</tbody></table>')
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
