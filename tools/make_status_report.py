@@ -286,6 +286,9 @@ CSS = """
   .k2 > tbody > tr > th{background:#3c4866;}
   .k3 > tbody > tr > th{background:#4d5c8a;}
   .k4 > tbody > tr > th{background:#6070ab;}
+  /* 형제를 나란히 놓을 때 */
+  .sib{display:flex; flex-direction:column; gap:8px;}
+  .sib > .sibnote{font-size:10px; color:#7d8ba8; letter-spacing:.03em;}
   .k1 td.holder{border-left-color:#3c4866;}
   .k2 td.holder{border-left-color:#4d5c8a;}
   .k3 td.holder{border-left-color:#6070ab;}
@@ -507,6 +510,9 @@ def ntable(depth: int, title: str, qty, unit: str = "",
     mark = f'<span class="in">{"▸" * (depth - 1)} {depth}층</span>' if depth > 1 else ""
     body = (f'<tr><td class="leafcell"><table class="rowsT"><tbody>'
             f'{"".join(rows)}</tbody></table></td></tr>') if rows else ""
+    # inner에 표가 여러 개 오면 형제로 나란히 놓는다.
+    # [사장님 지적 2026-08-17] "창고 = 안 옮긴 것 + 통합본이면
+    # 수평하게 있어야지" — 형제인데 부모-자식으로 그렸었다.
     kid = f'<tr><td class="holder">{inner}</td></tr>' if inner else ""
     return (f'<table class="nt k{depth}"><tbody>'
             f'<tr><th>{mark}{esc(title)}'
