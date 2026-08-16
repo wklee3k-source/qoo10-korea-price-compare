@@ -192,6 +192,44 @@ CSS = """
   .node.drop{background:#3a3f4a; color:#aab1bd;}
   .node .arrow{font-size:10.5px; opacity:.9; font-weight:600;}
 
+  /* ── 트리맵: 면적이 건수에 비례한다 ─────────────────────
+     주식 히트맵과 같은 방식(사장님 요청 2026-08-17).
+     - 넓이로 규모를 본다. 숫자를 안 읽어도 뭐가 많은지 보인다.
+     - 색으로 상태를 본다. 초록은 살아남고 회색은 버려진다.
+     - 중첩으로 상하관계를 본다. 큰 칸 안에 작은 칸이 들어간다.
+
+     정확한 squarified 알고리즘 대신 flex 비율로 나눈다. 방향을
+     번갈아(가로→세로→가로) 쪼개면 칸 모양이 지나치게 길쭉해지지
+     않는다. */
+  .tmap{display:flex; width:100%; gap:3px; border-radius:8px;
+    overflow:hidden; background:#0b0d12; padding:3px;}
+  .tm{position:relative; display:flex; gap:3px; min-width:0; min-height:0;
+    border-radius:4px; overflow:hidden;}
+  .tm.row{flex-direction:row;} .tm.col{flex-direction:column;}
+  .tm > .cap{position:absolute; left:0; top:0; right:0; z-index:2;
+    font-size:9.5px; font-weight:700; letter-spacing:.02em;
+    padding:2px 5px; color:rgba(255,255,255,.92);
+    background:rgba(0,0,0,.34); text-transform:none; white-space:nowrap;
+    overflow:hidden; text-overflow:ellipsis;}
+  .tm.hascap{padding-top:15px;}
+  /* 잎 칸 — 이름과 숫자를 가운데 */
+  .cell{display:flex; flex-direction:column; align-items:center;
+    justify-content:center; min-width:0; min-height:0; border-radius:4px;
+    padding:4px; text-align:center; overflow:hidden; line-height:1.2;}
+  .cell .nm{font-size:11px; font-weight:700; color:#fff;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    max-width:100%;}
+  .cell .qt{font-size:15px; font-weight:800; color:#fff; margin-top:1px;}
+  .cell .sm .qt{font-size:12px;}
+  .cell.tiny .nm{font-size:9px;} .cell.tiny .qt{font-size:11px;}
+  /* 상태 색 — 히트맵처럼 진하게 */
+  .cell.go{background:#1f9d63;}
+  .cell.todo{background:#c8901a;}
+  .cell.wait{background:#2f6fb5;}
+  .cell.drop{background:#4b515e;}
+  .cell.bad{background:#c0392b;}
+  .tm.grp{background:rgba(255,255,255,.05);}
+
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -331,6 +369,61 @@ def box(depth: int, step: str, head: str, value=None, note: str = "",
     return (f'<div class="lv d{depth}">'
             f'<div class="hd">{dot}{esc(head)}{v}{nt}</div>'
             f'{body}{inner}</div>')
+
+
+
+def cell(name: str, qty: int, tone: str = "drop", note: str = "",
+         size: str = "") -> dict:
+    """트리맵의 한 칸. 넓이는 qty에 비례한다."""
+    return {"kind": "cell", "name": name, "qty": qty, "tone": tone,
+            "note": note, "size": size}
+
+
+def group(caption: str, children: list) -> dict:
+    """트리맵의 묶음. 자식들의 합만큼 넓이를 차지한다."""
+    return {"kind": "group", "caption": caption, "children": children}
+
+
+def _tm_qty(n: dict) -> int:
+    if n["kind"] == "cell":
+        return max(n["qty"], 0)
+    return sum(_tm_qty(c) for c in n["children"])
+
+
+def _tm_render(nodes: list, horizontal: bool) -> str:
+    total = sum(_tm_qty(n) for n in nodes) or 1
+    out = []
+    for n in nodes:
+        q = _tm_qty(n)
+        grow = max(q / total * 100, 1.2)   # 너무 얇아 안 보이는 칸 방지
+        style = f"flex:{grow:.3f} 1 0;"
+        if n["kind"] == "cell":
+            tiny = " tiny" if q / total < 0.035 else ""
+            nt = (f'<div class="nm" style="opacity:.75;font-size:9px;'
+                  f'font-weight:500">{esc(n["note"])}</div>' if n["note"] else "")
+            out.append(f'<div class="cell {n["tone"]}{tiny}" style="{style}">'
+                       f'<div class="nm">{esc(n["name"])}</div>'
+                       f'<div class="qt">{num(n["qty"])}</div>{nt}</div>')
+        else:
+            cap = (f'<div class="cap">{esc(n["caption"])} '
+                   f'{num(_tm_qty(n))}</div>') if n["caption"] else ""
+            cls = "col" if horizontal else "row"
+            hc = " hascap" if n["caption"] else ""
+            inner = _tm_render(n["children"], not horizontal)
+            out.append(f'<div class="tm grp {cls}{hc}" style="{style}">'
+                       f'{cap}{inner}</div>')
+    return "".join(out)
+
+
+def treemap(nodes: list, height: int = 330) -> str:
+    """면적이 건수에 비례하는 지도.
+
+    [왜 — 사장님 요청 2026-08-17] 주식 히트맵처럼 그려 달라.
+    숫자를 읽지 않아도 무엇이 많고 적은지, 무엇이 살아남고 버려지는지
+    한눈에 보인다.
+    """
+    return (f'<div class="tmap row" style="height:{height}px;">'
+            f'{_tm_render(nodes, True)}</div>')
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
