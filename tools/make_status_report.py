@@ -239,26 +239,30 @@ CSS = """
 
   /* ── 표 안의 표 ─────────────────────────────────────────
      사장님 요청 2026-08-17: "수확본 아래 통합본 아래 검증대상이
-     들어가게 표인표로".
+     들어가게 표인표로" → "표안에 표로 보이게" → "하위인게 확실히
+     티가 나게".
 
-     [고친 이유] 처음엔 테두리 없이 색 카드로 만들었더니 "표로 안
-     보인다"는 지적을 받았다. 표처럼 보이려면 **격자 선**이 있어야
-     한다. 실제 테두리를 그리고, 안쪽 표는 바깥 표의 칸 안에 여백을
-     두고 놓는다. */
+     세 번 고쳤다. 마지막 요구가 핵심이다 — **하위임이 티가 나야 한다.**
+     그래서 네 가지를 동시에 쓴다:
+       1) 안쪽 표를 담는 칸(.holder)에 왼쪽 굵은 띠 + 넉넉한 여백
+       2) 머리글에 "└ 안에 들어있음" 화살표를 찍는다
+       3) 깊이마다 왼쪽 들여쓰기가 누적된다
+       4) 안으로 갈수록 머리 색이 밝아진다 */
   .nt{width:100%; border-collapse:collapse; margin:0;}
   .nt th, .nt td{border:1px solid #4a5262; padding:0;}
   .nt > tbody > tr > th{background:#2b3242; color:#fff; text-align:left;
-    font-size:12.5px; font-weight:800; padding:8px 11px;}
+    font-size:12.5px; font-weight:800; padding:9px 11px;}
   .nt > tbody > tr > th .q{float:right; font-size:14.5px;}
   .nt > tbody > tr > th .u{font-size:10px; font-weight:500; opacity:.7;
     margin-left:4px;}
-  /* 잎 줄 — 표의 한 행처럼 */
+  .nt > tbody > tr > th .in{font-size:10.5px; font-weight:600;
+    opacity:.72; margin-right:5px;}
+
   .nt td.leafcell{padding:0;}
   .nt table.rowsT{width:100%; border-collapse:collapse;}
   .nt table.rowsT td{border:none; border-bottom:1px solid #3b4252;
     padding:6px 11px; font-size:11.5px;}
   .nt table.rowsT tr:last-child td{border-bottom:none;}
-  .nt table.rowsT td.n{width:auto;}
   .nt table.rowsT td.q{text-align:right; font-size:13.5px; font-weight:800;
     white-space:nowrap; width:1%;}
   .nt table.rowsT td.a{text-align:right; font-size:10px; opacity:.85;
@@ -268,13 +272,23 @@ CSS = """
   tr.wait td{background:#2f6fb5; color:#fff;}
   tr.drop td{background:#31363f; color:#98a0ac;}
   tr.plain td{background:rgba(255,255,255,.05); color:#cfd6e4;}
-  /* 안쪽 표가 놓이는 칸 — 여백을 줘야 '안에 들어있다'가 보인다 */
-  .nt td.holder{padding:10px 12px; background:rgba(0,0,0,.22);}
-  /* 깊이별 머리 색 */
+
+  /* ★ 하위임을 드러내는 칸 — 왼쪽 굵은 띠 + 들여쓰기 */
+  .nt td.holder{padding:12px 12px 12px 26px; background:rgba(0,0,0,.3);
+    border-left:6px solid #6b7a9e; position:relative;}
+  .nt td.holder::before{content:"└"; position:absolute; left:9px; top:10px;
+    color:#8fa0c4; font-size:14px; font-weight:800; line-height:1;}
+  .nt td.holder::after{content:"안에 들어있는 것"; position:absolute;
+    left:26px; top:-1px; font-size:8.5px; color:#7d8ba8; letter-spacing:.04em;}
+
+  /* 깊이별 머리 색과 왼쪽 띠 색 */
   .k1 > tbody > tr > th{background:#2b3242;}
-  .k2 > tbody > tr > th{background:#39445e;}
-  .k3 > tbody > tr > th{background:#48557a;}
-  .k4 > tbody > tr > th{background:#586798;}
+  .k2 > tbody > tr > th{background:#3c4866;}
+  .k3 > tbody > tr > th{background:#4d5c8a;}
+  .k4 > tbody > tr > th{background:#6070ab;}
+  .k1 td.holder{border-left-color:#3c4866;}
+  .k2 td.holder{border-left-color:#4d5c8a;}
+  .k3 td.holder{border-left-color:#6070ab;}
 
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
@@ -489,11 +503,14 @@ def ntable(depth: int, title: str, qty, unit: str = "",
     눈으로 읽히게 한다.
     """
     u = f'<span class="u">{esc(unit)}</span>' if unit else ""
+    # 2층부터는 머리글에 "◂ 위 표 안" 표시를 붙여 하위임을 못 박는다
+    mark = f'<span class="in">{"▸" * (depth - 1)} {depth}층</span>' if depth > 1 else ""
     body = (f'<tr><td class="leafcell"><table class="rowsT"><tbody>'
             f'{"".join(rows)}</tbody></table></td></tr>') if rows else ""
     kid = f'<tr><td class="holder">{inner}</td></tr>' if inner else ""
     return (f'<table class="nt k{depth}"><tbody>'
-            f'<tr><th>{esc(title)}<span class="q">{num(qty)}{u}</span></th></tr>'
+            f'<tr><th>{mark}{esc(title)}'
+            f'<span class="q">{num(qty)}{u}</span></th></tr>'
             f'{body}{kid}</tbody></table>')
 
 
