@@ -25,27 +25,27 @@ CSS = """
     --ok:#3ecf8e; --warn:#f5c344; --bad:#f26d6d; --info:#5fa8f5; --pp:#a78bfa;
   }
   *{box-sizing:border-box;}
-  body{margin:0; padding:28px 18px 70px; background:var(--bg); color:var(--text);
+  body{margin:0; padding:18px 14px 40px; background:var(--bg); color:var(--text);
     font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.55;}
   .wrap{max-width:1000px; margin:0 auto;}
-  h1{font-size:21px; margin:0 0 3px;}
-  .meta{color:var(--sub); font-size:12.5px; margin-bottom:22px;}
-  h2{font-size:14.5px; margin:34px 0 11px; padding-bottom:7px; border-bottom:1px solid var(--border);}
+  h1{font-size:19px; margin:0 0 2px;}
+  .meta{color:var(--sub); font-size:12px; margin-bottom:14px;}
+  h2{font-size:13.5px; margin:20px 0 7px; padding-bottom:5px; border-bottom:1px solid var(--border);}
   h2 .num{color:var(--info); font-weight:700;}
-  .card{background:var(--card); border:1px solid var(--border); border-radius:10px;
-    padding:15px 17px; margin-bottom:10px;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:9px;
+    padding:11px 13px; margin-bottom:7px;}
   .badge{display:inline-block; font-size:11px; font-weight:700; padding:3px 9px;
     border-radius:999px; white-space:nowrap;}
   .badge.ok{background:rgba(62,207,142,.15); color:var(--ok);}
   .badge.warn{background:rgba(245,195,68,.15); color:var(--warn);}
   .badge.bad{background:rgba(242,109,109,.15); color:var(--bad);}
   table{width:100%; border-collapse:collapse; font-size:12.5px;}
-  th{text-align:left; color:var(--sub); font-weight:600; padding:7px 8px;
+  th{text-align:left; color:var(--sub); font-weight:600; padding:5px 7px;
     border-bottom:1px solid var(--border); white-space:nowrap;}
-  td{padding:7px 8px; border-bottom:1px solid rgba(42,46,56,.5);}
+  td{padding:5px 7px; border-bottom:1px solid rgba(42,46,56,.5);}
   td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
   .delta.up{color:var(--ok);} .delta.down{color:var(--bad);} .delta.zero{color:var(--sub);}
-  .src{color:var(--sub); font-size:11.5px; margin-top:11px; line-height:1.7;}
+  .src{color:var(--sub); font-size:11px; margin-top:8px; line-height:1.6;}
 
   /* 신호등 */
   .signals{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;}
@@ -100,36 +100,36 @@ CSS = """
   .lv .hd{font-size:12.5px; font-weight:700; margin-bottom:7px;}
   .lv .hd .v{color:var(--info); font-variant-numeric:tabular-nums;}
   .lv .hd .dd{color:var(--sub); font-weight:400; font-size:11px;}
-  .leafs{display:flex; gap:6px; flex-wrap:wrap;}
+  .leafs{display:flex; gap:4px; flex-wrap:wrap;}
   .leaf{display:flex; align-items:baseline; gap:5px; background:rgba(0,0,0,.22);
     border-radius:6px; padding:5px 9px; font-size:11px;}
   .leaf .t{color:var(--sub);}
   .leaf .v{font-weight:700; font-variant-numeric:tabular-nums;}
-  .leaf .p{color:var(--sub); font-size:10px;}
+  .leaf .p{color:var(--sub); font-size:9.5px;}
   /* 단계별 색 — 반투명 대신 **불투명 색**을 쓴다.
      어두운 바탕(#0f1115)에 알파 20% 정도로는 거의 안 보인다(실측).
      머리글을 색 띠로 깔고 흰 글자를 얹으면 확실히 갈린다. */
-  .lv{border:none; padding:0; overflow:hidden; border-radius:9px;}
-  .lv > .hd{margin:0; padding:9px 13px; font-size:13.5px; font-weight:700;}
-  .lv > .leafs{padding:11px 13px;}
-  .lv > .lv, .lv > .lv.sub{margin:0 11px 11px;}
+  .lv{border:none; padding:0; overflow:hidden; border-radius:7px; margin-top:0;}
+  .lv > .hd{margin:0; padding:6px 10px; font-size:12.5px; font-weight:700;}
+  .lv > .leafs{padding:7px 9px; gap:4px;}
+  .lv > .lv, .lv > .lv.sub{margin:0 7px 7px;}
 
   .c1{background:#12233a;} .c1 > .hd{background:#2b6cb0; color:#fff;}
   .c2{background:#1e1836;} .c2 > .hd{background:#6b46c1; color:#fff;}
   .c3{background:#0f2a20;} .c3 > .hd{background:#1f8f5f; color:#fff;}
   .c4{background:#2b2413;} .c4 > .hd{background:#b8860b; color:#fff;}
   .c5{background:#2e1d12;} .c5 > .hd{background:#c05621; color:#fff;}
-  .lv > .hd .v{color:#fff; font-size:16px;}
-  .lv > .hd .dd{color:rgba(255,255,255,.8); font-weight:500; font-size:11.5px;}
+  .lv > .hd .v{color:#fff; font-size:14.5px;}
+  .lv > .hd .dd{color:rgba(255,255,255,.78); font-weight:500; font-size:10.5px;}
 
-  .lv.sub{background:#20242e; border-radius:8px;}
-  .lv.sub > .hd{background:#333a48; color:#e6e8ec; font-size:12.5px; padding:8px 12px;}
-  .lv.sub > .hd .v{color:#fff; font-size:14px;}
+  .lv.sub{background:#20242e; border-radius:6px;}
+  .lv.sub > .hd{background:#333a48; color:#e6e8ec; font-size:11.5px; padding:5px 9px;}
+  .lv.sub > .hd .v{color:#fff; font-size:13px;}
   .lv.sub > .hd .dd{color:#b6bcc7;}
 
   /* 잎사귀 — 불투명 배경 + 진한 글자 */
-  .leaf{border:none; padding:7px 11px; font-size:11.5px; border-radius:7px;}
-  .leaf .v{font-size:13px; font-weight:800;}
+  .leaf{border:none; padding:4px 8px; font-size:10.5px; border-radius:5px; gap:4px;}
+  .leaf .v{font-size:12px; font-weight:800;}
   .leaf.go{background:#1f8f5f;} .leaf.go .t{color:#d6fbe9;}
   .leaf.go .v{color:#fff;} .leaf.go .p{color:#bff0da;}
   .leaf.todo{background:#b8860b;} .leaf.todo .t{color:#fff4d6;}
@@ -141,7 +141,7 @@ CSS = """
   .leaf:not(.go):not(.todo):not(.wait):not(.drop){background:#2a2f3a;}
 
   .nest{background:var(--card); border:1px solid var(--border);
-    border-radius:10px; padding:12px;}
+    border-radius:9px; padding:8px;}
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
