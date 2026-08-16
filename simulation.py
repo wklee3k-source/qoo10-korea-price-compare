@@ -3241,6 +3241,15 @@ def t30_translation_skips_foreign():
     """
     src = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
     check("30-1 해외브랜드 제외 로직", "_load_foreign_brands" in src)
+    # [09-02 번역 피드백] 로마자 브랜드는 그대로 둬도 된다는 규칙이
+    # 없어서 통째로 비우고 있었다. 한국에서도 로마자로 파는 브랜드가
+    # 많다(VT·AHC·COSRX·POLA 등 실측 284건). 브랜드 하나 때문에 상품
+    # 전체를 버리는 건 손해다.
+    check("30-1b 로마자 브랜드 유지 규칙",
+          "로마자를 그대로 두세요" in src)
+    # 다만 일본어·한자 음차는 막아야 한다 - 한국 검색에서 안 잡힌다
+    check("30-1c 일본어 음차는 금지",
+          "일본어·한자 브랜드는 음차하지 마세요" in src)
     check("30-2 몇 건 뺐는지 로그", "한국 미판매 브랜드" in src)
     # 목록을 못 읽으면 빈 집합 -> 아무것도 안 뺀다
     check("30-3 목록 없으면 전부 번역 대상",
