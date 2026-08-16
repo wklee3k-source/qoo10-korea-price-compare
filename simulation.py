@@ -3532,6 +3532,46 @@ def t34_single_file_request():
           "묶음 1~2" in body, "두 묶음씩 합치라 했으니 목록도 짝이어야 한다")
 
 
+# ---- #35 브랜드 중복 표기 정정 (v7.79.0)
+def t35_duplicate_brand_fixed():
+    """브랜드가 두 번 들어간 상품명을 바로잡는지.
+
+    [실측 2026-08-16] 번역자가 음차로 적은 브랜드와, 우리가 앞에 붙인
+    사전 표기가 겹쳐 두 번 들어간 상품이 260건 있었다:
+        은율 운율 내추럴알로에마스크팩
+        식물나라 신물나라 제주알로에쿨링선스틱
+        셀퓨전씨 셀퓨전C 포스트 알파 쿨링 패드
+        크리니크 클리니크 테이크 더 데이 오프 클렌징 밤
+    검색어가 그 꼴이면 어느 쇼핑몰에서도 안 잡힌다.
+
+    [반대 위험] 두 번째 낱말이 제품명의 일부인데 지우면 안 된다.
+    실측: "려 극 데미지 케어..."에서 極(극도의)이 브랜드 "려"의 변형으로
+    잘못 판정돼 지워졌다. 두 글자 미만은 건드리지 않는다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from attach_brand_to_name import _looks_same_brand
+    except Exception as e:  # noqa: BLE001
+        check("35 브랜드 정정 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    same = [("은율", "운율"), ("식물나라", "신물나라"), ("셀퓨전씨", "셀퓨전C"),
+            ("크리니크", "클리니크"), ("브리스킨", "블리스킨"), ("더마겐", "더마젠"),
+            ("르벨", "루벨"), ("그로우어스", "글로우어스"), ("토리든", "트리든")]
+    missed = [f"{a}/{b}" for a, b in same if not _looks_same_brand(a, b)]
+    check("35-1 같은 브랜드 다른 표기 인식", not missed, f"놓침: {missed}")
+
+    diff = [("아누아", "아이오페"), ("달바", "디오르"), ("메디힐", "메디큐브"),
+            ("아누아", "조선미녀"), ("려", "극")]
+    wrong = [f"{a}/{b}" for a, b in diff if _looks_same_brand(a, b)]
+    check("35-2 다른 브랜드는 안 건드림", not wrong, f"잘못 합침: {wrong}")
+
+    src = (ROOT / "src" / "attach_brand_to_name.py").read_text(encoding="utf-8")
+    check("35-3 두 글자 미만은 제외", "len(second) >= 2" in src,
+          "한 글자는 제품명의 일부일 때가 많다")
+    check("35-4 사전에 있는 다른 브랜드는 보호", "is_other" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
