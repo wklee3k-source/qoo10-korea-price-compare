@@ -1491,6 +1491,7 @@ jobs:
           git show FETCH_HEAD:output/discovery_state.json > /tmp/ds_for_brand.json 2>/dev/null
           git show FETCH_HEAD:data/brand_translations_learned.json > /tmp/bt.json 2>/dev/null
           git show FETCH_HEAD:data/brand_lookup_done.json > /tmp/bdone.json 2>/dev/null || echo '[]' > /tmp/bdone.json
+          git show FETCH_HEAD:data/foreign_brands.json > /tmp/bforeign.json 2>/dev/null || echo '[]' > /tmp/bforeign.json
           if [ ! -s /tmp/ds_for_brand.json ] || [ ! -s /tmp/bt.json ]; then
             echo "[건너뜀] 발굴 브랜치를 못 읽었다"
             exit 0
@@ -1529,7 +1530,8 @@ jobs:
           jp_to_en = load_jp_to_en('../data/brand_list.csv')
           with HwahaeSession(wait=0.5) as session:
               learned = run(brands, jp_to_en, set(known), 120, 0.4,
-                            '/tmp/bdone.json', '/tmp/bt.json', session)
+                            '/tmp/bdone.json', '/tmp/bt.json', session,
+                            '/tmp/bforeign.json')
           print(f'이번에 알아낸 브랜드 {len(learned)}개')
           PY
 
@@ -1542,10 +1544,11 @@ jobs:
                 /tmp/bpush -q 2>/dev/null || break
               cp /tmp/bt.json /tmp/bpush/data/brand_translations_learned.json
               cp /tmp/bdone.json /tmp/bpush/data/brand_lookup_done.json
+              cp /tmp/bforeign.json /tmp/bpush/data/foreign_brands.json
               cd /tmp/bpush
               git config user.name "github-actions[bot]"
               git config user.email "github-actions[bot]@users.noreply.github.com"
-              git add data/brand_translations_learned.json data/brand_lookup_done.json
+              git add data/brand_translations_learned.json data/brand_lookup_done.json data/foreign_brands.json
               if git diff --cached --quiet; then cd - >/dev/null; break; fi
               git commit -q -m "Auto: 화해에서 한글 브랜드명 학습"
               if git push origin $BR -q 2>/dev/null; then cd - >/dev/null; break; fi

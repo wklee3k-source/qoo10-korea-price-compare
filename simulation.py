@@ -3193,6 +3193,35 @@ def t28_harvest_state_stays_small():
           f"jsonl이 빠진 git add: {missing}")
 
 
+# --- #29 화해에 없는 브랜드는 해외브랜드로 자동 등록 (v7.67.0)
+def t29_not_in_korea_auto_registered():
+    """화해에서 못 찾은 브랜드를 해외브랜드로 자동 등록하는지.
+
+    [왜 필요한가 - 실측 2026-08-16] 브랜드 미확인 2,007건의 내역을
+    열어보니 세 갈래였다:
+      1,014건 이미 해외브랜드 등록됨(시세이도·밀본·슈바르츠코프 등)
+        260건 화해에서 못 찾았는데 등록은 안 됨
+        733건 아직 조회 안 함
+    가운데 260건의 검증 결과가 143건 중 이름확정 23건(16.1%)이었다.
+    전체 평균 47.2%의 3분의 1 - 한국에서 안 파니 안 잡히는 게 당연하다.
+
+    화해는 한국 화장품 사이트다. 영문 표기까지 만들어 물어봤는데 없다면
+    브랜드를 모르는 게 아니라 **한국 유통이 없다**는 신호다. 그동안은
+    사람이 눈으로 골라 넣었는데, 미확인이 2,000건씩 쌓일 때마다
+    되풀이할 일이 아니다.
+
+    [반대 위험] 한국 브랜드가 잘못 들어가면 매출원을 통째로 버린다.
+    21-3이 그걸 막고 있다.
+    """
+    src = (ROOT / "src" / "brand_korean_lookup.py").read_text(encoding="utf-8")
+    check("29-1 미발견 브랜드 수집", "not_in_korea" in src)
+    check("29-2 해외브랜드 목록에 기록", "foreign_path" in src)
+    # 파이프라인이 실제로 연결했는지
+    wf = (ROOT / ".github" / "workflows" / "qoo10-pipeline.yml").read_text(encoding="utf-8")
+    check("29-3 검증 단계가 목록 경로를 넘김", "bforeign.json" in wf)
+    check("29-4 갱신된 목록을 커밋", "data/foreign_brands.json" in wf)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
