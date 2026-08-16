@@ -106,27 +106,39 @@ CSS = """
   .leaf .t{color:var(--sub);}
   .leaf .v{font-weight:700; font-variant-numeric:tabular-nums;}
   .leaf .p{color:var(--sub); font-size:10px;}
-  /* 단계별 색 — 파이프라인 순서대로 파랑→보라→초록→노랑→주황 */
-  .c1{background:rgba(95,168,245,.10); border:1px solid rgba(95,168,245,.30);}
-  .c2{background:rgba(167,139,250,.10); border:1px solid rgba(167,139,250,.30);}
-  .c3{background:rgba(62,207,142,.10); border:1px solid rgba(62,207,142,.30);}
-  .c4{background:rgba(245,195,68,.10); border:1px solid rgba(245,195,68,.30);}
-  .c5{background:rgba(244,140,80,.10); border:1px solid rgba(244,140,80,.30);}
+  /* 단계별 색 — 파이프라인 순서대로 파랑→보라→초록→노랑→주황.
+     왼쪽 굵은 띠로 단계를 구분하고, 머리글에 색을 칠해 눈에 띄게 한다. */
+  .lv{border-left-width:5px; border-left-style:solid;}
+  .c1{background:rgba(95,168,245,.16); border:1px solid rgba(95,168,245,.45);
+      border-left-color:#5fa8f5;}
+  .c2{background:rgba(167,139,250,.16); border:1px solid rgba(167,139,250,.45);
+      border-left-color:#a78bfa;}
+  .c3{background:rgba(62,207,142,.16); border:1px solid rgba(62,207,142,.45);
+      border-left-color:#3ecf8e;}
+  .c4{background:rgba(245,195,68,.16); border:1px solid rgba(245,195,68,.45);
+      border-left-color:#f5c344;}
+  .c5{background:rgba(244,140,80,.16); border:1px solid rgba(244,140,80,.45);
+      border-left-color:#f48c50;}
+  .c1>.hd{color:#9ecbff;} .c2>.hd{color:#c9b6ff;}
+  .c3>.hd{color:#7ce0b0;} .c4>.hd{color:#ffd970;} .c5>.hd{color:#ffab7a;}
   .c1>.hd .v{color:#5fa8f5;} .c2>.hd .v{color:#a78bfa;}
   .c3>.hd .v{color:#3ecf8e;} .c4>.hd .v{color:#f5c344;} .c5>.hd .v{color:#f48c50;}
-  .lv.sub{background:rgba(255,255,255,.035); border:1px dashed rgba(255,255,255,.14);
-    margin-left:8px; border-left:2px solid rgba(255,255,255,.18);}
-  .lv.sub>.hd .v{color:var(--text);}
+  .lv .hd .v{font-size:15px;}
+  .lv.sub{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
+    margin-left:10px; border-left:4px solid rgba(255,255,255,.3);}
+  .lv.sub>.hd{color:var(--text);}
+  .lv.sub>.hd .v{color:#fff;}
 
-  /* 잎사귀 — 결과에 따라 색이 다르다 */
-  .leaf.go{background:rgba(62,207,142,.14); border:1px solid rgba(62,207,142,.3);}
-  .leaf.go .v{color:var(--ok);}
-  .leaf.todo{background:rgba(245,195,68,.14); border:1px solid rgba(245,195,68,.3);}
-  .leaf.todo .v{color:var(--warn);}
-  .leaf.drop{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);}
-  .leaf.drop .t, .leaf.drop .v, .leaf.drop .p{color:var(--sub);}
-  .leaf.wait{background:rgba(95,168,245,.12); border:1px solid rgba(95,168,245,.28);}
-  .leaf.wait .v{color:var(--info);}
+  /* 잎사귀 — 결과에 따라 색이 다르다. 배경을 진하게 해 한눈에 갈린다. */
+  .leaf{border:1px solid transparent;}
+  .leaf.go{background:rgba(62,207,142,.28); border-color:#3ecf8e;}
+  .leaf.go .t{color:#c9f5e0;} .leaf.go .v{color:#6ff0b8; font-size:12.5px;}
+  .leaf.todo{background:rgba(245,195,68,.28); border-color:#f5c344;}
+  .leaf.todo .t{color:#ffeab8;} .leaf.todo .v{color:#ffd970; font-size:12.5px;}
+  .leaf.drop{background:rgba(150,158,170,.16); border-color:rgba(150,158,170,.45);}
+  .leaf.drop .t, .leaf.drop .p{color:#8d94a0;} .leaf.drop .v{color:#aab1bd;}
+  .leaf.wait{background:rgba(95,168,245,.26); border-color:#5fa8f5;}
+  .leaf.wait .t{color:#cfe4ff;} .leaf.wait .v{color:#87c1ff; font-size:12.5px;}
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
