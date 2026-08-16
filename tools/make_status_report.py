@@ -328,13 +328,15 @@ CSS = """
   .bx .ttl .nmx, .bx .ttl .qx{color:#a8b0bd;}
   .bx .note{color:#7f8798;}
 
-  /* 상자 사이 화살표 — 데이터가 어디로 가는지 (사장님 요청 2026-08-17) */
-  .arw{flex:0 0 auto; display:flex; flex-direction:column;
-    align-items:center; justify-content:center; padding:0 2px;
-    color:#7f8b9e; font-size:17px; font-weight:800; line-height:1;
-    align-self:center;}
-  .arw span{font-size:8.5px; font-weight:600; color:#6b7688;
-    margin-top:2px; white-space:nowrap; letter-spacing:.02em;}
+  /* 상자 사이 화살표 — 방향만 보여준다.
+     [사장님 요청 2026-08-17] "글을 쓰지 말고 화살표만 겹치게".
+     라벨을 달면 읽어야 해서 오히려 흐름이 안 보인다. 폭 0으로 두고
+     상자 사이 틈에 겹쳐 놓아 상자 크기에 영향을 주지 않는다. */
+  .bmap .kids{position:relative;}
+  .arw{flex:0 0 0; width:0; align-self:center; position:relative;
+    z-index:3; pointer-events:none;}
+  .arw::before{content:"\25B6"; position:absolute; left:-9px; top:-9px;
+    font-size:13px; color:#a7b4c8; text-shadow:0 0 5px rgba(0,0,0,.7);}
 
   .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
   .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
@@ -573,10 +575,14 @@ def ntable(depth: int, title: str, qty, unit: str = "",
 
 
 
-def arrow(label: str = "") -> str:
-    """상자 사이에 놓는 화살표. 데이터가 흐르는 방향을 보여준다."""
-    lb = f"<span>{esc(label)}</span>" if label else ""
-    return f'<div class="arw">→{lb}</div>'
+def arrow(label: str = "") -> str:  # noqa: ARG001
+    """상자 사이 틈에 겹쳐 놓는 화살표. 방향만 보여준다.
+
+    [사장님 요청 2026-08-17] 라벨은 달지 않는다 — 읽어야 하는 글이
+    붙으면 오히려 흐름이 안 보인다. 폭 0으로 두고 겹쳐 놓아 상자
+    크기에도 영향을 주지 않는다.
+    """
+    return '<div class="arw"></div>' 
 
 
 def bline(name: str, qty, arrow: str = "") -> str:
