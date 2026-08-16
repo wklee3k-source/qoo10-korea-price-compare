@@ -142,6 +142,40 @@ CSS = """
 
   .nest{background:var(--card); border:1px solid var(--border);
     border-radius:9px; padding:8px;}
+  /* ── 트리: 상하관계를 선으로 그린다 ──────────────────────
+     [왜 — 사장님 지적 2026-08-17] 중첩 박스를 색으로 구분했더니
+     오히려 "나란한 것"처럼 읽혔다. 층이 다른데 색만 다를 뿐
+     들여쓰기가 얕아 부모-자식이 안 보인 것이다.
+     세로선과 가로선을 실제로 그려 관계를 눈에 박는다. */
+  .tree{background:var(--card); border:1px solid var(--border);
+    border-radius:9px; padding:12px 14px;}
+  .tree ul{list-style:none; margin:0; padding:0;}
+  /* 자식 목록: 왼쪽에 세로 줄기를 두고 그만큼 들여쓴다 */
+  .tree li > ul{margin-left:13px; padding-left:16px; border-left:2px solid #4a5262;}
+  .tree li{position:relative; padding:3px 0;}
+  /* 각 자식 앞 가로선 */
+  .tree li > ul > li::before{content:""; position:absolute; left:-16px; top:15px;
+    width:14px; height:2px; background:#4a5262;}
+  /* 마지막 자식 아래로 줄기가 삐져나오지 않게 덮는다 */
+  .tree li > ul > li:last-child::after{content:""; position:absolute; left:-18px;
+    top:17px; bottom:-4px; width:3px; background:var(--card);}
+
+  .node{display:inline-flex; align-items:center; gap:7px; border-radius:6px;
+    padding:5px 11px; font-size:12px; font-weight:700; white-space:nowrap;}
+  .node .v{font-size:14px; font-weight:800;}
+  .node .dd{font-size:10.5px; font-weight:500; opacity:.85;}
+  .node.n1{background:#2b6cb0; color:#fff;}
+  .node.n2{background:#6b46c1; color:#fff;}
+  .node.n3{background:#1f8f5f; color:#fff;}
+  .node.n4{background:#b8860b; color:#fff;}
+  .node.n5{background:#c05621; color:#fff;}
+  .node.mid{background:#39404e; color:#e6e8ec;}
+  .node.go{background:#1f8f5f; color:#fff;}
+  .node.todo{background:#b8860b; color:#fff;}
+  .node.wait{background:#2b6cb0; color:#fff;}
+  .node.drop{background:#3a3f4a; color:#aab1bd;}
+  .node .arrow{font-size:10.5px; opacity:.9; font-weight:600;}
+
   .footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--border);
     color:var(--sub); font-size:11px;}
 """
@@ -240,6 +274,30 @@ def table(headers: list, rows: list, note: str = "") -> str:
     nt = f'<div class="src">{note}</div>' if note else ""
     return (f'<div class="card"><table><tr>{th}</tr>'
             + "".join(trs) + f"</table>{nt}</div>")
+
+
+
+def node(label: str, value=None, tone: str = "mid", note: str = "",
+         arrow: str = "") -> str:
+    """트리의 한 마디.
+
+    tone: n1~n5(단계 색) / mid(중간 단계) / go·todo·wait·drop(결과 색)
+    """
+    v = f'<span class="v">{num(value)}</span>' if value is not None else ""
+    nt = f'<span class="dd">{esc(note)}</span>' if note else ""
+    ar = f'<span class="arrow">{esc(arrow)}</span>' if arrow else ""
+    return f'<span class="node {tone}">{esc(label)}{v}{nt}{ar}</span>'
+
+
+def branch(head: str, children: list = None) -> str:
+    """트리 가지. children이 있으면 자식 목록을 안에 넣는다."""
+    kids = ("<ul>" + "".join(f"<li>{c}</li>" for c in children) + "</ul>"
+            if children else "")
+    return head + kids
+
+
+def tree(root: str) -> str:
+    return f'<div class="tree"><ul><li>{root}</li></ul></div>'
 
 
 def build(*, title: str, meta: str, sections: list) -> str:
