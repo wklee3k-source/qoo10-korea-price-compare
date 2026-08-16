@@ -335,14 +335,12 @@ CSS = """
   .bmap .kids{position:relative;}
   .arw{flex:0 0 0; width:0; align-self:center; position:relative;
     z-index:5; pointer-events:none;}
-  /* 화살표를 상자 위에 올려 놓는다. 원판을 깔고 그 안에 삼각형을
-     넣어, 상자 색 위에서도 또렷하게 보이게 한다. */
-  .arw::before{content:"▶"; position:absolute; left:-13px; top:-13px;
-    width:26px; height:26px; border-radius:50%;
-    background:#0d1117; border:2px solid #8fa0bb; color:#dbe4f0;
-    font-size:12px; display:flex; align-items:center;
-    justify-content:center; padding-left:2px;
-    box-shadow:0 2px 8px rgba(0,0,0,.55);}
+  /* 작고 반투명하게. 상자 위에 살짝 얹혀 흐름만 짚어 준다.
+     [사장님 요청 2026-08-17] 원판을 크게 넣었더니 눈에 너무 띄어
+     내용을 가렸다. 화살표는 안내지 주인공이 아니다. */
+  .arw::before{content:"▶"; position:absolute; left:-6px; top:-7px;
+    font-size:11px; color:rgba(255,255,255,.5);
+    text-shadow:0 1px 3px rgba(0,0,0,.7);}
 
   .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
   .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
