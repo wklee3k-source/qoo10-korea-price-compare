@@ -3377,7 +3377,7 @@ def t33_harvest_promotion():
     """
     sys.path.insert(0, str(ROOT / "src"))
     try:
-        from promote_harvest_to_discovery import pick, MIN_TITLE_LEN
+        from promote_harvest_to_discovery import pick, MIN_TITLE_LEN, MAX_TITLE_LEN
     except Exception as e:  # noqa: BLE001
         check("33 편입 스크립트 로드", False, f"{type(e).__name__}: {e}")
         return
@@ -3388,9 +3388,15 @@ def t33_harvest_promotion():
         {"goods_no": "2", "title": "[I", "brand": "COSRX"},                   # 잘림
         {"goods_no": "3", "title": "準備中(new)", "brand": "COSRX"},          # 판매 안 함
         {"goods_no": "4", "title": "レディース 秋冬 ヘアピン", "brand": ""},  # 잡화
-        {"goods_no": "5", "title": "もち米もちパック 100ml", "brand": "COSRX"},
-        {"goods_no": "6", "title": "もち米もちパック 100ml", "brand": "COSRX"},  # 중복
+        {"goods_no": "5", "title": "もち米もちパック 100ml 保湿マスク", "brand": "COSRX"},
+        {"goods_no": "6", "title": "もち米もちパック 100ml 保湿マスク", "brand": "COSRX"},  # 중복
         {"goods_no": "7", "title": "低分子ヒアルロン酸トナー 300ml", "brand": "TORRIDEN"},
+        # 너무 짧아 무슨 제품인지 모르는 것 — 실제로 올라왔던 사례
+        {"goods_no": "8", "title": "子音生2種セット", "brand": "COSRX"},
+        # 너무 길어 홍보 문구가 검색을 방해하는 것
+        {"goods_no": "9", "title": "COSRX 公式 正規品 送料無料 大人気 韓国コスメ "
+                                   "もち米パック 保湿 鎮静 毛穴ケア ツヤ肌 100ml 2個セット",
+         "brand": "COSRX"},
     ]
     got = pick(cands, known, 10)
     ids = [g["goods_no"] for g in got]
@@ -3403,7 +3409,15 @@ def t33_harvest_promotion():
     # 브랜드를 아는 것이 먼저 와야 한다 — 검증 통과율이 2.5배 차이난다
     check("33-6 브랜드 아는 것 우선",
           ids and ids[0] in ("5", "6"), f"순서: {ids}")
-    check("33-7 최소 길이 기준 존재", MIN_TITLE_LEN >= 5)
+    # [v7.71.1] 길이 구간은 검증 통과율로 정했다(실측 3,986건):
+    #   ~15자 57.1% / 16~25자 67.5% / 26~40자 58.8% / 41~60자 44.3%
+    #   / 61~90자 34.3% / 91자+ 34.5%
+    # 짧은 게 좋은 이유는 "홍보 문구가 적어서"이지 "정보가 없어서"가 아니다.
+    # 처음엔 짧은 것부터만 뽑았다가 `子音生2種セット` 같은 것이 올라왔다.
+    check("33-7 길이 구간이 통과율 최적대", MIN_TITLE_LEN >= 16 and MAX_TITLE_LEN <= 40,
+          f"{MIN_TITLE_LEN}~{MAX_TITLE_LEN}자")
+    check("33-8 너무 짧은 것 제외", "8" not in ids, f"뽑힘: {ids}")
+    check("33-9 너무 긴 것 제외", "9" not in ids, f"뽑힘: {ids}")
 
 
 # ---- #34 번역 요청서를 한 파일로 (v7.72.0)
