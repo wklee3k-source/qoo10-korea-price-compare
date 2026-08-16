@@ -311,7 +311,7 @@ CSS = """
     margin-left:auto; white-space:nowrap;}
   .bmap .ttl .qx em{font-style:normal; font-size:9.5px; font-weight:500;
     opacity:.7; margin-left:2px;}
-  .bmap .kids{display:flex; gap:8px; align-items:stretch; flex-wrap:wrap;}
+  .bmap .kids{display:flex; gap:5px; align-items:stretch; flex-wrap:wrap;}
   .bmap .kids > .bmap{flex:1 1 130px; min-width:130px;}
   .bmap .note{font-size:10px; color:rgba(255,255,255,.72); margin-top:7px;
     line-height:1.45;}
@@ -334,9 +334,15 @@ CSS = """
      상자 사이 틈에 겹쳐 놓아 상자 크기에 영향을 주지 않는다. */
   .bmap .kids{position:relative;}
   .arw{flex:0 0 0; width:0; align-self:center; position:relative;
-    z-index:3; pointer-events:none;}
-  .arw::before{content:"\25B6"; position:absolute; left:-9px; top:-9px;
-    font-size:13px; color:#a7b4c8; text-shadow:0 0 5px rgba(0,0,0,.7);}
+    z-index:5; pointer-events:none;}
+  /* 화살표를 상자 위에 올려 놓는다. 원판을 깔고 그 안에 삼각형을
+     넣어, 상자 색 위에서도 또렷하게 보이게 한다. */
+  .arw::before{content:"\25B6"; position:absolute; left:-13px; top:-13px;
+    width:26px; height:26px; border-radius:50%;
+    background:#0d1117; border:2px solid #8fa0bb; color:#dbe4f0;
+    font-size:12px; display:flex; align-items:center;
+    justify-content:center; padding-left:2px;
+    box-shadow:0 2px 8px rgba(0,0,0,.55);}
 
   .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
   .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
