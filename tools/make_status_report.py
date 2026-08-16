@@ -328,6 +328,14 @@ CSS = """
   .bx .ttl .nmx, .bx .ttl .qx{color:#a8b0bd;}
   .bx .note{color:#7f8798;}
 
+  /* 상자 사이 화살표 — 데이터가 어디로 가는지 (사장님 요청 2026-08-17) */
+  .arw{flex:0 0 auto; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:0 2px;
+    color:#7f8b9e; font-size:17px; font-weight:800; line-height:1;
+    align-self:center;}
+  .arw span{font-size:8.5px; font-weight:600; color:#6b7688;
+    margin-top:2px; white-space:nowrap; letter-spacing:.02em;}
+
   .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
   .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
     padding:5px 8px; font-size:10.5px; background:rgba(0,0,0,.24); color:#fff;
@@ -562,6 +570,13 @@ def ntable(depth: int, title: str, qty, unit: str = "",
             f'<span class="q">{num(qty)}{u}</span></th></tr>'
             f'{body}{kid}</tbody></table>')
 
+
+
+
+def arrow(label: str = "") -> str:
+    """상자 사이에 놓는 화살표. 데이터가 흐르는 방향을 보여준다."""
+    lb = f"<span>{esc(label)}</span>" if label else ""
+    return f'<div class="arw">→{lb}</div>'
 
 
 def bline(name: str, qty, arrow: str = "") -> str:
