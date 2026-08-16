@@ -3588,6 +3588,47 @@ def t35_duplicate_brand_fixed():
     check("35-4 사전에 있는 다른 브랜드는 보호", "is_other" in src)
 
 
+# ---- #45 워커 재배치 (2026-08-17: 발굴2/수확2/병합1/검증5)
+def t45_worker_allocation():
+    """현재 워커 배분이 의도대로인지, 총합이 10을 넘지 않는지.
+
+    [배경] 발굴이 고갈됐다(검색어 천 개당 상품 3건, 기준 20건).
+    큐텐 화장품 상점 11,172개를 이미 다 훑어 워커를 늘려도 나올 게
+    없다. 반면 검증은 번역 완료로 대상이 4,503 -> 6,215건으로 늘어
+    병목이 됐다. 발굴에서 4개를 빼 검증으로 돌렸다.
+
+    [워커 수를 바꿀 때 반드시 할 것 — 셋 다 빼먹으면 사고]
+      1. matrix 개수와 샤딩 나눗셈을 같이 고친다 (검사 40이 확인)
+      2. 줄이는 쪽은 없어질 샤드의 데이터를 남는 샤드로 옮긴다
+         (발굴 6->2: 검색어 19,508개·상품 3,251건 이관)
+      3. 늘리는 쪽은 기존 진행기록을 새 나눗셈으로 다시 나눈다
+         (수확 1->2, 검증 2->5). 안 나누면 새 샤드가 "내 몫인데
+         결과가 없다"고 보고 이미 끝난 것을 처음부터 다시 한다.
+    """
+    import yaml as _y
+    try:
+        data = _y.safe_load(WF.read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        check("45 워크플로 로드", False, str(e))
+        return
+    jobs = data.get("jobs", {})
+
+    def mat(job, key):
+        m = ((jobs.get(job) or {}).get("strategy") or {}).get("matrix") or {}
+        return len(m.get(key) or [])
+
+    disc = mat("discover_low_review_shops_parallel", "branch")
+    harv = mat("harvest_full_catalog_parallel", "branch")
+    veri = mat("hwahae_verify", "shard")
+    merge = 1  # 병합은 matrix 없이 단일 job
+
+    check("45-1 발굴 2워커", disc == 2, f"{disc}개")
+    check("45-2 수확 2워커", harv == 2, f"{harv}개")
+    check("45-3 검증 5워커", veri == 5, f"{veri}개")
+    total = disc + harv + veri + merge
+    check("45-4 총 워커 10개 이내", total <= 10, f"{total}개 — GitHub 동시 실행 한도")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
