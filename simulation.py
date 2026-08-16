@@ -3359,6 +3359,53 @@ def t32_short_keywords_first():
           "길이로 걸러내면 검색어가 고갈된다")
 
 
+# ---- #33 수확본을 통합본으로 편입 (v7.71.0)
+def t33_harvest_promotion():
+    """수확본에서 통합본으로 옮길 때 쓰레기가 안 섞이는지.
+
+    [왜 필요한가 — 실측 2026-08-16] 발굴이 고갈됐다. 검색어 100개로
+    새 상점 2개를 찾고 상품은 0~1건. 큐텐 화장품 상점 11,172개를
+    이미 다 훑었기 때문이다.
+
+    그런데 수확본에 498,722건이 놀고 있었다. 수확은 저장할 때 이미
+    화장품 카테고리·리뷰 20 이하로 걸러 넣는다 — 통합본에 들어갈
+    자격을 갖춘 상품인데 검색어 재료로만 쓰고 있었다.
+
+    [주의할 것] "이름 짧은 것부터"로 정렬했더니 `0`, `[I`, `洗顔`
+    같은 잘린 이름이 맨 위로 왔다. 번역해도 무슨 제품인지 알 수 없고
+    검증에서 100% 버려진다 — 사람 번역 시간만 쓴다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from promote_harvest_to_discovery import pick, MIN_TITLE_LEN
+    except Exception as e:  # noqa: BLE001
+        check("33 편입 스크립트 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    known = {"COSRX", "cosrx"}
+    cands = [
+        {"goods_no": "1", "title": "0", "brand": "COSRX"},                    # 잘림
+        {"goods_no": "2", "title": "[I", "brand": "COSRX"},                   # 잘림
+        {"goods_no": "3", "title": "準備中(new)", "brand": "COSRX"},          # 판매 안 함
+        {"goods_no": "4", "title": "レディース 秋冬 ヘアピン", "brand": ""},  # 잡화
+        {"goods_no": "5", "title": "もち米もちパック 100ml", "brand": "COSRX"},
+        {"goods_no": "6", "title": "もち米もちパック 100ml", "brand": "COSRX"},  # 중복
+        {"goods_no": "7", "title": "低分子ヒアルロン酸トナー 300ml", "brand": "TORRIDEN"},
+    ]
+    got = pick(cands, known, 10)
+    ids = [g["goods_no"] for g in got]
+
+    check("33-1 잘린 이름 제외", "1" not in ids and "2" not in ids, f"뽑힘: {ids}")
+    check("33-2 판매 안 하는 것 제외", "3" not in ids, f"뽑힘: {ids}")
+    check("33-3 비화장품 제외", "4" not in ids, f"뽑힘: {ids}")
+    check("33-4 중복 제거", ids.count("5") + ids.count("6") <= 1, f"뽑힘: {ids}")
+    check("33-5 정상 상품은 통과", "5" in ids or "6" in ids, f"뽑힘: {ids}")
+    # 브랜드를 아는 것이 먼저 와야 한다 — 검증 통과율이 2.5배 차이난다
+    check("33-6 브랜드 아는 것 우선",
+          ids and ids[0] in ("5", "6"), f"순서: {ids}")
+    check("33-7 최소 길이 기준 존재", MIN_TITLE_LEN >= 5)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
