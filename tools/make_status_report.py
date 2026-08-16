@@ -339,19 +339,6 @@ CSS = """
     color:#8b93a1;}
   .bx .bline .q{font-size:10.5px; color:#a2aab8;}
 
-  /* 상자 사이 화살표 — 방향만 보여준다.
-     [사장님 요청 2026-08-17] "글을 쓰지 말고 화살표만 겹치게".
-     라벨을 달면 읽어야 해서 오히려 흐름이 안 보인다. 폭 0으로 두고
-     상자 사이 틈에 겹쳐 놓아 상자 크기에 영향을 주지 않는다. */
-  .bmap .kids{position:relative;}
-  .arw{flex:0 0 0; width:0; align-self:center; position:relative;
-    z-index:5; pointer-events:none;}
-  /* 작고 반투명하게. 상자 위에 살짝 얹혀 흐름만 짚어 준다.
-     [사장님 요청 2026-08-17] 원판을 크게 넣었더니 눈에 너무 띄어
-     내용을 가렸다. 화살표는 안내지 주인공이 아니다. */
-  .arw::before{content:"▶"; position:absolute; left:-6px; top:-7px;
-    font-size:11px; color:rgba(255,255,255,.5);
-    text-shadow:0 1px 3px rgba(0,0,0,.7);}
 
   .bmap .lines{display:flex; flex-direction:column; gap:3px; margin-top:7px;}
   .bline{display:flex; align-items:center; gap:7px; border-radius:5px;
@@ -588,16 +575,6 @@ def ntable(depth: int, title: str, qty, unit: str = "",
             f'{body}{kid}</tbody></table>')
 
 
-
-
-def arrow(label: str = "") -> str:  # noqa: ARG001
-    """상자 사이 틈에 겹쳐 놓는 화살표. 방향만 보여준다.
-
-    [사장님 요청 2026-08-17] 라벨은 달지 않는다 — 읽어야 하는 글이
-    붙으면 오히려 흐름이 안 보인다. 폭 0으로 두고 겹쳐 놓아 상자
-    크기에도 영향을 주지 않는다.
-    """
-    return '<div class="arw"></div>' 
 
 
 def bline(name: str, qty, arrow: str = "") -> str:
