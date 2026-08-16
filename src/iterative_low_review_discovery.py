@@ -313,6 +313,13 @@ def _load_state(suffix: str | None = None) -> dict:
     return {"visited_shops": [], "all_products": [], "shop_urls": [], "pending_keywords": None, "seen_keywords": [], "failed_shops": {}}
 
 
+try:
+    from nonbeauty_filter import is_non_beauty as _is_non_beauty
+except ImportError:  # 필터를 못 읽으면 아무것도 안 거른다(안전한 쪽)
+    def _is_non_beauty(_text: str) -> bool:
+        return False
+
+
 def _save_state(state: dict, suffix: str | None = None):
     path = _state_path(suffix)
     path.parent.mkdir(exist_ok=True, parents=True)
@@ -417,6 +424,29 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
         cur["shops"] += shops_found
         cur["saved"] += saved
 
+    # [v7.70.1] 짧은 검색어를 먼저 쓴다 — 기준은 **글자 수**.
+    #
+    # [왜 단어 수가 아닌가 — 실측 2026-08-16]
+    # 처음엔 `len(k.split())`으로 쟀는데 무의미했다. **일본어는
+    # 띄어쓰기를 안 한다.** 아래 같은 검색어가 "1단어"로 세어진다:
+    #   VSEAボディクリームさっぱり脂っこくない卸売ハンドクリーム永続留香尿素...
+    # 대기열의 15%가 이런 식으로 1단어 취급이었다.
+    #
+    # 글자 수로 다시 재보니 실체가 드러났다(대기 37,004개 기준):
+    #     ~8자   1,113건 ( 3%)
+    #    9~15자  4,887건 (13%)
+    #   16~25자 25,495건 (69%)
+    #    26자+   5,509건 (15%)
+    # 소진분은 더 심해서 26자 넘는 것이 45%였다. 그런데 그 샤드가
+    # 확보한 상품은 806건 — 검색어 87개당 1건이다.
+    #
+    # 긴 검색어는 상품명을 통째로 옮겨온 것이라 그 상품 하나만 걸리고
+    # 이미 방문한 상점으로 이어진다. 짧아야 새 상점이 나온다.
+    #
+    # 정렬만 바꾼다 — 긴 검색어를 버리지는 않는다. 짧은 것이 다 떨어지면
+    # 자연히 긴 것 차례가 오고, 그때는 그것도 쓸모가 있다.
+    pending_keywords.sort(key=len)
+
     while pending_keywords and len(all_products) < target_products:
         if max_shops and len(visited_shops) >= max_shops:
             print(f"\n[STOP] 최대 상점수({max_shops}) 도달")
@@ -493,7 +523,20 @@ def run(keyword_ja: str, target_products: int, max_shops: int | None = None, sho
                         }
                     )
                 # 최종 상품목록에는 필터 통과한 것만 넣는다
+                #
+                # [v7.69.0] 화장품이 아닌 상품도 여기서 뺀다.
+                #
+                # 비화장품 필터는 검색어에만 쓰고 있었다(v7.49.0). 그래서
+                # 화장품 상점이 곁다리로 파는 물건이 그대로 들어왔다.
+                # 실측 2026-08-16: 브랜드 미확인 139건을 열어보니 세븐틴
+                # 티셔츠, 옥수수차, 아사히 음료, 커피믹스, 요구르트,
+                # 코스트코 팝콘이 섞여 있었다.
+                #
+                # 이런 건 번역·검증을 거쳐도 결국 버려지는데, 그 전까지
+                # 사람과 기계 시간을 다 쓴다. 들어오는 자리에서 막는 게 싸다.
                 if item.get("passes_filter") and len(all_products) < target_products:
+                    if _is_non_beauty(item.get("title") or ""):
+                        continue
                     all_products[item["goods_no"]] = item
             if seed_entries:
                 _append_seed_log(seed_entries)

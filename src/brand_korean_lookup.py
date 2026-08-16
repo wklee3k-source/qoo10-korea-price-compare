@@ -138,8 +138,23 @@ def ask_hwahae(english: str, session) -> str:
     return ""
 
 
+def _flush_foreign(brands: list, foreign_path: str) -> None:
+    """화해에 없던 브랜드를 해외브랜드 목록에 적는다."""
+    try:
+        fp = Path(foreign_path)
+        cur = set(json.loads(fp.read_text(encoding="utf-8"))) if fp.exists() else set()
+        merged = sorted(cur | set(brands))
+        if len(merged) > len(cur):
+            fp.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
+                          encoding="utf-8")
+            print(f"[해외브랜드 등록] {len(merged) - len(cur)}개 추가 "
+                  f"(화해에 없음 = 한국 미판매)")
+    except (OSError, ValueError) as exc:
+        print(f"[경고] 해외브랜드 목록 갱신 실패: {exc}")
+
+
 def run(brands, jp_to_en, existing, limit, delay, done_path=None,
-        dict_path=None, session=None) -> dict:
+        dict_path=None, session=None, foreign_path=None) -> dict:
     """한 번에 다 돌기엔 오래 걸려서(브랜드당 3~4초) 나눠 돌린다.
 
     이미 처리한 브랜드는 done 파일에 남겨 다음 실행에서 건너뛴다.
@@ -153,6 +168,7 @@ def run(brands, jp_to_en, existing, limit, delay, done_path=None,
         except ValueError:
             done = set()
     learned = {}
+    not_in_korea = []
     skipped_no_en = 0
     processed = 0
     for i, brand in enumerate(brands, 1):
@@ -173,6 +189,18 @@ def run(brands, jp_to_en, existing, limit, delay, done_path=None,
             time.sleep(delay)
             continue
         done.add(brand)
+        if not korean:
+            # [v7.67.0] 화해에서 못 찾았다 = 한국에서 안 판다.
+            #
+            # 화해는 한국 화장품 사이트다. 영문 표기까지 만들어서 물어봤는데
+            # 없다면 브랜드를 모르는 게 아니라 한국 유통이 없다는 신호다.
+            #
+            # [실측 2026-08-16] 이렇게 못 찾은 브랜드의 상품 143건을
+            # 검증해 보니 이름확정이 23건(16.1%)이었다. 전체 평균 47.2%의
+            # 3분의 1이다. 어느 소스에서도 안 잡히는 게 당연하다.
+            # 그동안은 이걸 사람이 눈으로 골라 해외브랜드에 넣었는데,
+            # 미확인이 2,000건씩 쌓일 때마다 되풀이할 일이 아니다.
+            not_in_korea.append(brand)
         if korean:
             learned[brand] = korean
             print(f"[{i}] {brand} ({english}) -> {korean}", flush=True)
@@ -186,12 +214,21 @@ def run(brands, jp_to_en, existing, limit, delay, done_path=None,
             full.update(learned)
             Path(dict_path).write_text(
                 json.dumps(full, ensure_ascii=False, indent=2), encoding="utf-8")
+        # [v7.68.1] 해외브랜드도 매 건 저장한다.
+        # 끝에서만 저장했더니 중간에 끊길 때 그때까지 판정한 게 전부
+        # 날아갔다(실측: 143개 조회했는데 해외브랜드 목록이 그대로).
+        # done·dict는 이미 매 건 저장하고 있어서 이것만 안 맞았다.
+        if not_in_korea and foreign_path:
+            _flush_foreign(not_in_korea, foreign_path)
+            not_in_korea = []
         time.sleep(delay)
     if skipped_no_en:
         print(f"[건너뜀] 영문 표기를 못 구한 브랜드 {skipped_no_en}개")
     if done_path:
         Path(done_path).write_text(
             json.dumps(sorted(done), ensure_ascii=False), encoding="utf-8")
+    if not_in_korea and foreign_path:
+        _flush_foreign(not_in_korea, foreign_path)
     return learned
 
 
@@ -206,6 +243,7 @@ if __name__ == "__main__":
     ap.add_argument("--delay", type=float, default=1.5)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--done", help="처리 완료 브랜드 기록 json (이어서 돌리기용)")
+    ap.add_argument("--foreign", help="해외브랜드 목록 json (화해에 없으면 여기 추가)")
     a = ap.parse_args()
 
     brands = json.loads(Path(a.brands).read_text(encoding="utf-8"))
@@ -215,7 +253,8 @@ if __name__ == "__main__":
 
     with HwahaeSession(wait=a.delay) as session:
         learned = run(brands, jp_to_en, existing, a.limit, a.delay, a.done,
-                      a.dict if a.apply else None, session)
+                      a.dict if a.apply else None, session,
+                      a.foreign if a.apply else None)
     print(f"\n새로 알아낸 브랜드 {len(learned)}개")
 
     if a.apply and learned:
