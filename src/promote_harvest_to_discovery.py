@@ -68,7 +68,24 @@ def load_harvest(items_dir: Path) -> list[dict]:
 #
 # 짧은 것을 먼저 쓰는 원칙 자체는 맞다(판매자 홍보 문구가 적어 검증이
 # 잘 된다). 다만 "짧은 것"과 "잘린 것"은 다르다.
-MIN_TITLE_LEN = 8
+# 상품명 길이 구간.
+#
+# [실측 2026-08-16] 검증 3,986건을 원본 이름 길이별로 갈라 통과율을 쟀다:
+#     ~15자   57.1%   정보가 부족하다
+#   16~25자   67.5%   <- 가장 좋다
+#   26~40자   58.8%
+#   41~60자   44.3%
+#   61~90자   34.3%   홍보 문구가 검색을 방해한다
+#     91자+   34.5%
+#
+# 처음엔 "짧은 것부터"로만 뽑았다가 사장님이 "번역이 너무 짧다"고
+# 지적하셨다. 확인해보니 수확본 전체 평균은 47자인데 하위 7%(11~20자)
+# 에서만 뽑고 있었다. 그 구간에는 이런 것들이 있다:
+#     子音生2種セット      (브랜드 없이는 무슨 제품인지 모른다)
+#     音の数125ml         (潤燥가 깨져서 들어온 것)
+# 짧은 게 좋은 이유는 "홍보 문구가 적어서"이지 "정보가 없어서"가 아니다.
+MIN_TITLE_LEN = 16
+MAX_TITLE_LEN = 40
 
 # 상품이 아직 준비 중이거나 판매를 안 하는 상태를 나타내는 말.
 # 번역해봐야 살 수 없으므로 옮기지 않는다.
@@ -81,7 +98,7 @@ def pick(candidates: list[dict], known_brands: set, limit: int) -> list[dict]:
     seen_title = set()
     for it in candidates:
         title = (it.get("title") or "").strip()
-        if len(title) < MIN_TITLE_LEN:
+        if not (MIN_TITLE_LEN <= len(title) <= MAX_TITLE_LEN):
             continue
         if _NOT_FOR_SALE.search(title):
             continue
@@ -96,8 +113,9 @@ def pick(candidates: list[dict], known_brands: set, limit: int) -> list[dict]:
         seen_title.add(key)
         has_brand = bool(brand) and (brand in known_brands
                                      or _norm(brand) in known_brands)
-        # 브랜드를 아는 것이 먼저, 그다음 이름이 짧은 것
-        scored.append((0 if has_brand else 1, len(title), it))
+        # 브랜드를 아는 것이 먼저(통과율 52.2% vs 20.5%),
+        # 그다음 통과율이 가장 높은 길이(16~25자)에 가까운 것.
+        scored.append((0 if has_brand else 1, abs(len(title) - 22), it))
     scored.sort(key=lambda x: (x[0], x[1]))
     return [it for _, _, it in scored[:limit]]
 

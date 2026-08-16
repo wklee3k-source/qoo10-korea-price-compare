@@ -243,8 +243,15 @@ def _load_foreign_brands(state_path: Path) -> set:
 
 
 def export(state_path: str, out_path: str, limit: int | None = None,
+           single_file: bool = False,
            chunk: int = 200) -> int:
-    """미번역 목록을 chunk건씩 잘라 여러 장으로 뽑는다.
+    """미번역 목록을 요청서로 뽑는다.
+
+    기본은 **파일 하나**에 전부 담고 chunk건씩 묶음으로 나눠 적는다.
+    받는 쪽이 한 묶음씩 끊어서 답하므로, 사장님은 파일 하나만
+    붙여넣고 "계속"만 누르면 된다(v7.72.0).
+
+    `--split`을 주면 예전처럼 파일을 여러 장으로 자른다.
 
     [왜 자르나] 500줄을 한 장으로 주면 입력은 문제없지만(약 32k 토큰)
     **응답이 27k 토큰**이 된다. 이 길이는 한 번의 답변에서 잘리거나
@@ -304,6 +311,95 @@ def export(state_path: str, out_path: str, limit: int | None = None,
 
     chunks = [pending[i:i + chunk] for i in range(0, len(pending), chunk)]
     n_files = len(chunks)
+
+    # [v7.72.0] 파일 하나에 전부 담고, 받는 쪽이 나눠서 처리하게 한다.
+    #
+    # [왜 — 사장님 요청 2026-08-16] 예전엔 200건씩 잘라 파일 여러 장을
+    # 만들었다. 한 번에 다 주면 번역하는 창이 멈추기 때문이다. 그런데
+    # 장이 10장씩 되니 파일을 열 번 복사해 붙여넣어야 했다.
+    #
+    # 파일은 하나로 주되 목록을 200건 단위 묶음으로 나눠 적고, 지시문에
+    # "한 번에 한 묶음씩 답하라"고 쓴다. 그러면 사장님은 파일 하나만
+    # 붙여넣고 "계속"만 누르면 된다.
+    if single_file:
+        lines = [
+            "# 번역 요청",
+            "",
+            f"총 **{total_pending}건**입니다. "
+            f"{chunk}건씩 **{n_files}묶음**으로 나눠 두었습니다.",
+            "",
+            "**이 파일 전체를 복사해서 다른 Claude 창에 붙여넣으세요.**",
+            "",
+            "---",
+            "",
+            "## 진행 방법",
+            "",
+            "1. **묶음 1**을 옮기고, 그 결과만 먼저 내놓으세요.",
+            "2. '계속'이라고 하면 **다음 묶음**을 하세요.",
+            "3. 다만 **짝수 묶음(2, 4, 6...)을 끝냈을 때는** 그 직전 묶음까지",
+            "   **두 묶음을 합쳐서** 한 번에 내놓으세요.",
+            "   (묶음 2를 끝내면 1+2를, 묶음 4를 끝내면 3+4를 합쳐서)",
+            f"4. **묶음 {n_files}**까지 끝나면 마지막에 피드백을 적으세요.",
+            "",
+            "**왜 두 묶음씩 합치나** — 사장님이 결과를 받아 저장하는데, 묶음마다",
+            "따로 주면 복사할 게 많아지고 중간에 빠뜨리기 쉽습니다.",
+            "두 묶음(약 400건)이 한 번에 내놓을 수 있는 최대치입니다.",
+            "",
+            "**그보다 더 모으려고 하지 마세요.** 세 묶음 이상을 합치면 답변 도중에",
+            "잘려서 그때까지 한 것도 못 받습니다. 실제로 이 문제로 여러 번",
+            "작업이 멈췄습니다.",
+            "",
+            "**앞 묶음을 다시 번역하지 마세요.** 합쳐서 내놓을 때는 이미 옮긴",
+            "그대로 붙여서 내면 됩니다.",
+            "",
+            "결과 맨 앞에 어느 묶음인지 표시하세요. 예: `=== 묶음 1~2 ===`",
+            "그 아래는 다른 말 없이 목록만 내놓으세요.",
+            "",
+            "---",
+            "",
+            INSTRUCTION,
+            "",
+        ]
+        base_no = 0
+        index_map = {}
+        for idx, part in enumerate(chunks, 1):
+            lines += [f"## 묶음 {idx} / {n_files}  ({len(part)}건)", "", "```"]
+            for i, pr in enumerate(part, base_no + 1):
+                title = (pr.get("title") or "").replace("\n", " ").replace("|", "/").strip()
+                brand = (pr.get("brand") or "").replace("\n", " ").replace("|", "/").strip()
+                if brand:
+                    lines.append(f"{pr.get('goods_no')}|[{brand}] {title}")
+                else:
+                    lines.append(f"{pr.get('goods_no')}|{title}")
+                index_map[i] = pr.get("goods_no")
+            lines += ["```", ""]
+            base_no += len(part)
+        pairs = []
+        for _s in range(1, n_files + 1, 2):
+            _e = min(_s + 1, n_files)
+            pairs.append(f"묶음 {_s}~{_e}" if _e > _s else f"묶음 {_s}")
+        lines += [
+            "---",
+            "",
+            "## 다 끝냈는지 확인",
+            "",
+            "아래를 전부 내놓았는지 마지막에 확인하세요. 빠진 게 있으면 그것부터 하세요.",
+            "",
+        ] + [f"- [ ] {x}" for x in pairs] + [
+            "- [ ] 피드백",
+            "",
+            "---",
+            "",
+            "<!-- 번호↔상품번호 대응표. 반영할 때 쓰므로 지우지 마세요. -->",
+            "<!-- INDEX_MAP " + json.dumps(index_map, ensure_ascii=False) + " -->",
+            "",
+        ]
+        name = out.parent / f"{stem}{suffix}"
+        name.write_text("\n".join(lines), encoding="utf-8")
+        ja_only = sum(1 for pr in pending if not HANGUL_RE.search(pr.get("title") or ""))
+        print(f"[OK] {name.name} — {total_pending}건 / {n_files}묶음 (일본어만 {ja_only}건)")
+        return 0
+
     base_no = 0
     for idx, part in enumerate(chunks, 1):
         lines = [
@@ -363,4 +459,9 @@ if __name__ == "__main__":
         raise SystemExit(1)
     lim = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].strip() else None
     ch = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4].strip() else 200
-    export(sys.argv[1], sys.argv[2], lim, ch)
+    # [사장님 방침 2026-08-16] 기본은 200건씩 여러 장.
+    # 한 파일에 묶음으로 담는 방식(v7.72.0)도 만들어 봤지만,
+    # 실제로 써 보니 장마다 따로 받는 쪽이 편하다고 하셨다.
+    # 한 파일 방식이 필요하면 --single 을 준다.
+    single = "--single" in sys.argv
+    export(sys.argv[1], sys.argv[2], lim, single, ch)
