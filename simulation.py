@@ -3222,6 +3222,56 @@ def t29_not_in_korea_auto_registered():
     check("29-4 갱신된 목록을 커밋", "data/foreign_brands.json" in wf)
 
 
+# --- #30 번역 요청서에서 한국 미판매 브랜드 제외 (v7.68.0)
+def t30_translation_skips_foreign():
+    """번역 요청서가 해외브랜드를 빼는지, 그리고 목록을 못 읽었을 때
+    안전한 쪽으로 동작하는지.
+
+    [왜 — 실측 2026-08-16] 지금까지 번역한 6,168건 중 1,340건(21.7%)이
+    해외브랜드였다. 다섯 건 중 하나는 애초에 쓸 데가 없었다. 번역해도
+    검증 대상에서 빠지므로 검수페이지에 오르지 않는다.
+
+    08회차 번역 피드백에도 "菊星는 일본 미용실 전용, 한국 판매 흔적이
+    없어 비웠음"이라고 적혀 있었다. 그 판단을 사람이 매번 할 게 아니라
+    애초에 목록에서 빼는 게 맞다.
+
+    [반대 위험] 목록을 못 읽었다고 번역이 통째로 멈추면 안 된다.
+    그때는 전부 번역 대상으로 둬야 한다 — 쓸데없는 번역 몇 건이
+    번역 중단보다 훨씬 싸다.
+    """
+    src = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
+    check("30-1 해외브랜드 제외 로직", "_load_foreign_brands" in src)
+    check("30-2 몇 건 뺐는지 로그", "한국 미판매 브랜드" in src)
+    # 목록을 못 읽으면 빈 집합 -> 아무것도 안 뺀다
+    check("30-3 목록 없으면 전부 번역 대상",
+          "return set()" in src and "전부 번역 대상으로 둔다" in src,
+          "못 읽었을 때 번역이 멈추면 안 된다")
+
+    # 실제로 동작하는지 확인
+    import tempfile, json as _json, pathlib as _pl
+    with tempfile.TemporaryDirectory() as d:
+        root = _pl.Path(d)
+        (root / "output").mkdir()
+        (root / "data").mkdir()
+        (root / "data" / "foreign_brands.json").write_text(
+            _json.dumps(["資生堂"], ensure_ascii=False), encoding="utf-8")
+        sp = root / "output" / "state.json"
+        sp.write_text(_json.dumps({"all_products": [
+            {"goods_no": "1", "title": "テスト", "brand": "資生堂"},
+            {"goods_no": "2", "title": "テスト", "brand": "アヌア"},
+        ]}, ensure_ascii=False), encoding="utf-8")
+        import subprocess
+        r = subprocess.run(
+            [sys.executable, str(ROOT / "src" / "export_translation_request.py"),
+             str(sp), str(root / "req.md")],
+            capture_output=True, text=True)
+        files = list(root.glob("req*.md"))
+        body = files[0].read_text(encoding="utf-8") if files else ""
+    check("30-4 해외브랜드는 요청서에 없음",
+          "資生堂" not in body and "アヌア" in body,
+          f"출력: {r.stdout[-200:]}")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
