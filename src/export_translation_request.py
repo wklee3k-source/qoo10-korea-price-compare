@@ -48,6 +48,10 @@ INSTRUCTION = """아래는 큐텐재팬에 올라온 **한국 화장품**의 일
    배송 문구, 괄호 안 설명, 기호까지 빼지 말고 원래 순서대로. 요약 금지.
 5. 제품명은 **한국에서 실제로 쓰는 이름을 복원**하세요. 직역하지 마세요.
 6. 브랜드명은 한국 공식 표기로 (アヌア→아누아, メディキューブ→메디큐브).
+   **`[원문 = 한글]` 로 적혀 있으면 그 한글을 그대로 쓰세요.**
+   이미 화해에서 확인해 둔 표기입니다. 다시 검색하지 마세요.
+       `[セラディックス = 셀라딕스] ...` → "셀라딕스 ..."로 시작
+   `[원문]` 만 있으면 아직 확인 못 한 브랜드입니다. 아래 규칙대로.
    **음차로 지어내지 마세요.** 로마자든 가타카나든 마찬가지입니다.
    `オガナセル`를 "오가나셀"로 찍어 넣었는데 실제 표기가 다르면,
    그 상품은 영영 못 찾습니다. 빈칸은 다음 회차에 다시 시도되지만
@@ -278,6 +282,30 @@ INSTRUCTION = """아래는 큐텐재팬에 올라온 **한국 화장품**의 일
 
 
 
+def _norm_brand(s: str) -> str:
+    return re.sub(r"[\s\-_.]+", "", (s or "")).lower()
+
+
+def _load_korean_brands(state_path: Path) -> dict:
+    """일본어·영문 브랜드 -> 한글 표기 사전.
+
+    이미 화해에서 확인해 둔 것이므로 요청서에 함께 준다.
+    안 주면 번역하는 쪽이 회차마다 같은 브랜드를 다시 검색한다
+    (09-06 피드백에서 지적된 57개 브랜드가 전부 사전에 있었다).
+    """
+    for candidate in (state_path.parent.parent / "data" / "brand_translations_learned.json",
+                      Path("data/brand_translations_learned.json"),
+                      Path("../data/brand_translations_learned.json")):
+        try:
+            raw = json.loads(candidate.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        out = {k: v for k, v in raw.items() if not k.startswith("_")}
+        out.update({_norm_brand(k): v for k, v in out.items()})
+        return out
+    return {}
+
+
 def _load_foreign_brands(state_path: Path) -> set:
     """해외브랜드 목록을 읽는다. 못 읽으면 빈 집합(=아무것도 안 뺀다).
 
@@ -361,6 +389,9 @@ def export(state_path: str, out_path: str, limit: int | None = None,
     if not pending:
         print("[INFO] 미번역 상품 없음 — 번역요청 파일 생성 생략")
         return 0
+
+    # 이미 알고 있는 한글 브랜드명 — 요청서에 함께 준다
+    korean_brands = _load_korean_brands(path)
 
     chunks = [pending[i:i + chunk] for i in range(0, len(pending), chunk)]
     n_files = len(chunks)
@@ -482,10 +513,37 @@ def export(state_path: str, out_path: str, limit: int | None = None,
             # 사용자가 번역하는 동안 통합이 한 번 더 돌아 요청서가
             # 새로 만들어졌을 때 번호가 밀려 엉뚱한 상품에 이름이 박힌다
             # (안전망 통합이 4시간마다 도는 운영에서는 실제로 일어난다).
-            if brand:
-                lines.append(f"{p.get('goods_no')}|[{brand}] {title}")
-            else:
-                lines.append(f"{p.get('goods_no')}|{title}")
+            # [v7.77.0] 화해에서 한글 표기를 못 찾은 브랜드는 표시해 준다.
+            #
+            # [09-06 피드백] "デュイセル, cepoLAB, ウンユル, P.CALM,
+            # ブランネイチャー처럼 여러 회차에 걸쳐 반복적으로 등장하는데
+            # 브랜드를 확인 못하는 경우가 쌓이고 있습니다."
+            #
+            # 실제로 57개 브랜드 422건이 그렇다. 화해에 다시 물어봐도
+            # 결과는 같다(재조회 실측: 새로 알아낸 것 0개). 화해는 한국
+            # 화장품 사이트이므로 거기 없다는 건 확인이 안 된다는 뜻이다.
+            #
+            # 그런데 이 브랜드들의 검증 통과율은 46.7%로 전체 평균 48.5%와
+            # 거의 같다 — 브랜드를 몰라도 상품명만 제대로 옮기면 잡힌다.
+            #
+            # 그래서 "찾지 마세요" 표시를 붙인다. 번역하는 쪽이 매 회차
+            # 같은 브랜드를 헛되이 검색하지 않도록.
+            # [v7.77.0] 한글 브랜드를 이미 알면 그것도 함께 준다.
+            #
+            # [09-06 피드백] "デュイセル, cepoLAB, ウンユル, P.CALM,
+            # ブランネイチャー처럼 여러 회차에 걸쳐 반복적으로 등장하는데
+            # 브랜드를 확인 못하는 경우가 쌓이고 있습니다."
+            #
+            # 확인해보니 **그 57개 브랜드가 전부 이미 사전에 있었다.**
+            #   インセルダーム -> 인셀덤   Kopher -> 코페르
+            #   サミュ -> 쌔뮤            ブランネイチャー -> 블랑네이처
+            # 요청서가 원문 브랜드만 대괄호로 주고 한글은 안 알려줘서,
+            # 번역하는 쪽이 회차마다 같은 브랜드를 헛되이 검색하고 있었다.
+            # 우리가 아는 걸 안 알려준 우리 잘못이다.
+            kr = korean_brands.get(brand) or korean_brands.get(_norm_brand(brand))
+            head = f"[{brand} = {kr}]" if kr else (f"[{brand}]" if brand else "")
+            lines.append(f"{p.get('goods_no')}|{head} {title}".strip()
+                         if head else f"{p.get('goods_no')}|{title}")
             index_map[i] = p.get("goods_no")
         lines += [
             "```",
