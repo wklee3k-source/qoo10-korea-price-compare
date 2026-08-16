@@ -3340,12 +3340,18 @@ def t32_short_keywords_first():
     차례가 오고, 그때는 그것도 쓸모가 있다.
     """
     disc = (ROOT / "src" / "iterative_low_review_discovery.py").read_text(encoding="utf-8")
-    check("32-1 발굴이 짧은 순으로 정렬",
-          "pending_keywords.sort(key=lambda k: len(k.split()))" in disc)
+    check("32-1 발굴이 짧은 순으로 정렬", "pending_keywords.sort(key=len)" in disc)
 
     ref = (ROOT / "src" / "refill_discovery_keywords.py").read_text(encoding="utf-8")
-    check("32-2 보충도 짧은 순으로 정렬",
-          "fresh.sort(key=lambda k: len(k.split()))" in ref)
+    check("32-2 보충도 짧은 순으로 정렬", "fresh.sort(key=len)" in ref)
+
+    # [v7.70.1] 단어 수로 재면 안 된다 — 일본어는 띄어쓰기를 안 한다.
+    # 30자짜리 문장이 "1단어"로 세어져 정렬이 무의미해진다(실측:
+    # 대기열의 15%가 그랬다).
+    check("32-4 단어 수 기준을 쓰지 않음",
+          "sort(key=lambda k: len(k.split()))" not in disc
+          and "sort(key=lambda k: len(k.split()))" not in ref,
+          "일본어는 띄어쓰기가 없어 단어 수가 길이를 못 나타낸다")
 
     # 긴 검색어를 아예 버리면 안 된다 — 짧은 게 떨어지면 쓸 게 없어진다
     check("32-3 긴 검색어를 버리지 않음",
