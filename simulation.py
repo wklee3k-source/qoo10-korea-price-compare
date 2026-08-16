@@ -3386,7 +3386,8 @@ def t33_harvest_promotion():
     """
     sys.path.insert(0, str(ROOT / "src"))
     try:
-        from promote_harvest_to_discovery import pick, MIN_TITLE_LEN, MAX_TITLE_LEN
+        from promote_harvest_to_discovery import (pick, MIN_TITLE_LEN,
+                                                  MAX_TITLE_LEN, brand_scores)  # noqa: F401
     except Exception as e:  # noqa: BLE001
         check("33 편입 스크립트 로드", False, f"{type(e).__name__}: {e}")
         return
@@ -3427,6 +3428,27 @@ def t33_harvest_promotion():
           f"{MIN_TITLE_LEN}~{MAX_TITLE_LEN}자")
     check("33-8 너무 짧은 것 제외", "8" not in ids, f"뽑힘: {ids}")
     check("33-9 너무 긴 것 제외", "9" not in ids, f"뽑힘: {ids}")
+
+    # [v7.75.0] 검증 실적이 나쁜 브랜드는 뒤로 민다.
+    #
+    # [09-03 번역 피드백] "소형·신생 브랜드가 배치마다 20~30건씩 꾸준히
+    # 나옵니다. 국내 판매 흔적이 희박해 검증 통과율도 낮을 것으로
+    # 예상되니, 브랜드 인지도로 1차 필터링하는 것도 고려해볼 만합니다."
+    #
+    # 인지도는 재기 어렵지만 실제 통과율은 이미 쌓여 있다. 실측
+    # 2026-08-16(검증 4,516건): 표본 5건 이상인 브랜드 196개 중
+    # 통과율 20% 미만이 36개(상품 359건). 밀본·큐렐·케라스타즈·바세린
+    # 처럼 한국에서 굳이 살 이유가 없는 브랜드가 몰려 있다.
+    #
+    # 버리지는 않는다 - 표본이 적어 잘못 판단했을 수 있다.
+    weak_cands = [
+        {"goods_no": "A", "title": "실적나쁜 브랜드 크림 50ml", "brand": "BAD"},
+        {"goods_no": "B", "title": "실적좋은 브랜드 크림 50ml", "brand": "GOOD"},
+    ]
+    ranked = pick(weak_cands, {"BAD", "GOOD"}, 10, {"BAD": 0.05, "GOOD": 0.7})
+    rids = [g["goods_no"] for g in ranked]
+    check("33-10 실적 나쁜 브랜드는 뒤로", rids and rids[0] == "B", f"순서: {rids}")
+    check("33-11 실적 나빠도 버리지는 않음", "A" in rids, f"순서: {rids}")
 
 
 # ---- #34 번역 요청서를 한 파일로 (v7.72.0)
