@@ -3406,6 +3406,49 @@ def t33_harvest_promotion():
     check("33-7 최소 길이 기준 존재", MIN_TITLE_LEN >= 5)
 
 
+# ---- #34 번역 요청서를 한 파일로 (v7.72.0)
+def t34_single_file_request():
+    """요청서가 파일 하나에 묶음으로 나뉘어 나오는지.
+
+    [왜 — 사장님 요청 2026-08-16] 예전엔 200건씩 잘라 파일을 여러 장
+    만들었다. 한 번에 다 주면 번역하는 창이 멈추기 때문이다. 그런데
+    장이 10장씩 되니 파일을 열 번 복사해 붙여넣어야 했다.
+
+    파일은 하나로 주되 목록을 묶음으로 나눠 적고, 지시문에 "한 번에
+    한 묶음씩 답하라"고 쓴다. 사장님은 파일 하나만 붙여넣고 '계속'만
+    누르면 된다.
+    """
+    src = (ROOT / "src" / "export_translation_request.py").read_text(encoding="utf-8")
+    check("34-1 한 파일 방식이 기본", "single_file: bool = True" in src)
+    check("34-2 묶음으로 나눠 적음", '"## 묶음 ' in src or "## 묶음 {idx}" in src)
+    check("34-3 한 묶음씩 답하라는 안내",
+          "한 번에 전부 하려고 하지 마세요" in src)
+
+    import tempfile, json as _json, pathlib as _pl, subprocess, re
+    with tempfile.TemporaryDirectory() as d:
+        root = _pl.Path(d)
+        (root / "output").mkdir()
+        (root / "data").mkdir()
+        (root / "data" / "foreign_brands.json").write_text("[]", encoding="utf-8")
+        sp = root / "output" / "state.json"
+        sp.write_text(_json.dumps({"all_products": [
+            {"goods_no": str(1000000 + i), "title": f"テスト商品{i}", "brand": "アヌア"}
+            for i in range(5)
+        ]}, ensure_ascii=False), encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(ROOT / "src" / "export_translation_request.py"),
+             str(sp), str(root / "req.md"), "", "2"],
+            capture_output=True, text=True)
+        files = sorted(root.glob("req*.md"))
+        body = files[0].read_text(encoding="utf-8") if files else ""
+
+    check("34-4 파일이 하나만 생김", len(files) == 1, f"{[f.name for f in files]}")
+    check("34-5 묶음이 여러 개", body.count("## 묶음 ") >= 2,
+          f"묶음 {body.count('## 묶음 ')}개")
+    check("34-6 상품이 전부 들어감",
+          all(f"{1000000+i}|" in body for i in range(5)))
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

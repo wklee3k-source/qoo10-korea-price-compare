@@ -243,8 +243,15 @@ def _load_foreign_brands(state_path: Path) -> set:
 
 
 def export(state_path: str, out_path: str, limit: int | None = None,
+           single_file: bool = True,
            chunk: int = 200) -> int:
-    """미번역 목록을 chunk건씩 잘라 여러 장으로 뽑는다.
+    """미번역 목록을 요청서로 뽑는다.
+
+    기본은 **파일 하나**에 전부 담고 chunk건씩 묶음으로 나눠 적는다.
+    받는 쪽이 한 묶음씩 끊어서 답하므로, 사장님은 파일 하나만
+    붙여넣고 "계속"만 누르면 된다(v7.72.0).
+
+    `--split`을 주면 예전처럼 파일을 여러 장으로 자른다.
 
     [왜 자르나] 500줄을 한 장으로 주면 입력은 문제없지만(약 32k 토큰)
     **응답이 27k 토큰**이 된다. 이 길이는 한 번의 답변에서 잘리거나
@@ -304,6 +311,70 @@ def export(state_path: str, out_path: str, limit: int | None = None,
 
     chunks = [pending[i:i + chunk] for i in range(0, len(pending), chunk)]
     n_files = len(chunks)
+
+    # [v7.72.0] 파일 하나에 전부 담고, 받는 쪽이 나눠서 처리하게 한다.
+    #
+    # [왜 — 사장님 요청 2026-08-16] 예전엔 200건씩 잘라 파일 여러 장을
+    # 만들었다. 한 번에 다 주면 번역하는 창이 멈추기 때문이다. 그런데
+    # 장이 10장씩 되니 파일을 열 번 복사해 붙여넣어야 했다.
+    #
+    # 파일은 하나로 주되 목록을 200건 단위 묶음으로 나눠 적고, 지시문에
+    # "한 번에 한 묶음씩 답하라"고 쓴다. 그러면 사장님은 파일 하나만
+    # 붙여넣고 "계속"만 누르면 된다.
+    if single_file:
+        lines = [
+            "# 번역 요청",
+            "",
+            f"총 **{total_pending}건**입니다. "
+            f"{chunk}건씩 **{n_files}묶음**으로 나눠 두었습니다.",
+            "",
+            "**이 파일 전체를 복사해서 다른 Claude 창에 붙여넣으세요.**",
+            "",
+            "---",
+            "",
+            "## 진행 방법",
+            "",
+            f"1. **묶음 1**부터 시작해서 {chunk}건을 옮기고, 그 묶음의 결과만 먼저 내놓으세요.",
+            "2. 사장님이 \"계속\"이라고 하면 **다음 묶음**을 이어서 하세요.",
+            f"3. **묶음 {n_files}**까지 끝나면 마지막에 피드백을 적으세요.",
+            "",
+            "**한 번에 전부 하려고 하지 마세요.** 도중에 멈추면 그때까지 한 것도",
+            "못 받습니다. 한 묶음씩 끊어서 내놓아야 사장님이 받아둘 수 있습니다.",
+            "",
+            "각 묶음의 결과는 아래 형식 그대로, 다른 말 없이 목록만 내놓으세요.",
+            "",
+            "---",
+            "",
+            INSTRUCTION,
+            "",
+        ]
+        base_no = 0
+        index_map = {}
+        for idx, part in enumerate(chunks, 1):
+            lines += [f"## 묶음 {idx} / {n_files}  ({len(part)}건)", "", "```"]
+            for i, pr in enumerate(part, base_no + 1):
+                title = (pr.get("title") or "").replace("\n", " ").replace("|", "/").strip()
+                brand = (pr.get("brand") or "").replace("\n", " ").replace("|", "/").strip()
+                if brand:
+                    lines.append(f"{pr.get('goods_no')}|[{brand}] {title}")
+                else:
+                    lines.append(f"{pr.get('goods_no')}|{title}")
+                index_map[i] = pr.get("goods_no")
+            lines += ["```", ""]
+            base_no += len(part)
+        lines += [
+            "---",
+            "",
+            "<!-- 번호↔상품번호 대응표. 반영할 때 쓰므로 지우지 마세요. -->",
+            "<!-- INDEX_MAP " + json.dumps(index_map, ensure_ascii=False) + " -->",
+            "",
+        ]
+        name = out.parent / f"{stem}{suffix}"
+        name.write_text("\n".join(lines), encoding="utf-8")
+        ja_only = sum(1 for pr in pending if not HANGUL_RE.search(pr.get("title") or ""))
+        print(f"[OK] {name.name} — {total_pending}건 / {n_files}묶음 (일본어만 {ja_only}건)")
+        return 0
+
     base_no = 0
     for idx, part in enumerate(chunks, 1):
         lines = [
@@ -363,4 +434,5 @@ if __name__ == "__main__":
         raise SystemExit(1)
     lim = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].strip() else None
     ch = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4].strip() else 200
-    export(sys.argv[1], sys.argv[2], lim, ch)
+    single = "--split" not in sys.argv
+    export(sys.argv[1], sys.argv[2], lim, single, ch)
