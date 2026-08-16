@@ -226,7 +226,14 @@ CSS = """
   .cell.go{background:#1f9d63;}
   .cell.todo{background:#c8901a;}
   .cell.wait{background:#2f6fb5;}
-  .cell.drop{background:#4b515e;}
+  .cell.drop{background:#3a3f4a;}
+  .cell.drop .nm{color:#8a919d; font-size:9.5px;}
+  .cell.drop .qt{color:#a9b0bb; font-size:12px;}
+  /* 버려지는 것을 담는 얇은 띠 — 면적 경쟁에서 빼고 아래에 붙인다 */
+  .dropbar{display:flex; gap:3px; margin-top:4px;}
+  .dropbar .cell{padding:5px 8px; border-radius:4px; flex-direction:row;
+    gap:6px; align-items:baseline; justify-content:flex-start;}
+  .dropbar .cell .nm{font-size:10px;} .dropbar .cell .qt{font-size:12.5px;}
   .cell.bad{background:#c0392b;}
   .tm.grp{background:rgba(255,255,255,.05);}
 
