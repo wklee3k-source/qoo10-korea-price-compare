@@ -31,6 +31,12 @@ BATCH_DIR = BASE / "docs" / os.environ.get("QOO10_BATCH_SUBDIR", "")
 BATCH_SIZE = 100
 
 
+try:
+    from render_review_one import render_page
+except ImportError:                     # 다른 곳에서 부를 때
+    from src.render_review_one import render_page
+
+
 def render_cards(pairs: list[dict]) -> str:
     cards_html = []
     for p in pairs:
@@ -254,15 +260,28 @@ def build_batches():
         tier_of = (batch[0].get("tier") if batch else None) or "X"
         tier_seq[tier_of] = tier_seq.get(tier_of, 0) + 1
         batch_id = f"{tier_of}_{tier_seq[tier_of]:02d}"
-        cards_str = render_cards(batch)
-        new_html = re.sub(
-            r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
-            lambda m: m.group(1) + cards_str + m.group(2),
-            template,
-            flags=re.S,
-        )
-        new_html = re.sub(r"\(\d+건.*?\)", f"({len(batch)}건, 배치 {i+1}/{n_batches})", new_html, count=1)
-        new_html = new_html.replace("__BATCH_ID__", batch_id)
+        # [v7.96.0] 한 건씩 넘겨 보는 화면으로 바꿨다.
+        #
+        # [사장님 요청 2026-08-17] 예전 화면은 한 페이지에 100건을 쭉
+        # 늘어놓아 스크롤을 계속 굴려야 했고, 어디까지 봤는지 알기
+        # 어려웠다. 새 화면은 한 번에 한 건만 보여주고 사진을 고르면
+        # 바로 다음으로 넘어간다.
+        #
+        # 옛 화면은 QOO10_REVIEW_OLD=1 로 되살릴 수 있다. 새 화면에서
+        # 문제가 생겨도 검수를 멈추지 않기 위해서다.
+        if os.environ.get("QOO10_REVIEW_OLD"):
+            cards_str = render_cards(batch)
+            new_html = re.sub(
+                r"(<h1>.*?</h1>\n<p>큐텐 상품명은.*?</p>\n\n<div id=\"pagination-top\" class=\"pagination\"></div>\n\n).*?(\n<script>)",
+                lambda m: m.group(1) + cards_str + m.group(2),
+                template,
+                flags=re.S,
+            )
+            new_html = re.sub(r"\(\d+건.*?\)", f"({len(batch)}건, 배치 {i+1}/{n_batches})",
+                              new_html, count=1)
+            new_html = new_html.replace("__BATCH_ID__", batch_id)
+        else:
+            new_html = render_page(batch, batch_id, f"{i+1}/{n_batches}")
         out_path = BATCH_DIR / f"{batch_id}.html"
         out_path.write_text(new_html, encoding="utf-8")
         # [v4.6.0] 이 배치가 어떤 등급으로 이뤄져 있는지 허브에 보여준다.
