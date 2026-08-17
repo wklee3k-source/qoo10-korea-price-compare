@@ -104,6 +104,12 @@ def build(state_path: Path, verified_dir: Path, out_dir: Path) -> tuple[Path, in
             "brand": x.get("brand") or "",
         })
 
+    # 파일명에 반드시 "통합"이 들어가야 한다.
+    #
+    # [실측 2026-08-17] 파일명을 "작업대상_검수페이지_...json"으로 붙여
+    # 드렸더니 수집기가 "파일명으로 모드를 못 알아봤습니다"를 띄웠다.
+    # 수집기는 파일명에서 검색대상 / 수집대상 / 통합 중 하나를 찾아
+    # 모드를 정한다(v2.4.2). 내용이 맞아도 이름이 다르면 안 읽는다.
     kst = (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y%m%d_%H%M")
     out = out_dir / f"작업대상_통합_{kst}_KST.json"
     out.write_text(json.dumps({"검색대상": targets}, ensure_ascii=False, indent=1),
