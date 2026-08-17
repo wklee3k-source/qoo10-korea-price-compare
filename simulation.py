@@ -3794,6 +3794,42 @@ def t50_collector_input():
     check("50-5 파일명에 KST 시각", "_KST.json" in src)
 
 
+# ---- #51 리포트 문구를 손으로 박지 않는다 (v7.94.0)
+def t51_no_hardcoded_phrases():
+    """수량에 딸린 설명을 계산으로 만드는지.
+
+    [사장님 지적 2026-08-17] "아직 · 남음 0건 / 워커 5개 처리 중.
+    곧 끝납니다." — 숫자는 변수로 뽑았는데 설명은 손으로 박아 넣어서,
+    0건이 됐는데도 '처리 중'이라고 남았다.
+
+    같은 문제가 여러 곳에 있었다:
+      · "검수페이지가 1,082건인데 1,800건 안팎이 됩니다" (이미 열렸는데)
+      · "편입분이 18.1%p 잘 됩니다" (실제로는 16.9%p)
+      · "보름 분량입니다" (12일인데)
+
+    **회차마다 문구를 일일이 다시 보지 않으면 어긋난다.**
+    숫자에 따라 달라지는 말은 phrase()/pace()/compare()로 만든다.
+    """
+    sys.path.insert(0, str(ROOT / "tools"))
+    try:
+        from make_status_report import phrase, pace, compare
+    except Exception as e:  # noqa: BLE001
+        check("51 문구 함수 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    check("51-1 0이면 완료 문구",
+          phrase(0, doing="처리 중", done="끝났습니다") == "끝났습니다")
+    check("51-2 남아 있으면 진행 문구",
+          phrase(500, doing="처리 중", done="끝났습니다") == "처리 중")
+    check("51-3 0이면 예상시간 대신 완료",
+          pace(0, 469) == "전부 끝났습니다", pace(0, 469))
+    check("51-4 남으면 시간 계산", "시간" in pace(488, 469), pace(488, 469))
+    txt = compare(0.657, 0.488, better="{diff:.1f}%p 낫다", worse="{diff:.1f}%p 못하다")
+    check("51-5 두 값 비교", txt.startswith("16.9"), txt)
+    same = compare(0.50, 0.505, better="a", worse="b")
+    check("51-6 차이가 작으면 같다고", same == "비슷합니다", same)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

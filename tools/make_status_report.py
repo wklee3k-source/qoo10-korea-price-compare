@@ -607,6 +607,56 @@ def bbox(cls: str, title: str, qty=None, unit: str = "",
             f'{body}{ln}{nt}</div>')
 
 
+
+def phrase(qty: int, *, doing: str, done: str, none: str = "") -> str:
+    """수량에 맞는 설명 문구를 고른다.
+
+    [왜 필요한가 — 사장님 지적 2026-08-17]
+    "아직 · 남음 0건 / 워커 5개 처리 중. 곧 끝납니다."
+    숫자는 변수로 뽑았는데 설명은 손으로 박아 넣어서, 0건이 됐는데도
+    "처리 중"이라고 남았다. 회차마다 문구를 일일이 다시 보지 않으면
+    이런 어긋남이 계속 생긴다.
+
+    **숫자에 따라 달라지는 말은 손으로 쓰지 말고 이 함수를 쓴다.**
+
+        phrase(m["vrest"], doing="워커 5개 처리 중",
+                           done="전부 끝났습니다")
+    """
+    if qty <= 0:
+        return none or done
+    return doing
+
+
+def pace(remain: int, per_hour: float, *, unit: str = "건") -> str:
+    """남은 양과 시간당 처리량으로 언제 끝날지 적는다.
+
+    "곧 끝납니다" 같은 말을 손으로 쓰면 실제와 어긋난다. 계산해서
+    쓰면 항상 맞는다.
+    """
+    if remain <= 0:
+        return "전부 끝났습니다"
+    if per_hour <= 0:
+        return f"{remain:,}{unit} 남음"
+    h = remain / per_hour
+    if h < 1:
+        return f"{remain:,}{unit} 남음 · 약 {int(h * 60)}분"
+    if h < 24:
+        return f"{remain:,}{unit} 남음 · 약 {h:.1f}시간"
+    return f"{remain:,}{unit} 남음 · 약 {h / 24:.1f}일"
+
+
+def compare(a: float, b: float, *, better: str, worse: str,
+            same: str = "비슷합니다") -> str:
+    """두 값을 견줘 판단 문구를 만든다.
+
+    편입분 성과처럼 "몇 %p 낫다"를 손으로 적으면 회차마다 틀린다.
+    """
+    diff = (a - b) * 100
+    if abs(diff) < 1:
+        return same
+    return (better if diff > 0 else worse).format(diff=abs(diff))
+
+
 def build(*, title: str, meta: str, sections: list) -> str:
     body = "\n  ".join(sections)
     return f"""<!DOCTYPE html>
