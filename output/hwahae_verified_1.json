@@ -31972,5 +31972,80 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1196695553",
+    "translated_kr": "쌔뮤 본 판테놀 필 토너 180ml / 닦아내는 토너 각질 케어 판테놀 필링 도입 토너 한국화장품",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "본 판테놀 필 토너",
+      "musinsa": "쌔뮤 본 판테놀 필 토너 180ml+투투 세럼 50ml",
+      "daum": "헬렌박 코스메틱",
+      "naver_web": "쌔뮤 SAM'U"
+    },
+    "brand": "쌔뮤 (SAM'U)",
+    "name": "본 판테놀 필 토너",
+    "volume": "180ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 36000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.wconcept.co.kr/Product/306007619",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1106963921",
+    "translated_kr": "마실 드링크6살롱헤어퍼퓸오일 60ml",
+    "winner_source": null,
+    "candidates_summary": {
+      "naver_web": "N배송 : 네이버+ 스토어 : 로레알파리 엑스트라오디네리 ...."
+    },
+    "reject_reason": "합의부족(0곳)",
+    "brand": null,
+    "name": null,
+    "volume": "",
+    "source": null,
+    "obsolete": null,
+    "sale": null,
+    "price": null,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": []
+  },
+  {
+    "goods_no": "1190676060",
+    "translated_kr": "에이프릴스킨 [1+1]리얼카렌듈라필오프팩",
+    "winner_source": "daum",
+    "candidates_summary": {
+      "hwahae": "리얼 카렌둘라 필 오프 팩",
+      "daum": "에이프릴스킨 리얼 카렌듈라 필 오프팩 너무 좋습니다.",
+      "naver_web": "에이프릴스킨 리얼 카렌듈라 필 오프 팩"
+    },
+    "brand": "에이프릴스킨 (APRILSKIN)",
+    "name": "에이프릴스킨 리얼 카렌듈라 필 오프팩 너무 좋습니다.",
+    "volume": "",
+    "source": "daum",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": true,
+    "sale": false,
+    "price": 26000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
