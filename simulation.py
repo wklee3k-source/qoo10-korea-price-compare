@@ -3722,6 +3722,39 @@ def t48_verify_done_by_id():
           "hwahae_input_${S}.json" in wf and "goods_no" in wf)
 
 
+# ---- #49 검증이 확정한 이름이 검색어로 쓸 만한지 (v7.92.0)
+def t49_junk_name_filter():
+    """제품명 대신 블로그 글·한 낱말이 확정되지 않는지.
+
+    [실측 2026-08-17] 보완 대상 489건을 뽑아 보니 9건이 검색어로 쓸
+    수 없었다:
+      · 이모지가 붙은 체험단 글
+      · "효모", "티암" 같은 한 낱말
+      · 중고 판매글("2개+증정용 2개 일괄 새상품 택포")
+
+    검증이 이런 걸 제품명으로 확정하면 수집기가 헛돌고, 사장님이
+    그 결과를 보고 판단하게 된다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from hwahae_verify_batch import is_junk_name
+    except Exception as e:  # noqa: BLE001
+        check("49 이름 검사 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    junk = ["🧡뉴트로지나 모공 딥톡스로 매끈한 화잘먹피부만들기! #아크네폼클렌징 체험",
+            "효모", "티암",
+            "에스트라 아토베리어365 바디로션 2개+증정용 2개 일괄 새상품 택포"]
+    missed = [x[:20] for x in junk if not is_junk_name(x)]
+    check("49-1 쓰레기 이름 걸러냄", not missed, f"놓침: {missed}")
+
+    real = ["어성초 쿼세티놀™ 모공 딥 클렌징 폼", "쌔뮤 PH 센서티브 크림 미스트",
+            "1025 독도 토너", "제로모공패드 2.0",
+            "마스터즈 아쿠아 리치 선크림 [SPF50+/PA++++] 50ml"]
+    wrong = [x[:20] for x in real if is_junk_name(x)]
+    check("49-2 진짜 제품명은 통과", not wrong, f"잘못 걸림: {wrong}")
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),

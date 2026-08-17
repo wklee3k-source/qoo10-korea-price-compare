@@ -163,6 +163,27 @@ _SLASH_TAIL_RE = re.compile(r"\s*/\s*")
 _QUERY_MAX_LEN = 45
 
 
+# 검증이 확정한 "이름"이 실제 제품명인지 본다.
+#
+# [실측 2026-08-17] 보완 대상 489건을 뽑아 보니 4건이 검색어로 쓸 수
+# 없었다: 이모지가 붙은 블로그 체험단 글, "효모"·"티암" 같은 한 낱말,
+# 중고 판매글("일괄 새상품 택포"). 검증이 이런 걸 제품명으로 확정하면
+# 수집기가 헛돌고, 사장님이 그 결과를 보고 판단하게 된다.
+_JUNK_NAME = re.compile(
+    r"[\U0001F300-\U0001FAFF\u2600-\u27BF]"        # 이모지
+    r"|체험단?|이벤트|무료나눔|후기\s*이벤트|증정용"
+    r"|당첨|블로그|리뷰단|택포|일괄\s*새상품|중고"
+)
+
+
+def is_junk_name(name: str) -> bool:
+    """제품명으로 쓸 수 없는 것이면 True."""
+    n = (name or "").strip()
+    if len(n) < 4:          # "효모", "티암" 같은 한 낱말
+        return True
+    return bool(_JUNK_NAME.search(n))
+
+
 def _clean_query(text: str) -> str:
     t = VOLUME_IN_QUERY_RE.sub("", text)
     t = BRACKET_RE.sub("", t)
