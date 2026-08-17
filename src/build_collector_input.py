@@ -11,6 +11,12 @@
 수집기 v2.4.1부터 통합 파일을 받는다:
     {"검색대상": [{"goods_no": ..., "query": ..., "brand": ...}]}
 
+[이미 찾아본 것은 다시 넣지 않는다]
+수집기로 한 번 돌렸는데 못 찾은 것은 `link_search_exhausted` 표시가
+붙는다. 다시 넣어도 결과가 같으므로 뺀다(실측 2026-08-17: 480건 중
+118건이 여기 해당). 지우지는 않는다 — 지우면 다음 검증에서 다시
+대상이 되어 같은 일을 반복한다.
+
 [거르는 것 — 실측 2026-08-17]
 489건을 뽑아 보니 9건이 검색어로 쓸 수 없었다:
   · 이모지가 붙은 블로그 체험단 글
@@ -87,6 +93,8 @@ def build(state_path: Path, verified_dir: Path, out_dir: Path) -> tuple[Path, in
             continue
         if x.get("sale") is False or x.get("obsolete") is True:
             continue                     # 판매중지 — 찾아도 살 수 없다
+        if x.get("link_search_exhausted"):
+            continue                     # 이미 수집기로 찾아봤는데 없었다
         if is_junk_name(x["name"]):
             junk += 1
             continue
