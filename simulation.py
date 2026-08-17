@@ -3755,6 +3755,45 @@ def t49_junk_name_filter():
     check("49-2 진짜 제품명은 통과", not wrong, f"잘못 걸림: {wrong}")
 
 
+# ---- #50 보완 대상 파일 만들기 (v7.93.0)
+def t50_collector_input():
+    """수집기에 넣을 파일이 바로 쓸 수 있는 형태로 나오는지.
+
+    [실측 2026-08-17] 손으로 만들었더니 두 가지가 걸렸다:
+      1. 브랜드에 영문이 괄호로 붙는다 — "아누아 (Anua) 어성초..."
+      2. 이름 끝에 꼬리가 남는다 — "크림 미스트, , 1개" (480건 중 49건)
+    그대로 검색하면 결과가 안 나온다.
+
+    또 수집기 v2.4.1은 통합 파일을 {"검색대상": [...]} 형태로 받는다.
+    목록만 던지면 안 읽힌다.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from build_collector_input import clean_query
+    except Exception as e:  # noqa: BLE001
+        check("50 보완 파일 생성기 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    cases = [
+        (("아누아 (Anua)", "어성초 쿼세티놀™ 모공 딥 클렌징 폼", "150ml"),
+         "아누아 어성초 쿼세티놀™ 모공 딥 클렌징 폼 150ml"),
+        (("쌔뮤 (SAM'U)", "쌔뮤 PH 센서티브 크림 미스트, , 1개", ""),
+         "쌔뮤 PH 센서티브 크림 미스트"),
+        (("토니모리 (TONYMOLY)", "비욘드 바디타민 알파 세럼", ""),
+         "토니모리 비욘드 바디타민 알파 세럼"),
+    ]
+    bad = [f"{a} -> {clean_query(*a)}" for a, want in cases if clean_query(*a) != want]
+    check("50-1 검색어 정리", not bad, f"{bad}")
+
+    src = (ROOT / "src" / "build_collector_input.py").read_text(encoding="utf-8")
+    check("50-2 통합 파일 형식", '"검색대상"' in src,
+          "수집기 v2.4.1은 이 형태로만 읽는다")
+    check("50-3 판매중지는 뺀다", 'x.get("sale") is False' in src,
+          "찾아도 살 수 없다")
+    check("50-4 쓰레기 이름은 뺀다", "is_junk_name" in src)
+    check("50-5 파일명에 KST 시각", "_KST.json" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
