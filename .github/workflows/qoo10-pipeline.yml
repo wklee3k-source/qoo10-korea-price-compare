@@ -1691,7 +1691,18 @@ jobs:
           VNOPROG=0
           MAX_VNOPROG=3  # 연속 무진전 허용(hwahae_verify_batch의 재시도 3회와 맞춤)
           while true; do
-            DONE_BEFORE=$(python3 -c "import json,pathlib; p=pathlib.Path('../output/hwahae_verified_${S}.json'); print(len(json.loads(p.read_text())) if p.exists() else 0)")
+            # [v7.91.0] 개수가 아니라 **상품번호로** 남은 것을 센다.
+            #
+            # [실측 2026-08-17] 개수만 비교했더니 6시간 동안 488건이
+            # 처리되지 않았다. 검증 결과에는 지금 대상이 아닌 것들
+            # (나중에 해외브랜드로 빠졌거나 차단된 것)이 섞여 있어
+            # 개수가 부풀려진다. 샤드0에서 결과 1,275건 vs 대상
+            # 1,269건이라 "전부 완료"로 판정했지만, 실제로는 그중
+            # 126건이 대상 밖이고 120건이 미처리였다.
+            #
+            # 결과가 대상보다 많아도 안 끝난 것일 수 있다. 반드시
+            # 번호를 맞춰 봐야 한다.
+            DONE_BEFORE=$(python3 -c "import json,pathlib; tgt={str(x['goods_no']) for x in json.load(open('../output/hwahae_input_${S}.json'))}; p=pathlib.Path('../output/hwahae_verified_${S}.json'); done={str(x['goods_no']) for x in json.loads(p.read_text())} if p.exists() else set(); print(len(tgt & done))")
             if [ "$DONE_BEFORE" -ge "$TOTAL" ]; then
               echo "샤드$S 전부 완료됨 ($DONE_BEFORE/$TOTAL)"
               break

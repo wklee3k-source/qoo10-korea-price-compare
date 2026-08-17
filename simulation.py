@@ -3701,6 +3701,27 @@ def t47_promotion_report():
     check("47-4 편입 시 브랜드 실적 반영", "verified_dir" in prom)
 
 
+# ---- #48 검증 완료 판정은 번호로 (v7.91.0)
+def t48_verify_done_by_id():
+    """검증이 끝났는지 개수가 아니라 상품번호로 판단하는지.
+
+    [실측 2026-08-17] 개수만 비교했더니 6시간 동안 488건이 처리되지
+    않았다. 검증 결과에는 지금 대상이 아닌 것(나중에 해외브랜드로
+    빠졌거나 차단된 것)이 섞여 있어 개수가 부풀려진다.
+
+    샤드0: 결과 1,275건 vs 대상 1,269건 -> "전부 완료" 판정
+      그런데 결과 중 126건은 대상 밖이고, 실제 미처리가 120건이었다.
+
+    **결과가 대상보다 많아도 안 끝난 것일 수 있다.**
+    """
+    wf = WF.read_text(encoding="utf-8")
+    check("48-1 번호 교집합으로 완료 판정",
+          "tgt & done" in wf or "tgt&done" in wf,
+          "개수 비교만으로는 미처리분을 건너뛴다")
+    check("48-2 대상 파일에서 번호를 읽음",
+          "hwahae_input_${S}.json" in wf and "goods_no" in wf)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
