@@ -1,0 +1,537 @@
+"""한 건씩 넘겨 보는 검수 화면을 만든다.
+
+[왜 새로 만드나 — 사장님 요청 2026-08-17]
+예전 화면은 한 페이지에 100건을 쭉 늘어놓았다. 스크롤을 계속 굴려야
+하고, 어디까지 봤는지 알기 어려웠다. 새 화면은 한 번에 한 건만 보여
+주고 사진을 고르면 바로 다음으로 넘어간다.
+
+[이 화면이 하는 일은 둘뿐이다]
+  1. 이름 셋(일본어 · 번역 · 한국 업체)이 같은 상품을 가리키는지 본다
+  2. 큐텐에 올릴 사진 한 장을 고른다
+
+그래서 색을 거의 쓰지 않는다. 고른 것(초록)과 NG(빨강)만 색을 갖고
+나머지는 무채색이다. 마진이나 판매처는 여기서 다루지 않는다 —
+그건 나중에 엑셀에서 본다.
+
+[데이터를 심는 방식]
+카드 100개를 HTML로 찍지 않고 JSON 한 덩어리를 넣는다. 화면이 그걸
+읽어 한 건씩 그린다. 파일이 작아지고, 화면을 고칠 때 렌더러만
+바꾸면 된다.
+"""
+
+from __future__ import annotations
+
+import html
+import json
+
+
+def _photos(p: dict) -> list[dict]:
+    """사진 후보를 한 무리로 모은다.
+
+    [사장님 2026-08-17] "사진은 어차피 한 장만 쓸 거라 큐텐이든 한국이든
+    구분 필요 없다." 이 사진은 큐텐에 상품을 올릴 때 쓸 대표 이미지다.
+    어디서 왔는지보다 어느 게 잘 나왔는지가 중요하다.
+    """
+    out = []
+    if p.get("qoo10_image"):
+        out.append({"u": p["qoo10_image"], "s": "큐텐"})
+    for c in p.get("kr_candidates") or []:
+        if not c.get("url"):
+            continue
+        out.append({
+            "u": c["url"], "s": "한국",
+            "l": c.get("link") or p.get("kr_url") or "",
+            "m": c.get("mall") or "",
+            "n": c.get("name") or "",
+            "sim": c.get("similarity"),
+        })
+    return out
+
+
+def _checks(p: dict) -> list[dict]:
+    """기계가 무엇을 확인했는지 항목별로.
+
+    노랑(애매)만 사람이 집중해서 보면 된다.
+    """
+    out = []
+    bs = p.get("brand_status")
+    out.append({"t": "브랜드", "v": "y" if bs == "match" else
+                ("n" if bs == "mismatch" else "q")})
+    if p.get("kr_volume"):
+        out.append({"t": p["kr_volume"], "v": "y" if p.get("vol_status") != "diff" else "n"})
+    if p.get("is_set"):
+        out.append({"t": "세트", "v": "q"})
+    return out
+
+
+def render_page(pairs: list[dict], batch_id: str, seq: str) -> str:
+    data = []
+    for p in pairs:
+        data.append({
+            "g": p["goods_no"],
+            "jp": p.get("qoo10_title_original") or p.get("qoo10_title") or "",
+            "tr": p.get("qoo10_name_kr") or "",
+            "kr": " ".join(x for x in [p.get("kr_brand"), p.get("kr_name"),
+                                       p.get("kr_volume")] if x),
+            "qurl": p.get("qoo10_url") or "",
+            "kurl": p.get("kr_url") or "",
+            "tier": p.get("tier") or "",
+            "chk": _checks(p),
+            "ph": _photos(p),
+        })
+
+    payload = json.dumps(data, ensure_ascii=False)
+    return _TEMPLATE.replace("__DATA__", payload) \
+                    .replace("__BATCH__", html.escape(batch_id)) \
+                    .replace("__SEQ__", html.escape(seq))
+
+
+_TEMPLATE = """<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>검수 __BATCH__</title>
+<style>
+  :root{
+    --bg:#101216; --card:#1a1d23; --line:#2b2f38;
+    --text:#e8eaee; --sub:#8d95a1; --dim:#5f6773;
+    --ok:#2f9e63; --ng:#b8453a;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%; overflow:hidden;}
+  body{margin:0; background:#0b0d10; color:var(--text);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.45; -webkit-user-select:none; user-select:none;
+    display:flex; align-items:center; justify-content:center;}
+  .wrap{width:min(680px, 94vw); height:min(700px, 95vh); min-height:500px;
+    background:var(--bg); border:1px solid var(--line); border-radius:12px;
+    display:flex; flex-direction:column; overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.45);}
+
+  .top{flex:0 0 auto; padding:8px 14px; border-bottom:1px solid var(--line);
+    display:flex; align-items:baseline; gap:9px; font-size:12px;
+    color:var(--sub);}
+  .top b{font-size:15px; color:var(--text); font-weight:700;}
+  .top .right{margin-left:auto; font-size:11px;}
+
+  .status{flex:0 0 auto; margin:10px 14px 0; padding:6px 11px;
+    border-radius:7px; font-size:12px; font-weight:700;
+    display:flex; align-items:center; gap:8px;}
+  .status.none{background:var(--card); color:var(--dim); font-weight:500;}
+  .status.ok{background:rgba(47,158,99,.16); color:#8fd8b3;
+    border-left:3px solid var(--ok);}
+  .status.ng{background:rgba(184,69,58,.16); color:#e0a29b;
+    border-left:3px solid var(--ng);}
+  .status.skip{background:rgba(141,149,161,.14); color:#b3bac5;
+    border-left:3px solid var(--sub);}
+  .status .re{margin-left:auto; font-size:10.5px; font-weight:500;
+    opacity:.85;}
+
+  .chks{flex:0 0 auto; padding:7px 14px 0; display:flex; gap:5px;
+    flex-wrap:wrap;}
+  .ck{font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px;}
+  .ck.y{background:rgba(47,158,99,.18); color:#8fd8b3;}
+  .ck.n{background:rgba(184,69,58,.18); color:#e0a29b;}
+  .ck.q{background:rgba(141,149,161,.16); color:#b3bac5;}
+
+  .names{flex:0 0 auto; padding:8px 14px 0;}
+  .nrow{display:flex; gap:10px; padding:7px 0;
+    border-bottom:1px solid var(--line);}
+  .nrow:last-child{border-bottom:none;}
+  .nrow .k{flex:0 0 74px; font-size:11px; color:var(--dim); padding-top:3px;}
+  .nrow .v{flex:1; min-width:0; font-size:14px; line-height:1.4;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    overflow:hidden;}
+  .nrow .v.edit{outline:none; -webkit-user-select:text; user-select:text;
+    border-bottom:1px dashed var(--line); padding-bottom:2px;}
+  .nrow .v.edit:focus{border-bottom-color:var(--sub);
+    -webkit-line-clamp:unset; overflow:visible;}
+  .nrow .v.found{font-weight:700;}
+
+  .links{flex:0 0 auto; display:flex; gap:7px; padding:8px 14px 0;}
+  .links a{flex:1; text-align:center; padding:6px 0; border-radius:8px;
+    font-size:10.5px; font-weight:700; text-decoration:none;
+    border:1px solid var(--line); color:var(--sub); background:var(--card);}
+  .links a:hover{color:var(--text);}
+
+  .mid{flex:1 1 auto; min-height:0; overflow:hidden;
+    display:flex; flex-direction:column; padding:10px 14px 0;}
+  .mlb{flex:0 0 auto; font-size:11px; color:var(--sub); margin-bottom:6px;
+    display:flex; align-items:baseline; gap:7px;}
+  .mlb .n{margin-left:auto; font-size:10.5px; color:var(--dim);}
+  .shelf{flex:1 1 auto; min-height:0; overflow:hidden; display:grid;
+    gap:6px; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr));
+    grid-auto-rows:1fr;}
+  .ph{min-width:0; min-height:0; position:relative;
+    border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    cursor:pointer; background:#0c0e12;
+    display:flex; flex-direction:column;}
+  .ph .im{flex:1 1 auto; min-height:0; display:flex;
+    align-items:center; justify-content:center; overflow:hidden;}
+  .ph .im img{max-width:100%; max-height:100%; object-fit:contain;}
+  .ph .ft{flex:0 0 auto; font-size:9.5px; color:var(--dim);
+    padding:3px 6px; display:flex; gap:5px;}
+  .ph .ft .sz{margin-left:auto;}
+  .ph .ft .sz.small{color:#c07c76;}
+  .ph.sel{border-color:var(--ok); border-width:2px;}
+  .ph.sel::before{content:"고름"; position:absolute; left:0; top:0;
+    background:var(--ok); color:#fff; font-size:9px; font-weight:700;
+    padding:2px 6px; border-radius:0 0 5px 0; z-index:2;}
+  .ph.sel .ft{color:#9fd9bb;}
+
+  .actions{flex:0 0 auto; padding:10px 14px 12px; display:flex; gap:9px;}
+  .btn{flex:1 1 0; border:1px solid var(--line); border-radius:9px;
+    padding:13px 0; font-size:15px; font-weight:700; cursor:pointer;
+    background:var(--card); color:var(--text);}
+  .btn.skip{color:var(--sub);}
+  .btn.ng.on{background:var(--ng); border-color:var(--ng); color:#fff;}
+  .btn.skip.on{border-color:var(--sub); color:var(--text);}
+  .btn:active{transform:scale(.98);}
+
+  .saverow{flex:0 0 auto; padding:0 14px 8px;}
+  .savebtn{width:100%; border:1px solid var(--line); border-radius:9px;
+    padding:11px 0; font-size:13px; font-weight:700; cursor:pointer;
+    background:var(--card); color:var(--text);
+    display:flex; align-items:center; justify-content:center; gap:8px;}
+  .savebtn:active{transform:scale(.99);}
+  .savebtn.done{border-color:var(--ok); color:#9fd9bb;}
+  .savebtn.busy{color:var(--sub);}
+  .savebtn .sub{font-size:10px; font-weight:500; color:var(--dim);}
+  .savebtn.done .sub{color:#6f9e86;}
+
+  .foot{flex:0 0 auto; display:flex; padding:0 14px 9px;
+    font-size:9.5px; color:#4a515c;}
+  .foot .saved{margin-left:auto;}
+
+  .nav{position:fixed; top:50%; transform:translateY(-50%);
+    width:64px; height:64px; border-radius:50%;
+    background:var(--card); border:1px solid var(--line);
+    color:var(--sub); font-size:28px; cursor:pointer; z-index:5;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 16px rgba(0,0,0,.35);}
+  .nav:hover{color:var(--text); border-color:var(--sub);}
+  .nav:active{transform:translateY(-50%) scale(.94);}
+  .nav.l{right:calc(50% + min(340px, 47vw) + 14px);}
+  .nav.r{left:calc(50% + min(340px, 47vw) + 14px);}
+  @media (max-width:860px){
+    .nav{width:48px; height:48px; font-size:22px;}
+    .nav.l{right:auto; left:6px;} .nav.r{left:auto; right:6px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <b id="pos">1</b> / <span id="tot">0</span>
+    <span>__BATCH__</span>
+    <a href="index.html" style="color:var(--sub); font-size:11px;">목록</a>
+    <span class="right" id="cnt">OK 0 · NG 0</span>
+  </div>
+
+  <div class="status none" id="status">아직 판정하지 않았습니다</div>
+  <div class="chks" id="chks"></div>
+
+  <div class="names">
+    <div class="nrow"><span class="k">일본어</span>
+      <span class="v edit" id="jp" contenteditable="true" oninput="onEdit()"></span></div>
+    <div class="nrow"><span class="k">번역</span>
+      <span class="v" id="tr"></span></div>
+    <div class="nrow"><span class="k">한국 업체</span>
+      <span class="v found" id="kr"></span></div>
+  </div>
+
+  <div class="links">
+    <a id="qlink" target="_blank">큐텐 ↗</a>
+    <a id="klink" target="_blank">한국 구매처 ↗</a>
+  </div>
+
+  <div class="mid">
+    <div class="mlb">큐텐에 올릴 사진 한 장을 고르세요
+      <span class="n" id="pst"></span></div>
+    <div class="shelf" id="shelf"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn ng" id="ngbtn" onclick="judge('ng')">NG</button>
+    <button class="btn skip" id="skipbtn" onclick="skip()">건너뛰기</button>
+  </div>
+
+  <div class="saverow">
+    <button class="savebtn" id="savebtn" onclick="commit()">
+      저장 <span class="sub" id="savesub">여기까지 한 것을 남깁니다</span>
+    </button>
+  </div>
+
+  <div class="foot">사진을 고르면 바로 다음 · 키보드 1~9 사진, N은 NG, Enter 건너뛰기, S 저장
+    <span class="saved" id="saved"></span></div>
+</div>
+
+<button class="nav l" onclick="move(-1)">‹</button>
+<button class="nav r" onclick="move(1)">›</button>
+
+<script>
+var ITEMS = __DATA__;
+var BATCH = "__BATCH__";
+var KEY = 'review2_' + BATCH;
+var total = ITEMS.length;
+
+// marks[상품번호] = {v:'ok'|'ng'|'skip', p:고른 사진 번호, u:사진 주소}
+var state = {idx:0, marks:{}, jpEdits:{}};
+var jpOrig = '';
+
+function cur() { return ITEMS[state.idx]; }
+
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify({
+      idx: state.idx, marks: state.marks, jpEdits: state.jpEdits,
+      savedAt: new Date().toISOString()
+    }));
+    document.getElementById('saved').textContent =
+      '자동저장 ' + new Date().toLocaleTimeString('ko-KR');
+  } catch (e) { /* 저장 못 해도 작업은 이어간다 */ }
+}
+
+function load() {
+  try {
+    var s = JSON.parse(localStorage.getItem(KEY) || '{}');
+    state.marks = s.marks || {};
+    state.jpEdits = s.jpEdits || {};
+    state.idx = s.idx || 0;
+    // 이미 판정한 자리면 아직 안 본 첫 번째로 옮겨 준다
+    if (ITEMS[state.idx] && state.marks[ITEMS[state.idx].g]) {
+      for (var i = 0; i < total; i++) {
+        if (!state.marks[ITEMS[i].g]) { state.idx = i; break; }
+      }
+    }
+    if (s.savedAt) {
+      document.getElementById('savesub').textContent =
+        new Date(s.savedAt).toLocaleString('ko-KR',
+          {month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'}) +
+        ' 자리에서 이어 합니다';
+    }
+  } catch (e) { /* 읽기 실패하면 처음부터 */ }
+}
+
+function mk() {
+  var g = cur().g;
+  if (!state.marks[g]) state.marks[g] = {v:null, p:null, u:null};
+  return state.marks[g];
+}
+
+function pick(i) {
+  var it = cur();
+  if (i >= it.ph.length) return;
+  var m = mk();
+  m.p = i; m.u = it.ph[i].u; m.v = 'ok';
+  save(); paint();
+  // 고른 표시를 확인할 틈을 준다
+  setTimeout(function () { move(1); }, 700);
+}
+
+function tagSize(img, el) {
+  var w = img.naturalWidth;
+  if (!w) { img.addEventListener('load', function(){ tagSize(img, el); }); return; }
+  el.textContent = w + '×' + img.naturalHeight;
+  if (Math.min(w, img.naturalHeight) < 200) el.className = 'sz small';
+}
+
+function paint() {
+  var it = cur();
+  if (!it) return;
+  var m = state.marks[it.g] || {v:null, p:null};
+
+  document.getElementById('jp').textContent = it.jp;
+  document.getElementById('tr').textContent = it.tr;
+  document.getElementById('kr').textContent = it.kr;
+  jpOrig = it.jp;
+  if (state.jpEdits[it.g]) document.getElementById('jp').textContent = state.jpEdits[it.g];
+
+  document.getElementById('qlink').href = it.qurl || '#';
+  var kl = it.kurl;
+  if (m.p !== null && it.ph[m.p] && it.ph[m.p].l) kl = it.ph[m.p].l;
+  document.getElementById('klink').href = kl || '#';
+
+  var ch = document.getElementById('chks');
+  ch.innerHTML = '';
+  if (it.tier) {
+    var tb = document.createElement('span');
+    tb.className = 'ck y'; tb.textContent = it.tier + ' 등급';
+    ch.appendChild(tb);
+  }
+  for (var c = 0; c < it.chk.length; c++) {
+    var sp = document.createElement('span');
+    sp.className = 'ck ' + it.chk[c].v;
+    sp.textContent = (it.chk[c].v === 'y' ? '✓ ' : it.chk[c].v === 'n' ? '✗ ' : '? ')
+                     + it.chk[c].t;
+    ch.appendChild(sp);
+  }
+
+  var sh = document.getElementById('shelf');
+  sh.innerHTML = '';
+  for (var i = 0; i < it.ph.length; i++) {
+    (function (p, k) {
+      var el = document.createElement('div');
+      el.className = 'ph' + (m.p === k ? ' sel' : '');
+      el.onclick = function(){ pick(k); };
+      var im = document.createElement('div'); im.className = 'im';
+      var img = document.createElement('img'); img.src = p.u; img.loading = 'lazy';
+      im.appendChild(img); el.appendChild(im);
+      var ft = document.createElement('div'); ft.className = 'ft';
+      var n = document.createElement('span');
+      n.textContent = (k+1) + '. ' + p.s + (p.m ? ' ' + p.m : '');
+      var sz = document.createElement('span'); sz.className = 'sz';
+      ft.appendChild(n); ft.appendChild(sz); el.appendChild(ft);
+      tagSize(img, sz);
+      sh.appendChild(el);
+    })(it.ph[i], i);
+  }
+  document.getElementById('pst').textContent =
+    it.ph.length + '장' + (m.p !== null ? ' · ' + (m.p+1) + '번' : '');
+
+  var st = document.getElementById('status');
+  if (m.v === 'ok') {
+    st.className = 'status ok';
+    st.innerHTML = 'OK — ' + (m.p + 1) + '번 사진으로 정했습니다' +
+      '<span class="re">다른 사진을 누르면 바뀝니다</span>';
+  } else if (m.v === 'ng') {
+    st.className = 'status ng';
+    st.innerHTML = 'NG — 안 파는 물건으로 정했습니다' +
+      '<span class="re">사진을 누르면 OK로 바뀝니다</span>';
+  } else if (m.v === 'skip') {
+    st.className = 'status skip';
+    st.innerHTML = '보류 — 나중에 다시 보기로 했습니다' +
+      '<span class="re">사진을 누르거나 NG를 누르면 바뀝니다</span>';
+  } else {
+    st.className = 'status none';
+    st.innerHTML = '아직 판정하지 않았습니다';
+  }
+
+  document.getElementById('ngbtn').className = 'btn ng' + (m.v === 'ng' ? ' on' : '');
+  document.getElementById('skipbtn').className = 'btn skip' + (m.v === 'skip' ? ' on' : '');
+
+  var o = 0, n = 0, s = 0;
+  for (var k2 in state.marks) {
+    var v = state.marks[k2].v;
+    if (v === 'ok') o++; else if (v === 'ng') n++; else if (v === 'skip') s++;
+  }
+  document.getElementById('pos').textContent = state.idx + 1;
+  document.getElementById('tot').textContent = total;
+  document.getElementById('cnt').textContent =
+    'OK ' + o + ' · NG ' + n + (s ? ' · 보류 ' + s : '');
+}
+
+function onEdit() {
+  var jp = document.getElementById('jp'), g = cur().g;
+  if (jp.textContent.trim() !== jpOrig) state.jpEdits[g] = jp.textContent.trim();
+  else delete state.jpEdits[g];
+  save();
+}
+
+function skip() {
+  var m = mk(); m.v = 'skip'; m.p = null;
+  save(); paint();
+  setTimeout(function () { move(1); }, 600);
+}
+
+function judge(kind) {
+  var m = mk(); m.v = kind;
+  if (kind === 'ng') { m.p = null; m.u = null; }
+  save(); paint();
+  setTimeout(function () { move(1); }, 600);
+}
+
+function move(step) {
+  state.idx = Math.min(Math.max(state.idx + step, 0), total - 1);
+  save(); paint();
+}
+
+// ── 저장: GitHub에 결과를 올린다 ─────────────────────────────
+var GH_REPO = "wklee3k-source/qoo10-korea-price-compare";
+
+function results() {
+  var out = [];
+  for (var i = 0; i < ITEMS.length; i++) {
+    var it = ITEMS[i], m = state.marks[it.g];
+    if (!m || !m.v) continue;
+    out.push({
+      goods_no: it.g,
+      verdict: m.v,
+      image_url: m.u || null,
+      qoo10_title_edited: state.jpEdits[it.g] || null,
+      decided_at: new Date().toISOString()
+    });
+  }
+  return out;
+}
+
+function commit() {
+  var btn = document.getElementById('savebtn');
+  var sub = document.getElementById('savesub');
+  var rows = results();
+  if (!rows.length) { sub.textContent = '아직 판정한 것이 없습니다'; return; }
+  save();
+
+  var token = localStorage.getItem('gh_token');
+  if (!token) {
+    token = prompt('GitHub 토큰을 한 번만 입력해 주세요 (이 브라우저에 저장됩니다)');
+    if (!token) return;
+    localStorage.setItem('gh_token', token);
+  }
+
+  btn.className = 'savebtn busy';
+  sub.textContent = '올리는 중…';
+
+  var path = 'comparison/decisions/' + BATCH + '.json';
+  var body = JSON.stringify(rows, null, 1);
+  var b64 = btoa(unescape(encodeURIComponent(body)));
+
+  fetch('https://api.github.com/repos/' + GH_REPO + '/contents/' + path, {
+    headers: {Authorization: 'token ' + token}
+  }).then(function (r) {
+    return r.ok ? r.json() : null;
+  }).then(function (info) {
+    return fetch('https://api.github.com/repos/' + GH_REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: {Authorization: 'token ' + token,
+                'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        message: '검수 결과 ' + BATCH + ' — ' + rows.length + '건',
+        content: b64,
+        sha: info ? info.sha : undefined
+      })
+    });
+  }).then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    var o = 0, n = 0, s = 0;
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].verdict === 'ok') o++;
+      else if (rows[i].verdict === 'ng') n++; else s++;
+    }
+    btn.className = 'savebtn done';
+    sub.textContent = rows.length + '건 올렸습니다 · OK ' + o + ' NG ' + n +
+      (s ? ' 보류 ' + s : '') + ' — 다음에 열면 여기서 시작합니다';
+  }).catch(function (e) {
+    btn.className = 'savebtn';
+    sub.textContent = '올리지 못했습니다 (' + e.message + ') — 이 브라우저에는 남아 있습니다';
+    if (String(e.message).indexOf('401') >= 0) localStorage.removeItem('gh_token');
+  });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (document.activeElement.id === 'jp') return;
+  if (e.key >= '1' && e.key <= '9') pick(parseInt(e.key,10) - 1);
+  if (e.key.toLowerCase() === 'n') judge('ng');
+  if (e.key === 'Enter') skip();
+  if (e.key.toLowerCase() === 's') commit();
+  if (e.key === 'ArrowLeft') move(-1);
+  if (e.key === 'ArrowRight') move(1);
+});
+
+load();
+paint();
+</script>
+</body>
+</html>
+"""
