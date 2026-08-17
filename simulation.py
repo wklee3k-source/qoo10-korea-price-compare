@@ -3841,6 +3841,53 @@ def t51_no_hardcoded_phrases():
     check("51-6 차이가 작으면 같다고", same == "비슷합니다", same)
 
 
+# ---- #52 새 검수 화면 (v7.96.0)
+def t52_review_one_screen():
+    """한 건씩 넘겨 보는 검수 화면이 제대로 만들어지는지.
+
+    [사장님 요청 2026-08-17] 예전 화면은 한 페이지에 100건을 늘어놓아
+    스크롤을 계속 굴려야 했다. 새 화면은 한 번에 한 건만 보여주고
+    사진을 고르면 바로 다음으로 넘어간다.
+
+    이 화면이 하는 일은 둘뿐이다:
+      1. 이름 셋(일본어·번역·한국 업체)이 같은 상품인지 본다
+      2. 큐텐에 올릴 사진 한 장을 고른다
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    try:
+        from render_review_one import render_page
+    except Exception as e:  # noqa: BLE001
+        check("52 새 화면 로드", False, f"{type(e).__name__}: {e}")
+        return
+
+    pair = {
+        "goods_no": "1", "qoo10_title_original": "テスト", "qoo10_name_kr": "번역",
+        "kr_brand": "브랜드", "kr_name": "이름", "kr_volume": "50ml",
+        "qoo10_url": "https://q", "kr_url": "https://k", "tier": "A",
+        "brand_status": "match", "qoo10_image": "https://a.jpg",
+        "kr_candidates": [{"url": "https://b.jpg", "link": "https://l", "mall": "샵"}],
+    }
+    html = render_page([pair], "A_01", "1/1")
+
+    for tag in ("div", "span", "button", "script"):
+        d = html.count(f"<{tag}") - html.count(f"</{tag}>")
+        check(f"52-1 {tag} 태그 짝", d == 0, f"{d}개 안 닫힘")
+
+    check("52-2 데이터가 심어짐", "__DATA__" not in html and '"g": "1"' in html)
+    check("52-3 사진을 한 무리로",
+          '"s": "\uc57c"' not in html and html.count('"s":') >= 2,
+          "큐텐·한국을 나누지 않고 함께 넣는다")
+    check("52-4 판정 상태 표시", 'id="status"' in html,
+          "앞뒤로 오갈 때 이 장을 어떻게 판정했는지 보여야 한다")
+    check("52-5 자동 저장", "localStorage" in html and "function save" in html)
+    check("52-6 서버 저장", "function commit" in html and "decisions" in html)
+    check("52-7 스크롤 없음", "overflow:hidden" in html)
+
+    # 옛 화면을 되살릴 길이 남아 있는지 — 새 화면이 망가져도 검수는 이어가야 한다
+    src = (ROOT / "src" / "build_review_batches.py").read_text(encoding="utf-8")
+    check("52-8 옛 화면 되살리기", "QOO10_REVIEW_OLD" in src)
+
+
 def main():
     for fn in sorted(
         (v for k, v in globals().items() if k.startswith("t") and callable(v)),
