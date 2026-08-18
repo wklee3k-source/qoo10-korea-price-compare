@@ -86,7 +86,7 @@ def render_page(pairs: list[dict], batch_id: str, seq: str) -> str:
                     .replace("__SEQ__", html.escape(seq))
 
 
-_TEMPLATE = """<!DOCTYPE html>
+_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -180,6 +180,39 @@ _TEMPLATE = """<!DOCTYPE html>
     padding:2px 6px; border-radius:0 0 5px 0; z-index:2;}
   .ph.sel .ft{color:#9fd9bb;}
 
+  /* 사진을 못 찾은 건이 182건 있다(실측 2026-08-17). 그냥 NG로
+     버리면 팔 수 있는 물건을 잃는다. 직접 찾아 넣을 수 있게 한다. */
+  .ph.add{border-style:dashed; cursor:pointer;}
+  .ph.add .im{flex-direction:column; gap:4px; color:var(--dim);
+    font-size:11px; text-align:center; padding:6px;}
+  .ph.add .im b{font-size:20px; font-weight:400; line-height:1;}
+  .ph.add:hover{border-color:var(--sub); color:var(--text);}
+  .paste{position:fixed; inset:0; z-index:20; background:rgba(0,0,0,.72);
+    display:none; align-items:center; justify-content:center;}
+  .paste.on{display:flex;}
+  .pbox{width:min(460px, 92vw); background:var(--bg);
+    border:1px solid var(--line); border-radius:12px; padding:16px;}
+  .pbox h3{margin:0 0 4px; font-size:14px; font-weight:700;}
+  .pbox .g{font-size:11px; color:var(--sub); line-height:1.6;
+    margin-bottom:10px;}
+  .pbox input{width:100%; padding:10px; border-radius:8px;
+    border:1px solid var(--line); background:var(--card);
+    color:var(--text); font-size:12px; outline:none;
+    -webkit-user-select:text; user-select:text;}
+  .pbox input:focus{border-color:var(--sub);}
+  .pprev{margin-top:10px; height:140px; background:#0c0e12;
+    border:1px solid var(--line); border-radius:8px; display:flex;
+    align-items:center; justify-content:center; overflow:hidden;
+    color:var(--dim); font-size:11px;}
+  .pprev img{max-width:100%; max-height:100%; object-fit:contain;}
+  .pbtns{display:flex; gap:8px; margin-top:10px;}
+  .pbtns button{flex:1; padding:10px 0; border-radius:8px;
+    border:1px solid var(--line); background:var(--card);
+    color:var(--text); font-size:13px; font-weight:700; cursor:pointer;}
+  .pbtns button.go{background:var(--ok); border-color:var(--ok); color:#fff;}
+  .pbtns button.go:disabled{background:var(--card); border-color:var(--line);
+    color:var(--dim); cursor:default;}
+
   .actions{flex:0 0 auto; padding:10px 14px 12px; display:flex; gap:9px;}
   .btn{flex:1 1 0; border:1px solid var(--line); border-radius:9px;
     padding:13px 0; font-size:15px; font-weight:700; cursor:pointer;
@@ -263,8 +296,26 @@ _TEMPLATE = """<!DOCTYPE html>
     </button>
   </div>
 
-  <div class="foot">사진을 고르면 바로 다음 · 키보드 1~9 사진, N은 NG, Enter 건너뛰기, S 저장
+  <div class="foot">사진을 고르면 바로 다음 · 키보드 1~9 사진, P 사진넣기, N은 NG, Enter 건너뛰기, S 저장
     <span class="saved" id="saved"></span></div>
+</div>
+
+<div class="paste" id="paste">
+  <div class="pbox">
+    <h3>사진 주소를 넣어 주세요</h3>
+    <div class="g">
+      한국 판매 페이지에서 사진을 <b>오른쪽 클릭 → 이미지 주소 복사</b> 한 뒤
+      아래에 붙여넣으세요.<br>
+      링크 버튼으로 판매 페이지를 열 수 있습니다.
+    </div>
+    <input id="purl" placeholder="https://..." oninput="preview()"
+           onkeydown="if(event.key==='Enter') addPhoto();">
+    <div class="pprev" id="pprev">붙여넣으면 여기에 보입니다</div>
+    <div class="pbtns">
+      <button onclick="closePaste()">취소</button>
+      <button class="go" id="pgo" onclick="addPhoto()" disabled>이 사진 쓰기</button>
+    </div>
+  </div>
 </div>
 
 <button class="nav l" onclick="move(-1)">‹</button>
@@ -277,7 +328,7 @@ var KEY = 'review2_' + BATCH;
 var total = ITEMS.length;
 
 // marks[상품번호] = {v:'ok'|'ng'|'skip', p:고른 사진 번호, u:사진 주소}
-var state = {idx:0, marks:{}, jpEdits:{}};
+var state = {idx:0, marks:{}, jpEdits:{}, added:{}};
 var jpOrig = '';
 
 function cur() { return ITEMS[state.idx]; }
@@ -286,7 +337,7 @@ function save() {
   try {
     localStorage.setItem(KEY, JSON.stringify({
       idx: state.idx, marks: state.marks, jpEdits: state.jpEdits,
-      savedAt: new Date().toISOString()
+      added: state.added, savedAt: new Date().toISOString()
     }));
     document.getElementById('saved').textContent =
       '자동저장 ' + new Date().toLocaleTimeString('ko-KR');
@@ -298,6 +349,7 @@ function load() {
     var s = JSON.parse(localStorage.getItem(KEY) || '{}');
     state.marks = s.marks || {};
     state.jpEdits = s.jpEdits || {};
+    state.added = s.added || {};
     state.idx = s.idx || 0;
     // 이미 판정한 자리면 아직 안 본 첫 번째로 옮겨 준다
     if (ITEMS[state.idx] && state.marks[ITEMS[state.idx].g]) {
@@ -318,6 +370,49 @@ function mk() {
   var g = cur().g;
   if (!state.marks[g]) state.marks[g] = {v:null, p:null, u:null};
   return state.marks[g];
+}
+
+function openPaste() {
+  document.getElementById('paste').className = 'paste on';
+  var el = document.getElementById('purl');
+  el.value = ''; el.focus();
+  preview();
+}
+
+function closePaste() {
+  document.getElementById('paste').className = 'paste';
+}
+
+function preview() {
+  var u = document.getElementById('purl').value.trim();
+  var box = document.getElementById('pprev');
+  var go = document.getElementById('pgo');
+  if (!/^https?:\/\//.test(u)) {
+    box.textContent = '붙여넣으면 여기에 보입니다';
+    go.disabled = true;
+    return;
+  }
+  box.innerHTML = '';
+  var img = document.createElement('img');
+  img.src = u;
+  img.onerror = function () {
+    box.textContent = '이 주소로는 사진이 안 열립니다';
+    go.disabled = true;
+  };
+  img.onload = function () { go.disabled = false; };
+  box.appendChild(img);
+}
+
+function addPhoto() {
+  // 넣은 사진을 후보 목록 끝에 붙이고 바로 고른 것으로 만든다.
+  var u = document.getElementById('purl').value.trim();
+  if (!/^https?:\/\//.test(u)) return;
+  var it = cur();
+  it.ph.push({u: u, s: '직접'});
+  if (!state.added[it.g]) state.added[it.g] = [];
+  state.added[it.g].push(u);
+  closePaste();
+  pick(it.ph.length - 1);
 }
 
 function pick(i) {
@@ -368,6 +463,14 @@ function paint() {
     ch.appendChild(sp);
   }
 
+  // 예전에 직접 넣은 사진을 되살린다
+  var ad = state.added[it.g] || [];
+  for (var a = 0; a < ad.length; a++) {
+    var has = false;
+    for (var b = 0; b < it.ph.length; b++) if (it.ph[b].u === ad[a]) has = true;
+    if (!has) it.ph.push({u: ad[a], s: '직접'});
+  }
+
   var sh = document.getElementById('shelf');
   sh.innerHTML = '';
   for (var i = 0; i < it.ph.length; i++) {
@@ -387,8 +490,16 @@ function paint() {
       sh.appendChild(el);
     })(it.ph[i], i);
   }
+  // 직접 넣기 칸은 언제나 마지막에
+  var add = document.createElement('div');
+  add.className = 'ph add';
+  add.onclick = openPaste;
+  add.innerHTML = '<div class="im"><b>+</b>사진 넣기</div>';
+  sh.appendChild(add);
+
   document.getElementById('pst').textContent =
-    it.ph.length + '장' + (m.p !== null ? ' · ' + (m.p+1) + '번' : '');
+    (it.ph.length ? it.ph.length + '장' : '사진 없음 — 직접 넣어 주세요') +
+    (m.p !== null ? ' · ' + (m.p+1) + '번' : '');
 
   var st = document.getElementById('status');
   if (m.v === 'ok') {
@@ -459,6 +570,7 @@ function results() {
       goods_no: it.g,
       verdict: m.v,
       image_url: m.u || null,
+      image_added_by_hand: (state.added[it.g] || []).indexOf(m.u) >= 0,
       qoo10_title_edited: state.jpEdits[it.g] || null,
       decided_at: new Date().toISOString()
     });
@@ -525,6 +637,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key.toLowerCase() === 'n') judge('ng');
   if (e.key === 'Enter') skip();
   if (e.key.toLowerCase() === 's') commit();
+  if (e.key.toLowerCase() === 'p') openPaste();
   if (e.key === 'ArrowLeft') move(-1);
   if (e.key === 'ArrowRight') move(1);
 });

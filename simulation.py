@@ -3894,6 +3894,13 @@ def t52_review_one_screen():
           "marks 형식과 results 형식을 둘 다 읽어야 한다")
     check("52-11 허브 수동 갱신", "refreshbtn" in src and "visibilitychange" in src,
           "창을 열어 둔 채로는 안 바뀐다 — 누를 수단이 있어야 한다")
+    # [실측 2026-08-17] 1,164건 중 182건이 사진 없이 나온다.
+    # 그냥 NG로 버리면 팔 수 있는 물건을 잃는다. 직접 넣게 한다.
+    check("52-12 사진 직접 넣기", "function addPhoto" in html and "openPaste" in html)
+    check("52-13 넣은 사진이 살아남음", "state.added" in html,
+          "다음에 열어도 넣은 사진이 있어야 한다")
+    check("52-14 손으로 넣은 것 표시", "image_added_by_hand" in html,
+          "나중에 품질을 따로 볼 수 있어야 한다")
 
 
 def main():
