@@ -288,6 +288,7 @@ _TEMPLATE = r"""<!DOCTYPE html>
   <div class="links">
     <a id="qlink" target="_blank">큐텐 ↗</a>
     <a id="klink" target="_blank">한국 구매처 ↗</a>
+    <a id="nlink" target="_blank">네이버 검색 ↗</a>
   </div>
 
   <div class="mid">
@@ -546,6 +547,12 @@ function paint() {
   var kl = it.kurl;
   if (m.p !== null && it.ph[m.p] && it.ph[m.p].l) kl = it.ph[m.p].l;
   document.getElementById('klink').href = kl || '#';
+  // 사진을 못 찾았거나 구매처가 미덥지 않을 때 직접 찾아볼 수 있게.
+  // 한국 업체가 붙인 이름으로 검색해야 같은 상품이 나온다 —
+  // 번역한 이름으로 치면 일본 표기가 섞여 엉뚱한 게 걸린다.
+  document.getElementById('nlink').href =
+    'https://search.shopping.naver.com/search/all?query=' +
+    encodeURIComponent(it.kr || it.tr);
 
   var ch = document.getElementById('chks');
   ch.innerHTML = '';
