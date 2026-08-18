@@ -3886,6 +3886,14 @@ def t52_review_one_screen():
     # 옛 화면을 되살릴 길이 남아 있는지 — 새 화면이 망가져도 검수는 이어가야 한다
     src = (ROOT / "src" / "build_review_batches.py").read_text(encoding="utf-8")
     check("52-8 옛 화면 되살리기", "QOO10_REVIEW_OLD" in src)
+    # [실측 2026-08-17] 새 화면은 'review2_' 키에 marks 형식으로 저장하는데
+    # 허브는 옛 키('qoo10_review_autosave_')에 results 형식만 읽었다.
+    # 그래서 저장해도 허브가 계속 "아직 안 열어봄"이었다.
+    check("52-9 허브가 새 키를 읽음", "'review2_' + batchId" in src)
+    check("52-10 허브가 새 형식을 셈", "saved.marks" in src,
+          "marks 형식과 results 형식을 둘 다 읽어야 한다")
+    check("52-11 허브 수동 갱신", "refreshbtn" in src and "visibilitychange" in src,
+          "창을 열어 둔 채로는 안 바뀐다 — 누를 수단이 있어야 한다")
 
 
 def main():
