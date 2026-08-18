@@ -298,7 +298,7 @@ def build_batches():
 
 def build_hub(batch_meta: list[dict], total: int):
     """모든 배치를 한 곳에서 관리하는 허브(인덱스) 페이지. 각 배치파일이
-    localStorage에 자동저장해둔 진행상황(qoo10_review_autosave_<batch_id>)을
+    localStorage에 자동저장해둔 진행상황(review2_<batch_id>)을
     그대로 읽어서, 배치별로 몇 건 처리했는지 보여주고 바로 이동할 수 있게
     한다. GitHub Pages(같은 출처)로 서빙되므로, 이 허브 페이지에서 각
     배치의 저장내역을 직접 읽을 수 있다."""
@@ -371,7 +371,10 @@ def build_hub(batch_meta: list[dict], total: int):
 <body>
 <div class="wrap">
 <h1>📋 검수 배치 관리 허브</h1>
-<p class="sub">전체 {total}건 · {len(batch_meta)}개 배치로 나뉨. 배치 카드를 클릭하면 새 탭에서 열립니다.<br>진행상황은 이 페이지를 열 때마다 자동으로 갱신됩니다(이 브라우저에서 작업한 기록 + GitHub에 저장한 기록).</p>
+<p class="sub">전체 {total}건 · {len(batch_meta)}개 배치로 나뉨. 배치 카드를 클릭하면 새 탭에서 열립니다.<br>
+진행상황은 <b>이 페이지를 열 때</b> 갱신됩니다. 검수 창을 열어 둔 채로는 바뀌지 않으니, 아래 버튼을 누르거나 새로고침하세요.
+<button id="refreshbtn" onclick="refreshProgress()" style="margin-left:8px; padding:5px 12px; border-radius:7px; border:1px solid #2b2f38; background:#1a1d23; color:#e8eaee; font-size:12px; font-weight:700; cursor:pointer;">지금 갱신</button>
+<span id="refreshat" style="margin-left:8px; font-size:11px; color:#5f6773;"></span></p>
 
 <div class="overall" id="overall-stats">
   <div class="stat confirmed"><span class="num" id="stat-confirmed">-</span><span class="lbl">선택완료</span></div>
@@ -395,9 +398,12 @@ async function refreshProgress() {{
     var batchId = card.dataset.batchId;
     var total = parseInt(card.dataset.total, 10);
     totalAll += total;
-    var key = 'qoo10_review_autosave_' + batchId;
+    // [v7.96.1] 새 화면은 'review2_<배치>' 로 저장한다.
+    // 옛 키도 함께 본다 — 옛 화면으로 하던 것이 남아 있을 수 있다.
+    var key = 'review2_' + batchId;
+    var legacyKey = 'qoo10_review_autosave_' + batchId;
     var raw = null;
-    try {{ raw = localStorage.getItem(key); }} catch (e) {{}}
+    try {{ raw = localStorage.getItem(key) || localStorage.getItem(legacyKey); }} catch (e) {{}}
 
     if (ghToken) {{
       try {{
@@ -406,7 +412,9 @@ async function refreshProgress() {{
         if (res.ok) {{
           var data = await res.json();
           var content = decodeURIComponent(escape(atob(data.content)));
-          raw = JSON.stringify({{savedAt: new Date().toISOString(), results: JSON.parse(content)}});
+          raw = JSON.stringify({{savedAt: data.commit ? data.commit.committer.date
+                                 : new Date().toISOString(),
+                                 results: JSON.parse(content)}});
         }}
       }} catch (e) {{}}
     }}
@@ -425,9 +433,27 @@ async function refreshProgress() {{
     }}
     var saved;
     try {{ saved = JSON.parse(raw); }} catch (e) {{ continue; }}
-    var results = saved.results || [];
-    var confirmed = results.filter(function(r) {{ return r.match_confirmed; }}).length;
-    var excluded = results.filter(function(r) {{ return r.excluded; }}).length;
+
+    // [v7.96.1] 저장 형식이 두 가지다.
+    //   새 화면 — marks: {{상품번호: {{v:'ok'|'ng'|'skip'}}}}
+    //   옛 화면 — results: [{{match_confirmed, excluded}}]
+    //   서버에서 받은 것 — results: [{{verdict}}]
+    // 어느 쪽이든 읽어 낸다. 형식이 하나만 맞으면 진행률이 0으로
+    // 보여서 "저장했는데 갱신이 안 된다"가 된다(실측 2026-08-17).
+    var confirmed = 0, excluded = 0;
+    if (saved.marks) {{
+      for (var g in saved.marks) {{
+        var v = saved.marks[g].v;
+        if (v === 'ok') confirmed++; else if (v === 'ng') excluded++;
+      }}
+    }} else {{
+      var results = saved.results || [];
+      for (var r = 0; r < results.length; r++) {{
+        var it = results[r];
+        if (it.verdict === 'ok' || it.match_confirmed) confirmed++;
+        else if (it.verdict === 'ng' || it.excluded) excluded++;
+      }}
+    }}
     totalDone += confirmed;
     totalExcluded += excluded;
     fill.style.width = Math.round((confirmed / total) * 100) + '%';
@@ -439,7 +465,15 @@ async function refreshProgress() {{
   document.getElementById('stat-confirmed').textContent = totalDone;
   document.getElementById('stat-excluded').textContent = totalExcluded;
   document.getElementById('stat-remaining').textContent = totalAll - totalDone - totalExcluded;
+  var at = document.getElementById('refreshat');
+  if (at) at.textContent = new Date().toLocaleTimeString('ko-KR') + ' 기준';
 }}
+
+// 창으로 돌아왔을 때도 다시 센다. 검수 창에서 저장하고 허브로
+// 넘어오면 바로 반영된다.
+document.addEventListener('visibilitychange', function () {{
+  if (!document.hidden) refreshProgress();
+}});
 refreshProgress();
 </script>
 </body>
