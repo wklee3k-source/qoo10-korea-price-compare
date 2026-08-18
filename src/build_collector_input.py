@@ -86,15 +86,40 @@ def build(state_path: Path, verified_dir: Path, out_dir: Path) -> tuple[Path, in
         except (OSError, ValueError):
             continue
 
+    # [v7.98.0] 구매링크가 있어도 사진 후보가 없으면 대상이다.
+    #
+    # [실측 2026-08-17] 검수페이지 1,164건 중 470건이 사진 후보 0개로
+    # 나왔다. 링크가 이미 있다는 이유로 수집기에 안 넣었기 때문이다.
+    # 그런데 검수는 사진을 보고 고르는 일이라, 링크만 있고 사진이
+    # 없으면 판단할 재료가 없다.
+    #
+    # 사장님 지적: "쇼핑검색에서 판매처 리브나 이게 딱 나오는데 왜
+    # 이걸 못 찾는 거지?" — 못 찾은 게 아니라 아예 찾아보지 않았다.
     targets, junk = [], 0
     for x in rows:
         g = str(x.get("goods_no"))
-        if g not in kept or not x.get("name") or x.get("product_url"):
+        if g not in kept or not x.get("name"):
             continue
-        if x.get("sale") is False or x.get("obsolete") is True:
-            continue                     # 판매중지 — 찾아도 살 수 없다
-        if x.get("link_search_exhausted"):
-            continue                     # 이미 수집기로 찾아봤는데 없었다
+        has_photo = bool(x.get("image_candidates"))
+        if x.get("product_url") and has_photo:
+            continue                 # 링크도 사진도 있으면 할 일이 없다
+        # [v7.98.0] 구매링크가 있으면 '판매중지' 표시를 믿지 않는다.
+        #
+        # [실측 2026-08-17] 화해가 주는 sale 값은 "화해에서 파는지"이지
+        # "한국에서 파는지"가 아니다. 그래서 749건이 판매중지로 찍혔는데
+        # 올리브영·무신사·지그재그 링크가 멀쩡히 살아 있었다.
+        #
+        # 사장님 지적: "쇼핑검색에서 판매처 리브나 이게 딱 나오는데 왜
+        # 이걸 못 찾는 거지?" — 화해에서 내려갔을 뿐 지그재그에서
+        # 22,900원에 팔고 있었다.
+        #
+        # 링크가 살아 있으면 어딘가에서 파는 것이다. 링크가 없을 때만
+        # 판매중지 표시를 근거로 뺀다.
+        if not x.get("product_url"):
+            if x.get("sale") is False or x.get("obsolete") is True:
+                continue
+        if x.get("link_search_exhausted") and not x.get("product_url"):
+            continue                     # 찾아봤는데 없었고 링크도 없다
         if is_junk_name(x["name"]):
             junk += 1
             continue
