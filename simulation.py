@@ -3901,6 +3901,13 @@ def t52_review_one_screen():
           "다음에 열어도 넣은 사진이 있어야 한다")
     check("52-14 손으로 넣은 것 표시", "image_added_by_hand" in html,
           "나중에 품질을 따로 볼 수 있어야 한다")
+    check("52-15 파일로도 넣기", "function fromFile" in html and 'type="file"' in html)
+    check("52-16 끌어다 놓기·캡처 붙여넣기",
+          "dragenter" in html and "clipboardData" in html)
+    check("52-17 파일을 줄여서 담음", "function shrink" in html,
+          "원본 그대로면 브라우저 저장 5MB가 금방 찬다")
+    check("52-18 저장 실패를 알림", "자동저장 실패" in html,
+          "조용히 넘어가면 저장된 줄 알고 계속하게 된다")
 
 
 def main():

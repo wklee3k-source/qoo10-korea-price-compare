@@ -195,6 +195,17 @@ _TEMPLATE = r"""<!DOCTYPE html>
   .pbox h3{margin:0 0 4px; font-size:14px; font-weight:700;}
   .pbox .g{font-size:11px; color:var(--sub); line-height:1.6;
     margin-bottom:10px;}
+  .drop{border:1px dashed var(--line); border-radius:8px; padding:14px;
+    text-align:center; font-size:11.5px; color:var(--sub); cursor:pointer;
+    margin-bottom:9px;}
+  .drop:hover, .drop.over{border-color:var(--ok); color:var(--text);
+    background:rgba(47,158,99,.06);}
+  .drop b{display:block; font-size:13px; color:var(--text);
+    font-weight:700; margin-bottom:2px;}
+  .orline{display:flex; align-items:center; gap:8px; margin:9px 0;
+    font-size:10.5px; color:var(--dim);}
+  .orline::before, .orline::after{content:""; flex:1; height:1px;
+    background:var(--line);}
   .pbox input{width:100%; padding:10px; border-radius:8px;
     border:1px solid var(--line); background:var(--card);
     color:var(--text); font-size:12px; outline:none;
@@ -304,10 +315,19 @@ _TEMPLATE = r"""<!DOCTYPE html>
   <div class="pbox">
     <h3>사진 주소를 넣어 주세요</h3>
     <div class="g">
-      한국 판매 페이지에서 사진을 <b>오른쪽 클릭 → 이미지 주소 복사</b> 한 뒤
-      아래에 붙여넣으세요.<br>
-      링크 버튼으로 판매 페이지를 열 수 있습니다.
+      파일을 넣거나, 판매 페이지에서 사진을
+      <b>오른쪽 클릭 → 이미지 주소 복사</b> 해서 붙여넣으세요.
     </div>
+
+    <div class="drop" id="drop" onclick="document.getElementById('pfile').click()">
+      <b>사진 파일 넣기</b>
+      끌어다 놓거나 눌러서 고르세요 · 화면 캡처를 붙여넣어도 됩니다
+    </div>
+    <input type="file" id="pfile" accept="image/*" style="display:none"
+           onchange="fromFile(this.files[0])">
+
+    <div class="orline">또는</div>
+
     <input id="purl" placeholder="https://..." oninput="preview()"
            onkeydown="if(event.key==='Enter') addPhoto();">
     <div class="pprev" id="pprev">붙여넣으면 여기에 보입니다</div>
@@ -341,7 +361,13 @@ function save() {
     }));
     document.getElementById('saved').textContent =
       '자동저장 ' + new Date().toLocaleTimeString('ko-KR');
-  } catch (e) { /* 저장 못 해도 작업은 이어간다 */ }
+  } catch (e) {
+    // 브라우저 저장은 5MB가 한계다. 파일로 넣은 사진이 쌓이면 찬다.
+    // 조용히 넘어가면 사장님은 저장된 줄 알고 계속하시게 된다.
+    document.getElementById('saved').textContent =
+      '⚠ 자동저장 실패 — [저장]을 눌러 올려 주세요';
+    document.getElementById('saved').style.color = '#e0a29b';
+  }
 }
 
 function load() {
@@ -379,15 +405,88 @@ function openPaste() {
   preview();
 }
 
+// 끌어다 놓기
+(function () {
+  var d = document.getElementById('drop');
+  if (!d) return;
+  ['dragenter', 'dragover'].forEach(function (ev) {
+    d.addEventListener(ev, function (e) {
+      e.preventDefault(); d.className = 'drop over';
+    });
+  });
+  ['dragleave', 'drop'].forEach(function (ev) {
+    d.addEventListener(ev, function (e) {
+      e.preventDefault(); d.className = 'drop';
+    });
+  });
+  d.addEventListener('drop', function (e) {
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      fromFile(e.dataTransfer.files[0]);
+    }
+  });
+})();
+
+// 화면 캡처를 그냥 붙여넣어도 되게
+document.addEventListener('paste', function (e) {
+  if (document.getElementById('paste').className.indexOf('on') < 0) return;
+  var items = (e.clipboardData || {}).items || [];
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].type.indexOf('image') === 0) {
+      fromFile(items[i].getAsFile());
+      e.preventDefault();
+      return;
+    }
+  }
+});
+
 function closePaste() {
   document.getElementById('paste').className = 'paste';
+}
+
+function shrink(src, cb) {
+  // 파일을 그대로 담으면 브라우저 저장(5MB)이 금방 찬다.
+  // 큐텐에 올릴 사진이라 900px이면 충분하다. 줄여서 담는다.
+  var img = new Image();
+  img.onload = function () {
+    var max = 900;
+    var w = img.naturalWidth, h = img.naturalHeight;
+    if (Math.max(w, h) > max) {
+      var r = max / Math.max(w, h);
+      w = Math.round(w * r); h = Math.round(h * r);
+    }
+    var cv = document.createElement('canvas');
+    cv.width = w; cv.height = h;
+    cv.getContext('2d').drawImage(img, 0, 0, w, h);
+    cb(cv.toDataURL('image/jpeg', 0.86));
+  };
+  img.onerror = function () { cb(null); };
+  img.src = src;
+}
+
+function fromFile(f) {
+  if (!f) return;
+  if (!/^image\//.test(f.type)) {
+    document.getElementById('pprev').textContent = '사진 파일이 아닙니다';
+    return;
+  }
+  var box = document.getElementById('pprev');
+  box.textContent = '읽는 중…';
+  var rd = new FileReader();
+  rd.onload = function () {
+    shrink(rd.result, function (small) {
+      if (!small) { box.textContent = '이 파일은 열리지 않습니다'; return; }
+      document.getElementById('purl').value = small;
+      preview();
+    });
+  };
+  rd.readAsDataURL(f);
 }
 
 function preview() {
   var u = document.getElementById('purl').value.trim();
   var box = document.getElementById('pprev');
   var go = document.getElementById('pgo');
-  if (!/^https?:\/\//.test(u)) {
+  if (!/^(https?:\/\/|data:image\/)/.test(u)) {
     box.textContent = '붙여넣으면 여기에 보입니다';
     go.disabled = true;
     return;
@@ -406,9 +505,9 @@ function preview() {
 function addPhoto() {
   // 넣은 사진을 후보 목록 끝에 붙이고 바로 고른 것으로 만든다.
   var u = document.getElementById('purl').value.trim();
-  if (!/^https?:\/\//.test(u)) return;
+  if (!/^(https?:\/\/|data:image\/)/.test(u)) return;
   var it = cur();
-  it.ph.push({u: u, s: '직접'});
+  it.ph.push({u: u, s: u.indexOf('data:') === 0 ? '내 파일' : '직접'});
   if (!state.added[it.g]) state.added[it.g] = [];
   state.added[it.g].push(u);
   closePaste();
@@ -468,7 +567,8 @@ function paint() {
   for (var a = 0; a < ad.length; a++) {
     var has = false;
     for (var b = 0; b < it.ph.length; b++) if (it.ph[b].u === ad[a]) has = true;
-    if (!has) it.ph.push({u: ad[a], s: '직접'});
+    if (!has) it.ph.push({u: ad[a],
+                          s: ad[a].indexOf('data:') === 0 ? '내 파일' : '직접'});
   }
 
   var sh = document.getElementById('shelf');
