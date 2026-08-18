@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>검수 A_05</title>
+<style>
+  :root{
+    --bg:#101216; --card:#1a1d23; --line:#2b2f38;
+    --text:#e8eaee; --sub:#8d95a1; --dim:#5f6773;
+    --ok:#2f9e63; --ng:#b8453a;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%; overflow:hidden;}
+  body{margin:0; background:#0b0d10; color:var(--text);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.45; -webkit-user-select:none; user-select:none;
+    display:flex; align-items:center; justify-content:center;}
+  .wrap{width:min(680px, 94vw); height:min(700px, 95vh); min-height:500px;
+    background:var(--bg); border:1px solid var(--line); border-radius:12px;
+    display:flex; flex-direction:column; overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.45);}
+
+  .top{flex:0 0 auto; padding:8px 14px; border-bottom:1px solid var(--line);
+    display:flex; align-items:baseline; gap:9px; font-size:12px;
+    color:var(--sub);}
+  .top b{font-size:15px; color:var(--text); font-weight:700;}
+  .top .right{margin-left:auto; font-size:11px;}
+
+  .status{flex:0 0 auto; margin:10px 14px 0; padding:6px 11px;
+    border-radius:7px; font-size:12px; font-weight:700;
+    display:flex; align-items:center; gap:8px;}
+  .status.none{background:var(--card); color:var(--dim); font-weight:500;}
+  .status.ok{background:rgba(47,158,99,.16); color:#8fd8b3;
+    border-left:3px solid var(--ok);}
+  .status.ng{background:rgba(184,69,58,.16); color:#e0a29b;
+    border-left:3px solid var(--ng);}
+  .status.skip{background:rgba(141,149,161,.14); color:#b3bac5;
+    border-left:3px solid var(--sub);}
+  .status .re{margin-left:auto; font-size:10.5px; font-weight:500;
+    opacity:.85;}
+
+  .chks{flex:0 0 auto; padding:7px 14px 0; display:flex; gap:5px;
+    flex-wrap:wrap;}
+  .ck{font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px;}
+  .ck.y{background:rgba(47,158,99,.18); color:#8fd8b3;}
+  .ck.n{background:rgba(184,69,58,.18); color:#e0a29b;}
+  .ck.q{background:rgba(141,149,161,.16); color:#b3bac5;}
+
+  .names{flex:0 0 auto; padding:8px 14px 0;}
+  .nrow{display:flex; gap:10px; padding:7px 0;
+    border-bottom:1px solid var(--line);}
+  .nrow:last-child{border-bottom:none;}
+  .nrow .k{flex:0 0 74px; font-size:11px; color:var(--dim); padding-top:3px;}
+  .nrow .v{flex:1; min-width:0; font-size:14px; line-height:1.4;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    overflow:hidden;}
+  .nrow .v.edit{outline:none; -webkit-user-select:text; user-select:text;
+    border-bottom:1px dashed var(--line); padding-bottom:2px;}
+  .nrow .v.edit:focus{border-bottom-color:var(--sub);
+    -webkit-line-clamp:unset; overflow:visible;}
+  .nrow .v.found{font-weight:700;}
+
+  .links{flex:0 0 auto; display:flex; gap:7px; padding:8px 14px 0;}
+  .links a{flex:1; text-align:center; padding:6px 0; border-radius:8px;
+    font-size:10.5px; font-weight:700; text-decoration:none;
+    border:1px solid var(--line); color:var(--sub); background:var(--card);}
+  .links a:hover{color:var(--text);}
+
+  .mid{flex:1 1 auto; min-height:0; overflow:hidden;
+    display:flex; flex-direction:column; padding:10px 14px 0;}
+  .mlb{flex:0 0 auto; font-size:11px; color:var(--sub); margin-bottom:6px;
+    display:flex; align-items:baseline; gap:7px;}
+  .mlb .n{margin-left:auto; font-size:10.5px; color:var(--dim);}
+  .shelf{flex:1 1 auto; min-height:0; overflow:hidden; display:grid;
+    gap:6px; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr));
+    grid-auto-rows:1fr;}
+  .ph{min-width:0; min-height:0; position:relative;
+    border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    cursor:pointer; background:#0c0e12;
+    display:flex; flex-direction:column;}
+  .ph .im{flex:1 1 auto; min-height:0; display:flex;
+    align-items:center; justify-content:center; overflow:hidden;}
+  .ph .im img{max-width:100%; max-height:100%; object-fit:contain;}
+  .ph .ft{flex:0 0 auto; font-size:9.5px; color:var(--dim);
+    padding:3px 6px; display:flex; gap:5px;}
+  .ph .ft .sz{margin-left:auto;}
+  .ph .ft .sz.small{color:#c07c76;}
+  .ph.sel{border-color:var(--ok); border-width:2px;}
+  .ph.sel::before{content:"고름"; position:absolute; left:0; top:0;
+    background:var(--ok); color:#fff; font-size:9px; font-weight:700;
+    padding:2px 6px; border-radius:0 0 5px 0; z-index:2;}
+  .ph.sel .ft{color:#9fd9bb;}
+
+  /* 사진을 못 찾은 건이 182건 있다(실측 2026-08-17). 그냥 NG로
+     버리면 팔 수 있는 물건을 잃는다. 직접 찾아 넣을 수 있게 한다. */
+  .ph.add{border-style:dashed; cursor:pointer;}
+  .ph.add .im{flex-direction:column; gap:4px; color:var(--dim);
+    font-size:11px; text-align:center; padding:6px;}
+  .ph.add .im b{font-size:20px; font-weight:400; line-height:1;}
+  .ph.add:hover{border-color:var(--sub); color:var(--text);}
+  .paste{position:fixed; inset:0; z-index:20; background:rgba(0,0,0,.72);
+    display:none; align-items:center; justify-content:center;}
+  .paste.on{display:flex;}
+  .pbox{width:min(460px, 92vw); background:var(--bg);
+    border:1px solid var(--line); border-radius:12px; padding:16px;}
+  .pbox h3{margin:0 0 4px; font-size:14px; font-weight:700;}
+  .pbox .g{font-size:11px; color:var(--sub); line-height:1.6;
+    margin-bottom:10px;}
+  .drop{border:1px dashed var(--line); border-radius:8px; padding:14px;
+    text-align:center; font-size:11.5px; color:var(--sub); cursor:pointer;
+    margin-bottom:9px;}
+  .drop:hover, .drop.over{border-color:var(--ok); color:var(--text);
+    background:rgba(47,158,99,.06);}
+  .drop b{display:block; font-size:13px; color:var(--text);
+    font-weight:700; margin-bottom:2px;}
+  .orline{display:flex; align-items:center; gap:8px; margin:9px 0;
+    font-size:10.5px; color:var(--dim);}
+  .orline::before, .orline::after{content:""; flex:1; height:1px;
+    background:var(--line);}
+  .pbox input{width:100%; padding:10px; border-radius:8px;
+    border:1px solid var(--line); background:var(--card);
+    color:var(--text); font-size:12px; outline:none;
+    -webkit-user-select:text; user-select:text;}
+  .pbox input:focus{border-color:var(--sub);}
+  .pprev{margin-top:10px; height:140px; background:#0c0e12;
+    border:1px solid var(--line); border-radius:8px; display:flex;
+    align-items:center; justify-content:center; overflow:hidden;
+    color:var(--dim); font-size:11px;}
+  .pprev img{max-width:100%; max-height:100%; object-fit:contain;}
+  .pbtns{display:flex; gap:8px; margin-top:10px;}
+  .pbtns button{flex:1; padding:10px 0; border-radius:8px;
+    border:1px solid var(--line); background:var(--card);
+    color:var(--text); font-size:13px; font-weight:700; cursor:pointer;}
+  .pbtns button.go{background:var(--ok); border-color:var(--ok); color:#fff;}
+  .pbtns button.go:disabled{background:var(--card); border-color:var(--line);
+    color:var(--dim); cursor:default;}
+
+  .actions{flex:0 0 auto; padding:10px 14px 12px; display:flex; gap:9px;}
+  .btn{flex:1 1 0; border:1px solid var(--line); border-radius:9px;
+    padding:13px 0; font-size:15px; font-weight:700; cursor:pointer;
+    background:var(--card); color:var(--text);}
+  .btn.skip{color:var(--sub);}
+  .btn.ng.on{background:var(--ng); border-color:var(--ng); color:#fff;}
+  .btn.skip.on{border-color:var(--sub); color:var(--text);}
+  .btn:active{transform:scale(.98);}
+
+  .saverow{flex:0 0 auto; padding:0 14px 8px;}
+  .savebtn{width:100%; border:1px solid var(--line); border-radius:9px;
+    padding:11px 0; font-size:13px; font-weight:700; cursor:pointer;
+    background:var(--card); color:var(--text);
+    display:flex; align-items:center; justify-content:center; gap:8px;}
+  .savebtn:active{transform:scale(.99);}
+  .savebtn.done{border-color:var(--ok); color:#9fd9bb;}
+  .savebtn.busy{color:var(--sub);}
+  .savebtn .sub{font-size:10px; font-weight:500; color:var(--dim);}
+  .savebtn.done .sub{color:#6f9e86;}
+
+  .foot{flex:0 0 auto; display:flex; padding:0 14px 9px;
+    font-size:9.5px; color:#4a515c;}
+  .foot .saved{margin-left:auto;}
+
+  .nav{position:fixed; top:50%; transform:translateY(-50%);
+    width:64px; height:64px; border-radius:50%;
+    background:var(--card); border:1px solid var(--line);
+    color:var(--sub); font-size:28px; cursor:pointer; z-index:5;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 16px rgba(0,0,0,.35);}
+  .nav:hover{color:var(--text); border-color:var(--sub);}
+  .nav:active{transform:translateY(-50%) scale(.94);}
+  .nav.l{right:calc(50% + min(340px, 47vw) + 14px);}
+  .nav.r{left:calc(50% + min(340px, 47vw) + 14px);}
+  @media (max-width:860px){
+    .nav{width:48px; height:48px; font-size:22px;}
+    .nav.l{right:auto; left:6px;} .nav.r{left:auto; right:6px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <b id="pos">1</b> / <span id="tot">0</span>
+    <span>A_05</span>
+    <a href="index.html" style="color:var(--sub); font-size:11px;">목록</a>
+    <span class="right" id="cnt">OK 0 · NG 0</span>
+  </div>
+
+  <div class="status none" id="status">아직 판정하지 않았습니다</div>
+  <div class="chks" id="chks"></div>
+
+  <div class="names">
+    <div class="nrow"><span class="k">일본어</span>
+      <span class="v edit" id="jp" contenteditable="true" oninput="onEdit()"></span></div>
+    <div class="nrow"><span class="k">번역</span>
+      <span class="v" id="tr"></span></div>
+    <div class="nrow"><span class="k">한국 업체</span>
+      <span class="v found" id="kr"></span></div>
+  </div>
+
+  <div class="links">
+    <a id="qlink" target="_blank">큐텐 ↗</a>
+    <a id="klink" target="_blank">한국 구매처 ↗</a>
+    <a id="nlink" target="_blank">네이버 검색 ↗</a>
+  </div>
+
+  <div class="mid">
+    <div class="mlb">큐텐에 올릴 사진 한 장을 고르세요
+      <span class="n" id="pst"></span></div>
+    <div class="shelf" id="shelf"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn ng" id="ngbtn" onclick="judge('ng')">NG</button>
+    <button class="btn skip" id="skipbtn" onclick="skip()">건너뛰기</button>
+  </div>
+
+  <div class="saverow">
+    <button class="savebtn" id="savebtn" onclick="commit()">
+      저장 <span class="sub" id="savesub">여기까지 한 것을 남깁니다</span>
+    </button>
+  </div>
+
+  <div class="foot">사진을 고르면 바로 다음 · 키보드 1~9 사진, P 사진넣기, N은 NG, Enter 건너뛰기, S 저장
+    <span class="saved" id="saved"></span></div>
+</div>
+
+<div class="paste" id="paste">
+  <div class="pbox">
+    <h3>사진 주소를 넣어 주세요</h3>
+    <div class="g">
+      파일을 넣거나, 판매 페이지에서 사진을
+      <b>오른쪽 클릭 → 이미지 주소 복사</b> 해서 붙여넣으세요.
+    </div>
+
+    <div class="drop" id="drop" onclick="document.getElementById('pfile').click()">
+      <b>사진 파일 넣기</b>
+      끌어다 놓거나 눌러서 고르세요 · 화면 캡처를 붙여넣어도 됩니다
+    </div>
+    <input type="file" id="pfile" accept="image/*" style="display:none"
+           onchange="fromFile(this.files[0])">
+
+    <div class="orline">또는</div>
+
+    <input id="purl" placeholder="https://..." oninput="preview()"
+           onkeydown="if(event.key==='Enter') addPhoto();">
+    <div class="pprev" id="pprev">붙여넣으면 여기에 보입니다</div>
+    <div class="pbtns">
+      <button onclick="closePaste()">취소</button>
+      <button class="go" id="pgo" onclick="addPhoto()" disabled>이 사진 쓰기</button>
+    </div>
+  </div>
+</div>
+
+<button class="nav l" onclick="move(-1)">‹</button>
+<button class="nav r" onclick="move(1)">›</button>
+
+<script>
+var ITEMS = [{"g": "1113652431", "jp": "マデカ リアルグリーン フォアパッド 60枚", "tr": "센텔리안24 마데카리얼그린포어패드 60매", "kr": "센텔리안24 (CENTELLIAN24) 센텔리안24 마데카 리얼 그린 포어 패드 60매", "qurl": "", "kurl": "https://www.musinsa.com/products/4688411", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240408_92/1712564158461zgFhS_JPEG/113700057169495861_1958842465.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10182226766", "m": "skin pick", "n": "[1+1] 센텔리안24 마데카 멜라 캡처 앰플 패드 60매", "sim": 0.667}, {"u": "https://shop-phinf.pstatic.net/20240513_239/1715580233933Adak1_JPEG/116716122642910355_532394182.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10321750805", "m": "아성코스메틱", "n": "동국제약 센텔리안24 마데카 멜라캡쳐 앰플패드 60매", "sim": 0.636}, {"u": "https://shop-phinf.pstatic.net/20240308_121/1709872936597mF8Hq_JPEG/111008835309721363_1902737528.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10497988237", "m": "쇼핑쌤", "n": "동국제약 센텔리안24 마데카 멜라 캡처 앰플 패드 165ml(60매)", "sim": 0.571}, {"u": "https://shop-phinf.pstatic.net/20260201_176/1769912301342UQLwL_JPEG/25895018480932614_1130871889.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13048787493", "m": "쇼핑의 한 수", "n": "센텔리안24 마데카 앰플 패드 기미앰플 멜라캡처 동국제약 4박스 (240매)", "sim": 0.5}]}, {"g": "1117569383", "jp": "センテラエアフィットサンクリームプラス 50ml (SPF50+ PA++++)", "tr": "스킨1004 센텔라 에어핏 선크림 플러스 50ml (SPF50+ PA++++)", "kr": "스킨1004 (SKIN1004) 마다가스카르 센텔라 에어핏 선크림 플러스 [SPF50+/PA++++] 50ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1117569383", "kurl": "https://smartstore.naver.com/main/products/9640606026", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "50ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/681/651/7130651681.g_300-w-st_g.jpg", "s": "큐텐"}, {"u": "https://shop-phinf.pstatic.net/20231211_201/17022573451526iNSw_PNG/103393187836723959_442854078.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/9640606026", "m": "", "n": "", "sim": null}]}, {"g": "1204659999", "jp": "エアリー トーンアップ サンセラム 50ml", "tr": "코스노리 에어리톤업선세럼 50ml", "kr": "코스노리 (COSNORI) 코스노리 에어리 톤업 선세럼", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000219266", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250220_96/1740016278430Pphz9_JPEG/74149136562731469_2040499575.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11497876646", "m": "코스노리", "n": "코스노리 에어리 톤업 선세럼 50ml (SPF50+ PA++++)", "sim": 0.686}]}, {"g": "1195435719", "jp": "PDRN バウンス ボウル セラム 30ml", "tr": "프랭클리 PDRN 바운스 볼세럼 30ml", "kr": "프랭클리 (FRANKLY) PDRN 바운스 볼 세럼 30ml", "qurl": "", "kurl": "https://www.musinsa.com/review/75744109", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260814_27/178669466892874lAf_JPEG/13613332806199204_1154483228.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11864303694", "m": "프랭클리 스킨케어", "n": "프랭클리 PDRN세럼 바운스볼 연어알 탄력광채 30ml, 1개", "sim": 0.711}]}, {"g": "1212904129", "jp": "ブライトニングピーリングジェル, 120ml", "tr": "닥터지 브라이트닝필링젤, 120ml", "kr": "닥터지 (Dr.G) 닥터지 브라이트닝 필링 젤", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000162279", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260814_135/17867164522388vBLQ_JPEG/45137231357659526_756240984.jpg", "s": "한국", "l": "https://brand.naver.com/dr-g/products/13658200731", "m": "닥터지", "n": "[1+1] 닥터지 레드 블레미쉬 클리어 수딩 크림 EX 70mL (튜브형)", "sim": 0.211}, {"u": "https://shop-phinf.pstatic.net/20260731_192/17854900250197DIij_JPEG/1319732983642794_1069975545.jpg", "s": "한국", "l": "https://brand.naver.com/dr-g/products/12276624110", "m": "닥터지", "n": "[슈퍼적립][1+1] 닥터지 레드 블레미쉬 클리어 모이스처 크림 50mL", "sim": 0.205}, {"u": "https://shop-phinf.pstatic.net/20260731_224/1785490048906cFgRK_JPEG/1923969026077787_177399650.jpg", "s": "한국", "l": "https://brand.naver.com/dr-g/products/12120493784", "m": "닥터지", "n": "[슈퍼적립]닥터지 레드 블레미쉬 클리어 수딩 액티브 에센스 80ml, 2개", "sim": 0.195}, {"u": "https://shop-phinf.pstatic.net/20260803_133/1785721870318ySfPf_JPEG/11014103345879141_210172627.jpg", "s": "한국", "l": "https://brand.naver.com/dr-g/products/5695116272", "m": "닥터지", "n": "[1+1]닥터지 그린 마일드 업 선 플러스 50mL (SPF50+ PA++++)", "sim": 0.162}]}, {"g": "1139812456", "jp": "センチッドハンドクリーム/ 50ml/ 1個", "tr": "슬로우허밍 센티드핸드크림/ 50ml/ 1개", "kr": "슬로우허밍 센티드 핸드크림", "qurl": "", "kurl": "https://www.musinsa.com/products/3727157", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20251109_237/1762639926642wOz3S_JPEG/35174370961229394_1569547334.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12658509338", "m": "비유니", "n": "[슬로우허밍][2SET] 센티드 핸드크림", "sim": 0.857}, {"u": "https://shop-phinf.pstatic.net/20260716_298/1784187928881qQa3e_JPEG/22531470381860220_780252070.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12637702110", "m": "마이트문 가성비 가심비 몰", "n": "슬로우허밍 2SET 센티드 핸드크림", "sim": 0.857}]}, {"g": "1187985878", "jp": "レチナール1000ppmクリーム, 30ml", "tr": "더마팩토리 레티날1000ppm크림 30ml", "kr": "더마팩토리 (DERMAFACTORY) 레티날 1000ppm 크림 30ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/13701277340", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240904_191/1725419165294znkIb_JPEG/9026796146461627_1270292435.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10012308724", "m": "더마팩토리 온라인스토어", "n": "더마팩토리 스피큘 맥스 크림 30g / 스피큘 2,950,000개 20,000ppm 고함량스피큘 액티브스피큘 활성스피큘 바쿠치올1%", "sim": 0.286}, {"u": "https://shop-phinf.pstatic.net/20260806_285/1785943367603HoMpz_PNG/87887381370474054_1092298772.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13701277340", "m": "Top뷰티", "n": "더마팩토리 레티날 300ppm 크림 30ml", "sim": 0.927}, {"u": "https://shop-phinf.pstatic.net/20251203_299/17647455314648nkQm_JPEG/10887194610395853_1662656526.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10102859029", "m": "대성케이", "n": "1+1 더마팩토리 레티날 300ppm 크림 30ml 모공탄력 미백 주름개선 피부결개선 보습", "sim": 0.633}, {"u": "https://shop-phinf.pstatic.net/20251203_147/17647456003579x9fL_JPEG/19189982163519585_1626260689.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10102896040", "m": "대성케이", "n": "더마팩토리 레티날 300ppm 크림 30ml x3개모공탄력 미백 주름개선 피부결개선 보습", "sim": 0.623}]}, {"g": "1069190438", "jp": "ローズコラーゲンインテンシブアイジェルセラム", "tr": "미구하라 로즈콜라겐 인텐시브아이젤세럼", "kr": "미구하라 (MIGUHARA) 로즈 콜라겐 인텐시브 아이 젤 세럼 30ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/9327571095", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250624_51/17507503939593dVau_JPEG/95662113770631691_153388037.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9327571095", "m": "미구하라", "n": "미구하라 로즈 콜라겐 인텐시브 아이 젤 세럼 30ml", "sim": 1.0}]}, {"g": "1200494434", "jp": "ブランシュ クレンジングジェル260ml1個", "tr": "에스네이처 블랑쉬 클렌징젤 260ml 1개", "kr": "에스네이처 (S.NATURE) 에스네이처 블랑쉬 클렌징젤", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/10159508684", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240403_246/1712123577341VOGCW_PNG/ba4a15e5-2de5-4311-91ec-7452812656659220112385260526873.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/10159508684", "m": "chunmistore", "n": "에스네이처 블랑쉬 클렌징젤 260ml 3개", "sim": 0.774}, {"u": "https://shop-phinf.pstatic.net/20250820_133/1755655988565phAmT_JPEG/106340470630761988_1168312527.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12274469048", "m": "", "n": "[에스네이처] 블랑쉬 클렌저 260ml", "sim": 0.714}, {"u": "https://shop-phinf.pstatic.net/20230904_74/16937927103873x2aO_JPEG/402358797544499_1283728171.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9159501944", "m": "꿀디샵", "n": "에스네이처 블랑쉬 클렌저 260ml", "sim": 0.714}, {"u": "https://shop-phinf.pstatic.net/20250831_253/1756572156061sQQ4A_JPEG/2713819204592671_1521296198.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12327127360", "m": "고고  마켓", "n": "에스네이처 블랑쉬 클렌저 260ml 1개", "sim": 0.667}]}, {"g": "1097851059", "jp": "AC CTRL EX ディープマスク 10個", "tr": "듀이트리 AC CTRL EX 딥마스크 10개", "kr": "듀이트리 (DEWYTREE) 듀이트리 AC 컨트롤 EX 딥마스크, 1개입, 10개", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/8321616026", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250520_298/1747715332314v2hMX_JPEG/81848105455098305_503046454.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/8321616026", "m": "듀이트리", "n": "[듀이트리] AC 딥 흔적 진정 잡티 마스크 10매", "sim": 0.595}]}, {"g": "1213235867", "jp": "オニオンニューペアアンプルプラス, 50ml", "tr": "이즈앤트리 어니언뉴페어앰플플러스 50ml", "kr": "이즈앤트리 (IsNtree) 이즈앤트리 어니언 뉴페어 앰플 플러스", "qurl": "", "kurl": "https://www.musinsa.com/search/goods?keyword=%EC%9D%B4%EC%A6%88%EC%95%A4%ED%8A%B8%EB%A6%AC+%EC%96%B4%EB%8B%88%EC%96%B8+%EC%95%B0%ED%94%8C", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260421_38/1776727969694UCh7z_JPEG/41240660226648646_748380732.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12274615541", "m": "", "n": "[이즈앤트리] 어니언 뉴페어 앰플 플러스 50ml", "sim": 0.889}, {"u": "https://shop-phinf.pstatic.net/20260414_141/177615586253780S28_JPEG/110288785520350422_746657979.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13248920259", "m": "정품판매처", "n": "(리뉴얼) 이즈앤트리 어니언 뉴페어 앰플 플러스 50ml (어니언 퍼플토닝 앰플)", "sim": 0.667}, {"u": "https://shop-phinf.pstatic.net/20260505_165/1777945073659sm5NI_JPEG/14457472622433035_714483832.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13489561705", "m": "그린 밸런스", "n": "리뉴얼 ISNTREE 이즈앤트리 어니언 뉴페어 앰플 플러스 50ml 어니언 퍼플토닝 앰플", "sim": 0.582}]}, {"g": "1214531206", "jp": "【正規品】 アヌカチンシャンプー 525ml", "tr": "모에브 [정품] 아누카틴샴푸 525ml", "kr": "모에브 아누카틴 샴푸 525ml 525ml", "qurl": "", "kurl": "https://www.musinsa.com/products/6229580", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "525ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260813_182/1786563615504Qo8sq_JPEG/5986645650638403_399189036.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13719380723", "m": "워시앤툴", "n": "모에브 아누카틴 증상 샴푸 525ml", "sim": 0.933}, {"u": "https://shop-phinf.pstatic.net/20260604_279/1780580847415zjNzD_PNG/8587495421637040_1398303647.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13622904223", "m": "루미-하우스", "n": "모에브 아누카틴 샴푸 사과향 525ml", "sim": 0.903}, {"u": "https://shop-phinf.pstatic.net/20260813_298/1786553338135PGiCg_JPEG/120686185281977472_1356501750.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13719247956", "m": "투데이픽마켓", "n": "MOEV 아누카틴 샴푸 525ml", "sim": 0.759}]}, {"g": "1123786743", "jp": "1025 独島 ピーリングジェル 120ml", "tr": "라운드랩 1025독도필링젤 120ml", "kr": "라운드랩 (ROUNDLAB) 라운드랩 1025 독도 필링젤, , 1개", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/5750041979", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20220331_117/1648715413520wBMk4_JPEG/49851247316724514_21783848.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/5750041979", "m": "라운드랩", "n": "라운드랩 1025 독도 필링젤 120ml", "sim": 0.839}]}, {"g": "1138072635", "jp": "ブラックヘッドアンドポアクリーム, 30ml", "tr": "마녀공장 블랙헤드앤포어크림, 30ml", "kr": "마녀공장 (manyo) 블랙헤드&포어 크림 30ml", "qurl": "", "kurl": "https://zigzag.kr/catalog/products/126211106", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20230310_22/16784150352161FFgK_JPEG/79550818921830686_1770015078.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/8597591937", "m": "올데이뷰티", "n": "마녀공장 기름 잡는 보송크림 블랙헤드 포어 크림 30ml 2개", "sim": 0.762}, {"u": "https://shop-phinf.pstatic.net/20260227_45/1772177273164TCbk1_JPEG/21756429062062704_473839127.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13176659936", "m": "올데이뷰티", "n": "마녀공장 기름 잡는 보송크림 블랙헤드 포어 크림 30ml 3개", "sim": 0.762}]}, {"g": "1190650278", "jp": "フルバブリングスカルプシャンプー 490ml", "tr": "쌔뮤 풀버블링스칼프샴푸 490ml", "kr": "쌔뮤 쌔뮤 풀 버블링 스칼프 샴푸 490ml 490ml", "qurl": "", "kurl": "https://www.musinsa.com/products/5326131", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "490ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20241101_162/17304524388602Ch7J_JPEG/64585336988249487_703743011.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9570016991", "m": "쌔뮤", "n": "쌔뮤 풀 버블링 스칼프 샴푸 490ml", "sim": 1.0}]}, {"g": "1193740353", "jp": "ツボクサ 水分 セラム&nbsp; 80ml", "tr": "원씽 병풀수분세럼 80ml", "kr": "원씽 병풀 수분세럼", "qurl": "", "kurl": "https://www.musinsa.com/products/2542849", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250930_117/1759208992667iaCBA_PNG/596982493842821_872646986.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/12482269371", "m": "일동상사", "n": "원씽 병풀 수분 세럼 80ml 1개", "sim": 0.727}, {"u": "https://shop-phinf.pstatic.net/20260816_211/1786889207709ELnAb_JPEG/98578495794861346_472834432.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13723288003", "m": "인생만물shop", "n": "[수분진정/젤세럼] 원씽 병풀 수분 세럼 80ml", "sim": 0.593}, {"u": "https://shop-phinf.pstatic.net/20260816_149/1786867521578SnSeS_JPEG/19023864719683428_599830649.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13723035289", "m": "글라디온샵", "n": "[수분진정/젤세럼] 원씽 병풀 수분 세럼 80ml", "sim": 0.593}, {"u": "https://shop-phinf.pstatic.net/20260815_23/1786725544381Mqy74_JPEG/49706647169395716_835038319.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13721556498", "m": "브리즈  컴퍼니", "n": "[수분진정/젤세럼] 원씽 병풀 수분 세럼 80ml", "sim": 0.593}]}, {"g": "1087789893", "jp": "ロエ パフュームド ハンドクリーム 50ml", "tr": "LOE 로에퍼퓸드핸드크림 50ml", "kr": "로에 (LOE) 로에 퍼퓸드 핸드크림 >", "qurl": "", "kurl": "https://chicor.com/goods/0000000073692", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20220405_178/1649124688039TKxXw_JPEG/50260533514203752_566320573.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/6506367227", "m": "브라우저룸", "n": "로에 퍼퓸드 핸드크림 핸드로션 신시어우드 50ml", "sim": 0.581}, {"u": "https://shop-phinf.pstatic.net/20260803_54/1785743864851qwX3R_PNG/111655009389489467_898886860.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13694733397", "m": "하이하이글로벌", "n": "로에 퍼퓸 향기좋은 핸드크림 화이트셔츠 선물 50ml NLN", "sim": 0.457}, {"u": "https://shop-phinf.pstatic.net/20251119_36/1763533005977W034u_JPEG/4914406792359494_163637231.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12706641817", "m": "Sale Monster", "n": "메온셀 로에 퍼퓸 향기좋은 핸드크림 화이트셔츠 선물 50ml BNS", "sim": 0.421}, {"u": "https://shop-phinf.pstatic.net/20260226_143/1772110285248gYTy3_JPEG/1309364391429659_1746973684.jpeg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13173185855", "m": "에어 플래닛 스토어", "n": "LOE 라이프 온 어스 향수 핸드크림 50ml/1.69fl 온스 (정성 목재) SINCERE WOOD", "sim": 0.16}]}, {"g": "1133030179", "jp": "バリア リペア 保湿ケア クリーム 50ml", "tr": "이지듀 배리어리페어보습케어크림 50ml", "kr": "이지듀 (Easydew) 이지듀 베리어 리페어 보습케어 크림", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000188495", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": []}, {"g": "1144537853", "jp": "ジンクテカ トラブル セラム 本品 25ml", "tr": "브링그린 징크테카트러블세럼본품 25ml", "kr": "브링그린 (BRINGGREEN) 징크테카 트러블 세럼 25mL", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200646", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "25mL", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250205_229/1738766792799bfJho_JPEG/52623995599608763_405130587.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9347650217", "m": "블망몰", "n": "브링그린 징크테카 트러블 세럼 25ml 기획 제품", "sim": 0.895}, {"u": "https://shop-phinf.pstatic.net/20260603_56/1780464545362lmKwr_JPEG/93561454305586177_1218047266.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13621588075", "m": "뷰티판도라", "n": "브링그린 징크테카 트러블세럼 본품 50ml+리필 25ml", "sim": 0.81}, {"u": "https://shop-phinf.pstatic.net/20260730_77/1785342222945Xuqs5_JPEG/139041453767659578_1393510217.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11535583293", "m": "핑크 산타", "n": "브링그린 징크테카 트러블 세럼 50ml+25ml 대용량 기획", "sim": 0.791}]}, {"g": "1199734518", "jp": "NMN NAD 弾力セラム, 50ml 1個", "tr": "풀리 NMN NAD탄력세럼, 50ml 1개", "kr": "풀리 (FULLY) NMN NAD 탄력 세럼 50ml", "qurl": "", "kurl": "https://www.musinsa.com/products/6606127", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "50ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260612_292/17812545267245JRtN_JPEG/57715872539730116_860228119.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13630923853", "m": "FULLY 풀리", "n": "[N단독]풀리 NMN NAD 탄력 선세럼 2개+그린토마토 크림 20ml SPF50+ PA++++", "sim": 0.577}, {"u": "https://shop-phinf.pstatic.net/20260815_208/17867962108093Puhc_JPEG/98485498890879827_254345138.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13722237106", "m": "지제이랩", "n": "풀리 NMN NAD 탄력 리프팅 세럼 50ml 453200", "sim": 0.78}, {"u": "https://shop-phinf.pstatic.net/20260612_76/1781253125533lLr61_JPEG/6557313656453101_1254676834.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13558726173", "m": "FULLY 풀리", "n": "풀리 NMN NAD 탄력 선세럼 SPF50+ PA++++", "sim": 0.778}]}, {"g": "1073433864", "jp": "エクストリーム エッセンス トナー500ml", "tr": "리얼베리어 익스트림에센스토너 500ml", "kr": "리얼베리어 (RealBarrier) 리얼베리어 익스트림 에센스 토너", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/10158247043", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240618_219/1718687418101HTS0K_JPEG/70653257063364996_1578374736.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10158247043", "m": "리얼베리어 본사 스토어", "n": "리얼베리어 익스트림 에센스 토너 라이트 200ml, 1개", "sim": 0.737}]}, {"g": "1104614796", "jp": "ワンダーセラミドモチエマルジョン 300ml", "tr": "토니모리 원더세라마이드모찌에멀젼 300ml", "kr": "토니모리 (TONYMOLY) 원더 세라마이드 모찌 에멀전 300ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/11260495452", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "300ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260403_50/1775199164060ktmW8_JPEG/109332067179272139_631797987.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11260495452", "m": "", "n": "", "sim": null}]}, {"g": "1101580229", "jp": "ビタアクナール TX ナイトクリーム 20g", "tr": "닥터디퍼런트 비타아크날TX나이트크림 20g", "kr": "닥터디퍼런트 (Dr.Different) 비타아크날 TX 나이트 크림 20g", "qurl": "", "kurl": "https://www.musinsa.com/products/3598627", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "20g", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240819_202/1724036022477qiq5X_JPEG/4523643314719127_1600483761.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/5227969494", "m": "닥터디퍼런트", "n": "닥터디퍼런트 레티날 0.1% 비타아크날 크림 20g", "sim": 0.762}]}, {"g": "1170826458", "jp": "[コラーゲン美容液]椿 ディープコラーゲン 弾力アンプル 30ml/美容液/コラーゲン/エイジングケア・ハリ・たるみ・毛穴ケア・毛穴たるみ・キメを整える・リフトアップ・保湿・水分ケア・韓国コスメ", "tr": "라운드랩 [콜라겐 에센스]동백 딥 콜라겐 탄력 앰플 30ml/에센스/콜라겐/에이징케어·탄력·처짐·모공케어·모공처짐·결을 정돈하는·리프트업·보습·수분케어·한국화장품", "kr": "라운드랩 (ROUNDLAB) 동백 딥 콜라겐 탄력 앰플 30ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1170826458", "kurl": "https://smartstore.naver.com/main/products/11057206616", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/431/717/7456717431.g_300-w-st_g.jpg", "s": "큐텐"}, {"u": "https://shop-phinf.pstatic.net/20241104_234/1730698157682ubMYg_JPEG/64830977792692805_1617282056.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11057206616", "m": "", "n": "", "sim": null}]}, {"g": "1178031425", "jp": "クリーンイットゼロカーミングジェルクレンザー", "tr": "바닐라코 클린잇제로카밍젤클렌저", "kr": "바닐라코 (banilaco) 바닐라코 클린 잇 제로 카밍 젤 클렌저", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000222898", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260815_129/17867785451288kkFz_JPEG/49759647913807194_346432141.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13722038176", "m": "클릭앤바이몰", "n": "[아침세안] 바닐라코 클린 잇 제로 카밍 젤 클렌저 200ml", "sim": 0.769}, {"u": "https://shop-phinf.pstatic.net/20260815_197/17867726662705AOY0_JPEG/6195696414748612_1032769154.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13721974159", "m": "순세컨드마켓", "n": "[아침세안] 바닐라코 클린 잇 제로 카밍 젤 클렌저 200ml", "sim": 0.769}, {"u": "https://shop-phinf.pstatic.net/20260130_273/1769733358408XMgkx_JPEG/102550622313048107_411420229.jpeg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13040096892", "m": "DAZZLE대즐", "n": "클린 잇 제로 카밍 젤 클렌저 200ml 1개", "sim": 0.667}]}, {"g": "1210630059", "jp": "松の木 鎮静 シカ アンプル 30ml 1個", "tr": "라운드랩 소나무 진정 시카 앰플 30ml 1개", "kr": "라운드랩 (ROUNDLAB) 소나무 진정 시카 앰플 30ml", "qurl": "", "kurl": "https://www.musinsa.com/products/2770370", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20251014_86/1760403979577iWqlV_JPEG/13998891689756500_2054280109.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10074450199", "m": "라운드랩", "n": "[1+1] 라운드랩 소나무 진정 시카 앰플 대용량 50ml", "sim": 0.821}]}, {"g": "1196695553", "jp": "ボーンパンテノールピールトナー 180ml / 拭き取り化粧水 角質ケア パンテノール ピーリング 導入化粧水 韓国コスメ", "tr": "쌔뮤 본 판테놀 필 토너 180ml / 닦아내는 토너 각질 케어 판테놀 필링 도입 토너 한국화장품", "kr": "쌔뮤 (SAM'U) 본 판테놀 필 토너 180ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1196695553", "kurl": "https://www.wconcept.co.kr/Product/306007619", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "180ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/630/670/8094670630.g_300-w-st_g.jpg", "s": "큐텐"}, {"u": "https://shop-phinf.pstatic.net/20240502_266/1714640912670bANj4_JPEG/115776801378434112_1874792657.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10273466179", "m": "쌔뮤", "n": "쌔뮤 본 판테놀 필 토너 180ml", "sim": 1.0}]}, {"g": "1210879089", "jp": "ヒアルバイオームウォータークリーム 50ml", "tr": "라비오뜨 히알바이옴워터크림 50ml", "kr": "라비오뜨 (LABIOTTE) 히알바이옴 워터 크림 50ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/4953970899", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "50ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20211001_48/1633054766784br0Nw_JPEG/34190665339105022_148527780.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/4953970899", "m": "라비오뜨", "n": "라비오뜨 히알바이옴 워터 유수분케어 앰플 150ml", "sim": 0.75}]}, {"g": "1210771887", "jp": "パフューム ヘアセラム ミスト ロストウッド", "tr": "비비앙 퍼퓸헤어세럼미스트로스트우드", "kr": "비비앙 (BiBiANG) 퍼퓸 헤어 세럼 미스트 로스트우드 50ml", "qurl": "", "kurl": "https://www.musinsa.com/search/goods?keyword=%EB%B9%84%EB%B9%84%EC%95%99+%ED%97%A4%EC%96%B4%EC%84%B8%EB%9F%BC", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "50ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260112_151/1768178593186dEHbt_JPEG/17433786294714183_241420076.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12956849004", "m": "비비앙 Bibiang", "n": "비비앙 퍼퓸 헤어세럼 미스트 50ml 월넛크릭그린", "sim": 0.744}]}, {"g": "1002724228", "jp": "ワンステップモイスチャーアップパッド70ea", "tr": "코스알엑스 COSRX 원스텝모이스처업패드 70매", "kr": "코스알엑스 (COSRX) 코스알엑스 원스텝 모이스처 업 패드 70매", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/10567495821", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20240704_229/1720078143082sEDPg_PNG/66439329825003406_2017474666.PNG", "s": "한국", "l": "https://smartstore.naver.com/main/products/10567495821", "m": "황금연휴", "n": "코스알엑스 원스텝 모이스쳐 업 패드 90매", "sim": 0.889}, {"u": "https://shop-phinf.pstatic.net/20240202_94/1706800599564tBm8g_JPEG/107936379267397491_1474634686.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/8924968682", "m": "로하스힐링", "n": "코스알엑스 모이스처 원스텝 모이스쳐 업 패드 90매", "sim": 0.8}, {"u": "https://shop-phinf.pstatic.net/20260709_138/17835770683397ftIC_PNG/117709979405991936_1591470566.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13657321674", "m": "친절한정사장", "n": "코스알엑스 강력 수분 보습 원스텝 모이스쳐 업 패드 90매 2개", "sim": 0.727}, {"u": "https://shop-phinf.pstatic.net/20260119_98/1768823382288h5HIj_JPEG/21110362147708632_2093427914.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13366750910", "m": "로하스힐링", "n": "1+1 코스알엑스 패드 원스텝 모이스처 업 패드 90매 + 90매 더블기획", "sim": 0.723}]}, {"g": "1190240415", "jp": "ハイパーPDRN リペア アンプル 30ml", "tr": "웰라쥬 하이퍼PDRN 리페어 앰플 30ml", "kr": "웰라쥬 (WELLAGE) 하이퍼 PDRN 리페어 앰플 30ml", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000231089", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260706_139/1783297150960RQPJk_JPEG/53805188106026505_686632885.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12650450080", "m": "웰라쥬 스토어", "n": "[2종세트] 웰라쥬 리얼 히알루로닉 블루 100 앰플 (100ml) + 하이퍼 PDRN 리페어 앰플 (30ml)", "sim": 0.623}]}, {"g": "1134833121", "jp": "復活草ミストセラムグロウスプレー 100ml", "tr": "아비브 부활초미스트세럼글로우스프레이 100ml", "kr": "아비브 (Abib) 부활초 미스트 세럼 글로우 스프레이 100mL", "qurl": "", "kurl": "https://www.musinsa.com/products/5684970", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "100mL", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260206_159/1770369573098r3chs_JPEG/370026210584387_1805630605.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11235381378", "m": "아비브", "n": "아비브 부활초 미스트 세럼 글로우 스프레이 100ml, 1개", "sim": 0.958}]}, {"g": "1193631266", "jp": "ワンダーアクア水分クリーム 300ml 1個", "tr": "토니모리 원더아쿠아수분크림 300ml 1개", "kr": "토니모리 (TONYMOLY) 토니모리 원더 아쿠아 수분크림, , 1개", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/10791776774", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260723_219/1784794730729NErzn_JPEG/60469537854740881_1129714467.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10791776774", "m": "", "n": "", "sim": null}]}, {"g": "1145289288", "jp": "[新作] ウルトラカミングミスト 177ml", "tr": "더말로지카 [신상] 울트라카밍미스트 177ml", "kr": "더말로지카 (dermalogica) 울트라카밍 미스트 177ml", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000215447", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "177ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260128_185/1769574588590VWbyc_JPEG/46036499740252523_1206139603.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10596087676", "m": "더말로지카", "n": "더말로지카 울트라카밍 미스트 177ML", "sim": 1.0}]}, {"g": "1078300672", "jp": "シャインマスカット バハ トナー 200ml", "tr": "스킨푸드 샤인머스캣바하토너 200ml", "kr": "스킨푸드 (SKINFOOD) 샤인머스캣 바하 토너 200ml", "qurl": "", "kurl": "https://www.wconcept.co.kr/Product/304135564", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "200ml", "v": "y"}], "ph": []}, {"g": "1168665237", "jp": "シカテロルスポットトリートメント, 15ml", "tr": "비플레인 시카테롤스팟트리트먼트, 15ml", "kr": "비플레인 (beplain) 시카테롤 스팟 트리트먼트 15ml", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000163689", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "15ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250513_111/1747106452764QQMTk_JPEG/3134490637654645_2112076627.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9419760770", "m": "비플레인 beplain", "n": "비플레인 시카테롤 스팟 트리트먼트 15ml, 2개", "sim": 0.95}]}, {"g": "1141152293", "jp": "モデリング クリーム マスク 復活草 スクープ 71mL/1個, 2個 選択", "tr": "아비브 모델링 크림 마스크 부활초 스쿱 71mL / 1개, 2개 선택", "kr": "아비브 (Abib) 모델링 크림 마스크 [부활초스쿱] 71ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1141152293", "kurl": "https://www.musinsa.com/review/73423305?gf=A", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "71ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/449/330/6790330449.g_300-w-st_g.jpg", "s": "큐텐"}]}, {"g": "1178065191", "jp": "ローライズ ファースト バランシング トナー", "tr": "로우라이즈 로라이즈 퍼스트밸런싱토너", "kr": "로우라이즈 (Lowlize) 로우라이즈 퍼스트 밸런싱 토너", "qurl": "", "kurl": "https://www.musinsa.com/search/goods?keyword=%EB%A1%9C%EC%9A%B0%EB%9D%BC%EC%9D%B4%EC%A6%88+%ED%86%A0%EB%84%88", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260721_205/1784596760647EiVYA_JPEG/118729618747052644_1860122367.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12799650489", "m": "로우라이즈", "n": "로우라이즈 퍼스트 밸런싱 토너 400ml, 2개", "sim": 0.788}]}, {"g": "1118485371", "jp": "シャンプー ホワイトムスク1000ml/1L", "tr": "밀크바오밥 샴푸화이트머스크 1000ml/1L", "kr": "밀크바오밥 밀크바오밥 샴푸 화이트머스크향, , 1개", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/365574030", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20260817_86/1786922646864g94OX_JPEG/41030834817431220_759056385.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/365574030", "m": "밀크바오밥", "n": "[+슬리핑팩본품] 밀크바오밥 퍼퓸샴푸 2개선택 1.2L대용량 세라 화이트머스크 2개", "sim": 0.531}]}, {"g": "1172488759", "jp": "【公式】スカルプシャンプー 500ml", "tr": "민트리 스칼프샴푸 500ml", "kr": "민트리 민트리 스칼프 샴푸 500ml 500ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1172488759", "kurl": "https://www.musinsa.com/products/6328145", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "500ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/705/069/7735069705.g_300-w-st_g.jpg", "s": "큐텐"}, {"u": "https://shop-phinf.pstatic.net/20260226_214/1772086742995xueWo_JPEG/101448360537703602_423694950.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11305336188", "m": "민트리 MINTREE", "n": "[데일리 헤어케어 SET] 스칼프 샴푸 2개+스칼프먼트 2개", "sim": 0.324}, {"u": "https://shop-phinf.pstatic.net/20260303_89/177251211861814GUU_JPEG/56884535734116395_1686710595.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9424551744", "m": "민트리 MINTREE", "n": "민트리 스칼프 퓨리파이 마사져 두피마사지 딥클렌징 두피브러쉬 샴푸브러쉬 두피마사져", "sim": 0.32}, {"u": "https://shop-phinf.pstatic.net/20260226_5/1772086774205KiEW1_JPEG/124152561215626616_1952712474.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11466619871", "m": "민트리 MINTREE", "n": "[SET] 스칼프 샴푸 1개+스칼프먼트 1개 두피케어세트 두피샴푸 트리트먼트 비듬샴푸 탈모샴푸 실리콘프리", "sim": 0.172}, {"u": "https://shop-phinf.pstatic.net/20260424_276/1777007476298Ps0DL_PNG/30845435661852844_690532258.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13417343489", "m": "레인보우USA", "n": "민트리 트리트먼트 + 두피스케일러 &&& 단품 스칼프먼트 200mL", "sim": 0.513}]}, {"g": "1133036294", "jp": "アラスカ85 ナチュラル 化粧水 500ml", "tr": "그레이멜린 알래스카85 내추럴 토너 500ml", "kr": "그레이멜린 (GRAYMELIN) 알래스카 내추럴 대용량 토너 500ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/11132719671", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "500ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20241115_227/1731601714676fFyjv_JPEG/basic-1.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11132719671", "m": "플러스울트라 쇼핑몰", "n": "그레이멜린 알래스카85 내추럴 대용량 토너 500ml 2개", "sim": 0.917}, {"u": "https://shop-phinf.pstatic.net/20250913_136/1757751264545DdwaT_JPEG/4512807536342009_509679005.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12396847153", "m": "씨유니마켓", "n": "/그레이멜린 알래스카 내추럴 토너 500ml 3+1", "sim": 0.884}, {"u": "https://shop-phinf.pstatic.net/20221214_261/1670944547939tmIG0_PNG/72080390647332285_919341440.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/7747301230", "m": "ON Beauty", "n": "/ 내 피부를 위한 첫 단계 똑똑한 솔루션 / 그레이멜린 알래스카85 내추럴 토너 500ml", "sim": 0.655}, {"u": "https://shop-phinf.pstatic.net/20260813_60/1786551324596gFs6R_JPEG/36252791723758333_1555130400.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13719220960", "m": "블링웨이4", "n": "그레이멜린 GREYMELIN [/ 성] 알래스카 내추럴 대용량 토너 500ml 8809429955470 3510021", "sim": 0.595}]}, {"g": "1203221420", "jp": "フィトン 水分シカ セラムトナー 200ml", "tr": "포레스트 피톤수분시카세럼토너 200ml", "kr": "포레스트 (FoRest) 피톤 수분시카 세럼토너 200ml", "qurl": "", "kurl": "https://www.musinsa.com/products/4645781", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "200ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250417_101/1744879549750CQYrW_PNG/24818696588790460_1796523933.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/5977223231", "m": "애즈이즈투비", "n": "포레스트 릴렉싱 토너 200ml", "sim": 0.667}, {"u": "https://shop-phinf.pstatic.net/20260724_87/1784892437964LnD5E_JPEG/75245856007027430_2005038351.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13680647061", "m": "", "n": "[그린핑거] 포레스트 피톤 수분시카 세럼토너 200mL", "sim": 0.905}, {"u": "https://shop-phinf.pstatic.net/20260618_293/1781750956686kNMkv_JPEG/36440812629647355_1298549865.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/9811268033", "m": "FOREST SEOUL", "n": "포레스트 서울 히알 피톤시카 세럼토너 200ml", "sim": 0.85}, {"u": "https://shop-phinf.pstatic.net/20260630_207/1782801238303xmQO2_JPEG/21631480489112419_585563672.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10311598269", "m": "FOREST SEOUL", "n": "포레스트 서울 히알 피톤시카 세럼패드 70매", "sim": 0.579}]}, {"g": "1215786054", "jp": "ウォータープルーフ サンクリーム 100ml", "tr": "식물나라 워터프루프선크림 100ml", "kr": "식물나라 (SHINGMULNARA) 식물나라 워터프루프 선 크림", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000151904", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20251125_106/1764051023890x0k6v_PNG/98183832022264393_373432718.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/12732774002", "m": "일상상사.1334", "n": "식물나라 워터프루프 선크림", "sim": 1.0}, {"u": "https://shop-phinf.pstatic.net/20260608_277/1780878541740Qdwt8_JPEG/57339887537091959_110018606.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/5702317401", "m": "옴니코스", "n": "식물나라 워터프루프 선크림 100ml", "sim": 0.828}, {"u": "https://shop-phinf.pstatic.net/20260615_31/1781515387366qfbHd_PNG/3057735145211756_2103277743.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/13634213914", "m": "퓨에띠에", "n": "식물나라 워터프루프 선크림 100ml 5개", "sim": 0.774}, {"u": "https://shop-phinf.pstatic.net/20260716_95/1784163068842CIafS_JPEG/105480405842118070_1908839874.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11070156423", "m": "블망몰", "n": "식물나라 가벼운 수분 선 젤 로션 60mL", "sim": 0.345}]}, {"g": "1191141866", "jp": "[NEW] スーパー コラーゲン バブル セラム マスク 90g 1個", "tr": "아로셀 [NEW] 슈퍼 콜라겐 버블 세럼 마스크 90g 1개", "kr": "아로셀 (AROCELL) 슈퍼 콜라겐 버블 세럼 마스크 0.4g", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1191141866", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000246270", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "0.4g", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/094/843/7945843094.g_300-w-st_g.jpg", "s": "큐텐"}]}, {"g": "1186749247", "jp": "デイリーモイスチャー バブルトナー150ml", "tr": "일소 데일리모이스처버블토너 150ml", "kr": "일소 (ilso) 데일리 모이스처 버블 토너 150ml", "qurl": "", "kurl": "https://smartstore.naver.com/main/products/12258718824", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "150ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20250817_211/1755356734432SPHX1_JPEG/9890500632967595_793216230.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12258718824", "m": "륀느스토", "n": "일소 데일리 모이스처 버블 수분 보습 토너 150ml, 1개", "sim": 0.857}, {"u": "https://shop-phinf.pstatic.net/20250501_235/1746025530768TtXG1_PNG/678253728995429_400028064.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/11785956672", "m": "마인유통", "n": "일소 데일리 모이스처 버블 수분 보습 토너 150ml×1개 속당김", "sim": 0.8}, {"u": "https://shop-phinf.pstatic.net/20241116_149/1731758275968yc95d_JPEG/11890698829435453_1856935291.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/11140136715", "m": "LV뷰티", "n": "ILSO 데일리 모이스처 버블 토너 150ml 155943", "sim": 0.727}, {"u": "https://shop-phinf.pstatic.net/20251230_182/1767066744328ELdbC_PNG/39034234447000900_939943126.png", "s": "한국", "l": "https://smartstore.naver.com/main/products/12900504398", "m": "evekorea", "n": "데일리 버블토너 일소 150ml 속건조 닦토 보습 스킨로션", "sim": 0.558}]}, {"g": "1214655074", "jp": "[ANAZE 公式] プロフェッショナルルートアンドスカルプシャンプー", "tr": "어네이즈 ANAZE [ANAZE 공식] 프로페셔널 루트앤스칼프샴푸", "kr": "어네이즈 (ANAZE) 프로페셔널 루트 앤 스칼프 샴푸 500ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1214655074", "kurl": "https://smartstore.naver.com/main/products/13497753615", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "500ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/045/968/8409968045.g_300-w-st_g.jpg", "s": "큐텐"}, {"u": "https://shop-phinf.pstatic.net/20260507_158/17781181278679v5dC_JPEG/14993559840580015_408894491.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13497753615", "m": "어네이즈", "n": "어네이즈 프로페셔널 루트 앤 스칼프 샴푸 500ml", "sim": 0.829}]}, {"g": "983933418", "jp": "シラカバ水分化粧水, 300ml", "tr": "라운드랩 자작나무 수분 토너, 300ml", "kr": "라운드랩 (ROUNDLAB) 자작나무 수분 토너 300ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=983933418", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000157178", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "300ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/798/385/7317385798.g_300-w-st_g.jpg", "s": "큐텐"}]}, {"g": "1084133600", "jp": "光彩プロポリスセラム 30ml /韓国化粧品", "tr": "조선미녀 광채프로폴리스세럼 30ml", "kr": "조선미녀 (BeautyofJoseon) 광채프로폴리스세럼 30ml", "qurl": "", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000188711", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://shop-phinf.pstatic.net/20251013_66/1760339989335hbXPz_JPEG/14928714339155624_233129283.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/12534258741", "m": "BLUE CHERRY", "n": "조선미녀 프로폴리스 + 나이아신아마이드 글로우 세럼 30ml", "sim": 0.654}, {"u": "https://shop-phinf.pstatic.net/20260415_60/17762370259504GAFo_JPEG/44253862087475361_1456187850.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/13322524025", "m": "BEAUTYMARKET", "n": "조선미녀 광채프로폴리스 세럼 30ml", "sim": 0.605}, {"u": "https://shop-phinf.pstatic.net/20240313_23/1710307584749dfrBL_JPEG/111443419583348036_2072392400.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10068501642", "m": "우아 코스메틱", "n": "조선미녀 광채프로폴리스 세럼 30ml", "sim": 0.605}, {"u": "https://shop-phinf.pstatic.net/20240415_58/1713169523316t3Icf_JPEG/40472207184791703_1398468068.jpg", "s": "한국", "l": "https://smartstore.naver.com/main/products/10208722305", "m": "블랙 올리브", "n": "조선미녀 광채 프로폴리스 세럼 30ml+10ml 저자극 진정 세럼", "sim": 0.481}]}, {"g": "1132898625", "jp": "セルメイジング 低分子 コラーゲン 弾力 アイクリーム 30ml", "tr": "토리든 셀메이징저분자콜라겐탄력아이크림 30ml", "kr": "토리든 (Torriden) 셀메이징 저분자 콜라겐 탄력 아이크림 30ml", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1132898625", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000203033", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "30ml", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/146/926/6534926146.g_300-w-st_g.jpg", "s": "큐텐"}]}, {"g": "1205562577", "jp": "エンジョイ オールラウンド エアリー サンクッション EX 25g", "tr": "싸이닉 엔조이 올라운드 에어리 선쿠션 EX 25g", "kr": "싸이닉 (SCINIC) 엔조이 올라운드 에어리 선쿠션 EX [SPF50+/PA++++] 25g", "qurl": "https://www.qoo10.jp/gmkt.inc/Goods/Goods.aspx?goodscode=1205562577", "kurl": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000190040", "tier": "A", "chk": [{"t": "브랜드", "v": "y"}, {"t": "25g", "v": "y"}], "ph": [{"u": "https://gd.image-qoo10.jp/li/137/809/8263809137.g_300-w-st_g.jpg", "s": "큐텐"}]}];
+var BATCH = "A_05";
+var KEY = 'review2_' + BATCH;
+var total = ITEMS.length;
+
+// marks[상품번호] = {v:'ok'|'ng'|'skip', p:고른 사진 번호, u:사진 주소}
+var state = {idx:0, marks:{}, jpEdits:{}, added:{}};
+var jpOrig = '';
+
+function cur() { return ITEMS[state.idx]; }
+
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify({
+      idx: state.idx, marks: state.marks, jpEdits: state.jpEdits,
+      added: state.added, savedAt: new Date().toISOString()
+    }));
+    document.getElementById('saved').textContent =
+      '자동저장 ' + new Date().toLocaleTimeString('ko-KR');
+  } catch (e) {
+    // 브라우저 저장은 5MB가 한계다. 파일로 넣은 사진이 쌓이면 찬다.
+    // 조용히 넘어가면 사장님은 저장된 줄 알고 계속하시게 된다.
+    document.getElementById('saved').textContent =
+      '⚠ 자동저장 실패 — [저장]을 눌러 올려 주세요';
+    document.getElementById('saved').style.color = '#e0a29b';
+  }
+}
+
+function load() {
+  try {
+    var s = JSON.parse(localStorage.getItem(KEY) || '{}');
+    state.marks = s.marks || {};
+    state.jpEdits = s.jpEdits || {};
+    state.added = s.added || {};
+    state.idx = s.idx || 0;
+    // 이미 판정한 자리면 아직 안 본 첫 번째로 옮겨 준다
+    if (ITEMS[state.idx] && state.marks[ITEMS[state.idx].g]) {
+      for (var i = 0; i < total; i++) {
+        if (!state.marks[ITEMS[i].g]) { state.idx = i; break; }
+      }
+    }
+    if (s.savedAt) {
+      document.getElementById('savesub').textContent =
+        new Date(s.savedAt).toLocaleString('ko-KR',
+          {month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'}) +
+        ' 자리에서 이어 합니다';
+    }
+  } catch (e) { /* 읽기 실패하면 처음부터 */ }
+}
+
+function mk() {
+  var g = cur().g;
+  if (!state.marks[g]) state.marks[g] = {v:null, p:null, u:null};
+  return state.marks[g];
+}
+
+function openPaste() {
+  document.getElementById('paste').className = 'paste on';
+  var el = document.getElementById('purl');
+  el.value = ''; el.focus();
+  preview();
+}
+
+// 끌어다 놓기
+(function () {
+  var d = document.getElementById('drop');
+  if (!d) return;
+  ['dragenter', 'dragover'].forEach(function (ev) {
+    d.addEventListener(ev, function (e) {
+      e.preventDefault(); d.className = 'drop over';
+    });
+  });
+  ['dragleave', 'drop'].forEach(function (ev) {
+    d.addEventListener(ev, function (e) {
+      e.preventDefault(); d.className = 'drop';
+    });
+  });
+  d.addEventListener('drop', function (e) {
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      fromFile(e.dataTransfer.files[0]);
+    }
+  });
+})();
+
+// 화면 캡처를 그냥 붙여넣어도 되게
+document.addEventListener('paste', function (e) {
+  if (document.getElementById('paste').className.indexOf('on') < 0) return;
+  var items = (e.clipboardData || {}).items || [];
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].type.indexOf('image') === 0) {
+      fromFile(items[i].getAsFile());
+      e.preventDefault();
+      return;
+    }
+  }
+});
+
+function closePaste() {
+  document.getElementById('paste').className = 'paste';
+}
+
+function shrink(src, cb) {
+  // 파일을 그대로 담으면 브라우저 저장(5MB)이 금방 찬다.
+  // 큐텐에 올릴 사진이라 900px이면 충분하다. 줄여서 담는다.
+  var img = new Image();
+  img.onload = function () {
+    var max = 900;
+    var w = img.naturalWidth, h = img.naturalHeight;
+    if (Math.max(w, h) > max) {
+      var r = max / Math.max(w, h);
+      w = Math.round(w * r); h = Math.round(h * r);
+    }
+    var cv = document.createElement('canvas');
+    cv.width = w; cv.height = h;
+    cv.getContext('2d').drawImage(img, 0, 0, w, h);
+    cb(cv.toDataURL('image/jpeg', 0.86));
+  };
+  img.onerror = function () { cb(null); };
+  img.src = src;
+}
+
+function fromFile(f) {
+  if (!f) return;
+  if (!/^image\//.test(f.type)) {
+    document.getElementById('pprev').textContent = '사진 파일이 아닙니다';
+    return;
+  }
+  var box = document.getElementById('pprev');
+  box.textContent = '읽는 중…';
+  var rd = new FileReader();
+  rd.onload = function () {
+    shrink(rd.result, function (small) {
+      if (!small) { box.textContent = '이 파일은 열리지 않습니다'; return; }
+      document.getElementById('purl').value = small;
+      preview();
+    });
+  };
+  rd.readAsDataURL(f);
+}
+
+function preview() {
+  var u = document.getElementById('purl').value.trim();
+  var box = document.getElementById('pprev');
+  var go = document.getElementById('pgo');
+  if (!/^(https?:\/\/|data:image\/)/.test(u)) {
+    box.textContent = '붙여넣으면 여기에 보입니다';
+    go.disabled = true;
+    return;
+  }
+  box.innerHTML = '';
+  var img = document.createElement('img');
+  img.src = u;
+  img.onerror = function () {
+    box.textContent = '이 주소로는 사진이 안 열립니다';
+    go.disabled = true;
+  };
+  img.onload = function () { go.disabled = false; };
+  box.appendChild(img);
+}
+
+function addPhoto() {
+  // 넣은 사진을 후보 목록 끝에 붙이고 바로 고른 것으로 만든다.
+  var u = document.getElementById('purl').value.trim();
+  if (!/^(https?:\/\/|data:image\/)/.test(u)) return;
+  var it = cur();
+  it.ph.push({u: u, s: u.indexOf('data:') === 0 ? '내 파일' : '직접'});
+  if (!state.added[it.g]) state.added[it.g] = [];
+  state.added[it.g].push(u);
+  closePaste();
+  pick(it.ph.length - 1);
+}
+
+function pick(i) {
+  var it = cur();
+  if (i >= it.ph.length) return;
+  var m = mk();
+  m.p = i; m.u = it.ph[i].u; m.v = 'ok';
+  save(); paint();
+  // 고른 표시를 확인할 틈을 준다
+  setTimeout(function () { move(1); }, 700);
+}
+
+function tagSize(img, el) {
+  var w = img.naturalWidth;
+  if (!w) { img.addEventListener('load', function(){ tagSize(img, el); }); return; }
+  el.textContent = w + '×' + img.naturalHeight;
+  if (Math.min(w, img.naturalHeight) < 200) el.className = 'sz small';
+}
+
+function paint() {
+  var it = cur();
+  if (!it) return;
+  var m = state.marks[it.g] || {v:null, p:null};
+
+  document.getElementById('jp').textContent = it.jp;
+  document.getElementById('tr').textContent = it.tr;
+  document.getElementById('kr').textContent = it.kr;
+  jpOrig = it.jp;
+  if (state.jpEdits[it.g]) document.getElementById('jp').textContent = state.jpEdits[it.g];
+
+  document.getElementById('qlink').href = it.qurl || '#';
+  var kl = it.kurl;
+  if (m.p !== null && it.ph[m.p] && it.ph[m.p].l) kl = it.ph[m.p].l;
+  document.getElementById('klink').href = kl || '#';
+  // 사진을 못 찾았거나 구매처가 미덥지 않을 때 직접 찾아볼 수 있게.
+  // 한국 업체가 붙인 이름으로 검색해야 같은 상품이 나온다 —
+  // 번역한 이름으로 치면 일본 표기가 섞여 엉뚱한 게 걸린다.
+  document.getElementById('nlink').href =
+    'https://search.shopping.naver.com/search/all?query=' +
+    encodeURIComponent(it.kr || it.tr);
+
+  var ch = document.getElementById('chks');
+  ch.innerHTML = '';
+  if (it.tier) {
+    var tb = document.createElement('span');
+    tb.className = 'ck y'; tb.textContent = it.tier + ' 등급';
+    ch.appendChild(tb);
+  }
+  for (var c = 0; c < it.chk.length; c++) {
+    var sp = document.createElement('span');
+    sp.className = 'ck ' + it.chk[c].v;
+    sp.textContent = (it.chk[c].v === 'y' ? '✓ ' : it.chk[c].v === 'n' ? '✗ ' : '? ')
+                     + it.chk[c].t;
+    ch.appendChild(sp);
+  }
+
+  // 예전에 직접 넣은 사진을 되살린다
+  var ad = state.added[it.g] || [];
+  for (var a = 0; a < ad.length; a++) {
+    var has = false;
+    for (var b = 0; b < it.ph.length; b++) if (it.ph[b].u === ad[a]) has = true;
+    if (!has) it.ph.push({u: ad[a],
+                          s: ad[a].indexOf('data:') === 0 ? '내 파일' : '직접'});
+  }
+
+  var sh = document.getElementById('shelf');
+  sh.innerHTML = '';
+  for (var i = 0; i < it.ph.length; i++) {
+    (function (p, k) {
+      var el = document.createElement('div');
+      el.className = 'ph' + (m.p === k ? ' sel' : '');
+      el.onclick = function(){ pick(k); };
+      var im = document.createElement('div'); im.className = 'im';
+      var img = document.createElement('img'); img.src = p.u; img.loading = 'lazy';
+      im.appendChild(img); el.appendChild(im);
+      var ft = document.createElement('div'); ft.className = 'ft';
+      var n = document.createElement('span');
+      n.textContent = (k+1) + '. ' + p.s + (p.m ? ' ' + p.m : '');
+      var sz = document.createElement('span'); sz.className = 'sz';
+      ft.appendChild(n); ft.appendChild(sz); el.appendChild(ft);
+      tagSize(img, sz);
+      sh.appendChild(el);
+    })(it.ph[i], i);
+  }
+  // 직접 넣기 칸은 언제나 마지막에
+  var add = document.createElement('div');
+  add.className = 'ph add';
+  add.onclick = openPaste;
+  add.innerHTML = '<div class="im"><b>+</b>사진 넣기</div>';
+  sh.appendChild(add);
+
+  document.getElementById('pst').textContent =
+    (it.ph.length ? it.ph.length + '장' : '사진 없음 — 직접 넣어 주세요') +
+    (m.p !== null ? ' · ' + (m.p+1) + '번' : '');
+
+  var st = document.getElementById('status');
+  if (m.v === 'ok') {
+    st.className = 'status ok';
+    st.innerHTML = 'OK — ' + (m.p + 1) + '번 사진으로 정했습니다' +
+      '<span class="re">다른 사진을 누르면 바뀝니다</span>';
+  } else if (m.v === 'ng') {
+    st.className = 'status ng';
+    st.innerHTML = 'NG — 안 파는 물건으로 정했습니다' +
+      '<span class="re">사진을 누르면 OK로 바뀝니다</span>';
+  } else if (m.v === 'skip') {
+    st.className = 'status skip';
+    st.innerHTML = '보류 — 나중에 다시 보기로 했습니다' +
+      '<span class="re">사진을 누르거나 NG를 누르면 바뀝니다</span>';
+  } else {
+    st.className = 'status none';
+    st.innerHTML = '아직 판정하지 않았습니다';
+  }
+
+  document.getElementById('ngbtn').className = 'btn ng' + (m.v === 'ng' ? ' on' : '');
+  document.getElementById('skipbtn').className = 'btn skip' + (m.v === 'skip' ? ' on' : '');
+
+  var o = 0, n = 0, s = 0;
+  for (var k2 in state.marks) {
+    var v = state.marks[k2].v;
+    if (v === 'ok') o++; else if (v === 'ng') n++; else if (v === 'skip') s++;
+  }
+  document.getElementById('pos').textContent = state.idx + 1;
+  document.getElementById('tot').textContent = total;
+  document.getElementById('cnt').textContent =
+    'OK ' + o + ' · NG ' + n + (s ? ' · 보류 ' + s : '');
+}
+
+function onEdit() {
+  var jp = document.getElementById('jp'), g = cur().g;
+  if (jp.textContent.trim() !== jpOrig) state.jpEdits[g] = jp.textContent.trim();
+  else delete state.jpEdits[g];
+  save();
+}
+
+function skip() {
+  var m = mk(); m.v = 'skip'; m.p = null;
+  save(); paint();
+  setTimeout(function () { move(1); }, 600);
+}
+
+function judge(kind) {
+  var m = mk(); m.v = kind;
+  if (kind === 'ng') { m.p = null; m.u = null; }
+  save(); paint();
+  setTimeout(function () { move(1); }, 600);
+}
+
+function move(step) {
+  state.idx = Math.min(Math.max(state.idx + step, 0), total - 1);
+  save(); paint();
+}
+
+// ── 저장: GitHub에 결과를 올린다 ─────────────────────────────
+var GH_REPO = "wklee3k-source/qoo10-korea-price-compare";
+
+function results() {
+  var out = [];
+  for (var i = 0; i < ITEMS.length; i++) {
+    var it = ITEMS[i], m = state.marks[it.g];
+    if (!m || !m.v) continue;
+    out.push({
+      goods_no: it.g,
+      verdict: m.v,
+      image_url: m.u || null,
+      image_added_by_hand: (state.added[it.g] || []).indexOf(m.u) >= 0,
+      qoo10_title_edited: state.jpEdits[it.g] || null,
+      decided_at: new Date().toISOString()
+    });
+  }
+  return out;
+}
+
+function commit() {
+  var btn = document.getElementById('savebtn');
+  var sub = document.getElementById('savesub');
+  var rows = results();
+  if (!rows.length) { sub.textContent = '아직 판정한 것이 없습니다'; return; }
+  save();
+
+  var token = localStorage.getItem('gh_token');
+  if (!token) {
+    token = prompt('GitHub 토큰을 한 번만 입력해 주세요 (이 브라우저에 저장됩니다)');
+    if (!token) return;
+    localStorage.setItem('gh_token', token);
+  }
+
+  btn.className = 'savebtn busy';
+  sub.textContent = '올리는 중…';
+
+  var path = 'comparison/decisions/' + BATCH + '.json';
+  var body = JSON.stringify(rows, null, 1);
+  var b64 = btoa(unescape(encodeURIComponent(body)));
+
+  fetch('https://api.github.com/repos/' + GH_REPO + '/contents/' + path, {
+    headers: {Authorization: 'token ' + token}
+  }).then(function (r) {
+    return r.ok ? r.json() : null;
+  }).then(function (info) {
+    return fetch('https://api.github.com/repos/' + GH_REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: {Authorization: 'token ' + token,
+                'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        message: '검수 결과 ' + BATCH + ' — ' + rows.length + '건',
+        content: b64,
+        sha: info ? info.sha : undefined
+      })
+    });
+  }).then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    var o = 0, n = 0, s = 0;
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].verdict === 'ok') o++;
+      else if (rows[i].verdict === 'ng') n++; else s++;
+    }
+    btn.className = 'savebtn done';
+    sub.textContent = rows.length + '건 올렸습니다 · OK ' + o + ' NG ' + n +
+      (s ? ' 보류 ' + s : '') + ' — 다음에 열면 여기서 시작합니다';
+  }).catch(function (e) {
+    btn.className = 'savebtn';
+    sub.textContent = '올리지 못했습니다 (' + e.message + ') — 이 브라우저에는 남아 있습니다';
+    if (String(e.message).indexOf('401') >= 0) localStorage.removeItem('gh_token');
+  });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (document.activeElement.id === 'jp') return;
+  if (e.key >= '1' && e.key <= '9') pick(parseInt(e.key,10) - 1);
+  if (e.key.toLowerCase() === 'n') judge('ng');
+  if (e.key === 'Enter') skip();
+  if (e.key.toLowerCase() === 's') commit();
+  if (e.key.toLowerCase() === 'p') openPaste();
+  if (e.key === 'ArrowLeft') move(-1);
+  if (e.key === 'ArrowRight') move(1);
+});
+
+load();
+paint();
+</script>
+</body>
+</html>
