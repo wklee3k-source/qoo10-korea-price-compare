@@ -3908,6 +3908,11 @@ def t52_review_one_screen():
           "원본 그대로면 브라우저 저장 5MB가 금방 찬다")
     check("52-18 저장 실패를 알림", "자동저장 실패" in html,
           "조용히 넘어가면 저장된 줄 알고 계속하게 된다")
+    # 사진을 못 찾았거나 구매처가 미덥지 않을 때 직접 찾아볼 수 있게.
+    # 한국 업체 이름으로 검색해야 같은 상품이 나온다 — 번역한 이름으로
+    # 치면 일본 표기가 섞여 엉뚱한 게 걸린다.
+    check("52-19 네이버 검색 링크", "nlink" in html and "search.shopping.naver.com" in html)
+    check("52-20 한국 업체명으로 검색", "encodeURIComponent(it.kr" in html)
 
 
 def main():
