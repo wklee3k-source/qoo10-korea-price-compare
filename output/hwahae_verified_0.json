@@ -34195,5 +34195,86 @@
     "image_candidates": [],
     "in_stock": null,
     "stock_evidence": []
+  },
+  {
+    "goods_no": "1159844126",
+    "translated_kr": "피캄 홀리 바질 탄산 버블 팩 90g",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "홀리바질 버블 딥 마스크",
+      "daum": "몽글몽글 버블 뷰티템이 이렇게 똑똑해졌습니다",
+      "naver_web": "피캄 홀리바질 버블 딥 마스크 기획 (+듀얼모공...."
+    },
+    "brand": "피캄 (P.CALM)",
+    "name": "홀리바질 버블 딥 마스크",
+    "volume": "90g",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 38000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000238198",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": [],
+    "url_from_web": true
+  },
+  {
+    "goods_no": "1179833401",
+    "translated_kr": "브래비티 BRAVITY 스템셀 데일리올인원 120g 고보습×탄력케어·시간단축스킨케어·민감성피부에도·한국코스메",
+    "winner_source": "musinsa",
+    "candidates_summary": {
+      "hwahae": "데일리 토닝 올인원 필링젤",
+      "musinsa": "브래비티 데일리 스템셀 올인원 150ml",
+      "naver_web": "데일리 토닝 올인원 필링젤"
+    },
+    "brand": "브래비티",
+    "name": "브래비티 데일리 스템셀 올인원 150ml",
+    "volume": "",
+    "source": "musinsa",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": false,
+    "price": 44000,
+    "mall": "무신사",
+    "seller_trust": "신뢰채널",
+    "product_url": "https://www.musinsa.com/products/4436830",
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": true,
+    "stock_evidence": [
+      "품절 관련 요소 중 화면에 보이는 것 없음"
+    ]
+  },
+  {
+    "goods_no": "1168171570",
+    "translated_kr": "에뛰드 순정 PH5.5 토너 200ml",
+    "winner_source": "hwahae",
+    "candidates_summary": {
+      "hwahae": "순정 약산성 5.5 진정 토너",
+      "daum": "에뛰드 하우스 순정 약산성 5.5 진정 토너, , 2개",
+      "naver_web": "Etude Soonjung Mildly Acidic 5 5 Calming"
+    },
+    "brand": "에뛰드 (ETUDE)",
+    "name": "순정 약산성 5.5 진정 토너",
+    "volume": "350ml",
+    "source": "hwahae",
+    "naver_rematched": false,
+    "single_source_naver": false,
+    "obsolete": false,
+    "sale": true,
+    "price": 27000,
+    "mall": null,
+    "seller_trust": null,
+    "product_url": null,
+    "image_url": null,
+    "image_candidates": [],
+    "in_stock": null,
+    "stock_evidence": []
   }
 ]
